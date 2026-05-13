@@ -1,15 +1,11 @@
 "use client";
 
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
 import type { ScroogeDashboard } from "@/lib/scrooge-types";
+
+function formatUSD(value: number): string {
+  if (value < 0.01) return `$${value.toFixed(4)}`;
+  return `$${value.toFixed(2)}`;
+}
 
 export default function CostTrendChart({
   costTrend,
@@ -19,7 +15,7 @@ export default function CostTrendChart({
   if (costTrend.length === 0) {
     return (
       <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-        <h3 className="text-lg font-bold  text-dark-text mb-4">
+        <h3 className="text-lg font-bold text-dark-text mb-4">
           Daily Cost Trend
         </h3>
         <div className="flex items-center justify-center py-12 text-dark-muted">
@@ -29,61 +25,33 @@ export default function CostTrendChart({
     );
   }
 
+  const maxCost = Math.max(...costTrend.map((entry) => entry.costUSD), 0.0001);
+
   return (
     <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-      <h3 className="text-lg font-bold  text-dark-text mb-4">
+      <h3 className="text-lg font-bold text-dark-text mb-4">
         Daily Cost Trend
       </h3>
-      <div className="h-64">
-        <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={costTrend}>
-            <defs>
-              <linearGradient id="costGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#3b82f6" stopOpacity={0} />
-              </linearGradient>
-            </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="rgba(124,105,199,0.15)" />
-            <XAxis
-              dataKey="date"
-              tick={{ fontSize: 12, fill: "var(--color-caption)" }}
-              tickFormatter={(d) =>
-                new Date(d + "T00:00:00").toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })
-              }
-            />
-            <YAxis
-              tick={{ fontSize: 12, fill: "var(--color-caption)" }}
-              tickFormatter={(v) => `$${v.toFixed(3)}`}
-              width={60}
-            />
-            <Tooltip
-              contentStyle={{
-                background: "var(--color-panel2)",
-                border: "1px solid rgba(124,105,199,0.15)",
-                borderRadius: "8px",
-                fontSize: "13px",
-              }}
-              formatter={((value: number) => [`$${value.toFixed(4)}`, "Cost"]) as never}
-              labelFormatter={(label) =>
-                new Date(label + "T00:00:00").toLocaleDateString("en-US", {
-                  weekday: "short",
-                  month: "short",
-                  day: "numeric",
-                })
-              }
-            />
-            <Area
-              type="monotone"
-              dataKey="costUSD"
-              stroke="#3b82f6"
-              strokeWidth={2}
-              fill="url(#costGradient)"
-            />
-          </AreaChart>
-        </ResponsiveContainer>
+      <div className="space-y-3">
+        {costTrend.map((entry) => (
+          <div key={entry.date} className="grid grid-cols-[88px_1fr_90px] items-center gap-3">
+            <div className="text-xs text-dark-muted">
+              {new Date(entry.date + "T00:00:00").toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+              })}
+            </div>
+            <div className="h-3 rounded-full bg-dark-panel2 overflow-hidden">
+              <div
+                className="h-full rounded-full bg-cm-purple"
+                style={{ width: `${Math.max((entry.costUSD / maxCost) * 100, 2)}%` }}
+              />
+            </div>
+            <div className="text-right text-xs text-dark-muted">
+              {formatUSD(entry.costUSD)} · {entry.requests} req
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

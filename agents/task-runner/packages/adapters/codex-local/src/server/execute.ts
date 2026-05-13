@@ -51,14 +51,90 @@ function firstNonEmptyLine(text: string): string {
   );
 }
 
-function hasNonEmptyEnvValue(env: Record<string, string>, key: string): boolean {
+function hasNonEmptyEnvValue(env: Record<string, string | undefined>, key: string): boolean {
   const raw = env[key];
   return typeof raw === "string" && raw.trim().length > 0;
 }
 
-function resolveCodexBillingType(env: Record<string, string>): "api" | "subscription" {
+function resolveCodexBillingType(env: Record<string, string | undefined>): "api" | "subscription" {
   // Codex uses API-key auth when OPENAI_API_KEY is present; otherwise rely on local login/session auth.
   return hasNonEmptyEnvValue(env, "OPENAI_API_KEY") ? "api" : "subscription";
+}
+
+const CODEX_API_PREMIUM_MODEL = "gpt-5.5";
+const CODEX_API_FALLBACK_MODEL = "gpt-5.3-codex";
+
+function normalizeCodexModel(model: string, billingType: "api" | "subscription"): {
+  model: string;
+  downgradedFrom: string | null;
+} {
+  if (
+    billingType === "api" &&
+    model.trim() === CODEX_API_PREMIUM_MODEL &&
+    process.env.MYOS_ALLOW_CODEX_PREMIUM_API !== "1"
+  ) {
+    return {
+      model: CODEX_API_FALLBACK_MODEL,
+      downgradedFrom: CODEX_API_PREMIUM_MODEL,
+    };
+  }
+  return { model, downgradedFrom: null };
+}
+
+function normalizeCodexArgs(
+  args: string[],
+  billingType: "api" | "subscription",
+): { args: string[]; downgradedFrom: string | null } {
+  if (billingType !== "api" || process.env.MYOS_ALLOW_CODEX_PREMIUM_API === "1") {
+    return { args, downgradedFrom: null };
+  }
+
+  const normalized: string[] = [];
+  let expectModelValue = false;
+  let downgradedFrom: string | null = null;
+
+  for (const arg of args) {
+    if (expectModelValue) {
+      if (arg === CODEX_API_PREMIUM_MODEL) {
+        normalized.push(CODEX_API_FALLBACK_MODEL);
+        downgradedFrom = CODEX_API_PREMIUM_MODEL;
+      } else {
+        normalized.push(arg);
+      }
+      expectModelValue = false;
+      continue;
+    }
+
+    if (arg === "--model") {
+      normalized.push(arg);
+      expectModelValue = true;
+      continue;
+    }
+
+    if (arg.startsWith("--model=")) {
+      const value = arg.slice("--model=".length);
+      if (value === CODEX_API_PREMIUM_MODEL) {
+        normalized.push(`--model=${CODEX_API_FALLBACK_MODEL}`);
+        downgradedFrom = CODEX_API_PREMIUM_MODEL;
+      } else {
+        normalized.push(arg);
+      }
+      continue;
+    }
+
+    normalized.push(arg);
+  }
+
+  return { args: normalized, downgradedFrom };
+}
+
+function extractCodexModelArg(args: string[]): string {
+  for (let index = 0; index < args.length; index += 1) {
+    const arg = args[index];
+    if (arg === "--model") return args[index + 1] ?? "";
+    if (arg.startsWith("--model=")) return arg.slice("--model=".length);
+  }
+  return "";
 }
 
 function codexHomeDir(): string {
@@ -242,7 +318,10 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
   if (!hasExplicitApiKey && authToken) {
     env.PAPERCLIP_API_KEY = authToken;
   }
-  const billingType = resolveCodexBillingType(env);
+  const billingType = resolveCodexBillingType({ ...process.env, ...env });
+  const normalizedModelInfo = normalizeCodexModel(model, billingType);
+  const effectiveModel = normalizedModelInfo.model;
+  env.MYOS_CODEX_AUTH_LANE = billingType === "api" ? "api" : "oauth";
   const runtimeEnv = ensurePathInEnv({ ...process.env, ...env });
   await ensureCommandResolvable(command, cwd, runtimeEnv);
 
@@ -290,14 +369,22 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     }
   }
   const commandNotes = (() => {
-    if (!instructionsFilePath) return [] as string[];
+    const notes = [] as string[];
+    if (normalizedModelInfo.downgradedFrom) {
+      notes.push(
+        `Downgraded Codex API model ${normalizedModelInfo.downgradedFrom} to ${effectiveModel} (set MYOS_ALLOW_CODEX_PREMIUM_API=1 to bypass).`,
+      );
+    }
+    if (!instructionsFilePath) return notes;
     if (instructionsPrefix.length > 0) {
       return [
+        ...notes,
         `Loaded agent instructions from ${instructionsFilePath}`,
         `Prepended instructions + path directive to stdin prompt (relative references from ${instructionsDir}).`,
       ];
     }
     return [
+      ...notes,
       `Configured instructionsFilePath ${instructionsFilePath}, but file could not be read; continuing without injected instructions.`,
     ];
   })();
@@ -316,16 +403,20 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
     const args = ["exec", "--json"];
     if (search) args.unshift("--search");
     if (bypass) args.push("--dangerously-bypass-approvals-and-sandbox");
-    if (model) args.push("--model", model);
+    if (effectiveModel) args.push("--model", effectiveModel);
     if (modelReasoningEffort) args.push("-c", `model_reasoning_effort=${JSON.stringify(modelReasoningEffort)}`);
     if (extraArgs.length > 0) args.push(...extraArgs);
     if (resumeSessionId) args.push("resume", resumeSessionId, "-");
     else args.push("-");
-    return args;
+    const normalized = normalizeCodexArgs(args, billingType);
+    return {
+      ...normalized,
+      resolvedModel: extractCodexModelArg(normalized.args) || effectiveModel,
+    };
   };
 
   const runAttempt = async (resumeSessionId: string | null) => {
-    const args = buildArgs(resumeSessionId);
+    const { args, downgradedFrom, resolvedModel } = buildArgs(resumeSessionId);
     if (onMeta) {
       await onMeta({
         adapterType: "codex_local",
@@ -366,11 +457,13 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
       },
       rawStderr: proc.stderr,
       parsed: parseCodexJsonl(proc.stdout),
+      downgradedFrom,
+      resolvedModel,
     };
   };
 
   const toResult = (
-    attempt: { proc: { exitCode: number | null; signal: string | null; timedOut: boolean; stdout: string; stderr: string }; rawStderr: string; parsed: ReturnType<typeof parseCodexJsonl> },
+    attempt: { proc: { exitCode: number | null; signal: string | null; timedOut: boolean; stdout: string; stderr: string }; rawStderr: string; parsed: ReturnType<typeof parseCodexJsonl>; downgradedFrom: string | null; resolvedModel: string },
     clearSessionOnMissingSession = false,
   ): AdapterExecutionResult => {
     if (attempt.proc.timedOut) {
@@ -413,12 +506,17 @@ export async function execute(ctx: AdapterExecutionContext): Promise<AdapterExec
       sessionParams: resolvedSessionParams,
       sessionDisplayId: resolvedSessionId,
       provider: "openai",
-      model,
+      model: attempt.resolvedModel,
       billingType,
       costUsd: null,
       resultJson: {
         stdout: attempt.proc.stdout,
         stderr: attempt.proc.stderr,
+        ...(attempt.downgradedFrom
+          ? {
+              downgradedFromModel: attempt.downgradedFrom,
+            }
+          : {}),
       },
       summary: attempt.parsed.summary,
       clearSession: Boolean(clearSessionOnMissingSession && !resolvedSessionId),

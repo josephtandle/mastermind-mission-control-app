@@ -26,6 +26,71 @@ function isNonEmpty(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
 }
 
+const CODEX_API_PREMIUM_MODEL = "gpt-5.5";
+const CODEX_API_FALLBACK_MODEL = "gpt-5.3-codex";
+
+function resolveProbeModel(
+  model: string,
+  env: Record<string, string>,
+): { model: string; downgradedFrom: string | null } {
+  const billingType = isNonEmpty(env.OPENAI_API_KEY) || isNonEmpty(process.env.OPENAI_API_KEY) ? "api" : "subscription";
+  if (
+    billingType === "api" &&
+    model.trim() === CODEX_API_PREMIUM_MODEL &&
+    process.env.MYOS_ALLOW_CODEX_PREMIUM_API !== "1"
+  ) {
+    return { model: CODEX_API_FALLBACK_MODEL, downgradedFrom: CODEX_API_PREMIUM_MODEL };
+  }
+  return { model, downgradedFrom: null };
+}
+
+function normalizeProbeArgs(
+  args: string[],
+  env: Record<string, string>,
+): { args: string[]; downgradedFrom: string | null } {
+  const billingType = isNonEmpty(env.OPENAI_API_KEY) || isNonEmpty(process.env.OPENAI_API_KEY) ? "api" : "subscription";
+  if (billingType !== "api" || process.env.MYOS_ALLOW_CODEX_PREMIUM_API === "1") {
+    return { args, downgradedFrom: null };
+  }
+
+  const normalized: string[] = [];
+  let expectModelValue = false;
+  let downgradedFrom: string | null = null;
+  for (const arg of args) {
+    if (expectModelValue) {
+      if (arg === CODEX_API_PREMIUM_MODEL) {
+        normalized.push(CODEX_API_FALLBACK_MODEL);
+        downgradedFrom = CODEX_API_PREMIUM_MODEL;
+      } else {
+        normalized.push(arg);
+      }
+      expectModelValue = false;
+      continue;
+    }
+
+    if (arg === "--model") {
+      normalized.push(arg);
+      expectModelValue = true;
+      continue;
+    }
+
+    if (arg.startsWith("--model=")) {
+      const value = arg.slice("--model=".length);
+      if (value === CODEX_API_PREMIUM_MODEL) {
+        normalized.push(`--model=${CODEX_API_FALLBACK_MODEL}`);
+        downgradedFrom = CODEX_API_PREMIUM_MODEL;
+      } else {
+        normalized.push(arg);
+      }
+      continue;
+    }
+
+    normalized.push(arg);
+  }
+
+  return { args: normalized, downgradedFrom };
+}
+
 function firstNonEmptyLine(text: string): string {
   return (
     text
@@ -129,6 +194,7 @@ export async function testEnvironment(
       });
     } else {
       const model = asString(config.model, "").trim();
+      const probeModel = resolveProbeModel(model, env);
       const modelReasoningEffort = asString(
         config.modelReasoningEffort,
         asString(config.reasoningEffort, ""),
@@ -147,17 +213,18 @@ export async function testEnvironment(
       const args = ["exec", "--json"];
       if (search) args.unshift("--search");
       if (bypass) args.push("--dangerously-bypass-approvals-and-sandbox");
-      if (model) args.push("--model", model);
+      if (probeModel.model) args.push("--model", probeModel.model);
       if (modelReasoningEffort) {
         args.push("-c", `model_reasoning_effort=${JSON.stringify(modelReasoningEffort)}`);
       }
       if (extraArgs.length > 0) args.push(...extraArgs);
       args.push("-");
+      const normalizedArgs = normalizeProbeArgs(args, env);
 
       const probe = await runChildProcess(
         `codex-envtest-${Date.now()}-${Math.random().toString(16).slice(2)}`,
         command,
-        args,
+        normalizedArgs.args,
         {
           cwd,
           env,
@@ -194,6 +261,14 @@ export async function testEnvironment(
                 hint: "Try the probe manually (`codex exec --json -` then prompt: Respond with hello) to inspect full output.",
               }),
         });
+        if (probeModel.downgradedFrom || normalizedArgs.downgradedFrom) {
+          checks.push({
+            code: "codex_hello_probe_model_downgraded",
+            level: "info",
+            message: `Downgraded Codex API model ${probeModel.downgradedFrom ?? normalizedArgs.downgradedFrom} to ${probeModel.model} for the environment probe.`,
+            hint: "Set MYOS_ALLOW_CODEX_PREMIUM_API=1 only when you explicitly want premium API Codex runs.",
+          });
+        }
       } else if (CODEX_AUTH_REQUIRED_RE.test(authEvidence)) {
         checks.push({
           code: "codex_hello_probe_auth_required",

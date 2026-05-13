@@ -1,6 +1,3 @@
-// Scrooge Dashboard Types
-
-// Raw metrics.json shape
 export interface MetricsFile {
   startDate: string;
   total: {
@@ -29,23 +26,48 @@ export interface MetricsFile {
     costUSD: number;
     costSavedUSD: number;
   }>;
-  weekly: Record<string, {
-    requests: number;
-    tokensUsed: number;
-    tokensSaved: number;
-    costUSD: number;
-    costSavedUSD: number;
-  }>;
-  monthly: Record<string, {
-    requests: number;
-    tokensUsed: number;
-    tokensSaved: number;
-    costUSD: number;
-    costSavedUSD: number;
-  }>;
 }
 
-// Dashboard API response
+export interface ScroogeBucket {
+  key: string;
+  requests: number;
+  costUSD: number;
+  inputTokens: number;
+  outputTokens: number;
+}
+
+export interface ScroogeEvent {
+  eventId: string;
+  ts: string;
+  outcome: string;
+  resolvedProviderOrTool: string;
+  resolvedModelOrEngine: string;
+  estimatedCostUsd: number;
+  authLabel: string;
+  caller: {
+    agentId: string;
+    surface: string;
+    project: string;
+    jobId: string | null;
+    runId: string | null;
+    traceId: string | null;
+    callerVersion: string | null;
+  };
+}
+
+export interface ScroogeAlert {
+  level: "info" | "warn" | "critical";
+  message: string;
+}
+
+export interface ScroogeActivitySummary {
+  totalRequests: number;
+  totalTokensUsed: number;
+  topAgents: ScroogeBucket[];
+  topAuthLabels: ScroogeBucket[];
+  recentEvents: ScroogeEvent[];
+}
+
 export interface ScroogeDashboard {
   stats: {
     totalSpendUSD: number;
@@ -56,6 +78,8 @@ export interface ScroogeDashboard {
     totalCostSaved: number;
     savingsPercent: number;
     dataStartDate: string;
+    uniqueAgents: number;
+    unattributedSpendUSD: number;
   };
   costTrend: Array<{
     date: string;
@@ -75,6 +99,12 @@ export interface ScroogeDashboard {
     tokensSaved: number;
     costSavedUSD: number;
   }>;
+  topAgents: ScroogeBucket[];
+  topAuthLabels: ScroogeBucket[];
+  surfaceBreakdown: ScroogeBucket[];
+  alerts: ScroogeAlert[];
+  recentEvents: ScroogeEvent[];
+  activity: ScroogeActivitySummary;
   research: {
     lastUpdate: string | null;
     suggestions: Array<{
@@ -87,7 +117,17 @@ export interface ScroogeDashboard {
     }>;
   };
   dataSources: {
-    metricsJson: {
+    ledgerJsonl: {
+      available: boolean;
+      recordCount: number;
+      lastUpdated: string;
+    };
+    activityJsonl: {
+      available: boolean;
+      recordCount: number;
+      lastUpdated: string;
+    };
+    metricsJson?: {
       available: boolean;
       recordCount: number;
       lastUpdated: string;

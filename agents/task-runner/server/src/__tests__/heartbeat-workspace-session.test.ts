@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resolveDefaultAgentWorkspaceDir } from "../home-paths.js";
 import {
+  buildMyosDispatchText,
   resolveRuntimeSessionParamsForWorkspace,
   shouldResetTaskSessionForWake,
   type ResolvedWorkspaceForRun,
@@ -139,5 +140,31 @@ describe("shouldResetTaskSessionForWake", () => {
         wakeTriggerDetail: "callback",
       }),
     ).toBe(false);
+  });
+});
+
+describe("buildMyosDispatchText", () => {
+  it("builds a dispatcher request from issue and wake context before adapter execution", () => {
+    const text = buildMyosDispatchText({
+      agentName: "Codex Agent",
+      adapterType: "codex_local",
+      triggerDetail: "manual",
+      taskKey: "issue-1",
+      context: {
+        wakeReason: "issue_assigned",
+        payload: {
+          commentBody: "Update the DNS records for this domain",
+        },
+      },
+      issue: {
+        identifier: "ISS-1",
+        title: "Configure domain DNS",
+      },
+    });
+
+    expect(text).toContain("Update the DNS records for this domain");
+    expect(text).toContain("Issue: ISS-1 Configure domain DNS");
+    expect(text).toContain("Wake reason: issue_assigned");
+    expect(text).toContain("Adapter: codex_local");
   });
 });

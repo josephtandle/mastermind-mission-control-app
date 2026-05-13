@@ -1,6 +1,6 @@
 "use client";
 
-import { DollarSign, CalendarDays, Hash, TrendingDown } from "lucide-react";
+import { DollarSign, CalendarDays, Hash, AlertTriangle } from "lucide-react";
 import type { ScroogeDashboard } from "@/lib/scrooge-types";
 
 function formatUSD(value: number): string {
@@ -29,16 +29,16 @@ export default function StatCards({ stats }: { stats: ScroogeDashboard["stats"] 
     {
       label: "Total Requests",
       value: stats.totalRequests.toLocaleString(),
-      subtitle: "API calls tracked",
+      subtitle: `${stats.uniqueAgents.toLocaleString()} agent(s) attributed`,
       icon: Hash,
       gradient: "from-cm-purple to-cm-purple/60",
       lightText: "text-dark-muted",
     },
     {
-      label: "Tokens Saved",
-      value: stats.totalTokensSaved.toLocaleString(),
-      subtitle: `${stats.savingsPercent.toFixed(1)}% savings rate`,
-      icon: TrendingDown,
+      label: "Unattributed Spend",
+      value: formatUSD(stats.unattributedSpendUSD),
+      subtitle: "Needs caller metadata",
+      icon: AlertTriangle,
       gradient: "from-amber-500 to-orange-500",
       lightText: "text-amber-100",
     },

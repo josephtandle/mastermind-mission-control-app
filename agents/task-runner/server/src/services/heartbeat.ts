@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { createRequire } from "node:module";
 import { and, asc, desc, eq, gt, inArray, sql } from "drizzle-orm";
 import type { Db } from "@paperclipai/db";
 import {
@@ -45,6 +46,19 @@ const HEARTBEAT_MAX_CONCURRENT_RUNS_MAX = 10;
 const DEFERRED_WAKE_CONTEXT_KEY = "_paperclipWakeContext";
 const startLocksByAgent = new Map<string, Promise<void>>();
 const REPO_ONLY_CWD_SENTINEL = "/__paperclip_repo_only__";
+const require = createRequire(import.meta.url);
+
+type MyosDispatchPlan = Record<string, unknown>;
+
+type MyosDispatchResult = {
+  status?: string;
+  reply?: string;
+  recipeId?: string;
+  artifacts?: unknown[];
+  metadata?: Record<string, unknown>;
+  usage?: unknown;
+  sessionId?: string | null;
+};
 
 const summarizedHeartbeatRunResultJson = sql<Record<string, unknown> | null>`
   CASE
@@ -170,6 +184,122 @@ export type ResolvedWorkspaceForRun = {
 
 function readNonEmptyString(value: unknown): string | null {
   return typeof value === "string" && value.trim().length > 0 ? value : null;
+}
+
+function loadMyosDispatch() {
+  const workspaceRoot =
+    process.env.MYOS_WORKSPACE_ROOT ||
+    path.join(process.env.HOME || "", ".myos", "workspace");
+  const workspaceContextPath =
+    process.env.MYOS_WORKSPACE_CONTEXT_MODULE ||
+    path.join(workspaceRoot, "agents", "shared", "workspace-context.js");
+  const taskDispatcherPath =
+    process.env.MYOS_TASK_DISPATCHER_MODULE ||
+    path.join(workspaceRoot, "agents", "shared", "task-dispatcher.js");
+
+  const workspaceContext = require(workspaceContextPath) as {
+    resolveDispatchPlan?: (query: string, options?: Record<string, unknown>) => MyosDispatchPlan;
+  };
+  const taskDispatcher = require(taskDispatcherPath) as {
+    dispatchTask?: (request: Record<string, unknown>) => Promise<MyosDispatchResult>;
+  };
+
+  if (typeof workspaceContext.resolveDispatchPlan !== "function") {
+    throw new Error(`MyOS Dispatch resolver missing: ${workspaceContextPath}`);
+  }
+  if (typeof taskDispatcher.dispatchTask !== "function") {
+    throw new Error(`MyOS task dispatcher missing: ${taskDispatcherPath}`);
+  }
+
+  return {
+    resolveDispatchPlan: workspaceContext.resolveDispatchPlan,
+    dispatchTask: taskDispatcher.dispatchTask,
+  };
+}
+
+function readDispatchTextFromContext(context: Record<string, unknown>) {
+  const payload = parseObject(context.payload);
+  const candidates = [
+    context.taskText,
+    context.requestText,
+    context.prompt,
+    context.userPrompt,
+    context.issueTitle,
+    payload.text,
+    payload.body,
+    payload.title,
+    payload.issueTitle,
+    payload.commentBody,
+  ];
+  for (const candidate of candidates) {
+    const value = readNonEmptyString(candidate);
+    if (value) return value;
+  }
+  return null;
+}
+
+export function buildMyosDispatchText(input: {
+  agentName: string;
+  adapterType: string;
+  triggerDetail: string | null;
+  taskKey: string | null;
+  context: Record<string, unknown>;
+  issue: { identifier: string | null; title: string | null } | null;
+}) {
+  const directText = readDispatchTextFromContext(input.context);
+  const lines = [
+    directText,
+    input.issue?.identifier || input.issue?.title
+      ? `Issue: ${[input.issue.identifier, input.issue.title].filter(Boolean).join(" ")}`
+      : "",
+    input.taskKey ? `Task key: ${input.taskKey}` : "",
+    readNonEmptyString(input.context.wakeReason)
+      ? `Wake reason: ${readNonEmptyString(input.context.wakeReason)}`
+      : "",
+    input.triggerDetail ? `Trigger: ${input.triggerDetail}` : "",
+    `Agent: ${input.agentName}`,
+    `Adapter: ${input.adapterType}`,
+  ].filter((line): line is string => typeof line === "string" && line.trim().length > 0);
+
+  return lines.join("\n");
+}
+
+function shouldAttemptDispatchRecipe(plan: MyosDispatchPlan) {
+  const route = parseObject(plan.route);
+  const lane = readNonEmptyString(route.lane);
+  return (
+    lane === "recipe_dispatcher" ||
+    plan.branch === "fastpath" ||
+    (plan.branch === "project" && plan.projectRecipeFirst === true)
+  );
+}
+
+function isNoDispatchRouteError(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error || "");
+  return /No matching recipe|NO_ROUTE|missing_recipe|low_confidence|ambiguous/i.test(message);
+}
+
+function adapterResultFromDispatchResult(result: MyosDispatchResult): AdapterExecutionResult {
+  const reply = typeof result.reply === "string" ? result.reply : "";
+  return {
+    exitCode: 0,
+    signal: null,
+    timedOut: false,
+    errorMessage: null,
+    provider: "myos-dispatch",
+    model: null,
+    billingType: "api",
+    costUsd: null,
+    summary: reply,
+    resultJson: {
+      summary: reply,
+      reply,
+      recipeId: result.recipeId ?? null,
+      artifacts: Array.isArray(result.artifacts) ? result.artifacts : [],
+      metadata: result.metadata ?? null,
+      usage: result.usage ?? null,
+    },
+  };
 }
 
 export function resolveRuntimeSessionParamsForWorkspace(input: {
@@ -1475,16 +1605,86 @@ export function heartbeatService(db: Db) {
           "local agent jwt secret missing or invalid; running without injected PAPERCLIP_API_KEY",
         );
       }
-      const adapterResult = await adapter.execute({
-        runId: run.id,
-        agent,
-        runtime: runtimeForAdapter,
-        config: resolvedConfig,
+      const dispatchText = buildMyosDispatchText({
+        agentName: agent.name,
+        adapterType: agent.adapterType,
+        triggerDetail: run.triggerDetail,
+        taskKey,
         context,
-        onLog,
-        onMeta: onAdapterMeta,
-        authToken: authToken ?? undefined,
+        issue: issueRef,
       });
+      const myosDispatch = loadMyosDispatch();
+      const dispatchPlan = myosDispatch.resolveDispatchPlan(dispatchText, {
+        source: "paperclip-task-runner",
+        agentId: agent.id,
+        runId: run.id,
+      });
+      context.myosDispatch = {
+        required: true,
+        source: "paperclip-task-runner",
+        dispatchText,
+        plan: dispatchPlan,
+      };
+      await onLog("stderr", "[paperclip] MyOS Dispatch preflight completed; agentic/API run is routed before adapter execution.\n");
+      await appendRunEvent(currentRun, seq++, {
+        eventType: "myos.dispatch",
+        stream: "system",
+        level: "info",
+        message: "MyOS Dispatch preflight",
+        payload: context.myosDispatch as Record<string, unknown>,
+      });
+      await db
+        .update(heartbeatRuns)
+        .set({
+          contextSnapshot: context,
+          updatedAt: new Date(),
+        })
+        .where(eq(heartbeatRuns.id, run.id));
+
+      let adapterResult: AdapterExecutionResult;
+      if (shouldAttemptDispatchRecipe(dispatchPlan)) {
+        try {
+          const dispatchResult = await myosDispatch.dispatchTask({
+            text: dispatchText,
+            knownProject: readNonEmptyString((dispatchPlan as Record<string, unknown>).projectSlug) ?? undefined,
+            sourceLabel: "paperclip-task-runner",
+            caller: `paperclip:${agent.id}`,
+            channel: "task-runner",
+            chatId: run.id,
+            outboxDir: path.join(executionWorkspace.cwd, ".paperclip", "myos-dispatch-artifacts"),
+            dispatchPlan,
+          });
+          await onLog("stderr", `[paperclip] MyOS Dispatch handled run via ${dispatchResult.recipeId ?? "recipe"}; skipping adapter.\n`);
+          adapterResult = adapterResultFromDispatchResult(dispatchResult);
+        } catch (err) {
+          if (!isNoDispatchRouteError(err)) throw err;
+          await onLog(
+            "stderr",
+            `[paperclip] MyOS Dispatch did not find a deterministic recipe route; continuing with ${agent.adapterType} adapter.\n`,
+          );
+          adapterResult = await adapter.execute({
+            runId: run.id,
+            agent,
+            runtime: runtimeForAdapter,
+            config: resolvedConfig,
+            context,
+            onLog,
+            onMeta: onAdapterMeta,
+            authToken: authToken ?? undefined,
+          });
+        }
+      } else {
+        adapterResult = await adapter.execute({
+          runId: run.id,
+          agent,
+          runtime: runtimeForAdapter,
+          config: resolvedConfig,
+          context,
+          onLog,
+          onMeta: onAdapterMeta,
+          authToken: authToken ?? undefined,
+        });
+      }
       const adapterManagedRuntimeServices = adapterResult.runtimeServices
         ? await persistAdapterManagedRuntimeServices({
             db,

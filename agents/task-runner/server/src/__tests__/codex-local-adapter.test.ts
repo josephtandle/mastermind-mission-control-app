@@ -1,7 +1,33 @@
 import { describe, expect, it, vi } from "vitest";
+import fs from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
 import { isCodexUnknownSessionError, parseCodexJsonl } from "@paperclipai/adapter-codex-local/server";
+import { execute } from "@paperclipai/adapter-codex-local/server";
 import { parseCodexStdoutLine } from "@paperclipai/adapter-codex-local/ui";
 import { printCodexStreamEvent } from "@paperclipai/adapter-codex-local/cli";
+
+async function writeFakeCodexCommand(commandPath: string): Promise<void> {
+  const script = `#!/usr/bin/env node
+const fs = require("node:fs");
+
+const capturePath = process.env.PAPERCLIP_TEST_CAPTURE_PATH;
+const payload = {
+  argv: process.argv.slice(2),
+  prompt: fs.readFileSync(0, "utf8"),
+  openaiApiKey: process.env.OPENAI_API_KEY || "",
+  myosCodexAuthLane: process.env.MYOS_CODEX_AUTH_LANE || "",
+};
+if (capturePath) {
+  fs.writeFileSync(capturePath, JSON.stringify(payload), "utf8");
+}
+console.log(JSON.stringify({ type: "thread.started", thread_id: "codex-session-1" }));
+console.log(JSON.stringify({ type: "item.completed", item: { type: "agent_message", text: "hello" } }));
+console.log(JSON.stringify({ type: "turn.completed", usage: { input_tokens: 1, cached_input_tokens: 0, output_tokens: 1 } }));
+`;
+  await fs.writeFile(commandPath, script, "utf8");
+  await fs.chmod(commandPath, 0o755);
+}
 
 describe("codex_local parser", () => {
   it("extracts session, summary, usage, and terminal error message", () => {
@@ -21,6 +47,131 @@ describe("codex_local parser", () => {
       outputTokens: 4,
     });
     expect(parsed.errorMessage).toBe("model access denied");
+  });
+});
+
+describe("codex_local execute", () => {
+  it("marks programmatic Codex runs as API lane when OPENAI_API_KEY is inherited from the task runner", async () => {
+    const root = await fs.mkdtemp(path.join(os.tmpdir(), "paperclip-codex-execute-api-"));
+    const workspace = path.join(root, "workspace");
+    const commandPath = path.join(root, "codex");
+    const capturePath = path.join(root, "capture.json");
+    const previousOpenAI = process.env.OPENAI_API_KEY;
+    await fs.mkdir(workspace, { recursive: true });
+    await writeFakeCodexCommand(commandPath);
+
+    process.env.OPENAI_API_KEY = "test-host-openai-key";
+
+    try {
+      const result = await execute({
+        runId: "run-1",
+        agent: {
+          id: "agent-1",
+          companyId: "company-1",
+          name: "Codex Agent",
+          adapterType: "codex_local",
+          adapterConfig: {},
+        },
+        runtime: {
+          sessionId: null,
+          sessionParams: null,
+          sessionDisplayId: null,
+          taskKey: null,
+        },
+        config: {
+          command: commandPath,
+          cwd: workspace,
+          model: "gpt-5.5",
+          env: {
+            PAPERCLIP_TEST_CAPTURE_PATH: capturePath,
+          },
+          promptTemplate: "Run the task.",
+        },
+        context: {},
+        authToken: "run-jwt-token",
+        onLog: async () => {},
+      });
+
+      expect(result.exitCode).toBe(0);
+      expect(result.errorMessage).toBeNull();
+      expect(result.billingType).toBe("api");
+
+      const capture = JSON.parse(await fs.readFile(capturePath, "utf8")) as {
+        argv: string[];
+        openaiApiKey: string;
+        myosCodexAuthLane: string;
+      };
+      expect(capture.argv).toContain("--model");
+      expect(capture.argv).toContain("gpt-5.3-codex");
+      expect(capture.openaiApiKey).toBe("test-host-openai-key");
+      expect(capture.myosCodexAuthLane).toBe("api");
+    } finally {
+      if (previousOpenAI === undefined) {
+        delete process.env.OPENAI_API_KEY;
+      } else {
+        process.env.OPENAI_API_KEY = previousOpenAI;
+      }
+      await fs.rm(root, { recursive: true, force: true });
+    }
+  });
+
+  it("reports the actual executed model when extraArgs supplies the final model override", async () => {
+    const root = await fs.mkdtemp(path.join(os.tmpdir(), "paperclip-codex-execute-extra-"));
+    const workspace = path.join(root, "workspace");
+    const commandPath = path.join(root, "codex");
+    const capturePath = path.join(root, "capture.json");
+    const previousOpenAI = process.env.OPENAI_API_KEY;
+    await fs.mkdir(workspace, { recursive: true });
+    await writeFakeCodexCommand(commandPath);
+
+    process.env.OPENAI_API_KEY = "test-host-openai-key";
+
+    try {
+      const result = await execute({
+        runId: "run-2",
+        agent: {
+          id: "agent-1",
+          companyId: "company-1",
+          name: "Codex Agent",
+          adapterType: "codex_local",
+          adapterConfig: {},
+        },
+        runtime: {
+          sessionId: null,
+          sessionParams: null,
+          sessionDisplayId: null,
+          taskKey: null,
+        },
+        config: {
+          command: commandPath,
+          cwd: workspace,
+          env: {
+            PAPERCLIP_TEST_CAPTURE_PATH: capturePath,
+          },
+          extraArgs: ["--model", "gpt-5.5"],
+          promptTemplate: "Run the task.",
+        },
+        context: {},
+        authToken: "run-jwt-token",
+        onLog: async () => {},
+      });
+
+      expect(result.exitCode).toBe(0);
+      expect(result.model).toBe("gpt-5.3-codex");
+
+      const capture = JSON.parse(await fs.readFile(capturePath, "utf8")) as {
+        argv: string[];
+      };
+      expect(capture.argv).toContain("gpt-5.3-codex");
+      expect(capture.argv).not.toContain("gpt-5.5");
+    } finally {
+      if (previousOpenAI === undefined) {
+        delete process.env.OPENAI_API_KEY;
+      } else {
+        process.env.OPENAI_API_KEY = previousOpenAI;
+      }
+      await fs.rm(root, { recursive: true, force: true });
+    }
   });
 });
 

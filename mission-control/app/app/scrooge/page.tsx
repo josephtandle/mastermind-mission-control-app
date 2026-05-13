@@ -6,6 +6,8 @@ import type { TimeRange } from "@/lib/scrooge-types";
 import StatCards from "./sections/StatCards";
 import CostTrendChart from "./sections/CostTrendChart";
 import ModelBreakdown from "./sections/ModelBreakdown";
+import AttributionOverview from "./sections/AttributionOverview";
+import ActivityOverview from "./sections/ActivityOverview";
 import ResearchSuggestions from "./sections/ResearchSuggestions";
 
 const TIME_OPTIONS: { label: string; value: TimeRange }[] = [
@@ -112,9 +114,16 @@ export default function ScroogePage() {
       <CostTrendChart costTrend={data.costTrend} />
       <ModelBreakdown
         modelBreakdown={data.modelBreakdown}
-        strategies={data.strategies}
+        topAgents={data.topAgents}
+        topAuthLabels={data.topAuthLabels}
         dataSources={data.dataSources}
       />
+      <AttributionOverview
+        alerts={data.alerts}
+        recentEvents={data.recentEvents}
+        surfaceBreakdown={data.surfaceBreakdown}
+      />
+      <ActivityOverview activity={data.activity} />
       <ResearchSuggestions research={data.research} />
     </div>
   );
