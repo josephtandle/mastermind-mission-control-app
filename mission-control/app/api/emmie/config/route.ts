@@ -1,20 +1,18 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
-import { randomUUID } from 'crypto';
-import os from "os";
+import { randomUUID } from "crypto";
+import { promises as fs } from "fs";
+import path from "path";
+import { NextRequest, NextResponse } from "next/server";
+import {
+  CLEANUP_SCRIPT,
+  EMMIE_DIR,
+  extractLatestRunSegment,
+  getDefaultAccount,
+  listCleanupLogs,
+  parseCleanupSummary,
+  readMaybe,
+} from "../shared";
 
-const HOME = os.homedir();
-
-const GMAIL_CLEANUP_SCRIPT = path.join(
-  process.env.HOME || '',
-  '.openclaw',
-  'workspace',
-  'bin',
-  'gmail-cleanup'
-);
-
-const RULES_FILE = path.join(process.cwd(), 'lib/emmie-filing-rules.json');
+const RULES_FILE = path.join(process.cwd(), "lib", "emmie-filing-rules.json");
 
 interface Rule {
   _id: string;
@@ -29,118 +27,147 @@ interface Rule {
   targetLabel?: string;
   ageThresholdDays?: number;
   maxPerRun?: number;
+  source?: "profile" | "custom";
 }
 
 interface RulesFile {
-  filingRules: unknown[];
-  autoTrashSenders: string[];
-  autoTrashRules: unknown[];
   customRules: Rule[];
 }
 
+async function ensureRulesFile(): Promise<void> {
+  try {
+    await fs.access(RULES_FILE);
+  } catch {
+    await fs.writeFile(RULES_FILE, JSON.stringify({ customRules: [] }, null, 2));
+  }
+}
+
 async function readRulesFile(): Promise<RulesFile> {
-  const content = await fs.readFile(RULES_FILE, 'utf-8');
-  return JSON.parse(content);
+  await ensureRulesFile();
+  const content = await fs.readFile(RULES_FILE, "utf8");
+  return JSON.parse(content) as RulesFile;
 }
 
 async function writeRulesFile(data: RulesFile): Promise<void> {
   await fs.writeFile(RULES_FILE, JSON.stringify(data, null, 2));
 }
 
+async function buildProfileRules(): Promise<Rule[]> {
+  const account = await getDefaultAccount();
+  const latestLog = (await listCleanupLogs(1))[0];
+  const latestRaw = latestLog ? await readMaybe(latestLog.fullPath) : null;
+  const latestRun = latestRaw ? extractLatestRunSegment(latestRaw) : "";
+  const summary = parseCleanupSummary(latestRun);
+  const kept = summary.keptWhitelisted ?? 0;
+
+  return [
+    {
+      _id: "profile_reply_marketing",
+      name: "Reply-to-friends marketing",
+      query: "phase:0 reply_then_delete",
+      description: "Friends' promo blasts get a contextual reply before cleanup.",
+      enabled: true,
+      priority: 1,
+      type: "profile",
+      action: "reply-delete",
+      source: "profile",
+    },
+    {
+      _id: "profile_promotions",
+      name: "Promotions cleanup with whitelist guardrails",
+      query: "category:promotions -is:starred whitelist:enabled",
+      description: kept
+        ? `Promotions are cleaned aggressively while preserving ${kept} protected senders from the last run.`
+        : "Promotions are cleaned aggressively while respecting stars and protected senders.",
+      enabled: true,
+      priority: 2,
+      type: "profile",
+      action: "delete",
+      source: "profile",
+    },
+    {
+      _id: "profile_social_updates",
+      name: "Stale social and updates cleanup",
+      query: "category:social | category:updates age>7d",
+      description: "Aging social and update mail is trimmed to keep the inbox operational.",
+      enabled: true,
+      priority: 3,
+      type: "profile",
+      action: "delete",
+      source: "profile",
+    },
+    {
+      _id: "profile_primary",
+      name: "Primary inbox sender and subject triage",
+      query: "primary conservative sender+subject filters",
+      description: "High-confidence sender and subject heuristics remove obvious inbox noise without touching starred mail.",
+      enabled: true,
+      priority: 4,
+      type: "profile",
+      action: "delete",
+      source: "profile",
+    },
+    {
+      _id: "profile_filing",
+      name: "Folder filing for receipts, travel, and infrastructure",
+      query: "labels:receipts,tickets,travel,infrastructure",
+      description: "Useful operational mail is filed into durable labels instead of being deleted.",
+      enabled: true,
+      priority: 5,
+      type: "profile",
+      action: "file",
+      source: "profile",
+    },
+    {
+      _id: "profile_learning",
+      name: "Pattern learning from recent trash",
+      query: "recent trash scan -> suggested new sender patterns",
+      description: "Each run learns uncaught sender domains from recent trash to tighten future cleanup.",
+      enabled: true,
+      priority: 6,
+      type: "profile",
+      action: "learn",
+      source: "profile",
+    },
+    {
+      _id: "profile_ruleset",
+      name: account?.rulesProfile ? `Rules profile: ${account.rulesProfile}` : "Rules profile",
+      query: account?.rulesPath || "rules/new-york-personal.md",
+      description: "This workspace account is driven by Emmy's profile plus any custom Mission Control rules.",
+      enabled: true,
+      priority: 7,
+      type: "profile",
+      action: "profile",
+      source: "profile",
+    },
+  ];
+}
+
 export async function GET() {
   try {
-    // Check if script exists
-    try {
-      await fs.access(GMAIL_CLEANUP_SCRIPT);
-    } catch {
-      return NextResponse.json({
-        rules: [],
-        account: '',
-        message: 'Gmail cleanup script not found'
-      });
-    }
-
-    // Read the script
-    const content = await fs.readFile(GMAIL_CLEANUP_SCRIPT, 'utf-8');
-    const lines = content.split('\n');
-
-    // Extract account
-    let account = '';
-    const accountMatch = content.match(/ACCOUNT="([^"]+)"/);
-    if (accountMatch) {
-      account = accountMatch[1];
-    }
-
-    // Extract rules from search_and_trash calls
-    const scriptRules: Rule[] = [];
-    let priority = 1;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim();
-
-      // Look for search_and_trash function calls
-      if (line.startsWith('search_and_trash')) {
-        // Extract query and description
-        const match = line.match(/search_and_trash\s+"([^"]+)"\s+"([^"]+)"/);
-        if (match) {
-          const [, query, description] = match;
-
-          // Check if this rule is commented out (disabled)
-          const enabled = !line.startsWith('#');
-
-          scriptRules.push({
-            _id: `rule_${priority}`,
-            name: description,
-            query: query,
-            description: `Gmail query: ${query}`,
-            enabled,
-            priority
-          });
-
-          priority++;
-        }
-      }
-    }
-
-    // Load custom rules from JSON store
-    let customRules: Rule[] = [];
-    try {
-      const data = await readRulesFile();
-      customRules = data.customRules || [];
-    } catch {
-      // JSON file unreadable — proceed with empty custom rules
-    }
-
-    const allRules = [...scriptRules, ...customRules];
-
-    // If no rules found, provide default info
-    if (allRules.length === 0) {
-      return NextResponse.json({
-        rules: [
-          {
-            _id: 'rule_default',
-            name: 'No rules configured yet',
-            query: '',
-            description: 'Add search_and_trash calls to gmail-cleanup script',
-            enabled: false,
-            priority: 1
-          }
-        ],
-        account,
-        message: 'No active cleanup rules found in script'
-      });
-    }
+    const account = await getDefaultAccount();
+    const data = await readRulesFile();
+    const profileRules = await buildProfileRules();
+    const customRules = (data.customRules || []).map((rule) => ({
+      ...rule,
+      source: "custom" as const,
+    }));
 
     return NextResponse.json({
-      rules: allRules,
-      account,
-      totalRules: allRules.length,
-      activeRules: allRules.filter(r => r.enabled).length
+      rules: [...profileRules, ...customRules],
+      account: account?.email || "",
+      displayName: account?.displayName || "Emmy",
+      rulesProfile: account?.rulesProfile || "",
+      rulesPath: account ? path.join(EMMIE_DIR, account.rulesPath) : null,
+      cleanupScript: CLEANUP_SCRIPT,
+      cleanupEnabled: Boolean(account?.cleanup?.enabled),
+      totalRules: profileRules.length + customRules.length,
+      activeRules: profileRules.filter((rule) => rule.enabled).length + customRules.filter((rule) => rule.enabled).length,
+      customRuleCount: customRules.length,
     });
   } catch (error) {
-    console.error('Error reading config:', error);
     return NextResponse.json(
-      { error: 'Failed to read configuration' },
+      { error: "Failed to read configuration" },
       { status: 500 }
     );
   }
@@ -149,12 +176,22 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-
-    const { name, description, type, action, condition, targetLabel, ageThresholdDays, enabled, priority, maxPerRun } = body;
+    const {
+      name,
+      description,
+      type,
+      action,
+      condition,
+      targetLabel,
+      ageThresholdDays,
+      enabled,
+      priority,
+      maxPerRun,
+    } = body;
 
     if (!name || !condition) {
       return NextResponse.json(
-        { error: 'name and condition are required' },
+        { error: "name and condition are required" },
         { status: 400 }
       );
     }
@@ -162,16 +199,17 @@ export async function POST(request: NextRequest) {
     const newRule: Rule = {
       _id: randomUUID(),
       name,
-      description: description || '',
+      description: description || "",
       query: condition,
       condition,
-      type: type || 'custom',
-      action: action || 'delete',
-      targetLabel: targetLabel || '',
+      type: type || "custom",
+      action: action || "delete",
+      targetLabel: targetLabel || "",
       ageThresholdDays: ageThresholdDays ?? 30,
       enabled: enabled !== undefined ? enabled : true,
       priority: priority ?? 5,
       maxPerRun: maxPerRun ?? 100,
+      source: "custom",
     };
 
     const data = await readRulesFile();
@@ -180,10 +218,9 @@ export async function POST(request: NextRequest) {
     await writeRulesFile(data);
 
     return NextResponse.json({ rule: newRule }, { status: 201 });
-  } catch (error) {
-    console.error('Error creating rule:', error);
+  } catch {
     return NextResponse.json(
-      { error: 'Failed to create rule' },
+      { error: "Failed to create rule" },
       { status: 500 }
     );
   }
@@ -192,49 +229,68 @@ export async function POST(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   try {
     const body = await request.json();
-    const { id, name, description, type, action, condition, targetLabel, ageThresholdDays, enabled, priority, maxPerRun } = body;
+    const { id, ...updates } = body;
 
     if (!id) {
-      return NextResponse.json(
-        { error: 'id is required' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "id is required" }, { status: 400 });
     }
 
     const data = await readRulesFile();
-    data.customRules = data.customRules || [];
-
-    const idx = data.customRules.findIndex(r => r._id === id);
-    if (idx === -1) {
+    const index = (data.customRules || []).findIndex((rule) => rule._id === id);
+    if (index === -1) {
       return NextResponse.json(
-        { error: 'Rule not found' },
+        { error: "Rule not found or managed by Emmy profile" },
         { status: 404 }
       );
     }
 
-    const existing = data.customRules[idx];
+    const existing = data.customRules[index];
     const updated: Rule = {
       ...existing,
-      ...(name !== undefined && { name }),
-      ...(description !== undefined && { description }),
-      ...(type !== undefined && { type }),
-      ...(action !== undefined && { action }),
-      ...(condition !== undefined && { condition, query: condition }),
-      ...(targetLabel !== undefined && { targetLabel }),
-      ...(ageThresholdDays !== undefined && { ageThresholdDays }),
-      ...(enabled !== undefined && { enabled }),
-      ...(priority !== undefined && { priority }),
-      ...(maxPerRun !== undefined && { maxPerRun }),
+      ...updates,
+      query: updates.condition ?? existing.query,
+      condition: updates.condition ?? existing.condition,
+      source: "custom",
     };
 
-    data.customRules[idx] = updated;
+    data.customRules[index] = updated;
     await writeRulesFile(data);
 
     return NextResponse.json({ rule: updated });
-  } catch (error) {
-    console.error('Error updating rule:', error);
+  } catch {
     return NextResponse.json(
-      { error: 'Failed to update rule' },
+      { error: "Failed to update rule" },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(request: NextRequest) {
+  try {
+    const { id } = await request.json();
+    if (!id) {
+      return NextResponse.json({ error: "id is required" }, { status: 400 });
+    }
+
+    const data = await readRulesFile();
+    const index = (data.customRules || []).findIndex((rule) => rule._id === id);
+    if (index === -1) {
+      return NextResponse.json(
+        { error: "Profile rules are read-only in Mission Control" },
+        { status: 400 }
+      );
+    }
+
+    data.customRules[index] = {
+      ...data.customRules[index],
+      enabled: !data.customRules[index].enabled,
+    };
+    await writeRulesFile(data);
+
+    return NextResponse.json({ rule: data.customRules[index] });
+  } catch {
+    return NextResponse.json(
+      { error: "Failed to toggle rule" },
       { status: 500 }
     );
   }
@@ -243,73 +299,31 @@ export async function PUT(request: NextRequest) {
 export async function DELETE(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
+    const id = searchParams.get("id");
 
     if (!id) {
       return NextResponse.json(
-        { error: 'id query parameter is required' },
+        { error: "id query parameter is required" },
         { status: 400 }
       );
     }
 
     const data = await readRulesFile();
-    data.customRules = data.customRules || [];
+    const initialLength = (data.customRules || []).length;
+    data.customRules = (data.customRules || []).filter((rule) => rule._id !== id);
 
-    const idx = data.customRules.findIndex(r => r._id === id);
-    if (idx === -1) {
+    if (data.customRules.length === initialLength) {
       return NextResponse.json(
-        { error: 'Rule not found' },
+        { error: "Rule not found or managed by Emmy profile" },
         { status: 404 }
       );
     }
 
-    data.customRules.splice(idx, 1);
     await writeRulesFile(data);
-
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Error deleting rule:', error);
+  } catch {
     return NextResponse.json(
-      { error: 'Failed to delete rule' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function PATCH(request: NextRequest) {
-  try {
-    const body = await request.json();
-    const { id } = body;
-
-    if (!id) {
-      return NextResponse.json(
-        { error: 'id is required' },
-        { status: 400 }
-      );
-    }
-
-    const data = await readRulesFile();
-    data.customRules = data.customRules || [];
-
-    const idx = data.customRules.findIndex(r => r._id === id);
-    if (idx === -1) {
-      return NextResponse.json(
-        { error: 'Rule not found' },
-        { status: 404 }
-      );
-    }
-
-    data.customRules[idx] = {
-      ...data.customRules[idx],
-      enabled: !data.customRules[idx].enabled,
-    };
-    await writeRulesFile(data);
-
-    return NextResponse.json({ rule: data.customRules[idx] });
-  } catch (error) {
-    console.error('Error toggling rule:', error);
-    return NextResponse.json(
-      { error: 'Failed to toggle rule' },
+      { error: "Failed to delete rule" },
       { status: 500 }
     );
   }

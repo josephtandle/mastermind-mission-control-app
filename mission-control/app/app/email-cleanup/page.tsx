@@ -1,739 +1,569 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
-  Shield,
   AlertCircle,
-  Settings,
   BarChart3,
+  CheckCircle2,
+  Clock3,
   FileText,
-  TestTube,
+  FolderOpen,
+  Inbox,
   Loader2,
+  Mail,
   Play,
+  RefreshCw,
+  Shield,
+  Sparkles,
 } from "lucide-react";
-import UncertainEmailsSection from "./sections/UncertainEmailsSection";
 import ApiKeyBanner from "@/components/ApiKeyBanner";
+import UncertainEmailsSection from "./sections/UncertainEmailsSection";
+import WhitelistSection from "./sections/WhitelistSection";
+import MetricsSection from "./sections/MetricsSection";
+import LogsSection from "./sections/LogsSection";
 
-// Real data sections
-const RulesSection = ({ rules, loading }: { rules: any[]; loading: boolean }) => (
-  <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-    <h2 className="text-xl font-bold  text-dark-text mb-4">Rules & Instructions</h2>
-    <p className="text-dark-muted mb-4">Active cleanup rules from gmail-cleanup script.</p>
-    
-    {loading ? (
-      <div className="flex items-center justify-center py-8">
-        <Loader2 className="animate-spin text-dark-muted" size={24} />
-      </div>
-    ) : rules.length > 0 ? (
-      <div className="space-y-3">
-        {rules.map((rule: any) => (
-          <div
-            key={rule._id}
-            className={`p-4 rounded-lg border ${
-              rule.enabled
-                ? 'bg-dark-success/10 border-dark-success/30'
-                : 'bg-dark-bg border-dark-border'
-            }`}
-          >
-            <div className="flex items-start justify-between">
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold  text-dark-text">{rule.name}</h3>
-                  {rule.enabled ? (
-                    <span className="px-2 py-0.5 bg-dark-success text-white text-xs font-medium rounded">
-                      Active
-                    </span>
-                  ) : (
-                    <span className="px-2 py-0.5 bg-dark-muted text-white text-xs font-medium rounded">
-                      Disabled
-                    </span>
-                  )}
-                </div>
-                <p className="text-sm text-dark-muted mb-2">{rule.description}</p>
-                <code className="text-xs bg-dark-panel2 px-2 py-1 rounded text-dark-text">
-                  {rule.query}
-                </code>
-              </div>
-              <div className="ml-4 text-sm text-dark-muted">
-                Priority: {rule.priority}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    ) : (
-      <div className="text-center py-8">
-        <p className="text-dark-muted">No cleanup rules configured yet</p>
-        <p className="text-sm text-dark-muted mt-2">
-          Add search_and_trash calls to the gmail-cleanup script
-        </p>
-      </div>
-    )}
-  </div>
-);
+type Section = "overview" | "uncertain" | "whitelist" | "metrics" | "logs";
 
-const WhitelistSection = () => {
-  const [whitelist, setWhitelist] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [adding, setAdding] = useState(false);
-  const [deleting, setDeleting] = useState<string | null>(null);
-  const [showForm, setShowForm] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    reason: '',
-    pattern: ''
-  });
+interface OverviewData {
+  running: boolean;
+  account: string | null;
+  rulesProfile: string | null;
+  cleanupEnabled: boolean;
+  rulesPath: string | null;
+  totalRules: number;
+  customRuleCount: number;
+  protectedSenders: number;
+  pendingUncertain: number;
+  totalTrackedEmails: number;
+  topPlatform: string | null;
+  totalRuns: number;
+  totalEmailsTrashed: number;
+  successRate: number;
+  latestReport: {
+    date: string;
+    deleted: number;
+    filed: number;
+    learningPatterns: string[];
+    patternCount: number;
+    startTime: string;
+    endTime: string;
+    status: "completed" | "failed";
+  } | null;
+}
 
-  const fetchWhitelist = async () => {
-    try {
-      setLoading(true);
-      const res = await fetch('/api/emmie/whitelist');
-      const data = await res.json();
-      setWhitelist(data.whitelist || []);
-    } catch (error) {
-      console.error('Error fetching whitelist:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchWhitelist();
-  }, []);
-
-  const handleAdd = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.name && !formData.email && !formData.pattern) {
-      alert('Please provide at least a name, email, or pattern');
-      return;
-    }
-
-    try {
-      setAdding(true);
-      const res = await fetch('/api/emmie/whitelist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      if (res.ok) {
-        setFormData({ name: '', email: '', reason: '', pattern: '' });
-        setShowForm(false);
-        await fetchWhitelist();
-      } else {
-        alert('Failed to add entry');
-      }
-    } catch (error) {
-      console.error('Error adding entry:', error);
-      alert('Error adding entry');
-    } finally {
-      setAdding(false);
-    }
-  };
-
-  const handleDelete = async (id: string) => {
-    if (!confirm('Are you sure you want to remove this entry from the whitelist?')) {
-      return;
-    }
-
-    try {
-      setDeleting(id);
-      const res = await fetch(`/api/emmie/whitelist?id=${id}`, {
-        method: 'DELETE'
-      });
-
-      if (res.ok) {
-        await fetchWhitelist();
-      } else {
-        alert('Failed to delete entry');
-      }
-    } catch (error) {
-      console.error('Error deleting entry:', error);
-      alert('Error deleting entry');
-    } finally {
-      setDeleting(null);
-    }
-  };
-
-  const handleClearAll = async () => {
-    if (!confirm('Are you sure you want to clear the entire whitelist? This cannot be undone!')) {
-      return;
-    }
-
-    try {
-      for (const entry of whitelist) {
-        await fetch(`/api/emmie/whitelist?id=${entry.id}`, {
-          method: 'DELETE'
-        });
-      }
-      await fetchWhitelist();
-    } catch (error) {
-      console.error('Error clearing whitelist:', error);
-      alert('Error clearing whitelist');
-    }
-  };
-
-  return (
-    <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <h2 className="text-xl font-bold  text-dark-text">Whitelist</h2>
-          <p className="text-dark-muted text-sm mt-1">
-            Add senders here to prevent their emails from being deleted
-          </p>
-        </div>
-        <button
-          onClick={() => setShowForm(!showForm)}
-          className="px-4 py-2 bg-cm-purple text-white rounded-lg hover:bg-cm-purple/80 transition-colors text-sm font-medium"
-        >
-          {showForm ? 'Cancel' : '+ Add to Whitelist'}
-        </button>
-      </div>
-
-      {/* Instructions */}
-      <div className="mb-6 p-4 bg-cm-purple/10 border border-cm-purple/30 rounded-lg">
-        <h3 className="font-bold  text-cm-purple mb-2">How Whitelisting Works</h3>
-        <p className="text-cm-purple text-sm mb-3">
-          Protected senders will never have their emails automatically deleted by Emmie. 
-          You can whitelist by:
-        </p>
-        <ul className="text-cm-purple text-sm space-y-1 list-disc list-inside">
-          <li><strong>Name:</strong> Person or organization name (e.g., "Jay Shetty", "Audible")</li>
-          <li><strong>Email:</strong> Exact email address (e.g., "operations@mikibeach.com")</li>
-          <li><strong>Domain:</strong> All emails from domain (e.g., "domain:gmail.com")</li>
-          <li><strong>Pattern:</strong> Match multiple senders (e.g., "pattern:noreply-*")</li>
-        </ul>
-      </div>
-
-      {/* Add Form */}
-      {showForm && (
-        <form onSubmit={handleAdd} className="mb-6 p-4 bg-dark-bg border border-dark-border rounded-lg">
-          <h3 className="font-bold  text-dark-text mb-3">Add New Entry</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div>
-              <label className="block text-sm font-medium text-dark-text mb-1">
-                Name (person/organization)
-              </label>
-              <input
-                type="text"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-3 py-2 border border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-cm-purple"
-                placeholder="e.g., Jay Shetty, Audible"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-dark-text mb-1">
-                Email address
-              </label>
-              <input
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-3 py-2 border border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-cm-purple"
-                placeholder="e.g., contact@example.com"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-dark-text mb-1">
-                Pattern (optional)
-              </label>
-              <input
-                type="text"
-                value={formData.pattern}
-                onChange={(e) => setFormData({ ...formData, pattern: e.target.value })}
-                className="w-full px-3 py-2 border border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-cm-purple"
-                placeholder="e.g., domain:gmail.com, pattern:noreply-*"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-dark-text mb-1">
-                Reason (optional)
-              </label>
-              <input
-                type="text"
-                value={formData.reason}
-                onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                className="w-full px-3 py-2 border border-dark-border rounded-lg focus:outline-none focus:ring-2 focus:ring-cm-purple"
-                placeholder="Why is this whitelisted?"
-              />
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <button
-              type="submit"
-              disabled={adding}
-              className="px-4 py-2 bg-dark-success text-white rounded-lg hover:bg-dark-success/30 transition-colors text-sm font-medium disabled:opacity-50"
-            >
-              {adding ? 'Adding...' : 'Add Entry'}
-            </button>
-            <button
-              type="button"
-              onClick={() => setShowForm(false)}
-              className="px-4 py-2 bg-dark-panel2 text-dark-text rounded-lg hover:bg-dark-panel2 transition-colors text-sm font-medium"
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
-      )}
-
-      {/* Whitelist Table */}
-      {loading ? (
-        <div className="flex items-center justify-center py-8">
-          <Loader2 className="animate-spin text-dark-muted" size={24} />
-        </div>
-      ) : whitelist.length > 0 ? (
-        <>
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-dark-border">
-                  <th className="text-left py-3 px-4 text-sm font-semibold text-dark-text">Name</th>
-                  <th className="text-left py-3 px-4 text-sm font-semibold text-dark-text">Email</th>
-                  <th className="text-left py-3 px-4 text-sm font-semibold text-dark-text">Pattern</th>
-                  <th className="text-left py-3 px-4 text-sm font-semibold text-dark-text">Reason</th>
-                  <th className="text-right py-3 px-4 text-sm font-semibold text-dark-text">Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {whitelist.map((entry: any) => (
-                  <tr key={entry.id} className="border-b border-dark-border hover:bg-dark-bg">
-                    <td className="py-3 px-4 text-sm text-dark-text">
-                      {entry.name || <span className="text-dark-muted">—</span>}
-                    </td>
-                    <td className="py-3 px-4 text-sm text-dark-text">
-                      {entry.email || <span className="text-dark-muted">—</span>}
-                    </td>
-                    <td className="py-3 px-4 text-sm text-dark-text">
-                      {entry.pattern ? (
-                        <code className="px-2 py-1 bg-dark-panel2 rounded text-xs">{entry.pattern}</code>
-                      ) : (
-                        <span className="text-dark-muted">—</span>
-                      )}
-                    </td>
-                    <td className="py-3 px-4 text-sm text-dark-muted">
-                      {entry.reason || <span className="text-dark-muted">—</span>}
-                    </td>
-                    <td className="py-3 px-4 text-right">
-                      <button
-                        onClick={() => handleDelete(entry.id)}
-                        disabled={deleting === entry.id}
-                        className="text-dark-danger hover:text-dark-danger text-sm font-medium disabled:opacity-50"
-                      >
-                        {deleting === entry.id ? 'Removing...' : 'Remove'}
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          
-          <div className="mt-4 pt-4 border-t border-dark-border flex items-center justify-between">
-            <p className="text-sm text-dark-muted">
-              {whitelist.length} {whitelist.length === 1 ? 'entry' : 'entries'} in whitelist
-            </p>
-            <button
-              onClick={handleClearAll}
-              className="text-sm text-dark-danger hover:text-dark-danger font-medium"
-            >
-              Clear All
-            </button>
-          </div>
-        </>
-      ) : (
-        <div className="text-center py-8">
-          <Shield size={48} className="mx-auto text-dark-muted mb-3" />
-          <p className="text-dark-muted">No whitelist entries yet</p>
-          <p className="text-sm text-dark-muted mt-2">
-            Click "Add to Whitelist" to protect important senders
-          </p>
-        </div>
-      )}
-    </div>
-  );
+const defaultOverview: OverviewData = {
+  running: false,
+  account: null,
+  rulesProfile: null,
+  cleanupEnabled: false,
+  rulesPath: null,
+  totalRules: 0,
+  customRuleCount: 0,
+  protectedSenders: 0,
+  pendingUncertain: 0,
+  totalTrackedEmails: 0,
+  topPlatform: null,
+  totalRuns: 0,
+  totalEmailsTrashed: 0,
+  successRate: 0,
+  latestReport: null,
 };
 
-// UncertainEmailsSection is now imported from ./sections/UncertainEmailsSection
+function formatDateTime(value: string | null | undefined) {
+  if (!value) return "Unavailable";
+  const normalized = value.includes("T") ? value : value.replace(" ", "T");
+  const date = new Date(normalized);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleString("en-US", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+}
 
-const MetricsSection = ({ metrics, dailyStats, platformStats, loading }: any) => (
-  <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-    <h2 className="text-xl font-bold  text-dark-text mb-4">Metrics</h2>
-    <p className="text-dark-muted mb-4">Historical email tracking data from emmie-metrics.csv.</p>
-    
-    {loading ? (
-      <div className="flex items-center justify-center py-8">
-        <Loader2 className="animate-spin text-dark-muted" size={24} />
-      </div>
-    ) : metrics.length > 0 ? (
-      <div className="space-y-6">
-        {/* Platform breakdown */}
-        {platformStats && platformStats.length > 0 && (
-          <div>
-            <h3 className="font-bold  text-dark-text mb-3">Emails by Platform</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-              {platformStats.slice(0, 6).map((stat: any) => (
-                <div key={stat.platform} className="bg-dark-bg rounded-lg p-3">
-                  <p className="text-sm font-medium text-dark-text">{stat.platform}</p>
-                  <p className="text-2xl font-bold text-dark-text">{stat.count}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Daily activity */}
-        {dailyStats && dailyStats.length > 0 && (
-          <div>
-            <h3 className="font-bold  text-dark-text mb-3">Daily Activity (Last 7 Days)</h3>
-            <div className="space-y-2">
-              {dailyStats.slice(0, 7).map((stat: any) => (
-                <div key={stat.date} className="flex items-center justify-between">
-                  <span className="text-sm text-dark-muted">{stat.date}</span>
-                  <div className="flex items-center gap-2">
-                    <div
-                      className="h-2 bg-cm-purple rounded"
-                      style={{ width: `${Math.min((stat.count / Math.max(...dailyStats.map((s: any) => s.count))) * 200, 200)}px` }}
-                    />
-                    <span className="text-sm font-medium text-dark-text w-12 text-right">
-                      {stat.count}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Recent emails */}
+function metricCard(
+  label: string,
+  value: string | number,
+  detail: string,
+  accent: string,
+  Icon: React.ComponentType<{ className?: string; size?: number }>
+) {
+  return (
+    <div className="rounded-2xl border border-dark-border bg-dark-panel p-5 shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
+      <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="font-bold  text-dark-text mb-3">Recent Emails Tracked</h3>
-          <div className="space-y-2 max-h-96 overflow-y-auto">
-            {metrics.slice(0, 20).map((email: any, idx: number) => (
-              <div key={idx} className="p-3 bg-dark-bg rounded-lg text-sm">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1 min-w-0">
-                    <p className="font-medium text-dark-text truncate">{email.subject}</p>
-                    <p className="text-dark-muted text-xs">{email.sender}</p>
-                  </div>
-                  <div className="ml-4 text-right flex-shrink-0">
-                    <p className="text-xs text-dark-muted">{email.date.split(' ')[0]}</p>
-                    {email.platform && (
-                      <span className="text-xs bg-cm-purple/20 text-cm-purple px-2 py-0.5 rounded mt-1 inline-block">
-                        {email.platform}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="text-[11px] uppercase tracking-[0.22em] text-dark-muted">
+            {label}
+          </p>
+          <p className="mt-3 text-3xl font-bold tracking-tight text-dark-text">
+            {value}
+          </p>
+          <p className="mt-2 text-sm text-dark-muted">{detail}</p>
+        </div>
+        <div className={`rounded-2xl border px-3 py-3 ${accent}`}>
+          <Icon size={20} className="text-current" />
         </div>
       </div>
-    ) : (
-      <div className="text-center py-8">
-        <p className="text-dark-muted">No metrics data available yet</p>
-        <p className="text-sm text-dark-muted mt-2">
-          Data will appear here after Emmie runs
-        </p>
-      </div>
-    )}
-  </div>
-);
-
-const LogsSection = ({ logs, summary, loading }: any) => (
-  <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-    <h2 className="text-xl font-bold  text-dark-text mb-4">Execution Logs</h2>
-    <p className="text-dark-muted mb-4">Detailed history of cleanup operations.</p>
-    
-    {loading ? (
-      <div className="flex items-center justify-center py-8">
-        <Loader2 className="animate-spin text-dark-muted" size={24} />
-      </div>
-    ) : logs.length > 0 ? (
-      <div className="space-y-6">
-        {/* Summary stats */}
-        {summary && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-dark-bg rounded-lg">
-            <div>
-              <p className="text-sm text-dark-muted">Total Runs</p>
-              <p className="text-2xl font-bold text-dark-text">{summary.totalRuns}</p>
-            </div>
-            <div>
-              <p className="text-sm text-dark-muted">Emails Processed</p>
-              <p className="text-2xl font-bold text-dark-text">{summary.totalEmailsProcessed}</p>
-            </div>
-            <div>
-              <p className="text-sm text-dark-muted">Emails Trashed</p>
-              <p className="text-2xl font-bold text-dark-success">{summary.totalEmailsTrashed}</p>
-            </div>
-            <div>
-              <p className="text-sm text-dark-muted">Success Rate</p>
-              <p className="text-2xl font-bold text-cm-purple">{summary.successRate}%</p>
-            </div>
-          </div>
-        )}
-
-        {/* Log entries */}
-        <div className="space-y-4">
-          {logs.map((log: any, idx: number) => (
-            <div key={idx} className="border border-dark-border rounded-lg p-4">
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-bold  text-dark-text">{log.date}</h3>
-                    <span
-                      className={`px-2 py-0.5 text-xs font-medium rounded ${
-                        log.status === 'completed'
-                          ? 'bg-dark-success/20 text-dark-success'
-                          : log.status === 'failed'
-                          ? 'bg-dark-danger/20 text-dark-danger'
-                          : 'bg-dark-warn/20 text-dark-warn'
-                      }`}
-                    >
-                      {log.status}
-                    </span>
-                  </div>
-                  <p className="text-sm text-dark-muted mt-1">
-                    {log.startTime} - {log.endTime}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm text-dark-muted">
-                    <span className="font-semibold text-dark-success">{log.emailsTrashed}</span> trashed
-                  </p>
-                  {log.emailsFailed > 0 && (
-                    <p className="text-sm text-dark-danger">
-                      {log.emailsFailed} failed
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/* Query details */}
-              {log.queries && log.queries.length > 0 && (
-                <div className="space-y-2">
-                  {log.queries.map((query: any, qIdx: number) => (
-                    <div key={qIdx} className="bg-dark-bg rounded p-3">
-                      <p className="text-sm font-medium text-dark-text">{query.description}</p>
-                      <p className="text-xs text-dark-muted mt-1">
-                        Found: {query.found} | Trashed: {query.trashed}
-                        {query.failed > 0 && ` | Failed: ${query.failed}`}
-                      </p>
-                      <code className="text-xs text-dark-muted mt-1 block">{query.query}</code>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    ) : (
-      <div className="text-center py-8">
-        <p className="text-dark-muted">No cleanup logs available yet</p>
-        <p className="text-sm text-dark-muted mt-2">
-          Logs will appear here after Emmie runs
-        </p>
-      </div>
-    )}
-  </div>
-);
-
-const TestRulesSection = () => (
-  <div className="bg-dark-panel rounded-lg border border-dark-border p-6">
-    <h2 className="text-xl font-bold  text-dark-text mb-4">Test Rules</h2>
-    <p className="text-dark-muted mb-4">Preview the effects of your cleanup rules before applying them.</p>
-    <div className="mt-4 p-4 bg-cm-purple/10 border border-cm-purple/30 rounded-lg">
-      <p className="text-cm-purple text-sm">
-        This feature requires Gmail API integration to preview rule effects.
-        Edit rules directly in /Users/openclaw/.openclaw/workspace/bin/gmail-cleanup
-      </p>
     </div>
-  </div>
-);
-
-type Section =
-  | "rules"
-  | "whitelist"
-  | "uncertain"
-  | "metrics"
-  | "logs"
-  | "test";
+  );
+}
 
 export default function EmailCleanupPage() {
-  const [activeSection, setActiveSection] = useState<Section>("uncertain");
+  const [activeSection, setActiveSection] = useState<Section>("overview");
+  const [overview, setOverview] = useState<OverviewData>(defaultOverview);
+  const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [emmyRunning, setEmmyRunning] = useState(false);
   const [emmyResult, setEmmyResult] = useState<{ success: boolean; message: string } | null>(null);
 
-  // Check if Emmy is already running on mount
+  const refreshOverview = async (isManual = false) => {
+    if (isManual) setRefreshing(true);
+    else setLoading(true);
+
+    try {
+      const [runRes, configRes, whitelistRes, uncertainRes, metricsRes, logsRes] =
+        await Promise.all([
+          fetch("/api/emmie/run"),
+          fetch("/api/emmie/config"),
+          fetch("/api/emmie/whitelist"),
+          fetch("/api/emmie/uncertain?status=pending&limit=500"),
+          fetch("/api/emmie/metrics"),
+          fetch("/api/emmie/logs"),
+        ]);
+
+      const [runData, configData, whitelistData, uncertainData, metricsData, logsData] =
+        await Promise.all([
+          runRes.json(),
+          configRes.json(),
+          whitelistRes.json(),
+          uncertainRes.json(),
+          metricsRes.json(),
+          logsRes.json(),
+        ]);
+
+      setEmmyRunning(Boolean(runData.running));
+      setOverview({
+        running: Boolean(runData.running),
+        account: configData.account || runData.account || null,
+        rulesProfile: configData.rulesProfile || runData.rulesProfile || null,
+        cleanupEnabled: Boolean(configData.cleanupEnabled),
+        rulesPath: configData.rulesPath || null,
+        totalRules: configData.totalRules || 0,
+        customRuleCount: configData.customRuleCount || 0,
+        protectedSenders: (whitelistData.whitelist || []).length,
+        pendingUncertain: uncertainData.count || 0,
+        totalTrackedEmails: metricsData.totalEmails || 0,
+        topPlatform: metricsData.platformStats?.[0]?.platform || null,
+        totalRuns: logsData.summary?.totalRuns || 0,
+        totalEmailsTrashed: logsData.summary?.totalEmailsTrashed || 0,
+        successRate: logsData.summary?.successRate || 0,
+        latestReport: logsData.summary?.latestReport || null,
+      });
+    } catch {
+      setOverview(defaultOverview);
+    } finally {
+      setLoading(false);
+      setRefreshing(false);
+    }
+  };
+
   useEffect(() => {
-    fetch('/api/emmie/run')
-      .then(res => res.json())
-      .then(data => setEmmyRunning(data.running))
-      .catch(() => {});
+    refreshOverview();
   }, []);
 
   const handleRunEmmy = async () => {
     setEmmyRunning(true);
     setEmmyResult(null);
+
     try {
-      const res = await fetch('/api/emmie/run', { method: 'POST' });
+      const res = await fetch("/api/emmie/run", { method: "POST" });
       const data = await res.json();
       if (res.ok && data.success) {
-        setEmmyResult({ success: true, message: 'Cleanup completed successfully' });
+        setEmmyResult({
+          success: true,
+          message: data.message || "Cleanup completed successfully",
+        });
       } else {
-        setEmmyResult({ success: false, message: data.error || 'Cleanup failed' });
+        setEmmyResult({
+          success: false,
+          message: data.error || "Cleanup failed",
+        });
       }
     } catch {
-      setEmmyResult({ success: false, message: 'Failed to reach server' });
+      setEmmyResult({
+        success: false,
+        message: "Failed to reach Emmy runtime",
+      });
     } finally {
       setEmmyRunning(false);
+      refreshOverview(true);
     }
   };
 
-  // Real data state
-  const [rules, setRules] = useState<any[]>([]);
-  const [metrics, setMetrics] = useState<any[]>([]);
-  const [dailyStats, setDailyStats] = useState<any[]>([]);
-  const [platformStats, setPlatformStats] = useState<any[]>([]);
-  const [logs, setLogs] = useState<any[]>([]);
-  const [logsSummary, setLogsSummary] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const latestNarrative = useMemo(() => {
+    if (!overview.latestReport) {
+      return "Emmy is connected, but there is no cleanup report yet.";
+    }
 
-  // Fetch real data on mount
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
+    const bits = [
+      `${overview.latestReport.deleted} emails cleared`,
+      `${overview.latestReport.filed} filed for later`,
+      `${overview.latestReport.patternCount} new sender patterns learned`,
+    ].filter(Boolean);
 
-        // Fetch config/rules
-        const configRes = await fetch('/api/emmie/config');
-        const configData = await configRes.json();
-        setRules(configData.rules || []);
+    return bits.join(" · ");
+  }, [overview.latestReport]);
 
-        // Fetch metrics
-        const metricsRes = await fetch('/api/emmie/metrics');
-        const metricsData = await metricsRes.json();
-        setMetrics(metricsData.metrics || []);
-        setDailyStats(metricsData.dailyStats || []);
-        setPlatformStats(metricsData.platformStats || []);
-
-        // Fetch logs
-        const logsRes = await fetch('/api/emmie/logs');
-        const logsData = await logsRes.json();
-        setLogs(logsData.logs || []);
-        setLogsSummary(logsData.summary || null);
-      } catch (error) {
-        console.error('Error fetching Emmie data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const menuItems: { id: Section; label: string; icon: any }[] = [
-    { id: "uncertain", label: "Uncertain Emails", icon: AlertCircle },
-    { id: "rules", label: "Rules", icon: Settings },
-    { id: "whitelist", label: "Whitelist", icon: Shield },
+  const menuItems: Array<{ id: Section; label: string; icon: typeof Mail }> = [
+    { id: "overview", label: "Overview", icon: Sparkles },
+    { id: "uncertain", label: "Edge Cases", icon: AlertCircle },
+    { id: "whitelist", label: "Guardrails", icon: Shield },
     { id: "metrics", label: "Metrics", icon: BarChart3 },
-    { id: "logs", label: "Logs", icon: FileText },
-    { id: "test", label: "Test Rules", icon: TestTube },
+    { id: "logs", label: "Reports", icon: FileText },
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <ApiKeyBanner slug="google" agentName="Gmail / Email Cleanup" />
-      {/* Run Emmy Button */}
-      <div className="flex items-center gap-4">
-        <button
-          onClick={handleRunEmmy}
-          disabled={emmyRunning}
-          className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors ${
-            emmyRunning
-              ? 'bg-dark-warn text-white cursor-not-allowed'
-              : 'bg-cm-purple text-white hover:bg-cm-purple/80'
-          }`}
-        >
-          {emmyRunning ? (
-            <>
-              <Loader2 size={16} className="animate-spin" />
-              Running...
-            </>
+
+      <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <aside className="space-y-4">
+          <div className="sticky top-6 overflow-hidden rounded-[28px] border border-dark-border bg-dark-panel shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
+            <div className="border-b border-dark-border bg-[linear-gradient(135deg,rgba(155,92,255,0.18),rgba(26,26,31,0.95)_55%,rgba(255,114,168,0.12))] px-5 py-5">
+              <p className="text-[11px] uppercase tracking-[0.28em] text-cm-purple-mid">
+                Emmy Ops
+              </p>
+              <h1 className="mt-2 text-2xl font-bold tracking-tight text-dark-text">
+                Email Cleanup
+              </h1>
+              <p className="mt-2 text-sm leading-6 text-dark-muted">
+                Live inbox cleanup, filing, guardrails, and learning signals from Emmy.
+              </p>
+            </div>
+
+            <div className="space-y-1 p-3">
+              {menuItems.map((item) => {
+                const Icon = item.icon;
+                const isActive = activeSection === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => setActiveSection(item.id)}
+                    className={`flex w-full items-center gap-3 rounded-2xl px-4 py-3 text-left text-sm transition-colors ${
+                      isActive
+                        ? "bg-cm-purple/12 text-cm-purple"
+                        : "text-dark-muted hover:bg-dark-bg hover:text-dark-text"
+                    }`}
+                  >
+                    <Icon size={18} className="shrink-0" />
+                    <span className="truncate font-medium">{item.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </aside>
+
+        <main className="space-y-6">
+          <section className="overflow-hidden rounded-[30px] border border-dark-border bg-[radial-gradient(circle_at_top_left,rgba(155,92,255,0.24),transparent_38%),radial-gradient(circle_at_top_right,rgba(255,114,168,0.18),transparent_28%),linear-gradient(180deg,rgba(27,28,34,0.96),rgba(20,21,27,1))] shadow-[0_30px_90px_rgba(0,0,0,0.3)]">
+            <div className="grid gap-6 px-6 py-7 lg:grid-cols-[minmax(0,1.5fr)_360px] lg:px-8">
+              <div className="space-y-5">
+                <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.22em] text-dark-muted">
+                  <span className="rounded-full border border-cm-purple/30 bg-cm-purple/12 px-3 py-1 text-cm-purple-mid">
+                    {overview.account || "No account"}
+                  </span>
+                  {overview.rulesProfile && (
+                    <span className="rounded-full border border-dark-border bg-dark-bg px-3 py-1">
+                      {overview.rulesProfile}
+                    </span>
+                  )}
+                  <span
+                    className={`rounded-full border px-3 py-1 ${
+                      overview.cleanupEnabled
+                        ? "border-dark-success/30 bg-dark-success/10 text-dark-success"
+                        : "border-dark-warn/30 bg-dark-warn/10 text-dark-warn"
+                    }`}
+                  >
+                    {overview.cleanupEnabled ? "Cleanup enabled" : "Cleanup paused"}
+                  </span>
+                </div>
+
+                <div>
+                  <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-dark-text sm:text-[2.7rem]">
+                    Emmy is finally speaking through real reports, not dead placeholders.
+                  </h2>
+                  <p className="mt-4 max-w-2xl text-base leading-7 text-dark-muted">
+                    Latest run: {latestNarrative} {overview.latestReport ? `Completed ${formatDateTime(overview.latestReport.endTime)}.` : ""}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={handleRunEmmy}
+                    disabled={emmyRunning}
+                    className={`inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-sm font-semibold text-white transition-colors ${
+                      emmyRunning
+                        ? "cursor-not-allowed bg-dark-warn"
+                        : "bg-cm-purple hover:bg-cm-purple/85"
+                    }`}
+                  >
+                    {emmyRunning ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        Running Emmy
+                      </>
+                    ) : (
+                      <>
+                        <Play size={16} />
+                        Go Talk to Emmy
+                      </>
+                    )}
+                  </button>
+
+                  <button
+                    onClick={() => refreshOverview(true)}
+                    disabled={refreshing}
+                    className="inline-flex items-center gap-2 rounded-2xl border border-dark-border bg-dark-bg px-5 py-3 text-sm font-medium text-dark-text transition-colors hover:bg-dark-panel2"
+                  >
+                    <RefreshCw
+                      size={16}
+                      className={refreshing ? "animate-spin" : ""}
+                    />
+                    Refresh reports
+                  </button>
+
+                  {emmyResult && (
+                    <span
+                      className={`text-sm font-medium ${
+                        emmyResult.success ? "text-dark-success" : "text-dark-danger"
+                      }`}
+                    >
+                      {emmyResult.message}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                <div className="rounded-[24px] border border-dark-border bg-dark-panel/80 p-5">
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-dark-muted">
+                    Latest report
+                  </p>
+                  <div className="mt-4 flex items-center gap-3">
+                    <div className="rounded-2xl border border-dark-success/20 bg-dark-success/10 p-3 text-dark-success">
+                      <CheckCircle2 size={20} />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold tracking-tight text-dark-text">
+                        {overview.latestReport?.deleted ?? 0}
+                      </p>
+                      <p className="text-sm text-dark-muted">
+                        emails deleted in the latest pass
+                      </p>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between text-sm text-dark-muted">
+                    <span>Filed</span>
+                    <span className="font-medium text-dark-text">
+                      {overview.latestReport?.filed ?? 0}
+                    </span>
+                  </div>
+                  <div className="mt-2 flex items-center justify-between text-sm text-dark-muted">
+                    <span>Learned patterns</span>
+                    <span className="font-medium text-dark-text">
+                      {overview.latestReport?.patternCount ?? 0}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="rounded-[24px] border border-dark-border bg-dark-panel/80 p-5">
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-dark-muted">
+                    Guardrails
+                  </p>
+                  <div className="mt-4 space-y-3 text-sm">
+                    <div className="flex items-center justify-between">
+                      <span className="text-dark-muted">Protected senders</span>
+                      <span className="font-semibold text-dark-text">
+                        {overview.protectedSenders}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-dark-muted">Pending reviews</span>
+                      <span className="font-semibold text-dark-text">
+                        {overview.pendingUncertain}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-dark-muted">Success rate</span>
+                      <span className="font-semibold text-dark-text">
+                        {overview.successRate}%
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {loading ? (
+            <div className="rounded-2xl border border-dark-border bg-dark-panel p-10 text-center">
+              <Loader2 className="mx-auto animate-spin text-cm-purple" size={28} />
+              <p className="mt-3 text-sm text-dark-muted">Loading Emmy reports…</p>
+            </div>
+          ) : activeSection === "overview" ? (
+            <div className="space-y-6">
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                {metricCard(
+                  "Deleted",
+                  overview.latestReport?.deleted ?? 0,
+                  "latest cleanup pass",
+                  "border-dark-success/20 bg-dark-success/10 text-dark-success",
+                  Inbox
+                )}
+                {metricCard(
+                  "Filed",
+                  overview.latestReport?.filed ?? 0,
+                  "routed into durable labels",
+                  "border-cm-purple/20 bg-cm-purple/12 text-cm-purple",
+                  FolderOpen
+                )}
+                {metricCard(
+                  "Protected",
+                  overview.protectedSenders,
+                  "whitelisted senders and domains",
+                  "border-dark-border bg-dark-bg text-dark-text",
+                  Shield
+                )}
+                {metricCard(
+                  "Tracked",
+                  overview.totalTrackedEmails,
+                  overview.topPlatform ? `top source: ${overview.topPlatform}` : "metrics feed connected",
+                  "border-cm-pink/20 bg-cm-pink/10 text-cm-pink-light",
+                  BarChart3
+                )}
+              </div>
+
+              <div className="grid gap-6 xl:grid-cols-[minmax(0,1.4fr)_minmax(340px,0.9fr)]">
+                <section className="rounded-[28px] border border-dark-border bg-dark-panel p-6 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-2xl border border-cm-purple/20 bg-cm-purple/12 p-3 text-cm-purple">
+                      <Sparkles size={18} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold tracking-tight text-dark-text">
+                        Emmy&apos;s latest report
+                      </h3>
+                      <p className="text-sm text-dark-muted">
+                        {overview.latestReport
+                          ? `${formatDateTime(overview.latestReport.endTime)} · ${overview.latestReport.status}`
+                          : "No latest run yet"}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                    <div className="rounded-2xl bg-dark-bg p-4">
+                      <p className="text-xs uppercase tracking-[0.18em] text-dark-muted">
+                        Cleanup account
+                      </p>
+                      <p className="mt-3 font-semibold text-dark-text">
+                        {overview.account || "Unknown"}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl bg-dark-bg p-4">
+                      <p className="text-xs uppercase tracking-[0.18em] text-dark-muted">
+                        Rules profile
+                      </p>
+                      <p className="mt-3 font-semibold text-dark-text">
+                        {overview.rulesProfile || "Unavailable"}
+                      </p>
+                    </div>
+                    <div className="rounded-2xl bg-dark-bg p-4">
+                      <p className="text-xs uppercase tracking-[0.18em] text-dark-muted">
+                        Run history
+                      </p>
+                      <p className="mt-3 font-semibold text-dark-text">
+                        {overview.totalRuns} logged runs
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 rounded-[24px] border border-dark-border bg-[linear-gradient(180deg,rgba(155,92,255,0.08),rgba(26,26,31,0.65))] p-5">
+                    <p className="text-xs uppercase tracking-[0.22em] text-dark-muted">
+                      Why this demo now feels real
+                    </p>
+                    <div className="mt-4 space-y-3 text-sm leading-6 text-dark-muted">
+                      <p>
+                        Emmy is now wired to the real workspace runtime, real metrics CSV, and real
+                        cleanup logs under <code className="rounded bg-dark-bg px-1.5 py-0.5 text-dark-text">~/.myos/workspace</code>.
+                      </p>
+                      <p>
+                        Mission Control is showing actual operational reporting: latest deleted volume,
+                        filing volume, pending edge cases, protected sender count, and learned sender
+                        patterns from the most recent run.
+                      </p>
+                      <p>
+                        Rules profile source:{" "}
+                        <code className="rounded bg-dark-bg px-1.5 py-0.5 text-dark-text">
+                          {overview.rulesPath || "Unavailable"}
+                        </code>
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="rounded-[28px] border border-dark-border bg-dark-panel p-6 shadow-[0_24px_70px_rgba(0,0,0,0.22)]">
+                  <div className="flex items-center gap-3">
+                    <div className="rounded-2xl border border-dark-border bg-dark-bg p-3 text-dark-text">
+                      <Clock3 size={18} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold tracking-tight text-dark-text">
+                        Learning queue
+                      </h3>
+                      <p className="text-sm text-dark-muted">
+                        Patterns Emmy thinks should be added next
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 space-y-3">
+                    {(overview.latestReport?.learningPatterns || []).slice(0, 8).map((pattern) => (
+                      <div
+                        key={pattern}
+                        className="flex items-start gap-3 rounded-2xl border border-dark-border bg-dark-bg px-4 py-3"
+                      >
+                        <Mail size={16} className="mt-0.5 shrink-0 text-cm-purple" />
+                        <div>
+                          <p className="text-sm font-medium text-dark-text">{pattern}</p>
+                          <p className="text-xs text-dark-muted">
+                            surfaced from recent trash analysis
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+
+                    {!(overview.latestReport?.learningPatterns || []).length && (
+                      <div className="rounded-2xl border border-dark-border bg-dark-bg px-4 py-6 text-sm text-dark-muted">
+                        No learning patterns surfaced from the latest run.
+                      </div>
+                    )}
+                  </div>
+                </section>
+              </div>
+            </div>
+          ) : activeSection === "uncertain" ? (
+            <UncertainEmailsSection />
+          ) : activeSection === "whitelist" ? (
+            <WhitelistSection />
+          ) : activeSection === "metrics" ? (
+            <MetricsSection />
           ) : (
-            <>
-              <Play size={16} />
-              Run Emmy
-            </>
+            <LogsSection />
           )}
-        </button>
-        {emmyResult && (
-          <span
-            className={`text-sm font-medium ${
-              emmyResult.success ? 'text-dark-success' : 'text-dark-danger'
-            }`}
-          >
-            {emmyResult.message}
-          </span>
-        )}
+        </main>
       </div>
-
-    <div className="flex gap-6">
-      {/* Sidebar Menu */}
-      <div className="w-64 flex-shrink-0">
-        <div className="bg-dark-panel rounded-lg border border-dark-border overflow-hidden sticky top-6">
-          <div className="p-4 bg-gradient-to-r from-cm-purple/15 via-dark-panel to-dark-panel text-dark-text">
-            <h2 className="text-lg font-bold ">📧 Emmie</h2>
-            <p className="text-xs text-dark-muted">Email Cleanup Assistant</p>
-          </div>
-
-          <div className="p-2 space-y-1">
-            {menuItems.map((item) => {
-              const Icon = item.icon;
-              const isActive = activeSection === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => setActiveSection(item.id)}
-                  className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
-                    isActive
-                      ? "bg-cm-purple/10 text-cm-purple font-medium"
-                      : "text-dark-muted hover:bg-dark-bg"
-                  }`}
-                >
-                  <Icon size={16} className="flex-shrink-0" />
-                  <span className="truncate">{item.label}</span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="flex-1">
-        {activeSection === "rules" && <RulesSection rules={rules} loading={loading} />}
-        {activeSection === "whitelist" && <WhitelistSection />}
-        {activeSection === "uncertain" && <UncertainEmailsSection />}
-        {activeSection === "metrics" && (
-          <MetricsSection
-            metrics={metrics}
-            dailyStats={dailyStats}
-            platformStats={platformStats}
-            loading={loading}
-          />
-        )}
-        {activeSection === "logs" && (
-          <LogsSection logs={logs} summary={logsSummary} loading={loading} />
-        )}
-        {activeSection === "test" && <TestRulesSection />}
-      </div>
-    </div>
     </div>
   );
 }

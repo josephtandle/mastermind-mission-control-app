@@ -16,45 +16,63 @@ interface QueueEntry {
   cohort: number;
   speakerName: string;
   quote: string;
+  surface?: "story" | "feed";
   approved: boolean;
   approvedAt: string;
   status: string;
 }
 
 interface QueueFile {
-  queue: QueueEntry[];
-  posted: QueueEntry[];
-  settings: { postIntervalHours: number; enabled: boolean };
+  storyQueue?: QueueEntry[];
+  feedQueue?: QueueEntry[];
+  storyPosted?: QueueEntry[];
+  feedPosted?: QueueEntry[];
+  queue?: QueueEntry[];
+  posted?: QueueEntry[];
+  settings: { postIntervalHours?: number; enabled?: boolean };
+}
+
+function normalizeQueueFile(queue: QueueFile): Required<Pick<QueueFile, "storyQueue" | "feedQueue" | "storyPosted" | "feedPosted">> & QueueFile {
+  return {
+    ...queue,
+    storyQueue: Array.isArray(queue.storyQueue) ? queue.storyQueue : Array.isArray(queue.queue) ? queue.queue : [],
+    feedQueue: Array.isArray(queue.feedQueue) ? queue.feedQueue : [],
+    storyPosted: Array.isArray(queue.storyPosted) ? queue.storyPosted : [],
+    feedPosted: Array.isArray(queue.feedPosted) ? queue.feedPosted : Array.isArray(queue.posted) ? queue.posted : [],
+  };
 }
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { file, session, cohort = 1, speakerName = "", quote = "", approved } = body;
+    const { file, session, cohort = 1, speakerName = "", quote = "", approved, surface = "story" } = body;
+    const queueKey = surface === "feed" ? "feedQueue" : "storyQueue";
+    const postedKey = surface === "feed" ? "feedPosted" : "storyPosted";
 
     if (!file || !session) {
       return NextResponse.json({ error: "file and session required" }, { status: 400 });
     }
 
-    const q: QueueFile = fs.existsSync(QUEUE_FILE)
+    const q = normalizeQueueFile(fs.existsSync(QUEUE_FILE)
       ? (JSON.parse(fs.readFileSync(QUEUE_FILE, "utf8")) as QueueFile)
-      : { queue: [], posted: [], settings: { postIntervalHours: 24, enabled: false } };
+      : { storyQueue: [], feedQueue: [], storyPosted: [], feedPosted: [], settings: { enabled: false } });
 
     if (approved) {
       // Add to queue if not already there and not already posted
-      const alreadyPosted = q.posted.some(
+      const alreadyPosted = q[postedKey].some(
         (e) => e.file === file && String(e.session) === String(session)
       );
-      const alreadyQueued = q.queue.some(
+      const alreadyQueued = q[queueKey].some(
         (e) => e.file === file && String(e.session) === String(session)
       );
       if (!alreadyPosted && !alreadyQueued) {
-        q.queue.push({
+        q[queueKey].push({
           file,
           session,
           cohort,
           speakerName,
           quote,
+          surface,
           approved: true,
           approvedAt: new Date().toISOString(),
           status: "queued",
@@ -62,7 +80,7 @@ export async function POST(request: NextRequest) {
       }
     } else {
       // Remove from queue
-      q.queue = q.queue.filter(
+      q[queueKey] = q[queueKey].filter(
         (e) => !(e.file === file && String(e.session) === String(session))
       );
     }

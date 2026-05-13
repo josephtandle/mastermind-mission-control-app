@@ -1,66 +1,68 @@
-import { NextResponse } from 'next/server';
-import { exec } from 'child_process';
-import path from 'path';
-import os from "os";
+import { execFile } from "child_process";
+import { promisify } from "util";
+import { NextResponse } from "next/server";
+import { CLEANUP_SCRIPT, WORKSPACE_ROOT, getDefaultAccount } from "../shared";
 
-const HOME = os.homedir();
-
-const GMAIL_CLEANUP_SCRIPT = path.join(
-  process.env.HOME || '',
-  '.openclaw',
-  'workspace',
-  'bin',
-  'gmail-cleanup'
-);
+const execFileAsync = promisify(execFile);
 
 let isRunning = false;
 
 export async function GET() {
-  return NextResponse.json({ running: isRunning });
+  const account = await getDefaultAccount();
+  return NextResponse.json({
+    running: isRunning,
+    account: account?.email || null,
+    rulesProfile: account?.rulesProfile || null,
+  });
 }
 
 export async function POST() {
   if (isRunning) {
-    return NextResponse.json(
-      { error: 'Emmy is already running' },
-      { status: 409 }
-    );
+    return NextResponse.json({ error: "Emmy is already running" }, { status: 409 });
   }
 
+  const account = await getDefaultAccount();
   isRunning = true;
 
   try {
-    const result = await new Promise<{ stdout: string; stderr: string }>((resolve, reject) => {
-      exec(
-        `bash "${GMAIL_CLEANUP_SCRIPT}"`,
-        { timeout: 300000, maxBuffer: 10 * 1024 * 1024 },
-        (error, stdout, stderr) => {
-          if (error) {
-            reject({ error, stdout, stderr });
-          } else {
-            resolve({ stdout, stderr });
-          }
-        }
-      );
-    });
+    const args: string[] = [];
+    if (account?.email) {
+      args.push("--account", account.email);
+    }
+    if (account?.rulesProfile) {
+      args.push("--profile", account.rulesProfile);
+    }
 
-    isRunning = false;
+    const result = await execFileAsync(CLEANUP_SCRIPT, args, {
+      cwd: WORKSPACE_ROOT,
+      maxBuffer: 16 * 1024 * 1024,
+      timeout: 5 * 60 * 1000,
+    });
 
     return NextResponse.json({
       success: true,
-      output: result.stdout.slice(-2000),
+      message: "Cleanup completed successfully",
+      account: account?.email || null,
+      output: (result.stdout || "").slice(-3000),
+      stderr: (result.stderr || "").slice(-1000),
     });
-  } catch (err: any) {
-    isRunning = false;
+  } catch (error: unknown) {
+    const err = error as {
+      message?: string;
+      stdout?: string;
+      stderr?: string;
+    };
 
     return NextResponse.json(
       {
         success: false,
-        error: err.error?.message || 'Script execution failed',
-        output: (err.stdout || '').slice(-2000),
-        stderr: (err.stderr || '').slice(-1000),
+        error: err.message || "Script execution failed",
+        output: (err.stdout || "").slice(-3000),
+        stderr: (err.stderr || "").slice(-1000),
       },
       { status: 500 }
     );
+  } finally {
+    isRunning = false;
   }
 }

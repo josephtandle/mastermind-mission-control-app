@@ -1,9 +1,15 @@
+const path = require('path');
+const repoRoot = path.join(__dirname, '..');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
   reactStrictMode: false,
   serverExternalPackages: ['better-sqlite3'],
-  outputFileTracingRoot: __dirname,
+  outputFileTracingRoot: repoRoot,
+  turbopack: {
+    root: repoRoot,
+  },
   // Skip ESLint and type-checking during builds — IDE handles these
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
