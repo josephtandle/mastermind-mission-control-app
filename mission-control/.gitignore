@@ -1,0 +1,7 @@
+node_modules/
+.next/
+*.log
+.executor-api-key
+*.cpuprofile
+.env*.local
+tsconfig.tsbuildinfo

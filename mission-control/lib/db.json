@@ -1,0 +1,421 @@
+{
+  "columns": [
+    {
+      "id": "backlog",
+      "title": "Backlog",
+      "color": "slate"
+    },
+    {
+      "id": "claude-code-todo",
+      "title": "AI (Auto Execute)",
+      "color": "amber"
+    },
+    {
+      "id": "doing",
+      "title": "Doing",
+      "color": "blue"
+    },
+    {
+      "id": "human-must-do",
+      "title": "Human Must Do",
+      "color": "orange"
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "color": "purple"
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "color": "green"
+    },
+    {
+      "id": "icebox",
+      "title": "Icebox",
+      "color": "pink"
+    }
+  ],
+  "cards": [
+    {
+      "_id": "guide-backlog",
+      "title": "About this column",
+      "description": "The Backlog holds tasks you want to do eventually but haven't started yet. Drop ideas here and prioritize them when you're ready.",
+      "column": "backlog",
+      "order": 1,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": 1777022757544
+    },
+    {
+      "_id": "guide-ai",
+      "title": "About this column",
+      "description": "Cards you move here get picked up by the task executor and run automatically using Claude Code. The executor checks this column every hour. When a task completes, Claude moves it to Review so you can check the output before marking it done.",
+      "column": "doing",
+      "order": 2,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": 1777021926303
+    },
+    {
+      "_id": "guide-doing",
+      "title": "About this column",
+      "description": "Tasks currently in progress. When you or the AI starts working on something, it moves here.",
+      "column": "doing",
+      "order": 0,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": 1777021926303
+    },
+    {
+      "_id": "guide-human",
+      "title": "About this column",
+      "description": "When the AI cannot do something on its own, it puts a card here. These tasks require human action: approvals, logins, phone calls, or anything that needs your personal touch.",
+      "column": "human-must-do",
+      "order": -1000,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "guide-review",
+      "title": "About this column",
+      "description": "Completed tasks that need your review before they're considered done. Check the work, approve it, and move it to Done.",
+      "column": "review",
+      "order": -1000,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "guide-done",
+      "title": "About this column",
+      "description": "Finished tasks. Everything here has been completed and verified.",
+      "column": "done",
+      "order": -1000,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "guide-icebox",
+      "title": "About this column",
+      "description": "Ideas on ice. Tasks you've decided to shelve for now, not deleted, just paused until you're ready.",
+      "column": "icebox",
+      "order": -1000,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "tip-backlog",
+      "title": "Tips: Getting started",
+      "description": "Double-click any card to edit it. Drag cards between columns to change their status. Use the + button at the top to add new columns. Cards can be assigned to Projects to group related work together.",
+      "column": "backlog",
+      "order": 2,
+      "priority": "Med",
+      "labels": [
+        "guide"
+      ],
+      "tags": [
+        "sample"
+      ],
+      "project": "",
+      "createdAt": 1774962501172,
+      "updatedAt": 1777022757544
+    },
+    {
+      "_id": "ex-01",
+      "title": "Set up automated email welcome sequence",
+      "description": "Create a 5-email drip sequence that triggers when a new subscriber joins. Include welcome, value delivery, and call-to-action emails.",
+      "column": "backlog",
+      "order": 3,
+      "project": "Email Automation System",
+      "priority": "Med",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": 1777022757544
+    },
+    {
+      "_id": "ex-02",
+      "title": "Build client onboarding checklist",
+      "description": "Design a step-by-step onboarding flow: intake form, welcome call scheduling, resource sharing, and first milestone check-in.",
+      "column": "backlog",
+      "order": 4,
+      "project": "Client Onboarding Portal",
+      "priority": "Med",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": 1777022757544
+    },
+    {
+      "_id": "ex-03",
+      "title": "Research my top 3 competitors",
+      "description": "Search Google for \"[your industry] competitors\" and \"[your main product or service] alternatives\". Find the 3 competitors that appear most often across results.\n\nFor each competitor:\n1. Visit their website and find their pricing page\n2. List every pricing tier: name, monthly price, what is included at each level\n3. Copy their homepage headline word for word\n4. Find one customer review that mentions their biggest weakness\n5. Write 2 sentences on how they are positioned differently from me\n\nSave the results as competitor-research.md on my Desktop. Use one section per competitor with a clear header.",
+      "column": "doing",
+      "order": 5,
+      "project": "Content Strategy Hub",
+      "priority": "High",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": 1777021926303
+    },
+    {
+      "_id": "ex-04",
+      "title": "Write 7 Instagram captions from my most recent long-form content",
+      "description": "Find my most recent blog post, podcast transcript, or recording on my Desktop or in ~/Documents. Read through it and identify the 7 strongest insights, opinions, or story moments.\n\nFor each one, write an Instagram caption that:\n1. Opens with the insight as the very first line \u2014 no \"Have you ever...\" or \"I want to talk about...\"\n2. Expands on it in 3 to 4 short sentences\n3. Ends with a question that invites a comment\n4. Stays under 150 words total\n5. Does not include hashtags\n\nNumber them 1 through 7. For each caption, note which part of the original content it came from. Save as captions.md on my Desktop.",
+      "column": "doing",
+      "order": 4,
+      "project": "Content Strategy Hub",
+      "priority": "Med",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": 1777021926303
+    },
+    {
+      "_id": "ex-05",
+      "title": "Research the top Claude Code skills for small business owners",
+      "description": "Search GitHub and the web for the best Claude Code skills that coaches, consultants, and small business owners are using right now. Focus on skills for: email writing, social media content, client follow-ups, research, and business automation.\n\nFor each skill you find:\n1. Name of the skill and where to get it (GitHub URL or install command)\n2. What it does in one plain-English sentence\n3. Who it is most useful for (what type of business or use case)\n4. How to install it (the exact command or steps)\n5. A rating from 1 to 5 on how useful it would be for a coach or consultant\n\nFind at least 5 skills. Sort them by rating. Save as claude-skills.md on my Desktop.",
+      "column": "doing",
+      "order": 3,
+      "project": "Infrastructure Setup",
+      "priority": "Med",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": 1777021926303
+    },
+    {
+      "_id": "ex-00",
+      "title": "AI system check \u2014 write a file to my Desktop",
+      "description": "Create a file called ai-test.md on my Desktop.\n\nWrite the following into it:\n\n# AI Executor Test\n**Date:** [today's date and time]\n**Status:** Working\n\n## 5 Business Automation Ideas for Claude Code\n\nFor each idea, write: the name, one sentence on what it does, and one sentence on how to build it with Claude Code.\n\nPick 5 ideas relevant to coaches, consultants, or online business owners.\n\n---\n*Generated by Claude Code via Mission Control Task Executor*\n\nSave the file. Write DONE on the last line of your response.",
+      "column": "done",
+      "order": -1,
+      "project": "Infrastructure Setup",
+      "priority": "High",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": "2026-03-31T21:08:21.172445",
+      "updatedAt": "2026-04-24T17:33:00.583888",
+      "executorStatus": "completed",
+      "executorLog": null
+    },
+    {
+      "_id": "ex-06",
+      "title": "Find 10 qualified leads in my target market",
+      "description": "Search LinkedIn (or Google for LinkedIn profiles) for people who match all of these criteria:\n- Job title includes: founder, CEO, owner, or director\n- Industry: [fill in your target industry before moving this card to AI column]\n- Company size: between 5 and 50 employees\n- Location: [your target region]\n\nFor each of the 10 leads:\n1. Full name\n2. Current title and company name\n3. LinkedIn profile URL\n4. One specific detail from their profile that suggests they might need what I offer\n5. A suggested opening line for a first message \u2014 not a pitch, just a genuine conversation starter\n\nSave as leads.md on my Desktop.",
+      "column": "doing",
+      "order": 1,
+      "project": "Revenue Growth Tracker",
+      "priority": "High",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": 1777021926303
+    },
+    {
+      "_id": "ex-07",
+      "title": "Record intro video for my program",
+      "description": "Film a 3-minute welcome video introducing yourself and what participants will get from this program. The AI cannot record video for you \u2014 this one is yours.",
+      "column": "human-must-do",
+      "order": 0,
+      "project": "Client Onboarding Portal",
+      "priority": "High",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "ex-08",
+      "title": "Review AI-drafted email sequence",
+      "description": "Claude drafted 5 email templates for the welcome sequence. Read through each one, adjust the tone to match your voice, and approve before they go live.",
+      "column": "review",
+      "order": 0,
+      "project": "Email Automation System",
+      "priority": "Med",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "ex-09",
+      "title": "Configure domain and SSL",
+      "description": "Domain pointed, SSL certificate installed, all pages loading over HTTPS.",
+      "column": "done",
+      "order": 0,
+      "project": "Infrastructure Setup",
+      "priority": "High",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "_id": "ex-10",
+      "title": "Build mobile app version",
+      "description": "Future idea: create a companion app for managing tasks on the go. Not a priority right now.",
+      "column": "icebox",
+      "order": 0,
+      "project": "Infrastructure Setup",
+      "priority": "Low",
+      "tags": [
+        "sample"
+      ],
+      "labels": [],
+      "createdAt": 1774962501172,
+      "updatedAt": "2026-03-31T21:08:21.172445"
+    },
+    {
+      "title": "Go research one of my competitors from mastermindsHQ.business and give me a pop-up modal window that shows the information and also allows me to close it.",
+      "description": "",
+      "labels": [],
+      "priority": "Low",
+      "dueDate": "",
+      "project": "",
+      "column": "backlog",
+      "order": 0,
+      "_id": "card_1777022061731",
+      "createdAt": 1777022061731,
+      "updatedAt": 1777022757544,
+      "executorStatus": "needs-attention"
+    },
+    {
+      "title": "Card title: AI system check",
+      "description": "                                                                  \n  Description:                                                    \n                                                                  \n  Create a file called ai-test.md on my Desktop.\n                                                                  \n  Write the following into it:\n                                                                  \n  # AI Executor Test         \n  **Date:** [today's date and time]            \n                                                                  \n  ## 5 Business Automation Ideas for Claude Code\n                                                                  \n  For each idea, write: the name, one sentence on what it does,\n  and one sentence on how to build it with Claude Code.           \n                                                       \n  Pick 5 ideas relevant to coaches, consultants, or online        \n  business owners.    ",
+      "labels": [],
+      "priority": "Low",
+      "dueDate": "",
+      "project": "",
+      "column": "done",
+      "_id": "card_1777022712411",
+      "order": 0,
+      "createdAt": 1777022712412,
+      "updatedAt": "2026-04-24T17:26:35.365168",
+      "executorStatus": "completed"
+    }
+  ],
+  "projects": [
+    "Email Automation System",
+    "Client Onboarding Portal",
+    "Content Strategy Hub",
+    "Revenue Growth Tracker",
+    "Infrastructure Setup"
+  ],
+  "projectMeta": {
+    "Email Automation System": {
+      "description": "SAMPLE: Automated email sequences and drip campaigns for subscriber onboarding and conversion. Replace this with your own email automation project.",
+      "monetizationLevel": "High",
+      "status": "Active",
+      "timeToIncome": "Short-term",
+      "timeSaved": "High",
+      "monthlyIncome": 2500
+    },
+    "Client Onboarding Portal": {
+      "description": "SAMPLE: End-to-end onboarding flow for new coaching clients including intake, booking, and welcome automation. Customize this for your own client intake process.",
+      "monetizationLevel": "High",
+      "status": "Active",
+      "timeToIncome": "Immediate",
+      "timeSaved": "High",
+      "monthlyIncome": 4000
+    },
+    "Content Strategy Hub": {
+      "description": "SAMPLE: Blog posts, lead magnets, and content calendar for growing organic reach and authority. Adapt this to your own content marketing strategy.",
+      "monetizationLevel": "Medium",
+      "status": "Active",
+      "timeToIncome": "Medium",
+      "timeSaved": "Medium",
+      "monthlyIncome": 1200
+    },
+    "Revenue Growth Tracker": {
+      "description": "SAMPLE: Dashboard and workflows to track monthly recurring revenue, churn, and growth levers. Use this as a template for your own financial tracking.",
+      "monetizationLevel": "High",
+      "status": "Active",
+      "timeToIncome": "Short-term",
+      "timeSaved": "Medium",
+      "monthlyIncome": 3500
+    },
+    "Infrastructure Setup": {
+      "description": "SAMPLE: Core tech stack configuration including Stripe, booking system, CRM, and automation integrations. This is the foundation everything else runs on.",
+      "monetizationLevel": "Medium",
+      "status": "Active",
+      "timeToIncome": "Immediate",
+      "timeSaved": "High",
+      "monthlyIncome": 800
+    }
+  }
+}

@@ -1,0 +1,732 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme tokens (CSS custom properties) ─── */
+/* Dark theme is the default. RGB channel vars power Tailwind opacity modifiers. */
+:root {
+  /* Dark navy theme */
+  --color-bg: #080c14;
+  --color-sidebar: #0d1220;
+  --color-panel: #111827;
+  --color-panel2: #161e2e;
+  --color-border: rgba(124,105,199,0.15);
+  --color-text: #f0eeff;
+  --color-muted: #d2d5e8;
+  --color-success: #a5b4fc;
+  --color-warn: #fdba74;
+  --color-danger: #f87171;
+
+  /* RGB channels for Tailwind opacity modifier support (e.g. bg-dark-panel/60) */
+  --color-bg-rgb: 8 12 20;
+  --color-sidebar-rgb: 13 18 32;
+  --color-panel-rgb: 17 24 39;
+  --color-panel2-rgb: 22 30 46;
+  --color-text-rgb: 240 238 255;
+  --color-muted-rgb: 210 213 232;
+  --color-success-rgb: 165 180 252;
+  --color-warn-rgb: 253 186 116;
+  --color-danger-rgb: 248 113 113;
+
+  /* CM brand */
+  --color-purple: #7C69C7;
+  --color-purple-hover: #5b4fa8;
+  --color-purple2: #9d8de0;
+  --color-purple-mid: #B8ABE4;
+  --color-purple-light: #EEE9F8;
+  --color-pink: #F5C3C6;
+  --color-pink-light: #FBE9EA;
+
+  /* Scrollbar */
+  --color-scrollbar: #C8BFED;
+  --color-scrollbar-hover: #B8ABE4;
+
+  /* Muted text (blockquote captions) */
+  --color-caption: #8b8fa8;
+}
+
+/* Explicit class-based dark theme */
+.theme-dark {
+  --color-bg: #080c14;
+  --color-sidebar: #0d1220;
+  --color-panel: #111827;
+  --color-panel2: #161e2e;
+  --color-border: rgba(124,105,199,0.15);
+  --color-text: #f0eeff;
+  --color-muted: #d2d5e8;
+  --color-success: #a5b4fc;
+  --color-warn: #fdba74;
+  --color-danger: #f87171;
+
+  --color-bg-rgb: 8 12 20;
+  --color-sidebar-rgb: 13 18 32;
+  --color-panel-rgb: 17 24 39;
+  --color-panel2-rgb: 22 30 46;
+  --color-text-rgb: 240 238 255;
+  --color-muted-rgb: 210 213 232;
+  --color-success-rgb: 165 180 252;
+  --color-warn-rgb: 253 186 116;
+  --color-danger-rgb: 248 113 113;
+
+  --color-purple: #7C69C7;
+  --color-purple-hover: #5b4fa8;
+  --color-purple2: #9d8de0;
+  --color-purple-mid: #B8ABE4;
+  --color-purple-light: #EEE9F8;
+  --color-pink: #F5C3C6;
+  --color-pink-light: #FBE9EA;
+
+  --color-scrollbar: #C8BFED;
+  --color-scrollbar-hover: #B8ABE4;
+  --color-caption: #8b8fa8;
+}
+
+.theme-light {
+  --color-bg: #f8f7ff;
+  --color-sidebar: #f0eeff;
+  --color-panel: #ffffff;
+  --color-panel2: #f5f3fe;
+  --color-border: rgba(124,105,199,0.2);
+  --color-text: #1a1535;
+  --color-muted: #4a4570;
+  --color-success: #5b4fa8;
+  --color-warn: #b45309;
+  --color-danger: #be185d;
+
+  --color-bg-rgb: 248 247 255;
+  --color-sidebar-rgb: 240 238 255;
+  --color-panel-rgb: 255 255 255;
+  --color-panel2-rgb: 245 243 254;
+  --color-text-rgb: 26 21 53;
+  --color-muted-rgb: 74 69 112;
+  --color-success-rgb: 91 79 168;
+  --color-warn-rgb: 180 83 9;
+  --color-danger-rgb: 190 24 93;
+
+  --color-purple: #7C69C7;
+  --color-purple-hover: #5b4fa8;
+  --color-purple2: #9d8de0;
+  --color-purple-mid: #6b5bb5;
+  --color-purple-light: #ded8f5;
+  --color-pink: #d4848a;
+  --color-pink-light: #f5d5d7;
+  --color-scrollbar: #9d8de0;
+  --color-scrollbar-hover: #7C69C7;
+  --color-caption: #6b6590;
+}
+
+/* ── Tokyo Night ──────────────────────────────────────────────────── */
+.theme-neon {
+  --color-bg: #1A1B26;
+  --color-sidebar: #16181D;
+  --color-panel: #2B2D42;
+  --color-panel2: #1E202E;
+  --color-border: rgba(59,63,79,0.8);
+  --color-text: #C0CAF5;
+  --color-muted: #7F8DB3;
+  --color-success: #9ECE6A;
+  --color-warn: #E0AF68;
+  --color-danger: #F7768E;
+
+  --color-bg-rgb: 26 27 38;
+  --color-sidebar-rgb: 22 24 29;
+  --color-panel-rgb: 43 45 66;
+  --color-panel2-rgb: 30 32 46;
+  --color-text-rgb: 192 202 245;
+  --color-muted-rgb: 127 141 179;
+  --color-success-rgb: 158 206 106;
+  --color-warn-rgb: 224 175 104;
+  --color-danger-rgb: 247 118 142;
+
+  --color-purple: #7C69C7;
+  --color-purple-hover: #5b4fa8;
+  --color-purple2: #9d8de0;
+  --color-purple-mid: #B8ABE4;
+  --color-purple-light: #2B2D42;
+  --color-pink: #F7768E;
+  --color-pink-light: #2B2040;
+
+  --color-scrollbar: #3B3F4F;
+  --color-scrollbar-hover: #7F8DB3;
+  --color-caption: #565F89;
+}
+
+/* ── Velvet (Cosmic) ──────────────────────────────────────────────── */
+.theme-velvet {
+  --color-bg: #11051A;
+  --color-sidebar: #1F0D3D;
+  --color-panel: #2D1B4E;
+  --color-panel2: #251145;
+  --color-border: rgba(61,37,96,0.9);
+  --color-text: #E5D9FF;
+  --color-muted: #9D7FA8;
+  --color-success: #06D6A0;
+  --color-warn: #FFB703;
+  --color-danger: #FF006E;
+
+  --color-bg-rgb: 17 5 26;
+  --color-sidebar-rgb: 31 13 61;
+  --color-panel-rgb: 45 27 78;
+  --color-panel2-rgb: 37 17 69;
+  --color-text-rgb: 229 217 255;
+  --color-muted-rgb: 157 127 168;
+  --color-success-rgb: 6 214 160;
+  --color-warn-rgb: 255 183 3;
+  --color-danger-rgb: 255 0 110;
+
+  --color-purple: #A78BFA;
+  --color-purple-hover: #7C69C7;
+  --color-purple2: #C4B5FD;
+  --color-purple-mid: #DDD6FE;
+  --color-purple-light: #2D1B4E;
+  --color-pink: #F472B6;
+  --color-pink-light: #3D1A4E;
+
+  --color-scrollbar: #3D2560;
+  --color-scrollbar-hover: #A78BFA;
+  --color-caption: #6B5080;
+}
+
+/* Velvet: nebula glow — aurora emanating from top, depth accent bottom-left */
+.theme-velvet body {
+  background-image:
+    radial-gradient(ellipse 120% 100% at 50% -20%, rgba(124,105,199,0.25) 0%, rgba(167,139,250,0.08) 30%, transparent 70%),
+    radial-gradient(circle at 15% 85%, rgba(167,139,250,0.1) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* ── Obsidian Glass ───────────────────────────────────────────────── */
+/* macOS-style frosted glass: translucent panels, light-edge borders,  */
+/* inner shelf highlight, and a subtle luminous body gradient.         */
+.theme-obsidian {
+  --color-bg: #080808;
+  --color-sidebar: #0e0e0e;
+  --color-panel: #1c1c1c;
+  --color-panel2: #232323;
+  --color-border: rgba(255,255,255,0.09);
+  --color-text: #f2f2f2;
+  --color-muted: #8e8e8e;
+  --color-success: #5eead4;
+  --color-warn: #fbbf24;
+  --color-danger: #f87171;
+
+  --color-bg-rgb: 8 8 8;
+  --color-sidebar-rgb: 14 14 14;
+  --color-panel-rgb: 28 28 28;
+  --color-panel2-rgb: 35 35 35;
+  --color-text-rgb: 242 242 242;
+  --color-muted-rgb: 142 142 142;
+  --color-success-rgb: 94 234 212;
+  --color-warn-rgb: 251 191 36;
+  --color-danger-rgb: 248 113 113;
+
+  --color-purple: #7C69C7;
+  --color-purple-hover: #5b4fa8;
+  --color-purple2: #9d8de0;
+  --color-purple-mid: #B8ABE4;
+  --color-purple-light: #1c1c2e;
+  --color-pink: #F5C3C6;
+  --color-pink-light: #2a1a1c;
+
+  --color-scrollbar: #2e2e2e;
+  --color-scrollbar-hover: #444444;
+  --color-caption: #555555;
+}
+
+/* Obsidian: rich gradient body — subtle warm-to-cool light leak, like studio lighting */
+.theme-obsidian body {
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 10%, rgba(124,105,199,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 90%, rgba(200,180,240,0.06) 0%, transparent 50%),
+    linear-gradient(160deg, #111111 0%, #080808 100%);
+  background-attachment: fixed;
+}
+
+/* Glass panels: translucent + blur + macOS inner shelf highlight */
+.theme-obsidian .bg-dark-panel {
+  background-color: rgba(28, 28, 28, 0.55) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 8px 32px rgba(0,0,0,0.45),
+    0 1px 2px rgba(0,0,0,0.3);
+}
+.theme-obsidian .bg-dark-panel2 {
+  background-color: rgba(35, 35, 35, 0.50) !important;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+}
+.theme-obsidian .bg-dark-sidebar {
+  background-color: rgba(10, 10, 10, 0.80) !important;
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.05);
+}
+/* Glass borders: bright top-edge gives the "glass pane resting on surface" feel */
+.theme-obsidian .border-dark-border {
+  border-color: rgba(255,255,255,0.09) !important;
+}
+/* Modal/sheet overlay: heavier glass */
+.theme-obsidian .bg-dark-bg {
+  background-color: rgba(8, 8, 8, 0.92) !important;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.theme-charcoal {
+  --color-bg: #111111;
+  --color-sidebar: #1a1a1a;
+  --color-panel: #262626;
+  --color-panel2: #303030;
+  --color-border: #3f3f3f;
+  --color-text: #e0e0e0;
+  --color-muted: #999999;
+  --color-success: #5eead4;
+  --color-warn: #fbbf24;
+  --color-danger: #f87171;
+
+  --color-bg-rgb: 17 17 17;
+  --color-sidebar-rgb: 26 26 26;
+  --color-panel-rgb: 38 38 38;
+  --color-panel2-rgb: 48 48 48;
+  --color-text-rgb: 224 224 224;
+  --color-muted-rgb: 153 153 153;
+  --color-success-rgb: 94 234 212;
+  --color-warn-rgb: 251 191 36;
+  --color-danger-rgb: 248 113 113;
+
+  --color-purple: #7C69C7;
+  --color-purple-hover: #5b4fa8;
+  --color-purple2: #9d8de0;
+  --color-purple-mid: #B8ABE4;
+  --color-purple-light: #EEE9F8;
+  --color-pink: #F5C3C6;
+  --color-pink-light: #FBE9EA;
+
+  --color-scrollbar: #4a4a4a;
+  --color-scrollbar-hover: #5a5a5a;
+  --color-caption: #666666;
+}
+
+/* Force all prose/markdown to dark mode globally */
+.prose { --tw-prose-body: #c0c4d8; --tw-prose-headings: var(--color-text); --tw-prose-bold: var(--color-text); --tw-prose-links: var(--color-purple); --tw-prose-code: var(--color-purple); --tw-prose-pre-bg: var(--color-sidebar); --tw-prose-th-borders: rgba(124,105,199,0.2); --tw-prose-td-borders: rgba(124,105,199,0.1); --tw-prose-quote-borders: var(--color-purple); --tw-prose-captions: var(--color-caption); --tw-prose-counters: var(--color-caption); --tw-prose-bullets: var(--color-purple); --tw-prose-hr: rgba(124,105,199,0.2); }
+/* Global checkbox color — purple accent throughout */
+input[type="checkbox"] {
+  accent-color: var(--color-purple);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+input[type="radio"] {
+  accent-color: var(--color-purple);
+  cursor: pointer;
+}
+
+input, textarea, select {
+  background-color: var(--color-panel2) !important;
+  color: var(--color-text) !important;
+}
+input:focus, textarea:focus, select:focus,
+input:active, textarea:active, select:active {
+  background-color: var(--color-panel2) !important;
+  color: var(--color-text) !important;
+}
+/* Kill browser autofill white flash */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-panel2) inset !important;
+  -webkit-text-fill-color: var(--color-text) !important;
+  caret-color: var(--color-text);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+/* Smooth transitions */
+button,
+input,
+select,
+textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card shadows */
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Drag and drop styles */
+.draggable-over {
+  background-color: var(--color-panel2);
+  border: 2px dashed rgba(124,105,199,0.25);
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grab:active {
+  cursor: grabbing;
+}
+
+/* Markdown styles */
+.markdown-preview {
+  line-height: 1.6;
+}
+
+.markdown-preview h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-preview h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-preview h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-preview p {
+  margin-bottom: 1rem;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-preview code {
+  background-color: var(--color-panel2);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-dm-mono), "Monaco", "Courier New", monospace;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.markdown-preview pre {
+  background-color: var(--color-panel2);
+  color: var(--color-text);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.markdown-preview pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.markdown-preview blockquote {
+  border-left: 4px solid rgba(124,105,199,0.3);
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  color: var(--color-caption);
+  font-style: italic;
+}
+
+.markdown-preview a {
+  color: var(--color-purple);
+  text-decoration: underline;
+}
+
+.markdown-preview a:hover {
+  color: var(--color-purple2);
+}
+
+.markdown-preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.markdown-preview th {
+  background-color: var(--color-panel2);
+  font-weight: 600;
+}
+
+/* Loading skeleton animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    to right,
+    var(--color-panel) 0%,
+    var(--color-panel2) 20%,
+    var(--color-panel) 40%,
+    var(--color-panel) 100%
+  );
+  background-size: 1000px 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .skeleton {
+    animation: shimmer 2s infinite linear;
+  }
+}
+
+/* Pulse animation for status indicators */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse-slow {
+  /* base: no animation — reduced motion users see a static element */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+/* Smooth color transitions */
+.transition-colors-slow {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Gradient backgrounds */
+.gradient-blue {
+  background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-purple-mid) 100%);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-pink) 100%);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #10b981 0%, var(--color-purple) 100%);
+}
+
+/* Connection Map gradients — dark theme */
+.gradient-cm {
+  background: linear-gradient(135deg, rgba(124,105,199,0.08) 0%, var(--color-panel) 100%);
+}
+
+.gradient-cm-header {
+  background: linear-gradient(to right, rgba(124,105,199,0.10), var(--color-panel), var(--color-panel));
+}
+
+.gradient-cm-chart {
+  background: linear-gradient(180deg, rgba(124,105,199,0.10) 0%, var(--color-panel) 100%);
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--color-panel2);
+  color: var(--color-text);
+  font-size: 0.75rem;
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* Status badges with icons */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress bar animations */
+@keyframes progress-indeterminate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.progress-indeterminate::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  animation: progress-indeterminate 1.5s ease-in-out infinite;
+}
+
+/* Empty state illustrations */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ── Display Density ───────────────────────────────────────────── */
+
+/* Compact mode: tighten table cells, card padding, and spacing */
+[data-density="compact"] table th,
+[data-density="compact"] table td {
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.8125rem;
+}
+
+[data-density="compact"] .card-padding {
+  padding: 1rem !important;
+}
+
+/* Tighten standard space-y gaps */
+[data-density="compact"] .space-y-6 > * + * {
+  margin-top: 0.875rem !important;
+}
+
+[data-density="compact"] .space-y-4 > * + * {
+  margin-top: 0.5rem !important;
+}
+
+/* Comfortable mode: explicit (same as default, for future use) */
+[data-density="comfortable"] table th,
+[data-density="comfortable"] table td {
+  padding: 0.625rem 1rem;
+}
