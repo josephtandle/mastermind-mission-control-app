@@ -3,12 +3,45 @@ import Database from "better-sqlite3";
 import path from "path";
 import os from "os";
 
-const WS = process.env.GET_SORTED_WORKSPACE || path.join(os.homedir(), "golden-claw");
+const WS = process.env.GET_SORTED_WORKSPACE || path.join(os.homedir(), ".myos", "workspace");
 
 const DB_PATH = path.join(WS, "data/online-program-participants.db");
 
 function getDb() {
   return new Database(DB_PATH);
+}
+
+function clean(value: unknown): string {
+  return String(value || "").trim();
+}
+
+function normalizePhone(value: unknown): string {
+  return clean(value).replace(/\D/g, "");
+}
+
+function resolveParticipantId(db: InstanceType<typeof Database>, body: Record<string, any>): number | null {
+  if (body.participant_id) return Number(body.participant_id);
+
+  const email = clean(body.email || body.billing_email).toLowerCase();
+  if (email) {
+    const byEmail = db.prepare("SELECT id FROM participants WHERE lower(email) = ?").get(email) as { id: number } | undefined;
+    if (byEmail?.id) return byEmail.id;
+  }
+
+  const phone = normalizePhone(body.whatsapp || body.phone);
+  if (phone) {
+    const rows = db.prepare("SELECT id, whatsapp FROM participants WHERE whatsapp IS NOT NULL AND whatsapp != ''").all() as { id: number; whatsapp: string }[];
+    const byPhone = rows.find((row) => normalizePhone(row.whatsapp).endsWith(phone) || phone.endsWith(normalizePhone(row.whatsapp)));
+    if (byPhone?.id) return byPhone.id;
+  }
+
+  const fullName = clean(body.full_name || body.name).toLowerCase();
+  if (fullName) {
+    const byName = db.prepare("SELECT id FROM participants WHERE lower(full_name) = ?").get(fullName) as { id: number } | undefined;
+    if (byName?.id) return byName.id;
+  }
+
+  return null;
 }
 
 // GET /api/online-program/intake
@@ -45,6 +78,14 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const db = getDb();
+    const participantId = resolveParticipantId(db, body);
+    if (!participantId) {
+      db.close();
+      return NextResponse.json(
+        { error: "participant_id required or resolvable by email/phone/name" },
+        { status: 400 }
+      );
+    }
     const result = db.prepare(`
       INSERT INTO intake (
         participant_id, stripe_customer_id, stripe_subscription_id,
@@ -53,7 +94,7 @@ export async function POST(req: NextRequest) {
         intake_form_sent_at, status
       ) VALUES (?, ?, ?, ?, ?, ?, 'active', ?, ?, datetime('now'), 'awaiting_form')
     `).run(
-      body.participant_id, body.stripe_customer_id, body.stripe_subscription_id,
+      participantId, body.stripe_customer_id, body.stripe_subscription_id,
       body.stripe_price_id, body.plan_name, body.amount_cents,
       body.billing_anchor_date, body.next_billing_date
     );
