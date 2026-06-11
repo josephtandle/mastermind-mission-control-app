@@ -1,11 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import Database from "better-sqlite3";
 import path from "path";
 import { exec } from "child_process";
 import { promisify } from "util";
 import os from "os";
 
-const WS = process.env.GET_SORTED_WORKSPACE || path.join(os.homedir(), "golden-claw");
+const WORKSPACE_ROOT = path.join(os.homedir(), ".myos", "workspace");
+const {
+  DEFAULT_REGISTRATION_COHORT,
+  openDb,
+  upsertWebhookCheckout,
+} = require(path.join(WORKSPACE_ROOT, "projects", "mastermind", "lib", "local-intake-db.js"));
+const { runPostIntake } = require(path.join(WORKSPACE_ROOT, "agents", "mastermind-participants", "post-intake.js"));
 const MASTERMIND_PRODUCT_IDS = new Set([
   "prod_TByaEiUx41kYm2",
   "prod_TBybEOTIMAee6Q",
@@ -13,23 +18,17 @@ const MASTERMIND_PRODUCT_IDS = new Set([
   "prod_TByePg5VOUYnix",
   "prod_TBychwDDMpDRny",
   "prod_UKeMVuCb2FiGwM",
+  "prod_UKeM76Ju9WmjT3",
 ]);
 
 const execAsync = promisify(exec);
 
-const DB_PATH = path.join(WS, "data/mastermind-participants.db");
-const INTAKE_FORM_URL = "https://airtable.com/appYNF8Zkzpd7FmZ1/pagSmsaRwBS0IHmk2/form";
-
-function getDb() {
-  return new Database(DB_PATH);
-}
-
-async function sendIntakeEmail(name: string, email: string, nickname?: string) {
+async function sendIntakeEmail(name: string, email: string, intakeFormUrl: string, nickname?: string) {
   const greeting = nickname || name.split(" ")[0];
   const html = `<p>Hi ${greeting},</p>
 <p>Welcome to the Business Automation Mastermind! We're so excited to have you.</p>
 <p>To get you fully set up, please complete your intake form — it only takes a few minutes:</p>
-<p><a href="${INTAKE_FORM_URL}" style="background:#7C69C7;color:white;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:bold;">Complete Intake Form →</a></p>
+<p><a href="${intakeFormUrl}" style="background:#7C69C7;color:white;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:bold;">Complete Intake Form →</a></p>
 <p>This helps us personalize your experience and get you introduced to the community.</p>
 <p>See you inside,<br>The Team</p>`;
 
@@ -61,82 +60,99 @@ export async function POST(req: NextRequest) {
   }
 
   const event = JSON.parse(body);
-  const db = getDb();
+  const db = openDb();
 
   try {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
-      if (session.mode !== "subscription" || !session.subscription) {
-        db.close();
-        return NextResponse.json({ received: true, ignored: "non_mastermind_checkout" });
-      }
-
-      const subscription = await stripe.subscriptions.retrieve(session.subscription, {
-        expand: ["items.data.price.product", "latest_invoice"],
+      const expandedSession = await stripe.checkout.sessions.retrieve(session.id, {
+        expand: ["line_items.data.price.product", "payment_intent"],
       });
-      const subscriptionItem = subscription.items.data[0];
+      const lineItem = expandedSession.line_items?.data?.[0];
       const productId =
-        typeof subscriptionItem?.price?.product === "string"
-          ? subscriptionItem.price.product
-          : subscriptionItem?.price?.product?.id;
+        typeof lineItem?.price?.product === "string"
+          ? lineItem.price.product
+          : lineItem?.price?.product?.id;
       if (!productId || !MASTERMIND_PRODUCT_IDS.has(productId)) {
         db.close();
         return NextResponse.json({ received: true, ignored: "non_mastermind_product" });
       }
 
-      const email = session.customer_details?.email || session.customer_email;
-      const name = session.customer_details?.name || "";
-      const customerId = session.customer;
-      const subId = subscription.id;
-      const periodEnd = subscription.current_period_end
+      const email = expandedSession.customer_details?.email || expandedSession.customer_email;
+      const name = expandedSession.customer_details?.name || "";
+      const customerId = expandedSession.customer;
+      const isSubscription = expandedSession.mode === "subscription" && !!expandedSession.subscription;
+      const subscription = isSubscription
+        ? await stripe.subscriptions.retrieve(expandedSession.subscription, {
+            expand: ["items.data.price.product", "latest_invoice"],
+          })
+        : null;
+      const subscriptionItem = subscription?.items?.data?.[0] || null;
+      const periodEnd = subscription?.current_period_end
         ? new Date(subscription.current_period_end * 1000).toISOString().split("T")[0]
         : null;
-      const latestInvoice = subscription.latest_invoice as { amount_paid?: number; amount_due?: number } | null;
-      const amountCents = latestInvoice?.amount_paid || latestInvoice?.amount_due || null;
+      const latestInvoice = subscription?.latest_invoice as {
+        id?: string;
+        amount_paid?: number;
+        amount_due?: number;
+        currency?: string;
+        status?: string;
+        created?: number;
+        period_start?: number;
+        period_end?: number;
+      } | null;
+      const amountCents =
+        latestInvoice?.amount_paid ||
+        latestInvoice?.amount_due ||
+        expandedSession.amount_total ||
+        (expandedSession.payment_intent as { amount?: number } | null)?.amount ||
+        null;
       const billingInterval = subscriptionItem?.price?.recurring?.interval || null;
       const billingIntervalCount = subscriptionItem?.price?.recurring?.interval_count || null;
       const planName =
-        typeof subscriptionItem?.price?.product === "object"
-          ? subscriptionItem.price.product.name
-          : "Mastermind";
-
-      const firstName = name.split(" ")[0];
+        (typeof lineItem?.price?.product === "object" && lineItem?.price?.product?.name) ||
+        (typeof subscriptionItem?.price?.product === "object" && subscriptionItem?.price?.product?.name) ||
+        lineItem?.description ||
+        "Mastermind";
+      const firstName = name.split(" ")[0] || "";
       const lastName = name.split(" ").slice(1).join(" ");
-
-      // Find or create participant
-      let participant = db.prepare("SELECT * FROM participants WHERE email = ?").get(email) as any;
-      if (!participant) {
-        const res = db.prepare(`
-          INSERT INTO participants (airtable_id, first_name, last_name, full_name, email, cohort_number, synced_at, created_at, updated_at)
-          VALUES (?, ?, ?, ?, ?, 1, datetime('now'), datetime('now'), datetime('now'))
-        `).run(`stripe_${customerId}`, firstName, lastName, name, email);
-        participant = db.prepare("SELECT * FROM participants WHERE id = ?").get(res.lastInsertRowid);
-      }
-
-      // Create intake record (idempotent — skip if already exists)
-      db.prepare(`
-        INSERT OR IGNORE INTO intake (
-          participant_id, stripe_customer_id, stripe_subscription_id,
-          plan_name, amount_cents, billing_status, next_billing_date,
-          billing_interval, billing_interval_count,
-          intake_form_sent_at, status, intake_form_url
-        )
-        VALUES (?, ?, ?, ?, ?, 'active', ?, ?, ?, datetime('now'), 'awaiting_form', ?)
-      `).run(
-        participant.id,
+      const cohortNumber = Number(expandedSession.metadata?.cohort || expandedSession.metadata?.cohort_number || DEFAULT_REGISTRATION_COHORT);
+      const upserted = upsertWebhookCheckout(db, {
+        email,
+        name,
+        firstName,
+        lastName,
+        cohortNumber,
         customerId,
-        subId,
-        planName,
+        subscriptionId: subscription?.id || null,
+        checkoutSessionId: expandedSession.id,
         amountCents,
-        periodEnd,
+        billingStatus: isSubscription ? "active" : "paid_in_full",
+        nextBillingDate: periodEnd,
         billingInterval,
         billingIntervalCount,
-        INTAKE_FORM_URL
-      );
+        planName,
+        whatsapp: expandedSession.customer_details?.phone || "",
+        invoiceId: latestInvoice?.id || null,
+        currency: latestInvoice?.currency || expandedSession.currency || "usd",
+        chargeStatus: latestInvoice?.status || "paid",
+        chargeDate: latestInvoice?.created
+          ? new Date(latestInvoice.created * 1000).toISOString().split("T")[0]
+          : null,
+        periodStart: latestInvoice?.period_start
+          ? new Date(latestInvoice.period_start * 1000).toISOString().split("T")[0]
+          : null,
+        periodEnd: latestInvoice?.period_end
+          ? new Date(latestInvoice.period_end * 1000).toISOString().split("T")[0]
+          : periodEnd,
+      });
 
       // Send welcome email and alert Ronnie
-      await sendIntakeEmail(name, email);
+      await sendIntakeEmail(name, email, upserted.intakeFormUrl);
       await alertTeamMember(name, email, "Mastermind");
+      if (upserted.shouldRunPostIntake) {
+        await runPostIntake(upserted.participant.id, { maxAttempts: 2 });
+      }
 
     } else if (event.type === "invoice.payment_succeeded") {
       const invoice = event.data.object;
