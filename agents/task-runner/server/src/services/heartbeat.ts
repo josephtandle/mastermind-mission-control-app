@@ -264,10 +264,13 @@ export function buildMyosDispatchText(input: {
   return lines.join("\n");
 }
 
+export { shouldAttemptDispatchRecipe };
+
 function shouldAttemptDispatchRecipe(plan: MyosDispatchPlan) {
   const route = parseObject(plan.route);
   const lane = readNonEmptyString(route.lane);
   return (
+    lane === "data_lookup" ||
     lane === "recipe_dispatcher" ||
     plan.branch === "fastpath" ||
     (plan.branch === "project" && plan.projectRecipeFirst === true)

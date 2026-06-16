@@ -3,6 +3,7 @@ import { resolveDefaultAgentWorkspaceDir } from "../home-paths.js";
 import {
   buildMyosDispatchText,
   resolveRuntimeSessionParamsForWorkspace,
+  shouldAttemptDispatchRecipe,
   shouldResetTaskSessionForWake,
   type ResolvedWorkspaceForRun,
 } from "../services/heartbeat.ts";
@@ -166,5 +167,14 @@ describe("buildMyosDispatchText", () => {
     expect(text).toContain("Issue: ISS-1 Configure domain DNS");
     expect(text).toContain("Wake reason: issue_assigned");
     expect(text).toContain("Adapter: codex_local");
+  });
+});
+
+describe("shouldAttemptDispatchRecipe", () => {
+  it("allows deterministic data lookup lanes through MyOS Dispatch", () => {
+    expect(shouldAttemptDispatchRecipe({
+      branch: "data",
+      route: { lane: "data_lookup" },
+    })).toBe(true);
   });
 });
