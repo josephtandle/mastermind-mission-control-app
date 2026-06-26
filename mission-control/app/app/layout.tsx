@@ -12,6 +12,7 @@ import {
   PanelLeftClose,
   PanelLeftOpen,
   BookText,
+  BarChart3,
 } from "lucide-react";
 
 const APP_NAME = "Mission Control";
@@ -27,12 +28,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const isProjectsActive = pathname.startsWith("/app/tasks/projects");
   const isFilesActive = pathname.startsWith("/app/projects");
   const isBiosActive = pathname.startsWith("/app/bios");
+  const isBookRankingsActive = pathname.startsWith("/app/book-rankings");
 
   const pageTitle = useMemo(() => {
     if (pathname.startsWith("/app/tasks/projects")) return "Projects";
     if (pathname.startsWith("/app/tasks")) return "Tasks";
     if (pathname.startsWith("/app/projects")) return "File Browser";
     if (pathname.startsWith("/app/bios")) return "Bios";
+    if (pathname.startsWith("/app/book-rankings")) return "Book Rankings";
     return APP_NAME;
   }, [pathname]);
 
@@ -148,6 +151,19 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           >
             <BookText size={20} className="flex-shrink-0" />
             {sidebarOpen && <span className="truncate">Bios</span>}
+          </Link>
+
+          <Link
+            href="/app/book-rankings"
+            title={!sidebarOpen ? "Book Rankings" : undefined}
+            className={`flex items-center gap-2 py-2 px-2 rounded-lg transition-colors ${
+              isBookRankingsActive
+                ? "bg-cm-purple/15 text-cm-purple font-medium"
+                : "text-dark-muted hover:bg-cm-purple/10 hover:text-cm-purple"
+            }`}
+          >
+            <BarChart3 size={20} className="flex-shrink-0" />
+            {sidebarOpen && <span className="truncate">Book Rankings</span>}
           </Link>
         </nav>
 
