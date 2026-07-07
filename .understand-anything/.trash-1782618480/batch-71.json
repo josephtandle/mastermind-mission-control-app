@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/activity-log.md",
+      "type": "file",
+      "name": "activity-log.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/activity-log.md",
+      "summary": "docs file (55 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/approvals.md",
+      "type": "file",
+      "name": "approvals.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/approvals.md",
+      "summary": "docs file (52 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/costs-and-budgets.md",
+      "type": "file",
+      "name": "costs-and-budgets.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/costs-and-budgets.md",
+      "summary": "docs file (70 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/creating-a-company.md",
+      "type": "file",
+      "name": "creating-a-company.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/creating-a-company.md",
+      "summary": "docs file (55 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/dashboard.md",
+      "type": "file",
+      "name": "dashboard.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/dashboard.md",
+      "summary": "docs file (36 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/managing-agents.md",
+      "type": "file",
+      "name": "managing-agents.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/managing-agents.md",
+      "summary": "docs file (76 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/managing-tasks.md",
+      "type": "file",
+      "name": "managing-tasks.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/managing-tasks.md",
+      "summary": "docs file (55 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/board-operator/org-structure.md",
+      "type": "file",
+      "name": "org-structure.md",
+      "filePath": "agents/task-runner/docs/guides/board-operator/org-structure.md",
+      "summary": "docs file (37 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

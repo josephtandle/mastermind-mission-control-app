@@ -1,0 +1,179 @@
+{
+  "batchIndex": 16,
+  "fileCount": 11,
+  "nodeCount": 11,
+  "edgeCount": 0,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/docs/api/activity.md",
+      "type": "file",
+      "name": "activity.md",
+      "filePath": "agents/task-runner/docs/api/activity.md",
+      "language": "Markdown",
+      "sizeLines": 47,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/agents.md",
+      "type": "file",
+      "name": "agents.md",
+      "filePath": "agents/task-runner/docs/api/agents.md",
+      "language": "Markdown",
+      "sizeLines": 146,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/approvals.md",
+      "type": "file",
+      "name": "approvals.md",
+      "filePath": "agents/task-runner/docs/api/approvals.md",
+      "language": "Markdown",
+      "sizeLines": 105,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/authentication.md",
+      "type": "file",
+      "name": "authentication.md",
+      "filePath": "agents/task-runner/docs/api/authentication.md",
+      "language": "Markdown",
+      "sizeLines": 57,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/companies.md",
+      "type": "file",
+      "name": "companies.md",
+      "filePath": "agents/task-runner/docs/api/companies.md",
+      "language": "Markdown",
+      "sizeLines": 64,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/costs.md",
+      "type": "file",
+      "name": "costs.md",
+      "filePath": "agents/task-runner/docs/api/costs.md",
+      "language": "Markdown",
+      "sizeLines": 72,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/dashboard.md",
+      "type": "file",
+      "name": "dashboard.md",
+      "filePath": "agents/task-runner/docs/api/dashboard.md",
+      "language": "Markdown",
+      "sizeLines": 29,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/goals-and-projects.md",
+      "type": "file",
+      "name": "goals-and-projects.md",
+      "filePath": "agents/task-runner/docs/api/goals-and-projects.md",
+      "language": "Markdown",
+      "sizeLines": 122,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/issues.md",
+      "type": "file",
+      "name": "issues.md",
+      "filePath": "agents/task-runner/docs/api/issues.md",
+      "language": "Markdown",
+      "sizeLines": 142,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/overview.md",
+      "type": "file",
+      "name": "overview.md",
+      "filePath": "agents/task-runner/docs/api/overview.md",
+      "language": "Markdown",
+      "sizeLines": 63,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/api/secrets.md",
+      "type": "file",
+      "name": "secrets.md",
+      "filePath": "agents/task-runner/docs/api/secrets.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/api",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

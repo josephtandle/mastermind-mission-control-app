@@ -1,0 +1,164 @@
+{
+  "batchIndex": 13,
+  "fileCount": 10,
+  "nodeCount": 10,
+  "edgeCount": 0,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/doc/plans/agent-authentication-implementation.md",
+      "type": "file",
+      "name": "agent-authentication-implementation.md",
+      "filePath": "agents/task-runner/doc/plans/agent-authentication-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 73,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/agent-authentication.md",
+      "type": "file",
+      "name": "agent-authentication.md",
+      "filePath": "agents/task-runner/doc/plans/agent-authentication.md",
+      "language": "Markdown",
+      "sizeLines": 223,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/agent-mgmt-followup-plan.md",
+      "type": "file",
+      "name": "agent-mgmt-followup-plan.md",
+      "filePath": "agents/task-runner/doc/plans/agent-mgmt-followup-plan.md",
+      "language": "Markdown",
+      "sizeLines": 250,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/ceo-agent-creation-and-hiring.md",
+      "type": "file",
+      "name": "ceo-agent-creation-and-hiring.md",
+      "filePath": "agents/task-runner/doc/plans/ceo-agent-creation-and-hiring.md",
+      "language": "Markdown",
+      "sizeLines": 390,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/cursor-cloud-adapter.md",
+      "type": "file",
+      "name": "cursor-cloud-adapter.md",
+      "filePath": "agents/task-runner/doc/plans/cursor-cloud-adapter.md",
+      "language": "Markdown",
+      "sizeLines": 477,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/deployment-auth-mode-consolidation.md",
+      "type": "file",
+      "name": "deployment-auth-mode-consolidation.md",
+      "filePath": "agents/task-runner/doc/plans/deployment-auth-mode-consolidation.md",
+      "language": "Markdown",
+      "sizeLines": 227,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/issue-run-orchestration-plan.md",
+      "type": "file",
+      "name": "issue-run-orchestration-plan.md",
+      "filePath": "agents/task-runner/doc/plans/issue-run-orchestration-plan.md",
+      "language": "Markdown",
+      "sizeLines": 142,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/module-system.md",
+      "type": "file",
+      "name": "module-system.md",
+      "filePath": "agents/task-runner/doc/plans/module-system.md",
+      "language": "Markdown",
+      "sizeLines": 686,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/storage-system-implementation.md",
+      "type": "file",
+      "name": "storage-system-implementation.md",
+      "filePath": "agents/task-runner/doc/plans/storage-system-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 207,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/plans/workspace-strategy-and-git-worktrees.md",
+      "type": "file",
+      "name": "workspace-strategy-and-git-worktrees.md",
+      "filePath": "agents/task-runner/doc/plans/workspace-strategy-and-git-worktrees.md",
+      "language": "Markdown",
+      "sizeLines": 1336,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/plans",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "id": "file_0",
+      "type": "file",
+      "label": ".understandignore",
+      "fullPath": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "category": "code",
+      "lineCount": 43
+    },
+    {
+      "id": "file_1",
+      "type": "file",
+      "label": "config.json",
+      "fullPath": "agents/task-runner/.changeset/config.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 11
+    },
+    {
+      "id": "file_2",
+      "type": "file",
+      "label": "README.md",
+      "fullPath": "agents/task-runner/.changeset/README.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 8
+    },
+    {
+      "id": "file_3",
+      "type": "file",
+      "label": "component-index.md",
+      "fullPath": "agents/task-runner/.claude/skills/design-guide/references/component-index.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 323
+    },
+    {
+      "id": "file_4",
+      "type": "file",
+      "label": "SKILL.md",
+      "fullPath": "agents/task-runner/.claude/skills/design-guide/SKILL.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 351
+    },
+    {
+      "id": "file_5",
+      "type": "file",
+      "label": ".mailmap",
+      "fullPath": "agents/task-runner/.mailmap",
+      "language": "unknown",
+      "category": "code",
+      "lineCount": 1
+    },
+    {
+      "id": "file_6",
+      "type": "file",
+      "label": ".npmrc",
+      "fullPath": "agents/task-runner/.npmrc",
+      "language": "unknown",
+      "category": "code",
+      "lineCount": 1
+    },
+    {
+      "id": "file_7",
+      "type": "file",
+      "label": "esbuild.config.mjs",
+      "fullPath": "agents/task-runner/cli/esbuild.config.mjs",
+      "language": "javascript",
+      "category": "code",
+      "lineCount": 65
+    },
+    {
+      "id": "file_8",
+      "type": "file",
+      "label": "vitest.config.ts",
+      "fullPath": "agents/task-runner/cli/vitest.config.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 7
+    },
+    {
+      "id": "file_9",
+      "type": "file",
+      "label": "issue-worktree-support.md",
+      "fullPath": "agents/task-runner/doc/experimental/issue-worktree-support.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 62
+    },
+    {
+      "id": "file_10",
+      "type": "file",
+      "label": "humans-and-permissions-implementation.md",
+      "fullPath": "agents/task-runner/doc/plan/humans-and-permissions-implementation.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 643
+    },
+    {
+      "id": "file_11",
+      "type": "file",
+      "label": "humans-and-permissions.md",
+      "fullPath": "agents/task-runner/doc/plan/humans-and-permissions.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 421
+    },
+    {
+      "id": "file_12",
+      "type": "file",
+      "label": "ideas-from-opencode.md",
+      "fullPath": "agents/task-runner/doc/plugins/ideas-from-opencode.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 1738
+    },
+    {
+      "id": "file_13",
+      "type": "file",
+      "label": "PLUGIN_SPEC.md",
+      "fullPath": "agents/task-runner/doc/plugins/PLUGIN_SPEC.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 1617
+    },
+    {
+      "id": "file_14",
+      "type": "file",
+      "label": "server.mjs",
+      "fullPath": "agents/task-runner/docker/openclaw-smoke/server.mjs",
+      "language": "javascript",
+      "category": "code",
+      "lineCount": 103
+    },
+    {
+      "id": "file_15",
+      "type": "file",
+      "label": "agents-runtime.md",
+      "fullPath": "agents/task-runner/docs/agents-runtime.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 175
+    },
+    {
+      "id": "file_16",
+      "type": "file",
+      "label": "docs.json",
+      "fullPath": "agents/task-runner/docs/docs.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 142
+    },
+    {
+      "id": "file_17",
+      "type": "file",
+      "label": "openclaw-docker-setup.md",
+      "fullPath": "agents/task-runner/docs/guides/openclaw-docker-setup.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 349
+    },
+    {
+      "id": "file_18",
+      "type": "file",
+      "label": "agent-config-ui.md",
+      "fullPath": "agents/task-runner/docs/specs/agent-config-ui.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 286
+    },
+    {
+      "id": "file_19",
+      "type": "file",
+      "label": "cliphub-plan.md",
+      "fullPath": "agents/task-runner/docs/specs/cliphub-plan.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 524
+    },
+    {
+      "id": "file_20",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 24
+    },
+    {
+      "id": "file_21",
+      "type": "file",
+      "label": "server-utils.ts",
+      "fullPath": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 371
+    },
+    {
+      "id": "file_22",
+      "type": "file",
+      "label": "types.ts",
+      "fullPath": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 242
+    },
+    {
+      "id": "file_23",
+      "type": "file",
+      "label": "format-event.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/cli/format-event.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 99
+    },
+    {
+      "id": "file_24",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/cli/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 1
+    }
+  ],
+  "edges": []
+}

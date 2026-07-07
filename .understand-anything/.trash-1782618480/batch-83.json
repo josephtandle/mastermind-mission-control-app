@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/packages/shared/CHANGELOG.md",
+      "type": "file",
+      "name": "CHANGELOG.md",
+      "filePath": "agents/task-runner/packages/shared/CHANGELOG.md",
+      "summary": "docs file (50 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/packages/shared/package.json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "agents/task-runner/packages/shared/package.json",
+      "summary": "config file (38 lines)",
+      "tags": [
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/packages/shared/tsconfig.json",
+      "type": "file",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/packages/shared/tsconfig.json",
+      "summary": "config file (8 lines)",
+      "tags": [
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

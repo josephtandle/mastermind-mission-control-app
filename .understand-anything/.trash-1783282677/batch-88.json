@@ -1,0 +1,405 @@
+{
+  "batchIndex": 88,
+  "nodes": [
+    {
+      "id": "batch-88-file-0",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/bios/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.9,
+      "sizeLines": 188,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-1",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/blog-service/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.6,
+      "sizeLines": 256,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-2",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/book-rankings/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.6,
+      "sizeLines": 159,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-3",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/bookkeeping/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 4.3,
+      "sizeLines": 432,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-4",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/icp/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 140,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-5",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/store-leads/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.2,
+      "sizeLines": 216,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-6",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/waba-answer/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 4.6,
+      "sizeLines": 459,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-7",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/waba-search/history/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-8",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/waba-search/rebuild/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 24,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-9",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/waba-search/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 82,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-10",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/waba-search/stats/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 66,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-11",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/business1/waba-upload/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.3,
+      "sizeLines": 234,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-12",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/canva/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 142,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-13",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/carousel-builder/export/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 3.7,
+      "sizeLines": 371,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-14",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/carousel-builder/images/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.1,
+      "sizeLines": 210,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-15",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/carousel-builder/publish/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2,
+      "sizeLines": 202,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-16",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/carousel-builder/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.3,
+      "sizeLines": 228,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-17",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/carousel-builder/serve/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 51,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-18",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/carousel-builder/templates/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 63,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-19",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/cashclaw/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 117,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-20",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/clanforge/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 75,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-21",
+      "type": "source",
+      "name": "_state.ts",
+      "filePath": "mission-control/app/api/claude-terminal/_state.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 6,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-22",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/claude-terminal/handoff/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 26,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-23",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/claude-terminal/history/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 102,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-88-file-24",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/claude-terminal/run/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.2,
+      "sizeLines": 218,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

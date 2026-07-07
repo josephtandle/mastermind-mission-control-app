@@ -1,0 +1,174 @@
+{
+  "batchIndex": 51,
+  "nodes": [
+    {
+      "id": "batch-51-file-0",
+      "type": "source",
+      "name": "access.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/access.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 71,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-1",
+      "type": "source",
+      "name": "agent.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/agent.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 102,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-2",
+      "type": "source",
+      "name": "approval.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/approval.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 38,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-3",
+      "type": "source",
+      "name": "asset.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/asset.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 15,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-4",
+      "type": "source",
+      "name": "company-portability.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/company-portability.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 113,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-5",
+      "type": "source",
+      "name": "company.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/company.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 22,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-6",
+      "type": "source",
+      "name": "cost.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/cost.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 24,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-7",
+      "type": "source",
+      "name": "goal.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/goal.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 18,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-8",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 140,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-9",
+      "type": "source",
+      "name": "issue.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/issue.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 90,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-10",
+      "type": "source",
+      "name": "project.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/project.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 86,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-51-file-11",
+      "type": "source",
+      "name": "secret.ts",
+      "filePath": "agents/task-runner/packages/shared/src/validators/secret.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

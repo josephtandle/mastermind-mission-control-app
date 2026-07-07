@@ -1,0 +1,2114 @@
+{
+  "nodes": [
+    {
+      "id": "file:INDEX.md",
+      "type": "file",
+      "name": "INDEX.md",
+      "filePath": "INDEX.md",
+      "summary": "MyOS Infrastructure Index",
+      "complexity": "complex",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 349,
+        "nonEmptyLines": 279,
+        "category": "docs"
+      }
+    },
+    {
+      "id": "heading:INDEX.md:MyOS Infrastructure Index",
+      "type": "heading",
+      "name": "MyOS Infrastructure Index",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: MyOS Infrastructure Index",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udcda Documentation",
+      "type": "heading",
+      "name": "\ud83d\udcda Documentation",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udcda Documentation",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Operational Guides",
+      "type": "heading",
+      "name": "Operational Guides",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Operational Guides",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Component Documentation",
+      "type": "heading",
+      "name": "Component Documentation",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Component Documentation",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udee1\ufe0f Security & Monitoring",
+      "type": "heading",
+      "name": "\ud83d\udee1\ufe0f Security & Monitoring",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udee1\ufe0f Security & Monitoring",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Guard-dog Scanner",
+      "type": "heading",
+      "name": "Guard-dog Scanner",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Guard-dog Scanner",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Manual scan",
+      "type": "heading",
+      "name": "Manual scan",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Manual scan",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:View latest results",
+      "type": "heading",
+      "name": "View latest results",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: View latest results",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Consolidate logs",
+      "type": "heading",
+      "name": "Consolidate logs",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Consolidate logs",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Threat Intelligence",
+      "type": "heading",
+      "name": "Threat Intelligence",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Threat Intelligence",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:View latest threat digest",
+      "type": "heading",
+      "name": "View latest threat digest",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: View latest threat digest",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Query CVEs affecting Node.js",
+      "type": "heading",
+      "name": "Query CVEs affecting Node.js",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Query CVEs affecting Node.js",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udd11 Credential Management",
+      "type": "heading",
+      "name": "\ud83d\udd11 Credential Management",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udd11 Credential Management",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:LastPass Vault",
+      "type": "heading",
+      "name": "LastPass Vault",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: LastPass Vault",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Store credential",
+      "type": "heading",
+      "name": "Store credential",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Store credential",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Retrieve credential",
+      "type": "heading",
+      "name": "Retrieve credential",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Retrieve credential",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:View audit log",
+      "type": "heading",
+      "name": "View audit log",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: View audit log",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83c\udf9b\ufe0f Skills Management",
+      "type": "heading",
+      "name": "\ud83c\udf9b\ufe0f Skills Management",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83c\udf9b\ufe0f Skills Management",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Registry",
+      "type": "heading",
+      "name": "Registry",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Registry",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Toggle Scripts",
+      "type": "heading",
+      "name": "Toggle Scripts",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Toggle Scripts",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Enable/disable by updating registry status",
+      "type": "heading",
+      "name": "Enable/disable by updating registry status",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Enable/disable by updating registry status",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Auto-updates registry on git operations",
+      "type": "heading",
+      "name": "Auto-updates registry on git operations",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Auto-updates registry on git operations",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Dashboard",
+      "type": "heading",
+      "name": "Dashboard",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Dashboard",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udcc5 Scheduled Tasks",
+      "type": "heading",
+      "name": "\ud83d\udcc5 Scheduled Tasks",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udcc5 Scheduled Tasks",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Cron Schedule",
+      "type": "heading",
+      "name": "Cron Schedule",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Cron Schedule",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Calendar View",
+      "type": "heading",
+      "name": "Calendar View",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Calendar View",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\ude80 Quick Start",
+      "type": "heading",
+      "name": "\ud83d\ude80 Quick Start",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\ude80 Quick Start",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:1. Start Mission Control",
+      "type": "heading",
+      "name": "1. Start Mission Control",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: 1. Start Mission Control",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:2. Access Dashboards",
+      "type": "heading",
+      "name": "2. Access Dashboards",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: 2. Access Dashboards",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:3. Toggle a Skill",
+      "type": "heading",
+      "name": "3. Toggle a Skill",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: 3. Toggle a Skill",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:4. Set Up Auth",
+      "type": "heading",
+      "name": "4. Set Up Auth",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: 4. Set Up Auth",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:5. Use in Scripts",
+      "type": "heading",
+      "name": "5. Use in Scripts",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: 5. Use in Scripts",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Your code...",
+      "type": "heading",
+      "name": "Your code...",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Your code...",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udcca Key Statistics",
+      "type": "heading",
+      "name": "\ud83d\udcca Key Statistics",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udcca Key Statistics",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udd0d Directory Structure",
+      "type": "heading",
+      "name": "\ud83d\udd0d Directory Structure",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udd0d Directory Structure",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83d\udd17 Quick Links",
+      "type": "heading",
+      "name": "\ud83d\udd17 Quick Links",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83d\udd17 Quick Links",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\u26a0\ufe0f Important Notes",
+      "type": "heading",
+      "name": "\u26a0\ufe0f Important Notes",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \u26a0\ufe0f Important Notes",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:\ud83c\udd98 Support",
+      "type": "heading",
+      "name": "\ud83c\udd98 Support",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: \ud83c\udd98 Support",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Check skill status",
+      "type": "heading",
+      "name": "Check skill status",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Check skill status",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:View guard-dog scan log",
+      "type": "heading",
+      "name": "View guard-dog scan log",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: View guard-dog scan log",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:View threat intel digest",
+      "type": "heading",
+      "name": "View threat intel digest",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: View threat intel digest",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:INDEX.md:Test a credential",
+      "type": "heading",
+      "name": "Test a credential",
+      "filePath": "INDEX.md",
+      "summary": "Exported heading: Test a credential",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:README.md",
+      "type": "file",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "\ud83d\ude80 MyOS Infrastructure - Production Ready",
+      "complexity": "complex",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "metadata": {
+        "language": "markdown",
+        "totalLines": 249,
+        "nonEmptyLines": 187,
+        "category": "docs"
+      }
+    },
+    {
+      "id": "heading:README.md:\ud83d\ude80 MyOS Infrastructure - Production Ready",
+      "type": "heading",
+      "name": "\ud83d\ude80 MyOS Infrastructure - Production Ready",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\ude80 MyOS Infrastructure - Production Ready",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83c\udfaf What's Included",
+      "type": "heading",
+      "name": "\ud83c\udfaf What's Included",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83c\udfaf What's Included",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udee1\ufe0f Security & Monitoring",
+      "type": "heading",
+      "name": "\ud83d\udee1\ufe0f Security & Monitoring",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udee1\ufe0f Security & Monitoring",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83c\udf9b\ufe0f Skill Management",
+      "type": "heading",
+      "name": "\ud83c\udf9b\ufe0f Skill Management",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83c\udf9b\ufe0f Skill Management",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcca Dashboards",
+      "type": "heading",
+      "name": "\ud83d\udcca Dashboards",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcca Dashboards",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcc8 Automation",
+      "type": "heading",
+      "name": "\ud83d\udcc8 Automation",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcc8 Automation",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\u26a1 Quick Start",
+      "type": "heading",
+      "name": "\u26a1 Quick Start",
+      "filePath": "README.md",
+      "summary": "Exported heading: \u26a1 Quick Start",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:1. Start the Dashboard",
+      "type": "heading",
+      "name": "1. Start the Dashboard",
+      "filePath": "README.md",
+      "summary": "Exported heading: 1. Start the Dashboard",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Opens http://localhost:3001",
+      "type": "heading",
+      "name": "Opens http://localhost:3001",
+      "filePath": "README.md",
+      "summary": "Exported heading: Opens http://localhost:3001",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:2. Access Skills Management",
+      "type": "heading",
+      "name": "2. Access Skills Management",
+      "filePath": "README.md",
+      "summary": "Exported heading: 2. Access Skills Management",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:3. Toggle a Skill",
+      "type": "heading",
+      "name": "3. Toggle a Skill",
+      "filePath": "README.md",
+      "summary": "Exported heading: 3. Toggle a Skill",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:4. Set Up Authentication",
+      "type": "heading",
+      "name": "4. Set Up Authentication",
+      "filePath": "README.md",
+      "summary": "Exported heading: 4. Set Up Authentication",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcda Documentation",
+      "type": "heading",
+      "name": "\ud83d\udcda Documentation",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcda Documentation",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83c\udf9b\ufe0f Main Components",
+      "type": "heading",
+      "name": "\ud83c\udf9b\ufe0f Main Components",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83c\udf9b\ufe0f Main Components",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Guard-dog Security Scanner",
+      "type": "heading",
+      "name": "Guard-dog Security Scanner",
+      "filePath": "README.md",
+      "summary": "Exported heading: Guard-dog Security Scanner",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Threat Intelligence",
+      "type": "heading",
+      "name": "Threat Intelligence",
+      "filePath": "README.md",
+      "summary": "Exported heading: Threat Intelligence",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Skills Dashboard",
+      "type": "heading",
+      "name": "Skills Dashboard",
+      "filePath": "README.md",
+      "summary": "Exported heading: Skills Dashboard",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Credential Vault",
+      "type": "heading",
+      "name": "Credential Vault",
+      "filePath": "README.md",
+      "summary": "Exported heading: Credential Vault",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcc5 Automatic Schedule",
+      "type": "heading",
+      "name": "\ud83d\udcc5 Automatic Schedule",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcc5 Automatic Schedule",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udd10 Security Features",
+      "type": "heading",
+      "name": "\ud83d\udd10 Security Features",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udd10 Security Features",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udca1 Common Tasks",
+      "type": "heading",
+      "name": "\ud83d\udca1 Common Tasks",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udca1 Common Tasks",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Toggle a Skill ON/OFF",
+      "type": "heading",
+      "name": "Toggle a Skill ON/OFF",
+      "filePath": "README.md",
+      "summary": "Exported heading: Toggle a Skill ON/OFF",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Get a Stored Credential",
+      "type": "heading",
+      "name": "Get a Stored Credential",
+      "filePath": "README.md",
+      "summary": "Exported heading: Get a Stored Credential",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:View Security Dashboard",
+      "type": "heading",
+      "name": "View Security Dashboard",
+      "filePath": "README.md",
+      "summary": "Exported heading: View Security Dashboard",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Check Threat Intelligence",
+      "type": "heading",
+      "name": "Check Threat Intelligence",
+      "filePath": "README.md",
+      "summary": "Exported heading: Check Threat Intelligence",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Run Manual Scan",
+      "type": "heading",
+      "name": "Run Manual Scan",
+      "filePath": "README.md",
+      "summary": "Exported heading: Run Manual Scan",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcca Stats",
+      "type": "heading",
+      "name": "\ud83d\udcca Stats",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcca Stats",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udea8 Troubleshooting",
+      "type": "heading",
+      "name": "\ud83d\udea8 Troubleshooting",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udea8 Troubleshooting",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Check if scripts are executable",
+      "type": "heading",
+      "name": "Check if scripts are executable",
+      "filePath": "README.md",
+      "summary": "Exported heading: Check if scripts are executable",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Test directly",
+      "type": "heading",
+      "name": "Test directly",
+      "filePath": "README.md",
+      "summary": "Exported heading: Test directly",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Ensure server is running",
+      "type": "heading",
+      "name": "Ensure server is running",
+      "filePath": "README.md",
+      "summary": "Exported heading: Ensure server is running",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Rebuild if needed",
+      "type": "heading",
+      "name": "Rebuild if needed",
+      "filePath": "README.md",
+      "summary": "Exported heading: Rebuild if needed",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Check vault permissions",
+      "type": "heading",
+      "name": "Check vault permissions",
+      "filePath": "README.md",
+      "summary": "Exported heading: Check vault permissions",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:Test LastPass CLI",
+      "type": "heading",
+      "name": "Test LastPass CLI",
+      "filePath": "README.md",
+      "summary": "Exported heading: Test LastPass CLI",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcd6 Next Steps",
+      "type": "heading",
+      "name": "\ud83d\udcd6 Next Steps",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcd6 Next Steps",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83c\udfaf Key Features",
+      "type": "heading",
+      "name": "\ud83c\udfaf Key Features",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83c\udfaf Key Features",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "heading:README.md:\ud83d\udcde Support",
+      "type": "heading",
+      "name": "\ud83d\udcde Support",
+      "filePath": "README.md",
+      "summary": "Exported heading: \ud83d\udcde Support",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:package.json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "json code file: package.json",
+      "complexity": "simple",
+      "tags": [
+        "config",
+        "json"
+      ],
+      "metadata": {
+        "language": "json",
+        "totalLines": 22,
+        "nonEmptyLines": 21,
+        "category": "config"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:MyOS Infrastructure Index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:MyOS Infrastructure Index",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udcda Documentation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udcda Documentation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Operational Guides",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Operational Guides",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Component Documentation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Component Documentation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udee1\ufe0f Security & Monitoring",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udee1\ufe0f Security & Monitoring",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Guard-dog Scanner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Guard-dog Scanner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Manual scan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Manual scan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View latest results",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View latest results",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Consolidate logs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Consolidate logs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Threat Intelligence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Threat Intelligence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View latest threat digest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View latest threat digest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Query CVEs affecting Node.js",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Query CVEs affecting Node.js",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udd11 Credential Management",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udd11 Credential Management",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:LastPass Vault",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:LastPass Vault",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Store credential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Store credential",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Retrieve credential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Retrieve credential",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View audit log",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View audit log",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83c\udf9b\ufe0f Skills Management",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83c\udf9b\ufe0f Skills Management",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Registry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Registry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Toggle Scripts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Toggle Scripts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Enable/disable by updating registry status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Enable/disable by updating registry status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Auto-updates registry on git operations",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Auto-updates registry on git operations",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Dashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udcc5 Scheduled Tasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udcc5 Scheduled Tasks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Cron Schedule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Cron Schedule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Calendar View",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Calendar View",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\ude80 Quick Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\ude80 Quick Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:1. Start Mission Control",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:1. Start Mission Control",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:2. Access Dashboards",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:2. Access Dashboards",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:3. Toggle a Skill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:3. Toggle a Skill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:4. Set Up Auth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:4. Set Up Auth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:5. Use in Scripts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:5. Use in Scripts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Your code...",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Your code...",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udcca Key Statistics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udcca Key Statistics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udd0d Directory Structure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udd0d Directory Structure",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udd17 Quick Links",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83d\udd17 Quick Links",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\u26a0\ufe0f Important Notes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\u26a0\ufe0f Important Notes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83c\udd98 Support",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:\ud83c\udd98 Support",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Check skill status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Check skill status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View guard-dog scan log",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View guard-dog scan log",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View threat intel digest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:View threat intel digest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Test a credential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:INDEX.md",
+      "target": "heading:INDEX.md:Test a credential",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\ude80 MyOS Infrastructure - Production Ready",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\ude80 MyOS Infrastructure - Production Ready",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udfaf What's Included",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udfaf What's Included",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udee1\ufe0f Security & Monitoring",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udee1\ufe0f Security & Monitoring",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udf9b\ufe0f Skill Management",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udf9b\ufe0f Skill Management",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcca Dashboards",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcca Dashboards",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcc8 Automation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcc8 Automation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\u26a1 Quick Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\u26a1 Quick Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:1. Start the Dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:1. Start the Dashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Opens http://localhost:3001",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Opens http://localhost:3001",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:2. Access Skills Management",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:2. Access Skills Management",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:3. Toggle a Skill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:3. Toggle a Skill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:4. Set Up Authentication",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:4. Set Up Authentication",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcda Documentation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcda Documentation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udf9b\ufe0f Main Components",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udf9b\ufe0f Main Components",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Guard-dog Security Scanner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Guard-dog Security Scanner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Threat Intelligence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Threat Intelligence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Skills Dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Skills Dashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Credential Vault",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Credential Vault",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcc5 Automatic Schedule",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcc5 Automatic Schedule",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udd10 Security Features",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udd10 Security Features",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udca1 Common Tasks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udca1 Common Tasks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Toggle a Skill ON/OFF",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Toggle a Skill ON/OFF",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Get a Stored Credential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Get a Stored Credential",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:View Security Dashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:View Security Dashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Check Threat Intelligence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Check Threat Intelligence",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Run Manual Scan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Run Manual Scan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcca Stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcca Stats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udea8 Troubleshooting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udea8 Troubleshooting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Check if scripts are executable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Check if scripts are executable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Test directly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Test directly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Ensure server is running",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Ensure server is running",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Rebuild if needed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Rebuild if needed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Check vault permissions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Check vault permissions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Test LastPass CLI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:Test LastPass CLI",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcd6 Next Steps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcd6 Next Steps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udfaf Key Features",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83c\udfaf Key Features",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcde Support",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:README.md",
+      "target": "heading:README.md:\ud83d\udcde Support",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

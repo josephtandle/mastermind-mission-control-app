@@ -1,0 +1,51 @@
+{
+  "batchIndex": 41,
+  "nodes": [
+    {
+      "id": "batch-41-file-0",
+      "type": "source",
+      "name": "build-config.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/ui/build-config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 72,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-41-file-1",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/ui/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 3,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-41-file-2",
+      "type": "source",
+      "name": "parse-stdout.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/ui/parse-stdout.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 148,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

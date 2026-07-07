@@ -1,0 +1,245 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/api/cohorts/websites/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/cohorts/websites/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 15,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/autopilot/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/autopilot/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1063,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/api/seo/bing/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/bing/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 262,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/blog-brief/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/blog-brief/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 167,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/broken-links/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/broken-links/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 396,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/browser-fix/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/browser-fix/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 515,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/api/seo/claude-task/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/claude-task/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 176,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/competitors/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/competitors/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 481,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/crawl/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/crawl/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 202,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/crux/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/crux/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 169,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/duplicates/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/duplicates/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 252,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/fix/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/fix/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 880,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/api/seo/gsc-inspect/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/gsc-inspect/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 104,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/internal-links/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/internal-links/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 274,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/llms-txt/[domain]/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/llms-txt/[domain]/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 91,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/llms-txt/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/llms-txt/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 64,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/nlweb/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/nlweb/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 54,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/rank-check/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/rank-check/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 183,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/seo/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 328,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/schema-test/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/schema-test/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 206,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/sites/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/sites/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 271,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/seo/wix-dashboard-fix/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/seo/wix-dashboard-fix/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 282,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/websites/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/websites/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 128,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/seo/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 381,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/AddSiteModal.tsx",
+      "label": "AddSiteModal.tsx",
+      "path": "mission-control/app/app/seo/sections/AddSiteModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 290,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/AuditHistory.tsx",
+      "label": "AuditHistory.tsx",
+      "path": "mission-control/app/app/seo/sections/AuditHistory.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 217,
+      "complexity": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/app/seo/page.tsx",
+      "target": "mission-control/app/app/seo/sections/AddSiteModal.tsx",
+      "type": "imports"
+    }
+  ]
+}

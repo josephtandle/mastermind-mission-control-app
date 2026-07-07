@@ -1,0 +1,254 @@
+{
+  "batchIndex": 12,
+  "fileCount": 16,
+  "nodeCount": 16,
+  "edgeCount": 0,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/doc/CLI.md",
+      "type": "file",
+      "name": "CLI.md",
+      "filePath": "agents/task-runner/doc/CLI.md",
+      "language": "Markdown",
+      "sizeLines": 196,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/CLIPHUB.md",
+      "type": "file",
+      "name": "CLIPHUB.md",
+      "filePath": "agents/task-runner/doc/CLIPHUB.md",
+      "language": "Markdown",
+      "sizeLines": 337,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/DATABASE.md",
+      "type": "file",
+      "name": "DATABASE.md",
+      "filePath": "agents/task-runner/doc/DATABASE.md",
+      "language": "Markdown",
+      "sizeLines": 169,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/DEPLOYMENT-MODES.md",
+      "type": "file",
+      "name": "DEPLOYMENT-MODES.md",
+      "filePath": "agents/task-runner/doc/DEPLOYMENT-MODES.md",
+      "language": "Markdown",
+      "sizeLines": 121,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/DEVELOPING.md",
+      "type": "file",
+      "name": "DEVELOPING.md",
+      "filePath": "agents/task-runner/doc/DEVELOPING.md",
+      "language": "Markdown",
+      "sizeLines": 368,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/DOCKER.md",
+      "type": "file",
+      "name": "DOCKER.md",
+      "filePath": "agents/task-runner/doc/DOCKER.md",
+      "language": "Markdown",
+      "sizeLines": 129,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/GOAL.md",
+      "type": "file",
+      "name": "GOAL.md",
+      "filePath": "agents/task-runner/doc/GOAL.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/doc/OPENCLAW_ONBOARDING.md",
+      "type": "file",
+      "name": "OPENCLAW_ONBOARDING.md",
+      "filePath": "agents/task-runner/doc/OPENCLAW_ONBOARDING.md",
+      "language": "Markdown",
+      "sizeLines": 95,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/doc/PRODUCT.md",
+      "type": "file",
+      "name": "PRODUCT.md",
+      "filePath": "agents/task-runner/doc/PRODUCT.md",
+      "language": "Markdown",
+      "sizeLines": 97,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/doc/PUBLISHING.md",
+      "type": "file",
+      "name": "PUBLISHING.md",
+      "filePath": "agents/task-runner/doc/PUBLISHING.md",
+      "language": "Markdown",
+      "sizeLines": 122,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/README-draft.md",
+      "type": "file",
+      "name": "README-draft.md",
+      "filePath": "agents/task-runner/doc/README-draft.md",
+      "language": "Markdown",
+      "sizeLines": 79,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/doc/RELEASING.md",
+      "type": "file",
+      "name": "RELEASING.md",
+      "filePath": "agents/task-runner/doc/RELEASING.md",
+      "language": "Markdown",
+      "sizeLines": 423,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/SPEC-implementation.md",
+      "type": "file",
+      "name": "SPEC-implementation.md",
+      "filePath": "agents/task-runner/doc/SPEC-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 830,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "file:agents/task-runner/doc/SPEC.md",
+      "type": "file",
+      "name": "SPEC.md",
+      "filePath": "agents/task-runner/doc/SPEC.md",
+      "language": "Markdown",
+      "sizeLines": 526,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "file:agents/task-runner/doc/TASKS-mcp.md",
+      "type": "file",
+      "name": "TASKS-mcp.md",
+      "filePath": "agents/task-runner/doc/TASKS-mcp.md",
+      "language": "Markdown",
+      "sizeLines": 568,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "file:agents/task-runner/doc/TASKS.md",
+      "type": "file",
+      "name": "TASKS.md",
+      "filePath": "agents/task-runner/doc/TASKS.md",
+      "language": "Markdown",
+      "sizeLines": 408,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

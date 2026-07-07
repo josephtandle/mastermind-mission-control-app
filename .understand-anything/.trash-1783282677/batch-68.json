@@ -1,0 +1,97 @@
+{
+  "batchIndex": 68,
+  "nodes": [
+    {
+      "id": "batch-68-file-0",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 9,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-68-file-1",
+      "type": "component",
+      "name": "local-workspace-runtime-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/local-workspace-runtime-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 6,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-68-file-2",
+      "type": "source",
+      "name": "registry.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/registry.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 27,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-68-file-3",
+      "type": "component",
+      "name": "runtime-json-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/runtime-json-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 123,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-68-file-4",
+      "type": "source",
+      "name": "transcript.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/transcript.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 53,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-68-file-5",
+      "type": "source",
+      "name": "types.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/types.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "types"
+      ],
+      "complexity": 1,
+      "sizeLines": 32,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

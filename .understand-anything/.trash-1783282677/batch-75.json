@@ -1,0 +1,118 @@
+{
+  "batchIndex": 75,
+  "nodes": [
+    {
+      "id": "batch-75-file-0",
+      "type": "component",
+      "name": "BreadcrumbContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/BreadcrumbContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 45,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-1",
+      "type": "component",
+      "name": "CompanyContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/CompanyContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 144,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-2",
+      "type": "component",
+      "name": "DialogContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/DialogContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 135,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-3",
+      "type": "component",
+      "name": "LiveUpdatesProvider.tsx",
+      "filePath": "agents/task-runner/ui/src/context/LiveUpdatesProvider.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 6,
+      "sizeLines": 598,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-4",
+      "type": "component",
+      "name": "PanelContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/PanelContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 74,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-5",
+      "type": "component",
+      "name": "SidebarContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/SidebarContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 44,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-6",
+      "type": "component",
+      "name": "ThemeContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/ThemeContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 84,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-75-file-7",
+      "type": "component",
+      "name": "ToastContext.tsx",
+      "filePath": "agents/task-runner/ui/src/context/ToastContext.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.7,
+      "sizeLines": 173,
+      "language": "TypeScript JSX"
+    }
+  ],
+  "edges": []
+}

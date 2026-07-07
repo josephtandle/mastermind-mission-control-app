@@ -1,0 +1,148 @@
+{
+  "batchIndex": 43,
+  "nodes": [
+    {
+      "id": "batch-43-file-0",
+      "type": "source",
+      "name": "backup-lib.ts",
+      "filePath": "agents/task-runner/packages/db/src/backup-lib.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 5.6,
+      "sizeLines": 559,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-1",
+      "type": "source",
+      "name": "backup.ts",
+      "filePath": "agents/task-runner/packages/db/src/backup.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 123,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-2",
+      "type": "source",
+      "name": "client.ts",
+      "filePath": "agents/task-runner/packages/db/src/client.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 7.4,
+      "sizeLines": 741,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-3",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/db/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 22,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-4",
+      "type": "source",
+      "name": "migrate.ts",
+      "filePath": "agents/task-runner/packages/db/src/migrate.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-5",
+      "type": "source",
+      "name": "migration-runtime.ts",
+      "filePath": "agents/task-runner/packages/db/src/migration-runtime.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 135,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-6",
+      "type": "source",
+      "name": "migration-status.ts",
+      "filePath": "agents/task-runner/packages/db/src/migration-status.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 46,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-7",
+      "type": "source",
+      "name": "runtime-config.test.ts",
+      "filePath": "agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 108,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-8",
+      "type": "source",
+      "name": "runtime-config.ts",
+      "filePath": "agents/task-runner/packages/db/src/runtime-config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 2.7,
+      "sizeLines": 268,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-43-file-9",
+      "type": "source",
+      "name": "seed.ts",
+      "filePath": "agents/task-runner/packages/db/src/seed.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 100,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

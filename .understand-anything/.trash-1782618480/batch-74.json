@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/packages/adapters/claude-local/CHANGELOG.md",
+      "type": "file",
+      "name": "CHANGELOG.md",
+      "filePath": "agents/task-runner/packages/adapters/claude-local/CHANGELOG.md",
+      "summary": "docs file (68 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/packages/adapters/claude-local/package.json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "agents/task-runner/packages/adapters/claude-local/package.json",
+      "summary": "config file (51 lines)",
+      "tags": [
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/packages/adapters/claude-local/tsconfig.json",
+      "type": "file",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/packages/adapters/claude-local/tsconfig.json",
+      "summary": "config file (8 lines)",
+      "tags": [
+        "config",
+        "json"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

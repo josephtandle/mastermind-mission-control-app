@@ -1,0 +1,428 @@
+{
+  "nodes": [
+    {
+      "id": "agents/task-runner/server/src/middleware/private-hostname-guard.ts",
+      "label": "private-hostname-guard.ts",
+      "path": "agents/task-runner/server/src/middleware/private-hostname-guard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 92,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/middleware/validate.ts",
+      "label": "validate.ts",
+      "path": "agents/task-runner/server/src/middleware/validate.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 9,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/paths.ts",
+      "label": "paths.ts",
+      "path": "agents/task-runner/server/src/paths.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 34,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/realtime/live-events-ws.ts",
+      "label": "live-events-ws.ts",
+      "path": "agents/task-runner/server/src/realtime/live-events-ws.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 273,
+      "complexity": "medium"
+    },
+    {
+      "id": "agents/task-runner/server/src/redaction.ts",
+      "label": "redaction.ts",
+      "path": "agents/task-runner/server/src/redaction.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 59,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/access.ts",
+      "label": "access.ts",
+      "path": "agents/task-runner/server/src/routes/access.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 2604,
+      "complexity": "high"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/activity.ts",
+      "label": "activity.ts",
+      "path": "agents/task-runner/server/src/routes/activity.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 96,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/agents.ts",
+      "label": "agents.ts",
+      "path": "agents/task-runner/server/src/routes/agents.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1500,
+      "complexity": "high"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/approvals.ts",
+      "label": "approvals.ts",
+      "path": "agents/task-runner/server/src/routes/approvals.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 345,
+      "complexity": "medium"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/assets.ts",
+      "label": "assets.ts",
+      "path": "agents/task-runner/server/src/routes/assets.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 145,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/authz.ts",
+      "label": "authz.ts",
+      "path": "agents/task-runner/server/src/routes/authz.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 44,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/companies.ts",
+      "label": "companies.ts",
+      "path": "agents/task-runner/server/src/routes/companies.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 182,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/costs.ts",
+      "label": "costs.ts",
+      "path": "agents/task-runner/server/src/routes/costs.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 132,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/dashboard.ts",
+      "label": "dashboard.ts",
+      "path": "agents/task-runner/server/src/routes/dashboard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 18,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/goals.ts",
+      "label": "goals.ts",
+      "path": "agents/task-runner/server/src/routes/goals.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 106,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/health.ts",
+      "label": "health.ts",
+      "path": "agents/task-runner/server/src/routes/health.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 71,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/issues-checkout-wakeup.ts",
+      "label": "issues-checkout-wakeup.ts",
+      "path": "agents/task-runner/server/src/routes/issues-checkout-wakeup.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 14,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/issues.ts",
+      "label": "issues.ts",
+      "path": "agents/task-runner/server/src/routes/issues.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1182,
+      "complexity": "high"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/llms.ts",
+      "label": "llms.ts",
+      "path": "agents/task-runner/server/src/routes/llms.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 85,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/projects.ts",
+      "label": "projects.ts",
+      "path": "agents/task-runner/server/src/routes/projects.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 290,
+      "complexity": "medium"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/secrets.ts",
+      "label": "secrets.ts",
+      "path": "agents/task-runner/server/src/routes/secrets.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 165,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/routes/sidebar-badges.ts",
+      "label": "sidebar-badges.ts",
+      "path": "agents/task-runner/server/src/routes/sidebar-badges.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 51,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/secrets/external-stub-providers.ts",
+      "label": "external-stub-providers.ts",
+      "path": "agents/task-runner/server/src/secrets/external-stub-providers.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 32,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/secrets/local-encrypted-provider.ts",
+      "label": "local-encrypted-provider.ts",
+      "path": "agents/task-runner/server/src/secrets/local-encrypted-provider.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 135,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "label": "provider-registry.ts",
+      "path": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 30,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/secrets/types.ts",
+      "label": "types.ts",
+      "path": "agents/task-runner/server/src/secrets/types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 22,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/server/src/services/access.ts",
+      "label": "access.ts",
+      "path": "agents/task-runner/server/src/services/access.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 268,
+      "complexity": "medium"
+    },
+    {
+      "id": "agents/task-runner/server/src/services/activity-log.ts",
+      "label": "activity-log.ts",
+      "path": "agents/task-runner/server/src/services/activity-log.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 46,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/server/src/routes/access.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/access.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/activity.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/activity.ts",
+      "target": "agents/task-runner/server/src/redaction.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/activity.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/agents.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/agents.ts",
+      "target": "agents/task-runner/server/src/redaction.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/agents.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/approvals.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/approvals.ts",
+      "target": "agents/task-runner/server/src/redaction.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/approvals.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/assets.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/companies.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/companies.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/costs.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/costs.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/dashboard.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/goals.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/goals.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/issues.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/issues.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/issues.ts",
+      "target": "agents/task-runner/server/src/routes/issues-checkout-wakeup.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/projects.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/projects.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/secrets.ts",
+      "target": "agents/task-runner/server/src/middleware/validate.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/secrets.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/sidebar-badges.ts",
+      "target": "agents/task-runner/server/src/routes/authz.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/routes/sidebar-badges.ts",
+      "target": "agents/task-runner/server/src/services/access.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/secrets/external-stub-providers.ts",
+      "target": "agents/task-runner/server/src/secrets/types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/secrets/local-encrypted-provider.ts",
+      "target": "agents/task-runner/server/src/secrets/types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "target": "agents/task-runner/server/src/secrets/external-stub-providers.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "target": "agents/task-runner/server/src/secrets/local-encrypted-provider.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "target": "agents/task-runner/server/src/secrets/types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/server/src/services/activity-log.ts",
+      "target": "agents/task-runner/server/src/redaction.ts",
+      "type": "imports"
+    }
+  ]
+}

@@ -1,0 +1,399 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "type": "file",
+      "name": "_db.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/_db.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/_db.ts",
+      "sizeLines": 98,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/_db.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from _db.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        98
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "type": "file",
+      "name": "_manychat.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "sizeLines": 99,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/_manychat.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from _manychat.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        99
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "sizeLines": 90,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/activate/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        90
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "sizeLines": 78,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/clone/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        78
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "sizeLines": 90,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/deactivate/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        90
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/push/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/push/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/push/route.ts",
+      "sizeLines": 93,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/push/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        93
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/api/manychat-giveaways/route.ts",
+      "sizeLines": 286,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        95
+      ]
+    },
+    {
+      "id": "class:mission-control/app/api/manychat-giveaways/route.ts:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        96,
+        190
+      ]
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/route.ts:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        191,
+        286
+      ]
+    },
+    {
+      "id": "file:mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "sizeLines": 86,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/manychat-giveaways/sync/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        86
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/_db.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/_manychat.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/activate/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/clone/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/deactivate/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/push/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/push/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/app/api/manychat-giveaways/route.ts",
+      "target": "class:mission-control/app/api/manychat-giveaways/route.ts:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:mission-control/app/api/manychat-giveaways/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/route.ts:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "target": "function:mission-control/app/api/manychat-giveaways/sync/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/_manychat.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/activate/route.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/clone/route.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/clone/route.ts-to-mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/deactivate/route.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/push/route.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/push/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/route.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/sync/route.ts-to-mission-control/app/api/manychat-giveaways/_db.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_db.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/api/manychat-giveaways/sync/route.ts-to-mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "source": "file:mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "target": "file:mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

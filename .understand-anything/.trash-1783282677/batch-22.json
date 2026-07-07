@@ -1,0 +1,51 @@
+{
+  "batchIndex": 22,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapter-utils/CHANGELOG.md",
+      "label": "CHANGELOG.md",
+      "path": "agents/task-runner/packages/adapter-utils/CHANGELOG.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 50
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/package.json",
+      "label": "package.json",
+      "path": "agents/task-runner/packages/adapter-utils/package.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 37
+    },
+    {
+      "id": "@paperclipai/adapter-utils",
+      "label": "@paperclipai/adapter-utils",
+      "type": "module",
+      "packageJson": "agents/task-runner/packages/adapter-utils/package.json",
+      "version": "0.3.0"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/tsconfig.json",
+      "label": "tsconfig.json",
+      "path": "agents/task-runner/packages/adapter-utils/tsconfig.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 9
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapter-utils/package.json",
+      "target": "@paperclipai/adapter-utils",
+      "type": "defines"
+    }
+  ],
+  "metadata": {
+    "totalNodes": 4,
+    "totalEdges": 1,
+    "filesProcessed": 3,
+    "tsFilesProcessed": 0,
+    "exportsExtracted": 0,
+    "importsExtracted": 0
+  }
+}

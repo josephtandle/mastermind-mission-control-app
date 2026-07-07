@@ -1,0 +1,119 @@
+{
+  "batchIndex": 19,
+  "fileCount": 7,
+  "nodeCount": 7,
+  "edgeCount": 0,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/comments-and-communication.md",
+      "type": "file",
+      "name": "comments-and-communication.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/comments-and-communication.md",
+      "language": "Markdown",
+      "sizeLines": 58,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/cost-reporting.md",
+      "type": "file",
+      "name": "cost-reporting.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/cost-reporting.md",
+      "language": "Markdown",
+      "sizeLines": 53,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/handling-approvals.md",
+      "type": "file",
+      "name": "handling-approvals.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/handling-approvals.md",
+      "language": "Markdown",
+      "sizeLines": 66,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/heartbeat-protocol.md",
+      "type": "file",
+      "name": "heartbeat-protocol.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/heartbeat-protocol.md",
+      "language": "Markdown",
+      "sizeLines": 108,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/how-agents-work.md",
+      "type": "file",
+      "name": "how-agents-work.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/how-agents-work.md",
+      "language": "Markdown",
+      "sizeLines": 53,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/task-workflow.md",
+      "type": "file",
+      "name": "task-workflow.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/task-workflow.md",
+      "language": "Markdown",
+      "sizeLines": 105,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/writing-a-skill.md",
+      "type": "file",
+      "name": "writing-a-skill.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/writing-a-skill.md",
+      "language": "Markdown",
+      "sizeLines": 61,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/guides/agent-developer",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

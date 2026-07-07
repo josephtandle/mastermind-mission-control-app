@@ -1,0 +1,76 @@
+{
+  "batchIndex": 52,
+  "nodes": [
+    {
+      "id": "batch-52-file-0",
+      "type": "docs",
+      "name": "CHANGELOG.md",
+      "filePath": "agents/task-runner/server/CHANGELOG.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 113,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-52-file-1",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "agents/task-runner/server/package.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 75,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-52-file-2",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/server/tsconfig.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 10,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-52-file-3",
+      "type": "source",
+      "name": "vitest.config.ts",
+      "filePath": "agents/task-runner/server/vitest.config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 8,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": [
+    {
+      "source": "batch-52-file-1",
+      "target": "batch-52-file-3",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-52-file-2",
+      "target": "batch-52-file-3",
+      "type": "configures",
+      "weight": 0.6
+    }
+  ]
+}

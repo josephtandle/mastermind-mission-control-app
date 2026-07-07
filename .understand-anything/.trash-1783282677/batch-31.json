@@ -1,0 +1,299 @@
+{
+  "batchIndex": 31,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "label": "execute.ts",
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 486
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts#ensureCursorSkillsInjected",
+      "label": "ensureCursorSkillsInjected",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts#execute",
+      "label": "execute",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "label": "index.ts",
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 65
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#execute",
+      "label": "execute",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#ensureCursorSkillsInjected",
+      "label": "ensureCursorSkillsInjected",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#testEnvironment",
+      "label": "testEnvironment",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#parseCursorJsonl",
+      "label": "parseCursorJsonl",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#isCursorUnknownSessionError",
+      "label": "isCursorUnknownSessionError",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#sessionCodec",
+      "label": "sessionCodec",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "label": "parse.ts",
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 163
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts#parseCursorJsonl",
+      "label": "parseCursorJsonl",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts#isCursorUnknownSessionError",
+      "label": "isCursorUnknownSessionError",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "label": "test.ts",
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 211
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts#testEnvironment",
+      "label": "testEnvironment",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts#ensureCursorSkillsInjected",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts#execute",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "node:url",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "../index.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "../shared/stream.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "../shared/trust.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "node:fs/promises",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "node:os",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "node:path",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "node:fs",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#execute",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#ensureCursorSkillsInjected",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#testEnvironment",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#parseCursorJsonl",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#isCursorUnknownSessionError",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts#sessionCodec",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts#parseCursorJsonl",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts#isCursorUnknownSessionError",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "target": "../shared/stream.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts#testEnvironment",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "../index.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "../shared/trust.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "node:path",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    }
+  ],
+  "metadata": {
+    "totalNodes": 15,
+    "totalEdges": 31,
+    "filesProcessed": 4,
+    "tsFilesProcessed": 4,
+    "exportsExtracted": 11,
+    "importsExtracted": 20
+  }
+}

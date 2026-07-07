@@ -1,0 +1,106 @@
+{
+  "batchIndex": 49,
+  "nodes": [
+    {
+      "id": "batch-49-file-0",
+      "type": "source",
+      "name": "agent-url-key.ts",
+      "filePath": "agents/task-runner/packages/shared/src/agent-url-key.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 23,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-49-file-1",
+      "type": "source",
+      "name": "api.ts",
+      "filePath": "agents/task-runner/packages/shared/src/api.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 21,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-49-file-2",
+      "type": "source",
+      "name": "config-schema.ts",
+      "filePath": "agents/task-runner/packages/shared/src/config-schema.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 179,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-49-file-3",
+      "type": "source",
+      "name": "constants.ts",
+      "filePath": "agents/task-runner/packages/shared/src/constants.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 2.5,
+      "sizeLines": 248,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-49-file-4",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/shared/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 2.8,
+      "sizeLines": 281,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-49-file-5",
+      "type": "source",
+      "name": "project-mentions.ts",
+      "filePath": "agents/task-runner/packages/shared/src/project-mentions.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 79,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-49-file-6",
+      "type": "source",
+      "name": "project-url-key.ts",
+      "filePath": "agents/task-runner/packages/shared/src/project-url-key.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 17,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

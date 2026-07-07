@@ -1,0 +1,574 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/app/mc-settings/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "summary": "Code file: mission-control/app/app/mc-settings/page.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "complex",
+      "filePath": "mission-control/app/app/mc-settings/page.tsx",
+      "sizeLines": 507,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/mc-settings/page.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        84
+      ]
+    },
+    {
+      "id": "class:mission-control/app/app/mc-settings/page.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        85,
+        169
+      ]
+    },
+    {
+      "id": "function:mission-control/app/app/mc-settings/page.tsx:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        170,
+        253
+      ]
+    },
+    {
+      "id": "class:mission-control/app/app/mc-settings/page.tsx:Symbol3",
+      "type": "class",
+      "name": "Symbol3",
+      "summary": "class exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        254,
+        338
+      ]
+    },
+    {
+      "id": "function:mission-control/app/app/mc-settings/page.tsx:Symbol4",
+      "type": "function",
+      "name": "Symbol4",
+      "summary": "function exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        339,
+        422
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/AppearanceSection.tsx",
+      "type": "file",
+      "name": "AppearanceSection.tsx",
+      "summary": "Code file: mission-control/components/settings/AppearanceSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/components/settings/AppearanceSection.tsx",
+      "sizeLines": 215,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/AppearanceSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from AppearanceSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        107
+      ]
+    },
+    {
+      "id": "class:mission-control/components/settings/AppearanceSection.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from AppearanceSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        108,
+        215
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/BehaviorSection.tsx",
+      "type": "file",
+      "name": "BehaviorSection.tsx",
+      "summary": "Code file: mission-control/components/settings/BehaviorSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/components/settings/BehaviorSection.tsx",
+      "sizeLines": 157,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/BehaviorSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from BehaviorSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        157
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/DataManagementSection.tsx",
+      "type": "file",
+      "name": "DataManagementSection.tsx",
+      "summary": "Code file: mission-control/components/settings/DataManagementSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/components/settings/DataManagementSection.tsx",
+      "sizeLines": 140,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/DataManagementSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from DataManagementSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        140
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "type": "file",
+      "name": "DisplayPreferencesSection.tsx",
+      "summary": "Code file: mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "sizeLines": 289,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/DisplayPreferencesSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from DisplayPreferencesSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        96
+      ]
+    },
+    {
+      "id": "class:mission-control/components/settings/DisplayPreferencesSection.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from DisplayPreferencesSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        97,
+        192
+      ]
+    },
+    {
+      "id": "function:mission-control/components/settings/DisplayPreferencesSection.tsx:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from DisplayPreferencesSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        193,
+        289
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/EmailSection.tsx",
+      "type": "file",
+      "name": "EmailSection.tsx",
+      "summary": "Code file: mission-control/components/settings/EmailSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/components/settings/EmailSection.tsx",
+      "sizeLines": 169,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/EmailSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from EmailSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        84
+      ]
+    },
+    {
+      "id": "class:mission-control/components/settings/EmailSection.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from EmailSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        85,
+        169
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/NotificationsSection.tsx",
+      "type": "file",
+      "name": "NotificationsSection.tsx",
+      "summary": "Code file: mission-control/components/settings/NotificationsSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/components/settings/NotificationsSection.tsx",
+      "sizeLines": 108,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/NotificationsSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from NotificationsSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        108
+      ]
+    },
+    {
+      "id": "file:mission-control/components/settings/SystemControlsSection.tsx",
+      "type": "file",
+      "name": "SystemControlsSection.tsx",
+      "summary": "Code file: mission-control/components/settings/SystemControlsSection.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "complex",
+      "filePath": "mission-control/components/settings/SystemControlsSection.tsx",
+      "sizeLines": 365,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/components/settings/SystemControlsSection.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from SystemControlsSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        91
+      ]
+    },
+    {
+      "id": "class:mission-control/components/settings/SystemControlsSection.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from SystemControlsSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        92,
+        182
+      ]
+    },
+    {
+      "id": "function:mission-control/components/settings/SystemControlsSection.tsx:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from SystemControlsSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        183,
+        273
+      ]
+    },
+    {
+      "id": "class:mission-control/components/settings/SystemControlsSection.tsx:Symbol3",
+      "type": "class",
+      "name": "Symbol3",
+      "summary": "class exported from SystemControlsSection.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        274,
+        365
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "function:mission-control/app/app/mc-settings/page.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "class:mission-control/app/app/mc-settings/page.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "function:mission-control/app/app/mc-settings/page.tsx:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-3",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "class:mission-control/app/app/mc-settings/page.tsx:Symbol3",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-4",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "function:mission-control/app/app/mc-settings/page.tsx:Symbol4",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/AppearanceSection.tsx",
+      "target": "function:mission-control/components/settings/AppearanceSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/components/settings/AppearanceSection.tsx",
+      "target": "class:mission-control/components/settings/AppearanceSection.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/BehaviorSection.tsx",
+      "target": "function:mission-control/components/settings/BehaviorSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/DataManagementSection.tsx",
+      "target": "function:mission-control/components/settings/DataManagementSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "target": "function:mission-control/components/settings/DisplayPreferencesSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "target": "class:mission-control/components/settings/DisplayPreferencesSection.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "target": "function:mission-control/components/settings/DisplayPreferencesSection.tsx:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/EmailSection.tsx",
+      "target": "function:mission-control/components/settings/EmailSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/components/settings/EmailSection.tsx",
+      "target": "class:mission-control/components/settings/EmailSection.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/NotificationsSection.tsx",
+      "target": "function:mission-control/components/settings/NotificationsSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/components/settings/SystemControlsSection.tsx",
+      "target": "function:mission-control/components/settings/SystemControlsSection.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/components/settings/SystemControlsSection.tsx",
+      "target": "class:mission-control/components/settings/SystemControlsSection.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:mission-control/components/settings/SystemControlsSection.tsx",
+      "target": "function:mission-control/components/settings/SystemControlsSection.tsx:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-3",
+      "source": "file:mission-control/components/settings/SystemControlsSection.tsx",
+      "target": "class:mission-control/components/settings/SystemControlsSection.tsx:Symbol3",
+      "relation": "contains"
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/AppearanceSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/AppearanceSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/BehaviorSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/BehaviorSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/DataManagementSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/DataManagementSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/DisplayPreferencesSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/EmailSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/EmailSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/NotificationsSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/NotificationsSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/mc-settings/page.tsx-to-mission-control/components/settings/SystemControlsSection.tsx",
+      "source": "file:mission-control/app/app/mc-settings/page.tsx",
+      "target": "file:mission-control/components/settings/SystemControlsSection.tsx",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

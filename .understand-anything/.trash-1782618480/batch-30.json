@@ -1,0 +1,512 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/app/x/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "summary": "Code file: mission-control/app/app/x/page.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/x/page.tsx",
+      "sizeLines": 149,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/page.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        149
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "type": "file",
+      "name": "AnalyticsOverview.tsx",
+      "summary": "Code file: mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "sizeLines": 102,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/AnalyticsOverview.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from AnalyticsOverview.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        102
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "type": "file",
+      "name": "CuratedFeed.tsx",
+      "summary": "Code file: mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "sizeLines": 186,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/CuratedFeed.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from CuratedFeed.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        93
+      ]
+    },
+    {
+      "id": "class:mission-control/app/app/x/sections/CuratedFeed.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from CuratedFeed.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        94,
+        186
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/x/sections/PostComposer.tsx",
+      "type": "file",
+      "name": "PostComposer.tsx",
+      "summary": "Code file: mission-control/app/app/x/sections/PostComposer.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/x/sections/PostComposer.tsx",
+      "sizeLines": 250,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/PostComposer.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from PostComposer.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        83
+      ]
+    },
+    {
+      "id": "class:mission-control/app/app/x/sections/PostComposer.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from PostComposer.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        84,
+        166
+      ]
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/PostComposer.tsx:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from PostComposer.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        167,
+        250
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/x/sections/PostQueue.tsx",
+      "type": "file",
+      "name": "PostQueue.tsx",
+      "summary": "Code file: mission-control/app/app/x/sections/PostQueue.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/x/sections/PostQueue.tsx",
+      "sizeLines": 173,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/PostQueue.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from PostQueue.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        86
+      ]
+    },
+    {
+      "id": "class:mission-control/app/app/x/sections/PostQueue.tsx:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from PostQueue.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        87,
+        173
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "type": "file",
+      "name": "PostingRulesPanel.tsx",
+      "summary": "Code file: mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "sizeLines": 139,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/PostingRulesPanel.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from PostingRulesPanel.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        139
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/x/sections/TopicTracker.tsx",
+      "type": "file",
+      "name": "TopicTracker.tsx",
+      "summary": "Code file: mission-control/app/app/x/sections/TopicTracker.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/x/sections/TopicTracker.tsx",
+      "sizeLines": 100,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/x/sections/TopicTracker.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from TopicTracker.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        100
+      ]
+    },
+    {
+      "id": "file:mission-control/hooks/useXData.ts",
+      "type": "file",
+      "name": "useXData.ts",
+      "summary": "Code file: mission-control/hooks/useXData.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/hooks/useXData.ts",
+      "sizeLines": 36,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/hooks/useXData.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from useXData.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        36
+      ]
+    },
+    {
+      "id": "file:mission-control/lib/x-types.ts",
+      "type": "file",
+      "name": "x-types.ts",
+      "summary": "Code file: mission-control/lib/x-types.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/lib/x-types.ts",
+      "sizeLines": 133,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/lib/x-types.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from x-types.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        133
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "function:mission-control/app/app/x/page.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "target": "function:mission-control/app/app/x/sections/AnalyticsOverview.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "target": "function:mission-control/app/app/x/sections/CuratedFeed.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "target": "class:mission-control/app/app/x/sections/CuratedFeed.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/sections/PostComposer.tsx",
+      "target": "function:mission-control/app/app/x/sections/PostComposer.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/app/app/x/sections/PostComposer.tsx",
+      "target": "class:mission-control/app/app/x/sections/PostComposer.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:mission-control/app/app/x/sections/PostComposer.tsx",
+      "target": "function:mission-control/app/app/x/sections/PostComposer.tsx:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/sections/PostQueue.tsx",
+      "target": "function:mission-control/app/app/x/sections/PostQueue.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/app/app/x/sections/PostQueue.tsx",
+      "target": "class:mission-control/app/app/x/sections/PostQueue.tsx:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "target": "function:mission-control/app/app/x/sections/PostingRulesPanel.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/x/sections/TopicTracker.tsx",
+      "target": "function:mission-control/app/app/x/sections/TopicTracker.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/hooks/useXData.ts",
+      "target": "function:mission-control/hooks/useXData.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/lib/x-types.ts",
+      "target": "function:mission-control/lib/x-types.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/app/app/x/sections/PostComposer.tsx",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/app/app/x/sections/PostComposer.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/app/app/x/sections/PostQueue.tsx",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/app/app/x/sections/PostQueue.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/app/app/x/sections/TopicTracker.tsx",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/app/app/x/sections/TopicTracker.tsx",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/page.tsx-to-mission-control/hooks/useXData.ts",
+      "source": "file:mission-control/app/app/x/page.tsx",
+      "target": "file:mission-control/hooks/useXData.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/sections/AnalyticsOverview.tsx-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/app/app/x/sections/AnalyticsOverview.tsx",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/sections/CuratedFeed.tsx-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/app/app/x/sections/CuratedFeed.tsx",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/sections/PostComposer.tsx-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/app/app/x/sections/PostComposer.tsx",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/sections/PostQueue.tsx-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/app/app/x/sections/PostQueue.tsx",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/sections/PostingRulesPanel.tsx-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/app/app/x/sections/PostingRulesPanel.tsx",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/x/sections/TopicTracker.tsx-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/app/app/x/sections/TopicTracker.tsx",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/hooks/useXData.ts-to-mission-control/lib/x-types.ts",
+      "source": "file:mission-control/hooks/useXData.ts",
+      "target": "file:mission-control/lib/x-types.ts",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

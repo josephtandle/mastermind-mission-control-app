@@ -1,0 +1,77 @@
+{
+  "batchIndex": 33,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/openclaw-gateway/CHANGELOG.md",
+      "label": "CHANGELOG.md",
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/CHANGELOG.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 13
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/openclaw-gateway/README.md",
+      "label": "README.md",
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/README.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 73
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/openclaw-gateway/package.json",
+      "label": "package.json",
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/package.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 53
+    },
+    {
+      "id": "@paperclipai/adapter-openclaw-gateway",
+      "label": "@paperclipai/adapter-openclaw-gateway",
+      "type": "module",
+      "packageJson": "agents/task-runner/packages/adapters/openclaw-gateway/package.json",
+      "version": "0.3.0"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/openclaw-gateway/tsconfig.json",
+      "label": "tsconfig.json",
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/tsconfig.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 9
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/openclaw-gateway/package.json",
+      "target": "@paperclipai/adapter-openclaw-gateway",
+      "type": "defines"
+    },
+    {
+      "source": "@paperclipai/adapter-openclaw-gateway",
+      "target": "@paperclipai/adapter-utils",
+      "type": "depends",
+      "version": "workspace:*"
+    },
+    {
+      "source": "@paperclipai/adapter-openclaw-gateway",
+      "target": "picocolors",
+      "type": "depends",
+      "version": "^1.1.1"
+    },
+    {
+      "source": "@paperclipai/adapter-openclaw-gateway",
+      "target": "ws",
+      "type": "depends",
+      "version": "^8.19.0"
+    }
+  ],
+  "metadata": {
+    "totalNodes": 5,
+    "totalEdges": 4,
+    "filesProcessed": 4,
+    "tsFilesProcessed": 0,
+    "exportsExtracted": 0,
+    "importsExtracted": 0
+  }
+}

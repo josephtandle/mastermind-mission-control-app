@@ -1,0 +1,48 @@
+{
+  "batchIndex": 66,
+  "nodes": [
+    {
+      "id": "batch-66-file-0",
+      "type": "component",
+      "name": "App.tsx",
+      "filePath": "agents/task-runner/ui/src/App.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 2.6,
+      "sizeLines": 259,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-66-file-1",
+      "type": "style",
+      "name": "index.css",
+      "filePath": "agents/task-runner/ui/src/index.css",
+      "summary": "File implementing style functionality.",
+      "tags": [
+        "CSS",
+        "style"
+      ],
+      "complexity": 6.1,
+      "sizeLines": 612,
+      "language": "CSS"
+    },
+    {
+      "id": "batch-66-file-2",
+      "type": "component",
+      "name": "main.tsx",
+      "filePath": "agents/task-runner/ui/src/main.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 60,
+      "language": "TypeScript JSX"
+    }
+  ],
+  "edges": []
+}

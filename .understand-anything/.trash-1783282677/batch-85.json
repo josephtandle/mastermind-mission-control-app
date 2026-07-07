@@ -1,0 +1,375 @@
+{
+  "batchIndex": 85,
+  "nodes": [
+    {
+      "id": "batch-85-file-0",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/codex-local/src/cli/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 2,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-1",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/codex-local/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 47,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-2",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/packages/adapters/cursor-local/src/cli/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 3.2,
+      "sizeLines": 318,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-3",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/cursor-local/src/cli/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 2,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-4",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/cursor-local/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 84,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-5",
+      "type": "source",
+      "name": "stream.ts",
+      "filePath": "agents/task-runner/packages/adapters/cursor-local/src/shared/stream.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 17,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-6",
+      "type": "source",
+      "name": "trust.ts",
+      "filePath": "agents/task-runner/packages/adapters/cursor-local/src/shared/trust.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 10,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-7",
+      "type": "docs",
+      "name": "ONBOARDING_AND_TEST_PLAN.md",
+      "filePath": "agents/task-runner/packages/adapters/openclaw-gateway/doc/ONBOARDING_AND_TEST_PLAN.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs",
+        "adapters"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 110,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-85-file-8",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/packages/adapters/openclaw-gateway/src/cli/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 24,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-9",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/openclaw-gateway/src/cli/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 2,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-10",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/openclaw-gateway/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 55,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-11",
+      "type": "source",
+      "name": "stream.ts",
+      "filePath": "agents/task-runner/packages/adapters/openclaw-gateway/src/shared/stream.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 17,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-12",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/packages/adapters/opencode-local/src/cli/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 122,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-13",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/opencode-local/src/cli/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 2,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-14",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/opencode-local/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 41,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-15",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/cli/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 108,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-16",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/cli/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 2,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-17",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 41,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-18",
+      "type": "docs",
+      "name": "v0.2.7.md",
+      "filePath": "agents/task-runner/releases/v0.2.7.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 16,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-85-file-19",
+      "type": "docs",
+      "name": "v0.3.0.md",
+      "filePath": "agents/task-runner/releases/v0.3.0.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 54,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-85-file-20",
+      "type": "source",
+      "name": "migrate-inline-env-secrets.ts",
+      "filePath": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 126,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-21",
+      "type": "source",
+      "name": "better-auth.ts",
+      "filePath": "agents/task-runner/server/src/auth/better-auth.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 148,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-22",
+      "type": "source",
+      "name": "live-events-ws.ts",
+      "filePath": "agents/task-runner/server/src/realtime/live-events-ws.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 2.7,
+      "sizeLines": 274,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-23",
+      "type": "source",
+      "name": "express.d.ts",
+      "filePath": "agents/task-runner/server/src/types/express.d.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "types"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-85-file-24",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/create-agent-adapter/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 7.2,
+      "sizeLines": 719,
+      "language": "Markdown"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,341 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/app/seo/sections/AutopilotPanel.tsx",
+      "label": "AutopilotPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/AutopilotPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 302,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/BingStatsPanel.tsx",
+      "label": "BingStatsPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/BingStatsPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 168,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/BlogBriefGenerator.tsx",
+      "label": "BlogBriefGenerator.tsx",
+      "path": "mission-control/app/app/seo/sections/BlogBriefGenerator.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 373,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/BrokenLinksPanel.tsx",
+      "label": "BrokenLinksPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/BrokenLinksPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 235,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/CompetitorComparison.tsx",
+      "label": "CompetitorComparison.tsx",
+      "path": "mission-control/app/app/seo/sections/CompetitorComparison.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 331,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/ContentDrafts.tsx",
+      "label": "ContentDrafts.tsx",
+      "path": "mission-control/app/app/seo/sections/ContentDrafts.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 61,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/CoreWebVitals.tsx",
+      "label": "CoreWebVitals.tsx",
+      "path": "mission-control/app/app/seo/sections/CoreWebVitals.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 369,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/DuplicatesPanel.tsx",
+      "label": "DuplicatesPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/DuplicatesPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 184,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/FixAllBanner.tsx",
+      "label": "FixAllBanner.tsx",
+      "path": "mission-control/app/app/seo/sections/FixAllBanner.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 259,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/FixQueue.tsx",
+      "label": "FixQueue.tsx",
+      "path": "mission-control/app/app/seo/sections/FixQueue.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 412,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/FixesMade.tsx",
+      "label": "FixesMade.tsx",
+      "path": "mission-control/app/app/seo/sections/FixesMade.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 74,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/InternalLinksPanel.tsx",
+      "label": "InternalLinksPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/InternalLinksPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 144,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/KeywordTracker.tsx",
+      "label": "KeywordTracker.tsx",
+      "path": "mission-control/app/app/seo/sections/KeywordTracker.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 81,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/QuickWins.tsx",
+      "label": "QuickWins.tsx",
+      "path": "mission-control/app/app/seo/sections/QuickWins.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 162,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/SchemaPanel.tsx",
+      "label": "SchemaPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/SchemaPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 137,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/SeoTaskQueue.tsx",
+      "label": "SeoTaskQueue.tsx",
+      "path": "mission-control/app/app/seo/sections/SeoTaskQueue.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 210,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/SerpPreview.tsx",
+      "label": "SerpPreview.tsx",
+      "path": "mission-control/app/app/seo/sections/SerpPreview.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 152,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/SerpPreviewPanel.tsx",
+      "label": "SerpPreviewPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/SerpPreviewPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 97,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/SiteSwitcher.tsx",
+      "label": "SiteSwitcher.tsx",
+      "path": "mission-control/app/app/seo/sections/SiteSwitcher.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 122,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/seo/sections/VerifyPanel.tsx",
+      "label": "VerifyPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/VerifyPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 236,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useSeoData.ts",
+      "label": "useSeoData.ts",
+      "path": "mission-control/hooks/useSeoData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 138,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/seo-ai.ts",
+      "label": "seo-ai.ts",
+      "path": "mission-control/lib/seo-ai.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 81,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/seo-llms.ts",
+      "label": "seo-llms.ts",
+      "path": "mission-control/lib/seo-llms.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 207,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/lib/seo-types.ts",
+      "label": "seo-types.ts",
+      "path": "mission-control/lib/seo-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 260,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/lib/websites-db.ts",
+      "label": "websites-db.ts",
+      "path": "mission-control/lib/websites-db.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 164,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/app/seo/sections/AutopilotPanel.tsx",
+      "target": "mission-control/app/app/seo/sections/SerpPreview.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/AutopilotPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/BingStatsPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/BlogBriefGenerator.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/BrokenLinksPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/CompetitorComparison.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/ContentDrafts.tsx",
+      "target": "mission-control/hooks/useSeoData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/DuplicatesPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/FixAllBanner.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/FixQueue.tsx",
+      "target": "mission-control/app/app/seo/sections/VerifyPanel.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/FixQueue.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/FixesMade.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/InternalLinksPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/KeywordTracker.tsx",
+      "target": "mission-control/hooks/useSeoData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/QuickWins.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/SchemaPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/SerpPreviewPanel.tsx",
+      "target": "mission-control/app/app/seo/sections/SerpPreview.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/SerpPreviewPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/SiteSwitcher.tsx",
+      "target": "mission-control/hooks/useSeoData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/seo/sections/VerifyPanel.tsx",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useSeoData.ts",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/lib/seo-llms.ts",
+      "target": "mission-control/lib/seo-types.ts",
+      "type": "imports"
+    }
+  ]
+}

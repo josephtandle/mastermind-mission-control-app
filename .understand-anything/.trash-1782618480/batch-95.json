@@ -1,0 +1,77 @@
+{
+  "nodes": [
+    {
+      "id": "file_0",
+      "type": "file",
+      "label": "fix-backup-script-errors.json",
+      "fullPath": "mission-control/tasks/fix-backup-script-errors.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 7,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "44897b89"
+    },
+    {
+      "id": "file_1",
+      "type": "file",
+      "label": "guard-dog-install-github-token.json",
+      "fullPath": "mission-control/tasks/guard-dog-install-github-token.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 7,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "603a6d80"
+    },
+    {
+      "id": "file_2",
+      "type": "file",
+      "label": "guard-dog-set-up-github.json",
+      "fullPath": "mission-control/tasks/guard-dog-set-up-github.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 7,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "4df1ac55"
+    },
+    {
+      "id": "file_3",
+      "type": "file",
+      "label": "setup-stripe-integration.json",
+      "fullPath": "mission-control/tasks/setup-stripe-integration.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 7,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "6734024"
+    },
+    {
+      "id": "file_4",
+      "type": "file",
+      "label": "teddy-phone-code-feb24.json",
+      "fullPath": "mission-control/tasks/teddy-phone-code-feb24.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 7,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "791ade8b"
+    },
+    {
+      "id": "file_5",
+      "type": "file",
+      "label": "vbs-project-setup.json",
+      "fullPath": "mission-control/tasks/vbs-project-setup.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 7,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "3d519004"
+    }
+  ],
+  "edges": []
+}

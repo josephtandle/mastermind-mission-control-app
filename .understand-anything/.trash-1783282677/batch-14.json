@@ -1,0 +1,59 @@
+{
+  "batchIndex": 14,
+  "fileCount": 3,
+  "nodeCount": 3,
+  "edgeCount": 0,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/doc/spec/agent-runs.md",
+      "type": "file",
+      "name": "agent-runs.md",
+      "filePath": "agents/task-runner/doc/spec/agent-runs.md",
+      "language": "Markdown",
+      "sizeLines": 757,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/spec",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    },
+    {
+      "id": "file:agents/task-runner/doc/spec/agents-runtime.md",
+      "type": "file",
+      "name": "agents-runtime.md",
+      "filePath": "agents/task-runner/doc/spec/agents-runtime.md",
+      "language": "Markdown",
+      "sizeLines": 173,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/spec",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "file:agents/task-runner/doc/spec/ui.md",
+      "type": "file",
+      "name": "ui.md",
+      "filePath": "agents/task-runner/doc/spec/ui.md",
+      "language": "Markdown",
+      "sizeLines": 1002,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/doc/spec",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "high"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

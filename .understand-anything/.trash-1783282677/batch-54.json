@@ -1,0 +1,307 @@
+{
+  "batchIndex": 54,
+  "nodes": [
+    {
+      "id": "batch-54-file-0",
+      "type": "source",
+      "name": "heartbeat-workspace-session.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/heartbeat-workspace-session.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 181,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-1",
+      "type": "source",
+      "name": "hire-hook.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/hire-hook.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 181,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-2",
+      "type": "source",
+      "name": "invite-accept-gateway-defaults.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/invite-accept-gateway-defaults.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 120,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-3",
+      "type": "source",
+      "name": "invite-accept-replay.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/invite-accept-replay.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 93,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-4",
+      "type": "source",
+      "name": "invite-expiry.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/invite-expiry.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 11,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-5",
+      "type": "source",
+      "name": "invite-join-manager.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/invite-join-manager.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 34,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-6",
+      "type": "source",
+      "name": "invite-onboarding-text.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/invite-onboarding-text.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 117,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-7",
+      "type": "source",
+      "name": "issues-checkout-wakeup.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/issues-checkout-wakeup.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 49,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-8",
+      "type": "source",
+      "name": "issues-user-context.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/issues-user-context.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 114,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-9",
+      "type": "source",
+      "name": "openclaw-gateway-adapter.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/openclaw-gateway-adapter.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 6.3,
+      "sizeLines": 626,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-10",
+      "type": "source",
+      "name": "openclaw-invite-prompt-route.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/openclaw-invite-prompt-route.test.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "routing",
+        "testing"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 182,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-11",
+      "type": "source",
+      "name": "opencode-local-adapter-environment.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/opencode-local-adapter-environment.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 97,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-12",
+      "type": "source",
+      "name": "opencode-local-adapter.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/opencode-local-adapter.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 2.3,
+      "sizeLines": 225,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-13",
+      "type": "source",
+      "name": "paperclip-env.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/paperclip-env.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 59,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-14",
+      "type": "source",
+      "name": "private-hostname-guard.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/private-hostname-guard.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 57,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-15",
+      "type": "source",
+      "name": "project-shortname-resolution.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/project-shortname-resolution.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 46,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-16",
+      "type": "source",
+      "name": "redaction.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/redaction.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 67,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-17",
+      "type": "source",
+      "name": "storage-local-provider.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/storage-local-provider.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 79,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-18",
+      "type": "source",
+      "name": "ui-branding.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/ui-branding.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 39,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-54-file-19",
+      "type": "source",
+      "name": "workspace-runtime.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/workspace-runtime.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 3.9,
+      "sizeLines": 387,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

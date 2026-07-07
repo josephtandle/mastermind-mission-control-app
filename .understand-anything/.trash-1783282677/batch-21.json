@@ -1,0 +1,46 @@
+{
+  "batchIndex": 21,
+  "nodes": [
+    {
+      "id": "agents/task-runner/docs/start/architecture.md",
+      "label": "architecture.md",
+      "path": "agents/task-runner/docs/start/architecture.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 99
+    },
+    {
+      "id": "agents/task-runner/docs/start/core-concepts.md",
+      "label": "core-concepts.md",
+      "path": "agents/task-runner/docs/start/core-concepts.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 76
+    },
+    {
+      "id": "agents/task-runner/docs/start/quickstart.md",
+      "label": "quickstart.md",
+      "path": "agents/task-runner/docs/start/quickstart.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 51
+    },
+    {
+      "id": "agents/task-runner/docs/start/what-is-paperclip.md",
+      "label": "what-is-paperclip.md",
+      "path": "agents/task-runner/docs/start/what-is-paperclip.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 40
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "totalNodes": 4,
+    "totalEdges": 0,
+    "filesProcessed": 4,
+    "tsFilesProcessed": 0,
+    "exportsExtracted": 0,
+    "importsExtracted": 0
+  }
+}

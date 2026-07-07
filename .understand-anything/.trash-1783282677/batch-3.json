@@ -1,0 +1,490 @@
+{
+  "batchIndex": 3,
+  "nodes": [
+    {
+      "id": "cli_root_config",
+      "type": "module",
+      "name": "Paperclip CLI Package",
+      "filePath": "agents/task-runner/cli",
+      "summary": "Command-line interface package for orchestrating AI agent teams with Paperclip",
+      "tags": ["cli", "package", "orchestration"],
+      "complexity": "medium"
+    },
+    {
+      "id": "cli_package_json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "agents/task-runner/cli/package.json",
+      "summary": "CLI package configuration for paperclipai with binary entry point and dependencies",
+      "tags": ["configuration", "package-management"],
+      "complexity": "low"
+    },
+    {
+      "id": "cli_changelog",
+      "type": "file",
+      "name": "CHANGELOG.md",
+      "filePath": "agents/task-runner/cli/CHANGELOG.md",
+      "summary": "Release changelog tracking semantic versions from 0.2.3 to 0.3.0 with dependency updates",
+      "tags": ["documentation", "versioning", "changelog"],
+      "complexity": "low"
+    },
+    {
+      "id": "cli_tsconfig",
+      "type": "file",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/cli/tsconfig.json",
+      "summary": "TypeScript configuration for CLI with output directory and source specifications",
+      "tags": ["configuration", "typescript"],
+      "complexity": "low"
+    },
+    {
+      "id": "cli_vitest_config",
+      "type": "file",
+      "name": "vitest.config.ts",
+      "filePath": "agents/task-runner/cli/vitest.config.ts",
+      "summary": "Test configuration for CLI package using Node environment",
+      "tags": ["configuration", "testing"],
+      "complexity": "low"
+    },
+    {
+      "id": "cli_src",
+      "type": "module",
+      "name": "CLI Source Code",
+      "filePath": "agents/task-runner/cli/src",
+      "summary": "TypeScript source code for CLI implementation",
+      "tags": ["source", "cli"],
+      "complexity": "medium"
+    },
+    {
+      "id": "cli_entry_point",
+      "type": "function",
+      "name": "CLI Entry Point",
+      "filePath": "agents/task-runner/cli/src/index.ts",
+      "summary": "Main CLI entry point implemented in TypeScript",
+      "tags": ["entry-point", "cli"],
+      "complexity": "high"
+    },
+    {
+      "id": "cli_tests_dir",
+      "type": "module",
+      "name": "CLI Tests",
+      "filePath": "agents/task-runner/cli/src/__tests__",
+      "summary": "Test suite directory for CLI functionality",
+      "tags": ["tests"],
+      "complexity": "medium"
+    },
+    {
+      "id": "dep_clack_prompts",
+      "type": "function",
+      "name": "Clack Prompts",
+      "filePath": "clack/prompts",
+      "summary": "Prompt library for interactive CLI user input",
+      "tags": ["dependencies", "ui", "cli"],
+      "complexity": "low"
+    },
+    {
+      "id": "dep_commander",
+      "type": "function",
+      "name": "Commander.js",
+      "filePath": "commander",
+      "summary": "CLI framework for building command-line interfaces",
+      "tags": ["dependencies", "cli-framework"],
+      "complexity": "low"
+    },
+    {
+      "id": "dep_embedded_postgres",
+      "type": "function",
+      "name": "Embedded PostgreSQL",
+      "filePath": "embedded-postgres",
+      "summary": "Embedded PostgreSQL database for local CLI deployment",
+      "tags": ["dependencies", "database"],
+      "complexity": "low"
+    },
+    {
+      "id": "dep_picocolors",
+      "type": "function",
+      "name": "Picocolors",
+      "filePath": "picocolors",
+      "summary": "Terminal color library for CLI output formatting",
+      "tags": ["dependencies", "formatting"],
+      "complexity": "low"
+    },
+    {
+      "id": "dep_dotenv",
+      "type": "function",
+      "name": "dotenv",
+      "filePath": "dotenv",
+      "summary": "Environment variable loading from .env files",
+      "tags": ["dependencies", "configuration"],
+      "complexity": "low"
+    },
+    {
+      "id": "dep_drizzle_orm",
+      "type": "function",
+      "name": "Drizzle ORM",
+      "filePath": "drizzle-orm",
+      "summary": "TypeScript ORM for database operations",
+      "tags": ["dependencies", "orm"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_shared",
+      "type": "module",
+      "name": "Shared Package Dependency",
+      "filePath": "@paperclipai/shared",
+      "summary": "Internal shared types and utilities used by CLI",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_utils",
+      "type": "module",
+      "name": "Adapter Utils Dependency",
+      "filePath": "@paperclipai/adapter-utils",
+      "summary": "Internal adapter utilities for agent integration",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_db",
+      "type": "module",
+      "name": "Database Package Dependency",
+      "filePath": "@paperclipai/db",
+      "summary": "Internal database package for CLI data access",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_server",
+      "type": "module",
+      "name": "Server Package Dependency",
+      "filePath": "@paperclipai/server",
+      "summary": "Internal server package for CLI orchestration backend",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_claude",
+      "type": "module",
+      "name": "Claude Adapter Dependency",
+      "filePath": "@paperclipai/adapter-claude-local",
+      "summary": "Internal Claude adapter for CLI agent support",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_codex",
+      "type": "module",
+      "name": "Codex Adapter Dependency",
+      "filePath": "@paperclipai/adapter-codex-local",
+      "summary": "Internal Codex adapter for CLI agent support",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_cursor",
+      "type": "module",
+      "name": "Cursor Adapter Dependency",
+      "filePath": "@paperclipai/adapter-cursor-local",
+      "summary": "Internal Cursor adapter for CLI agent support",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_openclaw",
+      "type": "module",
+      "name": "OpenClaw Adapter Dependency",
+      "filePath": "@paperclipai/adapter-openclaw-gateway",
+      "summary": "Internal OpenClaw gateway adapter for CLI agent support",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_opencode",
+      "type": "module",
+      "name": "OpenCode Adapter Dependency",
+      "filePath": "@paperclipai/adapter-opencode-local",
+      "summary": "Internal OpenCode adapter for CLI agent support",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "internal_adapter_pi",
+      "type": "module",
+      "name": "PI Adapter Dependency",
+      "filePath": "@paperclipai/adapter-pi-local",
+      "summary": "Internal PI adapter for CLI agent support",
+      "tags": ["internal-dependency"],
+      "complexity": "low"
+    },
+    {
+      "id": "build_esbuild",
+      "type": "function",
+      "name": "esbuild Build Tool",
+      "filePath": "agents/task-runner/cli/esbuild.config.mjs",
+      "summary": "Build configuration for bundling CLI with esbuild",
+      "tags": ["build", "bundling"],
+      "complexity": "low"
+    },
+    {
+      "id": "script_dev",
+      "type": "function",
+      "name": "Dev Script",
+      "filePath": "pnpm dev",
+      "summary": "Run CLI in development mode using tsx",
+      "tags": ["scripts"],
+      "complexity": "low"
+    },
+    {
+      "id": "script_build",
+      "type": "function",
+      "name": "Build Script",
+      "filePath": "pnpm build",
+      "summary": "Build and bundle CLI using esbuild",
+      "tags": ["scripts"],
+      "complexity": "low"
+    },
+    {
+      "id": "script_typecheck",
+      "type": "function",
+      "name": "Typecheck Script",
+      "filePath": "pnpm typecheck",
+      "summary": "Validate TypeScript types without emitting",
+      "tags": ["scripts"],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "cli_root_config",
+      "target": "cli_package_json",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "package configuration"
+    },
+    {
+      "source": "cli_root_config",
+      "target": "cli_changelog",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "release history"
+    },
+    {
+      "source": "cli_root_config",
+      "target": "cli_tsconfig",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "TypeScript config"
+    },
+    {
+      "source": "cli_root_config",
+      "target": "cli_vitest_config",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test configuration"
+    },
+    {
+      "source": "cli_root_config",
+      "target": "cli_src",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "source code"
+    },
+    {
+      "source": "cli_root_config",
+      "target": "cli_tests_dir",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test suite"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "cli_entry_point",
+      "type": "implements",
+      "weight": 1.0,
+      "label": "bin entry point"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "dep_clack_prompts",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "dep_commander",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "dep_embedded_postgres",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "dep_picocolors",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "dep_dotenv",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "dep_drizzle_orm",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_shared",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_utils",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_db",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_server",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_claude",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_codex",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_cursor",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_openclaw",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_opencode",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_package_json",
+      "target": "internal_adapter_pi",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "workspace dependency"
+    },
+    {
+      "source": "cli_tsconfig",
+      "target": "cli_src",
+      "type": "implements",
+      "weight": 1.0,
+      "label": "compiles directory"
+    },
+    {
+      "source": "cli_src",
+      "target": "cli_entry_point",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "main entry"
+    },
+    {
+      "source": "cli_src",
+      "target": "dep_commander",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses CLI framework"
+    },
+    {
+      "source": "cli_src",
+      "target": "dep_clack_prompts",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses for prompts"
+    },
+    {
+      "source": "cli_src",
+      "target": "internal_server",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses for orchestration"
+    },
+    {
+      "source": "cli_src",
+      "target": "dep_embedded_postgres",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses for database"
+    },
+    {
+      "source": "script_build",
+      "target": "build_esbuild",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "executes build"
+    },
+    {
+      "source": "script_dev",
+      "target": "cli_entry_point",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "runs CLI"
+    },
+    {
+      "source": "script_typecheck",
+      "target": "cli_src",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "validates types"
+    },
+    {
+      "source": "cli_vitest_config",
+      "target": "cli_tests_dir",
+      "type": "implements",
+      "weight": 1.0,
+      "label": "configures tests"
+    }
+  ]
+}

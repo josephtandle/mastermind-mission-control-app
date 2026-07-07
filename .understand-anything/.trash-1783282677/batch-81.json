@@ -1,0 +1,286 @@
+{
+  "batchIndex": 81,
+  "nodes": [
+    {
+      "id": "batch-81-file-0",
+      "type": "docs",
+      "name": "BACKUP_IMPLEMENTATION_GUIDE.md",
+      "filePath": "mission-control/_archive/BACKUP_IMPLEMENTATION_GUIDE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 7.6,
+      "sizeLines": 756,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-1",
+      "type": "docs",
+      "name": "BACKUP_README.md",
+      "filePath": "mission-control/_archive/BACKUP_README.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4,
+      "sizeLines": 401,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-2",
+      "type": "docs",
+      "name": "BACKUP_RESTORE_ARCHITECTURE.md",
+      "filePath": "mission-control/_archive/BACKUP_RESTORE_ARCHITECTURE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 10,
+      "sizeLines": 1320,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-3",
+      "type": "docs",
+      "name": "BACKUP_SINGLE_PAGE_ARCHITECTURE.md",
+      "filePath": "mission-control/_archive/BACKUP_SINGLE_PAGE_ARCHITECTURE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 9,
+      "sizeLines": 903,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-4",
+      "type": "docs",
+      "name": "BACKUP_SINGLE_PAGE_COMPLETE.md",
+      "filePath": "mission-control/_archive/BACKUP_SINGLE_PAGE_COMPLETE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 5.2,
+      "sizeLines": 521,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-5",
+      "type": "docs",
+      "name": "BACKUP_SINGLE_PAGE_IMPLEMENTATION.md",
+      "filePath": "mission-control/_archive/BACKUP_SINGLE_PAGE_IMPLEMENTATION.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 9.1,
+      "sizeLines": 906,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-6",
+      "type": "docs",
+      "name": "BACKUP_START_HERE.md",
+      "filePath": "mission-control/_archive/BACKUP_START_HERE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.2,
+      "sizeLines": 222,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-7",
+      "type": "docs",
+      "name": "BACKUP_SYSTEM_SUMMARY.md",
+      "filePath": "mission-control/_archive/BACKUP_SYSTEM_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.5,
+      "sizeLines": 449,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-8",
+      "type": "docs",
+      "name": "BACKUP_TESTING_STRATEGY.md",
+      "filePath": "mission-control/_archive/BACKUP_TESTING_STRATEGY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 10,
+      "sizeLines": 1053,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-9",
+      "type": "docs",
+      "name": "BACKUP_WORKFLOW_DIAGRAMS.md",
+      "filePath": "mission-control/_archive/BACKUP_WORKFLOW_DIAGRAMS.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 6.1,
+      "sizeLines": 611,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-10",
+      "type": "docs",
+      "name": "DEPLOYMENT_NOTES.md",
+      "filePath": "mission-control/_archive/DEPLOYMENT_NOTES.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.6,
+      "sizeLines": 255,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-11",
+      "type": "docs",
+      "name": "EMAIL_CLEANUP_MODULE.md",
+      "filePath": "mission-control/_archive/EMAIL_CLEANUP_MODULE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.5,
+      "sizeLines": 351,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-12",
+      "type": "docs",
+      "name": "EMMIE_IMPLEMENTATION_SUMMARY.md",
+      "filePath": "mission-control/_archive/EMMIE_IMPLEMENTATION_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.2,
+      "sizeLines": 323,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-13",
+      "type": "docs",
+      "name": "EMMIE_REAL_DATA_INTEGRATION.md",
+      "filePath": "mission-control/_archive/EMMIE_REAL_DATA_INTEGRATION.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.1,
+      "sizeLines": 214,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-14",
+      "type": "docs",
+      "name": "ENHANCEMENTS_SUMMARY.md",
+      "filePath": "mission-control/_archive/ENHANCEMENTS_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.5,
+      "sizeLines": 446,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-15",
+      "type": "docs",
+      "name": "FILES_MANIFEST.md",
+      "filePath": "mission-control/_archive/FILES_MANIFEST.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3,
+      "sizeLines": 302,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-16",
+      "type": "docs",
+      "name": "FIXES_APPLIED.md",
+      "filePath": "mission-control/_archive/FIXES_APPLIED.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2,
+      "sizeLines": 202,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-17",
+      "type": "docs",
+      "name": "IMPLEMENTATION_SUMMARY.md",
+      "filePath": "mission-control/_archive/IMPLEMENTATION_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.7,
+      "sizeLines": 265,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-18",
+      "type": "docs",
+      "name": "MISSION_CONTROL_MVP_COMPLETE.md",
+      "filePath": "mission-control/_archive/MISSION_CONTROL_MVP_COMPLETE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.5,
+      "sizeLines": 446,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-81-file-19",
+      "type": "docs",
+      "name": "MODULE_CHECKLIST.md",
+      "filePath": "mission-control/_archive/MODULE_CHECKLIST.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.1,
+      "sizeLines": 211,
+      "language": "Markdown"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,6122 @@
+{
+  "projectName": "Mission Control - Mastermind System",
+  "projectDescription": "Mission Control is Joe's live operational system for MyOS, a self-hosted personal AI OS. It runs as a Next.js dashboard serving as a command center for managing business, research, and productivity workflows, orchestrating agents, tools, and automations. This is the Golden Claw testing build with sanitized personal data and real API keys.",
+  "languages": [
+    "TypeScript",
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "YAML",
+    "JSON",
+    "SQL",
+    "Markdown"
+  ],
+  "frameworks": [
+    "Next.js 15.1.0",
+    "React 19.0.0 RC",
+    "Tailwind CSS 3.4.0",
+    "TypeScript 5.3.0",
+    "Stripe API",
+    "Supabase",
+    "Playwright",
+    "Recharts",
+    "pnpm workspaces",
+    "Vitest"
+  ],
+  "keyDependencies": {
+    "core": [
+      "next@^15.1.0",
+      "react@^19.0.0-rc.1",
+      "react-dom@^19.0.0-rc.1",
+      "typescript@^5.3.0"
+    ],
+    "styling": [
+      "tailwindcss@^3.4.0",
+      "postcss@^8.4.0",
+      "autoprefixer@^10.4.0",
+      "next-themes@^0.4.6"
+    ],
+    "ui": [
+      "lucide-react@^0.408.0",
+      "recharts@^3.7.0",
+      "react-markdown@^9.0.1",
+      "remark-gfm@^4.0.0"
+    ],
+    "backend": [
+      "stripe@^20.4.0",
+      "@supabase/supabase-js@^2.100.1",
+      "better-sqlite3@^12.8.0",
+      "playwright@^1.58.2"
+    ],
+    "utilities": [
+      "dotenv@^17.3.1",
+      "cron-parser@^5.5.0",
+      "node-html-parser@^7.1.0"
+    ]
+  },
+  "directoryStructure": {
+    "mission-control": "Main Next.js application (port 3000/3001) - primary UI and API layer",
+    "mission-control/app": "Next.js app directory with pages, API routes, and layouts",
+    "mission-control/lib": "Shared utilities, database helpers, configuration",
+    "mission-control/components": "Reusable React components",
+    "mission-control/public": "Static assets, icons, images",
+    "agents": "Background agents and automation systems",
+    "agents/task-runner": "Monorepo with pnpm workspaces for task execution and scheduling",
+    "docker": "Docker configuration and deployment files",
+    "lib": "Shared library code, database utilities"
+  },
+  "files": [
+    {
+      "path": "agents/task-runner/.claude/skills/design-guide/references/component-index.md",
+      "language": "Markdown",
+      "sizeLines": 324,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/.claude/skills/design-guide/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 352,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/.github/workflows/e2e.yml",
+      "language": "YAML",
+      "sizeLines": 45,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/.github/workflows/pr-policy.yml",
+      "language": "YAML",
+      "sizeLines": 50,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/.github/workflows/pr-verify.yml",
+      "language": "YAML",
+      "sizeLines": 43,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/.github/workflows/refresh-lockfile.yml",
+      "language": "YAML",
+      "sizeLines": 82,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/.github/workflows/release.yml",
+      "language": "YAML",
+      "sizeLines": 133,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/AGENTS.md",
+      "language": "Markdown",
+      "sizeLines": 143,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/cli/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/cli/package.json",
+      "language": "JSON",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/agent-jwt-env.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 62,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/allowed-hostname.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 78,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/common.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 99,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/company-delete.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 88,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/context.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 71,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/data-dir.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 80,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/doctor.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/home-paths.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/http.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 62,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/__tests__/worktree.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 352,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 5,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/adapters/http/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/adapters/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 5,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/adapters/process/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/adapters/registry.ts",
+      "language": "TypeScript",
+      "sizeLines": 57,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/agent-jwt-secret-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 41,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/config-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 34,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/database-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/deployment-auth-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/llm-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 83,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/log-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/path-resolver.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/port-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/secrets-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 147,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/checks/storage-check.ts",
+      "language": "TypeScript",
+      "sizeLines": 52,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/client/context.ts",
+      "language": "TypeScript",
+      "sizeLines": 176,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/client/http.ts",
+      "language": "TypeScript",
+      "sizeLines": 151,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/allowed-hostname.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/auth-bootstrap-ceo.ts",
+      "language": "TypeScript",
+      "sizeLines": 134,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/activity.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/agent.ts",
+      "language": "TypeScript",
+      "sizeLines": 278,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/approval.ts",
+      "language": "TypeScript",
+      "sizeLines": 260,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/common.ts",
+      "language": "TypeScript",
+      "sizeLines": 188,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/company.ts",
+      "language": "TypeScript",
+      "sizeLines": 473,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/context.ts",
+      "language": "TypeScript",
+      "sizeLines": 126,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/client/issue.ts",
+      "language": "TypeScript",
+      "sizeLines": 314,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/configure.ts",
+      "language": "TypeScript",
+      "sizeLines": 198,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/db-backup.ts",
+      "language": "TypeScript",
+      "sizeLines": 103,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/doctor.ts",
+      "language": "TypeScript",
+      "sizeLines": 204,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/env.ts",
+      "language": "TypeScript",
+      "sizeLines": 412,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "language": "TypeScript",
+      "sizeLines": 345,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/onboard.ts",
+      "language": "TypeScript",
+      "sizeLines": 492,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/run.ts",
+      "language": "TypeScript",
+      "sizeLines": 191,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "language": "TypeScript",
+      "sizeLines": 219,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/commands/worktree.ts",
+      "language": "TypeScript",
+      "sizeLines": 846,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/data-dir.ts",
+      "language": "TypeScript",
+      "sizeLines": 49,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/env.ts",
+      "language": "TypeScript",
+      "sizeLines": 119,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/home.ts",
+      "language": "TypeScript",
+      "sizeLines": 77,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/hostnames.ts",
+      "language": "TypeScript",
+      "sizeLines": 27,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/schema.ts",
+      "language": "TypeScript",
+      "sizeLines": 29,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/secrets-key.ts",
+      "language": "TypeScript",
+      "sizeLines": 49,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/config/store.ts",
+      "language": "TypeScript",
+      "sizeLines": 121,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 156,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/prompts/database.ts",
+      "language": "TypeScript",
+      "sizeLines": 158,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/prompts/llm.ts",
+      "language": "TypeScript",
+      "sizeLines": 44,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/prompts/logging.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/prompts/server.ts",
+      "language": "TypeScript",
+      "sizeLines": 166,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/prompts/storage.ts",
+      "language": "TypeScript",
+      "sizeLines": 147,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/utils/banner.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/utils/net.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/src/utils/path-resolver.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/cli/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/cli/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/CONTRIBUTING.md",
+      "language": "Markdown",
+      "sizeLines": 42,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/CLI.md",
+      "language": "Markdown",
+      "sizeLines": 196,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/CLIPHUB.md",
+      "language": "Markdown",
+      "sizeLines": 337,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/DATABASE.md",
+      "language": "Markdown",
+      "sizeLines": 169,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/DEPLOYMENT-MODES.md",
+      "language": "Markdown",
+      "sizeLines": 121,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/DEVELOPING.md",
+      "language": "Markdown",
+      "sizeLines": 368,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/DOCKER.md",
+      "language": "Markdown",
+      "sizeLines": 129,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/experimental/issue-worktree-support.md",
+      "language": "Markdown",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/GOAL.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/OPENCLAW_ONBOARDING.md",
+      "language": "Markdown",
+      "sizeLines": 95,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plan/humans-and-permissions-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 644,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plan/humans-and-permissions.md",
+      "language": "Markdown",
+      "sizeLines": 422,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/agent-authentication-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 73,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/agent-authentication.md",
+      "language": "Markdown",
+      "sizeLines": 223,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/agent-mgmt-followup-plan.md",
+      "language": "Markdown",
+      "sizeLines": 250,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/ceo-agent-creation-and-hiring.md",
+      "language": "Markdown",
+      "sizeLines": 390,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/cursor-cloud-adapter.md",
+      "language": "Markdown",
+      "sizeLines": 477,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/deployment-auth-mode-consolidation.md",
+      "language": "Markdown",
+      "sizeLines": 227,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/issue-run-orchestration-plan.md",
+      "language": "Markdown",
+      "sizeLines": 142,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/module-system.md",
+      "language": "Markdown",
+      "sizeLines": 686,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/storage-system-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 207,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plans/workspace-strategy-and-git-worktrees.md",
+      "language": "Markdown",
+      "sizeLines": 1336,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plugins/ideas-from-opencode.md",
+      "language": "Markdown",
+      "sizeLines": 1739,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/plugins/PLUGIN_SPEC.md",
+      "language": "Markdown",
+      "sizeLines": 1618,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/PRODUCT.md",
+      "language": "Markdown",
+      "sizeLines": 97,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/PUBLISHING.md",
+      "language": "Markdown",
+      "sizeLines": 122,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/README-draft.md",
+      "language": "Markdown",
+      "sizeLines": 79,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/RELEASING.md",
+      "language": "Markdown",
+      "sizeLines": 423,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/SPEC-implementation.md",
+      "language": "Markdown",
+      "sizeLines": 830,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/SPEC.md",
+      "language": "Markdown",
+      "sizeLines": 526,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/spec/agent-runs.md",
+      "language": "Markdown",
+      "sizeLines": 757,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/spec/agents-runtime.md",
+      "language": "Markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/spec/ui.md",
+      "language": "Markdown",
+      "sizeLines": 1002,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/TASKS-mcp.md",
+      "language": "Markdown",
+      "sizeLines": 568,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/doc/TASKS.md",
+      "language": "Markdown",
+      "sizeLines": 408,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docker-compose.quickstart.yml",
+      "language": "YAML",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/docker-compose.yml",
+      "language": "YAML",
+      "sizeLines": 39,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/docs/adapters/claude-local.md",
+      "language": "Markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/adapters/codex-local.md",
+      "language": "Markdown",
+      "sizeLines": 49,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/adapters/creating-an-adapter.md",
+      "language": "Markdown",
+      "sizeLines": 108,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/adapters/http.md",
+      "language": "Markdown",
+      "sizeLines": 52,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/adapters/overview.md",
+      "language": "Markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/adapters/process.md",
+      "language": "Markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/agents-runtime.md",
+      "language": "Markdown",
+      "sizeLines": 176,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/activity.md",
+      "language": "Markdown",
+      "sizeLines": 47,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/agents.md",
+      "language": "Markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/approvals.md",
+      "language": "Markdown",
+      "sizeLines": 105,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/authentication.md",
+      "language": "Markdown",
+      "sizeLines": 57,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/companies.md",
+      "language": "Markdown",
+      "sizeLines": 64,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/costs.md",
+      "language": "Markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/dashboard.md",
+      "language": "Markdown",
+      "sizeLines": 29,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/goals-and-projects.md",
+      "language": "Markdown",
+      "sizeLines": 122,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/issues.md",
+      "language": "Markdown",
+      "sizeLines": 142,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/overview.md",
+      "language": "Markdown",
+      "sizeLines": 63,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/api/secrets.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/cli/control-plane-commands.md",
+      "language": "Markdown",
+      "sizeLines": 110,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/cli/overview.md",
+      "language": "Markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/cli/setup-commands.md",
+      "language": "Markdown",
+      "sizeLines": 118,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/database.md",
+      "language": "Markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/deployment-modes.md",
+      "language": "Markdown",
+      "sizeLines": 86,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/docker.md",
+      "language": "Markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/environment-variables.md",
+      "language": "Markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/local-development.md",
+      "language": "Markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/overview.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/secrets.md",
+      "language": "Markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/storage.md",
+      "language": "Markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/deploy/tailscale-private-access.md",
+      "language": "Markdown",
+      "sizeLines": 78,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/docs.json",
+      "language": "JSON",
+      "sizeLines": 143,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/comments-and-communication.md",
+      "language": "Markdown",
+      "sizeLines": 58,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/cost-reporting.md",
+      "language": "Markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/handling-approvals.md",
+      "language": "Markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/heartbeat-protocol.md",
+      "language": "Markdown",
+      "sizeLines": 108,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/how-agents-work.md",
+      "language": "Markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/task-workflow.md",
+      "language": "Markdown",
+      "sizeLines": 105,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/agent-developer/writing-a-skill.md",
+      "language": "Markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/activity-log.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/approvals.md",
+      "language": "Markdown",
+      "sizeLines": 53,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/costs-and-budgets.md",
+      "language": "Markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/creating-a-company.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/dashboard.md",
+      "language": "Markdown",
+      "sizeLines": 37,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/managing-agents.md",
+      "language": "Markdown",
+      "sizeLines": 77,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/managing-tasks.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/board-operator/org-structure.md",
+      "language": "Markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/guides/openclaw-docker-setup.md",
+      "language": "Markdown",
+      "sizeLines": 350,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/specs/agent-config-ui.md",
+      "language": "Markdown",
+      "sizeLines": 287,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/specs/cliphub-plan.md",
+      "language": "Markdown",
+      "sizeLines": 525,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/start/architecture.md",
+      "language": "Markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/start/core-concepts.md",
+      "language": "Markdown",
+      "sizeLines": 76,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/start/quickstart.md",
+      "language": "Markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/docs/start/what-is-paperclip.md",
+      "language": "Markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/package.json",
+      "language": "JSON",
+      "sizeLines": 49,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapter-utils/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 50,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapter-utils/package.json",
+      "language": "JSON",
+      "sizeLines": 37,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 372,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "language": "TypeScript",
+      "sizeLines": 243,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapter-utils/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/package.json",
+      "language": "JSON",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/cli/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/cli/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 557,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/server/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "sizeLines": 180,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/server/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 224,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 101,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 139,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/claude-local/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/package.json",
+      "language": "JSON",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/cli/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 230,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/cli/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 47,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 543,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 55,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "sizeLines": 74,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 299,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 107,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 253,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/codex-local/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/package.json",
+      "language": "JSON",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/cli/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 318,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/cli/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 84,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 486,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 65,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "sizeLines": 163,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/server/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 211,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/shared/stream.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/shared/trust.ts",
+      "language": "TypeScript",
+      "sizeLines": 10,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 82,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 401,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/cursor-local/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/doc/ONBOARDING_AND_TEST_PLAN.md",
+      "language": "Markdown",
+      "sizeLines": 110,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/package.json",
+      "language": "JSON",
+      "sizeLines": 53,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/README.md",
+      "language": "Markdown",
+      "sizeLines": 73,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/cli/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/cli/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 55,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/server/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 1434,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/server/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/server/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 318,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/shared/stream.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/ui/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 76,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/openclaw-gateway/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 19,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/package.json",
+      "language": "JSON",
+      "sizeLines": 52,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/cli/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 122,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/cli/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 41,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 371,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/models.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 34,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "language": "TypeScript",
+      "sizeLines": 196,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 51,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 320,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 76,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 152,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/opencode-local/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 13,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/package.json",
+      "language": "JSON",
+      "sizeLines": 51,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/cli/format-event.ts",
+      "language": "TypeScript",
+      "sizeLines": 108,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/cli/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 2,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 41,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 479,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 61,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/models.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 34,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/models.ts",
+      "language": "TypeScript",
+      "sizeLines": 209,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/parse.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 223,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "sizeLines": 212,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/server/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 277,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 3,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 148,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/db/drizzle.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 11,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/package.json",
+      "language": "JSON",
+      "sizeLines": 48,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/backup-lib.ts",
+      "language": "TypeScript",
+      "sizeLines": 559,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/backup.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/client.ts",
+      "language": "TypeScript",
+      "sizeLines": 741,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrate.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migration-runtime.ts",
+      "language": "TypeScript",
+      "sizeLines": 135,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migration-status.ts",
+      "language": "TypeScript",
+      "sizeLines": 46,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "language": "SQL",
+      "sizeLines": 208,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0001_fast_northstar.sql",
+      "language": "SQL",
+      "sizeLines": 87,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0002_big_zaladane.sql",
+      "language": "SQL",
+      "sizeLines": 1,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0003_shallow_quentin_quire.sql",
+      "language": "SQL",
+      "sizeLines": 5,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0004_issue_identifiers.sql",
+      "language": "SQL",
+      "sizeLines": 29,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0005_chief_luke_cage.sql",
+      "language": "SQL",
+      "sizeLines": 20,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0006_overjoyed_mister_sinister.sql",
+      "language": "SQL",
+      "sizeLines": 36,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0007_new_quentin_quire.sql",
+      "language": "SQL",
+      "sizeLines": 20,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0008_amused_zzzax.sql",
+      "language": "SQL",
+      "sizeLines": 1,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0009_fast_jackal.sql",
+      "language": "SQL",
+      "sizeLines": 36,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0010_stale_justin_hammer.sql",
+      "language": "SQL",
+      "sizeLines": 37,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0011_windy_corsair.sql",
+      "language": "SQL",
+      "sizeLines": 18,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0012_perpetual_ser_duncan.sql",
+      "language": "SQL",
+      "sizeLines": 2,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0013_dashing_wasp.sql",
+      "language": "SQL",
+      "sizeLines": 4,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "language": "SQL",
+      "sizeLines": 135,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0015_project_color_archived.sql",
+      "language": "SQL",
+      "sizeLines": 3,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0016_agent_icon.sql",
+      "language": "SQL",
+      "sizeLines": 2,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0017_tiresome_gabe_jones.sql",
+      "language": "SQL",
+      "sizeLines": 52,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0018_flat_sleepwalker.sql",
+      "language": "SQL",
+      "sizeLines": 26,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0019_public_victor_mancha.sql",
+      "language": "SQL",
+      "sizeLines": 18,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0020_white_anita_blake.sql",
+      "language": "SQL",
+      "sizeLines": 1,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0021_chief_vindicator.sql",
+      "language": "SQL",
+      "sizeLines": 1,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0022_company_brand_color.sql",
+      "language": "SQL",
+      "sizeLines": 2,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0023_fair_lethal_legion.sql",
+      "language": "SQL",
+      "sizeLines": 4,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0024_far_beast.sql",
+      "language": "SQL",
+      "sizeLines": 2,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0025_nasty_salo.sql",
+      "language": "SQL",
+      "sizeLines": 15,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0026_lying_pete_wisdom.sql",
+      "language": "SQL",
+      "sizeLines": 39,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/0027_tranquil_tenebrous.sql",
+      "language": "SQL",
+      "sizeLines": 2,
+      "fileCategory": "database"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/_journal.json",
+      "language": "JSON",
+      "sizeLines": 202,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0000_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 1743,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0001_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 2441,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0002_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 2454,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0003_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 2502,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0005_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 2719,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0006_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 3048,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0007_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 3258,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0008_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 3264,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0009_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 3587,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0010_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 3929,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0011_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 4068,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0012_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 4087,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0013_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 4118,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0014_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5187,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0017_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5215,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0018_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5450,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0019_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5603,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0020_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5603,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0021_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5609,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0023_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5633,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0024_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5693,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0025_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 5849,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0026_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 6193,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/migrations/meta/0027_snapshot.json",
+      "language": "JSON",
+      "sizeLines": 6205,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 108,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/runtime-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 268,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/activity_log.ts",
+      "language": "TypeScript",
+      "sizeLines": 27,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/agent_api_keys.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/agent_config_revisions.ts",
+      "language": "TypeScript",
+      "sizeLines": 29,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/agent_runtime_state.ts",
+      "language": "TypeScript",
+      "sizeLines": 29,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/agent_task_sessions.ts",
+      "language": "TypeScript",
+      "sizeLines": 40,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/agent_wakeup_requests.ts",
+      "language": "TypeScript",
+      "sizeLines": 41,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/agents.ts",
+      "language": "TypeScript",
+      "sizeLines": 41,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/approval_comments.ts",
+      "language": "TypeScript",
+      "sizeLines": 27,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/approvals.ts",
+      "language": "TypeScript",
+      "sizeLines": 29,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/assets.ts",
+      "language": "TypeScript",
+      "sizeLines": 27,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/auth.ts",
+      "language": "TypeScript",
+      "sizeLines": 48,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/companies.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/company_memberships.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/company_secret_versions.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/company_secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/cost_events.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/goals.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/heartbeat_run_events.ts",
+      "language": "TypeScript",
+      "sizeLines": 29,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/heartbeat_runs.ts",
+      "language": "TypeScript",
+      "sizeLines": 46,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/instance_user_roles.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/invites.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/issue_approvals.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/issue_attachments.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/issue_comments.ts",
+      "language": "TypeScript",
+      "sizeLines": 34,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/issue_labels.ts",
+      "language": "TypeScript",
+      "sizeLines": 21,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/issue_read_states.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/issues.ts",
+      "language": "TypeScript",
+      "sizeLines": 68,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/join_requests.ts",
+      "language": "TypeScript",
+      "sizeLines": 42,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/labels.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/principal_permission_grants.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/project_goals.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/project_workspaces.ts",
+      "language": "TypeScript",
+      "sizeLines": 33,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/projects.ts",
+      "language": "TypeScript",
+      "sizeLines": 27,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/schema/workspace_runtime_services.ts",
+      "language": "TypeScript",
+      "sizeLines": 65,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/src/seed.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/db/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/db/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/package.json",
+      "language": "JSON",
+      "sizeLines": 39,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/agent-url-key.ts",
+      "language": "TypeScript",
+      "sizeLines": 23,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/api.ts",
+      "language": "TypeScript",
+      "sizeLines": 21,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/config-schema.ts",
+      "language": "TypeScript",
+      "sizeLines": 179,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/constants.ts",
+      "language": "TypeScript",
+      "sizeLines": 248,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 281,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/project-mentions.ts",
+      "language": "TypeScript",
+      "sizeLines": 79,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/project-url-key.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/access.ts",
+      "language": "TypeScript",
+      "sizeLines": 82,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/activity.ts",
+      "language": "TypeScript",
+      "sizeLines": 14,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/agent.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/approval.ts",
+      "language": "TypeScript",
+      "sizeLines": 28,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/asset.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/company-portability.ts",
+      "language": "TypeScript",
+      "sizeLines": 139,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/company.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/cost.ts",
+      "language": "TypeScript",
+      "sizeLines": 37,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/dashboard.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/goal.ts",
+      "language": "TypeScript",
+      "sizeLines": 15,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/heartbeat.ts",
+      "language": "TypeScript",
+      "sizeLines": 108,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 81,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/live.ts",
+      "language": "TypeScript",
+      "sizeLines": 10,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/project.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 44,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/sidebar-badges.ts",
+      "language": "TypeScript",
+      "sizeLines": 7,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/types/workspace-runtime.ts",
+      "language": "TypeScript",
+      "sizeLines": 59,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/access.ts",
+      "language": "TypeScript",
+      "sizeLines": 71,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/agent.ts",
+      "language": "TypeScript",
+      "sizeLines": 102,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/approval.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/asset.ts",
+      "language": "TypeScript",
+      "sizeLines": 15,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/company-portability.ts",
+      "language": "TypeScript",
+      "sizeLines": 113,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/company.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/cost.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/goal.ts",
+      "language": "TypeScript",
+      "sizeLines": 18,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 140,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/issue.ts",
+      "language": "TypeScript",
+      "sizeLines": 90,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/project.ts",
+      "language": "TypeScript",
+      "sizeLines": 86,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/src/validators/secret.ts",
+      "language": "TypeScript",
+      "sizeLines": 48,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/packages/shared/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/pnpm-lock.yaml",
+      "language": "YAML",
+      "sizeLines": 11892,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/pnpm-workspace.yaml",
+      "language": "YAML",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/README.md",
+      "language": "Markdown",
+      "sizeLines": 282,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/releases/v0.2.7.md",
+      "language": "Markdown",
+      "sizeLines": 16,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/releases/v0.3.0.md",
+      "language": "Markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 126,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/CHANGELOG.md",
+      "language": "Markdown",
+      "sizeLines": 113,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/server/package.json",
+      "language": "JSON",
+      "sizeLines": 75,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/adapter-models.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 105,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/adapter-session-codecs.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 149,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/agent-auth-jwt.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 80,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/agent-shortname-collision.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 70,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/approval-routes-idempotency.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 111,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/approvals-service.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 108,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/attachment-types.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 98,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/board-mutation-guard.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 69,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/claude-local-adapter-environment.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/claude-local-adapter.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/codex-local-adapter-environment.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 76,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/codex-local-adapter.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 403,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/companies-route-path-guard.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 50,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/cursor-local-adapter-environment.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 120,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/cursor-local-adapter.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 405,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/cursor-local-execute.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 183,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/cursor-local-skill-injection.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 104,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/error-handler.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/execution-workspace-policy.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 144,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/health.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 16,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/heartbeat-workspace-session.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 181,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/hire-hook.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 181,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/invite-accept-gateway-defaults.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 120,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/invite-accept-replay.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 93,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/invite-expiry.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 11,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/invite-join-manager.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 34,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/invite-onboarding-text.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 117,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/issues-checkout-wakeup.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 49,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/issues-user-context.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 114,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/openclaw-gateway-adapter.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 626,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/openclaw-invite-prompt-route.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 182,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/opencode-local-adapter-environment.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 97,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/opencode-local-adapter.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 225,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/paperclip-env.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 59,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/private-hostname-guard.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 57,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/project-shortname-resolution.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 46,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/redaction.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 67,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/storage-local-provider.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 79,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/ui-branding.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 39,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/__tests__/workspace-runtime.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 387,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "language": "TypeScript",
+      "sizeLines": 105,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "language": "TypeScript",
+      "sizeLines": 171,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/http/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 43,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/http/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/http/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 117,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 18,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/process/execute.ts",
+      "language": "TypeScript",
+      "sizeLines": 78,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/process/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/process/test.ts",
+      "language": "TypeScript",
+      "sizeLines": 90,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/registry.ts",
+      "language": "TypeScript",
+      "sizeLines": 153,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/types.ts",
+      "language": "TypeScript",
+      "sizeLines": 20,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/adapters/utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 48,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "language": "TypeScript",
+      "sizeLines": 142,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/app.ts",
+      "language": "TypeScript",
+      "sizeLines": 184,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/attachment-types.ts",
+      "language": "TypeScript",
+      "sizeLines": 69,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "language": "TypeScript",
+      "sizeLines": 148,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "language": "TypeScript",
+      "sizeLines": 150,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/config-file.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/config.ts",
+      "language": "TypeScript",
+      "sizeLines": 248,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/errors.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "language": "TypeScript",
+      "sizeLines": 67,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 694,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/auth.ts",
+      "language": "TypeScript",
+      "sizeLines": 157,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "language": "TypeScript",
+      "sizeLines": 68,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/error-handler.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 4,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/logger.ts",
+      "language": "TypeScript",
+      "sizeLines": 91,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/private-hostname-guard.ts",
+      "language": "TypeScript",
+      "sizeLines": 93,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/middleware/validate.ts",
+      "language": "TypeScript",
+      "sizeLines": 10,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/paths.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/realtime/live-events-ws.ts",
+      "language": "TypeScript",
+      "sizeLines": 274,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/redaction.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/access.ts",
+      "language": "TypeScript",
+      "sizeLines": 2605,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/activity.ts",
+      "language": "TypeScript",
+      "sizeLines": 97,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/agents.ts",
+      "language": "TypeScript",
+      "sizeLines": 1501,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/approvals.ts",
+      "language": "TypeScript",
+      "sizeLines": 346,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/assets.ts",
+      "language": "TypeScript",
+      "sizeLines": 146,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/authz.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/companies.ts",
+      "language": "TypeScript",
+      "sizeLines": 183,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/costs.ts",
+      "language": "TypeScript",
+      "sizeLines": 133,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/dashboard.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/goals.ts",
+      "language": "TypeScript",
+      "sizeLines": 107,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/health.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 15,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/issues-checkout-wakeup.ts",
+      "language": "TypeScript",
+      "sizeLines": 15,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/issues.ts",
+      "language": "TypeScript",
+      "sizeLines": 1183,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/llms.ts",
+      "language": "TypeScript",
+      "sizeLines": 86,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/projects.ts",
+      "language": "TypeScript",
+      "sizeLines": 291,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 166,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/routes/sidebar-badges.ts",
+      "language": "TypeScript",
+      "sizeLines": 52,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/secrets/external-stub-providers.ts",
+      "language": "TypeScript",
+      "sizeLines": 33,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/secrets/local-encrypted-provider.ts",
+      "language": "TypeScript",
+      "sizeLines": 136,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/secrets/types.ts",
+      "language": "TypeScript",
+      "sizeLines": 23,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/access.ts",
+      "language": "TypeScript",
+      "sizeLines": 269,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/activity-log.ts",
+      "language": "TypeScript",
+      "sizeLines": 47,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/activity.ts",
+      "language": "TypeScript",
+      "sizeLines": 164,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/agent-permissions.ts",
+      "language": "TypeScript",
+      "sizeLines": 28,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/agents.ts",
+      "language": "TypeScript",
+      "sizeLines": 634,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/approvals.ts",
+      "language": "TypeScript",
+      "sizeLines": 241,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/assets.ts",
+      "language": "TypeScript",
+      "sizeLines": 23,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/companies.ts",
+      "language": "TypeScript",
+      "sizeLines": 156,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/company-portability.ts",
+      "language": "TypeScript",
+      "sizeLines": 999,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/costs.ts",
+      "language": "TypeScript",
+      "sizeLines": 205,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/dashboard.ts",
+      "language": "TypeScript",
+      "sizeLines": 101,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/execution-workspace-policy.ts",
+      "language": "TypeScript",
+      "sizeLines": 144,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/goals.ts",
+      "language": "TypeScript",
+      "sizeLines": 39,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/heartbeat.ts",
+      "language": "TypeScript",
+      "sizeLines": 2784,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/hire-hook.ts",
+      "language": "TypeScript",
+      "sizeLines": 114,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/issue-approvals.ts",
+      "language": "TypeScript",
+      "sizeLines": 175,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/issues.ts",
+      "language": "TypeScript",
+      "sizeLines": 1416,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/live-events.ts",
+      "language": "TypeScript",
+      "sizeLines": 41,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/projects.ts",
+      "language": "TypeScript",
+      "sizeLines": 755,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/run-log-store.ts",
+      "language": "TypeScript",
+      "sizeLines": 157,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 369,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/sidebar-badges.ts",
+      "language": "TypeScript",
+      "sizeLines": 56,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/services/workspace-runtime.ts",
+      "language": "TypeScript",
+      "sizeLines": 1077,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/startup-banner.ts",
+      "language": "TypeScript",
+      "sizeLines": 176,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/storage/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/storage/local-disk-provider.ts",
+      "language": "TypeScript",
+      "sizeLines": 90,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/storage/provider-registry.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/storage/s3-provider.ts",
+      "language": "TypeScript",
+      "sizeLines": 154,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/storage/service.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/storage/types.ts",
+      "language": "TypeScript",
+      "sizeLines": 63,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/types/express.d.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/src/ui-branding.ts",
+      "language": "TypeScript",
+      "sizeLines": 42,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/server/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/server/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/skills/create-agent-adapter/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 719,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/paperclip-create-agent/references/api-reference.md",
+      "language": "Markdown",
+      "sizeLines": 96,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/paperclip-create-agent/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 140,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/paperclip/references/api-reference.md",
+      "language": "Markdown",
+      "sizeLines": 562,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/paperclip/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 296,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/para-memory-files/references/schemas.md",
+      "language": "Markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/para-memory-files/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 105,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/pr-report/references/style-guide.md",
+      "language": "Markdown",
+      "sizeLines": 150,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/pr-report/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 203,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/release-changelog/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 179,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/skills/release/SKILL.md",
+      "language": "Markdown",
+      "sizeLines": 262,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "agents/task-runner/tests/e2e/onboarding.spec.ts",
+      "language": "TypeScript",
+      "sizeLines": 173,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/tests/e2e/playwright.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/tsconfig.base.json",
+      "language": "JSON",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/ui/components.json",
+      "language": "JSON",
+      "sizeLines": 22,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/ui/package.json",
+      "language": "JSON",
+      "sizeLines": 53,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/ui/public/sw.js",
+      "language": "JavaScript",
+      "sizeLines": 43,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/claude-local/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 136,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/claude-local/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/codex-local/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 102,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/codex-local/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/cursor/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 48,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/cursor/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/http/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 10,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/http/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 39,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/http/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/http/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 6,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 9,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/local-workspace-runtime-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 6,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/openclaw-gateway/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 238,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/openclaw-gateway/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/opencode-local/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 48,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/opencode-local/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/pi-local/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 48,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/pi-local/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/process/build-config.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/process/config-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 78,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/process/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 13,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/process/parse-stdout.ts",
+      "language": "TypeScript",
+      "sizeLines": 6,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/registry.ts",
+      "language": "TypeScript",
+      "sizeLines": 27,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/runtime-json-fields.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 123,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/transcript.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/adapters/types.ts",
+      "language": "TypeScript",
+      "sizeLines": 32,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/access.ts",
+      "language": "TypeScript",
+      "sizeLines": 131,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/activity.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/agents.ts",
+      "language": "TypeScript",
+      "sizeLines": 148,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/approvals.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/assets.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/auth.ts",
+      "language": "TypeScript",
+      "sizeLines": 75,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/client.ts",
+      "language": "TypeScript",
+      "sizeLines": 48,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/companies.ts",
+      "language": "TypeScript",
+      "sizeLines": 37,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/costs.ts",
+      "language": "TypeScript",
+      "sizeLines": 28,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/dashboard.ts",
+      "language": "TypeScript",
+      "sizeLines": 7,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/goals.ts",
+      "language": "TypeScript",
+      "sizeLines": 12,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/health.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/heartbeats.ts",
+      "language": "TypeScript",
+      "sizeLines": 49,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/index.ts",
+      "language": "TypeScript",
+      "sizeLines": 16,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/issues.ts",
+      "language": "TypeScript",
+      "sizeLines": 77,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/projects.ts",
+      "language": "TypeScript",
+      "sizeLines": 34,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/api/sidebarBadges.ts",
+      "language": "TypeScript",
+      "sizeLines": 7,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/App.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 259,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ActiveAgentsPanel.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 510,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ActivityCharts.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 264,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ActivityRow.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 144,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/agent-config-defaults.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/agent-config-primitives.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 473,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/AgentConfigForm.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 1390,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/AgentIconPicker.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 172,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/AgentProperties.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 106,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ApprovalCard.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 104,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ApprovalPayload.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 76,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/AsciiArtAnimation.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 349,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/BreadcrumbBar.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 74,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/CommandPalette.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 236,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/CommentThread.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 447,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/CompanyPatternIcon.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 193,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/CompanyRail.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 318,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/CompanySwitcher.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 82,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/CopyText.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 57,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/EmptyState.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 28,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/EntityRow.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 70,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/FilterBar.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 40,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/GoalProperties.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 165,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/GoalTree.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 118,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/Identity.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 40,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/InlineEditor.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 150,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/InlineEntitySelector.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 207,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/IssueProperties.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 610,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/IssuesList.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 757,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/KanbanBoard.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 275,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/Layout.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 357,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/LiveRunWidget.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 626,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/MarkdownBody.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 162,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/MarkdownEditor.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 626,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/MetricCard.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 54,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/MobileBottomNav.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 124,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/NewAgentDialog.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 216,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/NewGoalDialog.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 283,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/NewIssueDialog.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 1054,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/NewProjectDialog.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 478,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/OnboardingWizard.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 1222,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/OpenCodeLogoIcon.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 23,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/PageSkeleton.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 181,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/PageTabBar.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 46,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/PathInstructionsModal.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 144,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/PriorityIcon.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 78,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ProjectProperties.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 960,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/PropertiesPanel.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 30,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ScrollToBottom.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 80,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/Sidebar.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 104,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/SidebarAgents.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 146,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/SidebarNavItem.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 77,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/SidebarProjects.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 193,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/SidebarSection.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 18,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/StatusBadge.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 16,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/StatusIcon.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 72,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ToastViewport.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 100,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/avatar.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 108,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/badge.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 49,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/breadcrumb.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 110,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/button.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 65,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/card.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 93,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/checkbox.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 33,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/collapsible.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 34,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/command.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 195,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/dialog.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 157,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/dropdown-menu.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 258,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/input.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 22,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/label.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 23,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/popover.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 89,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/scroll-area.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 57,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/select.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 189,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/separator.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 29,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/sheet.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 144,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/skeleton.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 14,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/tabs.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 90,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/textarea.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 19,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 58,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/BreadcrumbContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 45,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/CompanyContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 144,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/DialogContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 135,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/LiveUpdatesProvider.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 598,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/PanelContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 74,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/SidebarContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 44,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/ThemeContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 84,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/context/ToastContext.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 173,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/hooks/useCompanyPageMemory.ts",
+      "language": "TypeScript",
+      "sizeLines": 75,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/hooks/useInboxBadge.ts",
+      "language": "TypeScript",
+      "sizeLines": 109,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/hooks/useKeyboardShortcuts.ts",
+      "language": "TypeScript",
+      "sizeLines": 49,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/hooks/useProjectOrder.ts",
+      "language": "TypeScript",
+      "sizeLines": 106,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/index.css",
+      "language": "CSS",
+      "sizeLines": 612,
+      "fileCategory": "style"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/company-routes.ts",
+      "language": "TypeScript",
+      "sizeLines": 86,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/groupBy.ts",
+      "language": "TypeScript",
+      "sizeLines": 12,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/inbox.test.ts",
+      "language": "TypeScript",
+      "sizeLines": 251,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/inbox.ts",
+      "language": "TypeScript",
+      "sizeLines": 151,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/issueDetailBreadcrumb.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/model-utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/project-order.ts",
+      "language": "TypeScript",
+      "sizeLines": 71,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/queryKeys.ts",
+      "language": "TypeScript",
+      "sizeLines": 76,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/recent-assignees.ts",
+      "language": "TypeScript",
+      "sizeLines": 37,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/router.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 77,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/status-colors.ts",
+      "language": "TypeScript",
+      "sizeLines": 109,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/timeAgo.ts",
+      "language": "TypeScript",
+      "sizeLines": 32,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/lib/utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 75,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/src/main.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 60,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Activity.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 141,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/AgentDetail.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 2507,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Agents.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 410,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/ApprovalDetail.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 363,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Approvals.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 133,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Auth.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 163,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/BoardClaim.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 126,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Companies.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 298,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/CompanySettings.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 551,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Costs.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 245,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Dashboard.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 360,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/DesignGuide.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 1331,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/GoalDetail.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 197,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Goals.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 64,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Inbox.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 870,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/InviteLanding.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 318,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/IssueDetail.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 942,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Issues.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 115,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/MyIssues.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 76,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/NewAgent.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 335,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/NotFound.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 67,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Org.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 133,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/OrgChart.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 429,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/ProjectDetail.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 408,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/src/pages/Projects.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 84,
+      "fileCategory": "component"
+    },
+    {
+      "path": "agents/task-runner/ui/tsconfig.json",
+      "language": "JSON",
+      "sizeLines": 21,
+      "fileCategory": "config"
+    },
+    {
+      "path": "agents/task-runner/ui/vite.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 23,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/ui/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "agents/task-runner/vitest.config.ts",
+      "language": "TypeScript",
+      "sizeLines": 8,
+      "fileCategory": "source"
+    },
+    {
+      "path": "CONTEXT.md",
+      "language": "Markdown",
+      "sizeLines": 18,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "YAML",
+      "sizeLines": 75,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docker/README.md",
+      "language": "Markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "INDEX.md",
+      "language": "Markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "lib/db.json",
+      "language": "JSON",
+      "sizeLines": 362,
+      "fileCategory": "config"
+    },
+    {
+      "path": "mission-control/_archive/AUTO_DESCRIPTION_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 321,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_CHECKLIST.md",
+      "language": "Markdown",
+      "sizeLines": 259,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_GUIDE.md",
+      "language": "Markdown",
+      "sizeLines": 278,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_IMPLEMENTATION.md",
+      "language": "Markdown",
+      "sizeLines": 338,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_QUICKSTART.md",
+      "language": "Markdown",
+      "sizeLines": 239,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_COMPLETION_REPORT.md",
+      "language": "Markdown",
+      "sizeLines": 568,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_DATABASE_SCHEMA.sql",
+      "language": "SQL",
+      "sizeLines": 351,
+      "fileCategory": "database"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_DOCUMENTS_INDEX.md",
+      "language": "Markdown",
+      "sizeLines": 200,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_FINAL_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 463,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_IMPLEMENTATION_GUIDE.md",
+      "language": "Markdown",
+      "sizeLines": 756,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_README.md",
+      "language": "Markdown",
+      "sizeLines": 401,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_RESTORE_ARCHITECTURE.md",
+      "language": "Markdown",
+      "sizeLines": 1320,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_SINGLE_PAGE_ARCHITECTURE.md",
+      "language": "Markdown",
+      "sizeLines": 903,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_SINGLE_PAGE_COMPLETE.md",
+      "language": "Markdown",
+      "sizeLines": 521,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_SINGLE_PAGE_IMPLEMENTATION.md",
+      "language": "Markdown",
+      "sizeLines": 906,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_START_HERE.md",
+      "language": "Markdown",
+      "sizeLines": 222,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_SYSTEM_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 449,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_TESTING_STRATEGY.md",
+      "language": "Markdown",
+      "sizeLines": 1053,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUP_WORKFLOW_DIAGRAMS.md",
+      "language": "Markdown",
+      "sizeLines": 611,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_COMPONENT_SPECS.md",
+      "language": "Markdown",
+      "sizeLines": 923,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_DATABASE_SCHEMA.md",
+      "language": "Markdown",
+      "sizeLines": 587,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_FILE_STRUCTURE.md",
+      "language": "Markdown",
+      "sizeLines": 780,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_IMPLEMENTATION_CHECKLIST.md",
+      "language": "Markdown",
+      "sizeLines": 537,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_IMPLEMENTATION_COMPLETE.md",
+      "language": "Markdown",
+      "sizeLines": 423,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_INDEX.md",
+      "language": "Markdown",
+      "sizeLines": 450,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_INTEGRATION_GUIDE.md",
+      "language": "Markdown",
+      "sizeLines": 773,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_PAGE_ARCHITECTURE.md",
+      "language": "Markdown",
+      "sizeLines": 451,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_PAGE_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 595,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_PAGE_TESTING.md",
+      "language": "Markdown",
+      "sizeLines": 1091,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/BACKUPS_RESTORE_WORKFLOW.md",
+      "language": "Markdown",
+      "sizeLines": 756,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/DEPLOYMENT_NOTES.md",
+      "language": "Markdown",
+      "sizeLines": 255,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/EMAIL_CLEANUP_MODULE.md",
+      "language": "Markdown",
+      "sizeLines": 351,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/EMMIE_IMPLEMENTATION_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 323,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/EMMIE_REAL_DATA_INTEGRATION.md",
+      "language": "Markdown",
+      "sizeLines": 214,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/ENHANCEMENTS_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 446,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/FILES_MANIFEST.md",
+      "language": "Markdown",
+      "sizeLines": 302,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/FIXES_APPLIED.md",
+      "language": "Markdown",
+      "sizeLines": 202,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/IMPLEMENTATION_SUMMARY.md",
+      "language": "Markdown",
+      "sizeLines": 265,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/MISSION_CONTROL_MVP_COMPLETE.md",
+      "language": "Markdown",
+      "sizeLines": 446,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/MODULE_CHECKLIST.md",
+      "language": "Markdown",
+      "sizeLines": 211,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/QUICK_START_EMMIE.md",
+      "language": "Markdown",
+      "sizeLines": 255,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/REAL_JOBS_MIGRATION.md",
+      "language": "Markdown",
+      "sizeLines": 99,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/SUBAGENT_COMPLETION_REPORT.md",
+      "language": "Markdown",
+      "sizeLines": 496,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/TEAM_MOCK_DATA_CHANGES.md",
+      "language": "Markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/WHITELIST_IMPLEMENTATION.md",
+      "language": "Markdown",
+      "sizeLines": 240,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/_archive/WHITELIST_QUICK_START.md",
+      "language": "Markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/.claude/CLAUDE.md",
+      "language": "Markdown",
+      "sizeLines": 143,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/.claude/RESKIN-PLAN.md",
+      "language": "Markdown",
+      "sizeLines": 415,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/.eslintrc.json",
+      "language": "JSON",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "mission-control/app/api/_telegram.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/affiliate-links/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 105,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/agent-logs/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/agent-status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/airtable/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 168,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/apollo/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 20,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backlinks/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 77,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/create/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 141,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/delete/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 57,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/download/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 61,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/generate-description/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/list/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 152,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/restore/progress/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/restore/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 226,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/update-description/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 59,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/bank-accounts/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/bios/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 188,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/blog-service/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 256,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/book-rankings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 159,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/bookkeeping/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 432,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/icp/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 140,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/store-leads/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 216,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/waba-answer/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 459,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/waba-search/history/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 30,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/waba-search/rebuild/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/waba-search/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 82,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/waba-search/stats/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 66,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/business1/waba-upload/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 234,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/canva/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 142,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/carousel-builder/export/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 371,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/carousel-builder/images/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 210,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/carousel-builder/publish/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 202,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/carousel-builder/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 228,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/carousel-builder/serve/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 51,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/carousel-builder/templates/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 63,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cashclaw/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 117,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/clanforge/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 75,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/_state.ts",
+      "language": "TypeScript",
+      "sizeLines": 6,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/handoff/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/history/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 102,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 218,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/stop/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 21,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/transcribe/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 127,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/undo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/clients/[clientId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/clients/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 62,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/_utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/attendance/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 128,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 160,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 282,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/cohorts/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 94,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/connections/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 169,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discoveries/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 221,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/favor-bank/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 163,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/generate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/intake/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 222,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/offers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 95,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/onboarding-process/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 271,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/onboarding-process/templates/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/participants/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 264,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/publish/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 65,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/questions/generate-answers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 67,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/questions/regenerate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/questions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 202,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 127,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/stats/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 93,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/stripe-lookup/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 194,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/topics/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 52,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/websites/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 16,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/approve-clip/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 94,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/clips-list/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 67,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/generate-tech-output/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 119,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/open-folder/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 47,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 252,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 474,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 55,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/wrap-up/zoom-recording/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 68,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/_db.ts",
+      "language": "TypeScript",
+      "sizeLines": 180,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/batches/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/icps/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 350,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/instantly/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 234,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/pipeline/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 65,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 73,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 76,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/staleness/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 64,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cold-outreach/test-hook/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 140,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/content-autopilot/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 245,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/content-creator/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 238,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/crm/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 117,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cron/list/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 275,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/daily-briefing/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/daily-summary/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 1645,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/db/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 396,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/descript/dashboard/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 173,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/browser-cache/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 181,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/dev-artifacts/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 254,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/large-files/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 119,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/preview/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 71,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 84,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 49,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/system-tuneup/flush-dns/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/disk-cleaner/system-tuneup/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 246,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/dropbox/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 337,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emergency/resume/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 55,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emmie/config/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 331,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emmie/metrics/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 79,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emmie/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 69,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emmie/shared.ts",
+      "language": "TypeScript",
+      "sizeLines": 175,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emmie/uncertain/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 398,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/emmie/whitelist/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 150,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/env/inject/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 142,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/exchange-rate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 102,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/exchange-rate/sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 70,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/form-builder/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 251,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/_state.ts",
+      "language": "TypeScript",
+      "sizeLines": 9,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/handoff/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/history/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/preferences/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 55,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 591,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 28,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/stop/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 21,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/transcribe/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 127,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/undo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 134,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/genie/upload/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/guard-dog/config/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/guard-dog/dashboard/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 261,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/guard-dog/manual-scan/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/guard-dog/scan/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 62,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/guard-dog/vulnerabilities/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 189,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/health/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 10,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/help/inspect/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/holdings-links/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/human-tasks/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 97,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/ig-video-transcriber/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 20,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/ig-video-transcriber/transcribe/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 23,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/ig-video-transcriber/transcripts/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/kling/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/linkedin-images/preview/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 52,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/linkedin-images/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 178,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/linkedin/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 546,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/littlebird/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 130,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 360,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/machine-learning/settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 74,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/_db.ts",
+      "language": "TypeScript",
+      "sizeLines": 99,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 91,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 79,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 91,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/push/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 94,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 287,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 87,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/data/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-webhook/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/logo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 66,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/memory-cap/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/meeting-notes/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 89,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/business/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 103,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/payments/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 78,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/photo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/research/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 142,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 188,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 71,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 275,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 124,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 101,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 109,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 89,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/stripe-sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 139,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/meta-ads/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 58,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/nav-state/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/nightcrawler/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 154,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/office/lollipops/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/_utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/attendance/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 128,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/blog/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 272,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/connections/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 169,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/discover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/discoveries/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 191,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/favor-bank/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/generate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/intake/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 133,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/offers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 95,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/participants/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 140,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/publish/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 63,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/questions/generate-answers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 67,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/questions/regenerate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/questions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 158,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 79,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/stats/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 82,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/topics/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 52,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/wrap-up/generate-tech-output/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 119,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/wrap-up/pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/wrap-up/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 250,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/wrap-up/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 459,
+      "fileCategory": "source"
+    }
+  ],
+  "fileStatistics": {
+    "totalSourceFiles": 1494,
+    "byLanguage": {
+      "Markdown": 172,
+      "YAML": 10,
+      "JSON": 72,
+      "TypeScript": 791,
+      "SQL": 29,
+      "JavaScript": 4,
+      "TypeScript JSX": 414,
+      "CSS": 2
+    },
+    "byCategory": {
+      "docs": 172,
+      "config": 82,
+      "source": 795,
+      "database": 29,
+      "component": 414,
+      "style": 2
+    },
+    "filesListed": 1000,
+    "filesOmitted": 494
+  },
+  "filteredByIgnore": 0,
+  "buildTools": [
+    "Next.js 15",
+    "TypeScript",
+    "ESLint",
+    "pnpm",
+    "Vitest",
+    "Tailwind CSS",
+    "PostCSS"
+  ],
+  "deploymentInfo": {
+    "framework": "Next.js",
+    "language": "TypeScript + JavaScript",
+    "runtimePort": "3000/3001",
+    "buildCommand": "NODE_OPTIONS='--max-old-space-size=3072' next build",
+    "devCommand": "next dev --turbo -p 3001",
+    "containerized": true,
+    "dockerCompose": "Available"
+  },
+  "languageNotes": {
+    "TypeScript": "Core language for type-safe development. All components and utilities use strict TS with strict mode enabled.",
+    "JavaScript": "Used in config files (next.config.js, seed scripts) and legacy compatibility",
+    "React": "19.0.0 RC version - modern React with hooks, functional components, concurrent features",
+    "Tailwind": "Dark theme implementation with custom tokens (cm-purple, dark-panel, etc.) - no hardcoded hex colors",
+    "Next.js": "15.1.0 - Turbo mode enabled for faster HMR. API routes at app/api/, server components where applicable"
+  },
+  "languageLesson": "This is a mature Next.js monorepo combining a unified dashboard (mission-control/) with decoupled background agents (agents/task-runner/) using pnpm workspaces. The mission-control frontend enforces strict styling rules (dark theme, token-based colors) and maintains a dedicated CLAUDE.md with page checklists, color tokens, and icon sourcing rules. TypeScript is non-negotiable; the project uses @types packages for all external libraries. CSS is pure Tailwind - no custom stylesheets except minimal utility classes.",
+  "notes": "Mission Control is Joe's live operational system at port 3000 in ~/.myos/workspace/. Golden Claw (this repo) is a sanitized testing build with real API keys. Development uses 'next dev --turbo' for hot reload. Task runner is a pnpm monorepo (agents/task-runner/) with packages for database access, shared utilities, and adapters. All 1210 source files identified; 1000 most significant files listed. Build enforces 3GB Node heap. See mission-control/.claude/CLAUDE.md for page creation checklist, color token rules, icon sourcing (bundled lucide-react only, no CDN), and scroll position safety rules.",
+  "indexedAt": "2026-07-05T20:02:17.250Z"
+}

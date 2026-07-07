@@ -1,0 +1,307 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/api/skills/registry/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/skills/registry/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 110,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/airtable/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/airtable/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 467,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/apollo/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/apollo/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 210,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/canva/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/canva/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 460,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/descript/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/descript/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 296,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/dropbox/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/dropbox/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 775,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/email-cleanup/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/email-cleanup/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 569,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/email-cleanup/sections/LogsSection.tsx",
+      "label": "LogsSection.tsx",
+      "path": "mission-control/app/app/email-cleanup/sections/LogsSection.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 289,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/email-cleanup/sections/MetricsSection.tsx",
+      "label": "MetricsSection.tsx",
+      "path": "mission-control/app/app/email-cleanup/sections/MetricsSection.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 229,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/email-cleanup/sections/UncertainEmailsSection.tsx",
+      "label": "UncertainEmailsSection.tsx",
+      "path": "mission-control/app/app/email-cleanup/sections/UncertainEmailsSection.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 854,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/email-cleanup/sections/WhitelistSection.tsx",
+      "label": "WhitelistSection.tsx",
+      "path": "mission-control/app/app/email-cleanup/sections/WhitelistSection.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 276,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/ig-video-transcriber/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/ig-video-transcriber/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 481,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/linkedin-images/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/linkedin-images/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 469,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/linkedin/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 293,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/AnalyticsView.tsx",
+      "label": "AnalyticsView.tsx",
+      "path": "mission-control/app/app/linkedin/sections/AnalyticsView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 168,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/CalendarView.tsx",
+      "label": "CalendarView.tsx",
+      "path": "mission-control/app/app/linkedin/sections/CalendarView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 107,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/ContentCard.tsx",
+      "label": "ContentCard.tsx",
+      "path": "mission-control/app/app/linkedin/sections/ContentCard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 159,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/ContentModal.tsx",
+      "label": "ContentModal.tsx",
+      "path": "mission-control/app/app/linkedin/sections/ContentModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 340,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/ImportModal.tsx",
+      "label": "ImportModal.tsx",
+      "path": "mission-control/app/app/linkedin/sections/ImportModal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 76,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/PipelineBoard.tsx",
+      "label": "PipelineBoard.tsx",
+      "path": "mission-control/app/app/linkedin/sections/PipelineBoard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 114,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/ProjectView.tsx",
+      "label": "ProjectView.tsx",
+      "path": "mission-control/app/app/linkedin/sections/ProjectView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 211,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/WritersView.tsx",
+      "label": "WritersView.tsx",
+      "path": "mission-control/app/app/linkedin/sections/WritersView.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 106,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/linkedin/sections/shared.ts",
+      "label": "shared.ts",
+      "path": "mission-control/app/app/linkedin/sections/shared.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 58,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/pexel/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/pexel/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 329,
+      "complexity": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/app/email-cleanup/page.tsx",
+      "target": "mission-control/app/app/email-cleanup/sections/LogsSection.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/email-cleanup/page.tsx",
+      "target": "mission-control/app/app/email-cleanup/sections/MetricsSection.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/email-cleanup/page.tsx",
+      "target": "mission-control/app/app/email-cleanup/sections/UncertainEmailsSection.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/email-cleanup/page.tsx",
+      "target": "mission-control/app/app/email-cleanup/sections/WhitelistSection.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/AnalyticsView.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/CalendarView.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/ContentModal.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/ImportModal.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/PipelineBoard.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/ProjectView.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/shared.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/page.tsx",
+      "target": "mission-control/app/app/linkedin/sections/WritersView.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/sections/AnalyticsView.tsx",
+      "target": "mission-control/app/app/linkedin/sections/shared.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/sections/ContentCard.tsx",
+      "target": "mission-control/app/app/linkedin/sections/shared.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/sections/ContentModal.tsx",
+      "target": "mission-control/app/app/linkedin/sections/shared.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/sections/PipelineBoard.tsx",
+      "target": "mission-control/app/app/linkedin/sections/ContentCard.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/linkedin/sections/PipelineBoard.tsx",
+      "target": "mission-control/app/app/linkedin/sections/shared.ts",
+      "type": "imports"
+    }
+  ]
+}

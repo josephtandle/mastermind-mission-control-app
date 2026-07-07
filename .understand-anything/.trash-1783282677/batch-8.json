@@ -1,0 +1,77 @@
+{
+  "batchIndex": 8,
+  "files": [
+    {"path": "commands/client/activity.ts", "size": 2156, "language": "typescript"},
+    {"path": "commands/client/agent.ts", "size": 8924, "language": "typescript"},
+    {"path": "commands/client/approval.ts", "size": 7342, "language": "typescript"},
+    {"path": "commands/client/common.ts", "size": 4867, "language": "typescript"},
+    {"path": "commands/client/company.ts", "size": 14156, "language": "typescript"},
+    {"path": "commands/client/context.ts", "size": 3124, "language": "typescript"},
+    {"path": "commands/client/dashboard.ts", "size": 578, "language": "typescript"},
+    {"path": "commands/client/issue.ts", "size": 9124, "language": "typescript"}
+  ],
+  "batchImportData": {
+    "activity.ts": ["commander", "@paperclipai/shared", "./common.js"],
+    "agent.ts": ["commander", "@paperclipai/shared", "node:fs/promises", "node:os", "node:path", "node:url", "./common.js"],
+    "approval.ts": ["commander", "@paperclipai/shared", "./common.js"],
+    "common.ts": ["picocolors", "commander", "../../config/store.js", "../../client/context.js", "../../client/http.js"],
+    "company.ts": ["commander", "node:fs/promises", "node:path", "@paperclipai/shared", "../../client/http.js", "./common.js"],
+    "context.ts": ["commander", "picocolors", "../../client/context.js", "./common.js"],
+    "dashboard.ts": ["commander", "@paperclipai/shared", "./common.js"],
+    "issue.ts": ["commander", "@paperclipai/shared", "./common.js"]
+  },
+  "neighborMap": {
+    "activity.ts": ["./common.js"],
+    "agent.ts": ["./common.js"],
+    "approval.ts": ["./common.js"],
+    "common.ts": ["../../config/store.js", "../../client/context.js", "../../client/http.js"],
+    "company.ts": ["../../client/http.js", "./common.js"],
+    "context.ts": ["../../client/context.js", "./common.js"],
+    "dashboard.ts": ["./common.js"],
+    "issue.ts": ["./common.js"]
+  },
+  "graphNodes": [
+    {"id": "BaseClientOptions", "nodeType": "interface", "label": "Base client options", "title": "BaseClientOptions", "description": "Common CLI options for API client commands", "file": "common.ts", "language": "typescript", "tags": ["interface", "options"], "metadata": {"properties": 9}},
+    {"id": "ResolvedClientContext", "nodeType": "interface", "label": "Resolved client context", "title": "ResolvedClientContext", "description": "Resolved API context with credentials and company scope", "file": "common.ts", "language": "typescript", "tags": ["interface", "context"], "metadata": {"properties": 3}},
+    {"id": "addCommonClientOptions", "nodeType": "function", "label": "Add common client options", "title": "addCommonClientOptions", "description": "Adds standard CLI flags to a command (config, api, company, json)", "file": "common.ts", "language": "typescript", "tags": ["utility", "cli"], "metadata": {"params": 2}},
+    {"id": "resolveCommandContext", "nodeType": "function", "label": "Resolve command context", "title": "resolveCommandContext", "description": "Resolves CLI options to authenticated API context", "file": "common.ts", "language": "typescript", "tags": ["utility", "auth"], "metadata": {"params": 2}},
+    {"id": "printOutput", "nodeType": "function", "label": "Print output", "title": "printOutput", "description": "Outputs data as JSON or formatted table", "file": "common.ts", "language": "typescript", "tags": ["utility", "io"], "metadata": {"params": 2}},
+    {"id": "registerActivityCommands", "nodeType": "function", "label": "Register activity commands", "title": "registerActivityCommands", "description": "Registers 'activity list' command for company logs", "file": "activity.ts", "language": "typescript", "tags": ["command", "activity"], "metadata": {"params": 1}},
+    {"id": "registerAgentCommands", "nodeType": "function", "label": "Register agent commands", "title": "registerAgentCommands", "description": "Registers agent list, create, and skills commands", "file": "agent.ts", "language": "typescript", "tags": ["command", "agent"], "metadata": {"params": 1}},
+    {"id": "registerApprovalCommands", "nodeType": "function", "label": "Register approval commands", "title": "registerApprovalCommands", "description": "Registers approval list, decision, create, resubmit, and comment commands", "file": "approval.ts", "language": "typescript", "tags": ["command", "approval"], "metadata": {"params": 1}},
+    {"id": "registerCompanyCommands", "nodeType": "function", "label": "Register company commands", "title": "registerCompanyCommands", "description": "Registers company delete, export, import, portability commands", "file": "company.ts", "language": "typescript", "tags": ["command", "company"], "metadata": {"params": 1}},
+    {"id": "registerContextCommands", "nodeType": "function", "label": "Register context commands", "title": "registerContextCommands", "description": "Registers profile set, list, and delete commands", "file": "context.ts", "language": "typescript", "tags": ["command", "context"], "metadata": {"params": 1}},
+    {"id": "registerDashboardCommands", "nodeType": "function", "label": "Register dashboard commands", "title": "registerDashboardCommands", "description": "Registers dashboard get command for company stats", "file": "dashboard.ts", "language": "typescript", "tags": ["command", "dashboard"], "metadata": {"params": 1}},
+    {"id": "registerIssueCommands", "nodeType": "function", "label": "Register issue commands", "title": "registerIssueCommands", "description": "Registers issue create, list, update, checkout, and comment commands", "file": "issue.ts", "language": "typescript", "tags": ["command", "issue"], "metadata": {"params": 1}}
+  ],
+  "graphEdges": [
+    {"id": "e1", "source": "registerActivityCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e2", "source": "registerAgentCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e3", "source": "registerApprovalCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e4", "source": "registerCompanyCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e5", "source": "registerContextCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e6", "source": "registerDashboardCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e7", "source": "registerIssueCommands", "target": "BaseClientOptions", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e8", "source": "registerActivityCommands", "target": "resolveCommandContext", "edgeType": "calls", "label": "resolve", "bidirectional": false},
+    {"id": "e9", "source": "registerAgentCommands", "target": "resolveCommandContext", "edgeType": "calls", "label": "resolve", "bidirectional": false},
+    {"id": "e10", "source": "registerApprovalCommands", "target": "resolveCommandContext", "edgeType": "calls", "label": "resolve", "bidirectional": false},
+    {"id": "e11", "source": "registerCompanyCommands", "target": "resolveCommandContext", "edgeType": "calls", "label": "resolve", "bidirectional": false},
+    {"id": "e12", "source": "registerDashboardCommands", "target": "resolveCommandContext", "edgeType": "calls", "label": "resolve", "bidirectional": false},
+    {"id": "e13", "source": "registerIssueCommands", "target": "resolveCommandContext", "edgeType": "calls", "label": "resolve", "bidirectional": false},
+    {"id": "e14", "source": "registerActivityCommands", "target": "printOutput", "edgeType": "calls", "label": "output", "bidirectional": false},
+    {"id": "e15", "source": "registerAgentCommands", "target": "printOutput", "edgeType": "calls", "label": "output", "bidirectional": false},
+    {"id": "e16", "source": "registerApprovalCommands", "target": "printOutput", "edgeType": "calls", "label": "output", "bidirectional": false},
+    {"id": "e17", "source": "registerCompanyCommands", "target": "printOutput", "edgeType": "calls", "label": "output", "bidirectional": false},
+    {"id": "e18", "source": "registerDashboardCommands", "target": "printOutput", "edgeType": "calls", "label": "output", "bidirectional": false},
+    {"id": "e19", "source": "registerIssueCommands", "target": "printOutput", "edgeType": "calls", "label": "output", "bidirectional": false}
+  ],
+  "summary": {
+    "filesAnalyzed": 8,
+    "nodesGenerated": 12,
+    "edgesGenerated": 19,
+    "commandFunctions": 6,
+    "sharedUtilities": 6,
+    "totalLinesCovered": 50271,
+    "avgFileSize": 6284
+  }
+}

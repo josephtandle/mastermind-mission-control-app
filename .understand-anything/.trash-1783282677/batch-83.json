@@ -1,0 +1,52 @@
+{
+  "batchIndex": 83,
+  "nodes": [
+    {
+      "id": "batch-83-file-0",
+      "type": "source",
+      "name": "_db.ts",
+      "filePath": "mission-control/app/api/manychat-giveaways/_db.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 99,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-83-file-1",
+      "type": "source",
+      "name": "_manychat.ts",
+      "filePath": "mission-control/app/api/manychat-giveaways/_manychat.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 100,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-83-file-2",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/manychat-giveaways/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.9,
+      "sizeLines": 287,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

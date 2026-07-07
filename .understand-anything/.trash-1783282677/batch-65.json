@@ -1,0 +1,115 @@
+{
+  "batchIndex": 65,
+  "nodes": [
+    {
+      "id": "batch-65-file-0",
+      "type": "config",
+      "name": "components.json",
+      "filePath": "agents/task-runner/ui/components.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 22,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-65-file-1",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "agents/task-runner/ui/package.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 53,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-65-file-2",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/ui/tsconfig.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 21,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-65-file-3",
+      "type": "source",
+      "name": "vite.config.ts",
+      "filePath": "agents/task-runner/ui/vite.config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 23,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-65-file-4",
+      "type": "source",
+      "name": "vitest.config.ts",
+      "filePath": "agents/task-runner/ui/vitest.config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 8,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": [
+    {
+      "source": "batch-65-file-0",
+      "target": "batch-65-file-3",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-65-file-1",
+      "target": "batch-65-file-3",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-65-file-2",
+      "target": "batch-65-file-3",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-65-file-0",
+      "target": "batch-65-file-4",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-65-file-1",
+      "target": "batch-65-file-4",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-65-file-2",
+      "target": "batch-65-file-4",
+      "type": "configures",
+      "weight": 0.6
+    }
+  ]
+}

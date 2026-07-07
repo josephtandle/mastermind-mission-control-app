@@ -1,0 +1,678 @@
+{
+  "batchIndex": 87,
+  "nodes": [
+    {
+      "id": "batch-87-file-0",
+      "type": "component",
+      "name": "tooltip.tsx",
+      "filePath": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 58,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-87-file-1",
+      "type": "docs",
+      "name": "CONTEXT.md",
+      "filePath": "CONTEXT.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 18,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-87-file-2",
+      "type": "config",
+      "name": "docker-compose.yml",
+      "filePath": "docker/docker-compose.yml",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "YAML",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 75,
+      "language": "YAML"
+    },
+    {
+      "id": "batch-87-file-3",
+      "type": "docs",
+      "name": "README.md",
+      "filePath": "docker/README.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 69,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-87-file-4",
+      "type": "docs",
+      "name": "INDEX.md",
+      "filePath": "INDEX.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 24,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-87-file-5",
+      "type": "config",
+      "name": "db.json",
+      "filePath": "lib/db.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "utilities"
+      ],
+      "complexity": 3.1,
+      "sizeLines": 362,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-87-file-6",
+      "type": "docs",
+      "name": "CLAUDE.md",
+      "filePath": "mission-control/.claude/CLAUDE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 143,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-87-file-7",
+      "type": "docs",
+      "name": "RESKIN-PLAN.md",
+      "filePath": "mission-control/.claude/RESKIN-PLAN.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.2,
+      "sizeLines": 415,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-87-file-8",
+      "type": "config",
+      "name": ".eslintrc.json",
+      "filePath": "mission-control/.eslintrc.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 8,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-87-file-9",
+      "type": "source",
+      "name": "_telegram.ts",
+      "filePath": "mission-control/app/api/_telegram.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 38,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-10",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/affiliate-links/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 105,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-11",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/agent-logs/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 132,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-12",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/agent-status/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 25,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-13",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/airtable/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.7,
+      "sizeLines": 168,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-14",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/apollo/status/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 20,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-15",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backlinks/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 77,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-16",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/create/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 141,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-17",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/delete/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 57,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-18",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/download/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 61,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-19",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/generate-description/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 38,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-20",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/list/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 152,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-21",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/restore/progress/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 54,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-22",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/restore/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 2.3,
+      "sizeLines": 226,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-23",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/backups/update-description/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 59,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-87-file-24",
+      "type": "source",
+      "name": "route.ts",
+      "filePath": "mission-control/app/api/bank-accounts/route.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "routing"
+      ],
+      "complexity": 1,
+      "sizeLines": 45,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": [
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-9",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-9",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-9",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-10",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-10",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-10",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-11",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-11",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-11",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-12",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-12",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-12",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-13",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-13",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-13",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-14",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-14",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-14",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-15",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-15",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-15",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-16",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-16",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-16",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-17",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-17",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-17",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-18",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-18",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-18",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-19",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-19",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-19",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-20",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-20",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-20",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-21",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-21",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-21",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-22",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-22",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-22",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-23",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-23",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-23",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-2",
+      "target": "batch-87-file-24",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-5",
+      "target": "batch-87-file-24",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-87-file-8",
+      "target": "batch-87-file-24",
+      "type": "configures",
+      "weight": 0.6
+    }
+  ]
+}

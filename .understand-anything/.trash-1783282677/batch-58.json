@@ -1,0 +1,189 @@
+{
+  "batchIndex": 58,
+  "nodes": [
+    {
+      "id": "batch-58-file-0",
+      "type": "source",
+      "name": "agent-auth-jwt.ts",
+      "filePath": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 142,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-1",
+      "type": "source",
+      "name": "app.ts",
+      "filePath": "agents/task-runner/server/src/app.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 184,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-2",
+      "type": "source",
+      "name": "attachment-types.ts",
+      "filePath": "agents/task-runner/server/src/attachment-types.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "types"
+      ],
+      "complexity": 1,
+      "sizeLines": 69,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-3",
+      "type": "source",
+      "name": "board-claim.ts",
+      "filePath": "agents/task-runner/server/src/board-claim.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 150,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-4",
+      "type": "source",
+      "name": "config-file.ts",
+      "filePath": "agents/task-runner/server/src/config-file.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 17,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-5",
+      "type": "source",
+      "name": "config.ts",
+      "filePath": "agents/task-runner/server/src/config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 2.5,
+      "sizeLines": 248,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-6",
+      "type": "source",
+      "name": "errors.ts",
+      "filePath": "agents/task-runner/server/src/errors.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 35,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-7",
+      "type": "source",
+      "name": "home-paths.ts",
+      "filePath": "agents/task-runner/server/src/home-paths.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 67,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-8",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/server/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 6.9,
+      "sizeLines": 694,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-9",
+      "type": "source",
+      "name": "paths.ts",
+      "filePath": "agents/task-runner/server/src/paths.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 35,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-10",
+      "type": "source",
+      "name": "redaction.ts",
+      "filePath": "agents/task-runner/server/src/redaction.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 60,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-11",
+      "type": "source",
+      "name": "startup-banner.ts",
+      "filePath": "agents/task-runner/server/src/startup-banner.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 176,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-58-file-12",
+      "type": "source",
+      "name": "ui-branding.ts",
+      "filePath": "agents/task-runner/server/src/ui-branding.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 42,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

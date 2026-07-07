@@ -1,0 +1,309 @@
+{
+  "batchIndex": 53,
+  "nodes": [
+    {
+      "id": "batch-53-file-0",
+      "type": "source",
+      "name": "adapter-models.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/adapter-models.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 105,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-1",
+      "type": "source",
+      "name": "adapter-session-codecs.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/adapter-session-codecs.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 149,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-2",
+      "type": "source",
+      "name": "agent-auth-jwt.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/agent-auth-jwt.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 80,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-3",
+      "type": "source",
+      "name": "agent-shortname-collision.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/agent-shortname-collision.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 70,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-4",
+      "type": "source",
+      "name": "approval-routes-idempotency.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/approval-routes-idempotency.test.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "routing",
+        "testing"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 111,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-5",
+      "type": "source",
+      "name": "approvals-service.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/approvals-service.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 108,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-6",
+      "type": "source",
+      "name": "attachment-types.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/attachment-types.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "types",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 98,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-7",
+      "type": "source",
+      "name": "board-mutation-guard.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/board-mutation-guard.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 69,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-8",
+      "type": "source",
+      "name": "claude-local-adapter-environment.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/claude-local-adapter-environment.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 92,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-9",
+      "type": "source",
+      "name": "claude-local-adapter.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/claude-local-adapter.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 31,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-10",
+      "type": "source",
+      "name": "codex-local-adapter-environment.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/codex-local-adapter-environment.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 76,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-11",
+      "type": "source",
+      "name": "codex-local-adapter.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/codex-local-adapter.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 4,
+      "sizeLines": 403,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-12",
+      "type": "source",
+      "name": "companies-route-path-guard.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/companies-route-path-guard.test.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "routing",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 50,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-13",
+      "type": "source",
+      "name": "cursor-local-adapter-environment.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/cursor-local-adapter-environment.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 120,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-14",
+      "type": "source",
+      "name": "cursor-local-adapter.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/cursor-local-adapter.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 4.1,
+      "sizeLines": 405,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-15",
+      "type": "source",
+      "name": "cursor-local-execute.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/cursor-local-execute.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 183,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-16",
+      "type": "source",
+      "name": "cursor-local-skill-injection.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/cursor-local-skill-injection.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 104,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-17",
+      "type": "source",
+      "name": "error-handler.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/error-handler.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 54,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-18",
+      "type": "source",
+      "name": "execution-workspace-policy.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/execution-workspace-policy.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 144,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-53-file-19",
+      "type": "source",
+      "name": "health.test.ts",
+      "filePath": "agents/task-runner/server/src/__tests__/health.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 16,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

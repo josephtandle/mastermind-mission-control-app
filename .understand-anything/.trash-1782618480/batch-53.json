@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/app/business1/waba-setup/AiAnswerPanel.tsx",
+      "type": "file",
+      "name": "AiAnswerPanel.tsx",
+      "filePath": "mission-control/app/app/business1/waba-setup/AiAnswerPanel.tsx",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    },
+    {
+      "id": "file:mission-control/app/app/business1/waba-setup/ScreenshotUpload.tsx",
+      "type": "file",
+      "name": "ScreenshotUpload.tsx",
+      "filePath": "mission-control/app/app/business1/waba-setup/ScreenshotUpload.tsx",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    },
+    {
+      "id": "file:mission-control/app/app/business1/waba-setup/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "mission-control/app/app/business1/waba-setup/page.tsx",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    }
+  ],
+  "edges": []
+}

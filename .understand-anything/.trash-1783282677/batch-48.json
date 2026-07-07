@@ -1,0 +1,48 @@
+{
+  "batchIndex": 48,
+  "nodes": [
+    {
+      "id": "batch-48-file-0",
+      "type": "docs",
+      "name": "CHANGELOG.md",
+      "filePath": "agents/task-runner/packages/shared/CHANGELOG.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 51,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-48-file-1",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "agents/task-runner/packages/shared/package.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 39,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-48-file-2",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/packages/shared/tsconfig.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 9,
+      "language": "JSON"
+    }
+  ],
+  "edges": []
+}

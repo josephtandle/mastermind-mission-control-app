@@ -2,6 +2,7 @@ import Database from "better-sqlite3";
 import path from "path";
 import fs from "fs";
 import os from "os";
+import { sendTelegramViaSharedSender } from "../_telegram";
 
 const WS = process.env.GET_SORTED_WORKSPACE || path.join(os.homedir(), "golden-claw");
 
@@ -25,10 +26,13 @@ async function sendTelegram(message: string): Promise<void> {
   const botToken = getEnvVar("TELEGRAM_BOT_TOKEN");
   const chatId = getEnvVar("TELEGRAM_CHAT_ID");
   if (!botToken) return;
-  await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text: message, disable_web_page_preview: true }),
+  await sendTelegramViaSharedSender({
+    botToken,
+    chatId,
+    text: message,
+    agentId: "mastermind-online-program",
+    messageType: "notification",
+    sourcePath: "projects/mastermind-mission-control/mission-control/app/api/online-program/_utils.ts",
   }).catch(() => {});
 }
 

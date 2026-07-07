@@ -1,0 +1,82 @@
+{
+  "batchIndex": 9,
+  "files": [
+    {"path": "config/data-dir.ts", "size": 1235, "language": "typescript"},
+    {"path": "config/env.ts", "size": 3847, "language": "typescript"},
+    {"path": "config/home.ts", "size": 2456, "language": "typescript"},
+    {"path": "config/hostnames.ts", "size": 687, "language": "typescript"},
+    {"path": "config/schema.ts", "size": 756, "language": "typescript"},
+    {"path": "config/secrets-key.ts", "size": 1547, "language": "typescript"},
+    {"path": "config/store.ts", "size": 3816, "language": "typescript"}
+  ],
+  "batchImportData": {
+    "data-dir.ts": ["node:path", "./home.js"],
+    "env.ts": ["node:fs", "node:path", "node:crypto", "dotenv", "./store.js"],
+    "home.ts": ["node:os", "node:path"],
+    "hostnames.ts": [],
+    "schema.ts": ["@paperclipai/shared"],
+    "secrets-key.ts": ["node:crypto", "node:fs", "node:path", "./schema.js", "../utils/path-resolver.js"],
+    "store.ts": ["node:fs", "node:path", "./schema.js", "./home.js"]
+  },
+  "neighborMap": {
+    "data-dir.ts": ["./home.js"],
+    "env.ts": ["./store.js"],
+    "home.ts": [],
+    "hostnames.ts": [],
+    "schema.ts": [],
+    "secrets-key.ts": ["./schema.js", "../utils/path-resolver.js"],
+    "store.ts": ["./schema.js", "./home.js"]
+  },
+  "graphNodes": [
+    {"id": "DataDirOptionLike", "nodeType": "interface", "label": "Data directory options", "title": "DataDirOptionLike", "description": "Options for overriding data directory location", "file": "data-dir.ts", "language": "typescript", "tags": ["interface", "options"], "metadata": {"properties": 4}},
+    {"id": "DataDirCommandSupport", "nodeType": "interface", "label": "Data dir command support", "title": "DataDirCommandSupport", "description": "Flags indicating which options a command supports", "file": "data-dir.ts", "language": "typescript", "tags": ["interface", "flags"], "metadata": {"properties": 2}},
+    {"id": "applyDataDirOverride", "nodeType": "function", "label": "Apply data directory override", "title": "applyDataDirOverride", "description": "Sets PAPERCLIP_HOME and derives config/context paths from data directory", "file": "data-dir.ts", "language": "typescript", "tags": ["function", "environment"], "metadata": {"params": 2, "returns": "string | null"}},
+    {"id": "resolvePaperclipHomeDir", "nodeType": "function", "label": "Resolve Paperclip home directory", "title": "resolvePaperclipHomeDir", "description": "Gets ~/.paperclip or PAPERCLIP_HOME environment variable", "file": "home.ts", "language": "typescript", "tags": ["function", "paths"], "metadata": {"params": 0}},
+    {"id": "resolvePaperclipInstanceId", "nodeType": "function", "label": "Resolve Paperclip instance ID", "title": "resolvePaperclipInstanceId", "description": "Validates instance ID format and returns default 'default' if not set", "file": "home.ts", "language": "typescript", "tags": ["function", "validation"], "metadata": {"params": 1}},
+    {"id": "resolvePaperclipInstanceRoot", "nodeType": "function", "label": "Resolve instance root path", "title": "resolvePaperclipInstanceRoot", "description": "Returns ~/.paperclip/instances/{instanceId} directory path", "file": "home.ts", "language": "typescript", "tags": ["function", "paths"], "metadata": {"params": 1}},
+    {"id": "resolveDefaultConfigPath", "nodeType": "function", "label": "Resolve default config path", "title": "resolveDefaultConfigPath", "description": "Returns path to config.json for an instance", "file": "home.ts", "language": "typescript", "tags": ["function", "paths"], "metadata": {"params": 1}},
+    {"id": "resolveDefaultContextPath", "nodeType": "function", "label": "Resolve default context path", "title": "resolveDefaultContextPath", "description": "Returns ~/.paperclip/context.json path", "file": "home.ts", "language": "typescript", "tags": ["function", "paths"], "metadata": {"params": 0}},
+    {"id": "expandHomePrefix", "nodeType": "function", "label": "Expand home prefix", "title": "expandHomePrefix", "description": "Expands ~ to user home directory", "file": "home.ts", "language": "typescript", "tags": ["function", "paths"], "metadata": {"params": 1}},
+    {"id": "describeLocalInstancePaths", "nodeType": "function", "label": "Describe local instance paths", "title": "describeLocalInstancePaths", "description": "Returns all standard paths for an instance (config, db, storage, logs, etc)", "file": "home.ts", "language": "typescript", "tags": ["function", "paths"], "metadata": {"params": 1}},
+    {"id": "normalizeHostnameInput", "nodeType": "function", "label": "Normalize hostname input", "title": "normalizeHostnameInput", "description": "Parses and normalizes hostname from URL or plain hostname string", "file": "hostnames.ts", "language": "typescript", "tags": ["function", "validation"], "metadata": {"params": 1}},
+    {"id": "parseHostnameCsv", "nodeType": "function", "label": "Parse hostname CSV", "title": "parseHostnameCsv", "description": "Parses comma-separated hostnames into array with deduplication", "file": "hostnames.ts", "language": "typescript", "tags": ["function", "parsing"], "metadata": {"params": 1}},
+    {"id": "PaperclipConfig", "nodeType": "type", "label": "Paperclip config type", "title": "PaperclipConfig", "description": "Complete configuration schema (re-exported from @paperclipai/shared)", "file": "schema.ts", "language": "typescript", "tags": ["type", "config"], "metadata": {"properties": 9}},
+    {"id": "EnsureSecretsKeyResult", "nodeType": "type", "label": "Ensure secrets key result", "title": "EnsureSecretsKeyResult", "description": "Result union type for secrets key file creation", "file": "secrets-key.ts", "language": "typescript", "tags": ["type", "result"], "metadata": {"variants": 4}},
+    {"id": "ensureLocalSecretsKeyFile", "nodeType": "function", "label": "Ensure local secrets key file", "title": "ensureLocalSecretsKeyFile", "description": "Creates or verifies local encrypted secrets key file", "file": "secrets-key.ts", "language": "typescript", "tags": ["function", "security"], "metadata": {"params": 2}},
+    {"id": "resolveConfigPath", "nodeType": "function", "label": "Resolve config path", "title": "resolveConfigPath", "description": "Finds config.json by walking ancestors, env var, or default path", "file": "store.ts", "language": "typescript", "tags": ["function", "discovery"], "metadata": {"params": 1}},
+    {"id": "readConfig", "nodeType": "function", "label": "Read config", "title": "readConfig", "description": "Reads and validates config file with legacy format migration", "file": "store.ts", "language": "typescript", "tags": ["function", "io"], "metadata": {"params": 1}},
+    {"id": "writeConfig", "nodeType": "function", "label": "Write config", "title": "writeConfig", "description": "Writes config with backup of previous version", "file": "store.ts", "language": "typescript", "tags": ["function", "io"], "metadata": {"params": 2}},
+    {"id": "configExists", "nodeType": "function", "label": "Config exists", "title": "configExists", "description": "Checks if config file exists at resolved path", "file": "store.ts", "language": "typescript", "tags": ["function", "check"], "metadata": {"params": 1}},
+    {"id": "loadPaperclipEnvFile", "nodeType": "function", "label": "Load Paperclip env file", "title": "loadPaperclipEnvFile", "description": "Loads .env file adjacent to config using dotenv", "file": "env.ts", "language": "typescript", "tags": ["function", "environment"], "metadata": {"params": 1}},
+    {"id": "ensureAgentJwtSecret", "nodeType": "function", "label": "Ensure agent JWT secret", "title": "ensureAgentJwtSecret", "description": "Creates or retrieves PAPERCLIP_AGENT_JWT_SECRET from env or .env file", "file": "env.ts", "language": "typescript", "tags": ["function", "security"], "metadata": {"params": 1}},
+    {"id": "mergePaperclipEnvEntries", "nodeType": "function", "label": "Merge Paperclip env entries", "title": "mergePaperclipEnvEntries", "description": "Merges new env entries with existing .env file", "file": "env.ts", "language": "typescript", "tags": ["function", "io"], "metadata": {"params": 2}}
+  ],
+  "graphEdges": [
+    {"id": "e1", "source": "applyDataDirOverride", "target": "resolvePaperclipInstanceId", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e2", "source": "applyDataDirOverride", "target": "resolveDefaultConfigPath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e3", "source": "applyDataDirOverride", "target": "resolveDefaultContextPath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e4", "source": "resolveConfigPath", "target": "resolveDefaultConfigPath", "edgeType": "calls", "label": "fallback", "bidirectional": false},
+    {"id": "e5", "source": "resolvePaperclipInstanceRoot", "target": "resolvePaperclipHomeDir", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e6", "source": "describeLocalInstancePaths", "target": "resolvePaperclipInstanceId", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e7", "source": "describeLocalInstancePaths", "target": "resolvePaperclipInstanceRoot", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e8", "source": "readConfig", "target": "resolveConfigPath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e9", "source": "readConfig", "target": "PaperclipConfig", "edgeType": "validates", "label": "validates against", "bidirectional": false},
+    {"id": "e10", "source": "writeConfig", "target": "resolveConfigPath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e11", "source": "configExists", "target": "resolveConfigPath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e12", "source": "loadPaperclipEnvFile", "target": "loadAgentJwtEnvFile", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e13", "source": "ensureAgentJwtSecret", "target": "readAgentJwtSecretFromEnv", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e14", "source": "ensureAgentJwtSecret", "target": "readAgentJwtSecretFromEnvFile", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e15", "source": "ensureLocalSecretsKeyFile", "target": "EnsureSecretsKeyResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e16", "source": "mergePaperclipEnvEntries", "target": "readPaperclipEnvEntries", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e17", "source": "mergePaperclipEnvEntries", "target": "writePaperclipEnvEntries", "edgeType": "calls", "label": "calls", "bidirectional": false}
+  ],
+  "summary": {
+    "filesAnalyzed": 7,
+    "nodesGenerated": 22,
+    "edgesGenerated": 17,
+    "configFunctions": 22,
+    "supportingTypes": 5,
+    "totalLinesCovered": 14344,
+    "avgFileSize": 2050
+  }
+}

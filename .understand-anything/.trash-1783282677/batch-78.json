@@ -1,0 +1,286 @@
+{
+  "batchIndex": 78,
+  "nodes": [
+    {
+      "id": "batch-78-file-0",
+      "type": "component",
+      "name": "Activity.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Activity.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 141,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-1",
+      "type": "component",
+      "name": "AgentDetail.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/AgentDetail.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 10,
+      "sizeLines": 2507,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-2",
+      "type": "component",
+      "name": "Agents.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Agents.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 4.1,
+      "sizeLines": 410,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-3",
+      "type": "component",
+      "name": "ApprovalDetail.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/ApprovalDetail.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 3.6,
+      "sizeLines": 363,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-4",
+      "type": "component",
+      "name": "Approvals.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Approvals.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 133,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-5",
+      "type": "component",
+      "name": "Auth.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Auth.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.6,
+      "sizeLines": 163,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-6",
+      "type": "component",
+      "name": "BoardClaim.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/BoardClaim.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 126,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-7",
+      "type": "component",
+      "name": "Companies.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Companies.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 3,
+      "sizeLines": 298,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-8",
+      "type": "component",
+      "name": "CompanySettings.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/CompanySettings.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 5.5,
+      "sizeLines": 551,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-9",
+      "type": "component",
+      "name": "Costs.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Costs.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 2.5,
+      "sizeLines": 245,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-10",
+      "type": "component",
+      "name": "Dashboard.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Dashboard.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 3.6,
+      "sizeLines": 360,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-11",
+      "type": "component",
+      "name": "DesignGuide.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/DesignGuide.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 10,
+      "sizeLines": 1331,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-12",
+      "type": "component",
+      "name": "GoalDetail.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/GoalDetail.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 2,
+      "sizeLines": 197,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-13",
+      "type": "component",
+      "name": "Goals.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Goals.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 64,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-14",
+      "type": "component",
+      "name": "Inbox.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Inbox.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 8.7,
+      "sizeLines": 870,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-15",
+      "type": "component",
+      "name": "InviteLanding.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/InviteLanding.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 3.2,
+      "sizeLines": 318,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-16",
+      "type": "component",
+      "name": "IssueDetail.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/IssueDetail.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 9.4,
+      "sizeLines": 942,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-17",
+      "type": "component",
+      "name": "Issues.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Issues.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 115,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-18",
+      "type": "component",
+      "name": "MyIssues.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/MyIssues.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 76,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-78-file-19",
+      "type": "component",
+      "name": "NewAgent.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/NewAgent.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 3.4,
+      "sizeLines": 335,
+      "language": "TypeScript JSX"
+    }
+  ],
+  "edges": []
+}

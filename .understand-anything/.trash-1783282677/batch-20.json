@@ -1,0 +1,78 @@
+{
+  "batchIndex": 20,
+  "nodes": [
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/activity-log.md",
+      "label": "activity-log.md",
+      "path": "agents/task-runner/docs/guides/board-operator/activity-log.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 56
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/approvals.md",
+      "label": "approvals.md",
+      "path": "agents/task-runner/docs/guides/board-operator/approvals.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 53
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/costs-and-budgets.md",
+      "label": "costs-and-budgets.md",
+      "path": "agents/task-runner/docs/guides/board-operator/costs-and-budgets.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 71
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/creating-a-company.md",
+      "label": "creating-a-company.md",
+      "path": "agents/task-runner/docs/guides/board-operator/creating-a-company.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 56
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/dashboard.md",
+      "label": "dashboard.md",
+      "path": "agents/task-runner/docs/guides/board-operator/dashboard.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 37
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/managing-agents.md",
+      "label": "managing-agents.md",
+      "path": "agents/task-runner/docs/guides/board-operator/managing-agents.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 77
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/managing-tasks.md",
+      "label": "managing-tasks.md",
+      "path": "agents/task-runner/docs/guides/board-operator/managing-tasks.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 56
+    },
+    {
+      "id": "agents/task-runner/docs/guides/board-operator/org-structure.md",
+      "label": "org-structure.md",
+      "path": "agents/task-runner/docs/guides/board-operator/org-structure.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 38
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "totalNodes": 8,
+    "totalEdges": 0,
+    "filesProcessed": 8,
+    "tsFilesProcessed": 0,
+    "exportsExtracted": 0,
+    "importsExtracted": 0
+  }
+}

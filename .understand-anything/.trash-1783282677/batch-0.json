@@ -1,0 +1,713 @@
+{
+  "batchIndex": 0,
+  "nodes": [
+    {
+      "id": "db_schema_root",
+      "type": "module",
+      "name": "Task Runner Database Schema",
+      "filePath": "agents/task-runner/packages/db/src/migrations",
+      "summary": "Complete PostgreSQL schema for task runner agent execution platform with company, agent, project, issue, and cost tracking",
+      "tags": ["database", "schema", "core"],
+      "complexity": "high"
+    },
+    {
+      "id": "table_companies",
+      "type": "sql_table",
+      "name": "companies",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Root company entity storing organization information, budgets, billing, and configuration",
+      "tags": ["core", "multi-tenant", "billing", "configuration"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_agents",
+      "type": "sql_table",
+      "name": "agents",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "AI agent entities with role, status, capabilities, budget tracking, and organizational hierarchy",
+      "tags": ["core", "agent-management", "runtime", "hierarchy"],
+      "complexity": "high"
+    },
+    {
+      "id": "table_agent_api_keys",
+      "type": "sql_table",
+      "name": "agent_api_keys",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "API key management for agents with hashing and revocation support",
+      "tags": ["security", "authentication", "api-keys"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_agent_runtime_state",
+      "type": "sql_table",
+      "name": "agent_runtime_state",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0001_fast_northstar.sql",
+      "summary": "Runtime state tracking for agents including session data, token usage, and error logs",
+      "tags": ["runtime", "state-management", "monitoring", "token-tracking"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_agent_wakeup_requests",
+      "type": "sql_table",
+      "name": "agent_wakeup_requests",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0001_fast_northstar.sql",
+      "summary": "Queue for waking up agents with idempotency and coalescing support",
+      "tags": ["queue", "execution", "triggering"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_agent_task_sessions",
+      "type": "sql_table",
+      "name": "agent_task_sessions",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0007_new_quentin_quire.sql",
+      "summary": "Task session tracking for long-running agent tasks across different adapter types",
+      "tags": ["sessions", "task-execution", "adapter-specific"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_agent_config_revisions",
+      "type": "sql_table",
+      "name": "agent_config_revisions",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0006_overjoyed_mister_sinister.sql",
+      "summary": "Audit trail of agent configuration changes with rollback support",
+      "tags": ["audit", "configuration", "versioning"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_heartbeat_runs",
+      "type": "sql_table",
+      "name": "heartbeat_runs",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Agent execution run tracking with status, timing, error handling, and result storage",
+      "tags": ["execution", "logging", "monitoring"],
+      "complexity": "high"
+    },
+    {
+      "id": "table_heartbeat_run_events",
+      "type": "sql_table",
+      "name": "heartbeat_run_events",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0001_fast_northstar.sql",
+      "summary": "Streamed event log for agent runs with messaging and payload support",
+      "tags": ["logging", "events", "streaming"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_activity_log",
+      "type": "sql_table",
+      "name": "activity_log",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Audit log of all system actions with actor tracking and entity references",
+      "tags": ["audit", "logging", "compliance"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_goals",
+      "type": "sql_table",
+      "name": "goals",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Hierarchical goal tracking with ownership and project association",
+      "tags": ["hierarchy", "project-management", "ownership"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_projects",
+      "type": "sql_table",
+      "name": "projects",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Project definition with goals, leads, timelines, and workspace configuration",
+      "tags": ["project-management", "planning", "execution"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_project_goals",
+      "type": "sql_table",
+      "name": "project_goals",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0011_windy_corsair.sql",
+      "summary": "Junction table linking projects to multiple goals",
+      "tags": ["relationships", "many-to-many"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_project_workspaces",
+      "type": "sql_table",
+      "name": "project_workspaces",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0018_flat_sleepwalker.sql",
+      "summary": "Workspace configuration for projects with repository references and directory settings",
+      "tags": ["workspace", "repository", "file-system"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_workspace_runtime_services",
+      "type": "sql_table",
+      "name": "workspace_runtime_services",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0026_lying_pete_wisdom.sql",
+      "summary": "Runtime service lifecycle management for workspace services with health monitoring",
+      "tags": ["runtime", "services", "lifecycle", "monitoring"],
+      "complexity": "high"
+    },
+    {
+      "id": "table_issues",
+      "type": "sql_table",
+      "name": "issues",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Issue tracking with assignment, project/goal linking, execution tracking, and workflow states",
+      "tags": ["issue-tracking", "workflow", "assignment", "execution"],
+      "complexity": "high"
+    },
+    {
+      "id": "table_issue_comments",
+      "type": "sql_table",
+      "name": "issue_comments",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Comments on issues with author tracking from agents or users",
+      "tags": ["comments", "collaboration"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_issue_attachments",
+      "type": "sql_table",
+      "name": "issue_attachments",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0010_stale_justin_hammer.sql",
+      "summary": "Attachment association for issues with assets and optional comment linking",
+      "tags": ["attachments", "assets"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_issue_approvals",
+      "type": "sql_table",
+      "name": "issue_approvals",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0006_overjoyed_mister_sinister.sql",
+      "summary": "Linking issues to approval requests for governance workflows",
+      "tags": ["governance", "approvals", "many-to-many"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_issue_labels",
+      "type": "sql_table",
+      "name": "issue_labels",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0018_flat_sleepwalker.sql",
+      "summary": "Tagging system for issues using company-defined labels",
+      "tags": ["tagging", "categorization", "many-to-many"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_labels",
+      "type": "sql_table",
+      "name": "labels",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0018_flat_sleepwalker.sql",
+      "summary": "Label definitions per company with color coding for visual identification",
+      "tags": ["categorization", "configuration"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_issue_read_states",
+      "type": "sql_table",
+      "name": "issue_read_states",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0025_nasty_salo.sql",
+      "summary": "Tracks which users have read which issues for notification and UI purposes",
+      "tags": ["notifications", "user-state", "ui-state"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_approvals",
+      "type": "sql_table",
+      "name": "approvals",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "Approval requests with decision workflow and agent/user participation",
+      "tags": ["governance", "approval-workflow", "decision-making"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_approval_comments",
+      "type": "sql_table",
+      "name": "approval_comments",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0005_chief_luke_cage.sql",
+      "summary": "Comments on approval requests with author tracking",
+      "tags": ["comments", "collaboration"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_cost_events",
+      "type": "sql_table",
+      "name": "cost_events",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql",
+      "summary": "LLM model usage tracking per agent/project/goal with cost calculation",
+      "tags": ["billing", "cost-tracking", "usage", "monitoring"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_assets",
+      "type": "sql_table",
+      "name": "assets",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0010_stale_justin_hammer.sql",
+      "summary": "File storage metadata with provider references, checksums, and creator tracking",
+      "tags": ["file-storage", "assets", "object-store"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_company_secrets",
+      "type": "sql_table",
+      "name": "company_secrets",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0009_fast_jackal.sql",
+      "summary": "Secret storage with versioning and encryption provider support",
+      "tags": ["security", "secrets", "configuration"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_company_secret_versions",
+      "type": "sql_table",
+      "name": "company_secret_versions",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0009_fast_jackal.sql",
+      "summary": "Version history for secrets with material storage and revocation",
+      "tags": ["security", "versioning", "audit"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_company_memberships",
+      "type": "sql_table",
+      "name": "company_memberships",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "Membership tracking for users and agents within companies with roles",
+      "tags": ["access-control", "permissions", "membership"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_principal_permission_grants",
+      "type": "sql_table",
+      "name": "principal_permission_grants",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "Fine-grained permission assignment to users and agents with scoped contexts",
+      "tags": ["security", "permissions", "access-control"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_user",
+      "type": "sql_table",
+      "name": "user",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "User account information with email verification and metadata",
+      "tags": ["authentication", "users"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_account",
+      "type": "sql_table",
+      "name": "account",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "OAuth account linking with token storage and provider integration",
+      "tags": ["authentication", "oauth", "external-providers"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_session",
+      "type": "sql_table",
+      "name": "session",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "User session tracking with expiration and request metadata",
+      "tags": ["authentication", "sessions"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_verification",
+      "type": "sql_table",
+      "name": "verification",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "Email/identity verification tokens with expiration",
+      "tags": ["authentication", "email-verification"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_instance_user_roles",
+      "type": "sql_table",
+      "name": "instance_user_roles",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "System-level roles for users (e.g., instance admin)",
+      "tags": ["permissions", "system-roles"],
+      "complexity": "low"
+    },
+    {
+      "id": "table_invites",
+      "type": "sql_table",
+      "name": "invites",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "Invitation system for company and agent joining with token expiration",
+      "tags": ["onboarding", "invitations"],
+      "complexity": "medium"
+    },
+    {
+      "id": "table_join_requests",
+      "type": "sql_table",
+      "name": "join_requests",
+      "filePath": "agents/task-runner/packages/db/src/migrations/0014_many_mikhail_rasputin.sql",
+      "summary": "Join request workflow for users requesting company/agent access",
+      "tags": ["onboarding", "approval-workflow"],
+      "complexity": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "db_schema_root",
+      "target": "table_companies",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "root entity for all multi-tenant data"
+    },
+    {
+      "source": "db_schema_root",
+      "target": "table_agents",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "core execution entity"
+    },
+    {
+      "source": "db_schema_root",
+      "target": "table_issues",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "core work tracking"
+    },
+    {
+      "source": "db_schema_root",
+      "target": "table_projects",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "core project organization"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_agents",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_projects",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_issues",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_goals",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_approvals",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_heartbeat_runs",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_cost_events",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_company_secrets",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_companies",
+      "target": "table_company_memberships",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "company_id foreign key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_agent_api_keys",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_agent_runtime_state",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id primary key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_agent_wakeup_requests",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_agent_task_sessions",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_agent_config_revisions",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key with cascade"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_heartbeat_runs",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_activity_log",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key"
+    },
+    {
+      "source": "table_agents",
+      "target": "table_cost_events",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "agent_id foreign key"
+    },
+    {
+      "source": "table_heartbeat_runs",
+      "target": "table_heartbeat_run_events",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "run_id foreign key"
+    },
+    {
+      "source": "table_heartbeat_runs",
+      "target": "table_activity_log",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "run_id foreign key"
+    },
+    {
+      "source": "table_heartbeat_runs",
+      "target": "table_agent_wakeup_requests",
+      "type": "implements",
+      "weight": 1.0,
+      "label": "wakeup_request_id foreign key"
+    },
+    {
+      "source": "table_goals",
+      "target": "table_projects",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "project_goals junction table"
+    },
+    {
+      "source": "table_goals",
+      "target": "table_issues",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "goal_id foreign key"
+    },
+    {
+      "source": "table_projects",
+      "target": "table_issues",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "project_id foreign key"
+    },
+    {
+      "source": "table_projects",
+      "target": "table_project_workspaces",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "project_id foreign key with cascade"
+    },
+    {
+      "source": "table_project_workspaces",
+      "target": "table_workspace_runtime_services",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "project_workspace_id foreign key"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_issue_comments",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "issue_id foreign key with cascade"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_issue_attachments",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "issue_id foreign key with cascade"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_issue_approvals",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "issue_id foreign key with cascade"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_issue_labels",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "issue_id foreign key with cascade"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_issue_read_states",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "issue_id foreign key"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_cost_events",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "issue_id foreign key"
+    },
+    {
+      "source": "table_issues",
+      "target": "table_workspace_runtime_services",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "issue_id foreign key"
+    },
+    {
+      "source": "table_labels",
+      "target": "table_issue_labels",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "label_id foreign key with cascade"
+    },
+    {
+      "source": "table_assets",
+      "target": "table_issue_attachments",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "asset_id foreign key with cascade"
+    },
+    {
+      "source": "table_approvals",
+      "target": "table_approval_comments",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "approval_id foreign key"
+    },
+    {
+      "source": "table_approvals",
+      "target": "table_issue_approvals",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "approval_id foreign key with cascade"
+    },
+    {
+      "source": "table_company_secrets",
+      "target": "table_company_secret_versions",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "secret_id foreign key with cascade"
+    },
+    {
+      "source": "table_user",
+      "target": "table_account",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "user_id foreign key with cascade"
+    },
+    {
+      "source": "table_user",
+      "target": "table_session",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "user_id foreign key with cascade"
+    },
+    {
+      "source": "table_invites",
+      "target": "table_join_requests",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "invite_id foreign key"
+    },
+    {
+      "source": "table_join_requests",
+      "target": "table_agents",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "created_agent_id foreign key"
+    },
+    {
+      "source": "table_agent_config_revisions",
+      "target": "table_agents",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "created_by_agent_id tracks modifications"
+    },
+    {
+      "source": "table_agent_task_sessions",
+      "target": "table_heartbeat_runs",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "last_run_id references execution"
+    },
+    {
+      "source": "table_workspace_runtime_services",
+      "target": "table_agents",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "owner_agent_id tracks ownership"
+    },
+    {
+      "source": "table_workspace_runtime_services",
+      "target": "table_heartbeat_runs",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "started_by_run_id references initiating run"
+    },
+    {
+      "source": "table_issue_attachments",
+      "target": "table_issue_comments",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "optional issue_comment_id reference"
+    },
+    {
+      "source": "table_cost_events",
+      "target": "table_projects",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "project_id tracks attribution"
+    },
+    {
+      "source": "table_cost_events",
+      "target": "table_goals",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "goal_id tracks attribution"
+    }
+  ]
+}

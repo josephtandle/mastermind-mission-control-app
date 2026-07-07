@@ -1,0 +1,307 @@
+{
+  "batchIndex": 46,
+  "nodes": [
+    {
+      "id": "batch-46-file-0",
+      "type": "source",
+      "name": "activity_log.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/activity_log.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 27,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-1",
+      "type": "source",
+      "name": "agent_api_keys.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/agent_api_keys.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 22,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-2",
+      "type": "source",
+      "name": "agent_config_revisions.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/agent_config_revisions.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 29,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-3",
+      "type": "source",
+      "name": "agent_runtime_state.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/agent_runtime_state.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 29,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-4",
+      "type": "source",
+      "name": "agent_task_sessions.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/agent_task_sessions.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 40,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-5",
+      "type": "source",
+      "name": "agent_wakeup_requests.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/agent_wakeup_requests.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 41,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-6",
+      "type": "source",
+      "name": "agents.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/agents.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 41,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-7",
+      "type": "source",
+      "name": "approval_comments.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/approval_comments.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 27,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-8",
+      "type": "source",
+      "name": "approvals.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/approvals.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 29,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-9",
+      "type": "source",
+      "name": "assets.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/assets.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 27,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-10",
+      "type": "source",
+      "name": "auth.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/auth.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-11",
+      "type": "source",
+      "name": "companies.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/companies.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 25,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-12",
+      "type": "source",
+      "name": "company_memberships.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/company_memberships.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-13",
+      "type": "source",
+      "name": "company_secret_versions.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/company_secret_versions.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 24,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-14",
+      "type": "source",
+      "name": "company_secrets.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/company_secrets.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 26,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-15",
+      "type": "source",
+      "name": "cost_events.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/cost_events.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 35,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-16",
+      "type": "source",
+      "name": "goals.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/goals.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-17",
+      "type": "source",
+      "name": "heartbeat_run_events.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/heartbeat_run_events.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 29,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-18",
+      "type": "source",
+      "name": "heartbeat_runs.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/heartbeat_runs.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 46,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-46-file-19",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/db/src/schema/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 35,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

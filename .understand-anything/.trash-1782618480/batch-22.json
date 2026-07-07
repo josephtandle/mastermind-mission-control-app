@@ -1,0 +1,218 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/api/stripe/coupons/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/stripe/coupons/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 119,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/api/stripe/dashboard/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/stripe/dashboard/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 258,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/api/stripe/promotions/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/stripe/promotions/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 121,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/stripe/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/stripe/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 129,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/CouponManager.tsx",
+      "label": "CouponManager.tsx",
+      "path": "mission-control/app/app/stripe/sections/CouponManager.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 576,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/PaymentLinks.tsx",
+      "label": "PaymentLinks.tsx",
+      "path": "mission-control/app/app/stripe/sections/PaymentLinks.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 292,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/PayoutReport.tsx",
+      "label": "PayoutReport.tsx",
+      "path": "mission-control/app/app/stripe/sections/PayoutReport.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 160,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/PromoCodeManager.tsx",
+      "label": "PromoCodeManager.tsx",
+      "path": "mission-control/app/app/stripe/sections/PromoCodeManager.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 556,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/RecentCharges.tsx",
+      "label": "RecentCharges.tsx",
+      "path": "mission-control/app/app/stripe/sections/RecentCharges.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 150,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/RevenueChart.tsx",
+      "label": "RevenueChart.tsx",
+      "path": "mission-control/app/app/stripe/sections/RevenueChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 213,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/stripe/sections/StatCards.tsx",
+      "label": "StatCards.tsx",
+      "path": "mission-control/app/app/stripe/sections/StatCards.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 121,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useStripeData.ts",
+      "label": "useStripeData.ts",
+      "path": "mission-control/hooks/useStripeData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 50,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/stripe-types.ts",
+      "label": "stripe-types.ts",
+      "path": "mission-control/lib/stripe-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 108,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/api/stripe/coupons/route.ts",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/api/stripe/dashboard/route.ts",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/api/stripe/promotions/route.ts",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/app/app/stripe/sections/CouponManager.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/app/app/stripe/sections/PaymentLinks.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/app/app/stripe/sections/PayoutReport.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/app/app/stripe/sections/PromoCodeManager.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/app/app/stripe/sections/RecentCharges.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/app/app/stripe/sections/StatCards.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/hooks/useStripeData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/page.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/CouponManager.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/PaymentLinks.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/PayoutReport.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/PromoCodeManager.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/RecentCharges.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/RevenueChart.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/stripe/sections/StatCards.tsx",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useStripeData.ts",
+      "target": "mission-control/lib/stripe-types.ts",
+      "type": "imports"
+    }
+  ]
+}

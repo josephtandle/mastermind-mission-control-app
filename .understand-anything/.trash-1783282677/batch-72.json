@@ -1,0 +1,306 @@
+{
+  "batchIndex": 72,
+  "nodes": [
+    {
+      "id": "batch-72-file-0",
+      "type": "component",
+      "name": "GoalTree.tsx",
+      "filePath": "agents/task-runner/ui/src/components/GoalTree.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 118,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-1",
+      "type": "component",
+      "name": "Identity.tsx",
+      "filePath": "agents/task-runner/ui/src/components/Identity.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 40,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-2",
+      "type": "component",
+      "name": "InlineEditor.tsx",
+      "filePath": "agents/task-runner/ui/src/components/InlineEditor.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 150,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-3",
+      "type": "component",
+      "name": "InlineEntitySelector.tsx",
+      "filePath": "agents/task-runner/ui/src/components/InlineEntitySelector.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 2.1,
+      "sizeLines": 207,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-4",
+      "type": "component",
+      "name": "IssueProperties.tsx",
+      "filePath": "agents/task-runner/ui/src/components/IssueProperties.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 6.1,
+      "sizeLines": 610,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-5",
+      "type": "component",
+      "name": "IssuesList.tsx",
+      "filePath": "agents/task-runner/ui/src/components/IssuesList.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 7.6,
+      "sizeLines": 757,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-6",
+      "type": "component",
+      "name": "KanbanBoard.tsx",
+      "filePath": "agents/task-runner/ui/src/components/KanbanBoard.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 2.8,
+      "sizeLines": 275,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-7",
+      "type": "component",
+      "name": "Layout.tsx",
+      "filePath": "agents/task-runner/ui/src/components/Layout.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 3.6,
+      "sizeLines": 357,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-8",
+      "type": "component",
+      "name": "LiveRunWidget.tsx",
+      "filePath": "agents/task-runner/ui/src/components/LiveRunWidget.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 6.3,
+      "sizeLines": 626,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-9",
+      "type": "component",
+      "name": "MarkdownBody.tsx",
+      "filePath": "agents/task-runner/ui/src/components/MarkdownBody.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.6,
+      "sizeLines": 162,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-10",
+      "type": "component",
+      "name": "MarkdownEditor.tsx",
+      "filePath": "agents/task-runner/ui/src/components/MarkdownEditor.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 6.3,
+      "sizeLines": 626,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-11",
+      "type": "component",
+      "name": "MetricCard.tsx",
+      "filePath": "agents/task-runner/ui/src/components/MetricCard.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 54,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-12",
+      "type": "component",
+      "name": "MobileBottomNav.tsx",
+      "filePath": "agents/task-runner/ui/src/components/MobileBottomNav.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 124,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-13",
+      "type": "component",
+      "name": "NewAgentDialog.tsx",
+      "filePath": "agents/task-runner/ui/src/components/NewAgentDialog.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 2.2,
+      "sizeLines": 216,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-14",
+      "type": "component",
+      "name": "NewGoalDialog.tsx",
+      "filePath": "agents/task-runner/ui/src/components/NewGoalDialog.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 2.8,
+      "sizeLines": 283,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-15",
+      "type": "component",
+      "name": "NewIssueDialog.tsx",
+      "filePath": "agents/task-runner/ui/src/components/NewIssueDialog.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 10,
+      "sizeLines": 1054,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-16",
+      "type": "component",
+      "name": "NewProjectDialog.tsx",
+      "filePath": "agents/task-runner/ui/src/components/NewProjectDialog.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 4.8,
+      "sizeLines": 478,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-17",
+      "type": "component",
+      "name": "OnboardingWizard.tsx",
+      "filePath": "agents/task-runner/ui/src/components/OnboardingWizard.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 10,
+      "sizeLines": 1222,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-18",
+      "type": "component",
+      "name": "OpenCodeLogoIcon.tsx",
+      "filePath": "agents/task-runner/ui/src/components/OpenCodeLogoIcon.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 23,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-72-file-19",
+      "type": "component",
+      "name": "PageSkeleton.tsx",
+      "filePath": "agents/task-runner/ui/src/components/PageSkeleton.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 181,
+      "language": "TypeScript JSX"
+    }
+  ],
+  "edges": []
+}

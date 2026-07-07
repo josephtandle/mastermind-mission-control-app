@@ -1,0 +1,447 @@
+{
+  "batchIndex": 84,
+  "nodes": [
+    {
+      "id": "batch-84-file-0",
+      "type": "docs",
+      "name": "component-index.md",
+      "filePath": "agents/task-runner/.claude/skills/design-guide/references/component-index.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.2,
+      "sizeLines": 324,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-1",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/.claude/skills/design-guide/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.5,
+      "sizeLines": 352,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-2",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 5,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-3",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/cli/src/adapters/http/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 8,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-4",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/cli/src/adapters/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 3,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-5",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 5,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-6",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/cli/src/adapters/process/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 8,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-7",
+      "type": "source",
+      "name": "registry.ts",
+      "filePath": "agents/task-runner/cli/src/adapters/registry.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 57,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-8",
+      "type": "source",
+      "name": "context.ts",
+      "filePath": "agents/task-runner/cli/src/client/context.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 176,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-9",
+      "type": "source",
+      "name": "http.ts",
+      "filePath": "agents/task-runner/cli/src/client/http.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 151,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-10",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/cli/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.6,
+      "sizeLines": 156,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-11",
+      "type": "docs",
+      "name": "issue-worktree-support.md",
+      "filePath": "agents/task-runner/doc/experimental/issue-worktree-support.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 63,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-12",
+      "type": "docs",
+      "name": "humans-and-permissions-implementation.md",
+      "filePath": "agents/task-runner/doc/plan/humans-and-permissions-implementation.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 6.4,
+      "sizeLines": 644,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-13",
+      "type": "docs",
+      "name": "humans-and-permissions.md",
+      "filePath": "agents/task-runner/doc/plan/humans-and-permissions.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.2,
+      "sizeLines": 422,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-14",
+      "type": "docs",
+      "name": "ideas-from-opencode.md",
+      "filePath": "agents/task-runner/doc/plugins/ideas-from-opencode.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 10,
+      "sizeLines": 1739,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-15",
+      "type": "docs",
+      "name": "PLUGIN_SPEC.md",
+      "filePath": "agents/task-runner/doc/plugins/PLUGIN_SPEC.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 10,
+      "sizeLines": 1618,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-16",
+      "type": "docs",
+      "name": "agents-runtime.md",
+      "filePath": "agents/task-runner/docs/agents-runtime.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 176,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-17",
+      "type": "config",
+      "name": "docs.json",
+      "filePath": "agents/task-runner/docs/docs.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 143,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-84-file-18",
+      "type": "docs",
+      "name": "openclaw-docker-setup.md",
+      "filePath": "agents/task-runner/docs/guides/openclaw-docker-setup.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.5,
+      "sizeLines": 350,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-19",
+      "type": "docs",
+      "name": "agent-config-ui.md",
+      "filePath": "agents/task-runner/docs/specs/agent-config-ui.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs",
+        "testing"
+      ],
+      "complexity": 2.9,
+      "sizeLines": 287,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-20",
+      "type": "docs",
+      "name": "cliphub-plan.md",
+      "filePath": "agents/task-runner/docs/specs/cliphub-plan.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs",
+        "testing"
+      ],
+      "complexity": 5.3,
+      "sizeLines": 525,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-84-file-21",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/packages/adapters/claude-local/src/cli/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 100,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-22",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/claude-local/src/cli/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 2,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-23",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/claude-local/src/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 38,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-84-file-24",
+      "type": "source",
+      "name": "format-event.ts",
+      "filePath": "agents/task-runner/packages/adapters/codex-local/src/cli/format-event.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 2.3,
+      "sizeLines": 230,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": [
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-2",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-3",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-4",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-5",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-6",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-7",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-8",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-9",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-10",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-21",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-22",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-23",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-84-file-17",
+      "target": "batch-84-file-24",
+      "type": "configures",
+      "weight": 0.6
+    }
+  ]
+}

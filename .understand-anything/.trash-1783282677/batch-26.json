@@ -1,0 +1,99 @@
+{
+  "batchIndex": 26,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts",
+      "label": "build-config.ts",
+      "path": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 101
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts#buildClaudeLocalConfig",
+      "label": "buildClaudeLocalConfig",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts",
+      "label": "index.ts",
+      "path": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 3
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts#parseClaudeStdoutLine",
+      "label": "parseClaudeStdoutLine",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts#buildClaudeLocalConfig",
+      "label": "buildClaudeLocalConfig",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts",
+      "label": "parse-stdout.ts",
+      "path": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 139
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts#parseClaudeStdoutLine",
+      "label": "parseClaudeStdoutLine",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts",
+      "target": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts#buildClaudeLocalConfig",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts",
+      "target": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts#parseClaudeStdoutLine",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts",
+      "target": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts#buildClaudeLocalConfig",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts",
+      "target": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts#parseClaudeStdoutLine",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    }
+  ],
+  "metadata": {
+    "totalNodes": 7,
+    "totalEdges": 6,
+    "filesProcessed": 3,
+    "tsFilesProcessed": 3,
+    "exportsExtracted": 4,
+    "importsExtracted": 2
+  }
+}

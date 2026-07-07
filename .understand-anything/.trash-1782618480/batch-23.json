@@ -1,0 +1,176 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/api/scrooge/dashboard/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/scrooge/dashboard/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 326,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/scrooge/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 130,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/sections/ActivityOverview.tsx",
+      "label": "ActivityOverview.tsx",
+      "path": "mission-control/app/app/scrooge/sections/ActivityOverview.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 98,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/sections/AttributionOverview.tsx",
+      "label": "AttributionOverview.tsx",
+      "path": "mission-control/app/app/scrooge/sections/AttributionOverview.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 87,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/sections/CostTrendChart.tsx",
+      "label": "CostTrendChart.tsx",
+      "path": "mission-control/app/app/scrooge/sections/CostTrendChart.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 58,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/sections/ModelBreakdown.tsx",
+      "label": "ModelBreakdown.tsx",
+      "path": "mission-control/app/app/scrooge/sections/ModelBreakdown.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 178,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/sections/ResearchSuggestions.tsx",
+      "label": "ResearchSuggestions.tsx",
+      "path": "mission-control/app/app/scrooge/sections/ResearchSuggestions.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 96,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/scrooge/sections/StatCards.tsx",
+      "label": "StatCards.tsx",
+      "path": "mission-control/app/app/scrooge/sections/StatCards.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 67,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useScroogeData.ts",
+      "label": "useScroogeData.ts",
+      "path": "mission-control/hooks/useScroogeData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 50,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/scrooge-types.ts",
+      "label": "scrooge-types.ts",
+      "path": "mission-control/lib/scrooge-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 139,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/api/scrooge/dashboard/route.ts",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/app/app/scrooge/sections/ActivityOverview.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/app/app/scrooge/sections/AttributionOverview.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/app/app/scrooge/sections/CostTrendChart.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/app/app/scrooge/sections/ModelBreakdown.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/app/app/scrooge/sections/ResearchSuggestions.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/app/app/scrooge/sections/StatCards.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/hooks/useScroogeData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/page.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/sections/ActivityOverview.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/sections/AttributionOverview.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/sections/CostTrendChart.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/sections/ModelBreakdown.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/sections/ResearchSuggestions.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/scrooge/sections/StatCards.tsx",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useScroogeData.ts",
+      "target": "mission-control/lib/scrooge-types.ts",
+      "type": "imports"
+    }
+  ]
+}

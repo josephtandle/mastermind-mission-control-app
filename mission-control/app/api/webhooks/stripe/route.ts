@@ -3,6 +3,7 @@ import path from "path";
 import { exec } from "child_process";
 import { promisify } from "util";
 import os from "os";
+import { sendTelegramViaSharedSender } from "../../_telegram";
 
 const WORKSPACE_ROOT = path.join(os.homedir(), ".myos", "workspace");
 const {
@@ -40,7 +41,15 @@ async function alertTeamMember(name: string, email: string, plan: string) {
   const chatId = process.env.TEAM_ALERT_TELEGRAM_ID;
   if (!token || !chatId) return;
   const text = `🎉 New Mastermind participant!\\n\\nName: ${name}\\nEmail: ${email}\\nPlan: ${plan}\\n\\nPlease add them to the community.`;
-  await execAsync(`curl -s -X POST "https://api.telegram.org/bot${token}/sendMessage" -H "Content-Type: application/json" -d '{"chat_id":"${chatId}","text":"${text}"}'`);
+  await sendTelegramViaSharedSender({
+    botToken: token,
+    chatId,
+    text,
+    agentId: "mastermind-stripe-webhook",
+    messageType: "alert",
+    sourcePath: "projects/mastermind-mission-control/mission-control/app/api/webhooks/stripe/route.ts",
+    plainText: true,
+  });
 }
 
 export async function POST(req: NextRequest) {

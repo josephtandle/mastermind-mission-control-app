@@ -1,0 +1,66 @@
+{
+  "batchIndex": 69,
+  "nodes": [
+    {
+      "id": "batch-69-file-0",
+      "type": "source",
+      "name": "build-config.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/process/build-config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 19,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-69-file-1",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/process/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 78,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-69-file-2",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/process/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-69-file-3",
+      "type": "source",
+      "name": "parse-stdout.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/process/parse-stdout.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 6,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

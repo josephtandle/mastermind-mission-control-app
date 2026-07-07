@@ -1,0 +1,62 @@
+{
+  "batchIndex": 76,
+  "nodes": [
+    {
+      "id": "batch-76-file-0",
+      "type": "source",
+      "name": "useCompanyPageMemory.ts",
+      "filePath": "agents/task-runner/ui/src/hooks/useCompanyPageMemory.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 75,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-76-file-1",
+      "type": "source",
+      "name": "useInboxBadge.ts",
+      "filePath": "agents/task-runner/ui/src/hooks/useInboxBadge.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 109,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-76-file-2",
+      "type": "source",
+      "name": "useKeyboardShortcuts.ts",
+      "filePath": "agents/task-runner/ui/src/hooks/useKeyboardShortcuts.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 49,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-76-file-3",
+      "type": "source",
+      "name": "useProjectOrder.ts",
+      "filePath": "agents/task-runner/ui/src/hooks/useProjectOrder.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 106,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

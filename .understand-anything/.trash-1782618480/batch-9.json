@@ -1,0 +1,3390 @@
+{
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "file",
+      "label": "workspace-runtime.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/workspace-runtime.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 386,
+      "nonEmptyLines": 357,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "function",
+      "label": "runGit",
+      "path": "agents/task-runner/server/src/__tests__/workspace-runtime.test.ts",
+      "functionName": "runGit",
+      "startLine": 18,
+      "endLine": 20,
+      "params": [
+        "cwd",
+        "args"
+      ],
+      "summary": "runGit function at lines 18-20",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "function",
+      "label": "createTempRepo",
+      "path": "agents/task-runner/server/src/__tests__/workspace-runtime.test.ts",
+      "functionName": "createTempRepo",
+      "startLine": 22,
+      "endLine": 32,
+      "params": [],
+      "summary": "createTempRepo function at lines 22-32",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-6",
+      "type": "function",
+      "label": "buildWorkspace",
+      "path": "agents/task-runner/server/src/__tests__/workspace-runtime.test.ts",
+      "functionName": "buildWorkspace",
+      "startLine": 34,
+      "endLine": 49,
+      "params": [
+        "cwd"
+      ],
+      "summary": "buildWorkspace function at lines 34-49",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-9",
+      "type": "file",
+      "label": "codex-models.ts",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 89,
+      "summary": "typescript file with 7 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-10",
+      "type": "function",
+      "label": "fingerprint",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "fingerprint",
+      "startLine": 11,
+      "endLine": 13,
+      "params": [
+        "apiKey"
+      ],
+      "summary": "fingerprint function at lines 11-13",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-12",
+      "type": "function",
+      "label": "dedupeModels",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "dedupeModels",
+      "startLine": 15,
+      "endLine": 25,
+      "params": [
+        "models"
+      ],
+      "summary": "dedupeModels function at lines 15-25",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-14",
+      "type": "function",
+      "label": "mergedWithFallback",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "mergedWithFallback",
+      "startLine": 27,
+      "endLine": 32,
+      "params": [
+        "models"
+      ],
+      "summary": "mergedWithFallback function at lines 27-32",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-16",
+      "type": "function",
+      "label": "resolveOpenAiApiKey",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "resolveOpenAiApiKey",
+      "startLine": 34,
+      "endLine": 42,
+      "params": [],
+      "summary": "resolveOpenAiApiKey function at lines 34-42",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-18",
+      "type": "function",
+      "label": "fetchOpenAiModels",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "fetchOpenAiModels",
+      "startLine": 44,
+      "endLine": 71,
+      "params": [
+        "apiKey"
+      ],
+      "summary": "fetchOpenAiModels function at lines 44-71",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-20",
+      "type": "function",
+      "label": "listCodexModels",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "listCodexModels",
+      "startLine": 73,
+      "endLine": 100,
+      "params": [],
+      "summary": "listCodexModels function at lines 73-100",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-22",
+      "type": "function",
+      "label": "resetCodexModelsCacheForTests",
+      "path": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "functionName": "resetCodexModelsCacheForTests",
+      "startLine": 102,
+      "endLine": 104,
+      "params": [],
+      "summary": "resetCodexModelsCacheForTests function at lines 102-104",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-33",
+      "type": "file",
+      "label": "cursor-models.ts",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 170,
+      "nonEmptyLines": 145,
+      "summary": "typescript file with 12 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-34",
+      "type": "function",
+      "label": "dedupeModels",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "dedupeModels",
+      "startLine": 18,
+      "endLine": 28,
+      "params": [
+        "models"
+      ],
+      "summary": "dedupeModels function at lines 18-28",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-36",
+      "type": "function",
+      "label": "sanitizeModelId",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "sanitizeModelId",
+      "startLine": 30,
+      "endLine": 36,
+      "params": [
+        "raw"
+      ],
+      "summary": "sanitizeModelId function at lines 30-36",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-38",
+      "type": "function",
+      "label": "isLikelyModelId",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "isLikelyModelId",
+      "startLine": 38,
+      "endLine": 42,
+      "params": [
+        "raw"
+      ],
+      "summary": "isLikelyModelId function at lines 38-42",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-40",
+      "type": "function",
+      "label": "pushModelId",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "pushModelId",
+      "startLine": 44,
+      "endLine": 48,
+      "params": [
+        "target",
+        "raw"
+      ],
+      "summary": "pushModelId function at lines 44-48",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-42",
+      "type": "function",
+      "label": "collectFromJsonValue",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "collectFromJsonValue",
+      "startLine": 50,
+      "endLine": 68,
+      "params": [
+        "value",
+        "target"
+      ],
+      "summary": "collectFromJsonValue function at lines 50-68",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-44",
+      "type": "function",
+      "label": "parseCursorModelsOutput",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "parseCursorModelsOutput",
+      "startLine": 70,
+      "endLine": 106,
+      "params": [
+        "stdout",
+        "stderr"
+      ],
+      "summary": "parseCursorModelsOutput function at lines 70-106",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-46",
+      "type": "function",
+      "label": "mergedWithFallback",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "mergedWithFallback",
+      "startLine": 108,
+      "endLine": 110,
+      "params": [
+        "models"
+      ],
+      "summary": "mergedWithFallback function at lines 108-110",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-48",
+      "type": "function",
+      "label": "defaultCursorModelsRunner",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "defaultCursorModelsRunner",
+      "startLine": 112,
+      "endLine": 124,
+      "params": [],
+      "summary": "defaultCursorModelsRunner function at lines 112-124",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-50",
+      "type": "function",
+      "label": "fetchCursorModelsFromCli",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "fetchCursorModelsFromCli",
+      "startLine": 128,
+      "endLine": 139,
+      "params": [],
+      "summary": "fetchCursorModelsFromCli function at lines 128-139",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-52",
+      "type": "function",
+      "label": "listCursorModels",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "listCursorModels",
+      "startLine": 141,
+      "endLine": 162,
+      "params": [],
+      "summary": "listCursorModels function at lines 141-162",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-54",
+      "type": "function",
+      "label": "resetCursorModelsCacheForTests",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "resetCursorModelsCacheForTests",
+      "startLine": 164,
+      "endLine": 166,
+      "params": [],
+      "summary": "resetCursorModelsCacheForTests function at lines 164-166",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-56",
+      "type": "function",
+      "label": "setCursorModelsRunnerForTests",
+      "path": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "functionName": "setCursorModelsRunnerForTests",
+      "startLine": 168,
+      "endLine": 170,
+      "params": [
+        "runner"
+      ],
+      "summary": "setCursorModelsRunnerForTests function at lines 168-170",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-74",
+      "type": "file",
+      "label": "execute.ts",
+      "path": "agents/task-runner/server/src/adapters/http/execute.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 36,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-75",
+      "type": "function",
+      "label": "execute",
+      "path": "agents/task-runner/server/src/adapters/http/execute.ts",
+      "functionName": "execute",
+      "startLine": 4,
+      "endLine": 42,
+      "params": [
+        "ctx"
+      ],
+      "summary": "execute function at lines 4-42",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-78",
+      "type": "file",
+      "label": "index.ts",
+      "path": "agents/task-runner/server/src/adapters/http/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-79",
+      "type": "file",
+      "label": "test.ts",
+      "path": "agents/task-runner/server/src/adapters/http/test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 106,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-80",
+      "type": "function",
+      "label": "summarizeStatus",
+      "path": "agents/task-runner/server/src/adapters/http/test.ts",
+      "functionName": "summarizeStatus",
+      "startLine": 8,
+      "endLine": 12,
+      "params": [
+        "checks"
+      ],
+      "summary": "summarizeStatus function at lines 8-12",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-82",
+      "type": "function",
+      "label": "normalizeMethod",
+      "path": "agents/task-runner/server/src/adapters/http/test.ts",
+      "functionName": "normalizeMethod",
+      "startLine": 14,
+      "endLine": 17,
+      "params": [
+        "input"
+      ],
+      "summary": "normalizeMethod function at lines 14-17",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-84",
+      "type": "function",
+      "label": "testEnvironment",
+      "path": "agents/task-runner/server/src/adapters/http/test.ts",
+      "functionName": "testEnvironment",
+      "startLine": 19,
+      "endLine": 116,
+      "params": [
+        "ctx"
+      ],
+      "summary": "testEnvironment function at lines 19-116",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-89",
+      "type": "file",
+      "label": "index.ts",
+      "path": "agents/task-runner/server/src/adapters/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 17,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-90",
+      "type": "file",
+      "label": "execute.ts",
+      "path": "agents/task-runner/server/src/adapters/process/execute.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 69,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-91",
+      "type": "function",
+      "label": "execute",
+      "path": "agents/task-runner/server/src/adapters/process/execute.ts",
+      "functionName": "execute",
+      "startLine": 12,
+      "endLine": 77,
+      "params": [
+        "ctx"
+      ],
+      "summary": "execute function at lines 12-77",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-94",
+      "type": "file",
+      "label": "index.ts",
+      "path": "agents/task-runner/server/src/adapters/process/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 20,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-95",
+      "type": "file",
+      "label": "test.ts",
+      "path": "agents/task-runner/server/src/adapters/process/test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 83,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-96",
+      "type": "function",
+      "label": "summarizeStatus",
+      "path": "agents/task-runner/server/src/adapters/process/test.ts",
+      "functionName": "summarizeStatus",
+      "startLine": 14,
+      "endLine": 18,
+      "params": [
+        "checks"
+      ],
+      "summary": "summarizeStatus function at lines 14-18",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-98",
+      "type": "function",
+      "label": "testEnvironment",
+      "path": "agents/task-runner/server/src/adapters/process/test.ts",
+      "functionName": "testEnvironment",
+      "startLine": 20,
+      "endLine": 89,
+      "params": [
+        "ctx"
+      ],
+      "summary": "testEnvironment function at lines 20-89",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-102",
+      "type": "file",
+      "label": "registry.ts",
+      "path": "agents/task-runner/server/src/adapters/registry.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 152,
+      "nonEmptyLines": 141,
+      "summary": "typescript file with 4 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-103",
+      "type": "function",
+      "label": "getServerAdapter",
+      "path": "agents/task-runner/server/src/adapters/registry.ts",
+      "functionName": "getServerAdapter",
+      "startLine": 127,
+      "endLine": 134,
+      "params": [
+        "type"
+      ],
+      "summary": "getServerAdapter function at lines 127-134",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-105",
+      "type": "function",
+      "label": "listAdapterModels",
+      "path": "agents/task-runner/server/src/adapters/registry.ts",
+      "functionName": "listAdapterModels",
+      "startLine": 136,
+      "endLine": 144,
+      "params": [
+        "type"
+      ],
+      "summary": "listAdapterModels function at lines 136-144",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-107",
+      "type": "function",
+      "label": "listServerAdapters",
+      "path": "agents/task-runner/server/src/adapters/registry.ts",
+      "functionName": "listServerAdapters",
+      "startLine": 146,
+      "endLine": 148,
+      "params": [],
+      "summary": "listServerAdapters function at lines 146-148",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-109",
+      "type": "function",
+      "label": "findServerAdapter",
+      "path": "agents/task-runner/server/src/adapters/registry.ts",
+      "functionName": "findServerAdapter",
+      "startLine": 150,
+      "endLine": 152,
+      "params": [
+        "type"
+      ],
+      "summary": "findServerAdapter function at lines 150-152",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-115",
+      "type": "file",
+      "label": "types.ts",
+      "path": "agents/task-runner/server/src/adapters/types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 19,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-116",
+      "type": "file",
+      "label": "utils.ts",
+      "path": "agents/task-runner/server/src/adapters/utils.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 45,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-117",
+      "type": "function",
+      "label": "runChildProcess",
+      "path": "agents/task-runner/server/src/adapters/utils.ts",
+      "functionName": "runChildProcess",
+      "startLine": 31,
+      "endLine": 47,
+      "params": [
+        "runId",
+        "command",
+        "args",
+        "opts"
+      ],
+      "summary": "runChildProcess function at lines 31-47",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-120",
+      "type": "file",
+      "label": "agent-auth-jwt.ts",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 141,
+      "nonEmptyLines": 116,
+      "summary": "typescript file with 9 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-121",
+      "type": "function",
+      "label": "parseNumber",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "parseNumber",
+      "startLine": 22,
+      "endLine": 26,
+      "params": [
+        "value",
+        "fallback"
+      ],
+      "summary": "parseNumber function at lines 22-26",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-123",
+      "type": "function",
+      "label": "jwtConfig",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "jwtConfig",
+      "startLine": 28,
+      "endLine": 38,
+      "params": [],
+      "summary": "jwtConfig function at lines 28-38",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-125",
+      "type": "function",
+      "label": "base64UrlEncode",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "base64UrlEncode",
+      "startLine": 40,
+      "endLine": 42,
+      "params": [
+        "value"
+      ],
+      "summary": "base64UrlEncode function at lines 40-42",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-127",
+      "type": "function",
+      "label": "base64UrlDecode",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "base64UrlDecode",
+      "startLine": 44,
+      "endLine": 46,
+      "params": [
+        "value"
+      ],
+      "summary": "base64UrlDecode function at lines 44-46",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-129",
+      "type": "function",
+      "label": "signPayload",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "signPayload",
+      "startLine": 48,
+      "endLine": 50,
+      "params": [
+        "secret",
+        "signingInput"
+      ],
+      "summary": "signPayload function at lines 48-50",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-131",
+      "type": "function",
+      "label": "parseJson",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "parseJson",
+      "startLine": 52,
+      "endLine": 59,
+      "params": [
+        "value"
+      ],
+      "summary": "parseJson function at lines 52-59",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-133",
+      "type": "function",
+      "label": "safeCompare",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "safeCompare",
+      "startLine": 61,
+      "endLine": 66,
+      "params": [
+        "a",
+        "b"
+      ],
+      "summary": "safeCompare function at lines 61-66",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-135",
+      "type": "function",
+      "label": "createLocalAgentJwt",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "createLocalAgentJwt",
+      "startLine": 68,
+      "endLine": 93,
+      "params": [
+        "agentId",
+        "companyId",
+        "adapterType",
+        "runId"
+      ],
+      "summary": "createLocalAgentJwt function at lines 68-93",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-137",
+      "type": "function",
+      "label": "verifyLocalAgentJwt",
+      "path": "agents/task-runner/server/src/agent-auth-jwt.ts",
+      "functionName": "verifyLocalAgentJwt",
+      "startLine": 95,
+      "endLine": 141,
+      "params": [
+        "token"
+      ],
+      "summary": "verifyLocalAgentJwt function at lines 95-141",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-150",
+      "type": "file",
+      "label": "app.ts",
+      "path": "agents/task-runner/server/src/app.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 183,
+      "nonEmptyLines": 174,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-151",
+      "type": "function",
+      "label": "createApp",
+      "path": "agents/task-runner/server/src/app.ts",
+      "functionName": "createApp",
+      "startLine": 32,
+      "endLine": 183,
+      "params": [
+        "db",
+        "opts"
+      ],
+      "summary": "createApp function at lines 32-183",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-154",
+      "type": "file",
+      "label": "attachment-types.ts",
+      "path": "agents/task-runner/server/src/attachment-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 61,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-155",
+      "type": "function",
+      "label": "parseAllowedTypes",
+      "path": "agents/task-runner/server/src/attachment-types.ts",
+      "functionName": "parseAllowedTypes",
+      "startLine": 30,
+      "endLine": 37,
+      "params": [
+        "raw"
+      ],
+      "summary": "parseAllowedTypes function at lines 30-37",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-157",
+      "type": "function",
+      "label": "matchesContentType",
+      "path": "agents/task-runner/server/src/attachment-types.ts",
+      "functionName": "matchesContentType",
+      "startLine": 45,
+      "endLine": 54,
+      "params": [
+        "contentType",
+        "allowedPatterns"
+      ],
+      "summary": "matchesContentType function at lines 45-54",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-159",
+      "type": "function",
+      "label": "isAllowedContentType",
+      "path": "agents/task-runner/server/src/attachment-types.ts",
+      "functionName": "isAllowedContentType",
+      "startLine": 63,
+      "endLine": 65,
+      "params": [
+        "contentType"
+      ],
+      "summary": "isAllowedContentType function at lines 63-65",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-165",
+      "type": "file",
+      "label": "better-auth.ts",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 147,
+      "nonEmptyLines": 128,
+      "summary": "typescript file with 7 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-166",
+      "type": "function",
+      "label": "headersFromNodeHeaders",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "headersFromNodeHeaders",
+      "startLine": 28,
+      "endLine": 39,
+      "params": [
+        "rawHeaders"
+      ],
+      "summary": "headersFromNodeHeaders function at lines 28-39",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-168",
+      "type": "function",
+      "label": "headersFromExpressRequest",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "headersFromExpressRequest",
+      "startLine": 41,
+      "endLine": 43,
+      "params": [
+        "req"
+      ],
+      "summary": "headersFromExpressRequest function at lines 41-43",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-170",
+      "type": "function",
+      "label": "deriveAuthTrustedOrigins",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "deriveAuthTrustedOrigins",
+      "startLine": 45,
+      "endLine": 66,
+      "params": [
+        "config"
+      ],
+      "summary": "deriveAuthTrustedOrigins function at lines 45-66",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-172",
+      "type": "function",
+      "label": "createBetterAuthInstance",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "createBetterAuthInstance",
+      "startLine": 68,
+      "endLine": 102,
+      "params": [
+        "db",
+        "config",
+        "trustedOrigins"
+      ],
+      "summary": "createBetterAuthInstance function at lines 68-102",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-174",
+      "type": "function",
+      "label": "createBetterAuthHandler",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "createBetterAuthHandler",
+      "startLine": 104,
+      "endLine": 109,
+      "params": [
+        "auth"
+      ],
+      "summary": "createBetterAuthHandler function at lines 104-109",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-176",
+      "type": "function",
+      "label": "resolveBetterAuthSessionFromHeaders",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "resolveBetterAuthSessionFromHeaders",
+      "startLine": 111,
+      "endLine": 140,
+      "params": [
+        "auth",
+        "headers"
+      ],
+      "summary": "resolveBetterAuthSessionFromHeaders function at lines 111-140",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-178",
+      "type": "function",
+      "label": "resolveBetterAuthSession",
+      "path": "agents/task-runner/server/src/auth/better-auth.ts",
+      "functionName": "resolveBetterAuthSession",
+      "startLine": 142,
+      "endLine": 147,
+      "params": [
+        "auth",
+        "req"
+      ],
+      "summary": "resolveBetterAuthSession function at lines 142-147",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-189",
+      "type": "file",
+      "label": "board-claim.ts",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 149,
+      "nonEmptyLines": 129,
+      "summary": "typescript file with 6 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-190",
+      "type": "function",
+      "label": "createChallenge",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "functionName": "createChallenge",
+      "startLine": 23,
+      "endLine": 32,
+      "params": [
+        "now"
+      ],
+      "summary": "createChallenge function at lines 23-32",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-192",
+      "type": "function",
+      "label": "getChallengeStatus",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "functionName": "getChallengeStatus",
+      "startLine": 34,
+      "endLine": 41,
+      "params": [
+        "token",
+        "code"
+      ],
+      "summary": "getChallengeStatus function at lines 34-41",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-194",
+      "type": "function",
+      "label": "initializeBoardClaimChallenge",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "functionName": "initializeBoardClaimChallenge",
+      "startLine": 43,
+      "endLine": 66,
+      "params": [
+        "db",
+        "opts"
+      ],
+      "summary": "initializeBoardClaimChallenge function at lines 43-66",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-196",
+      "type": "function",
+      "label": "getBoardClaimWarningUrl",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "functionName": "getBoardClaimWarningUrl",
+      "startLine": 68,
+      "endLine": 73,
+      "params": [
+        "host",
+        "port"
+      ],
+      "summary": "getBoardClaimWarningUrl function at lines 68-73",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-198",
+      "type": "function",
+      "label": "inspectBoardClaimChallenge",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "functionName": "inspectBoardClaimChallenge",
+      "startLine": 75,
+      "endLine": 83,
+      "params": [
+        "token",
+        "code"
+      ],
+      "summary": "inspectBoardClaimChallenge function at lines 75-83",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-200",
+      "type": "function",
+      "label": "claimBoardOwnership",
+      "path": "agents/task-runner/server/src/board-claim.ts",
+      "functionName": "claimBoardOwnership",
+      "startLine": 85,
+      "endLine": 149,
+      "params": [
+        "db",
+        "opts"
+      ],
+      "summary": "claimBoardOwnership function at lines 85-149",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-209",
+      "type": "file",
+      "label": "config-file.ts",
+      "path": "agents/task-runner/server/src/config-file.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-210",
+      "type": "function",
+      "label": "readConfigFile",
+      "path": "agents/task-runner/server/src/config-file.ts",
+      "functionName": "readConfigFile",
+      "startLine": 5,
+      "endLine": 16,
+      "params": [],
+      "summary": "readConfigFile function at lines 5-16",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-213",
+      "type": "file",
+      "label": "config.ts",
+      "path": "agents/task-runner/server/src/config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 247,
+      "nonEmptyLines": 238,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-214",
+      "type": "function",
+      "label": "loadConfig",
+      "path": "agents/task-runner/server/src/config.ts",
+      "functionName": "loadConfig",
+      "startLine": 66,
+      "endLine": 247,
+      "params": [],
+      "summary": "loadConfig function at lines 66-247",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-217",
+      "type": "file",
+      "label": "errors.ts",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 27,
+      "summary": "typescript file with 6 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-218",
+      "type": "function",
+      "label": "badRequest",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "functionName": "badRequest",
+      "startLine": 12,
+      "endLine": 14,
+      "params": [
+        "message",
+        "details"
+      ],
+      "summary": "badRequest function at lines 12-14",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-220",
+      "type": "function",
+      "label": "unauthorized",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "functionName": "unauthorized",
+      "startLine": 16,
+      "endLine": 18,
+      "params": [
+        "message"
+      ],
+      "summary": "unauthorized function at lines 16-18",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-222",
+      "type": "function",
+      "label": "forbidden",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "functionName": "forbidden",
+      "startLine": 20,
+      "endLine": 22,
+      "params": [
+        "message"
+      ],
+      "summary": "forbidden function at lines 20-22",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-224",
+      "type": "function",
+      "label": "notFound",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "functionName": "notFound",
+      "startLine": 24,
+      "endLine": 26,
+      "params": [
+        "message"
+      ],
+      "summary": "notFound function at lines 24-26",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-226",
+      "type": "function",
+      "label": "conflict",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "functionName": "conflict",
+      "startLine": 28,
+      "endLine": 30,
+      "params": [
+        "message",
+        "details"
+      ],
+      "summary": "conflict function at lines 28-30",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-228",
+      "type": "function",
+      "label": "unprocessable",
+      "path": "agents/task-runner/server/src/errors.ts",
+      "functionName": "unprocessable",
+      "startLine": 32,
+      "endLine": 34,
+      "params": [
+        "message",
+        "details"
+      ],
+      "summary": "unprocessable function at lines 32-34",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-236",
+      "type": "file",
+      "label": "home-paths.ts",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 53,
+      "summary": "typescript file with 12 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-237",
+      "type": "function",
+      "label": "expandHomePrefix",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "expandHomePrefix",
+      "startLine": 8,
+      "endLine": 12,
+      "params": [
+        "value"
+      ],
+      "summary": "expandHomePrefix function at lines 8-12",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-239",
+      "type": "function",
+      "label": "resolvePaperclipHomeDir",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolvePaperclipHomeDir",
+      "startLine": 14,
+      "endLine": 18,
+      "params": [],
+      "summary": "resolvePaperclipHomeDir function at lines 14-18",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-241",
+      "type": "function",
+      "label": "resolvePaperclipInstanceId",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolvePaperclipInstanceId",
+      "startLine": 20,
+      "endLine": 26,
+      "params": [],
+      "summary": "resolvePaperclipInstanceId function at lines 20-26",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-243",
+      "type": "function",
+      "label": "resolvePaperclipInstanceRoot",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolvePaperclipInstanceRoot",
+      "startLine": 28,
+      "endLine": 30,
+      "params": [],
+      "summary": "resolvePaperclipInstanceRoot function at lines 28-30",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-245",
+      "type": "function",
+      "label": "resolveDefaultConfigPath",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultConfigPath",
+      "startLine": 32,
+      "endLine": 34,
+      "params": [],
+      "summary": "resolveDefaultConfigPath function at lines 32-34",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-247",
+      "type": "function",
+      "label": "resolveDefaultEmbeddedPostgresDir",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultEmbeddedPostgresDir",
+      "startLine": 36,
+      "endLine": 38,
+      "params": [],
+      "summary": "resolveDefaultEmbeddedPostgresDir function at lines 36-38",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-249",
+      "type": "function",
+      "label": "resolveDefaultLogsDir",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultLogsDir",
+      "startLine": 40,
+      "endLine": 42,
+      "params": [],
+      "summary": "resolveDefaultLogsDir function at lines 40-42",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-251",
+      "type": "function",
+      "label": "resolveDefaultSecretsKeyFilePath",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultSecretsKeyFilePath",
+      "startLine": 44,
+      "endLine": 46,
+      "params": [],
+      "summary": "resolveDefaultSecretsKeyFilePath function at lines 44-46",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-253",
+      "type": "function",
+      "label": "resolveDefaultStorageDir",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultStorageDir",
+      "startLine": 48,
+      "endLine": 50,
+      "params": [],
+      "summary": "resolveDefaultStorageDir function at lines 48-50",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-255",
+      "type": "function",
+      "label": "resolveDefaultBackupDir",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultBackupDir",
+      "startLine": 52,
+      "endLine": 54,
+      "params": [],
+      "summary": "resolveDefaultBackupDir function at lines 52-54",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-257",
+      "type": "function",
+      "label": "resolveDefaultAgentWorkspaceDir",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveDefaultAgentWorkspaceDir",
+      "startLine": 56,
+      "endLine": 62,
+      "params": [
+        "agentId"
+      ],
+      "summary": "resolveDefaultAgentWorkspaceDir function at lines 56-62",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-259",
+      "type": "function",
+      "label": "resolveHomeAwarePath",
+      "path": "agents/task-runner/server/src/home-paths.ts",
+      "functionName": "resolveHomeAwarePath",
+      "startLine": 64,
+      "endLine": 66,
+      "params": [
+        "value"
+      ],
+      "summary": "resolveHomeAwarePath function at lines 64-66",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-283",
+      "type": "file",
+      "label": "index.ts",
+      "path": "agents/task-runner/server/src/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 693,
+      "nonEmptyLines": 633,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-284",
+      "type": "function",
+      "label": "startServer",
+      "path": "agents/task-runner/server/src/index.ts",
+      "functionName": "startServer",
+      "startLine": 69,
+      "endLine": 676,
+      "params": [],
+      "summary": "startServer function at lines 69-676",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-286",
+      "type": "function",
+      "label": "isMainModule",
+      "path": "agents/task-runner/server/src/index.ts",
+      "functionName": "isMainModule",
+      "startLine": 678,
+      "endLine": 686,
+      "params": [
+        "metaUrl"
+      ],
+      "summary": "isMainModule function at lines 678-686",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-289",
+      "type": "file",
+      "label": "auth.ts",
+      "path": "agents/task-runner/server/src/middleware/auth.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 156,
+      "nonEmptyLines": 138,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-290",
+      "type": "function",
+      "label": "hashToken",
+      "path": "agents/task-runner/server/src/middleware/auth.ts",
+      "functionName": "hashToken",
+      "startLine": 11,
+      "endLine": 13,
+      "params": [
+        "token"
+      ],
+      "summary": "hashToken function at lines 11-13",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-292",
+      "type": "function",
+      "label": "actorMiddleware",
+      "path": "agents/task-runner/server/src/middleware/auth.ts",
+      "functionName": "actorMiddleware",
+      "startLine": 20,
+      "endLine": 152,
+      "params": [
+        "db",
+        "opts"
+      ],
+      "summary": "actorMiddleware function at lines 20-152",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-294",
+      "type": "function",
+      "label": "requireBoard",
+      "path": "agents/task-runner/server/src/middleware/auth.ts",
+      "functionName": "requireBoard",
+      "startLine": 154,
+      "endLine": 156,
+      "params": [
+        "req"
+      ],
+      "summary": "requireBoard function at lines 154-156",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-299",
+      "type": "file",
+      "label": "board-mutation-guard.ts",
+      "path": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 56,
+      "summary": "typescript file with 4 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-300",
+      "type": "function",
+      "label": "parseOrigin",
+      "path": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "functionName": "parseOrigin",
+      "startLine": 9,
+      "endLine": 17,
+      "params": [
+        "value"
+      ],
+      "summary": "parseOrigin function at lines 9-17",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-302",
+      "type": "function",
+      "label": "trustedOriginsForRequest",
+      "path": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "functionName": "trustedOriginsForRequest",
+      "startLine": 19,
+      "endLine": 27,
+      "params": [
+        "req"
+      ],
+      "summary": "trustedOriginsForRequest function at lines 19-27",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-304",
+      "type": "function",
+      "label": "isTrustedBoardMutationRequest",
+      "path": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "functionName": "isTrustedBoardMutationRequest",
+      "startLine": 29,
+      "endLine": 38,
+      "params": [
+        "req"
+      ],
+      "summary": "isTrustedBoardMutationRequest function at lines 29-38",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-306",
+      "type": "function",
+      "label": "boardMutationGuard",
+      "path": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "functionName": "boardMutationGuard",
+      "startLine": 40,
+      "endLine": 67,
+      "params": [],
+      "summary": "boardMutationGuard function at lines 40-67",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-312",
+      "type": "file",
+      "label": "error-handler.ts",
+      "path": "agents/task-runner/server/src/middleware/error-handler.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 65,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-313",
+      "type": "function",
+      "label": "attachErrorContext",
+      "path": "agents/task-runner/server/src/middleware/error-handler.ts",
+      "functionName": "attachErrorContext",
+      "startLine": 14,
+      "endLine": 31,
+      "params": [
+        "req",
+        "res",
+        "payload",
+        "rawError"
+      ],
+      "summary": "attachErrorContext function at lines 14-31",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-315",
+      "type": "function",
+      "label": "errorHandler",
+      "path": "agents/task-runner/server/src/middleware/error-handler.ts",
+      "functionName": "errorHandler",
+      "startLine": 33,
+      "endLine": 71,
+      "params": [
+        "err",
+        "req",
+        "res",
+        "_next"
+      ],
+      "summary": "errorHandler function at lines 33-71",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-319",
+      "type": "file",
+      "label": "index.ts",
+      "path": "agents/task-runner/server/src/middleware/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-320",
+      "type": "file",
+      "label": "logger.ts",
+      "path": "agents/task-runner/server/src/middleware/logger.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 82,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-321",
+      "type": "function",
+      "label": "resolveServerLogDir",
+      "path": "agents/task-runner/server/src/middleware/logger.ts",
+      "functionName": "resolveServerLogDir",
+      "startLine": 8,
+      "endLine": 16,
+      "params": [],
+      "summary": "resolveServerLogDir function at lines 8-16",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-node-3",
+      "source": "node-1",
+      "target": "node-2",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-5",
+      "source": "node-1",
+      "target": "node-4",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-7",
+      "source": "node-1",
+      "target": "node-6",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-8",
+      "source": "node-4",
+      "target": "node-2",
+      "type": "calls",
+      "label": "calls at line 24"
+    },
+    {
+      "id": "edge-node-11",
+      "source": "node-9",
+      "target": "node-10",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-13",
+      "source": "node-9",
+      "target": "node-12",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-15",
+      "source": "node-9",
+      "target": "node-14",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-17",
+      "source": "node-9",
+      "target": "node-16",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-19",
+      "source": "node-9",
+      "target": "node-18",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-21",
+      "source": "node-9",
+      "target": "node-20",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-23",
+      "source": "node-9",
+      "target": "node-22",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-24",
+      "source": "node-20",
+      "target": "node-9",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-25",
+      "source": "node-22",
+      "target": "node-9",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-26",
+      "source": "node-14",
+      "target": "node-12",
+      "type": "calls",
+      "label": "calls at line 28"
+    },
+    {
+      "id": "edge-node-27",
+      "source": "node-18",
+      "target": "node-12",
+      "type": "calls",
+      "label": "calls at line 65"
+    },
+    {
+      "id": "edge-node-28",
+      "source": "node-20",
+      "target": "node-16",
+      "type": "calls",
+      "label": "calls at line 74"
+    },
+    {
+      "id": "edge-node-29",
+      "source": "node-20",
+      "target": "node-12",
+      "type": "calls",
+      "label": "calls at line 75"
+    },
+    {
+      "id": "edge-node-30",
+      "source": "node-20",
+      "target": "node-10",
+      "type": "calls",
+      "label": "calls at line 79"
+    },
+    {
+      "id": "edge-node-31",
+      "source": "node-20",
+      "target": "node-18",
+      "type": "calls",
+      "label": "calls at line 84"
+    },
+    {
+      "id": "edge-node-32",
+      "source": "node-20",
+      "target": "node-14",
+      "type": "calls",
+      "label": "calls at line 86"
+    },
+    {
+      "id": "edge-node-35",
+      "source": "node-33",
+      "target": "node-34",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-37",
+      "source": "node-33",
+      "target": "node-36",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-39",
+      "source": "node-33",
+      "target": "node-38",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-41",
+      "source": "node-33",
+      "target": "node-40",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-43",
+      "source": "node-33",
+      "target": "node-42",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-45",
+      "source": "node-33",
+      "target": "node-44",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-47",
+      "source": "node-33",
+      "target": "node-46",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-49",
+      "source": "node-33",
+      "target": "node-48",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-51",
+      "source": "node-33",
+      "target": "node-50",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-53",
+      "source": "node-33",
+      "target": "node-52",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-55",
+      "source": "node-33",
+      "target": "node-54",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-57",
+      "source": "node-33",
+      "target": "node-56",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-58",
+      "source": "node-44",
+      "target": "node-33",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-59",
+      "source": "node-52",
+      "target": "node-33",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-60",
+      "source": "node-54",
+      "target": "node-33",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-61",
+      "source": "node-56",
+      "target": "node-33",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-62",
+      "source": "node-38",
+      "target": "node-36",
+      "type": "calls",
+      "label": "calls at line 39"
+    },
+    {
+      "id": "edge-node-63",
+      "source": "node-40",
+      "target": "node-36",
+      "type": "calls",
+      "label": "calls at line 45"
+    },
+    {
+      "id": "edge-node-64",
+      "source": "node-40",
+      "target": "node-38",
+      "type": "calls",
+      "label": "calls at line 46"
+    },
+    {
+      "id": "edge-node-65",
+      "source": "node-42",
+      "target": "node-40",
+      "type": "calls",
+      "label": "calls at line 52"
+    },
+    {
+      "id": "edge-node-66",
+      "source": "node-44",
+      "target": "node-42",
+      "type": "calls",
+      "label": "calls at line 79"
+    },
+    {
+      "id": "edge-node-67",
+      "source": "node-44",
+      "target": "node-40",
+      "type": "calls",
+      "label": "calls at line 93"
+    },
+    {
+      "id": "edge-node-68",
+      "source": "node-44",
+      "target": "node-34",
+      "type": "calls",
+      "label": "calls at line 105"
+    },
+    {
+      "id": "edge-node-69",
+      "source": "node-46",
+      "target": "node-34",
+      "type": "calls",
+      "label": "calls at line 109"
+    },
+    {
+      "id": "edge-node-70",
+      "source": "node-50",
+      "target": "node-44",
+      "type": "calls",
+      "label": "calls at line 138"
+    },
+    {
+      "id": "edge-node-71",
+      "source": "node-52",
+      "target": "node-50",
+      "type": "calls",
+      "label": "calls at line 147"
+    },
+    {
+      "id": "edge-node-72",
+      "source": "node-52",
+      "target": "node-46",
+      "type": "calls",
+      "label": "calls at line 149"
+    },
+    {
+      "id": "edge-node-73",
+      "source": "node-52",
+      "target": "node-34",
+      "type": "calls",
+      "label": "calls at line 161"
+    },
+    {
+      "id": "edge-node-76",
+      "source": "node-74",
+      "target": "node-75",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-77",
+      "source": "node-75",
+      "target": "node-74",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-81",
+      "source": "node-79",
+      "target": "node-80",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-83",
+      "source": "node-79",
+      "target": "node-82",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-85",
+      "source": "node-79",
+      "target": "node-84",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-86",
+      "source": "node-84",
+      "target": "node-79",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-87",
+      "source": "node-84",
+      "target": "node-82",
+      "type": "calls",
+      "label": "calls at line 25"
+    },
+    {
+      "id": "edge-node-88",
+      "source": "node-84",
+      "target": "node-80",
+      "type": "calls",
+      "label": "calls at line 36"
+    },
+    {
+      "id": "edge-node-92",
+      "source": "node-90",
+      "target": "node-91",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-93",
+      "source": "node-91",
+      "target": "node-90",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-97",
+      "source": "node-95",
+      "target": "node-96",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-99",
+      "source": "node-95",
+      "target": "node-98",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-100",
+      "source": "node-98",
+      "target": "node-95",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-101",
+      "source": "node-98",
+      "target": "node-96",
+      "type": "calls",
+      "label": "calls at line 85"
+    },
+    {
+      "id": "edge-node-104",
+      "source": "node-102",
+      "target": "node-103",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-106",
+      "source": "node-102",
+      "target": "node-105",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-108",
+      "source": "node-102",
+      "target": "node-107",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-110",
+      "source": "node-102",
+      "target": "node-109",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-111",
+      "source": "node-103",
+      "target": "node-102",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-112",
+      "source": "node-105",
+      "target": "node-102",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-113",
+      "source": "node-107",
+      "target": "node-102",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-114",
+      "source": "node-109",
+      "target": "node-102",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-118",
+      "source": "node-116",
+      "target": "node-117",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-119",
+      "source": "node-117",
+      "target": "node-116",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-122",
+      "source": "node-120",
+      "target": "node-121",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-124",
+      "source": "node-120",
+      "target": "node-123",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-126",
+      "source": "node-120",
+      "target": "node-125",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-128",
+      "source": "node-120",
+      "target": "node-127",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-130",
+      "source": "node-120",
+      "target": "node-129",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-132",
+      "source": "node-120",
+      "target": "node-131",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-134",
+      "source": "node-120",
+      "target": "node-133",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-136",
+      "source": "node-120",
+      "target": "node-135",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-138",
+      "source": "node-120",
+      "target": "node-137",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-139",
+      "source": "node-135",
+      "target": "node-120",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-140",
+      "source": "node-137",
+      "target": "node-120",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-141",
+      "source": "node-123",
+      "target": "node-121",
+      "type": "calls",
+      "label": "calls at line 34"
+    },
+    {
+      "id": "edge-node-142",
+      "source": "node-135",
+      "target": "node-123",
+      "type": "calls",
+      "label": "calls at line 69"
+    },
+    {
+      "id": "edge-node-143",
+      "source": "node-135",
+      "target": "node-125",
+      "type": "calls",
+      "label": "calls at line 89"
+    },
+    {
+      "id": "edge-node-144",
+      "source": "node-135",
+      "target": "node-129",
+      "type": "calls",
+      "label": "calls at line 90"
+    },
+    {
+      "id": "edge-node-145",
+      "source": "node-137",
+      "target": "node-123",
+      "type": "calls",
+      "label": "calls at line 97"
+    },
+    {
+      "id": "edge-node-146",
+      "source": "node-137",
+      "target": "node-131",
+      "type": "calls",
+      "label": "calls at line 104"
+    },
+    {
+      "id": "edge-node-147",
+      "source": "node-137",
+      "target": "node-127",
+      "type": "calls",
+      "label": "calls at line 104"
+    },
+    {
+      "id": "edge-node-148",
+      "source": "node-137",
+      "target": "node-129",
+      "type": "calls",
+      "label": "calls at line 108"
+    },
+    {
+      "id": "edge-node-149",
+      "source": "node-137",
+      "target": "node-133",
+      "type": "calls",
+      "label": "calls at line 109"
+    },
+    {
+      "id": "edge-node-152",
+      "source": "node-150",
+      "target": "node-151",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-153",
+      "source": "node-151",
+      "target": "node-150",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-156",
+      "source": "node-154",
+      "target": "node-155",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-158",
+      "source": "node-154",
+      "target": "node-157",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-160",
+      "source": "node-154",
+      "target": "node-159",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-161",
+      "source": "node-155",
+      "target": "node-154",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-162",
+      "source": "node-157",
+      "target": "node-154",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-163",
+      "source": "node-159",
+      "target": "node-154",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-164",
+      "source": "node-159",
+      "target": "node-157",
+      "type": "calls",
+      "label": "calls at line 64"
+    },
+    {
+      "id": "edge-node-167",
+      "source": "node-165",
+      "target": "node-166",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-169",
+      "source": "node-165",
+      "target": "node-168",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-171",
+      "source": "node-165",
+      "target": "node-170",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-173",
+      "source": "node-165",
+      "target": "node-172",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-175",
+      "source": "node-165",
+      "target": "node-174",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-177",
+      "source": "node-165",
+      "target": "node-176",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-179",
+      "source": "node-165",
+      "target": "node-178",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-180",
+      "source": "node-170",
+      "target": "node-165",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-181",
+      "source": "node-172",
+      "target": "node-165",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-182",
+      "source": "node-174",
+      "target": "node-165",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-183",
+      "source": "node-176",
+      "target": "node-165",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-184",
+      "source": "node-178",
+      "target": "node-165",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-185",
+      "source": "node-168",
+      "target": "node-166",
+      "type": "calls",
+      "label": "calls at line 42"
+    },
+    {
+      "id": "edge-node-186",
+      "source": "node-172",
+      "target": "node-170",
+      "type": "calls",
+      "label": "calls at line 71"
+    },
+    {
+      "id": "edge-node-187",
+      "source": "node-178",
+      "target": "node-176",
+      "type": "calls",
+      "label": "calls at line 146"
+    },
+    {
+      "id": "edge-node-188",
+      "source": "node-178",
+      "target": "node-168",
+      "type": "calls",
+      "label": "calls at line 146"
+    },
+    {
+      "id": "edge-node-191",
+      "source": "node-189",
+      "target": "node-190",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-193",
+      "source": "node-189",
+      "target": "node-192",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-195",
+      "source": "node-189",
+      "target": "node-194",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-197",
+      "source": "node-189",
+      "target": "node-196",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-199",
+      "source": "node-189",
+      "target": "node-198",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-201",
+      "source": "node-189",
+      "target": "node-200",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-202",
+      "source": "node-194",
+      "target": "node-189",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-203",
+      "source": "node-196",
+      "target": "node-189",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-204",
+      "source": "node-198",
+      "target": "node-189",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-205",
+      "source": "node-200",
+      "target": "node-189",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-206",
+      "source": "node-194",
+      "target": "node-190",
+      "type": "calls",
+      "label": "calls at line 64"
+    },
+    {
+      "id": "edge-node-207",
+      "source": "node-198",
+      "target": "node-192",
+      "type": "calls",
+      "label": "calls at line 76"
+    },
+    {
+      "id": "edge-node-208",
+      "source": "node-200",
+      "target": "node-192",
+      "type": "calls",
+      "label": "calls at line 89"
+    },
+    {
+      "id": "edge-node-211",
+      "source": "node-209",
+      "target": "node-210",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-212",
+      "source": "node-210",
+      "target": "node-209",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-215",
+      "source": "node-213",
+      "target": "node-214",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-216",
+      "source": "node-214",
+      "target": "node-213",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-219",
+      "source": "node-217",
+      "target": "node-218",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-221",
+      "source": "node-217",
+      "target": "node-220",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-223",
+      "source": "node-217",
+      "target": "node-222",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-225",
+      "source": "node-217",
+      "target": "node-224",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-227",
+      "source": "node-217",
+      "target": "node-226",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-229",
+      "source": "node-217",
+      "target": "node-228",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-230",
+      "source": "node-218",
+      "target": "node-217",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-231",
+      "source": "node-220",
+      "target": "node-217",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-232",
+      "source": "node-222",
+      "target": "node-217",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-233",
+      "source": "node-224",
+      "target": "node-217",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-234",
+      "source": "node-226",
+      "target": "node-217",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-235",
+      "source": "node-228",
+      "target": "node-217",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-238",
+      "source": "node-236",
+      "target": "node-237",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-240",
+      "source": "node-236",
+      "target": "node-239",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-242",
+      "source": "node-236",
+      "target": "node-241",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-244",
+      "source": "node-236",
+      "target": "node-243",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-246",
+      "source": "node-236",
+      "target": "node-245",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-248",
+      "source": "node-236",
+      "target": "node-247",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-250",
+      "source": "node-236",
+      "target": "node-249",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-252",
+      "source": "node-236",
+      "target": "node-251",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-254",
+      "source": "node-236",
+      "target": "node-253",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-256",
+      "source": "node-236",
+      "target": "node-255",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-258",
+      "source": "node-236",
+      "target": "node-257",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-260",
+      "source": "node-236",
+      "target": "node-259",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-261",
+      "source": "node-239",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-262",
+      "source": "node-241",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-263",
+      "source": "node-243",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-264",
+      "source": "node-245",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-265",
+      "source": "node-247",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-266",
+      "source": "node-249",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-267",
+      "source": "node-251",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-268",
+      "source": "node-253",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-269",
+      "source": "node-255",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-270",
+      "source": "node-257",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-271",
+      "source": "node-259",
+      "target": "node-236",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-272",
+      "source": "node-239",
+      "target": "node-237",
+      "type": "calls",
+      "label": "calls at line 16"
+    },
+    {
+      "id": "edge-node-273",
+      "source": "node-243",
+      "target": "node-239",
+      "type": "calls",
+      "label": "calls at line 29"
+    },
+    {
+      "id": "edge-node-274",
+      "source": "node-243",
+      "target": "node-241",
+      "type": "calls",
+      "label": "calls at line 29"
+    },
+    {
+      "id": "edge-node-275",
+      "source": "node-245",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 33"
+    },
+    {
+      "id": "edge-node-276",
+      "source": "node-247",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 37"
+    },
+    {
+      "id": "edge-node-277",
+      "source": "node-249",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 41"
+    },
+    {
+      "id": "edge-node-278",
+      "source": "node-251",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 45"
+    },
+    {
+      "id": "edge-node-279",
+      "source": "node-253",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 49"
+    },
+    {
+      "id": "edge-node-280",
+      "source": "node-255",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 53"
+    },
+    {
+      "id": "edge-node-281",
+      "source": "node-257",
+      "target": "node-243",
+      "type": "calls",
+      "label": "calls at line 61"
+    },
+    {
+      "id": "edge-node-282",
+      "source": "node-259",
+      "target": "node-237",
+      "type": "calls",
+      "label": "calls at line 65"
+    },
+    {
+      "id": "edge-node-285",
+      "source": "node-283",
+      "target": "node-284",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-287",
+      "source": "node-283",
+      "target": "node-286",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-288",
+      "source": "node-284",
+      "target": "node-283",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-291",
+      "source": "node-289",
+      "target": "node-290",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-293",
+      "source": "node-289",
+      "target": "node-292",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-295",
+      "source": "node-289",
+      "target": "node-294",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-296",
+      "source": "node-292",
+      "target": "node-289",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-297",
+      "source": "node-294",
+      "target": "node-289",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-298",
+      "source": "node-292",
+      "target": "node-290",
+      "type": "calls",
+      "label": "calls at line 83"
+    },
+    {
+      "id": "edge-node-301",
+      "source": "node-299",
+      "target": "node-300",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-303",
+      "source": "node-299",
+      "target": "node-302",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-305",
+      "source": "node-299",
+      "target": "node-304",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-307",
+      "source": "node-299",
+      "target": "node-306",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-308",
+      "source": "node-306",
+      "target": "node-299",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-309",
+      "source": "node-304",
+      "target": "node-302",
+      "type": "calls",
+      "label": "calls at line 30"
+    },
+    {
+      "id": "edge-node-310",
+      "source": "node-304",
+      "target": "node-300",
+      "type": "calls",
+      "label": "calls at line 31"
+    },
+    {
+      "id": "edge-node-311",
+      "source": "node-306",
+      "target": "node-304",
+      "type": "calls",
+      "label": "calls at line 60"
+    },
+    {
+      "id": "edge-node-314",
+      "source": "node-312",
+      "target": "node-313",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-316",
+      "source": "node-312",
+      "target": "node-315",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-317",
+      "source": "node-315",
+      "target": "node-312",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-node-318",
+      "source": "node-315",
+      "target": "node-313",
+      "type": "calls",
+      "label": "calls at line 41"
+    },
+    {
+      "id": "edge-node-322",
+      "source": "node-320",
+      "target": "node-321",
+      "type": "contains",
+      "label": "contains function"
+    }
+  ]
+}

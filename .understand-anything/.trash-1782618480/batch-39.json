@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "type": "file",
+      "name": "format-event.ts",
+      "summary": "Code file: agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "sizeLines": 4,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/adapters/http/format-event.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from format-event.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/adapters/http/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "summary": "Code file: agents/task-runner/cli/src/adapters/http/index.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/cli/src/adapters/http/index.ts",
+      "sizeLines": 7,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/adapters/http/index.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from index.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        7
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "type": "file",
+      "name": "format-event.ts",
+      "summary": "Code file: agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "sizeLines": 4,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/adapters/process/format-event.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from format-event.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/adapters/process/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "summary": "Code file: agents/task-runner/cli/src/adapters/process/index.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/cli/src/adapters/process/index.ts",
+      "sizeLines": 7,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/adapters/process/index.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from index.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        7
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/adapters/registry.ts",
+      "type": "file",
+      "name": "registry.ts",
+      "summary": "Code file: agents/task-runner/cli/src/adapters/registry.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/cli/src/adapters/registry.ts",
+      "sizeLines": 56,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/adapters/registry.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from registry.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        56
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "target": "function:agents/task-runner/cli/src/adapters/http/format-event.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/cli/src/adapters/http/index.ts",
+      "target": "function:agents/task-runner/cli/src/adapters/http/index.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "target": "function:agents/task-runner/cli/src/adapters/process/format-event.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/cli/src/adapters/process/index.ts",
+      "target": "function:agents/task-runner/cli/src/adapters/process/index.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/cli/src/adapters/registry.ts",
+      "target": "function:agents/task-runner/cli/src/adapters/registry.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "import-agents/task-runner/cli/src/adapters/http/index.ts-to-agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "source": "file:agents/task-runner/cli/src/adapters/http/index.ts",
+      "target": "file:agents/task-runner/cli/src/adapters/http/format-event.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/cli/src/adapters/process/index.ts-to-agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "source": "file:agents/task-runner/cli/src/adapters/process/index.ts",
+      "target": "file:agents/task-runner/cli/src/adapters/process/format-event.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/cli/src/adapters/registry.ts-to-agents/task-runner/cli/src/adapters/http/index.ts",
+      "source": "file:agents/task-runner/cli/src/adapters/registry.ts",
+      "target": "file:agents/task-runner/cli/src/adapters/http/index.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/cli/src/adapters/registry.ts-to-agents/task-runner/cli/src/adapters/process/index.ts",
+      "source": "file:agents/task-runner/cli/src/adapters/registry.ts",
+      "target": "file:agents/task-runner/cli/src/adapters/process/index.ts",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

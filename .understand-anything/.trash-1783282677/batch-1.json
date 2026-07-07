@@ -1,0 +1,409 @@
+{
+  "batchIndex": 1,
+  "nodes": [
+    {
+      "id": "ci_cd_system",
+      "type": "module",
+      "name": "GitHub Actions CI/CD Pipeline",
+      "filePath": "agents/task-runner/.github/workflows",
+      "summary": "Complete CI/CD automation for task runner project with testing, validation, locking, and release workflows",
+      "tags": ["ci-cd", "automation", "github-actions", "quality-assurance"],
+      "complexity": "high"
+    },
+    {
+      "id": "workflow_e2e_tests",
+      "type": "file",
+      "name": "E2E Tests Workflow",
+      "filePath": "agents/task-runner/.github/workflows/e2e.yml",
+      "summary": "End-to-end testing workflow with Playwright browser testing and optional LLM integration testing",
+      "tags": ["testing", "e2e", "automation", "quality-assurance"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workflow_pr_policy",
+      "type": "file",
+      "name": "PR Policy Enforcement Workflow",
+      "filePath": "agents/task-runner/.github/workflows/pr-policy.yml",
+      "summary": "Policy enforcement for pull requests including lockfile editing prevention and dependency resolution validation",
+      "tags": ["policy-enforcement", "ci-cd", "quality-gates"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workflow_pr_verify",
+      "type": "file",
+      "name": "PR Verification Workflow",
+      "filePath": "agents/task-runner/.github/workflows/pr-verify.yml",
+      "summary": "Pull request verification pipeline with type checking, testing, and build validation",
+      "tags": ["testing", "validation", "ci-cd"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workflow_refresh_lockfile",
+      "type": "file",
+      "name": "Lockfile Refresh Workflow",
+      "filePath": "agents/task-runner/.github/workflows/refresh-lockfile.yml",
+      "summary": "Automated dependency lockfile refresh on master with automatic PR creation for updates",
+      "tags": ["dependency-management", "automation", "ci-cd"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workflow_release",
+      "type": "file",
+      "name": "Release Workflow",
+      "filePath": "agents/task-runner/.github/workflows/release.yml",
+      "summary": "Semantic versioning release pipeline supporting canary and stable channels with verification and publishing",
+      "tags": ["release", "versioning", "publishing", "ci-cd"],
+      "complexity": "high"
+    },
+    {
+      "id": "job_e2e_testing",
+      "type": "function",
+      "name": "E2E Test Job",
+      "filePath": "agents/task-runner/.github/workflows/e2e.yml",
+      "summary": "Runs Playwright browser tests with optional LLM assertions and artifacts collection",
+      "tags": ["testing", "browser-testing", "e2e"],
+      "complexity": "medium"
+    },
+    {
+      "id": "job_pr_policy_check",
+      "type": "function",
+      "name": "PR Policy Check Job",
+      "filePath": "agents/task-runner/.github/workflows/pr-policy.yml",
+      "summary": "Enforces policy rules including blocking manual lockfile edits and validating dependency resolution",
+      "tags": ["policy", "validation"],
+      "complexity": "low"
+    },
+    {
+      "id": "job_pr_verify",
+      "type": "function",
+      "name": "PR Verify Job",
+      "filePath": "agents/task-runner/.github/workflows/pr-verify.yml",
+      "summary": "Comprehensive PR validation with type checking, tests, and build",
+      "tags": ["testing", "validation"],
+      "complexity": "medium"
+    },
+    {
+      "id": "job_lockfile_refresh",
+      "type": "function",
+      "name": "Lockfile Refresh Job",
+      "filePath": "agents/task-runner/.github/workflows/refresh-lockfile.yml",
+      "summary": "Updates pnpm lockfile and creates/updates PR with changes",
+      "tags": ["dependency-management", "automation"],
+      "complexity": "medium"
+    },
+    {
+      "id": "job_release_verify",
+      "type": "function",
+      "name": "Release Verify Job",
+      "filePath": "agents/task-runner/.github/workflows/release.yml",
+      "summary": "Pre-release validation including type checks, tests, and build verification",
+      "tags": ["release", "verification"],
+      "complexity": "medium"
+    },
+    {
+      "id": "job_release_publish",
+      "type": "function",
+      "name": "Release Publish Job",
+      "filePath": "agents/task-runner/.github/workflows/release.yml",
+      "summary": "Publishes release using semantic versioning script with optional dry-run mode",
+      "tags": ["release", "publishing"],
+      "complexity": "high"
+    },
+    {
+      "id": "action_checkout",
+      "type": "function",
+      "name": "Checkout Action",
+      "filePath": "actions/checkout@v4",
+      "summary": "GitHub action for checking out repository code",
+      "tags": ["github-action", "vcs"],
+      "complexity": "low"
+    },
+    {
+      "id": "action_pnpm_setup",
+      "type": "function",
+      "name": "pnpm Setup Action",
+      "filePath": "pnpm/action-setup@v4",
+      "summary": "Setup pnpm package manager with specified version",
+      "tags": ["github-action", "package-manager"],
+      "complexity": "low"
+    },
+    {
+      "id": "action_node_setup",
+      "type": "function",
+      "name": "Node.js Setup Action",
+      "filePath": "actions/setup-node@v4",
+      "summary": "Setup Node.js runtime with optional package manager cache",
+      "tags": ["github-action", "runtime"],
+      "complexity": "low"
+    },
+    {
+      "id": "action_upload_artifact",
+      "type": "function",
+      "name": "Upload Artifact Action",
+      "filePath": "actions/upload-artifact@v4",
+      "summary": "Uploads test artifacts (Playwright reports) for retention",
+      "tags": ["github-action", "artifacts"],
+      "complexity": "low"
+    },
+    {
+      "id": "script_release",
+      "type": "function",
+      "name": "Release Script",
+      "filePath": "agents/task-runner/scripts/release.sh",
+      "summary": "Main release script for semantic versioning with canary and stable modes",
+      "tags": ["release", "scripting"],
+      "complexity": "high"
+    },
+    {
+      "id": "script_github_release",
+      "type": "function",
+      "name": "Create GitHub Release Script",
+      "filePath": "agents/task-runner/scripts/create-github-release.sh",
+      "summary": "Script to create GitHub release from version tag",
+      "tags": ["release", "scripting"],
+      "complexity": "low"
+    },
+    {
+      "id": "test_suite_playwright",
+      "type": "function",
+      "name": "Playwright Test Suite",
+      "filePath": "agents/task-runner/tests/e2e",
+      "summary": "Playwright-based end-to-end tests for browser automation",
+      "tags": ["testing", "e2e"],
+      "complexity": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ci_cd_system",
+      "target": "workflow_e2e_tests",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "E2E testing workflow"
+    },
+    {
+      "source": "ci_cd_system",
+      "target": "workflow_pr_policy",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "PR policy enforcement"
+    },
+    {
+      "source": "ci_cd_system",
+      "target": "workflow_pr_verify",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "PR verification"
+    },
+    {
+      "source": "ci_cd_system",
+      "target": "workflow_refresh_lockfile",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "Dependency lockfile management"
+    },
+    {
+      "source": "ci_cd_system",
+      "target": "workflow_release",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "Release pipeline"
+    },
+    {
+      "source": "workflow_e2e_tests",
+      "target": "job_e2e_testing",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "defines job"
+    },
+    {
+      "source": "job_e2e_testing",
+      "target": "action_checkout",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "checks out code"
+    },
+    {
+      "source": "job_e2e_testing",
+      "target": "action_pnpm_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up pnpm"
+    },
+    {
+      "source": "job_e2e_testing",
+      "target": "action_node_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up Node.js"
+    },
+    {
+      "source": "job_e2e_testing",
+      "target": "action_upload_artifact",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "uploads test results"
+    },
+    {
+      "source": "job_e2e_testing",
+      "target": "test_suite_playwright",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "runs e2e tests"
+    },
+    {
+      "source": "workflow_pr_policy",
+      "target": "job_pr_policy_check",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "defines job"
+    },
+    {
+      "source": "job_pr_policy_check",
+      "target": "action_checkout",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "checks out code"
+    },
+    {
+      "source": "job_pr_policy_check",
+      "target": "action_pnpm_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up pnpm"
+    },
+    {
+      "source": "workflow_pr_verify",
+      "target": "job_pr_verify",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "defines job"
+    },
+    {
+      "source": "job_pr_verify",
+      "target": "action_checkout",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "checks out code"
+    },
+    {
+      "source": "job_pr_verify",
+      "target": "action_pnpm_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up pnpm"
+    },
+    {
+      "source": "job_pr_verify",
+      "target": "action_node_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up Node.js"
+    },
+    {
+      "source": "workflow_refresh_lockfile",
+      "target": "job_lockfile_refresh",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "defines job"
+    },
+    {
+      "source": "job_lockfile_refresh",
+      "target": "action_checkout",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "checks out code"
+    },
+    {
+      "source": "job_lockfile_refresh",
+      "target": "action_pnpm_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up pnpm"
+    },
+    {
+      "source": "job_lockfile_refresh",
+      "target": "action_node_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up Node.js"
+    },
+    {
+      "source": "workflow_release",
+      "target": "job_release_verify",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "verify job"
+    },
+    {
+      "source": "workflow_release",
+      "target": "job_release_publish",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "publish job"
+    },
+    {
+      "source": "job_release_verify",
+      "target": "action_checkout",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "checks out code"
+    },
+    {
+      "source": "job_release_verify",
+      "target": "action_pnpm_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up pnpm"
+    },
+    {
+      "source": "job_release_verify",
+      "target": "action_node_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up Node.js"
+    },
+    {
+      "source": "job_release_publish",
+      "target": "action_checkout",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "checks out code"
+    },
+    {
+      "source": "job_release_publish",
+      "target": "action_pnpm_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up pnpm"
+    },
+    {
+      "source": "job_release_publish",
+      "target": "action_node_setup",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "sets up Node.js"
+    },
+    {
+      "source": "job_release_publish",
+      "target": "script_release",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "executes release"
+    },
+    {
+      "source": "job_release_publish",
+      "target": "script_github_release",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "creates GitHub release"
+    },
+    {
+      "source": "job_release_verify",
+      "target": "job_release_publish",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "prerequisite for publishing"
+    }
+  ]
+}

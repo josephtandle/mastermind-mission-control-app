@@ -1,0 +1,286 @@
+{
+  "batchIndex": 80,
+  "nodes": [
+    {
+      "id": "batch-80-file-0",
+      "type": "docs",
+      "name": "AUTO_DESCRIPTION_SUMMARY.md",
+      "filePath": "mission-control/_archive/AUTO_DESCRIPTION_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.2,
+      "sizeLines": 321,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-1",
+      "type": "docs",
+      "name": "BACKUPS_COMPONENT_SPECS.md",
+      "filePath": "mission-control/_archive/BACKUPS_COMPONENT_SPECS.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 9.2,
+      "sizeLines": 923,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-2",
+      "type": "docs",
+      "name": "BACKUPS_DATABASE_SCHEMA.md",
+      "filePath": "mission-control/_archive/BACKUPS_DATABASE_SCHEMA.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 5.9,
+      "sizeLines": 587,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-3",
+      "type": "docs",
+      "name": "BACKUPS_FILE_STRUCTURE.md",
+      "filePath": "mission-control/_archive/BACKUPS_FILE_STRUCTURE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 7.8,
+      "sizeLines": 780,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-4",
+      "type": "docs",
+      "name": "BACKUPS_IMPLEMENTATION_CHECKLIST.md",
+      "filePath": "mission-control/_archive/BACKUPS_IMPLEMENTATION_CHECKLIST.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 5.4,
+      "sizeLines": 537,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-5",
+      "type": "docs",
+      "name": "BACKUPS_IMPLEMENTATION_COMPLETE.md",
+      "filePath": "mission-control/_archive/BACKUPS_IMPLEMENTATION_COMPLETE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.2,
+      "sizeLines": 423,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-6",
+      "type": "docs",
+      "name": "BACKUPS_INDEX.md",
+      "filePath": "mission-control/_archive/BACKUPS_INDEX.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.5,
+      "sizeLines": 450,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-7",
+      "type": "docs",
+      "name": "BACKUPS_INTEGRATION_GUIDE.md",
+      "filePath": "mission-control/_archive/BACKUPS_INTEGRATION_GUIDE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 7.7,
+      "sizeLines": 773,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-8",
+      "type": "docs",
+      "name": "BACKUPS_PAGE_ARCHITECTURE.md",
+      "filePath": "mission-control/_archive/BACKUPS_PAGE_ARCHITECTURE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.5,
+      "sizeLines": 451,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-9",
+      "type": "docs",
+      "name": "BACKUPS_PAGE_SUMMARY.md",
+      "filePath": "mission-control/_archive/BACKUPS_PAGE_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 6,
+      "sizeLines": 595,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-10",
+      "type": "docs",
+      "name": "BACKUPS_PAGE_TESTING.md",
+      "filePath": "mission-control/_archive/BACKUPS_PAGE_TESTING.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 10,
+      "sizeLines": 1091,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-11",
+      "type": "docs",
+      "name": "BACKUPS_RESTORE_WORKFLOW.md",
+      "filePath": "mission-control/_archive/BACKUPS_RESTORE_WORKFLOW.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 7.6,
+      "sizeLines": 756,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-12",
+      "type": "docs",
+      "name": "BACKUP_AUTO_DESCRIPTION_CHECKLIST.md",
+      "filePath": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_CHECKLIST.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.6,
+      "sizeLines": 259,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-13",
+      "type": "docs",
+      "name": "BACKUP_AUTO_DESCRIPTION_GUIDE.md",
+      "filePath": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_GUIDE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.8,
+      "sizeLines": 278,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-14",
+      "type": "docs",
+      "name": "BACKUP_AUTO_DESCRIPTION_IMPLEMENTATION.md",
+      "filePath": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_IMPLEMENTATION.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3.4,
+      "sizeLines": 338,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-15",
+      "type": "docs",
+      "name": "BACKUP_AUTO_DESCRIPTION_QUICKSTART.md",
+      "filePath": "mission-control/_archive/BACKUP_AUTO_DESCRIPTION_QUICKSTART.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.4,
+      "sizeLines": 239,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-16",
+      "type": "docs",
+      "name": "BACKUP_COMPLETION_REPORT.md",
+      "filePath": "mission-control/_archive/BACKUP_COMPLETION_REPORT.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 5.7,
+      "sizeLines": 568,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-17",
+      "type": "database",
+      "name": "BACKUP_DATABASE_SCHEMA.sql",
+      "filePath": "mission-control/_archive/BACKUP_DATABASE_SCHEMA.sql",
+      "summary": "Database migration file defining schema changes and data transformations.",
+      "tags": [
+        "SQL",
+        "database"
+      ],
+      "complexity": 3.2,
+      "sizeLines": 351,
+      "language": "SQL"
+    },
+    {
+      "id": "batch-80-file-18",
+      "type": "docs",
+      "name": "BACKUP_DOCUMENTS_INDEX.md",
+      "filePath": "mission-control/_archive/BACKUP_DOCUMENTS_INDEX.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2,
+      "sizeLines": 200,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-80-file-19",
+      "type": "docs",
+      "name": "BACKUP_FINAL_SUMMARY.md",
+      "filePath": "mission-control/_archive/BACKUP_FINAL_SUMMARY.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 4.6,
+      "sizeLines": 463,
+      "language": "Markdown"
+    }
+  ],
+  "edges": []
+}

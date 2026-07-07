@@ -1,0 +1,1526 @@
+{
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "file",
+      "label": "ClaudeCommandPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/ClaudeCommandPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 156,
+      "nonEmptyLines": 138,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "function",
+      "label": "ClaudeCommandPanel",
+      "path": "mission-control/app/app/seo/sections/ClaudeCommandPanel.tsx",
+      "startLine": 25,
+      "endLine": 156,
+      "params": [
+        "{\n  domain,\n  lastAuditScore,\n  lastAuditIssues,\n}"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-3",
+      "type": "file",
+      "label": "GscDashboard.tsx",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 397,
+      "nonEmptyLines": 368,
+      "summary": "typescript file with 6 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "function",
+      "label": "formatNum",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "startLine": 66,
+      "endLine": 70,
+      "params": [
+        "n"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-5",
+      "type": "function",
+      "label": "shortenUrl",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "startLine": 72,
+      "endLine": 79,
+      "params": [
+        "url"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-6",
+      "type": "function",
+      "label": "formatDate",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "startLine": 81,
+      "endLine": 84,
+      "params": [
+        "d"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-7",
+      "type": "function",
+      "label": "HealthBadge",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "startLine": 86,
+      "endLine": 97,
+      "params": [
+        "{ ok, label }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-8",
+      "type": "function",
+      "label": "CustomTooltip",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "startLine": 99,
+      "endLine": 111,
+      "params": [
+        "{ active, payload, label }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-9",
+      "type": "function",
+      "label": "GscDashboard",
+      "path": "mission-control/app/app/seo/sections/GscDashboard.tsx",
+      "startLine": 121,
+      "endLine": 397,
+      "params": [
+        "{ domain }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-10",
+      "type": "file",
+      "label": "InfoTab.tsx",
+      "path": "mission-control/app/app/seo/sections/InfoTab.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 142,
+      "nonEmptyLines": 135,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-11",
+      "type": "function",
+      "label": "InfoTab",
+      "path": "mission-control/app/app/seo/sections/InfoTab.tsx",
+      "startLine": 75,
+      "endLine": 142,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-12",
+      "type": "file",
+      "label": "NlwebPanel.tsx",
+      "path": "mission-control/app/app/seo/sections/NlwebPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 195,
+      "nonEmptyLines": 178,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-13",
+      "type": "function",
+      "label": "NlwebPanel",
+      "path": "mission-control/app/app/seo/sections/NlwebPanel.tsx",
+      "startLine": 10,
+      "endLine": 195,
+      "params": [
+        "{ domain }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-14",
+      "type": "file",
+      "label": "SiteProfile.tsx",
+      "path": "mission-control/app/app/seo/sections/SiteProfile.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 80,
+      "nonEmptyLines": 73,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-15",
+      "type": "function",
+      "label": "SiteProfile",
+      "path": "mission-control/app/app/seo/sections/SiteProfile.tsx",
+      "startLine": 27,
+      "endLine": 80,
+      "params": [
+        "{ profile, domain, hosting, agent }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-16",
+      "type": "file",
+      "label": "SiteProfileExpand.tsx",
+      "path": "mission-control/app/app/seo/sections/SiteProfileExpand.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 87,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-17",
+      "type": "function",
+      "label": "SiteProfileExpand",
+      "path": "mission-control/app/app/seo/sections/SiteProfileExpand.tsx",
+      "startLine": 23,
+      "endLine": 94,
+      "params": [
+        "{ profile, domain, notes }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-18",
+      "type": "file",
+      "label": "SkillInfo.tsx",
+      "path": "mission-control/app/app/seo/sections/SkillInfo.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 48,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-19",
+      "type": "function",
+      "label": "SkillInfo",
+      "path": "mission-control/app/app/seo/sections/SkillInfo.tsx",
+      "startLine": 20,
+      "endLine": 52,
+      "params": [
+        "{ version, references }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-20",
+      "type": "file",
+      "label": "StatCards.tsx",
+      "path": "mission-control/app/app/seo/sections/StatCards.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 50,
+      "nonEmptyLines": 45,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-21",
+      "type": "function",
+      "label": "StatCards",
+      "path": "mission-control/app/app/seo/sections/StatCards.tsx",
+      "startLine": 27,
+      "endLine": 50,
+      "params": [
+        "{ stats }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-22",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/smart-sync/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 629,
+      "nonEmptyLines": 598,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-23",
+      "type": "function",
+      "label": "SmartSyncPage",
+      "path": "mission-control/app/app/smart-sync/page.tsx",
+      "startLine": 44,
+      "endLine": 546,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-24",
+      "type": "function",
+      "label": "SectionCard",
+      "path": "mission-control/app/app/smart-sync/page.tsx",
+      "startLine": 550,
+      "endLine": 591,
+      "params": [
+        "{\n  title,\n  icon,\n  sectionKey,\n  expanded,\n  onToggle,\n  badge,\n  children,\n}"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-25",
+      "type": "function",
+      "label": "ActionButton",
+      "path": "mission-control/app/app/smart-sync/page.tsx",
+      "startLine": 593,
+      "endLine": 629,
+      "params": [
+        "{\n  label,\n  description,\n  icon,\n  onClick,\n  loading,\n  disabled,\n  primary,\n}"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-26",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/spotify/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 313,
+      "nonEmptyLines": 285,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-27",
+      "type": "function",
+      "label": "formatRelTime",
+      "path": "mission-control/app/app/spotify/page.tsx",
+      "startLine": 18,
+      "endLine": 28,
+      "params": [
+        "iso"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-28",
+      "type": "function",
+      "label": "SpotifyPage",
+      "path": "mission-control/app/app/spotify/page.tsx",
+      "startLine": 51,
+      "endLine": 313,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-29",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/story-engine/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 439,
+      "nonEmptyLines": 421,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-30",
+      "type": "function",
+      "label": "StoryEnginePage",
+      "path": "mission-control/app/app/story-engine/page.tsx",
+      "startLine": 48,
+      "endLine": 421,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-31",
+      "type": "function",
+      "label": "StatCard",
+      "path": "mission-control/app/app/story-engine/page.tsx",
+      "startLine": 423,
+      "endLine": 439,
+      "params": [
+        "{\n  icon,\n  label,\n  value,\n}"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-32",
+      "type": "file",
+      "label": "loading.tsx",
+      "path": "mission-control/app/app/stripe/loading.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 36,
+      "nonEmptyLines": 36,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-33",
+      "type": "function",
+      "label": "Loading",
+      "path": "mission-control/app/app/stripe/loading.tsx",
+      "startLine": 1,
+      "endLine": 36,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-34",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/system/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 292,
+      "nonEmptyLines": 280,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-35",
+      "type": "function",
+      "label": "SystemPage",
+      "path": "mission-control/app/app/system/page.tsx",
+      "startLine": 97,
+      "endLine": 292,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-36",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/video-processor/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 302,
+      "nonEmptyLines": 281,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-37",
+      "type": "function",
+      "label": "StatusBadge",
+      "path": "mission-control/app/app/video-processor/page.tsx",
+      "startLine": 27,
+      "endLine": 39,
+      "params": [
+        "{ status }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-38",
+      "type": "function",
+      "label": "PlatformBadge",
+      "path": "mission-control/app/app/video-processor/page.tsx",
+      "startLine": 41,
+      "endLine": 47,
+      "params": [
+        "{ platform }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-39",
+      "type": "function",
+      "label": "VideoProcessorPage",
+      "path": "mission-control/app/app/video-processor/page.tsx",
+      "startLine": 49,
+      "endLine": 302,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-40",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/villa-search/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1099,
+      "nonEmptyLines": 1065,
+      "summary": "typescript file with 5 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-41",
+      "type": "function",
+      "label": "formatPrice",
+      "path": "mission-control/app/app/villa-search/page.tsx",
+      "startLine": 650,
+      "endLine": 652,
+      "params": [
+        "n"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-42",
+      "type": "function",
+      "label": "StatusBadge",
+      "path": "mission-control/app/app/villa-search/page.tsx",
+      "startLine": 654,
+      "endLine": 666,
+      "params": [
+        "{ status }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-43",
+      "type": "function",
+      "label": "TierBadge",
+      "path": "mission-control/app/app/villa-search/page.tsx",
+      "startLine": 668,
+      "endLine": 680,
+      "params": [
+        "{ tier }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-44",
+      "type": "function",
+      "label": "TypeBadge",
+      "path": "mission-control/app/app/villa-search/page.tsx",
+      "startLine": 682,
+      "endLine": 694,
+      "params": [
+        "{ type }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-45",
+      "type": "function",
+      "label": "VillaSearchPage",
+      "path": "mission-control/app/app/villa-search/page.tsx",
+      "startLine": 698,
+      "endLine": 1099,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-46",
+      "type": "file",
+      "label": "error.tsx",
+      "path": "mission-control/app/error.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 28,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-47",
+      "type": "function",
+      "label": "RootError",
+      "path": "mission-control/app/error.tsx",
+      "startLine": 5,
+      "endLine": 30,
+      "params": [
+        "{\n  error,\n  reset,\n}"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-48",
+      "type": "file",
+      "label": "globals.css",
+      "path": "mission-control/app/globals.css",
+      "language": "css",
+      "fileCategory": "markup",
+      "totalLines": 732,
+      "nonEmptyLines": 638,
+      "summary": "css file with 0 function(s)",
+      "tags": [
+        "css",
+        "markup"
+      ]
+    },
+    {
+      "id": "node-49",
+      "type": "file",
+      "label": "layout.tsx",
+      "path": "mission-control/app/layout.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 45,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-50",
+      "type": "function",
+      "label": "RootLayout",
+      "path": "mission-control/app/layout.tsx",
+      "startLine": 34,
+      "endLine": 49,
+      "params": [
+        "{\n  children,\n}"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-51",
+      "type": "file",
+      "label": "seo-ai.ts",
+      "path": "mission-control/app/lib/seo-ai.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 76,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-52",
+      "type": "function",
+      "label": "CLAUDE_ENV",
+      "path": "mission-control/app/lib/seo-ai.ts",
+      "startLine": 12,
+      "endLine": 18,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-53",
+      "type": "function",
+      "label": "loadProfile",
+      "path": "mission-control/app/lib/seo-ai.ts",
+      "startLine": 22,
+      "endLine": 28,
+      "params": [
+        "domain"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-54",
+      "type": "function",
+      "label": "generateMetaDescription",
+      "path": "mission-control/app/lib/seo-ai.ts",
+      "startLine": 30,
+      "endLine": 94,
+      "params": [
+        "domain",
+        "currentDesc",
+        "pageTitle"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-55",
+      "type": "file",
+      "label": "page.tsx",
+      "path": "mission-control/app/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-56",
+      "type": "function",
+      "label": "Home",
+      "path": "mission-control/app/page.tsx",
+      "startLine": 3,
+      "endLine": 5,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-57",
+      "type": "file",
+      "label": "providers-client.tsx",
+      "path": "mission-control/app/providers-client.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-58",
+      "type": "function",
+      "label": "ProvidersWrapper",
+      "path": "mission-control/app/providers-client.tsx",
+      "startLine": 9,
+      "endLine": 11,
+      "params": [
+        "{ children }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-59",
+      "type": "file",
+      "label": "providers.tsx",
+      "path": "mission-control/app/providers.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 14,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-60",
+      "type": "function",
+      "label": "Providers",
+      "path": "mission-control/app/providers.tsx",
+      "startLine": 4,
+      "endLine": 15,
+      "params": [
+        "{ children }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-61",
+      "type": "file",
+      "label": "ClaudeUsageBar.tsx",
+      "path": "mission-control/components/ClaudeUsageBar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 99,
+      "nonEmptyLines": 86,
+      "summary": "typescript file with 3 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-62",
+      "type": "function",
+      "label": "barColor",
+      "path": "mission-control/components/ClaudeUsageBar.tsx",
+      "startLine": 7,
+      "endLine": 16,
+      "params": [
+        "pct"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-63",
+      "type": "function",
+      "label": "labelColor",
+      "path": "mission-control/components/ClaudeUsageBar.tsx",
+      "startLine": 18,
+      "endLine": 22,
+      "params": [
+        "pct"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-64",
+      "type": "function",
+      "label": "ClaudeUsageBar",
+      "path": "mission-control/components/ClaudeUsageBar.tsx",
+      "startLine": 26,
+      "endLine": 99,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-65",
+      "type": "file",
+      "label": "DynamicFavicon.tsx",
+      "path": "mission-control/components/DynamicFavicon.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 26,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-66",
+      "type": "function",
+      "label": "setFavicon",
+      "path": "mission-control/components/DynamicFavicon.tsx",
+      "startLine": 16,
+      "endLine": 24,
+      "params": [
+        "href"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-67",
+      "type": "function",
+      "label": "DynamicFavicon",
+      "path": "mission-control/components/DynamicFavicon.tsx",
+      "startLine": 26,
+      "endLine": 32,
+      "params": [
+        "{ logoPath }"
+      ],
+      "language": "typescript",
+      "summary": "typescript function"
+    },
+    {
+      "id": "node-68",
+      "type": "file",
+      "label": "HelpButton.tsx",
+      "path": "mission-control/components/HelpButton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 247,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-69",
+      "type": "function",
+      "label": "HelpButton",
+      "path": "mission-control/components/HelpButton.tsx",
+      "startLine": 22,
+      "endLine": 273,
+      "params": [],
+      "language": "typescript",
+      "summary": "typescript function"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "source": "node-1",
+      "target": "node-2",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-2",
+      "source": "node-2",
+      "target": "node-1",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-3",
+      "source": "node-3",
+      "target": "node-4",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-4",
+      "source": "node-3",
+      "target": "node-5",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-5",
+      "source": "node-3",
+      "target": "node-6",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-6",
+      "source": "node-3",
+      "target": "node-7",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-7",
+      "source": "node-3",
+      "target": "node-8",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-8",
+      "source": "node-3",
+      "target": "node-9",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-9",
+      "source": "node-9",
+      "target": "node-3",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-10",
+      "source": "node-10",
+      "target": "node-11",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-11",
+      "source": "node-11",
+      "target": "node-10",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-12",
+      "source": "node-12",
+      "target": "node-13",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-13",
+      "source": "node-13",
+      "target": "node-12",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-14",
+      "source": "node-14",
+      "target": "node-15",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-15",
+      "source": "node-15",
+      "target": "node-14",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-16",
+      "source": "node-16",
+      "target": "node-17",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-17",
+      "source": "node-17",
+      "target": "node-16",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-18",
+      "source": "node-18",
+      "target": "node-19",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-19",
+      "source": "node-19",
+      "target": "node-18",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-20",
+      "source": "node-20",
+      "target": "node-21",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-21",
+      "source": "node-21",
+      "target": "node-20",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-22",
+      "source": "node-22",
+      "target": "node-23",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-23",
+      "source": "node-22",
+      "target": "node-24",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-24",
+      "source": "node-22",
+      "target": "node-25",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-25",
+      "source": "node-23",
+      "target": "node-22",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-26",
+      "source": "node-26",
+      "target": "node-27",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-27",
+      "source": "node-26",
+      "target": "node-28",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-28",
+      "source": "node-28",
+      "target": "node-26",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-29",
+      "source": "node-29",
+      "target": "node-30",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-30",
+      "source": "node-29",
+      "target": "node-31",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-31",
+      "source": "node-30",
+      "target": "node-29",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-32",
+      "source": "node-32",
+      "target": "node-33",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-33",
+      "source": "node-33",
+      "target": "node-32",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-34",
+      "source": "node-34",
+      "target": "node-35",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-35",
+      "source": "node-35",
+      "target": "node-34",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-36",
+      "source": "node-36",
+      "target": "node-37",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-37",
+      "source": "node-36",
+      "target": "node-38",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-38",
+      "source": "node-36",
+      "target": "node-39",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-39",
+      "source": "node-39",
+      "target": "node-36",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-40",
+      "source": "node-40",
+      "target": "node-41",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-41",
+      "source": "node-40",
+      "target": "node-42",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-42",
+      "source": "node-40",
+      "target": "node-43",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-43",
+      "source": "node-40",
+      "target": "node-44",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-44",
+      "source": "node-40",
+      "target": "node-45",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-45",
+      "source": "node-45",
+      "target": "node-40",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-46",
+      "source": "node-46",
+      "target": "node-47",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-47",
+      "source": "node-47",
+      "target": "node-46",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-48",
+      "source": "node-49",
+      "target": "node-50",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-49",
+      "source": "node-50",
+      "target": "node-49",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-50",
+      "source": "node-51",
+      "target": "node-52",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-51",
+      "source": "node-51",
+      "target": "node-53",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-52",
+      "source": "node-51",
+      "target": "node-54",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-53",
+      "source": "node-52",
+      "target": "node-51",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-54",
+      "source": "node-54",
+      "target": "node-51",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-55",
+      "source": "node-55",
+      "target": "node-56",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-56",
+      "source": "node-56",
+      "target": "node-55",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-57",
+      "source": "node-57",
+      "target": "node-58",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-58",
+      "source": "node-58",
+      "target": "node-57",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-59",
+      "source": "node-59",
+      "target": "node-60",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-60",
+      "source": "node-60",
+      "target": "node-59",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-61",
+      "source": "node-61",
+      "target": "node-62",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-62",
+      "source": "node-61",
+      "target": "node-63",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-63",
+      "source": "node-61",
+      "target": "node-64",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-64",
+      "source": "node-64",
+      "target": "node-61",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-65",
+      "source": "node-65",
+      "target": "node-66",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-66",
+      "source": "node-65",
+      "target": "node-67",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-67",
+      "source": "node-67",
+      "target": "node-65",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-68",
+      "source": "node-68",
+      "target": "node-69",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-69",
+      "source": "node-69",
+      "target": "node-68",
+      "type": "exports",
+      "label": "exports"
+    },
+    {
+      "id": "edge-70",
+      "source": "node-8",
+      "target": "node-4",
+      "type": "calls",
+      "label": "calls at line 106"
+    },
+    {
+      "id": "edge-71",
+      "source": "node-9",
+      "target": "node-4",
+      "type": "calls",
+      "label": "calls at line 192"
+    },
+    {
+      "id": "edge-72",
+      "source": "node-9",
+      "target": "node-4",
+      "type": "calls",
+      "label": "calls at line 193"
+    },
+    {
+      "id": "edge-73",
+      "source": "node-9",
+      "target": "node-6",
+      "type": "calls",
+      "label": "calls at line 200"
+    },
+    {
+      "id": "edge-74",
+      "source": "node-9",
+      "target": "node-4",
+      "type": "calls",
+      "label": "calls at line 308"
+    },
+    {
+      "id": "edge-75",
+      "source": "node-9",
+      "target": "node-5",
+      "type": "calls",
+      "label": "calls at line 340"
+    },
+    {
+      "id": "edge-76",
+      "source": "node-9",
+      "target": "node-4",
+      "type": "calls",
+      "label": "calls at line 343"
+    },
+    {
+      "id": "edge-77",
+      "source": "node-28",
+      "target": "node-27",
+      "type": "calls",
+      "label": "calls at line 302"
+    },
+    {
+      "id": "edge-78",
+      "source": "node-45",
+      "target": "node-41",
+      "type": "calls",
+      "label": "calls at line 900"
+    },
+    {
+      "id": "edge-79",
+      "source": "node-45",
+      "target": "node-41",
+      "type": "calls",
+      "label": "calls at line 901"
+    },
+    {
+      "id": "edge-80",
+      "source": "node-45",
+      "target": "node-41",
+      "type": "calls",
+      "label": "calls at line 901"
+    },
+    {
+      "id": "edge-81",
+      "source": "node-54",
+      "target": "node-53",
+      "type": "calls",
+      "label": "calls at line 35"
+    },
+    {
+      "id": "edge-82",
+      "source": "node-54",
+      "target": "node-52",
+      "type": "calls",
+      "label": "calls at line 71"
+    },
+    {
+      "id": "edge-83",
+      "source": "node-64",
+      "target": "node-62",
+      "type": "calls",
+      "label": "calls at line 63"
+    },
+    {
+      "id": "edge-84",
+      "source": "node-64",
+      "target": "node-63",
+      "type": "calls",
+      "label": "calls at line 91"
+    },
+    {
+      "id": "edge-85",
+      "source": "node-67",
+      "target": "node-66",
+      "type": "calls",
+      "label": "calls at line 28"
+    }
+  ]
+}

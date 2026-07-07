@@ -1,0 +1,577 @@
+{
+  "batchIndex": 4,
+  "nodes": [
+    {
+      "id": "cli_tests_suite",
+      "type": "module",
+      "name": "CLI Test Suite",
+      "filePath": "agents/task-runner/cli/src/__tests__",
+      "summary": "Comprehensive test suite for CLI covering configuration, commands, and utilities",
+      "tags": ["testing", "cli", "unit-tests"],
+      "complexity": "high"
+    },
+    {
+      "id": "test_agent_jwt_env",
+      "type": "file",
+      "name": "agent-jwt-env.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/agent-jwt-env.test.ts",
+      "summary": "Tests for agent JWT secret environment variable handling and .env file management",
+      "tags": ["testing", "authentication", "configuration"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_allowed_hostname",
+      "type": "file",
+      "name": "allowed-hostname.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/allowed-hostname.test.ts",
+      "summary": "Tests for allowed hostname configuration in CLI server settings",
+      "tags": ["testing", "configuration", "server"],
+      "complexity": "low"
+    },
+    {
+      "id": "test_common",
+      "type": "file",
+      "name": "common.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/common.test.ts",
+      "summary": "Tests for common CLI utilities and context resolution",
+      "tags": ["testing", "utilities"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_company_delete",
+      "type": "file",
+      "name": "company-delete.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/company-delete.test.ts",
+      "summary": "Tests for company deletion command with multiple resolution modes",
+      "tags": ["testing", "commands"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_context",
+      "type": "file",
+      "name": "context.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/context.test.ts",
+      "summary": "Tests for CLI context profile management and persistence",
+      "tags": ["testing", "configuration", "profiles"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_data_dir",
+      "type": "file",
+      "name": "data-dir.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/data-dir.test.ts",
+      "summary": "Tests for data directory override and path resolution",
+      "tags": ["testing", "configuration", "paths"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_doctor",
+      "type": "file",
+      "name": "doctor.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/doctor.test.ts",
+      "summary": "Tests for doctor command diagnostic checks",
+      "tags": ["testing", "commands", "diagnostics"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_home_paths",
+      "type": "file",
+      "name": "home-paths.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/home-paths.test.ts",
+      "summary": "Tests for home directory and instance path resolution",
+      "tags": ["testing", "configuration", "paths"],
+      "complexity": "low"
+    },
+    {
+      "id": "test_http",
+      "type": "file",
+      "name": "http.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/http.test.ts",
+      "summary": "Tests for HTTP client with header management and error handling",
+      "tags": ["testing", "http", "api-client"],
+      "complexity": "medium"
+    },
+    {
+      "id": "test_worktree",
+      "type": "file",
+      "name": "worktree.test.ts",
+      "filePath": "agents/task-runner/cli/src/__tests__/worktree.test.ts",
+      "summary": "Tests for git worktree management and configuration seeding",
+      "tags": ["testing", "git", "worktree"],
+      "complexity": "high"
+    },
+    {
+      "id": "func_ensureAgentJwtSecret",
+      "type": "function",
+      "name": "ensureAgentJwtSecret",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Ensures agent JWT secret exists in .env file",
+      "tags": ["jwt", "secrets", "environment"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_readAgentJwtSecretFromEnv",
+      "type": "function",
+      "name": "readAgentJwtSecretFromEnv",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Reads agent JWT secret from environment file",
+      "tags": ["jwt", "secrets", "environment"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_agentJwtSecretCheck",
+      "type": "function",
+      "name": "agentJwtSecretCheck",
+      "filePath": "agents/task-runner/cli/src/checks/agent-jwt-secret-check.ts",
+      "summary": "Health check for agent JWT secret configuration",
+      "tags": ["health-check", "jwt", "diagnostics"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_addAllowedHostname",
+      "type": "function",
+      "name": "addAllowedHostname",
+      "filePath": "agents/task-runner/cli/src/commands/allowed-hostname.ts",
+      "summary": "Command handler for adding allowed hostnames to config",
+      "tags": ["commands", "configuration"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_resolveCommandContext",
+      "type": "function",
+      "name": "resolveCommandContext",
+      "filePath": "agents/task-runner/cli/src/commands/client/common.ts",
+      "summary": "Resolves CLI context from options, environment, and profiles",
+      "tags": ["context", "configuration", "resolution"],
+      "complexity": "medium"
+    },
+    {
+      "id": "func_writeContext",
+      "type": "function",
+      "name": "writeContext",
+      "filePath": "agents/task-runner/cli/src/client/context.ts",
+      "summary": "Persists CLI context profile to JSON file",
+      "tags": ["persistence", "context", "profiles"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_resolveCompanyForDeletion",
+      "type": "function",
+      "name": "resolveCompanyForDeletion",
+      "filePath": "agents/task-runner/cli/src/commands/client/company.ts",
+      "summary": "Resolves company for deletion by ID or prefix",
+      "tags": ["company-management", "deletion"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_assertDeleteConfirmation",
+      "type": "function",
+      "name": "assertDeleteConfirmation",
+      "filePath": "agents/task-runner/cli/src/commands/client/company.ts",
+      "summary": "Asserts user confirmation for company deletion",
+      "tags": ["deletion", "user-confirmation"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_applyDataDirOverride",
+      "type": "function",
+      "name": "applyDataDirOverride",
+      "filePath": "agents/task-runner/cli/src/config/data-dir.ts",
+      "summary": "Applies data directory override to environment",
+      "tags": ["configuration", "paths"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_doctor",
+      "type": "function",
+      "name": "doctor",
+      "filePath": "agents/task-runner/cli/src/commands/doctor.ts",
+      "summary": "Diagnostic command for system health checks",
+      "tags": ["diagnostics", "commands"],
+      "complexity": "medium"
+    },
+    {
+      "id": "func_writeConfig",
+      "type": "function",
+      "name": "writeConfig",
+      "filePath": "agents/task-runner/cli/src/config/store.ts",
+      "summary": "Persists configuration to file",
+      "tags": ["persistence", "configuration"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_describeLocalInstancePaths",
+      "type": "function",
+      "name": "describeLocalInstancePaths",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Describes file paths for local instance",
+      "tags": ["paths", "configuration"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_resolvePaperclipHomeDir",
+      "type": "function",
+      "name": "resolvePaperclipHomeDir",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Resolves Paperclip home directory from environment",
+      "tags": ["paths", "environment"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_resolvePaperclipInstanceId",
+      "type": "function",
+      "name": "resolvePaperclipInstanceId",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Validates and resolves instance ID with format checking",
+      "tags": ["validation", "configuration"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_expandHomePrefix",
+      "type": "function",
+      "name": "expandHomePrefix",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Expands ~ prefix in file paths",
+      "tags": ["paths", "utilities"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_PaperclipApiClient",
+      "type": "function",
+      "name": "PaperclipApiClient",
+      "filePath": "agents/task-runner/cli/src/client/http.ts",
+      "summary": "HTTP client for API requests with auth and error handling",
+      "tags": ["http", "api-client"],
+      "complexity": "medium"
+    },
+    {
+      "id": "func_ApiRequestError",
+      "type": "function",
+      "name": "ApiRequestError",
+      "filePath": "agents/task-runner/cli/src/client/http.ts",
+      "summary": "Custom error class for API request failures",
+      "tags": ["error-handling", "http"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_resolveWorktreeSeedPlan",
+      "type": "function",
+      "name": "resolveWorktreeSeedPlan",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Determines seeding strategy for new worktrees",
+      "tags": ["worktree", "planning"],
+      "complexity": "medium"
+    },
+    {
+      "id": "func_buildWorktreeConfig",
+      "type": "function",
+      "name": "buildWorktreeConfig",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Builds configuration for new worktree instance",
+      "tags": ["worktree", "configuration"],
+      "complexity": "high"
+    },
+    {
+      "id": "func_resolveGitWorktreeAddArgs",
+      "type": "function",
+      "name": "resolveGitWorktreeAddArgs",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Constructs git worktree add command arguments",
+      "tags": ["git", "worktree"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_copyGitHooksToWorktreeGitDir",
+      "type": "function",
+      "name": "copyGitHooksToWorktreeGitDir",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Copies git hooks to worktree directory",
+      "tags": ["git", "hooks"],
+      "complexity": "low"
+    },
+    {
+      "id": "func_sanitizeWorktreeInstanceId",
+      "type": "function",
+      "name": "sanitizeWorktreeInstanceId",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Validates and sanitizes worktree instance identifiers",
+      "tags": ["validation", "worktree"],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "cli_tests_suite",
+      "target": "test_agent_jwt_env",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_allowed_hostname",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_common",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_company_delete",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_context",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_data_dir",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_doctor",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_home_paths",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_http",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "cli_tests_suite",
+      "target": "test_worktree",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "test file"
+    },
+    {
+      "source": "test_agent_jwt_env",
+      "target": "func_ensureAgentJwtSecret",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_agent_jwt_env",
+      "target": "func_readAgentJwtSecretFromEnv",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_agent_jwt_env",
+      "target": "func_agentJwtSecretCheck",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_allowed_hostname",
+      "target": "func_addAllowedHostname",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_common",
+      "target": "func_resolveCommandContext",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_context",
+      "target": "func_writeContext",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_company_delete",
+      "target": "func_resolveCompanyForDeletion",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_company_delete",
+      "target": "func_assertDeleteConfirmation",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_data_dir",
+      "target": "func_applyDataDirOverride",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_doctor",
+      "target": "func_doctor",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_doctor",
+      "target": "func_writeConfig",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_home_paths",
+      "target": "func_describeLocalInstancePaths",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_home_paths",
+      "target": "func_resolvePaperclipHomeDir",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_home_paths",
+      "target": "func_resolvePaperclipInstanceId",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_home_paths",
+      "target": "func_expandHomePrefix",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_http",
+      "target": "func_PaperclipApiClient",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests class"
+    },
+    {
+      "source": "test_http",
+      "target": "func_ApiRequestError",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests error"
+    },
+    {
+      "source": "test_worktree",
+      "target": "func_resolveWorktreeSeedPlan",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_worktree",
+      "target": "func_buildWorktreeConfig",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_worktree",
+      "target": "func_resolveGitWorktreeAddArgs",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_worktree",
+      "target": "func_copyGitHooksToWorktreeGitDir",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "test_worktree",
+      "target": "func_sanitizeWorktreeInstanceId",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "tests function"
+    },
+    {
+      "source": "func_resolveCommandContext",
+      "target": "func_writeContext",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "uses context"
+    },
+    {
+      "source": "func_doctor",
+      "target": "func_agentJwtSecretCheck",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "runs diagnostic"
+    },
+    {
+      "source": "func_applyDataDirOverride",
+      "target": "func_resolvePaperclipHomeDir",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "resolves paths"
+    },
+    {
+      "source": "func_describeLocalInstancePaths",
+      "target": "func_resolvePaperclipHomeDir",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "uses home path"
+    },
+    {
+      "source": "func_resolveGitWorktreeAddArgs",
+      "target": "func_sanitizeWorktreeInstanceId",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "validates id"
+    },
+    {
+      "source": "func_buildWorktreeConfig",
+      "target": "func_resolveWorktreeSeedPlan",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "uses seed plan"
+    },
+    {
+      "source": "func_buildWorktreeConfig",
+      "target": "func_sanitizeWorktreeInstanceId",
+      "type": "calls",
+      "weight": 0.8,
+      "label": "validates id"
+    }
+  ]
+}

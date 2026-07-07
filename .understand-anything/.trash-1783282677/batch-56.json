@@ -1,0 +1,52 @@
+{
+  "batchIndex": 56,
+  "nodes": [
+    {
+      "id": "batch-56-file-0",
+      "type": "source",
+      "name": "execute.ts",
+      "filePath": "agents/task-runner/server/src/adapters/http/execute.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 43,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-56-file-1",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/server/src/adapters/http/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 22,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-56-file-2",
+      "type": "source",
+      "name": "test.ts",
+      "filePath": "agents/task-runner/server/src/adapters/http/test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "testing"
+      ],
+      "complexity": 1.2,
+      "sizeLines": 117,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,276 @@
+{
+  "batchIndex": 70,
+  "nodes": [
+    {
+      "id": "batch-70-file-0",
+      "type": "source",
+      "name": "access.ts",
+      "filePath": "agents/task-runner/ui/src/api/access.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 131,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-1",
+      "type": "source",
+      "name": "activity.ts",
+      "filePath": "agents/task-runner/ui/src/api/activity.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-2",
+      "type": "source",
+      "name": "agents.ts",
+      "filePath": "agents/task-runner/ui/src/api/agents.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 148,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-3",
+      "type": "source",
+      "name": "approvals.ts",
+      "filePath": "agents/task-runner/ui/src/api/approvals.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 25,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-4",
+      "type": "source",
+      "name": "assets.ts",
+      "filePath": "agents/task-runner/ui/src/api/assets.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 22,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-5",
+      "type": "source",
+      "name": "auth.ts",
+      "filePath": "agents/task-runner/ui/src/api/auth.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 75,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-6",
+      "type": "source",
+      "name": "client.ts",
+      "filePath": "agents/task-runner/ui/src/api/client.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-7",
+      "type": "source",
+      "name": "companies.ts",
+      "filePath": "agents/task-runner/ui/src/api/companies.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 37,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-8",
+      "type": "source",
+      "name": "costs.ts",
+      "filePath": "agents/task-runner/ui/src/api/costs.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 28,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-9",
+      "type": "source",
+      "name": "dashboard.ts",
+      "filePath": "agents/task-runner/ui/src/api/dashboard.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 7,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-10",
+      "type": "source",
+      "name": "goals.ts",
+      "filePath": "agents/task-runner/ui/src/api/goals.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 12,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-11",
+      "type": "source",
+      "name": "health.ts",
+      "filePath": "agents/task-runner/ui/src/api/health.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 26,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-12",
+      "type": "source",
+      "name": "heartbeats.ts",
+      "filePath": "agents/task-runner/ui/src/api/heartbeats.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 49,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-13",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/api/index.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 16,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-14",
+      "type": "source",
+      "name": "issues.ts",
+      "filePath": "agents/task-runner/ui/src/api/issues.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 77,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-15",
+      "type": "source",
+      "name": "projects.ts",
+      "filePath": "agents/task-runner/ui/src/api/projects.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 34,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-16",
+      "type": "source",
+      "name": "secrets.ts",
+      "filePath": "agents/task-runner/ui/src/api/secrets.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 26,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-70-file-17",
+      "type": "source",
+      "name": "sidebarBadges.ts",
+      "filePath": "agents/task-runner/ui/src/api/sidebarBadges.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 7,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

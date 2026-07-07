@@ -1,0 +1,89 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/comments-and-communication.md",
+      "type": "file",
+      "name": "comments-and-communication.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/comments-and-communication.md",
+      "summary": "docs file (57 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/cost-reporting.md",
+      "type": "file",
+      "name": "cost-reporting.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/cost-reporting.md",
+      "summary": "docs file (52 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/handling-approvals.md",
+      "type": "file",
+      "name": "handling-approvals.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/handling-approvals.md",
+      "summary": "docs file (65 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/heartbeat-protocol.md",
+      "type": "file",
+      "name": "heartbeat-protocol.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/heartbeat-protocol.md",
+      "summary": "docs file (107 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/how-agents-work.md",
+      "type": "file",
+      "name": "how-agents-work.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/how-agents-work.md",
+      "summary": "docs file (52 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/task-workflow.md",
+      "type": "file",
+      "name": "task-workflow.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/task-workflow.md",
+      "summary": "docs file (104 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:agents/task-runner/docs/guides/agent-developer/writing-a-skill.md",
+      "type": "file",
+      "name": "writing-a-skill.md",
+      "filePath": "agents/task-runner/docs/guides/agent-developer/writing-a-skill.md",
+      "summary": "docs file (60 lines)",
+      "tags": [
+        "docs",
+        "markdown"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

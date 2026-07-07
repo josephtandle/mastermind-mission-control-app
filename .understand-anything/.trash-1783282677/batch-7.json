@@ -1,0 +1,77 @@
+{
+  "batchIndex": 7,
+  "files": [
+    {"path": "commands/allowed-hostname.ts", "size": 1123, "language": "typescript"},
+    {"path": "commands/auth-bootstrap-ceo.ts", "size": 3456, "language": "typescript"},
+    {"path": "commands/configure.ts", "size": 5847, "language": "typescript"},
+    {"path": "commands/db-backup.ts", "size": 2614, "language": "typescript"},
+    {"path": "commands/doctor.ts", "size": 5125, "language": "typescript"},
+    {"path": "commands/env.ts", "size": 12387, "language": "typescript"},
+    {"path": "commands/heartbeat-run.ts", "size": 8456, "language": "typescript"},
+    {"path": "commands/onboard.ts", "size": 12156, "language": "typescript"},
+    {"path": "commands/run.ts", "size": 4856, "language": "typescript"},
+    {"path": "commands/worktree.ts", "size": 21456, "language": "typescript"},
+    {"path": "commands/worktree-lib.ts", "size": 4387, "language": "typescript"}
+  ],
+  "batchImportData": {
+    "allowed-hostname.ts": ["@clack/prompts", "picocolors", "../config/hostnames.js", "../config/store.js"],
+    "auth-bootstrap-ceo.ts": ["node:crypto", "@clack/prompts", "picocolors", "drizzle-orm", "@paperclipai/db", "../config/env.js", "../config/store.js"],
+    "configure.ts": ["@clack/prompts", "picocolors", "../config/store.js", "../config/schema.js", "../config/secrets-key.js", "../prompts/database.js", "../prompts/llm.js", "../prompts/logging.js", "../prompts/secrets.js", "../prompts/storage.js", "../prompts/server.js", "../config/home.js", "../utils/banner.js"],
+    "db-backup.ts": ["node:path", "@clack/prompts", "picocolors", "@paperclipai/db", "../config/home.js", "../config/store.js", "../utils/banner.js"],
+    "doctor.ts": ["@clack/prompts", "picocolors", "../config/schema.js", "../config/store.js", "../checks/index.js", "../config/env.js", "../utils/banner.js"],
+    "env.ts": ["@clack/prompts", "picocolors", "../config/schema.js", "../config/store.js", "../config/env.js", "../config/home.js"],
+    "heartbeat-run.ts": ["node:timers/promises", "picocolors", "@paperclipai/shared", "../adapters/index.js", "./client/common.js"],
+    "onboard.ts": ["@clack/prompts", "node:path", "picocolors", "@paperclipai/shared", "../config/store.js", "../config/schema.js", "../config/env.js", "../config/secrets-key.js", "../prompts/database.js", "../prompts/llm.js", "../prompts/logging.js", "../prompts/secrets.js", "../prompts/storage.js", "../prompts/server.js", "../config/home.js", "./auth-bootstrap-ceo.js", "../utils/banner.js"],
+    "run.ts": ["node:fs", "node:path", "node:url", "@clack/prompts", "picocolors", "./auth-bootstrap-ceo.js", "./onboard.js", "./doctor.js", "../config/env.js", "../config/store.js", "../config/schema.js", "../config/home.js"],
+    "worktree.ts": ["node:fs", "node:os", "node:path", "node:child_process", "node:net", "@clack/prompts", "picocolors", "drizzle-orm", "@paperclipai/db", "commander", "../config/env.js", "../config/home.js", "../config/schema.js", "../config/store.js", "../utils/banner.js", "../utils/path-resolver.js", "./worktree-lib.js"],
+    "worktree-lib.ts": ["node:path", "../config/schema.js", "../config/home.js"]
+  },
+  "neighborMap": {
+    "allowed-hostname.ts": ["../config/hostnames.js", "../config/store.js"],
+    "auth-bootstrap-ceo.ts": ["../config/env.js", "../config/store.js"],
+    "configure.ts": ["../config/store.js", "../config/schema.js", "../config/secrets-key.js", "../config/home.js"],
+    "db-backup.ts": ["../config/home.js", "../config/store.js"],
+    "doctor.ts": ["../config/schema.js", "../config/store.js", "../checks/index.js", "../config/env.js"],
+    "env.ts": ["../config/schema.js", "../config/store.js", "../config/env.js", "../config/home.js"],
+    "heartbeat-run.ts": ["../adapters/index.js", "./client/common.js"],
+    "onboard.ts": ["../config/store.js", "../config/schema.js", "../config/env.js", "../config/secrets-key.js", "../config/home.js", "./auth-bootstrap-ceo.js"],
+    "run.ts": ["../config/env.js", "../config/store.js", "../config/schema.js", "../config/home.js", "./auth-bootstrap-ceo.js", "./onboard.js", "./doctor.js"],
+    "worktree.ts": ["../config/env.js", "../config/home.js", "../config/schema.js", "../config/store.js", "../utils/banner.js", "../utils/path-resolver.js", "./worktree-lib.js"],
+    "worktree-lib.ts": ["../config/schema.js", "../config/home.js"]
+  },
+  "graphNodes": [
+    {"id": "addAllowedHostname", "nodeType": "function", "label": "Add allowed hostname", "title": "addAllowedHostname", "description": "Adds a hostname to server's allowed list with normalization", "file": "allowed-hostname.ts", "language": "typescript", "tags": ["command", "hostname", "async"], "metadata": {"params": 2}},
+    {"id": "bootstrapCeoInvite", "nodeType": "function", "label": "Bootstrap CEO invite", "title": "bootstrapCeoInvite", "description": "Creates a one-time invite token for instance admin setup", "file": "auth-bootstrap-ceo.ts", "language": "typescript", "tags": ["command", "auth", "async"], "metadata": {"params": 1}},
+    {"id": "configure", "nodeType": "function", "label": "Configure command", "title": "configure", "description": "Interactive CLI to modify Paperclip config sections (database, storage, etc)", "file": "configure.ts", "language": "typescript", "tags": ["command", "async"], "metadata": {"params": 1}},
+    {"id": "dbBackupCommand", "nodeType": "function", "label": "Database backup command", "title": "dbBackupCommand", "description": "Creates backup of PostgreSQL database with retention and cleanup", "file": "db-backup.ts", "language": "typescript", "tags": ["command", "database", "async"], "metadata": {"params": 1}},
+    {"id": "doctor", "nodeType": "function", "label": "Doctor command", "title": "doctor", "description": "Runs health checks and optional repairs for Paperclip deployment", "file": "doctor.ts", "language": "typescript", "tags": ["command", "diagnostics", "async"], "metadata": {"params": 1}},
+    {"id": "envCommand", "nodeType": "function", "label": "Environment command", "title": "envCommand", "description": "Lists all deployment environment variables with their sources", "file": "env.ts", "language": "typescript", "tags": ["command", "environment", "async"], "metadata": {"params": 1}},
+    {"id": "heartbeatRun", "nodeType": "function", "label": "Heartbeat run command", "title": "heartbeatRun", "description": "Invokes agent heartbeat and streams output with real-time status", "file": "heartbeat-run.ts", "language": "typescript", "tags": ["command", "agent", "async"], "metadata": {"params": 1}},
+    {"id": "onboard", "nodeType": "function", "label": "Onboard command", "title": "onboard", "description": "Interactive setup wizard for first-time Paperclip installation", "file": "onboard.ts", "language": "typescript", "tags": ["command", "setup", "async"], "metadata": {"params": 1}},
+    {"id": "runCommand", "nodeType": "function", "label": "Run command", "title": "runCommand", "description": "Starts the Paperclip server with config checks and bootstrap", "file": "run.ts", "language": "typescript", "tags": ["command", "server", "async"], "metadata": {"params": 1}},
+    {"id": "worktreeMakeCommand", "nodeType": "function", "label": "Worktree make command", "title": "worktreeMakeCommand", "description": "Creates isolated git worktree with seeded database", "file": "worktree.ts", "language": "typescript", "tags": ["command", "git", "async"], "metadata": {"params": 2}},
+    {"id": "WorktreeLocalPaths", "nodeType": "type", "label": "Worktree local paths", "title": "WorktreeLocalPaths", "description": "Configuration paths for worktree instances", "file": "worktree-lib.ts", "language": "typescript", "tags": ["type", "paths"], "metadata": {"properties": 9}},
+    {"id": "buildWorktreeConfig", "nodeType": "function", "label": "Build worktree config", "title": "buildWorktreeConfig", "description": "Creates isolated config by rebinding ports and directories", "file": "worktree-lib.ts", "language": "typescript", "tags": ["utility", "config"], "metadata": {"params": 1}},
+    {"id": "sanitizeWorktreeInstanceId", "nodeType": "function", "label": "Sanitize worktree ID", "title": "sanitizeWorktreeInstanceId", "description": "Normalizes worktree names to safe directory/branch format", "file": "worktree-lib.ts", "language": "typescript", "tags": ["utility", "validation"], "metadata": {"params": 1}}
+  ],
+  "graphEdges": [
+    {"id": "e1", "source": "configure", "target": "addAllowedHostname", "edgeType": "conceptually_related", "label": "both configure server", "bidirectional": true},
+    {"id": "e2", "source": "onboard", "target": "bootstrapCeoInvite", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e3", "source": "run", "target": "onboard", "edgeType": "calls", "label": "fallback when no config", "bidirectional": false},
+    {"id": "e4", "source": "run", "target": "doctor", "edgeType": "calls", "label": "runs checks before start", "bidirectional": false},
+    {"id": "e5", "source": "doctor", "target": "agentJwtSecretCheck", "edgeType": "calls", "label": "check", "bidirectional": false},
+    {"id": "e6", "source": "doctor", "target": "databaseCheck", "edgeType": "calls", "label": "check", "bidirectional": false},
+    {"id": "e7", "source": "worktreeMakeCommand", "target": "WorktreeLocalPaths", "edgeType": "uses", "label": "uses", "bidirectional": false},
+    {"id": "e8", "source": "worktreeMakeCommand", "target": "buildWorktreeConfig", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e9", "source": "worktreeMakeCommand", "target": "sanitizeWorktreeInstanceId", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e10", "source": "onboard", "target": "ensureLocalSecretsKeyFile", "edgeType": "calls", "label": "setup secrets", "bidirectional": false}
+  ],
+  "summary": {
+    "filesAnalyzed": 11,
+    "nodesGenerated": 13,
+    "edgesGenerated": 10,
+    "commandFunctions": 9,
+    "totalLinesCovered": 82863,
+    "avgFileSize": 7533
+  }
+}

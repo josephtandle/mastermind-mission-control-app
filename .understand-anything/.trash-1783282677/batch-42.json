@@ -1,0 +1,102 @@
+{
+  "batchIndex": 42,
+  "nodes": [
+    {
+      "id": "batch-42-file-0",
+      "type": "docs",
+      "name": "CHANGELOG.md",
+      "filePath": "agents/task-runner/packages/db/CHANGELOG.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 70,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-42-file-1",
+      "type": "source",
+      "name": "drizzle.config.ts",
+      "filePath": "agents/task-runner/packages/db/drizzle.config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 11,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-42-file-2",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "agents/task-runner/packages/db/package.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-42-file-3",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/packages/db/tsconfig.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config"
+      ],
+      "complexity": 1,
+      "sizeLines": 9,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-42-file-4",
+      "type": "source",
+      "name": "vitest.config.ts",
+      "filePath": "agents/task-runner/packages/db/vitest.config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 8,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": [
+    {
+      "source": "batch-42-file-2",
+      "target": "batch-42-file-1",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-42-file-3",
+      "target": "batch-42-file-1",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-42-file-2",
+      "target": "batch-42-file-4",
+      "type": "configures",
+      "weight": 0.6
+    },
+    {
+      "source": "batch-42-file-3",
+      "target": "batch-42-file-4",
+      "type": "configures",
+      "weight": 0.6
+    }
+  ]
+}

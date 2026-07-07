@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/api/guard-dog/dashboard/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/guard-dog/dashboard/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 260,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/daily-summary/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/daily-summary/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1012,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/audit/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/guard-dog/audit/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 172,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/layout.tsx",
+      "label": "layout.tsx",
+      "path": "mission-control/app/app/guard-dog/layout.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 106,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/guard-dog/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 115,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/reports/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/guard-dog/reports/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 196,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/AutomationStatus.tsx",
+      "label": "AutomationStatus.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/AutomationStatus.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 86,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/QuickScan.tsx",
+      "label": "QuickScan.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/QuickScan.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 135,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/ScanTimeline.tsx",
+      "label": "ScanTimeline.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/ScanTimeline.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 118,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/StatCards.tsx",
+      "label": "StatCards.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/StatCards.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 68,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/ThreatFeed.tsx",
+      "label": "ThreatFeed.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/ThreatFeed.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 114,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/TrustedProviders.tsx",
+      "label": "TrustedProviders.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/TrustedProviders.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 86,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/sections/VulnerabilityPanel.tsx",
+      "label": "VulnerabilityPanel.tsx",
+      "path": "mission-control/app/app/guard-dog/sections/VulnerabilityPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 52,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/guard-dog/settings/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/guard-dog/settings/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 269,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/components/SkillButton.tsx",
+      "label": "SkillButton.tsx",
+      "path": "mission-control/components/SkillButton.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 131,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useGuardDogData.ts",
+      "label": "useGuardDogData.ts",
+      "path": "mission-control/hooks/useGuardDogData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 39,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/guard-dog-types.ts",
+      "label": "guard-dog-types.ts",
+      "path": "mission-control/lib/guard-dog-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 197,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/api/guard-dog/dashboard/route.ts",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/daily-summary/page.tsx",
+      "target": "mission-control/components/SkillButton.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/audit/page.tsx",
+      "target": "mission-control/hooks/useGuardDogData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/layout.tsx",
+      "target": "mission-control/hooks/useGuardDogData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/app/app/guard-dog/sections/AutomationStatus.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/app/app/guard-dog/sections/QuickScan.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/app/app/guard-dog/sections/StatCards.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/app/app/guard-dog/sections/ThreatFeed.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/app/app/guard-dog/sections/TrustedProviders.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/app/app/guard-dog/sections/VulnerabilityPanel.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/components/SkillButton.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/page.tsx",
+      "target": "mission-control/hooks/useGuardDogData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/reports/page.tsx",
+      "target": "mission-control/hooks/useGuardDogData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/sections/AutomationStatus.tsx",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/sections/ScanTimeline.tsx",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/sections/StatCards.tsx",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/sections/ThreatFeed.tsx",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/sections/TrustedProviders.tsx",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/sections/VulnerabilityPanel.tsx",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/guard-dog/settings/page.tsx",
+      "target": "mission-control/hooks/useGuardDogData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useGuardDogData.ts",
+      "target": "mission-control/lib/guard-dog-types.ts",
+      "type": "imports"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "batchIndex": 11,
+  "fileCount": 3,
+  "nodeCount": 7,
+  "edgeCount": 12,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "file",
+      "name": "banner.ts",
+      "filePath": "agents/task-runner/cli/src/utils/banner.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/utils",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/utils/banner.ts:printPaperclipCliBanner",
+      "type": "function",
+      "name": "printPaperclipCliBanner",
+      "filePath": "agents/task-runner/cli/src/utils/banner.ts",
+      "summary": "Function printPaperclipCliBanner in banner.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/utils/net.ts",
+      "type": "file",
+      "name": "net.ts",
+      "filePath": "agents/task-runner/cli/src/utils/net.ts",
+      "language": "TypeScript",
+      "sizeLines": 19,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/utils",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/utils/net.ts:checkPort",
+      "type": "function",
+      "name": "checkPort",
+      "filePath": "agents/task-runner/cli/src/utils/net.ts",
+      "summary": "Function checkPort in net.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "type": "file",
+      "name": "path-resolver.ts",
+      "filePath": "agents/task-runner/cli/src/utils/path-resolver.ts",
+      "language": "TypeScript",
+      "sizeLines": 26,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/utils",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/utils/path-resolver.ts:unique",
+      "type": "function",
+      "name": "unique",
+      "filePath": "agents/task-runner/cli/src/utils/path-resolver.ts",
+      "summary": "Function unique in path-resolver.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/utils/path-resolver.ts:resolveRuntimeLikePath",
+      "type": "function",
+      "name": "resolveRuntimeLikePath",
+      "filePath": "agents/task-runner/cli/src/utils/path-resolver.ts",
+      "summary": "Function resolveRuntimeLikePath in path-resolver.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "target": "func:agents/task-runner/cli/src/utils/banner.ts:printPaperclipCliBanner",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "target": "module:picocolors",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "target": "export:agents/task-runner/cli/src/utils/banner.ts:printPaperclipCliBanner",
+      "type": "exports",
+      "weight": 1,
+      "exportType": "named_export"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/net.ts",
+      "target": "func:agents/task-runner/cli/src/utils/net.ts:checkPort",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/net.ts",
+      "target": "module:node:net",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/net.ts",
+      "target": "export:agents/task-runner/cli/src/utils/net.ts:checkPort",
+      "type": "exports",
+      "weight": 1,
+      "exportType": "named_export"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "func:agents/task-runner/cli/src/utils/path-resolver.ts:unique",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "func:agents/task-runner/cli/src/utils/path-resolver.ts:resolveRuntimeLikePath",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "module:node:fs",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "module:node:path",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "module:../config/home.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "export:agents/task-runner/cli/src/utils/path-resolver.ts:resolveRuntimeLikePath",
+      "type": "exports",
+      "weight": 1,
+      "exportType": "named_export"
+    }
+  ],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

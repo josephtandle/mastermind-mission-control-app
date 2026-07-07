@@ -1,0 +1,825 @@
+{
+  "batchIndex": 23,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "label": "index.ts",
+      "path": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 25
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterAgent",
+      "label": "AdapterAgent",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterRuntime",
+      "label": "AdapterRuntime",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#UsageSummary",
+      "label": "UsageSummary",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterBillingType",
+      "label": "AdapterBillingType",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterRuntimeServiceReport",
+      "label": "AdapterRuntimeServiceReport",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterExecutionResult",
+      "label": "AdapterExecutionResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterInvocationMeta",
+      "label": "AdapterInvocationMeta",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterExecutionContext",
+      "label": "AdapterExecutionContext",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentCheckLevel",
+      "label": "AdapterEnvironmentCheckLevel",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentCheck",
+      "label": "AdapterEnvironmentCheck",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentTestStatus",
+      "label": "AdapterEnvironmentTestStatus",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentTestResult",
+      "label": "AdapterEnvironmentTestResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentTestContext",
+      "label": "AdapterEnvironmentTestContext",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterSessionCodec",
+      "label": "AdapterSessionCodec",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterModel",
+      "label": "AdapterModel",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#HireApprovedPayload",
+      "label": "HireApprovedPayload",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#HireApprovedHookResult",
+      "label": "HireApprovedHookResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#ServerAdapterModule",
+      "label": "ServerAdapterModule",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#TranscriptEntry",
+      "label": "TranscriptEntry",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#StdoutLineParser",
+      "label": "StdoutLineParser",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#CLIAdapterModule",
+      "label": "CLIAdapterModule",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/index.ts#CreateConfigValues",
+      "label": "CreateConfigValues",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "label": "server-utils.ts",
+      "path": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 372
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#RunProcessResult",
+      "label": "RunProcessResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#runningProcesses",
+      "label": "runningProcesses",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#MAX_CAPTURE_BYTES",
+      "label": "MAX_CAPTURE_BYTES",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#MAX_EXCERPT_BYTES",
+      "label": "MAX_EXCERPT_BYTES",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#parseObject",
+      "label": "parseObject",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asString",
+      "label": "asString",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asNumber",
+      "label": "asNumber",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asBoolean",
+      "label": "asBoolean",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asStringArray",
+      "label": "asStringArray",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#parseJson",
+      "label": "parseJson",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#appendWithCap",
+      "label": "appendWithCap",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#resolvePathValue",
+      "label": "resolvePathValue",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#renderTemplate",
+      "label": "renderTemplate",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#redactEnvForLogs",
+      "label": "redactEnvForLogs",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#buildPaperclipEnv",
+      "label": "buildPaperclipEnv",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#defaultPathForPlatform",
+      "label": "defaultPathForPlatform",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#ensurePathInEnv",
+      "label": "ensurePathInEnv",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#ensureAbsoluteDirectory",
+      "label": "ensureAbsoluteDirectory",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#ensureCommandResolvable",
+      "label": "ensureCommandResolvable",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#runChildProcess",
+      "label": "runChildProcess",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/server-utils.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "label": "types.ts",
+      "path": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 243
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterAgent",
+      "label": "AdapterAgent",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterRuntime",
+      "label": "AdapterRuntime",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#UsageSummary",
+      "label": "UsageSummary",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterBillingType",
+      "label": "AdapterBillingType",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterRuntimeServiceReport",
+      "label": "AdapterRuntimeServiceReport",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterExecutionResult",
+      "label": "AdapterExecutionResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterSessionCodec",
+      "label": "AdapterSessionCodec",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterInvocationMeta",
+      "label": "AdapterInvocationMeta",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterExecutionContext",
+      "label": "AdapterExecutionContext",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterModel",
+      "label": "AdapterModel",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentCheckLevel",
+      "label": "AdapterEnvironmentCheckLevel",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentCheck",
+      "label": "AdapterEnvironmentCheck",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentTestStatus",
+      "label": "AdapterEnvironmentTestStatus",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentTestResult",
+      "label": "AdapterEnvironmentTestResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentTestContext",
+      "label": "AdapterEnvironmentTestContext",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#HireApprovedPayload",
+      "label": "HireApprovedPayload",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#HireApprovedHookResult",
+      "label": "HireApprovedHookResult",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#ServerAdapterModule",
+      "label": "ServerAdapterModule",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#TranscriptEntry",
+      "label": "TranscriptEntry",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#StdoutLineParser",
+      "label": "StdoutLineParser",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#CLIAdapterModule",
+      "label": "CLIAdapterModule",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapter-utils/src/types.ts#CreateConfigValues",
+      "label": "CreateConfigValues",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapter-utils/src/types.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterAgent",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterRuntime",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#UsageSummary",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterBillingType",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterRuntimeServiceReport",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterExecutionResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterInvocationMeta",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterExecutionContext",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentCheckLevel",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentCheck",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentTestStatus",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentTestResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterEnvironmentTestContext",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterSessionCodec",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#AdapterModel",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#HireApprovedPayload",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#HireApprovedHookResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#ServerAdapterModule",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#TranscriptEntry",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#StdoutLineParser",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#CLIAdapterModule",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/index.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/index.ts#CreateConfigValues",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#RunProcessResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#runningProcesses",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#MAX_CAPTURE_BYTES",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#MAX_EXCERPT_BYTES",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#parseObject",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asString",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asNumber",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asBoolean",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#asStringArray",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#parseJson",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#appendWithCap",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#resolvePathValue",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#renderTemplate",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#redactEnvForLogs",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#buildPaperclipEnv",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#defaultPathForPlatform",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#ensurePathInEnv",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#ensureAbsoluteDirectory",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#ensureCommandResolvable",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/server-utils.ts#runChildProcess",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "node:child_process",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "node:fs",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/server-utils.ts",
+      "target": "node:path",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterAgent",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterRuntime",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#UsageSummary",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterBillingType",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterRuntimeServiceReport",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterExecutionResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterSessionCodec",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterInvocationMeta",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterExecutionContext",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterModel",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentCheckLevel",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentCheck",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentTestStatus",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentTestResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#AdapterEnvironmentTestContext",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#HireApprovedPayload",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#HireApprovedHookResult",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#ServerAdapterModule",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#TranscriptEntry",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#StdoutLineParser",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#CLIAdapterModule",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapter-utils/src/types.ts",
+      "target": "agents/task-runner/packages/adapter-utils/src/types.ts#CreateConfigValues",
+      "type": "contains"
+    }
+  ],
+  "metadata": {
+    "totalNodes": 67,
+    "totalEdges": 67,
+    "filesProcessed": 3,
+    "tsFilesProcessed": 3,
+    "exportsExtracted": 64,
+    "importsExtracted": 3
+  }
+}

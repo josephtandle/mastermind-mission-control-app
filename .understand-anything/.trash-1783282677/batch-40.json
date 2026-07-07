@@ -1,0 +1,114 @@
+{
+  "batchIndex": 40,
+  "nodes": [
+    {
+      "id": "batch-40-file-0",
+      "type": "source",
+      "name": "execute.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/execute.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 4.8,
+      "sizeLines": 479,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-40-file-1",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 61,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-40-file-2",
+      "type": "source",
+      "name": "models.test.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/models.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 34,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-40-file-3",
+      "type": "source",
+      "name": "models.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/models.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 2.1,
+      "sizeLines": 209,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-40-file-4",
+      "type": "source",
+      "name": "parse.test.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/parse.test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "testing"
+      ],
+      "complexity": 2.2,
+      "sizeLines": 223,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-40-file-5",
+      "type": "source",
+      "name": "parse.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/parse.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 2.1,
+      "sizeLines": 212,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-40-file-6",
+      "type": "source",
+      "name": "test.ts",
+      "filePath": "agents/task-runner/packages/adapters/pi-local/src/server/test.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "testing"
+      ],
+      "complexity": 2.8,
+      "sizeLines": 277,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

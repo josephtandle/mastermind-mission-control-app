@@ -1,0 +1,43 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore (globs, # comments, ! negation, trailing / for dirs)
+# Lines below are suggestions — uncomment to activate.
+# Use ! prefix to force-include something excluded by defaults.
+#
+# Built-in defaults (always excluded unless negated):
+#   node_modules/, .git/, dist/, build/, obj/, *.lock, *.min.js, etc.
+#
+# --- From .gitignore (uncomment to exclude) ---
+
+# *.pyc
+# logs/
+# .DS_Store
+# mc-deploy/releases/
+# mc-deploy/failed/
+# worktrees/
+# .env
+# .env.local
+# .env.production
+# *.db-shm
+# *.db-wal
+# /data/contacts.db
+# /data/cold-outreach.db
+# /data/mastermind-participants.db
+# /data/instagram.db
+# /data/youtube-oauth-token.json
+# **/tokens.json
+# **/token-cache.json
+# **/gsc-token.json
+# **/zoho-token-cache.json
+# agents/google/tokens.json
+# agents/seo-monitor/data/gsc-token.json
+# agents/bookkeeping/data/zoho-token-cache.json
+# agents/spotify/config/tokens.json
+# agents/whoop/data/tokens.json
+# agents/zoho-books/data/token-cache.json
+# agents/zoho-prep/data/zoho-token-cache.json
+
+# --- Test file patterns (uncomment to exclude) ---
+
+# *.test.*
+# *.spec.*
+# *.snap

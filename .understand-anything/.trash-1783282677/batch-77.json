@@ -1,0 +1,204 @@
+{
+  "batchIndex": 77,
+  "nodes": [
+    {
+      "id": "batch-77-file-0",
+      "type": "source",
+      "name": "company-routes.ts",
+      "filePath": "agents/task-runner/ui/src/lib/company-routes.ts",
+      "summary": "API route handler or endpoint implementation for request processing.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "routing",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 86,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-1",
+      "type": "source",
+      "name": "groupBy.ts",
+      "filePath": "agents/task-runner/ui/src/lib/groupBy.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 12,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-2",
+      "type": "source",
+      "name": "inbox.test.ts",
+      "filePath": "agents/task-runner/ui/src/lib/inbox.test.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities",
+        "testing"
+      ],
+      "complexity": 2.5,
+      "sizeLines": 251,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-3",
+      "type": "source",
+      "name": "inbox.ts",
+      "filePath": "agents/task-runner/ui/src/lib/inbox.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 151,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-4",
+      "type": "source",
+      "name": "issueDetailBreadcrumb.ts",
+      "filePath": "agents/task-runner/ui/src/lib/issueDetailBreadcrumb.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 25,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-5",
+      "type": "source",
+      "name": "model-utils.ts",
+      "filePath": "agents/task-runner/ui/src/lib/model-utils.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 17,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-6",
+      "type": "source",
+      "name": "project-order.ts",
+      "filePath": "agents/task-runner/ui/src/lib/project-order.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 71,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-7",
+      "type": "source",
+      "name": "queryKeys.ts",
+      "filePath": "agents/task-runner/ui/src/lib/queryKeys.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 76,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-8",
+      "type": "source",
+      "name": "recent-assignees.ts",
+      "filePath": "agents/task-runner/ui/src/lib/recent-assignees.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 37,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-9",
+      "type": "component",
+      "name": "router.tsx",
+      "filePath": "agents/task-runner/ui/src/lib/router.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "routing",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 77,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-77-file-10",
+      "type": "source",
+      "name": "status-colors.ts",
+      "filePath": "agents/task-runner/ui/src/lib/status-colors.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 109,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-11",
+      "type": "source",
+      "name": "timeAgo.ts",
+      "filePath": "agents/task-runner/ui/src/lib/timeAgo.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 32,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-77-file-12",
+      "type": "source",
+      "name": "utils.ts",
+      "filePath": "agents/task-runner/ui/src/lib/utils.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 75,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

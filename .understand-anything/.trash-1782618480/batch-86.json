@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    {
+      "id": "file_0",
+      "type": "file",
+      "label": "CHANGELOG.md",
+      "fullPath": "agents/task-runner/server/CHANGELOG.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 112
+    },
+    {
+      "id": "file_1",
+      "type": "file",
+      "label": "package.json",
+      "fullPath": "agents/task-runner/server/package.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 74
+    },
+    {
+      "id": "file_2",
+      "type": "file",
+      "label": "tsconfig.json",
+      "fullPath": "agents/task-runner/server/tsconfig.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 9
+    }
+  ],
+  "edges": []
+}

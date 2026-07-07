@@ -1,0 +1,104 @@
+{
+  "batchIndex": 59,
+  "nodes": [
+    {
+      "id": "batch-59-file-0",
+      "type": "source",
+      "name": "auth.ts",
+      "filePath": "agents/task-runner/server/src/middleware/auth.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.6,
+      "sizeLines": 157,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-59-file-1",
+      "type": "source",
+      "name": "board-mutation-guard.ts",
+      "filePath": "agents/task-runner/server/src/middleware/board-mutation-guard.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 68,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-59-file-2",
+      "type": "source",
+      "name": "error-handler.ts",
+      "filePath": "agents/task-runner/server/src/middleware/error-handler.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 72,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-59-file-3",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/server/src/middleware/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 4,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-59-file-4",
+      "type": "source",
+      "name": "logger.ts",
+      "filePath": "agents/task-runner/server/src/middleware/logger.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 91,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-59-file-5",
+      "type": "source",
+      "name": "private-hostname-guard.ts",
+      "filePath": "agents/task-runner/server/src/middleware/private-hostname-guard.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 93,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-59-file-6",
+      "type": "source",
+      "name": "validate.ts",
+      "filePath": "agents/task-runner/server/src/middleware/validate.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 10,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

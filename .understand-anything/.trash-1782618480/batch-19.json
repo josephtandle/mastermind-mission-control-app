@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/shared/src/config-schema.ts",
+      "label": "config-schema.ts",
+      "path": "agents/task-runner/packages/shared/src/config-schema.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 178,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/constants.ts",
+      "label": "constants.ts",
+      "path": "agents/task-runner/packages/shared/src/constants.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 247,
+      "complexity": "medium"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/access.ts",
+      "label": "access.ts",
+      "path": "agents/task-runner/packages/shared/src/types/access.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 81,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/agent.ts",
+      "label": "agent.ts",
+      "path": "agents/task-runner/packages/shared/src/types/agent.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 71,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/approval.ts",
+      "label": "approval.ts",
+      "path": "agents/task-runner/packages/shared/src/types/approval.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 27,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/company.ts",
+      "label": "company.ts",
+      "path": "agents/task-runner/packages/shared/src/types/company.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 16,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/goal.ts",
+      "label": "goal.ts",
+      "path": "agents/task-runner/packages/shared/src/types/goal.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 14,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/heartbeat.ts",
+      "label": "heartbeat.ts",
+      "path": "agents/task-runner/packages/shared/src/types/heartbeat.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 107,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "label": "issue.ts",
+      "path": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 122,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/live.ts",
+      "label": "live.ts",
+      "path": "agents/task-runner/packages/shared/src/types/live.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 9,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/project.ts",
+      "label": "project.ts",
+      "path": "agents/task-runner/packages/shared/src/types/project.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 44,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/types/workspace-runtime.ts",
+      "label": "workspace-runtime.ts",
+      "path": "agents/task-runner/packages/shared/src/types/workspace-runtime.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 58,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/access.ts",
+      "label": "access.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/access.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 70,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/agent.ts",
+      "label": "agent.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/agent.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 101,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/approval.ts",
+      "label": "approval.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/approval.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 37,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/company.ts",
+      "label": "company.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/company.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 21,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/goal.ts",
+      "label": "goal.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/goal.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 17,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/issue.ts",
+      "label": "issue.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/issue.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 89,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/project.ts",
+      "label": "project.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/project.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 85,
+      "complexity": "low"
+    },
+    {
+      "id": "agents/task-runner/packages/shared/src/validators/secret.ts",
+      "label": "secret.ts",
+      "path": "agents/task-runner/packages/shared/src/validators/secret.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 47,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/shared/src/config-schema.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/access.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/agent.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/approval.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/company.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/goal.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/heartbeat.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "target": "agents/task-runner/packages/shared/src/types/goal.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "target": "agents/task-runner/packages/shared/src/types/project.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/issue.ts",
+      "target": "agents/task-runner/packages/shared/src/types/workspace-runtime.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/live.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/project.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/types/project.ts",
+      "target": "agents/task-runner/packages/shared/src/types/workspace-runtime.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/access.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/agent.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/agent.ts",
+      "target": "agents/task-runner/packages/shared/src/validators/secret.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/approval.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/company.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/goal.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/issue.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/project.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    },
+    {
+      "source": "agents/task-runner/packages/shared/src/validators/secret.ts",
+      "target": "agents/task-runner/packages/shared/src/constants.ts",
+      "type": "imports"
+    }
+  ]
+}

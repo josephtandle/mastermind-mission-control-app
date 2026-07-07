@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "id": "file_0",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 37
+    },
+    {
+      "id": "file_1",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/server/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 59
+    },
+    {
+      "id": "file_2",
+      "type": "file",
+      "label": "build-config.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/ui/build-config.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 100
+    },
+    {
+      "id": "file_3",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/ui/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 2
+    },
+    {
+      "id": "file_4",
+      "type": "file",
+      "label": "parse-stdout.ts",
+      "fullPath": "agents/task-runner/packages/adapters/claude-local/src/ui/parse-stdout.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 138
+    },
+    {
+      "id": "file_5",
+      "type": "file",
+      "label": "format-event.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/cli/format-event.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 229
+    },
+    {
+      "id": "file_6",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/cli/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 1
+    },
+    {
+      "id": "file_7",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 46
+    },
+    {
+      "id": "file_8",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 54
+    },
+    {
+      "id": "file_9",
+      "type": "file",
+      "label": "build-config.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 106
+    },
+    {
+      "id": "file_10",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 2
+    },
+    {
+      "id": "file_11",
+      "type": "file",
+      "label": "parse-stdout.ts",
+      "fullPath": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 252
+    },
+    {
+      "id": "file_12",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/cursor-local/src/cli/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 1
+    },
+    {
+      "id": "file_13",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/cursor-local/src/server/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 64
+    },
+    {
+      "id": "file_14",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/cursor-local/src/ui/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 2
+    },
+    {
+      "id": "file_15",
+      "type": "file",
+      "label": "ONBOARDING_AND_TEST_PLAN.md",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/doc/ONBOARDING_AND_TEST_PLAN.md",
+      "language": "markdown",
+      "category": "docs",
+      "lineCount": 109
+    },
+    {
+      "id": "file_16",
+      "type": "file",
+      "label": "format-event.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/cli/format-event.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 23
+    },
+    {
+      "id": "file_17",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/cli/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 1
+    },
+    {
+      "id": "file_18",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 54
+    },
+    {
+      "id": "file_19",
+      "type": "file",
+      "label": "execute.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/server/execute.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 1433
+    },
+    {
+      "id": "file_20",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/server/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 2
+    },
+    {
+      "id": "file_21",
+      "type": "file",
+      "label": "test.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/server/test.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 317
+    },
+    {
+      "id": "file_22",
+      "type": "file",
+      "label": "stream.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/shared/stream.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 16
+    },
+    {
+      "id": "file_23",
+      "type": "file",
+      "label": "build-config.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/ui/build-config.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 30
+    },
+    {
+      "id": "file_24",
+      "type": "file",
+      "label": "index.ts",
+      "fullPath": "agents/task-runner/packages/adapters/openclaw-gateway/src/ui/index.ts",
+      "language": "typescript",
+      "category": "code",
+      "lineCount": 2
+    }
+  ],
+  "edges": []
+}

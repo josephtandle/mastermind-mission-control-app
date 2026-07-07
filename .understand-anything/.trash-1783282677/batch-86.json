@@ -1,0 +1,373 @@
+{
+  "batchIndex": 86,
+  "nodes": [
+    {
+      "id": "batch-86-file-0",
+      "type": "docs",
+      "name": "api-reference.md",
+      "filePath": "agents/task-runner/skills/paperclip-create-agent/references/api-reference.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs",
+        "api"
+      ],
+      "complexity": 1,
+      "sizeLines": 96,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-1",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/paperclip-create-agent/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 140,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-2",
+      "type": "docs",
+      "name": "api-reference.md",
+      "filePath": "agents/task-runner/skills/paperclip/references/api-reference.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs",
+        "api"
+      ],
+      "complexity": 5.6,
+      "sizeLines": 562,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-3",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/paperclip/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 3,
+      "sizeLines": 296,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-4",
+      "type": "docs",
+      "name": "schemas.md",
+      "filePath": "agents/task-runner/skills/para-memory-files/references/schemas.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs",
+        "database"
+      ],
+      "complexity": 1,
+      "sizeLines": 36,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-5",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/para-memory-files/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 105,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-6",
+      "type": "docs",
+      "name": "style-guide.md",
+      "filePath": "agents/task-runner/skills/pr-report/references/style-guide.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 150,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-7",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/pr-report/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2,
+      "sizeLines": 203,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-8",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/release-changelog/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.8,
+      "sizeLines": 179,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-9",
+      "type": "docs",
+      "name": "SKILL.md",
+      "filePath": "agents/task-runner/skills/release/SKILL.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.6,
+      "sizeLines": 262,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-86-file-10",
+      "type": "source",
+      "name": "onboarding.spec.ts",
+      "filePath": "agents/task-runner/tests/e2e/onboarding.spec.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1.7,
+      "sizeLines": 173,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-11",
+      "type": "source",
+      "name": "playwright.config.ts",
+      "filePath": "agents/task-runner/tests/e2e/playwright.config.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "testing"
+      ],
+      "complexity": 1,
+      "sizeLines": 36,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-12",
+      "type": "source",
+      "name": "sw.js",
+      "filePath": "agents/task-runner/ui/public/sw.js",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "JavaScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 43,
+      "language": "JavaScript"
+    },
+    {
+      "id": "batch-86-file-13",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/claude-local/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 136,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-86-file-14",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/claude-local/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-15",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/codex-local/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 102,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-86-file-16",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/codex-local/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-17",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/cursor/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-86-file-18",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/cursor/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-19",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/openclaw-gateway/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 2.4,
+      "sizeLines": 238,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-86-file-20",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/openclaw-gateway/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-21",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/opencode-local/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-86-file-22",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/opencode-local/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-86-file-23",
+      "type": "component",
+      "name": "config-fields.tsx",
+      "filePath": "agents/task-runner/ui/src/adapters/pi-local/config-fields.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-86-file-24",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/ui/src/adapters/pi-local/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 13,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

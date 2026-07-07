@@ -1,0 +1,74 @@
+{
+  "batchIndex": 5,
+  "files": [
+    {"path": "__tests__/http.test.ts", "size": 1828, "language": "typescript"},
+    {"path": "__tests__/common.test.ts", "size": 2121, "language": "typescript"},
+    {"path": "__tests__/context.test.ts", "size": 1589, "language": "typescript"},
+    {"path": "__tests__/home-paths.test.ts", "size": 1234, "language": "typescript"},
+    {"path": "__tests__/allowed-hostname.test.ts", "size": 1947, "language": "typescript"},
+    {"path": "__tests__/data-dir.test.ts", "size": 2032, "language": "typescript"},
+    {"path": "__tests__/company-delete.test.ts", "size": 1965, "language": "typescript"},
+    {"path": "__tests__/worktree.test.ts", "size": 9128, "language": "typescript"},
+    {"path": "__tests__/doctor.test.ts", "size": 1456, "language": "typescript"},
+    {"path": "__tests__/agent-jwt-env.test.ts", "size": 1357, "language": "typescript"}
+  ],
+  "batchImportData": {
+    "http.test.ts": ["vitest", "../client/http.js"],
+    "common.test.ts": ["node:fs", "node:os", "node:path", "vitest", "../client/context.js", "../commands/client/common.js"],
+    "context.test.ts": ["node:fs", "node:os", "node:path", "vitest", "../client/context.js"],
+    "home-paths.test.ts": ["node:os", "node:path", "vitest", "../config/home.js"],
+    "allowed-hostname.test.ts": ["node:fs", "node:os", "node:path", "vitest", "../config/schema.js", "../commands/allowed-hostname.js"],
+    "data-dir.test.ts": ["node:os", "node:path", "vitest", "../config/data-dir.js"],
+    "company-delete.test.ts": ["vitest", "@paperclipai/shared", "../commands/client/company.js"],
+    "worktree.test.ts": ["node:fs", "node:os", "node:path", "node:child_process", "vitest", "../commands/worktree.js", "../commands/worktree-lib.js", "../config/schema.js"],
+    "doctor.test.ts": ["node:fs", "node:os", "node:path", "vitest", "../commands/doctor.js", "../config/store.js", "../config/schema.js"],
+    "agent-jwt-env.test.ts": ["node:fs", "node:os", "node:path", "vitest", "../config/env.js", "../checks/agent-jwt-secret-check.js"]
+  },
+  "neighborMap": {
+    "http.test.ts": ["../client/http.js"],
+    "common.test.ts": ["../client/context.js", "../commands/client/common.js"],
+    "context.test.ts": ["../client/context.js"],
+    "home-paths.test.ts": ["../config/home.js"],
+    "allowed-hostname.test.ts": ["../config/schema.js", "../commands/allowed-hostname.js"],
+    "data-dir.test.ts": ["../config/data-dir.js"],
+    "company-delete.test.ts": ["../commands/client/company.js"],
+    "worktree.test.ts": ["../commands/worktree.js", "../commands/worktree-lib.js", "../config/schema.js"],
+    "doctor.test.ts": ["../commands/doctor.js", "../config/store.js", "../config/schema.js"],
+    "agent-jwt-env.test.ts": ["../config/env.js", "../checks/agent-jwt-secret-check.js"]
+  },
+  "graphNodes": [
+    {"id": "http.test.ts", "nodeType": "test-file", "label": "PaperclipApiClient tests", "title": "http.test.ts", "description": "Tests for API client headers, error handling, and HTTP responses", "file": "http.test.ts", "language": "typescript", "tags": ["vitest", "http", "api-client"], "metadata": {"testCount": 3, "imports": 2}},
+    {"id": "common.test.ts", "nodeType": "test-file", "label": "Command context resolution tests", "title": "common.test.ts", "description": "Tests for resolveCommandContext with profiles and overrides", "file": "common.test.ts", "language": "typescript", "tags": ["vitest", "context", "profiles"], "metadata": {"testCount": 3, "imports": 6}},
+    {"id": "context.test.ts", "nodeType": "test-file", "label": "Client context store tests", "title": "context.test.ts", "description": "Tests for context file I/O and profile management", "file": "context.test.ts", "language": "typescript", "tags": ["vitest", "storage", "profiles"], "metadata": {"testCount": 3, "imports": 4}},
+    {"id": "home-paths.test.ts", "nodeType": "test-file", "label": "Home path resolution tests", "title": "home-paths.test.ts", "description": "Tests for Paperclip home directory and instance path resolution", "file": "home-paths.test.ts", "language": "typescript", "tags": ["vitest", "paths", "config"], "metadata": {"testCount": 4, "imports": 3}},
+    {"id": "allowed-hostname.test.ts", "nodeType": "test-file", "label": "Allowed hostname command tests", "title": "allowed-hostname.test.ts", "description": "Tests for adding allowed hostnames to server config", "file": "allowed-hostname.test.ts", "language": "typescript", "tags": ["vitest", "hostname", "config"], "metadata": {"testCount": 1, "imports": 6}},
+    {"id": "data-dir.test.ts", "nodeType": "test-file", "label": "Data dir override tests", "title": "data-dir.test.ts", "description": "Tests for PAPERCLIP_HOME and config path overrides", "file": "data-dir.test.ts", "language": "typescript", "tags": ["vitest", "environment", "config"], "metadata": {"testCount": 4, "imports": 3}},
+    {"id": "company-delete.test.ts", "nodeType": "test-file", "label": "Company deletion tests", "title": "company-delete.test.ts", "description": "Tests for company resolution and deletion confirmation", "file": "company-delete.test.ts", "language": "typescript", "tags": ["vitest", "company", "deletion"], "metadata": {"testCount": 6, "imports": 2}},
+    {"id": "worktree.test.ts", "nodeType": "test-file", "label": "Worktree functionality tests", "title": "worktree.test.ts", "description": "Comprehensive tests for git worktree creation, seeding, and configuration", "file": "worktree.test.ts", "language": "typescript", "tags": ["vitest", "worktree", "git"], "metadata": {"testCount": 9, "imports": 8}},
+    {"id": "doctor.test.ts", "nodeType": "test-file", "label": "Doctor command tests", "title": "doctor.test.ts", "description": "Tests for diagnostic checks and repair functionality", "file": "doctor.test.ts", "language": "typescript", "tags": ["vitest", "doctor", "diagnostics"], "metadata": {"testCount": 1, "imports": 7}},
+    {"id": "agent-jwt-env.test.ts", "nodeType": "test-file", "label": "Agent JWT environment tests", "title": "agent-jwt-env.test.ts", "description": "Tests for JWT secret generation, loading, and .env file management", "file": "agent-jwt-env.test.ts", "language": "typescript", "tags": ["vitest", "jwt", "environment"], "metadata": {"testCount": 3, "imports": 5}}
+  ],
+  "graphEdges": [
+    {"id": "e1", "source": "http.test.ts", "target": "../client/http.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e2", "source": "common.test.ts", "target": "../client/context.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e3", "source": "common.test.ts", "target": "../commands/client/common.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e4", "source": "context.test.ts", "target": "../client/context.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e5", "source": "home-paths.test.ts", "target": "../config/home.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e6", "source": "allowed-hostname.test.ts", "target": "../commands/allowed-hostname.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e7", "source": "data-dir.test.ts", "target": "../config/data-dir.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e8", "source": "company-delete.test.ts", "target": "../commands/client/company.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e9", "source": "worktree.test.ts", "target": "../commands/worktree.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e10", "source": "worktree.test.ts", "target": "../commands/worktree-lib.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e11", "source": "doctor.test.ts", "target": "../commands/doctor.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e12", "source": "agent-jwt-env.test.ts", "target": "../config/env.js", "edgeType": "imports", "label": "imports", "bidirectional": false},
+    {"id": "e13", "source": "agent-jwt-env.test.ts", "target": "../checks/agent-jwt-secret-check.js", "edgeType": "imports", "label": "imports", "bidirectional": false}
+  ],
+  "summary": {
+    "filesAnalyzed": 10,
+    "nodesGenerated": 10,
+    "edgesGenerated": 13,
+    "testFiles": 10,
+    "totalLinesCovered": 23429,
+    "avgFileSize": 2366
+  }
+}

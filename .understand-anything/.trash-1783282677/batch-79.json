@@ -1,0 +1,76 @@
+{
+  "batchIndex": 79,
+  "nodes": [
+    {
+      "id": "batch-79-file-0",
+      "type": "component",
+      "name": "NotFound.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/NotFound.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 67,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-79-file-1",
+      "type": "component",
+      "name": "Org.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Org.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 133,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-79-file-2",
+      "type": "component",
+      "name": "OrgChart.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/OrgChart.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 4.3,
+      "sizeLines": 429,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-79-file-3",
+      "type": "component",
+      "name": "ProjectDetail.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/ProjectDetail.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 4.1,
+      "sizeLines": 408,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-79-file-4",
+      "type": "component",
+      "name": "Projects.tsx",
+      "filePath": "agents/task-runner/ui/src/pages/Projects.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component"
+      ],
+      "complexity": 1,
+      "sizeLines": 84,
+      "language": "TypeScript JSX"
+    }
+  ],
+  "edges": []
+}

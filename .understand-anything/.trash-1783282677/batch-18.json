@@ -1,0 +1,149 @@
+{
+  "batchIndex": 18,
+  "fileCount": 9,
+  "nodeCount": 9,
+  "edgeCount": 0,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/docs/deploy/database.md",
+      "type": "file",
+      "name": "database.md",
+      "filePath": "agents/task-runner/docs/deploy/database.md",
+      "language": "Markdown",
+      "sizeLines": 78,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/deployment-modes.md",
+      "type": "file",
+      "name": "deployment-modes.md",
+      "filePath": "agents/task-runner/docs/deploy/deployment-modes.md",
+      "language": "Markdown",
+      "sizeLines": 86,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/docker.md",
+      "type": "file",
+      "name": "docker.md",
+      "filePath": "agents/task-runner/docs/deploy/docker.md",
+      "language": "Markdown",
+      "sizeLines": 70,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/environment-variables.md",
+      "type": "file",
+      "name": "environment-variables.md",
+      "filePath": "agents/task-runner/docs/deploy/environment-variables.md",
+      "language": "Markdown",
+      "sizeLines": 51,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/local-development.md",
+      "type": "file",
+      "name": "local-development.md",
+      "filePath": "agents/task-runner/docs/deploy/local-development.md",
+      "language": "Markdown",
+      "sizeLines": 99,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/overview.md",
+      "type": "file",
+      "name": "overview.md",
+      "filePath": "agents/task-runner/docs/deploy/overview.md",
+      "language": "Markdown",
+      "sizeLines": 56,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/secrets.md",
+      "type": "file",
+      "name": "secrets.md",
+      "filePath": "agents/task-runner/docs/deploy/secrets.md",
+      "language": "Markdown",
+      "sizeLines": 84,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/storage.md",
+      "type": "file",
+      "name": "storage.md",
+      "filePath": "agents/task-runner/docs/deploy/storage.md",
+      "language": "Markdown",
+      "sizeLines": 40,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/docs/deploy/tailscale-private-access.md",
+      "type": "file",
+      "name": "tailscale-private-access.md",
+      "filePath": "agents/task-runner/docs/deploy/tailscale-private-access.md",
+      "language": "Markdown",
+      "sizeLines": 78,
+      "category": "docs",
+      "summary": "Markdown file in agents/task-runner/docs/deploy",
+      "tags": [
+        "markdown",
+        "docs"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

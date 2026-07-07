@@ -1,0 +1,386 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/api/stock-photo-ai/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/stock-photo-ai/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/api/stock-photo-ai/route.ts",
+      "sizeLines": 140,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/stock-photo-ai/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        140
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/stock-photo-ai/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "summary": "Code file: mission-control/app/app/stock-photo-ai/page.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/stock-photo-ai/page.tsx",
+      "sizeLines": 145,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/stock-photo-ai/page.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from page.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        145
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx",
+      "type": "file",
+      "name": "GenerationTrend.tsx",
+      "summary": "Code file: mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx",
+      "sizeLines": 126,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from GenerationTrend.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        126
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx",
+      "type": "file",
+      "name": "PipelineQueue.tsx",
+      "summary": "Code file: mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx",
+      "sizeLines": 80,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from PipelineQueue.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        80
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx",
+      "type": "file",
+      "name": "PlatformBreakdown.tsx",
+      "summary": "Code file: mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx",
+      "sizeLines": 68,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from PlatformBreakdown.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        68
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx",
+      "type": "file",
+      "name": "RecentGallery.tsx",
+      "summary": "Code file: mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx",
+      "sizeLines": 105,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from RecentGallery.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        105
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/stock-photo-ai/sections/StatCards.tsx",
+      "type": "file",
+      "name": "StatCards.tsx",
+      "summary": "Code file: mission-control/app/app/stock-photo-ai/sections/StatCards.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/stock-photo-ai/sections/StatCards.tsx",
+      "sizeLines": 62,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/stock-photo-ai/sections/StatCards.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from StatCards.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        62
+      ]
+    },
+    {
+      "id": "file:mission-control/hooks/useStockPhotoData.ts",
+      "type": "file",
+      "name": "useStockPhotoData.ts",
+      "summary": "Code file: mission-control/hooks/useStockPhotoData.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/hooks/useStockPhotoData.ts",
+      "sizeLines": 35,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/hooks/useStockPhotoData.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from useStockPhotoData.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        35
+      ]
+    },
+    {
+      "id": "file:mission-control/lib/stock-photo-types.ts",
+      "type": "file",
+      "name": "stock-photo-types.ts",
+      "summary": "Code file: mission-control/lib/stock-photo-types.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/lib/stock-photo-types.ts",
+      "sizeLines": 55,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/lib/stock-photo-types.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from stock-photo-types.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        55
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/stock-photo-ai/route.ts",
+      "target": "function:mission-control/app/api/stock-photo-ai/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/stock-photo-ai/page.tsx",
+      "target": "function:mission-control/app/app/stock-photo-ai/page.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx",
+      "target": "function:mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx",
+      "target": "function:mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx",
+      "target": "function:mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx",
+      "target": "function:mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/StatCards.tsx",
+      "target": "function:mission-control/app/app/stock-photo-ai/sections/StatCards.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/hooks/useStockPhotoData.ts",
+      "target": "function:mission-control/hooks/useStockPhotoData.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/lib/stock-photo-types.ts",
+      "target": "function:mission-control/lib/stock-photo-types.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "import-mission-control/app/api/stock-photo-ai/route.ts-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/app/api/stock-photo-ai/route.ts",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/stock-photo-ai/page.tsx-to-mission-control/hooks/useStockPhotoData.ts",
+      "source": "file:mission-control/app/app/stock-photo-ai/page.tsx",
+      "target": "file:mission-control/hooks/useStockPhotoData.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/GenerationTrend.tsx",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/PipelineQueue.tsx",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/PlatformBreakdown.tsx",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/RecentGallery.tsx",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/stock-photo-ai/sections/StatCards.tsx-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/app/app/stock-photo-ai/sections/StatCards.tsx",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/hooks/useStockPhotoData.ts-to-mission-control/lib/stock-photo-types.ts",
+      "source": "file:mission-control/hooks/useStockPhotoData.ts",
+      "target": "file:mission-control/lib/stock-photo-types.ts",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

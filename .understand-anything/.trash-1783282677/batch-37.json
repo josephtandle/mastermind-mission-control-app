@@ -1,0 +1,413 @@
+{
+  "batchIndex": 37,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "label": "execute.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 371
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts#execute",
+      "label": "execute",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "label": "index.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 72
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#execute",
+      "label": "execute",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#testEnvironment",
+      "label": "testEnvironment",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#listOpenCodeModels",
+      "label": "listOpenCodeModels",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#discoverOpenCodeModels",
+      "label": "discoverOpenCodeModels",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#ensureOpenCodeModelConfiguredAndAvailable",
+      "label": "ensureOpenCodeModelConfiguredAndAvailable",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#resetOpenCodeModelsCacheForTests",
+      "label": "resetOpenCodeModelsCacheForTests",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#parseOpenCodeJsonl",
+      "label": "parseOpenCodeJsonl",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#isOpenCodeUnknownSessionError",
+      "label": "isOpenCodeUnknownSessionError",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#sessionCodec",
+      "label": "sessionCodec",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.test.ts",
+      "label": "models.test.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/models.test.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 34
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "label": "models.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 196
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#discoverOpenCodeModels",
+      "label": "discoverOpenCodeModels",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#discoverOpenCodeModelsCached",
+      "label": "discoverOpenCodeModelsCached",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#ensureOpenCodeModelConfiguredAndAvailable",
+      "label": "ensureOpenCodeModelConfiguredAndAvailable",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#listOpenCodeModels",
+      "label": "listOpenCodeModels",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#resetOpenCodeModelsCacheForTests",
+      "label": "resetOpenCodeModelsCacheForTests",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.test.ts",
+      "label": "parse.test.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.test.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 51
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts",
+      "label": "parse.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 100
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts#parseOpenCodeJsonl",
+      "label": "parseOpenCodeJsonl",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts#isOpenCodeUnknownSessionError",
+      "label": "isOpenCodeUnknownSessionError",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "label": "test.ts",
+      "path": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 320
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts#testEnvironment",
+      "label": "testEnvironment",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts#execute",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "node:url",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "./models.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "node:fs/promises",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "node:os",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "node:path",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/execute.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#execute",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#testEnvironment",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#listOpenCodeModels",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#discoverOpenCodeModels",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#ensureOpenCodeModelConfiguredAndAvailable",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#resetOpenCodeModelsCacheForTests",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#parseOpenCodeJsonl",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#isOpenCodeUnknownSessionError",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts#sessionCodec",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/index.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.test.ts",
+      "target": "vitest",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.test.ts",
+      "target": "./models.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#discoverOpenCodeModels",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#discoverOpenCodeModelsCached",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#ensureOpenCodeModelConfiguredAndAvailable",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#listOpenCodeModels",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts#resetOpenCodeModelsCacheForTests",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "node:crypto",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/models.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.test.ts",
+      "target": "vitest",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.test.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts#parseOpenCodeJsonl",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts#isOpenCodeUnknownSessionError",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/parse.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "target": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts#testEnvironment",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "target": "./models.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/opencode-local/src/server/test.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    }
+  ],
+  "metadata": {
+    "totalNodes": 25,
+    "totalEdges": 39,
+    "filesProcessed": 7,
+    "tsFilesProcessed": 7,
+    "exportsExtracted": 18,
+    "importsExtracted": 21
+  }
+}

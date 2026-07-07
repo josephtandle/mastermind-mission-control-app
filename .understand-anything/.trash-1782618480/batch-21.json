@@ -1,0 +1,202 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/app/cohorts/blog/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/cohorts/blog/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1352,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/cohorts/discoveries/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/cohorts/discoveries/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 752,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/cohorts/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/cohorts/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 418,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/cohorts/wrap-up/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/cohorts/wrap-up/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1023,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/mentorships/[clientId]/sessions/[sessionId]/wrap-up/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/mentorships/[clientId]/sessions/[sessionId]/wrap-up/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1507,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/online-program/blog/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/online-program/blog/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1356,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/online-program/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/online-program/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 418,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/online-program/wrap-up/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/online-program/wrap-up/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 825,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/websites/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/websites/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 907,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/components/CelebrationBurst.tsx",
+      "label": "CelebrationBurst.tsx",
+      "path": "mission-control/components/CelebrationBurst.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 154,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/components/WebsiteSwitcher.tsx",
+      "label": "WebsiteSwitcher.tsx",
+      "path": "mission-control/components/WebsiteSwitcher.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 122,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useCohortData.ts",
+      "label": "useCohortData.ts",
+      "path": "mission-control/hooks/useCohortData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 231,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useOnlineProgramData.ts",
+      "label": "useOnlineProgramData.ts",
+      "path": "mission-control/hooks/useOnlineProgramData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 221,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useWebsites.ts",
+      "label": "useWebsites.ts",
+      "path": "mission-control/hooks/useWebsites.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 130,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/app/cohorts/blog/page.tsx",
+      "target": "mission-control/components/CelebrationBurst.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/blog/page.tsx",
+      "target": "mission-control/components/WebsiteSwitcher.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/blog/page.tsx",
+      "target": "mission-control/hooks/useCohortData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/blog/page.tsx",
+      "target": "mission-control/hooks/useWebsites.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/discoveries/page.tsx",
+      "target": "mission-control/components/WebsiteSwitcher.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/discoveries/page.tsx",
+      "target": "mission-control/hooks/useWebsites.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/page.tsx",
+      "target": "mission-control/hooks/useCohortData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/cohorts/wrap-up/page.tsx",
+      "target": "mission-control/components/CelebrationBurst.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/mentorships/[clientId]/sessions/[sessionId]/wrap-up/page.tsx",
+      "target": "mission-control/components/CelebrationBurst.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/online-program/blog/page.tsx",
+      "target": "mission-control/components/CelebrationBurst.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/online-program/blog/page.tsx",
+      "target": "mission-control/hooks/useOnlineProgramData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/online-program/page.tsx",
+      "target": "mission-control/hooks/useOnlineProgramData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/online-program/wrap-up/page.tsx",
+      "target": "mission-control/components/CelebrationBurst.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/websites/page.tsx",
+      "target": "mission-control/hooks/useWebsites.ts",
+      "type": "imports"
+    }
+  ]
+}

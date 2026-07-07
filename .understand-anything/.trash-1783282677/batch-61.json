@@ -1,0 +1,63 @@
+{
+  "batchIndex": 61,
+  "nodes": [
+    {
+      "id": "batch-61-file-0",
+      "type": "source",
+      "name": "external-stub-providers.ts",
+      "filePath": "agents/task-runner/server/src/secrets/external-stub-providers.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 33,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-61-file-1",
+      "type": "source",
+      "name": "local-encrypted-provider.ts",
+      "filePath": "agents/task-runner/server/src/secrets/local-encrypted-provider.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 136,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-61-file-2",
+      "type": "source",
+      "name": "provider-registry.ts",
+      "filePath": "agents/task-runner/server/src/secrets/provider-registry.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 31,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-61-file-3",
+      "type": "source",
+      "name": "types.ts",
+      "filePath": "agents/task-runner/server/src/secrets/types.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "types"
+      ],
+      "complexity": 1,
+      "sizeLines": 23,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

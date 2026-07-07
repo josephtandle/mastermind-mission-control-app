@@ -1,0 +1,91 @@
+{
+  "batchIndex": 64,
+  "nodes": [
+    {
+      "id": "batch-64-file-0",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/server/src/storage/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 36,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-64-file-1",
+      "type": "source",
+      "name": "local-disk-provider.ts",
+      "filePath": "agents/task-runner/server/src/storage/local-disk-provider.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 90,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-64-file-2",
+      "type": "source",
+      "name": "provider-registry.ts",
+      "filePath": "agents/task-runner/server/src/storage/provider-registry.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 19,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-64-file-3",
+      "type": "source",
+      "name": "s3-provider.ts",
+      "filePath": "agents/task-runner/server/src/storage/s3-provider.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 154,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-64-file-4",
+      "type": "source",
+      "name": "service.ts",
+      "filePath": "agents/task-runner/server/src/storage/service.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 132,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-64-file-5",
+      "type": "source",
+      "name": "types.ts",
+      "filePath": "agents/task-runner/server/src/storage/types.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "types"
+      ],
+      "complexity": 1,
+      "sizeLines": 63,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

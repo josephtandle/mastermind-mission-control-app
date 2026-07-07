@@ -1,0 +1,313 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/app/porkbun/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/porkbun/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 638,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/settings/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/settings/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 485,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/skills/auth-modal.tsx",
+      "label": "auth-modal.tsx",
+      "path": "mission-control/app/app/skills/auth-modal.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 395,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/skills/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/skills/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 392,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/skills/skill-card.tsx",
+      "label": "skill-card.tsx",
+      "path": "mission-control/app/app/skills/skill-card.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 257,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/slack/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/slack/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 590,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/tidycal/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/tidycal/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 270,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/tokopedia/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/tokopedia/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 655,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/unsplash/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/unsplash/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 224,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/vercel/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/vercel/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 223,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/youtube/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/youtube/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 410,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/zoho-books/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/zoho-books/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 238,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/zoom/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/zoom/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 607,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/components/ApiKeyBanner.tsx",
+      "label": "ApiKeyBanner.tsx",
+      "path": "mission-control/components/ApiKeyBanner.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 276,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useAirtableData.ts",
+      "label": "useAirtableData.ts",
+      "path": "mission-control/hooks/useAirtableData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 207,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useCanvaData.ts",
+      "label": "useCanvaData.ts",
+      "path": "mission-control/hooks/useCanvaData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 73,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useDropboxData.ts",
+      "label": "useDropboxData.ts",
+      "path": "mission-control/hooks/useDropboxData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 161,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useLinkedInData.ts",
+      "label": "useLinkedInData.ts",
+      "path": "mission-control/hooks/useLinkedInData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 252,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useSkillsData.ts",
+      "label": "useSkillsData.ts",
+      "path": "mission-control/hooks/useSkillsData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 60,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useYoutubeData.ts",
+      "label": "useYoutubeData.ts",
+      "path": "mission-control/hooks/useYoutubeData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 93,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useZoomData.ts",
+      "label": "useZoomData.ts",
+      "path": "mission-control/hooks/useZoomData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 79,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/api-key-docs.ts",
+      "label": "api-key-docs.ts",
+      "path": "mission-control/lib/api-key-docs.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 1196,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/lib/skills-types.ts",
+      "label": "skills-types.ts",
+      "path": "mission-control/lib/skills-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 41,
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/app/porkbun/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/settings/page.tsx",
+      "target": "mission-control/lib/api-key-docs.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/skills/auth-modal.tsx",
+      "target": "mission-control/lib/api-key-docs.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/skills/auth-modal.tsx",
+      "target": "mission-control/lib/skills-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/skills/page.tsx",
+      "target": "mission-control/app/app/skills/skill-card.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/skills/page.tsx",
+      "target": "mission-control/lib/skills-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/skills/skill-card.tsx",
+      "target": "mission-control/app/app/skills/auth-modal.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/skills/skill-card.tsx",
+      "target": "mission-control/lib/skills-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/slack/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/tidycal/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/tokopedia/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/unsplash/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/vercel/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/youtube/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/youtube/page.tsx",
+      "target": "mission-control/hooks/useYoutubeData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/zoho-books/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/zoom/page.tsx",
+      "target": "mission-control/components/ApiKeyBanner.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/zoom/page.tsx",
+      "target": "mission-control/hooks/useZoomData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/components/ApiKeyBanner.tsx",
+      "target": "mission-control/lib/api-key-docs.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useSkillsData.ts",
+      "target": "mission-control/lib/skills-types.ts",
+      "type": "imports"
+    }
+  ]
+}

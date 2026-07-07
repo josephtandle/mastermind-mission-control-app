@@ -1,0 +1,490 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/packages/db/src/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/client.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "complex",
+      "filePath": "agents/task-runner/packages/db/src/client.ts",
+      "sizeLines": 740,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/client.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from client.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        82
+      ]
+    },
+    {
+      "id": "class:agents/task-runner/packages/db/src/client.ts:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from client.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        83,
+        164
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/client.ts:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from client.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        165,
+        246
+      ]
+    },
+    {
+      "id": "class:agents/task-runner/packages/db/src/client.ts:Symbol3",
+      "type": "class",
+      "name": "Symbol3",
+      "summary": "class exported from client.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        247,
+        328
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/client.ts:Symbol4",
+      "type": "function",
+      "name": "Symbol4",
+      "summary": "function exported from client.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        329,
+        411
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/migrate.ts",
+      "type": "file",
+      "name": "migrate.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/migrate.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/packages/db/src/migrate.ts",
+      "sizeLines": 29,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/migrate.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from migrate.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        29
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/migration-runtime.ts",
+      "type": "file",
+      "name": "migration-runtime.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/migration-runtime.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "agents/task-runner/packages/db/src/migration-runtime.ts",
+      "sizeLines": 134,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/migration-runtime.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from migration-runtime.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        134
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/migration-status.ts",
+      "type": "file",
+      "name": "migration-status.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/migration-status.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/packages/db/src/migration-status.ts",
+      "sizeLines": 45,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/migration-status.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from migration-status.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        45
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "type": "file",
+      "name": "runtime-config.test.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "sizeLines": 107,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/runtime-config.test.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from runtime-config.test.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        107
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/runtime-config.ts",
+      "type": "file",
+      "name": "runtime-config.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/runtime-config.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "agents/task-runner/packages/db/src/runtime-config.ts",
+      "sizeLines": 267,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/runtime-config.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from runtime-config.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        1,
+        89
+      ]
+    },
+    {
+      "id": "class:agents/task-runner/packages/db/src/runtime-config.ts:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from runtime-config.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        90,
+        178
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/runtime-config.ts:Symbol2",
+      "type": "function",
+      "name": "Symbol2",
+      "summary": "function exported from runtime-config.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "complex",
+      "lineRange": [
+        179,
+        267
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/schema/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/schema/index.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/packages/db/src/schema/index.ts",
+      "sizeLines": 34,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/schema/index.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from index.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        34
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/packages/db/src/seed.ts",
+      "type": "file",
+      "name": "seed.ts",
+      "summary": "Code file: agents/task-runner/packages/db/src/seed.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "agents/task-runner/packages/db/src/seed.ts",
+      "sizeLines": 99,
+      "language": "typescript"
+    },
+    {
+      "id": "function:agents/task-runner/packages/db/src/seed.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from seed.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        99
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/client.ts",
+      "target": "function:agents/task-runner/packages/db/src/client.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:agents/task-runner/packages/db/src/client.ts",
+      "target": "class:agents/task-runner/packages/db/src/client.ts:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:agents/task-runner/packages/db/src/client.ts",
+      "target": "function:agents/task-runner/packages/db/src/client.ts:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-3",
+      "source": "file:agents/task-runner/packages/db/src/client.ts",
+      "target": "class:agents/task-runner/packages/db/src/client.ts:Symbol3",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-4",
+      "source": "file:agents/task-runner/packages/db/src/client.ts",
+      "target": "function:agents/task-runner/packages/db/src/client.ts:Symbol4",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/migrate.ts",
+      "target": "function:agents/task-runner/packages/db/src/migrate.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/migration-runtime.ts",
+      "target": "function:agents/task-runner/packages/db/src/migration-runtime.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/migration-status.ts",
+      "target": "function:agents/task-runner/packages/db/src/migration-status.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "target": "function:agents/task-runner/packages/db/src/runtime-config.test.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/runtime-config.ts",
+      "target": "function:agents/task-runner/packages/db/src/runtime-config.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:agents/task-runner/packages/db/src/runtime-config.ts",
+      "target": "class:agents/task-runner/packages/db/src/runtime-config.ts:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-2",
+      "source": "file:agents/task-runner/packages/db/src/runtime-config.ts",
+      "target": "function:agents/task-runner/packages/db/src/runtime-config.ts:Symbol2",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/schema/index.ts",
+      "target": "function:agents/task-runner/packages/db/src/schema/index.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:agents/task-runner/packages/db/src/seed.ts",
+      "target": "function:agents/task-runner/packages/db/src/seed.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/client.ts-to-agents/task-runner/packages/db/src/schema/index.ts",
+      "source": "file:agents/task-runner/packages/db/src/client.ts",
+      "target": "file:agents/task-runner/packages/db/src/schema/index.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/migrate.ts-to-agents/task-runner/packages/db/src/client.ts",
+      "source": "file:agents/task-runner/packages/db/src/migrate.ts",
+      "target": "file:agents/task-runner/packages/db/src/client.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/migrate.ts-to-agents/task-runner/packages/db/src/migration-runtime.ts",
+      "source": "file:agents/task-runner/packages/db/src/migrate.ts",
+      "target": "file:agents/task-runner/packages/db/src/migration-runtime.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/migration-runtime.ts-to-agents/task-runner/packages/db/src/client.ts",
+      "source": "file:agents/task-runner/packages/db/src/migration-runtime.ts",
+      "target": "file:agents/task-runner/packages/db/src/client.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/migration-runtime.ts-to-agents/task-runner/packages/db/src/runtime-config.ts",
+      "source": "file:agents/task-runner/packages/db/src/migration-runtime.ts",
+      "target": "file:agents/task-runner/packages/db/src/runtime-config.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/migration-status.ts-to-agents/task-runner/packages/db/src/client.ts",
+      "source": "file:agents/task-runner/packages/db/src/migration-status.ts",
+      "target": "file:agents/task-runner/packages/db/src/client.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/migration-status.ts-to-agents/task-runner/packages/db/src/migration-runtime.ts",
+      "source": "file:agents/task-runner/packages/db/src/migration-status.ts",
+      "target": "file:agents/task-runner/packages/db/src/migration-runtime.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/runtime-config.test.ts-to-agents/task-runner/packages/db/src/runtime-config.ts",
+      "source": "file:agents/task-runner/packages/db/src/runtime-config.test.ts",
+      "target": "file:agents/task-runner/packages/db/src/runtime-config.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/seed.ts-to-agents/task-runner/packages/db/src/client.ts",
+      "source": "file:agents/task-runner/packages/db/src/seed.ts",
+      "target": "file:agents/task-runner/packages/db/src/client.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-agents/task-runner/packages/db/src/seed.ts-to-agents/task-runner/packages/db/src/schema/index.ts",
+      "source": "file:agents/task-runner/packages/db/src/seed.ts",
+      "target": "file:agents/task-runner/packages/db/src/schema/index.ts",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

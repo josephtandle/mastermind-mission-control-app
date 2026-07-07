@@ -1,0 +1,89 @@
+{
+  "batchIndex": 39,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/pi-local/CHANGELOG.md",
+      "label": "CHANGELOG.md",
+      "path": "agents/task-runner/packages/adapters/pi-local/CHANGELOG.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 13
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/pi-local/package.json",
+      "label": "package.json",
+      "path": "agents/task-runner/packages/adapters/pi-local/package.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 51
+    },
+    {
+      "id": "@paperclipai/adapter-pi-local",
+      "label": "@paperclipai/adapter-pi-local",
+      "type": "module",
+      "packageJson": "agents/task-runner/packages/adapters/pi-local/package.json",
+      "version": "0.3.0"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/pi-local/tsconfig.json",
+      "label": "tsconfig.json",
+      "path": "agents/task-runner/packages/adapters/pi-local/tsconfig.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 9
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts",
+      "label": "vitest.config.ts",
+      "path": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 8
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts#default:defineConfig",
+      "label": "default:defineConfig",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/pi-local/package.json",
+      "target": "@paperclipai/adapter-pi-local",
+      "type": "defines"
+    },
+    {
+      "source": "@paperclipai/adapter-pi-local",
+      "target": "@paperclipai/adapter-utils",
+      "type": "depends",
+      "version": "workspace:*"
+    },
+    {
+      "source": "@paperclipai/adapter-pi-local",
+      "target": "picocolors",
+      "type": "depends",
+      "version": "^1.1.1"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts",
+      "target": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts#default:defineConfig",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/pi-local/vitest.config.ts",
+      "target": "vitest/config",
+      "type": "imports",
+      "resolved": false
+    }
+  ],
+  "metadata": {
+    "totalNodes": 6,
+    "totalEdges": 5,
+    "filesProcessed": 4,
+    "tsFilesProcessed": 1,
+    "exportsExtracted": 1,
+    "importsExtracted": 1
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "batchIndex": 29,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "label": "build-config.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 107
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts#buildCodexLocalConfig",
+      "label": "buildCodexLocalConfig",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts",
+      "label": "index.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 3
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts#parseCodexStdoutLine",
+      "label": "parseCodexStdoutLine",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts#buildCodexLocalConfig",
+      "label": "buildCodexLocalConfig",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts",
+      "label": "parse-stdout.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 253
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts#parseCodexStdoutLine",
+      "label": "parseCodexStdoutLine",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts#buildCodexLocalConfig",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "target": "../index.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/build-config.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts#parseCodexStdoutLine",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/ui/index.ts#buildCodexLocalConfig",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts#parseCodexStdoutLine",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/ui/parse-stdout.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    }
+  ],
+  "metadata": {
+    "totalNodes": 7,
+    "totalEdges": 7,
+    "filesProcessed": 3,
+    "tsFilesProcessed": 3,
+    "exportsExtracted": 4,
+    "importsExtracted": 3
+  }
+}

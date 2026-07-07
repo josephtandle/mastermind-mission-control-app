@@ -1,0 +1,43 @@
+{
+  "nodes": [
+    {
+      "id": "file_0",
+      "type": "file",
+      "label": "db.json",
+      "fullPath": "mission-control/lib/db.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 420,
+      "imports": [],
+      "symbols": [
+        "projectMeta"
+      ],
+      "contentHash": "76da4ded"
+    },
+    {
+      "id": "file_1",
+      "type": "file",
+      "label": "passive-ideas.json",
+      "fullPath": "mission-control/lib/passive-ideas.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 11614,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "10fd40c8"
+    },
+    {
+      "id": "file_2",
+      "type": "file",
+      "label": "prompt-packs.json",
+      "fullPath": "mission-control/lib/prompt-packs.json",
+      "language": "json",
+      "category": "config",
+      "lineCount": 285,
+      "imports": [],
+      "symbols": [],
+      "contentHash": "700a6fc5"
+    }
+  ],
+  "edges": []
+}

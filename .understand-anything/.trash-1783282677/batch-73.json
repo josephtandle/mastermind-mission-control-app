@@ -1,0 +1,246 @@
+{
+  "batchIndex": 73,
+  "nodes": [
+    {
+      "id": "batch-73-file-0",
+      "type": "component",
+      "name": "PageTabBar.tsx",
+      "filePath": "agents/task-runner/ui/src/components/PageTabBar.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 46,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-1",
+      "type": "component",
+      "name": "PathInstructionsModal.tsx",
+      "filePath": "agents/task-runner/ui/src/components/PathInstructionsModal.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.4,
+      "sizeLines": 144,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-2",
+      "type": "component",
+      "name": "PriorityIcon.tsx",
+      "filePath": "agents/task-runner/ui/src/components/PriorityIcon.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 78,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-3",
+      "type": "component",
+      "name": "ProjectProperties.tsx",
+      "filePath": "agents/task-runner/ui/src/components/ProjectProperties.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 9.6,
+      "sizeLines": 960,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-4",
+      "type": "component",
+      "name": "PropertiesPanel.tsx",
+      "filePath": "agents/task-runner/ui/src/components/PropertiesPanel.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 30,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-5",
+      "type": "component",
+      "name": "ScrollToBottom.tsx",
+      "filePath": "agents/task-runner/ui/src/components/ScrollToBottom.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 80,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-6",
+      "type": "component",
+      "name": "Sidebar.tsx",
+      "filePath": "agents/task-runner/ui/src/components/Sidebar.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 104,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-7",
+      "type": "component",
+      "name": "SidebarAgents.tsx",
+      "filePath": "agents/task-runner/ui/src/components/SidebarAgents.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 146,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-8",
+      "type": "component",
+      "name": "SidebarNavItem.tsx",
+      "filePath": "agents/task-runner/ui/src/components/SidebarNavItem.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 77,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-9",
+      "type": "component",
+      "name": "SidebarProjects.tsx",
+      "filePath": "agents/task-runner/ui/src/components/SidebarProjects.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1.9,
+      "sizeLines": 193,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-10",
+      "type": "component",
+      "name": "SidebarSection.tsx",
+      "filePath": "agents/task-runner/ui/src/components/SidebarSection.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 18,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-11",
+      "type": "component",
+      "name": "StatusBadge.tsx",
+      "filePath": "agents/task-runner/ui/src/components/StatusBadge.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 16,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-12",
+      "type": "component",
+      "name": "StatusIcon.tsx",
+      "filePath": "agents/task-runner/ui/src/components/StatusIcon.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 72,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-13",
+      "type": "component",
+      "name": "ToastViewport.tsx",
+      "filePath": "agents/task-runner/ui/src/components/ToastViewport.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 100,
+      "language": "TypeScript JSX"
+    },
+    {
+      "id": "batch-73-file-14",
+      "type": "source",
+      "name": "agent-config-defaults.ts",
+      "filePath": "agents/task-runner/ui/src/components/agent-config-defaults.ts",
+      "summary": "React/UI component implementation for the application interface.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "ui"
+      ],
+      "complexity": 1,
+      "sizeLines": 31,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-73-file-15",
+      "type": "component",
+      "name": "agent-config-primitives.tsx",
+      "filePath": "agents/task-runner/ui/src/components/agent-config-primitives.tsx",
+      "summary": "File implementing component functionality.",
+      "tags": [
+        "TypeScript JSX",
+        "component",
+        "ui"
+      ],
+      "complexity": 4.7,
+      "sizeLines": 473,
+      "language": "TypeScript JSX"
+    }
+  ],
+  "edges": []
+}

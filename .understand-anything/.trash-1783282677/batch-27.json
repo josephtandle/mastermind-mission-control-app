@@ -1,0 +1,63 @@
+{
+  "batchIndex": 27,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/CHANGELOG.md",
+      "label": "CHANGELOG.md",
+      "path": "agents/task-runner/packages/adapters/codex-local/CHANGELOG.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "sizeLines": 69
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/package.json",
+      "label": "package.json",
+      "path": "agents/task-runner/packages/adapters/codex-local/package.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 52
+    },
+    {
+      "id": "@paperclipai/adapter-codex-local",
+      "label": "@paperclipai/adapter-codex-local",
+      "type": "module",
+      "packageJson": "agents/task-runner/packages/adapters/codex-local/package.json",
+      "version": "0.3.0"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/tsconfig.json",
+      "label": "tsconfig.json",
+      "path": "agents/task-runner/packages/adapters/codex-local/tsconfig.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "sizeLines": 9
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/package.json",
+      "target": "@paperclipai/adapter-codex-local",
+      "type": "defines"
+    },
+    {
+      "source": "@paperclipai/adapter-codex-local",
+      "target": "@paperclipai/adapter-utils",
+      "type": "depends",
+      "version": "workspace:*"
+    },
+    {
+      "source": "@paperclipai/adapter-codex-local",
+      "target": "picocolors",
+      "type": "depends",
+      "version": "^1.1.1"
+    }
+  ],
+  "metadata": {
+    "totalNodes": 4,
+    "totalEdges": 3,
+    "filesProcessed": 3,
+    "tsFilesProcessed": 0,
+    "exportsExtracted": 0,
+    "importsExtracted": 0
+  }
+}

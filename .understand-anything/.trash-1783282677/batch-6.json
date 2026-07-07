@@ -1,0 +1,78 @@
+{
+  "batchIndex": 6,
+  "files": [
+    {"path": "checks/agent-jwt-secret-check.ts", "size": 1045, "language": "typescript"},
+    {"path": "checks/config-check.ts", "size": 878, "language": "typescript"},
+    {"path": "checks/database-check.ts", "size": 1847, "language": "typescript"},
+    {"path": "checks/deployment-auth-check.ts", "size": 2168, "language": "typescript"},
+    {"path": "checks/index.ts", "size": 454, "language": "typescript"},
+    {"path": "checks/llm-check.ts", "size": 2384, "language": "typescript"},
+    {"path": "checks/log-check.ts", "size": 786, "language": "typescript"},
+    {"path": "checks/path-resolver.ts", "size": 31, "language": "typescript"},
+    {"path": "checks/port-check.ts", "size": 728, "language": "typescript"},
+    {"path": "checks/secrets-check.ts", "size": 3847, "language": "typescript"},
+    {"path": "checks/storage-check.ts", "size": 1519, "language": "typescript"}
+  ],
+  "batchImportData": {
+    "agent-jwt-secret-check.ts": ["../config/env.js", "./index.js"],
+    "config-check.ts": ["../config/store.js", "./index.js"],
+    "database-check.ts": ["node:fs", "../config/schema.js", "./index.js", "./path-resolver.js"],
+    "deployment-auth-check.ts": ["../config/schema.js", "./index.js"],
+    "index.ts": ["./agent-jwt-secret-check.js", "./config-check.js", "./deployment-auth-check.js", "./database-check.js", "./llm-check.js", "./log-check.js", "./port-check.js", "./secrets-check.js", "./storage-check.js"],
+    "llm-check.ts": ["../config/schema.js", "./index.js"],
+    "log-check.ts": ["node:fs", "../config/schema.js", "./index.js", "./path-resolver.js"],
+    "path-resolver.ts": ["../utils/path-resolver.js"],
+    "port-check.ts": ["../config/schema.js", "../utils/net.js", "./index.js"],
+    "secrets-check.ts": ["node:crypto", "node:fs", "node:path", "../config/schema.js", "./index.js", "./path-resolver.js"],
+    "storage-check.ts": ["node:fs", "../config/schema.js", "./index.js", "./path-resolver.js"]
+  },
+  "neighborMap": {
+    "agent-jwt-secret-check.ts": ["../config/env.js"],
+    "config-check.ts": ["../config/store.js"],
+    "database-check.ts": ["../config/schema.js", "./path-resolver.js"],
+    "deployment-auth-check.ts": ["../config/schema.js"],
+    "index.ts": ["./agent-jwt-secret-check.js", "./config-check.js", "./deployment-auth-check.js", "./database-check.js", "./llm-check.js", "./log-check.js", "./port-check.js", "./secrets-check.js", "./storage-check.js"],
+    "llm-check.ts": ["../config/schema.js"],
+    "log-check.ts": ["../config/schema.js", "./path-resolver.js"],
+    "path-resolver.ts": ["../utils/path-resolver.js"],
+    "port-check.ts": ["../config/schema.js", "../utils/net.js"],
+    "secrets-check.ts": ["../config/schema.js", "./path-resolver.js"],
+    "storage-check.ts": ["../config/schema.js", "./path-resolver.js"]
+  },
+  "graphNodes": [
+    {"id": "CheckResult", "nodeType": "interface", "label": "CheckResult interface", "title": "CheckResult", "description": "Defines health check result with status, message, and optional repair capability", "file": "index.ts", "language": "typescript", "tags": ["interface", "diagnostics"], "metadata": {"properties": 6}},
+    {"id": "agentJwtSecretCheck", "nodeType": "function", "label": "Agent JWT secret check", "title": "agentJwtSecretCheck", "description": "Verifies PAPERCLIP_AGENT_JWT_SECRET is set in environment or .env file", "file": "agent-jwt-secret-check.ts", "language": "typescript", "tags": ["check", "security", "jwt"], "metadata": {"params": 1}},
+    {"id": "configCheck", "nodeType": "function", "label": "Config file check", "title": "configCheck", "description": "Validates that config file exists and is parseable", "file": "config-check.ts", "language": "typescript", "tags": ["check", "config"], "metadata": {"params": 1}},
+    {"id": "databaseCheck", "nodeType": "function", "label": "Database connectivity check", "title": "databaseCheck", "description": "Verifies database connection and embedded-postgres directory setup", "file": "database-check.ts", "language": "typescript", "tags": ["check", "database", "async"], "metadata": {"params": 2}},
+    {"id": "deploymentAuthCheck", "nodeType": "function", "label": "Deployment/auth mode check", "title": "deploymentAuthCheck", "description": "Validates deployment mode is compatible with auth and exposure settings", "file": "deployment-auth-check.ts", "language": "typescript", "tags": ["check", "deployment", "auth"], "metadata": {"params": 1}},
+    {"id": "llmCheck", "nodeType": "function", "label": "LLM provider check", "title": "llmCheck", "description": "Validates LLM API key by making test requests to Claude or OpenAI API", "file": "llm-check.ts", "language": "typescript", "tags": ["check", "llm", "api", "async"], "metadata": {"params": 1}},
+    {"id": "logCheck", "nodeType": "function", "label": "Log directory check", "title": "logCheck", "description": "Ensures log directory exists and is writable", "file": "log-check.ts", "language": "typescript", "tags": ["check", "logging", "filesystem"], "metadata": {"params": 2}},
+    {"id": "portCheck", "nodeType": "function", "label": "Server port availability check", "title": "portCheck", "description": "Checks if configured server port is available for binding", "file": "port-check.ts", "language": "typescript", "tags": ["check", "networking", "async"], "metadata": {"params": 1}},
+    {"id": "secretsCheck", "nodeType": "function", "label": "Secrets provider check", "title": "secretsCheck", "description": "Validates local_encrypted secrets key file and master key format", "file": "secrets-check.ts", "language": "typescript", "tags": ["check", "security", "encryption"], "metadata": {"params": 2}},
+    {"id": "storageCheck", "nodeType": "function", "label": "Storage provider check", "title": "storageCheck", "description": "Validates local disk storage is writable or S3 config is present", "file": "storage-check.ts", "language": "typescript", "tags": ["check", "storage", "filesystem"], "metadata": {"params": 2}},
+    {"id": "resolveRuntimeLikePath", "nodeType": "function", "label": "Runtime path resolver", "title": "resolveRuntimeLikePath", "description": "Resolves runtime-like paths relative to config location", "file": "path-resolver.ts", "language": "typescript", "tags": ["utility", "paths"], "metadata": {"params": 2}}
+  ],
+  "graphEdges": [
+    {"id": "e1", "source": "agentJwtSecretCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e2", "source": "configCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e3", "source": "databaseCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e4", "source": "deploymentAuthCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e5", "source": "llmCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e6", "source": "logCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e7", "source": "portCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e8", "source": "secretsCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e9", "source": "storageCheck", "target": "CheckResult", "edgeType": "returns", "label": "returns", "bidirectional": false},
+    {"id": "e10", "source": "databaseCheck", "target": "resolveRuntimeLikePath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e11", "source": "logCheck", "target": "resolveRuntimeLikePath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e12", "source": "secretsCheck", "target": "resolveRuntimeLikePath", "edgeType": "calls", "label": "calls", "bidirectional": false},
+    {"id": "e13", "source": "storageCheck", "target": "resolveRuntimeLikePath", "edgeType": "calls", "label": "calls", "bidirectional": false}
+  ],
+  "summary": {
+    "filesAnalyzed": 11,
+    "nodesGenerated": 11,
+    "edgesGenerated": 13,
+    "checkFunctions": 9,
+    "totalLinesCovered": 13687,
+    "avgFileSize": 1244
+  }
+}

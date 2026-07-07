@@ -1,0 +1,350 @@
+{
+  "nodes": [
+    {
+      "id": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "label": "route.ts",
+      "path": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 359,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/calendar/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/calendar/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 630,
+      "complexity": "high"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/machine-learning/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 123,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/CandidatesTable.tsx",
+      "label": "CandidatesTable.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/CandidatesTable.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 133,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/ErrorClusters.tsx",
+      "label": "ErrorClusters.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/ErrorClusters.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 79,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/EvolutionTimeline.tsx",
+      "label": "EvolutionTimeline.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/EvolutionTimeline.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 172,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/FeedbackLoop.tsx",
+      "label": "FeedbackLoop.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/FeedbackLoop.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 157,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/GenesTable.tsx",
+      "label": "GenesTable.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/GenesTable.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 129,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/KnowledgeBase.tsx",
+      "label": "KnowledgeBase.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/KnowledgeBase.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 148,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/LastRunDetail.tsx",
+      "label": "LastRunDetail.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/LastRunDetail.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 107,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/MemoryGraphSummary.tsx",
+      "label": "MemoryGraphSummary.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/MemoryGraphSummary.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 137,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/PersonalityRadar.tsx",
+      "label": "PersonalityRadar.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/PersonalityRadar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 112,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/PredictorStatus.tsx",
+      "label": "PredictorStatus.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/PredictorStatus.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 94,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/SettingsPanel.tsx",
+      "label": "SettingsPanel.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/SettingsPanel.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 237,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/app/app/machine-learning/sections/StatCards.tsx",
+      "label": "StatCards.tsx",
+      "path": "mission-control/app/app/machine-learning/sections/StatCards.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 150,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/app/app/task-runner/page.tsx",
+      "label": "page.tsx",
+      "path": "mission-control/app/app/task-runner/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 233,
+      "complexity": "medium"
+    },
+    {
+      "id": "mission-control/hooks/useMCRefreshInterval.ts",
+      "label": "useMCRefreshInterval.ts",
+      "path": "mission-control/hooks/useMCRefreshInterval.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 24,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useMachineLearningData.ts",
+      "label": "useMachineLearningData.ts",
+      "path": "mission-control/hooks/useMachineLearningData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 63,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/usePaperclipData.ts",
+      "label": "usePaperclipData.ts",
+      "path": "mission-control/hooks/usePaperclipData.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 41,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/hooks/useRealJobs.ts",
+      "label": "useRealJobs.ts",
+      "path": "mission-control/hooks/useRealJobs.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 197,
+      "complexity": "low"
+    },
+    {
+      "id": "mission-control/lib/ml-types.ts",
+      "label": "ml-types.ts",
+      "path": "mission-control/lib/ml-types.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "sizeLines": 282,
+      "complexity": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/calendar/page.tsx",
+      "target": "mission-control/hooks/useRealJobs.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/CandidatesTable.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/ErrorClusters.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/EvolutionTimeline.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/FeedbackLoop.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/GenesTable.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/KnowledgeBase.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/LastRunDetail.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/MemoryGraphSummary.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/PredictorStatus.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/SettingsPanel.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/app/app/machine-learning/sections/StatCards.tsx",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/page.tsx",
+      "target": "mission-control/hooks/useMachineLearningData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/CandidatesTable.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/ErrorClusters.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/EvolutionTimeline.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/FeedbackLoop.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/GenesTable.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/KnowledgeBase.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/LastRunDetail.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/MemoryGraphSummary.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/PersonalityRadar.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/PredictorStatus.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/SettingsPanel.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/machine-learning/sections/StatCards.tsx",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/app/app/task-runner/page.tsx",
+      "target": "mission-control/hooks/usePaperclipData.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useMachineLearningData.ts",
+      "target": "mission-control/hooks/useMCRefreshInterval.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useMachineLearningData.ts",
+      "target": "mission-control/lib/ml-types.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/usePaperclipData.ts",
+      "target": "mission-control/hooks/useMCRefreshInterval.ts",
+      "type": "imports"
+    },
+    {
+      "source": "mission-control/hooks/useRealJobs.ts",
+      "target": "mission-control/hooks/useMCRefreshInterval.ts",
+      "type": "imports"
+    }
+  ]
+}

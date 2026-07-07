@@ -1,0 +1,233 @@
+{
+  "batchIndex": 28,
+  "nodes": [
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "label": "execute.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 543
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts#execute",
+      "label": "execute",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "label": "index.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 55
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#execute",
+      "label": "execute",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#testEnvironment",
+      "label": "testEnvironment",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#parseCodexJsonl",
+      "label": "parseCodexJsonl",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#isCodexUnknownSessionError",
+      "label": "isCodexUnknownSessionError",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#sessionCodec",
+      "label": "sessionCodec",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts",
+      "label": "parse.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 74
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts#parseCodexJsonl",
+      "label": "parseCodexJsonl",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts#isCodexUnknownSessionError",
+      "label": "isCodexUnknownSessionError",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts"
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "label": "test.ts",
+      "path": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "sizeLines": 299
+    },
+    {
+      "id": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts#testEnvironment",
+      "label": "testEnvironment",
+      "type": "symbol",
+      "symbolType": "export",
+      "file": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts#execute",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "node:url",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "node:fs/promises",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "node:os",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "node:path",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/execute.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#execute",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#testEnvironment",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#parseCodexJsonl",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#isCodexUnknownSessionError",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts#sessionCodec",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/index.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts#parseCodexJsonl",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts#isCodexUnknownSessionError",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/parse.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "target": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts#testEnvironment",
+      "type": "contains"
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "target": "@paperclipai/adapter-utils/server-utils",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "target": "./parse.js",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "target": "node:path",
+      "type": "imports",
+      "resolved": false
+    },
+    {
+      "source": "agents/task-runner/packages/adapters/codex-local/src/server/test.ts",
+      "target": "@paperclipai/adapter-utils",
+      "type": "imports",
+      "resolved": false
+    }
+  ],
+  "metadata": {
+    "totalNodes": 13,
+    "totalEdges": 22,
+    "filesProcessed": 4,
+    "tsFilesProcessed": 4,
+    "exportsExtracted": 9,
+    "importsExtracted": 13
+  }
+}

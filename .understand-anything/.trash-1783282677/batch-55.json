@@ -1,0 +1,98 @@
+{
+  "batchIndex": 55,
+  "nodes": [
+    {
+      "id": "batch-55-file-0",
+      "type": "source",
+      "name": "codex-models.ts",
+      "filePath": "agents/task-runner/server/src/adapters/codex-models.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1.1,
+      "sizeLines": 105,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-55-file-1",
+      "type": "source",
+      "name": "cursor-models.ts",
+      "filePath": "agents/task-runner/server/src/adapters/cursor-models.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1.7,
+      "sizeLines": 171,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-55-file-2",
+      "type": "source",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/server/src/adapters/index.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1,
+      "sizeLines": 18,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-55-file-3",
+      "type": "source",
+      "name": "registry.ts",
+      "filePath": "agents/task-runner/server/src/adapters/registry.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 153,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-55-file-4",
+      "type": "source",
+      "name": "types.ts",
+      "filePath": "agents/task-runner/server/src/adapters/types.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "types"
+      ],
+      "complexity": 1,
+      "sizeLines": 20,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-55-file-5",
+      "type": "source",
+      "name": "utils.ts",
+      "filePath": "agents/task-runner/server/src/adapters/utils.ts",
+      "summary": "Utility or library module providing shared functionality.",
+      "tags": [
+        "TypeScript",
+        "source",
+        "adapters",
+        "utilities"
+      ],
+      "complexity": 1,
+      "sizeLines": 48,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

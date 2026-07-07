@@ -1,0 +1,418 @@
+{
+  "batchIndex": 10,
+  "fileCount": 6,
+  "nodeCount": 16,
+  "edgeCount": 29,
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "type": "file",
+      "name": "database.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/database.ts",
+      "language": "TypeScript",
+      "sizeLines": 158,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/prompts",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/database.ts:promptDatabase",
+      "type": "function",
+      "name": "promptDatabase",
+      "filePath": "agents/task-runner/cli/src/prompts/database.ts",
+      "summary": "Function promptDatabase in database.ts",
+      "tags": [
+        "async",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "type": "file",
+      "name": "llm.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/llm.ts",
+      "language": "TypeScript",
+      "sizeLines": 44,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/prompts",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/llm.ts:promptLlm",
+      "type": "function",
+      "name": "promptLlm",
+      "filePath": "agents/task-runner/cli/src/prompts/llm.ts",
+      "summary": "Function promptLlm in llm.ts",
+      "tags": [
+        "async",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "type": "file",
+      "name": "logging.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/logging.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/prompts",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/logging.ts:promptLogging",
+      "type": "function",
+      "name": "promptLogging",
+      "filePath": "agents/task-runner/cli/src/prompts/logging.ts",
+      "summary": "Function promptLogging in logging.ts",
+      "tags": [
+        "async",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "type": "file",
+      "name": "secrets.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "language": "TypeScript",
+      "sizeLines": 100,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/prompts",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/secrets.ts:defaultKeyFilePath",
+      "type": "function",
+      "name": "defaultKeyFilePath",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "summary": "Function defaultKeyFilePath in secrets.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/secrets.ts:defaultSecretsConfig",
+      "type": "function",
+      "name": "defaultSecretsConfig",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "summary": "Function defaultSecretsConfig in secrets.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/secrets.ts:promptSecrets",
+      "type": "function",
+      "name": "promptSecrets",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "summary": "Function promptSecrets in secrets.ts",
+      "tags": [
+        "async",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/server.ts",
+      "language": "TypeScript",
+      "sizeLines": 166,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/prompts",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/server.ts:promptServer",
+      "type": "function",
+      "name": "promptServer",
+      "filePath": "agents/task-runner/cli/src/prompts/server.ts",
+      "summary": "Function promptServer in server.ts",
+      "tags": [
+        "async",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "type": "file",
+      "name": "storage.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "language": "TypeScript",
+      "sizeLines": 147,
+      "category": "source",
+      "summary": "TypeScript file in agents/task-runner/cli/src/prompts",
+      "tags": [
+        "typescript",
+        "source"
+      ],
+      "complexity": "medium"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageBaseDir",
+      "type": "function",
+      "name": "defaultStorageBaseDir",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "summary": "Function defaultStorageBaseDir in storage.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageConfig",
+      "type": "function",
+      "name": "defaultStorageConfig",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "summary": "Function defaultStorageConfig in storage.ts",
+      "tags": [
+        "sync",
+        "function"
+      ],
+      "complexity": "low"
+    },
+    {
+      "id": "func:agents/task-runner/cli/src/prompts/storage.ts:promptStorage",
+      "type": "function",
+      "name": "promptStorage",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "summary": "Function promptStorage in storage.ts",
+      "tags": [
+        "async",
+        "function"
+      ],
+      "complexity": "low"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/database.ts:promptDatabase",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "module:@clack/prompts",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "module:../config/schema.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "module:../config/home.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/llm.ts:promptLlm",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "target": "module:@clack/prompts",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "target": "module:../config/schema.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/logging.ts:promptLogging",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "module:@clack/prompts",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "module:../config/schema.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "module:../config/home.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/secrets.ts:defaultKeyFilePath",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/secrets.ts:defaultSecretsConfig",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/secrets.ts:promptSecrets",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "module:@clack/prompts",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "module:@paperclipai/shared",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "module:../config/schema.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "module:../config/home.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "export:agents/task-runner/cli/src/prompts/secrets.ts:defaultSecretsConfig",
+      "type": "exports",
+      "weight": 1,
+      "exportType": "named_export"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/server.ts:promptServer",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "target": "module:@clack/prompts",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "target": "module:../config/hostnames.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageBaseDir",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageConfig",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "func:agents/task-runner/cli/src/prompts/storage.ts:promptStorage",
+      "type": "contains",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "module:@clack/prompts",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "module:../config/schema.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "module:../config/home.js",
+      "type": "imports",
+      "weight": 1,
+      "importType": "es6_import"
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "export:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageConfig",
+      "type": "exports",
+      "weight": 1,
+      "exportType": "named_export"
+    }
+  ],
+  "metadata": {
+    "analyzed": true,
+    "timestamp": "2026-07-06",
+    "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control"
+  }
+}

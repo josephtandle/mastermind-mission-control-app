@@ -1,0 +1,62 @@
+{
+  "batchIndex": 63,
+  "nodes": [
+    {
+      "id": "batch-63-file-0",
+      "type": "source",
+      "name": "run-log-store.ts",
+      "filePath": "agents/task-runner/server/src/services/run-log-store.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1.6,
+      "sizeLines": 157,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-63-file-1",
+      "type": "source",
+      "name": "secrets.ts",
+      "filePath": "agents/task-runner/server/src/services/secrets.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 3.7,
+      "sizeLines": 369,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-63-file-2",
+      "type": "source",
+      "name": "sidebar-badges.ts",
+      "filePath": "agents/task-runner/server/src/services/sidebar-badges.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 1,
+      "sizeLines": 56,
+      "language": "TypeScript"
+    },
+    {
+      "id": "batch-63-file-3",
+      "type": "source",
+      "name": "workspace-runtime.ts",
+      "filePath": "agents/task-runner/server/src/services/workspace-runtime.ts",
+      "summary": "Source code implementation file for application logic.",
+      "tags": [
+        "TypeScript",
+        "source"
+      ],
+      "complexity": 10,
+      "sizeLines": 1077,
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

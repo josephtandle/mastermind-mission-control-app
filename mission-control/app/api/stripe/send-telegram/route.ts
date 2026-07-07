@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import os from "os";
+import { sendTelegramViaSharedSender } from "../../_telegram";
 
 const WS = process.env.GET_SORTED_WORKSPACE || path.join(os.homedir(), "golden-claw");
 
@@ -34,26 +35,15 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "TELEGRAM_BOT_TOKEN not configured" }, { status: 500 });
     }
 
-    const body: Record<string, unknown> = {
-      chat_id: chatId,
+    await sendTelegramViaSharedSender({
+      botToken,
+      chatId,
       text: message,
-      disable_web_page_preview: true,
-    };
-    if (!plainText) {
-      body.parse_mode = "Markdown";
-    }
-
-    const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      agentId: "mastermind-stripe",
+      messageType: "notification",
+      sourcePath: "projects/mastermind-mission-control/mission-control/app/api/stripe/send-telegram/route.ts",
+      plainText,
     });
-
-    const data = await res.json();
-
-    if (!data.ok) {
-      return NextResponse.json({ error: data.description || "Telegram API error" }, { status: 500 });
-    }
 
     return NextResponse.json({ success: true });
   } catch (err) {

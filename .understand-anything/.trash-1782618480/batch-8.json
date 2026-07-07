@@ -1,0 +1,873 @@
+{
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "file",
+      "label": "migrate-inline-env-secrets.ts",
+      "path": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 125,
+      "nonEmptyLines": 108,
+      "summary": "typescript file with 4 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-2",
+      "type": "function",
+      "label": "asRecord",
+      "path": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "functionName": "asRecord",
+      "startLine": 13,
+      "endLine": 16,
+      "params": [
+        "value"
+      ],
+      "summary": "asRecord function at lines 13-16",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-4",
+      "type": "function",
+      "label": "toPlainValue",
+      "path": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "functionName": "toPlainValue",
+      "startLine": 18,
+      "endLine": 24,
+      "params": [
+        "binding"
+      ],
+      "summary": "toPlainValue function at lines 18-24",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-6",
+      "type": "function",
+      "label": "secretName",
+      "path": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "functionName": "secretName",
+      "startLine": 26,
+      "endLine": 28,
+      "params": [
+        "agentId",
+        "key"
+      ],
+      "summary": "secretName function at lines 26-28",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-8",
+      "type": "function",
+      "label": "main",
+      "path": "agents/task-runner/scripts/migrate-inline-env-secrets.ts",
+      "functionName": "main",
+      "startLine": 30,
+      "endLine": 123,
+      "params": [],
+      "summary": "main function at lines 30-123",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-13",
+      "type": "file",
+      "label": "adapter-models.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/adapter-models.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 87,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-14",
+      "type": "file",
+      "label": "agent-auth-jwt.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/agent-auth-jwt.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 68,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-15",
+      "type": "file",
+      "label": "agent-shortname-collision.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/agent-shortname-collision.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 69,
+      "nonEmptyLines": 61,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-16",
+      "type": "file",
+      "label": "approval-routes-idempotency.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/approval-routes-idempotency.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 96,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-17",
+      "type": "function",
+      "label": "createApp",
+      "path": "agents/task-runner/server/src/__tests__/approval-routes-idempotency.test.ts",
+      "functionName": "createApp",
+      "startLine": 42,
+      "endLine": 58,
+      "params": [],
+      "summary": "createApp function at lines 42-58",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-19",
+      "type": "file",
+      "label": "approvals-service.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/approvals-service.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 107,
+      "nonEmptyLines": 88,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-20",
+      "type": "function",
+      "label": "createApproval",
+      "path": "agents/task-runner/server/src/__tests__/approvals-service.test.ts",
+      "functionName": "createApproval",
+      "startLine": 29,
+      "endLine": 38,
+      "params": [
+        "status"
+      ],
+      "summary": "createApproval function at lines 29-38",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-22",
+      "type": "function",
+      "label": "createDbStub",
+      "path": "agents/task-runner/server/src/__tests__/approvals-service.test.ts",
+      "functionName": "createDbStub",
+      "startLine": 40,
+      "endLine": 56,
+      "params": [
+        "selectResults",
+        "updateResults"
+      ],
+      "summary": "createDbStub function at lines 40-56",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-24",
+      "type": "file",
+      "label": "attachment-types.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/attachment-types.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 97,
+      "nonEmptyLines": 85,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-25",
+      "type": "file",
+      "label": "board-mutation-guard.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/board-mutation-guard.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 61,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-26",
+      "type": "function",
+      "label": "createApp",
+      "path": "agents/task-runner/server/src/__tests__/board-mutation-guard.test.ts",
+      "functionName": "createApp",
+      "startLine": 6,
+      "endLine": 23,
+      "params": [
+        "actorType",
+        "boardSource"
+      ],
+      "summary": "createApp function at lines 6-23",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-28",
+      "type": "file",
+      "label": "companies-route-path-guard.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/companies-route-path-guard.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 49,
+      "nonEmptyLines": 45,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-29",
+      "type": "file",
+      "label": "error-handler.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/error-handler.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 53,
+      "nonEmptyLines": 45,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-30",
+      "type": "function",
+      "label": "makeReq",
+      "path": "agents/task-runner/server/src/__tests__/error-handler.test.ts",
+      "functionName": "makeReq",
+      "startLine": 6,
+      "endLine": 14,
+      "params": [],
+      "summary": "makeReq function at lines 6-14",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-32",
+      "type": "function",
+      "label": "makeRes",
+      "path": "agents/task-runner/server/src/__tests__/error-handler.test.ts",
+      "functionName": "makeRes",
+      "startLine": 16,
+      "endLine": 23,
+      "params": [],
+      "summary": "makeRes function at lines 16-23",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-34",
+      "type": "file",
+      "label": "execution-workspace-policy.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/execution-workspace-policy.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 143,
+      "nonEmptyLines": 134,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-35",
+      "type": "file",
+      "label": "health.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/health.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-36",
+      "type": "file",
+      "label": "heartbeat-workspace-session.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/heartbeat-workspace-session.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 180,
+      "nonEmptyLines": 160,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-37",
+      "type": "function",
+      "label": "buildResolvedWorkspace",
+      "path": "agents/task-runner/server/src/__tests__/heartbeat-workspace-session.test.ts",
+      "functionName": "buildResolvedWorkspace",
+      "startLine": 11,
+      "endLine": 23,
+      "params": [
+        "overrides"
+      ],
+      "summary": "buildResolvedWorkspace function at lines 11-23",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-39",
+      "type": "file",
+      "label": "hire-hook.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/hire-hook.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 180,
+      "nonEmptyLines": 156,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-40",
+      "type": "function",
+      "label": "mockDbWithAgent",
+      "path": "agents/task-runner/server/src/__tests__/hire-hook.test.ts",
+      "functionName": "mockDbWithAgent",
+      "startLine": 17,
+      "endLine": 34,
+      "params": [
+        "agent"
+      ],
+      "summary": "mockDbWithAgent function at lines 17-34",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-42",
+      "type": "file",
+      "label": "invite-accept-gateway-defaults.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/invite-accept-gateway-defaults.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 119,
+      "nonEmptyLines": 107,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-43",
+      "type": "file",
+      "label": "invite-accept-replay.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/invite-accept-replay.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 92,
+      "nonEmptyLines": 85,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-44",
+      "type": "file",
+      "label": "invite-expiry.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/invite-expiry.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-45",
+      "type": "file",
+      "label": "invite-join-manager.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/invite-join-manager.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 27,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-46",
+      "type": "file",
+      "label": "invite-onboarding-text.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/invite-onboarding-text.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 106,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-47",
+      "type": "function",
+      "label": "buildReq",
+      "path": "agents/task-runner/server/src/__tests__/invite-onboarding-text.test.ts",
+      "functionName": "buildReq",
+      "startLine": 5,
+      "endLine": 13,
+      "params": [
+        "host"
+      ],
+      "summary": "buildReq function at lines 5-13",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-49",
+      "type": "file",
+      "label": "issues-checkout-wakeup.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/issues-checkout-wakeup.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 44,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-50",
+      "type": "file",
+      "label": "issues-user-context.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/issues-user-context.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 100,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-51",
+      "type": "function",
+      "label": "makeIssue",
+      "path": "agents/task-runner/server/src/__tests__/issues-user-context.test.ts",
+      "functionName": "makeIssue",
+      "startLine": 4,
+      "endLine": 17,
+      "params": [
+        "overrides"
+      ],
+      "summary": "makeIssue function at lines 4-17",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-53",
+      "type": "file",
+      "label": "openclaw-invite-prompt-route.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/openclaw-invite-prompt-route.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 181,
+      "nonEmptyLines": 162,
+      "summary": "typescript file with 2 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-54",
+      "type": "function",
+      "label": "createDbStub",
+      "path": "agents/task-runner/server/src/__tests__/openclaw-invite-prompt-route.test.ts",
+      "functionName": "createDbStub",
+      "startLine": 36,
+      "endLine": 57,
+      "params": [],
+      "summary": "createDbStub function at lines 36-57",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-56",
+      "type": "function",
+      "label": "createApp",
+      "path": "agents/task-runner/server/src/__tests__/openclaw-invite-prompt-route.test.ts",
+      "functionName": "createApp",
+      "startLine": 59,
+      "endLine": 77,
+      "params": [
+        "actor",
+        "db"
+      ],
+      "summary": "createApp function at lines 59-77",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-58",
+      "type": "file",
+      "label": "paperclip-env.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/paperclip-env.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 58,
+      "nonEmptyLines": 43,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-59",
+      "type": "file",
+      "label": "private-hostname-guard.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/private-hostname-guard.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 50,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-60",
+      "type": "function",
+      "label": "createApp",
+      "path": "agents/task-runner/server/src/__tests__/private-hostname-guard.test.ts",
+      "functionName": "createApp",
+      "startLine": 6,
+      "endLine": 22,
+      "params": [
+        "opts"
+      ],
+      "summary": "createApp function at lines 6-22",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-62",
+      "type": "file",
+      "label": "project-shortname-resolution.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/project-shortname-resolution.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 40,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-63",
+      "type": "file",
+      "label": "redaction.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/redaction.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 59,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-64",
+      "type": "file",
+      "label": "storage-local-provider.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/storage-local-provider.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 78,
+      "nonEmptyLines": 65,
+      "summary": "typescript file with 1 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    },
+    {
+      "id": "node-65",
+      "type": "function",
+      "label": "readStreamToBuffer",
+      "path": "agents/task-runner/server/src/__tests__/storage-local-provider.test.ts",
+      "functionName": "readStreamToBuffer",
+      "startLine": 8,
+      "endLine": 14,
+      "params": [
+        "stream"
+      ],
+      "summary": "readStreamToBuffer function at lines 8-14",
+      "tags": [
+        "function",
+        "typescript"
+      ]
+    },
+    {
+      "id": "node-67",
+      "type": "file",
+      "label": "ui-branding.test.ts",
+      "path": "agents/task-runner/server/src/__tests__/ui-branding.test.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 33,
+      "summary": "typescript file with 0 function(s)",
+      "tags": [
+        "typescript",
+        "code"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-node-3",
+      "source": "node-1",
+      "target": "node-2",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-5",
+      "source": "node-1",
+      "target": "node-4",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-7",
+      "source": "node-1",
+      "target": "node-6",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-9",
+      "source": "node-1",
+      "target": "node-8",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-10",
+      "source": "node-8",
+      "target": "node-2",
+      "type": "calls",
+      "label": "calls at line 47"
+    },
+    {
+      "id": "edge-node-11",
+      "source": "node-8",
+      "target": "node-4",
+      "type": "calls",
+      "label": "calls at line 57"
+    },
+    {
+      "id": "edge-node-12",
+      "source": "node-8",
+      "target": "node-6",
+      "type": "calls",
+      "label": "calls at line 61"
+    },
+    {
+      "id": "edge-node-18",
+      "source": "node-16",
+      "target": "node-17",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-21",
+      "source": "node-19",
+      "target": "node-20",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-23",
+      "source": "node-19",
+      "target": "node-22",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-27",
+      "source": "node-25",
+      "target": "node-26",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-31",
+      "source": "node-29",
+      "target": "node-30",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-33",
+      "source": "node-29",
+      "target": "node-32",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-38",
+      "source": "node-36",
+      "target": "node-37",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-41",
+      "source": "node-39",
+      "target": "node-40",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-48",
+      "source": "node-46",
+      "target": "node-47",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-52",
+      "source": "node-50",
+      "target": "node-51",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-55",
+      "source": "node-53",
+      "target": "node-54",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-57",
+      "source": "node-53",
+      "target": "node-56",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-61",
+      "source": "node-59",
+      "target": "node-60",
+      "type": "contains",
+      "label": "contains function"
+    },
+    {
+      "id": "edge-node-66",
+      "source": "node-64",
+      "target": "node-65",
+      "type": "contains",
+      "label": "contains function"
+    }
+  ]
+}

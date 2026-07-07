@@ -3,6 +3,7 @@ import { execSync } from "child_process";
 import { promises as fs } from "fs";
 import path from "path";
 import os from "os";
+import { sendTelegramViaSharedSender } from "../../../../_telegram";
 
 const WS = process.env.GET_SORTED_WORKSPACE || path.join(os.homedir(), "golden-claw");
 
@@ -155,27 +156,25 @@ export async function POST(
         } else {
           // PDF failed — fall back to text
           const msg = `*${title}*\n\n${content.slice(0, 4000)}`;
-          const tgRes = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ chat_id: chatId, text: msg, parse_mode: "Markdown" }),
+          await sendTelegramViaSharedSender({
+            botToken,
+            chatId,
+            text: msg,
+            agentId: "mastermind-mentorships",
+            messageType: "notification",
+            sourcePath: "projects/mastermind-mission-control/mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
           });
-          if (!tgRes.ok) {
-            const err = await tgRes.json();
-            return NextResponse.json({ error: err.description || "Telegram error" }, { status: 500 });
-          }
         }
       } else {
         const msg = `*${title}*\n\n${content.slice(0, 4000)}`;
-        const tgRes = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ chat_id: chatId, text: msg, parse_mode: "Markdown" }),
+        await sendTelegramViaSharedSender({
+          botToken,
+          chatId,
+          text: msg,
+          agentId: "mastermind-mentorships",
+          messageType: "notification",
+          sourcePath: "projects/mastermind-mission-control/mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
         });
-        if (!tgRes.ok) {
-          const err = await tgRes.json();
-          return NextResponse.json({ error: err.description || "Telegram error" }, { status: 500 });
-        }
       }
 
       return NextResponse.json({ ok: true, channel: "telegram" });

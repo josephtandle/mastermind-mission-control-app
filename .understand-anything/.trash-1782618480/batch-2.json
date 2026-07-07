@@ -1,0 +1,3123 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "type": "file",
+      "name": "company.ts",
+      "filePath": "agents/task-runner/cli/src/commands/client/company.ts",
+      "summary": "Code module providing resolveCompanyForDeletion, assertDeleteConfirmation, registerCompanyCommands",
+      "complexity": "complex",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 472,
+        "nonEmptyLines": 421,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/client/company.ts:resolveCompanyForDeletion",
+      "type": "function",
+      "name": "resolveCompanyForDeletion",
+      "filePath": "agents/task-runner/cli/src/commands/client/company.ts",
+      "summary": "Exported  resolveCompanyForDeletion",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/client/company.ts:assertDeleteConfirmation",
+      "type": "function",
+      "name": "assertDeleteConfirmation",
+      "filePath": "agents/task-runner/cli/src/commands/client/company.ts",
+      "summary": "Exported  assertDeleteConfirmation",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/client/company.ts:registerCompanyCommands",
+      "type": "function",
+      "name": "registerCompanyCommands",
+      "filePath": "agents/task-runner/cli/src/commands/client/company.ts",
+      "summary": "Exported  registerCompanyCommands",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/client/context.ts",
+      "type": "file",
+      "name": "context.ts",
+      "filePath": "agents/task-runner/cli/src/commands/client/context.ts",
+      "summary": "Code module providing registerContextCommands",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 125,
+        "nonEmptyLines": 114,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/client/context.ts:registerContextCommands",
+      "type": "function",
+      "name": "registerContextCommands",
+      "filePath": "agents/task-runner/cli/src/commands/client/context.ts",
+      "summary": "Exported  registerContextCommands",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "type": "file",
+      "name": "dashboard.ts",
+      "filePath": "agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "summary": "Code module providing registerDashboardCommands",
+      "complexity": "simple",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 34,
+        "nonEmptyLines": 31,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/client/dashboard.ts:registerDashboardCommands",
+      "type": "function",
+      "name": "registerDashboardCommands",
+      "filePath": "agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "summary": "Exported  registerDashboardCommands",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/client/issue.ts",
+      "type": "file",
+      "name": "issue.ts",
+      "filePath": "agents/task-runner/cli/src/commands/client/issue.ts",
+      "summary": "Code module providing registerIssueCommands",
+      "complexity": "complex",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 313,
+        "nonEmptyLines": 290,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/client/issue.ts:registerIssueCommands",
+      "type": "function",
+      "name": "registerIssueCommands",
+      "filePath": "agents/task-runner/cli/src/commands/client/issue.ts",
+      "summary": "Exported  registerIssueCommands",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "type": "file",
+      "name": "configure.ts",
+      "filePath": "agents/task-runner/cli/src/commands/configure.ts",
+      "summary": "Code module providing configure",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 197,
+        "nonEmptyLines": 179,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/configure.ts:configure",
+      "type": "function",
+      "name": "configure",
+      "filePath": "agents/task-runner/cli/src/commands/configure.ts",
+      "summary": "Exported  configure",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/db-backup.ts",
+      "type": "file",
+      "name": "db-backup.ts",
+      "filePath": "agents/task-runner/cli/src/commands/db-backup.ts",
+      "summary": "Code module providing dbBackupCommand",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 102,
+        "nonEmptyLines": 91,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/db-backup.ts:dbBackupCommand",
+      "type": "function",
+      "name": "dbBackupCommand",
+      "filePath": "agents/task-runner/cli/src/commands/db-backup.ts",
+      "summary": "Exported  dbBackupCommand",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "type": "file",
+      "name": "doctor.ts",
+      "filePath": "agents/task-runner/cli/src/commands/doctor.ts",
+      "summary": "Code module providing doctor",
+      "complexity": "complex",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 203,
+        "nonEmptyLines": 176,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/doctor.ts:doctor",
+      "type": "function",
+      "name": "doctor",
+      "filePath": "agents/task-runner/cli/src/commands/doctor.ts",
+      "summary": "Exported  doctor",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/env.ts",
+      "type": "file",
+      "name": "env.ts",
+      "filePath": "agents/task-runner/cli/src/commands/env.ts",
+      "summary": "Code module providing envCommand",
+      "complexity": "complex",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 411,
+        "nonEmptyLines": 388,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/env.ts:envCommand",
+      "type": "function",
+      "name": "envCommand",
+      "filePath": "agents/task-runner/cli/src/commands/env.ts",
+      "summary": "Exported  envCommand",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "type": "file",
+      "name": "heartbeat-run.ts",
+      "filePath": "agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "summary": "Code module providing heartbeatRun",
+      "complexity": "complex",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 344,
+        "nonEmptyLines": 306,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/heartbeat-run.ts:heartbeatRun",
+      "type": "function",
+      "name": "heartbeatRun",
+      "filePath": "agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "summary": "Exported  heartbeatRun",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "type": "file",
+      "name": "onboard.ts",
+      "filePath": "agents/task-runner/cli/src/commands/onboard.ts",
+      "summary": "Code module providing onboard",
+      "complexity": "complex",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 491,
+        "nonEmptyLines": 456,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/onboard.ts:onboard",
+      "type": "function",
+      "name": "onboard",
+      "filePath": "agents/task-runner/cli/src/commands/onboard.ts",
+      "summary": "Exported  onboard",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/run.ts",
+      "type": "file",
+      "name": "run.ts",
+      "filePath": "agents/task-runner/cli/src/commands/run.ts",
+      "summary": "Code module providing runCommand",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 190,
+        "nonEmptyLines": 165,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/run.ts:runCommand",
+      "type": "function",
+      "name": "runCommand",
+      "filePath": "agents/task-runner/cli/src/commands/run.ts",
+      "summary": "Exported  runCommand",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "type": "file",
+      "name": "worktree-lib.ts",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Code module providing DEFAULT_WORKTREE_HOME, WORKTREE_SEED_MODES, isWorktreeSeedMode, resolveWorktreeSeedPlan, sanitizeWorktreeInstanceId, resolveSuggestedWorktreeName, resolveWorktreeLocalPaths, rewriteLocalUrlPort, buildWorktreeConfig, buildWorktreeEnvEntries, formatShellExports",
+      "complexity": "complex",
+      "tags": [
+        "code",
+        "multi-export"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 218,
+        "nonEmptyLines": 198,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:DEFAULT_WORKTREE_HOME",
+      "type": "function",
+      "name": "DEFAULT_WORKTREE_HOME",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  DEFAULT_WORKTREE_HOME",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:WORKTREE_SEED_MODES",
+      "type": "function",
+      "name": "WORKTREE_SEED_MODES",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  WORKTREE_SEED_MODES",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:isWorktreeSeedMode",
+      "type": "function",
+      "name": "isWorktreeSeedMode",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  isWorktreeSeedMode",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:resolveWorktreeSeedPlan",
+      "type": "function",
+      "name": "resolveWorktreeSeedPlan",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  resolveWorktreeSeedPlan",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:sanitizeWorktreeInstanceId",
+      "type": "function",
+      "name": "sanitizeWorktreeInstanceId",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  sanitizeWorktreeInstanceId",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:resolveSuggestedWorktreeName",
+      "type": "function",
+      "name": "resolveSuggestedWorktreeName",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  resolveSuggestedWorktreeName",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:resolveWorktreeLocalPaths",
+      "type": "function",
+      "name": "resolveWorktreeLocalPaths",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  resolveWorktreeLocalPaths",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:rewriteLocalUrlPort",
+      "type": "function",
+      "name": "rewriteLocalUrlPort",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  rewriteLocalUrlPort",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:buildWorktreeConfig",
+      "type": "function",
+      "name": "buildWorktreeConfig",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  buildWorktreeConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:buildWorktreeEnvEntries",
+      "type": "function",
+      "name": "buildWorktreeEnvEntries",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  buildWorktreeEnvEntries",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:formatShellExports",
+      "type": "function",
+      "name": "formatShellExports",
+      "filePath": "agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "summary": "Exported  formatShellExports",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "type": "file",
+      "name": "worktree.ts",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Code module providing resolveWorktreeMakeTargetPath, resolveGitWorktreeAddArgs, copyGitHooksToWorktreeGitDir, rebindWorkspaceCwd, copySeededSecretsKey, worktreeInitCommand, worktreeMakeCommand, worktreeEnvCommand, registerWorktreeCommands",
+      "complexity": "complex",
+      "tags": [
+        "code",
+        "multi-export"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 845,
+        "nonEmptyLines": 758,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:resolveWorktreeMakeTargetPath",
+      "type": "function",
+      "name": "resolveWorktreeMakeTargetPath",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  resolveWorktreeMakeTargetPath",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:resolveGitWorktreeAddArgs",
+      "type": "function",
+      "name": "resolveGitWorktreeAddArgs",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  resolveGitWorktreeAddArgs",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:copyGitHooksToWorktreeGitDir",
+      "type": "function",
+      "name": "copyGitHooksToWorktreeGitDir",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  copyGitHooksToWorktreeGitDir",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:rebindWorkspaceCwd",
+      "type": "function",
+      "name": "rebindWorkspaceCwd",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  rebindWorkspaceCwd",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:copySeededSecretsKey",
+      "type": "function",
+      "name": "copySeededSecretsKey",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  copySeededSecretsKey",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:worktreeInitCommand",
+      "type": "function",
+      "name": "worktreeInitCommand",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  worktreeInitCommand",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:worktreeMakeCommand",
+      "type": "function",
+      "name": "worktreeMakeCommand",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  worktreeMakeCommand",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:worktreeEnvCommand",
+      "type": "function",
+      "name": "worktreeEnvCommand",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  worktreeEnvCommand",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/commands/worktree.ts:registerWorktreeCommands",
+      "type": "function",
+      "name": "registerWorktreeCommands",
+      "filePath": "agents/task-runner/cli/src/commands/worktree.ts",
+      "summary": "Exported  registerWorktreeCommands",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/data-dir.ts",
+      "type": "file",
+      "name": "data-dir.ts",
+      "filePath": "agents/task-runner/cli/src/config/data-dir.ts",
+      "summary": "Code module providing applyDataDirOverride",
+      "complexity": "simple",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 48,
+        "nonEmptyLines": 41,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/data-dir.ts:applyDataDirOverride",
+      "type": "function",
+      "name": "applyDataDirOverride",
+      "filePath": "agents/task-runner/cli/src/config/data-dir.ts",
+      "summary": "Exported  applyDataDirOverride",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "file",
+      "name": "env.ts",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Code module providing resolvePaperclipEnvFile, resolveAgentJwtEnvFile, loadPaperclipEnvFile, loadAgentJwtEnvFile, readAgentJwtSecretFromEnv, readAgentJwtSecretFromEnvFile, ensureAgentJwtSecret, writeAgentJwtEnv, readPaperclipEnvEntries, writePaperclipEnvEntries, mergePaperclipEnvEntries",
+      "complexity": "moderate",
+      "tags": [
+        "code",
+        "multi-export"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 118,
+        "nonEmptyLines": 98,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:resolvePaperclipEnvFile",
+      "type": "function",
+      "name": "resolvePaperclipEnvFile",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  resolvePaperclipEnvFile",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:resolveAgentJwtEnvFile",
+      "type": "function",
+      "name": "resolveAgentJwtEnvFile",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  resolveAgentJwtEnvFile",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:loadPaperclipEnvFile",
+      "type": "function",
+      "name": "loadPaperclipEnvFile",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  loadPaperclipEnvFile",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:loadAgentJwtEnvFile",
+      "type": "function",
+      "name": "loadAgentJwtEnvFile",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  loadAgentJwtEnvFile",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:readAgentJwtSecretFromEnv",
+      "type": "function",
+      "name": "readAgentJwtSecretFromEnv",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  readAgentJwtSecretFromEnv",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:readAgentJwtSecretFromEnvFile",
+      "type": "function",
+      "name": "readAgentJwtSecretFromEnvFile",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  readAgentJwtSecretFromEnvFile",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:ensureAgentJwtSecret",
+      "type": "function",
+      "name": "ensureAgentJwtSecret",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  ensureAgentJwtSecret",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:writeAgentJwtEnv",
+      "type": "function",
+      "name": "writeAgentJwtEnv",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  writeAgentJwtEnv",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:readPaperclipEnvEntries",
+      "type": "function",
+      "name": "readPaperclipEnvEntries",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  readPaperclipEnvEntries",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:writePaperclipEnvEntries",
+      "type": "function",
+      "name": "writePaperclipEnvEntries",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  writePaperclipEnvEntries",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/env.ts:mergePaperclipEnvEntries",
+      "type": "function",
+      "name": "mergePaperclipEnvEntries",
+      "filePath": "agents/task-runner/cli/src/config/env.ts",
+      "summary": "Exported  mergePaperclipEnvEntries",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "file",
+      "name": "home.ts",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Code module providing resolvePaperclipHomeDir, resolvePaperclipInstanceId, resolvePaperclipInstanceRoot, resolveDefaultConfigPath, resolveDefaultContextPath, resolveDefaultEmbeddedPostgresDir, resolveDefaultLogsDir, resolveDefaultSecretsKeyFilePath, resolveDefaultStorageDir, resolveDefaultBackupDir, expandHomePrefix, describeLocalInstancePaths",
+      "complexity": "moderate",
+      "tags": [
+        "code",
+        "multi-export"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 76,
+        "nonEmptyLines": 63,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolvePaperclipHomeDir",
+      "type": "function",
+      "name": "resolvePaperclipHomeDir",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolvePaperclipHomeDir",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolvePaperclipInstanceId",
+      "type": "function",
+      "name": "resolvePaperclipInstanceId",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolvePaperclipInstanceId",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolvePaperclipInstanceRoot",
+      "type": "function",
+      "name": "resolvePaperclipInstanceRoot",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolvePaperclipInstanceRoot",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultConfigPath",
+      "type": "function",
+      "name": "resolveDefaultConfigPath",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultConfigPath",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultContextPath",
+      "type": "function",
+      "name": "resolveDefaultContextPath",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultContextPath",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultEmbeddedPostgresDir",
+      "type": "function",
+      "name": "resolveDefaultEmbeddedPostgresDir",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultEmbeddedPostgresDir",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultLogsDir",
+      "type": "function",
+      "name": "resolveDefaultLogsDir",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultLogsDir",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultSecretsKeyFilePath",
+      "type": "function",
+      "name": "resolveDefaultSecretsKeyFilePath",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultSecretsKeyFilePath",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultStorageDir",
+      "type": "function",
+      "name": "resolveDefaultStorageDir",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultStorageDir",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultBackupDir",
+      "type": "function",
+      "name": "resolveDefaultBackupDir",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  resolveDefaultBackupDir",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:expandHomePrefix",
+      "type": "function",
+      "name": "expandHomePrefix",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  expandHomePrefix",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/home.ts:describeLocalInstancePaths",
+      "type": "function",
+      "name": "describeLocalInstancePaths",
+      "filePath": "agents/task-runner/cli/src/config/home.ts",
+      "summary": "Exported  describeLocalInstancePaths",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/hostnames.ts",
+      "type": "file",
+      "name": "hostnames.ts",
+      "filePath": "agents/task-runner/cli/src/config/hostnames.ts",
+      "summary": "Code module providing normalizeHostnameInput, parseHostnameCsv",
+      "complexity": "simple",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 26,
+        "nonEmptyLines": 23,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/hostnames.ts:normalizeHostnameInput",
+      "type": "function",
+      "name": "normalizeHostnameInput",
+      "filePath": "agents/task-runner/cli/src/config/hostnames.ts",
+      "summary": "Exported  normalizeHostnameInput",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/hostnames.ts:parseHostnameCsv",
+      "type": "function",
+      "name": "parseHostnameCsv",
+      "filePath": "agents/task-runner/cli/src/config/hostnames.ts",
+      "summary": "Exported  parseHostnameCsv",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "file",
+      "name": "schema.ts",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Code module providing paperclipConfigSchema, configMetaSchema, llmConfigSchema, databaseBackupConfigSchema, databaseConfigSchema, loggingConfigSchema, serverConfigSchema, authConfigSchema, storageConfigSchema, storageLocalDiskConfigSchema, storageS3ConfigSchema, secretsConfigSchema, secretsLocalEncryptedConfigSchema, PaperclipConfig, LlmConfig, DatabaseBackupConfig, DatabaseConfig, LoggingConfig, ServerConfig, AuthConfig, StorageConfig, StorageLocalDiskConfig, StorageS3Config, SecretsConfig, SecretsLocalEncryptedConfig, ConfigMeta",
+      "complexity": "simple",
+      "tags": [
+        "code",
+        "multi-export"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 28,
+        "nonEmptyLines": 28,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:paperclipConfigSchema",
+      "type": "function",
+      "name": "paperclipConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  paperclipConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:configMetaSchema",
+      "type": "function",
+      "name": "configMetaSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  configMetaSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:llmConfigSchema",
+      "type": "function",
+      "name": "llmConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  llmConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:databaseBackupConfigSchema",
+      "type": "function",
+      "name": "databaseBackupConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  databaseBackupConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:databaseConfigSchema",
+      "type": "function",
+      "name": "databaseConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  databaseConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:loggingConfigSchema",
+      "type": "function",
+      "name": "loggingConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  loggingConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:serverConfigSchema",
+      "type": "function",
+      "name": "serverConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  serverConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:authConfigSchema",
+      "type": "function",
+      "name": "authConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  authConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:storageConfigSchema",
+      "type": "function",
+      "name": "storageConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  storageConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:storageLocalDiskConfigSchema",
+      "type": "function",
+      "name": "storageLocalDiskConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  storageLocalDiskConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:storageS3ConfigSchema",
+      "type": "function",
+      "name": "storageS3ConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  storageS3ConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:secretsConfigSchema",
+      "type": "function",
+      "name": "secretsConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  secretsConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:secretsLocalEncryptedConfigSchema",
+      "type": "function",
+      "name": "secretsLocalEncryptedConfigSchema",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  secretsLocalEncryptedConfigSchema",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:PaperclipConfig",
+      "type": "function",
+      "name": "PaperclipConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  PaperclipConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:LlmConfig",
+      "type": "function",
+      "name": "LlmConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  LlmConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:DatabaseBackupConfig",
+      "type": "function",
+      "name": "DatabaseBackupConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  DatabaseBackupConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:DatabaseConfig",
+      "type": "function",
+      "name": "DatabaseConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  DatabaseConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:LoggingConfig",
+      "type": "function",
+      "name": "LoggingConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  LoggingConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:ServerConfig",
+      "type": "function",
+      "name": "ServerConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  ServerConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:AuthConfig",
+      "type": "function",
+      "name": "AuthConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  AuthConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:StorageConfig",
+      "type": "function",
+      "name": "StorageConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  StorageConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:StorageLocalDiskConfig",
+      "type": "function",
+      "name": "StorageLocalDiskConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  StorageLocalDiskConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:StorageS3Config",
+      "type": "function",
+      "name": "StorageS3Config",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  StorageS3Config",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:SecretsConfig",
+      "type": "function",
+      "name": "SecretsConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  SecretsConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:SecretsLocalEncryptedConfig",
+      "type": "function",
+      "name": "SecretsLocalEncryptedConfig",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  SecretsLocalEncryptedConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/schema.ts:ConfigMeta",
+      "type": "function",
+      "name": "ConfigMeta",
+      "filePath": "agents/task-runner/cli/src/config/schema.ts",
+      "summary": "Exported  ConfigMeta",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/secrets-key.ts",
+      "type": "file",
+      "name": "secrets-key.ts",
+      "filePath": "agents/task-runner/cli/src/config/secrets-key.ts",
+      "summary": "Code module providing ensureLocalSecretsKeyFile",
+      "complexity": "simple",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 48,
+        "nonEmptyLines": 42,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/secrets-key.ts:ensureLocalSecretsKeyFile",
+      "type": "function",
+      "name": "ensureLocalSecretsKeyFile",
+      "filePath": "agents/task-runner/cli/src/config/secrets-key.ts",
+      "summary": "Exported  ensureLocalSecretsKeyFile",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "file",
+      "name": "store.ts",
+      "filePath": "agents/task-runner/cli/src/config/store.ts",
+      "summary": "Code module providing resolveConfigPath, readConfig, writeConfig, configExists",
+      "complexity": "moderate",
+      "tags": [
+        "code",
+        "multi-export"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 120,
+        "nonEmptyLines": 103,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/store.ts:resolveConfigPath",
+      "type": "function",
+      "name": "resolveConfigPath",
+      "filePath": "agents/task-runner/cli/src/config/store.ts",
+      "summary": "Exported  resolveConfigPath",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/store.ts:readConfig",
+      "type": "function",
+      "name": "readConfig",
+      "filePath": "agents/task-runner/cli/src/config/store.ts",
+      "summary": "Exported  readConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/store.ts:writeConfig",
+      "type": "function",
+      "name": "writeConfig",
+      "filePath": "agents/task-runner/cli/src/config/store.ts",
+      "summary": "Exported  writeConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/config/store.ts:configExists",
+      "type": "function",
+      "name": "configExists",
+      "filePath": "agents/task-runner/cli/src/config/store.ts",
+      "summary": "Exported  configExists",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "agents/task-runner/cli/src/index.ts",
+      "summary": "Code module providing functionality",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 155,
+        "nonEmptyLines": 139,
+        "category": "code"
+      }
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "type": "file",
+      "name": "database.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/database.ts",
+      "summary": "Code module providing promptDatabase",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 157,
+        "nonEmptyLines": 140,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/database.ts:promptDatabase",
+      "type": "function",
+      "name": "promptDatabase",
+      "filePath": "agents/task-runner/cli/src/prompts/database.ts",
+      "summary": "Exported  promptDatabase",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "type": "file",
+      "name": "llm.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/llm.ts",
+      "summary": "Code module providing promptLlm",
+      "complexity": "simple",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 43,
+        "nonEmptyLines": 35,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/llm.ts:promptLlm",
+      "type": "function",
+      "name": "promptLlm",
+      "filePath": "agents/task-runner/cli/src/prompts/llm.ts",
+      "summary": "Exported  promptLlm",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "type": "file",
+      "name": "logging.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/logging.ts",
+      "summary": "Code module providing promptLogging",
+      "complexity": "simple",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 37,
+        "nonEmptyLines": 31,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/logging.ts:promptLogging",
+      "type": "function",
+      "name": "promptLogging",
+      "filePath": "agents/task-runner/cli/src/prompts/logging.ts",
+      "summary": "Exported  promptLogging",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "type": "file",
+      "name": "secrets.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "summary": "Code module providing defaultSecretsConfig, promptSecrets",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 99,
+        "nonEmptyLines": 88,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/secrets.ts:defaultSecretsConfig",
+      "type": "function",
+      "name": "defaultSecretsConfig",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "summary": "Exported  defaultSecretsConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/secrets.ts:promptSecrets",
+      "type": "function",
+      "name": "promptSecrets",
+      "filePath": "agents/task-runner/cli/src/prompts/secrets.ts",
+      "summary": "Exported  promptSecrets",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/server.ts",
+      "summary": "Code module providing promptServer",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 165,
+        "nonEmptyLines": 152,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/server.ts:promptServer",
+      "type": "function",
+      "name": "promptServer",
+      "filePath": "agents/task-runner/cli/src/prompts/server.ts",
+      "summary": "Exported  promptServer",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "type": "file",
+      "name": "storage.ts",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "summary": "Code module providing defaultStorageConfig, promptStorage",
+      "complexity": "moderate",
+      "tags": [
+        "code"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 146,
+        "nonEmptyLines": 126,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageConfig",
+      "type": "function",
+      "name": "defaultStorageConfig",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "summary": "Exported  defaultStorageConfig",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/prompts/storage.ts:promptStorage",
+      "type": "function",
+      "name": "promptStorage",
+      "filePath": "agents/task-runner/cli/src/prompts/storage.ts",
+      "summary": "Exported  promptStorage",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "file",
+      "name": "banner.ts",
+      "filePath": "agents/task-runner/cli/src/utils/banner.ts",
+      "summary": "Utility library functions",
+      "complexity": "simple",
+      "tags": [
+        "code",
+        "utility"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 24,
+        "nonEmptyLines": 20,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/utils/banner.ts:printPaperclipCliBanner",
+      "type": "function",
+      "name": "printPaperclipCliBanner",
+      "filePath": "agents/task-runner/cli/src/utils/banner.ts",
+      "summary": "Exported  printPaperclipCliBanner",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/utils/net.ts",
+      "type": "file",
+      "name": "net.ts",
+      "filePath": "agents/task-runner/cli/src/utils/net.ts",
+      "summary": "Utility library functions",
+      "complexity": "simple",
+      "tags": [
+        "code",
+        "utility"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 18,
+        "nonEmptyLines": 17,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/utils/net.ts:checkPort",
+      "type": "function",
+      "name": "checkPort",
+      "filePath": "agents/task-runner/cli/src/utils/net.ts",
+      "summary": "Exported  checkPort",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    },
+    {
+      "id": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "type": "file",
+      "name": "path-resolver.ts",
+      "filePath": "agents/task-runner/cli/src/utils/path-resolver.ts",
+      "summary": "Utility library functions",
+      "complexity": "simple",
+      "tags": [
+        "code",
+        "utility"
+      ],
+      "metadata": {
+        "language": "typescript",
+        "totalLines": 25,
+        "nonEmptyLines": 20,
+        "category": "code"
+      }
+    },
+    {
+      "id": "function:agents/task-runner/cli/src/utils/path-resolver.ts:resolveRuntimeLikePath",
+      "type": "function",
+      "name": "resolveRuntimeLikePath",
+      "filePath": "agents/task-runner/cli/src/utils/path-resolver.ts",
+      "summary": "Exported  resolveRuntimeLikePath",
+      "complexity": "simple",
+      "tags": [
+        "export",
+        "public"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "target": "function:agents/task-runner/cli/src/commands/client/company.ts:resolveCompanyForDeletion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "target": "function:agents/task-runner/cli/src/commands/client/company.ts:assertDeleteConfirmation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "target": "function:agents/task-runner/cli/src/commands/client/company.ts:registerCompanyCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/context.ts",
+      "target": "function:agents/task-runner/cli/src/commands/client/context.ts:registerContextCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "target": "function:agents/task-runner/cli/src/commands/client/dashboard.ts:registerDashboardCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/issue.ts",
+      "target": "function:agents/task-runner/cli/src/commands/client/issue.ts:registerIssueCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "function:agents/task-runner/cli/src/commands/configure.ts:configure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/db-backup.ts",
+      "target": "function:agents/task-runner/cli/src/commands/db-backup.ts:dbBackupCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "target": "function:agents/task-runner/cli/src/commands/doctor.ts:doctor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/env.ts",
+      "target": "function:agents/task-runner/cli/src/commands/env.ts:envCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "target": "function:agents/task-runner/cli/src/commands/heartbeat-run.ts:heartbeatRun",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "function:agents/task-runner/cli/src/commands/onboard.ts:onboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "function:agents/task-runner/cli/src/commands/run.ts:runCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:DEFAULT_WORKTREE_HOME",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:WORKTREE_SEED_MODES",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:isWorktreeSeedMode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:resolveWorktreeSeedPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:sanitizeWorktreeInstanceId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:resolveSuggestedWorktreeName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:resolveWorktreeLocalPaths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:rewriteLocalUrlPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:buildWorktreeConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:buildWorktreeEnvEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree-lib.ts:formatShellExports",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:resolveWorktreeMakeTargetPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:resolveGitWorktreeAddArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:copyGitHooksToWorktreeGitDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:rebindWorkspaceCwd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:copySeededSecretsKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:worktreeInitCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:worktreeMakeCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:worktreeEnvCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "function:agents/task-runner/cli/src/commands/worktree.ts:registerWorktreeCommands",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/data-dir.ts",
+      "target": "function:agents/task-runner/cli/src/config/data-dir.ts:applyDataDirOverride",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:resolvePaperclipEnvFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:resolveAgentJwtEnvFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:loadPaperclipEnvFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:loadAgentJwtEnvFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:readAgentJwtSecretFromEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:readAgentJwtSecretFromEnvFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:ensureAgentJwtSecret",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:writeAgentJwtEnv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:readPaperclipEnvEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:writePaperclipEnvEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "function:agents/task-runner/cli/src/config/env.ts:mergePaperclipEnvEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolvePaperclipHomeDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolvePaperclipInstanceId",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolvePaperclipInstanceRoot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultConfigPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultContextPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultEmbeddedPostgresDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultLogsDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultSecretsKeyFilePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultStorageDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:resolveDefaultBackupDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:expandHomePrefix",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/home.ts",
+      "target": "function:agents/task-runner/cli/src/config/home.ts:describeLocalInstancePaths",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/hostnames.ts",
+      "target": "function:agents/task-runner/cli/src/config/hostnames.ts:normalizeHostnameInput",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/hostnames.ts",
+      "target": "function:agents/task-runner/cli/src/config/hostnames.ts:parseHostnameCsv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:paperclipConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:configMetaSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:llmConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:databaseBackupConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:databaseConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:loggingConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:serverConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:authConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:storageConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:storageLocalDiskConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:storageS3ConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:secretsConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:secretsLocalEncryptedConfigSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:PaperclipConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:LlmConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:DatabaseBackupConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:DatabaseConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:LoggingConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:ServerConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:AuthConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:StorageConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:StorageLocalDiskConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:StorageS3Config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:SecretsConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:SecretsLocalEncryptedConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/schema.ts",
+      "target": "function:agents/task-runner/cli/src/config/schema.ts:ConfigMeta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/secrets-key.ts",
+      "target": "function:agents/task-runner/cli/src/config/secrets-key.ts:ensureLocalSecretsKeyFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/store.ts",
+      "target": "function:agents/task-runner/cli/src/config/store.ts:resolveConfigPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/store.ts",
+      "target": "function:agents/task-runner/cli/src/config/store.ts:readConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/store.ts",
+      "target": "function:agents/task-runner/cli/src/config/store.ts:writeConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/store.ts",
+      "target": "function:agents/task-runner/cli/src/config/store.ts:configExists",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/database.ts:promptDatabase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/llm.ts:promptLlm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/logging.ts:promptLogging",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/secrets.ts:defaultSecretsConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/secrets.ts:promptSecrets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/server.ts:promptServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/storage.ts:defaultStorageConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "function:agents/task-runner/cli/src/prompts/storage.ts:promptStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "target": "function:agents/task-runner/cli/src/utils/banner.ts:printPaperclipCliBanner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/net.ts",
+      "target": "function:agents/task-runner/cli/src/utils/net.ts:checkPort",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "function:agents/task-runner/cli/src/utils/path-resolver.ts:resolveRuntimeLikePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "target": "file:agents/task-runner/cli/src/client/http.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/common.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/context.ts",
+      "target": "file:agents/task-runner/cli/src/client/context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/context.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/common.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/common.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/client/issue.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/common.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/config/secrets-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "target": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/db-backup.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/db-backup.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/db-backup.ts",
+      "target": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "target": "file:agents/task-runner/cli/src/checks/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "target": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "target": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/env.ts",
+      "target": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/env.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/env.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/env.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "target": "file:agents/task-runner/cli/src/adapters/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/common.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/commands/auth-bootstrap-ceo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/config/secrets-key.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "target": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/commands/auth-bootstrap-ceo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/run.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/commands/worktree-lib.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/utils/banner.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "target": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/data-dir.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/env.ts",
+      "target": "file:agents/task-runner/cli/src/config/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/secrets-key.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/secrets-key.ts",
+      "target": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/store.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/config/store.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/allowed-hostname.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/auth-bootstrap-ceo.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/activity.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/agent.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/approval.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/company.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/context.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/dashboard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/client/issue.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/configure.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/db-backup.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/doctor.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/heartbeat-run.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/onboard.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/run.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/commands/worktree.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/config/data-dir.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/index.ts",
+      "target": "file:agents/task-runner/cli/src/config/env.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/database.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/llm.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/logging.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/secrets.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "target": "file:agents/task-runner/cli/src/config/hostnames.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/server.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/prompts/storage.ts",
+      "target": "file:agents/task-runner/cli/src/config/schema.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:agents/task-runner/cli/src/utils/path-resolver.ts",
+      "target": "file:agents/task-runner/cli/src/config/home.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

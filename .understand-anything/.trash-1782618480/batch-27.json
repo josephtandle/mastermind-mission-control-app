@@ -1,0 +1,407 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/api/descript/dashboard/route.ts",
+      "type": "file",
+      "name": "route.ts",
+      "summary": "Code file: mission-control/app/api/descript/dashboard/route.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/api/descript/dashboard/route.ts",
+      "sizeLines": 172,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/api/descript/dashboard/route.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        86
+      ]
+    },
+    {
+      "id": "class:mission-control/app/api/descript/dashboard/route.ts:Symbol1",
+      "type": "class",
+      "name": "Symbol1",
+      "summary": "class exported from route.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        87,
+        172
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/descript/sections/ImportQueue.tsx",
+      "type": "file",
+      "name": "ImportQueue.tsx",
+      "summary": "Code file: mission-control/app/app/descript/sections/ImportQueue.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/descript/sections/ImportQueue.tsx",
+      "sizeLines": 94,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/descript/sections/ImportQueue.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from ImportQueue.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        94
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/descript/sections/IntegrationStatus.tsx",
+      "type": "file",
+      "name": "IntegrationStatus.tsx",
+      "summary": "Code file: mission-control/app/app/descript/sections/IntegrationStatus.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/descript/sections/IntegrationStatus.tsx",
+      "sizeLines": 87,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/descript/sections/IntegrationStatus.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from IntegrationStatus.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        87
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/descript/sections/PipelineViz.tsx",
+      "type": "file",
+      "name": "PipelineViz.tsx",
+      "summary": "Code file: mission-control/app/app/descript/sections/PipelineViz.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/descript/sections/PipelineViz.tsx",
+      "sizeLines": 111,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/descript/sections/PipelineViz.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from PipelineViz.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        111
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/descript/sections/RecentImports.tsx",
+      "type": "file",
+      "name": "RecentImports.tsx",
+      "summary": "Code file: mission-control/app/app/descript/sections/RecentImports.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/descript/sections/RecentImports.tsx",
+      "sizeLines": 98,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/descript/sections/RecentImports.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from RecentImports.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        98
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/descript/sections/SettingsPanel.tsx",
+      "type": "file",
+      "name": "SettingsPanel.tsx",
+      "summary": "Code file: mission-control/app/app/descript/sections/SettingsPanel.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "moderate",
+      "filePath": "mission-control/app/app/descript/sections/SettingsPanel.tsx",
+      "sizeLines": 108,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/descript/sections/SettingsPanel.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from SettingsPanel.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        108
+      ]
+    },
+    {
+      "id": "file:mission-control/app/app/descript/sections/StatCards.tsx",
+      "type": "file",
+      "name": "StatCards.tsx",
+      "summary": "Code file: mission-control/app/app/descript/sections/StatCards.tsx",
+      "tags": [
+        "typescript",
+        "code",
+        "tsx"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/app/app/descript/sections/StatCards.tsx",
+      "sizeLines": 71,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/app/app/descript/sections/StatCards.tsx:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from StatCards.tsx",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        71
+      ]
+    },
+    {
+      "id": "file:mission-control/hooks/useDescriptData.ts",
+      "type": "file",
+      "name": "useDescriptData.ts",
+      "summary": "Code file: mission-control/hooks/useDescriptData.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/hooks/useDescriptData.ts",
+      "sizeLines": 39,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/hooks/useDescriptData.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from useDescriptData.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        39
+      ]
+    },
+    {
+      "id": "file:mission-control/lib/descript-types.ts",
+      "type": "file",
+      "name": "descript-types.ts",
+      "summary": "Code file: mission-control/lib/descript-types.ts",
+      "tags": [
+        "typescript",
+        "code",
+        "ts"
+      ],
+      "complexity": "simple",
+      "filePath": "mission-control/lib/descript-types.ts",
+      "sizeLines": 55,
+      "language": "typescript"
+    },
+    {
+      "id": "function:mission-control/lib/descript-types.ts:Symbol0",
+      "type": "function",
+      "name": "Symbol0",
+      "summary": "function exported from descript-types.ts",
+      "tags": [
+        "typescript",
+        "code"
+      ],
+      "complexity": "moderate",
+      "lineRange": [
+        1,
+        55
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/api/descript/dashboard/route.ts",
+      "target": "function:mission-control/app/api/descript/dashboard/route.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-1",
+      "source": "file:mission-control/app/api/descript/dashboard/route.ts",
+      "target": "class:mission-control/app/api/descript/dashboard/route.ts:Symbol1",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/descript/sections/ImportQueue.tsx",
+      "target": "function:mission-control/app/app/descript/sections/ImportQueue.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/descript/sections/IntegrationStatus.tsx",
+      "target": "function:mission-control/app/app/descript/sections/IntegrationStatus.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/descript/sections/PipelineViz.tsx",
+      "target": "function:mission-control/app/app/descript/sections/PipelineViz.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/descript/sections/RecentImports.tsx",
+      "target": "function:mission-control/app/app/descript/sections/RecentImports.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/descript/sections/SettingsPanel.tsx",
+      "target": "function:mission-control/app/app/descript/sections/SettingsPanel.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/app/app/descript/sections/StatCards.tsx",
+      "target": "function:mission-control/app/app/descript/sections/StatCards.tsx:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/hooks/useDescriptData.ts",
+      "target": "function:mission-control/hooks/useDescriptData.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "file-to-symbol-0",
+      "source": "file:mission-control/lib/descript-types.ts",
+      "target": "function:mission-control/lib/descript-types.ts:Symbol0",
+      "relation": "contains"
+    },
+    {
+      "id": "import-mission-control/app/api/descript/dashboard/route.ts-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/api/descript/dashboard/route.ts",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/descript/sections/ImportQueue.tsx-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/app/descript/sections/ImportQueue.tsx",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/descript/sections/IntegrationStatus.tsx-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/app/descript/sections/IntegrationStatus.tsx",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/descript/sections/PipelineViz.tsx-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/app/descript/sections/PipelineViz.tsx",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/descript/sections/RecentImports.tsx-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/app/descript/sections/RecentImports.tsx",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/descript/sections/SettingsPanel.tsx-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/app/descript/sections/SettingsPanel.tsx",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/app/app/descript/sections/StatCards.tsx-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/app/app/descript/sections/StatCards.tsx",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    },
+    {
+      "id": "import-mission-control/hooks/useDescriptData.ts-to-mission-control/lib/descript-types.ts",
+      "source": "file:mission-control/hooks/useDescriptData.ts",
+      "target": "file:mission-control/lib/descript-types.ts",
+      "relation": "imports",
+      "weight": 1
+    }
+  ]
+}

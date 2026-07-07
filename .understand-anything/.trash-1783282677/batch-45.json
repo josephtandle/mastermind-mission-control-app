@@ -1,0 +1,81 @@
+{
+  "batchIndex": 45,
+  "nodes": [
+    {
+      "id": "batch-45-file-0",
+      "type": "config",
+      "name": "0024_snapshot.json",
+      "filePath": "agents/task-runner/packages/db/src/migrations/meta/0024_snapshot.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "database"
+      ],
+      "complexity": 9.5,
+      "sizeLines": 5693,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-45-file-1",
+      "type": "config",
+      "name": "0025_snapshot.json",
+      "filePath": "agents/task-runner/packages/db/src/migrations/meta/0025_snapshot.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "database"
+      ],
+      "complexity": 9.5,
+      "sizeLines": 5849,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-45-file-2",
+      "type": "config",
+      "name": "0026_snapshot.json",
+      "filePath": "agents/task-runner/packages/db/src/migrations/meta/0026_snapshot.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "database"
+      ],
+      "complexity": 9.5,
+      "sizeLines": 6193,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-45-file-3",
+      "type": "config",
+      "name": "0027_snapshot.json",
+      "filePath": "agents/task-runner/packages/db/src/migrations/meta/0027_snapshot.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "database"
+      ],
+      "complexity": 9.5,
+      "sizeLines": 6205,
+      "language": "JSON"
+    },
+    {
+      "id": "batch-45-file-4",
+      "type": "config",
+      "name": "_journal.json",
+      "filePath": "agents/task-runner/packages/db/src/migrations/meta/_journal.json",
+      "summary": "Configuration file for build, runtime, or application settings.",
+      "tags": [
+        "JSON",
+        "config",
+        "database"
+      ],
+      "complexity": 1.5,
+      "sizeLines": 202,
+      "language": "JSON"
+    }
+  ],
+  "edges": []
+}

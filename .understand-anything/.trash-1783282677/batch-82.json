@@ -1,0 +1,90 @@
+{
+  "batchIndex": 82,
+  "nodes": [
+    {
+      "id": "batch-82-file-0",
+      "type": "docs",
+      "name": "QUICK_START_EMMIE.md",
+      "filePath": "mission-control/_archive/QUICK_START_EMMIE.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.6,
+      "sizeLines": 255,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-82-file-1",
+      "type": "docs",
+      "name": "REAL_JOBS_MIGRATION.md",
+      "filePath": "mission-control/_archive/REAL_JOBS_MIGRATION.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 99,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-82-file-2",
+      "type": "docs",
+      "name": "SUBAGENT_COMPLETION_REPORT.md",
+      "filePath": "mission-control/_archive/SUBAGENT_COMPLETION_REPORT.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 5,
+      "sizeLines": 496,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-82-file-3",
+      "type": "docs",
+      "name": "TEAM_MOCK_DATA_CHANGES.md",
+      "filePath": "mission-control/_archive/TEAM_MOCK_DATA_CHANGES.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1.3,
+      "sizeLines": 130,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-82-file-4",
+      "type": "docs",
+      "name": "WHITELIST_IMPLEMENTATION.md",
+      "filePath": "mission-control/_archive/WHITELIST_IMPLEMENTATION.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 2.4,
+      "sizeLines": 240,
+      "language": "Markdown"
+    },
+    {
+      "id": "batch-82-file-5",
+      "type": "docs",
+      "name": "WHITELIST_QUICK_START.md",
+      "filePath": "mission-control/_archive/WHITELIST_QUICK_START.md",
+      "summary": "File implementing docs functionality.",
+      "tags": [
+        "Markdown",
+        "docs"
+      ],
+      "complexity": 1,
+      "sizeLines": 65,
+      "language": "Markdown"
+    }
+  ],
+  "edges": []
+}

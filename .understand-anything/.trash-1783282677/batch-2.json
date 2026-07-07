@@ -1,0 +1,586 @@
+{
+  "batchIndex": 2,
+  "nodes": [
+    {
+      "id": "project_root_config",
+      "type": "module",
+      "name": "Paperclip Project Configuration",
+      "filePath": "agents/task-runner",
+      "summary": "Root configuration for Paperclip task runner project with build, dev, and deployment setup",
+      "tags": ["configuration", "project-root", "orchestration"],
+      "complexity": "medium"
+    },
+    {
+      "id": "doc_readme",
+      "type": "file",
+      "name": "README.md",
+      "filePath": "agents/task-runner/README.md",
+      "summary": "Project overview describing Paperclip as open-source orchestration platform for zero-human companies with agent coordination",
+      "tags": ["documentation", "product", "overview"],
+      "complexity": "low"
+    },
+    {
+      "id": "doc_agents",
+      "type": "file",
+      "name": "AGENTS.md",
+      "filePath": "agents/task-runner/AGENTS.md",
+      "summary": "Developer guidance for contributors including repo structure, dev setup, core engineering rules, and database workflow",
+      "tags": ["documentation", "development", "guidelines"],
+      "complexity": "low"
+    },
+    {
+      "id": "doc_contributing",
+      "type": "file",
+      "name": "CONTRIBUTING.md",
+      "filePath": "agents/task-runner/CONTRIBUTING.md",
+      "summary": "Contribution guide with two paths for PRs (small focused vs larger changes) and general collaboration rules",
+      "tags": ["documentation", "contributing", "community"],
+      "complexity": "low"
+    },
+    {
+      "id": "config_package_json",
+      "type": "file",
+      "name": "package.json",
+      "filePath": "agents/task-runner/package.json",
+      "summary": "Root workspace configuration with monorepo scripts, dev, build, test, database, and release commands",
+      "tags": ["configuration", "scripts", "package-management"],
+      "complexity": "medium"
+    },
+    {
+      "id": "config_tsconfig",
+      "type": "file",
+      "name": "tsconfig.json",
+      "filePath": "agents/task-runner/tsconfig.json",
+      "summary": "TypeScript workspace configuration referencing all packages and main workspaces",
+      "tags": ["configuration", "typescript"],
+      "complexity": "low"
+    },
+    {
+      "id": "config_tsconfig_base",
+      "type": "file",
+      "name": "tsconfig.base.json",
+      "filePath": "agents/task-runner/tsconfig.base.json",
+      "summary": "Base TypeScript configuration with shared compiler options",
+      "tags": ["configuration", "typescript"],
+      "complexity": "low"
+    },
+    {
+      "id": "config_vitest",
+      "type": "file",
+      "name": "vitest.config.ts",
+      "filePath": "agents/task-runner/vitest.config.ts",
+      "summary": "Vitest test configuration defining test projects for all packages",
+      "tags": ["configuration", "testing"],
+      "complexity": "low"
+    },
+    {
+      "id": "config_pnpm_workspace",
+      "type": "file",
+      "name": "pnpm-workspace.yaml",
+      "filePath": "agents/task-runner/pnpm-workspace.yaml",
+      "summary": "pnpm monorepo workspace configuration defining package directory patterns",
+      "tags": ["configuration", "package-management"],
+      "complexity": "low"
+    },
+    {
+      "id": "config_docker_compose",
+      "type": "file",
+      "name": "docker-compose.yml",
+      "filePath": "agents/task-runner/docker-compose.yml",
+      "summary": "Docker composition for production deployment with PostgreSQL database and Paperclip server",
+      "tags": ["configuration", "deployment", "docker"],
+      "complexity": "medium"
+    },
+    {
+      "id": "config_docker_compose_quickstart",
+      "type": "file",
+      "name": "docker-compose.quickstart.yml",
+      "filePath": "agents/task-runner/docker-compose.quickstart.yml",
+      "summary": "Quickstart Docker composition for local development with simplified configuration",
+      "tags": ["configuration", "deployment", "docker"],
+      "complexity": "low"
+    },
+    {
+      "id": "workspace_server",
+      "type": "module",
+      "name": "Server Workspace",
+      "filePath": "agents/task-runner/server",
+      "summary": "Express REST API and orchestration services",
+      "tags": ["workspace", "api", "backend"],
+      "complexity": "high"
+    },
+    {
+      "id": "workspace_ui",
+      "type": "module",
+      "name": "UI Workspace",
+      "filePath": "agents/task-runner/ui",
+      "summary": "React and Vite-based web dashboard for Paperclip",
+      "tags": ["workspace", "frontend", "ui"],
+      "complexity": "high"
+    },
+    {
+      "id": "workspace_packages",
+      "type": "module",
+      "name": "Shared Packages",
+      "filePath": "agents/task-runner/packages",
+      "summary": "Shared utilities and types across all workspaces",
+      "tags": ["workspace", "packages", "shared"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workspace_db",
+      "type": "module",
+      "name": "Database Package",
+      "filePath": "agents/task-runner/packages/db",
+      "summary": "Drizzle ORM schema, migrations, and database clients",
+      "tags": ["database", "orm", "schema"],
+      "complexity": "high"
+    },
+    {
+      "id": "workspace_shared",
+      "type": "module",
+      "name": "Shared Types Package",
+      "filePath": "agents/task-runner/packages/shared",
+      "summary": "Shared types, constants, validators, and API path definitions",
+      "tags": ["types", "shared", "utilities"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workspace_adapters",
+      "type": "module",
+      "name": "Adapter Packages",
+      "filePath": "agents/task-runner/packages/adapters",
+      "summary": "Agent adapter implementations for various platforms and tools",
+      "tags": ["adapters", "agents", "integrations"],
+      "complexity": "high"
+    },
+    {
+      "id": "workspace_cli",
+      "type": "module",
+      "name": "CLI Workspace",
+      "filePath": "agents/task-runner/cli",
+      "summary": "Command-line interface for Paperclip agent management",
+      "tags": ["cli", "tools"],
+      "complexity": "medium"
+    },
+    {
+      "id": "workspace_doc",
+      "type": "module",
+      "name": "Documentation",
+      "filePath": "agents/task-runner/doc",
+      "summary": "Operational and product documentation for Paperclip",
+      "tags": ["documentation", "specs"],
+      "complexity": "low"
+    },
+    {
+      "id": "script_dev_runner",
+      "type": "function",
+      "name": "Dev Runner Script",
+      "filePath": "agents/task-runner/scripts/dev-runner.mjs",
+      "summary": "Main development script orchestrating all dev services",
+      "tags": ["scripts", "development"],
+      "complexity": "medium"
+    },
+    {
+      "id": "script_release",
+      "type": "function",
+      "name": "Release Script",
+      "filePath": "agents/task-runner/scripts/release.sh",
+      "summary": "Semantic versioning release script",
+      "tags": ["scripts", "release"],
+      "complexity": "medium"
+    },
+    {
+      "id": "script_build_npm",
+      "type": "function",
+      "name": "NPM Build Script",
+      "filePath": "agents/task-runner/scripts/build-npm.sh",
+      "summary": "Script for building NPM packages",
+      "tags": ["scripts", "build"],
+      "complexity": "low"
+    },
+    {
+      "id": "adapter_claude_local",
+      "type": "module",
+      "name": "Claude Local Adapter",
+      "filePath": "agents/task-runner/packages/adapters/claude-local",
+      "summary": "Local Claude Code IDE adapter for agent execution",
+      "tags": ["adapter", "claude", "agent"],
+      "complexity": "high"
+    },
+    {
+      "id": "adapter_codex_local",
+      "type": "module",
+      "name": "Codex Local Adapter",
+      "filePath": "agents/task-runner/packages/adapters/codex-local",
+      "summary": "Local Codex agent adapter implementation",
+      "tags": ["adapter", "codex", "agent"],
+      "complexity": "high"
+    },
+    {
+      "id": "adapter_cursor_local",
+      "type": "module",
+      "name": "Cursor Local Adapter",
+      "filePath": "agents/task-runner/packages/adapters/cursor-local",
+      "summary": "Local Cursor IDE adapter for agent execution",
+      "tags": ["adapter", "cursor", "agent"],
+      "complexity": "high"
+    },
+    {
+      "id": "adapter_openclaw_gateway",
+      "type": "module",
+      "name": "OpenClaw Gateway Adapter",
+      "filePath": "agents/task-runner/packages/adapters/openclaw-gateway",
+      "summary": "Gateway adapter for OpenClaw agent integration",
+      "tags": ["adapter", "openclaw", "agent"],
+      "complexity": "high"
+    },
+    {
+      "id": "adapter_utils",
+      "type": "module",
+      "name": "Adapter Utilities",
+      "filePath": "agents/task-runner/packages/adapter-utils",
+      "summary": "Shared utilities for adapter implementations",
+      "tags": ["utilities", "adapters"],
+      "complexity": "medium"
+    }
+  ],
+  "edges": [
+    {
+      "source": "project_root_config",
+      "target": "config_package_json",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "root npm configuration"
+    },
+    {
+      "source": "project_root_config",
+      "target": "config_tsconfig",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "TypeScript workspace config"
+    },
+    {
+      "source": "project_root_config",
+      "target": "config_pnpm_workspace",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "monorepo definition"
+    },
+    {
+      "source": "project_root_config",
+      "target": "config_docker_compose",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "production deployment"
+    },
+    {
+      "source": "project_root_config",
+      "target": "doc_readme",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "project documentation"
+    },
+    {
+      "source": "project_root_config",
+      "target": "doc_agents",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "developer guide"
+    },
+    {
+      "source": "project_root_config",
+      "target": "doc_contributing",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "contribution guidelines"
+    },
+    {
+      "source": "project_root_config",
+      "target": "workspace_server",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "API and orchestration"
+    },
+    {
+      "source": "project_root_config",
+      "target": "workspace_ui",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "web UI"
+    },
+    {
+      "source": "project_root_config",
+      "target": "workspace_packages",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "shared packages"
+    },
+    {
+      "source": "project_root_config",
+      "target": "workspace_cli",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "CLI tools"
+    },
+    {
+      "source": "project_root_config",
+      "target": "workspace_doc",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "documentation"
+    },
+    {
+      "source": "config_tsconfig",
+      "target": "config_tsconfig_base",
+      "type": "implements",
+      "weight": 1.0,
+      "label": "extends configuration"
+    },
+    {
+      "source": "config_tsconfig",
+      "target": "workspace_server",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "references workspace"
+    },
+    {
+      "source": "config_tsconfig",
+      "target": "workspace_ui",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "references workspace"
+    },
+    {
+      "source": "config_tsconfig",
+      "target": "workspace_packages",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "references workspace"
+    },
+    {
+      "source": "config_tsconfig",
+      "target": "workspace_cli",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "references workspace"
+    },
+    {
+      "source": "config_pnpm_workspace",
+      "target": "workspace_packages",
+      "type": "implements",
+      "weight": 1.0,
+      "label": "defines monorepo structure"
+    },
+    {
+      "source": "config_vitest",
+      "target": "workspace_packages",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "configures test projects"
+    },
+    {
+      "source": "config_vitest",
+      "target": "workspace_db",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "includes test project"
+    },
+    {
+      "source": "config_vitest",
+      "target": "workspace_server",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "includes test project"
+    },
+    {
+      "source": "config_vitest",
+      "target": "workspace_ui",
+      "type": "implements",
+      "weight": 0.8,
+      "label": "includes test project"
+    },
+    {
+      "source": "config_docker_compose",
+      "target": "workspace_server",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "builds server image"
+    },
+    {
+      "source": "config_docker_compose_quickstart",
+      "target": "workspace_server",
+      "type": "creates",
+      "weight": 1.0,
+      "label": "quickstart deployment"
+    },
+    {
+      "source": "config_package_json",
+      "target": "script_dev_runner",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "pnpm dev script"
+    },
+    {
+      "source": "config_package_json",
+      "target": "script_release",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "pnpm release script"
+    },
+    {
+      "source": "config_package_json",
+      "target": "script_build_npm",
+      "type": "calls",
+      "weight": 1.0,
+      "label": "pnpm build:npm script"
+    },
+    {
+      "source": "workspace_packages",
+      "target": "workspace_db",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "database package"
+    },
+    {
+      "source": "workspace_packages",
+      "target": "workspace_shared",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "shared types package"
+    },
+    {
+      "source": "workspace_packages",
+      "target": "workspace_adapters",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "adapter packages"
+    },
+    {
+      "source": "workspace_packages",
+      "target": "adapter_utils",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "adapter utilities"
+    },
+    {
+      "source": "workspace_adapters",
+      "target": "adapter_claude_local",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "Claude adapter"
+    },
+    {
+      "source": "workspace_adapters",
+      "target": "adapter_codex_local",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "Codex adapter"
+    },
+    {
+      "source": "workspace_adapters",
+      "target": "adapter_cursor_local",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "Cursor adapter"
+    },
+    {
+      "source": "workspace_adapters",
+      "target": "adapter_openclaw_gateway",
+      "type": "contains",
+      "weight": 1.0,
+      "label": "OpenClaw adapter"
+    },
+    {
+      "source": "adapter_claude_local",
+      "target": "adapter_utils",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses utilities"
+    },
+    {
+      "source": "adapter_codex_local",
+      "target": "adapter_utils",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses utilities"
+    },
+    {
+      "source": "adapter_cursor_local",
+      "target": "adapter_utils",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses utilities"
+    },
+    {
+      "source": "adapter_openclaw_gateway",
+      "target": "adapter_utils",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "uses utilities"
+    },
+    {
+      "source": "workspace_server",
+      "target": "workspace_db",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "depends on database"
+    },
+    {
+      "source": "workspace_server",
+      "target": "workspace_shared",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "depends on shared types"
+    },
+    {
+      "source": "workspace_ui",
+      "target": "workspace_shared",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "depends on shared types"
+    },
+    {
+      "source": "workspace_cli",
+      "target": "workspace_shared",
+      "type": "imports",
+      "weight": 1.0,
+      "label": "depends on shared types"
+    },
+    {
+      "source": "doc_agents",
+      "target": "workspace_db",
+      "type": "implements",
+      "weight": 0.6,
+      "label": "references database workflow"
+    },
+    {
+      "source": "doc_agents",
+      "target": "workspace_server",
+      "type": "implements",
+      "weight": 0.6,
+      "label": "references server development"
+    },
+    {
+      "source": "doc_agents",
+      "target": "workspace_ui",
+      "type": "implements",
+      "weight": 0.6,
+      "label": "references UI development"
+    },
+    {
+      "source": "doc_readme",
+      "target": "workspace_server",
+      "type": "implements",
+      "weight": 0.5,
+      "label": "describes API functionality"
+    },
+    {
+      "source": "doc_readme",
+      "target": "workspace_ui",
+      "type": "implements",
+      "weight": 0.5,
+      "label": "describes UI features"
+    }
+  ]
+}

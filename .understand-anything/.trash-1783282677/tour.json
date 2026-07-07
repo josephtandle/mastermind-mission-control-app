@@ -1,0 +1,114 @@
+[
+  {
+    "order": 1,
+    "title": "Project Overview and README",
+    "description": "Start with the main README to understand what Mission Control is, its three-tier architecture (OpenClaw, Golden Claw, All Sorted), and how to set up the development environment. This establishes the context for the entire system.",
+    "nodeIds": [
+      "document:README.md",
+      "document:mission-control/README.md"
+    ]
+  },
+  {
+    "order": 2,
+    "title": "Next.js Application Structure",
+    "description": "Explore the Next.js 15 application structure, including the App Router convention. Review the root layout that sets up fonts, metadata, and providers. Understand how pages and routes are organized under the app/ directory.",
+    "nodeIds": [
+      "file:mission-control/app/layout.tsx",
+      "file:mission-control/app/page.tsx",
+      "file:mission-control/package.json"
+    ]
+  },
+  {
+    "order": 3,
+    "title": "Application Layout and Navigation",
+    "description": "Study the main application layout component that creates the sidebar navigation and page structure. Learn the color token system (cm-purple, dark-panel, etc.), collapsible sidebar patterns, and how navigation links are organized with nested menus.",
+    "nodeIds": [
+      "file:mission-control/app/app/layout.tsx"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "UI Components and Design System",
+    "description": "Understand the reusable UI component patterns. Review the components directory structure including DynamicFavicon, HelpButton, TaskModal, and UI utility components. Learn how Tailwind CSS tokens are used consistently across the application.",
+    "nodeIds": [
+      "file:mission-control/components/DynamicFavicon.tsx",
+      "file:mission-control/components/HelpButton.tsx",
+      "file:mission-control/.claude/CLAUDE.md"
+    ]
+  },
+  {
+    "order": 5,
+    "title": "API Routes and Integration Endpoints",
+    "description": "Explore the API route structure under app/api/. Learn about the different integration endpoints (Stripe, Telegram, databases, third-party services). Understand the routing pattern for RESTful endpoints and how they connect the frontend to backend services.",
+    "nodeIds": [
+      "directory:mission-control/app/api",
+      "file:mission-control/app/api/_telegram.ts"
+    ]
+  },
+  {
+    "order": 6,
+    "title": "Database Schema and Drizzle ORM",
+    "description": "Review the database schema structure in agents/task-runner/packages/db/src/schema/. Understand how tables are defined (agents, tasks, approvals, goals, etc.). Learn the Drizzle ORM patterns used to define database tables and relationships.",
+    "nodeIds": [
+      "file:agents/task-runner/packages/db/src/schema/agents.ts",
+      "file:agents/task-runner/packages/db/src/schema/agent_task_sessions.ts",
+      "file:agents/task-runner/packages/db/src/schema/approvals.ts"
+    ]
+  },
+  {
+    "order": 7,
+    "title": "Database Migrations and Evolution",
+    "description": "Understand how the database schema evolves through migrations. Review the migrations directory to see the version history and how schema changes are tracked. Learn the naming convention for migrations and how they integrate with the ORM.",
+    "nodeIds": [
+      "directory:agents/task-runner/packages/db/src/migrations",
+      "file:agents/task-runner/packages/db/src/migrations/0000_mature_masked_marvel.sql"
+    ]
+  },
+  {
+    "order": 8,
+    "title": "Type Definitions and Interfaces",
+    "description": "Explore the library of type definitions used throughout the application. Review files like stripe-types.ts, guard-dog-types.ts, seo-types.ts to understand how TypeScript types are organized by feature domain. These ensure type safety across API routes and components.",
+    "nodeIds": [
+      "file:mission-control/lib/stripe-types.ts",
+      "file:mission-control/lib/guard-dog-types.ts",
+      "file:mission-control/lib/seo-types.ts"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "Help Content and Documentation System",
+    "description": "Learn how the application provides inline help through the help-content.ts file. This file maps pages to descriptions for both beginners and developers. Understand how the HelpButton component integrates this content to guide users through features.",
+    "nodeIds": [
+      "file:mission-control/lib/help-content.ts",
+      "file:mission-control/components/HelpButton.tsx"
+    ]
+  },
+  {
+    "order": 10,
+    "title": "Stripe Integration and Payment Processing",
+    "description": "Examine the Stripe integration layer. Review the API routes for stripe operations (payment-links, coupons, dashboard, verify-promo). Understand how the application handles payment processing, webhooks, and Stripe event handling.",
+    "nodeIds": [
+      "file:mission-control/app/api/stripe/payment-links/route.ts",
+      "file:mission-control/app/api/stripe/dashboard/route.ts",
+      "file:mission-control/app/api/stripe/send-telegram/route.ts"
+    ]
+  },
+  {
+    "order": 11,
+    "title": "Background Agents and Task Orchestration",
+    "description": "Discover the Paperclip task orchestration system. Review the task-runner agent implementation that coordinates multiple AI agents. Learn how agents are registered, configured, and how they execute work autonomously while tracking costs and progress.",
+    "nodeIds": [
+      "file:agents/task-runner/README.md",
+      "directory:agents/task-runner/packages"
+    ]
+  },
+  {
+    "order": 12,
+    "title": "Build Rules and Development Guidelines",
+    "description": "Master the development guidelines specific to this project. Review the build rules, color token system, component creation checklist, and deployment process. Understand the new page creation workflow and the mandatory verification steps before marking features as complete.",
+    "nodeIds": [
+      "file:mission-control/.claude/CLAUDE.md",
+      "file:CONTEXT.md"
+    ]
+  }
+]

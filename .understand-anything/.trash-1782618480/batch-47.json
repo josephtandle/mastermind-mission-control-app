@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "file:mission-control/app/app/office/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "mission-control/app/app/office/page.tsx",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    },
+    {
+      "id": "file:mission-control/hooks/useAgentRegistry.ts",
+      "type": "file",
+      "name": "useAgentRegistry.ts",
+      "filePath": "mission-control/hooks/useAgentRegistry.ts",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    },
+    {
+      "id": "file:mission-control/hooks/useMockTeam.ts",
+      "type": "file",
+      "name": "useMockTeam.ts",
+      "filePath": "mission-control/hooks/useMockTeam.ts",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    },
+    {
+      "id": "file:mission-control/lib/agent-registry-types.ts",
+      "type": "file",
+      "name": "agent-registry-types.ts",
+      "filePath": "mission-control/lib/agent-registry-types.ts",
+      "summary": "",
+      "complexity": "moderate",
+      "tags": []
+    }
+  ],
+  "edges": []
+}
