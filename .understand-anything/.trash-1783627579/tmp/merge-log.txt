@@ -1,0 +1,26 @@
+Found 4 batch files (4 logical batches, 0 multi-part):
+  batch-87.json: 32 nodes, 22 edges
+  Warning: skipping batch-89.json: missing or invalid 'nodes' array
+  Warning: skipping batch-93.json: missing or invalid 'nodes' array
+  Warning: skipping batch-94.json: missing or invalid 'nodes' array
+
+Input: 32 nodes, 22 edges
+
+Fixed (41 corrections):
+    22 × bare path → file: (missing prefix)
+    19 × edge references rewritten after ID normalization
+
+Could not fix (54 issues — needs agent review):
+    15 × unknown node type "api_route" (not in schema, kept as-is)
+     4 × unknown node type "component" (not in schema, kept as-is)
+     1 × unknown node type "documentation" (not in schema, kept as-is)
+     1 × unknown node type "api_module" (not in schema, kept as-is)
+     1 × unknown node type "api_domain" (not in schema, kept as-is)
+    32 × complexity None → defaulted to "moderate"
+
+Output: 32 nodes, 22 edges
+
+Imports edge recovery:
+  importMap recovery skipped — no importMap field in scan-result.json
+
+Written to /Users/myos/.myos/workspace/projects/mastermind-mission-control/.understand-anything/intermediate/assembled-graph.json (21 KB)

@@ -1,0 +1,3 @@
+Loaded 1000 files (0 code).
+Info: compute-batches: merged 260 small batches (287 files) into 12 misc batches — singletons and orphans consolidated
+Wrote 4 batches (sizes: max=25, min=25) to /Users/myos/.myos/workspace/projects/mastermind-mission-control/.understand-anything/intermediate/batches.json

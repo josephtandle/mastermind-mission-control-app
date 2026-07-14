@@ -1,0 +1,771 @@
+{
+  "batchIndex": 89,
+  "nodes": [
+    {
+      "id": "batch-89-claude-terminal-module",
+      "type": "module",
+      "label": "Claude Terminal Module",
+      "path": "mission-control/app/api/claude-terminal",
+      "description": "API endpoints for Claude Terminal functionality including status, stopping, transcription, and undo operations",
+      "properties": {
+        "category": "api-module",
+        "domain": "claude-terminal",
+        "fileCount": 4
+      }
+    },
+    {
+      "id": "batch-89-clients-module",
+      "type": "module",
+      "label": "Clients Management Module",
+      "path": "mission-control/app/api/clients",
+      "description": "API endpoints for managing client data and individual client records",
+      "properties": {
+        "category": "api-module",
+        "domain": "clients",
+        "fileCount": 2
+      }
+    },
+    {
+      "id": "batch-89-cohorts-module",
+      "type": "module",
+      "label": "Cohorts Management Module",
+      "path": "mission-control/app/api/cohorts",
+      "description": "Comprehensive API for cohorts management including attendance, blog, connections, intake, participants, and more",
+      "properties": {
+        "category": "api-module",
+        "domain": "cohorts",
+        "fileCount": 19
+      }
+    },
+    {
+      "id": "batch-89-file-claude-terminal-status",
+      "type": "file",
+      "label": "claude-terminal/status/route.ts",
+      "path": "mission-control/app/api/claude-terminal/status/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 16,
+        "functionCount": 1,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-claude-terminal-stop",
+      "type": "file",
+      "label": "claude-terminal/stop/route.ts",
+      "path": "mission-control/app/api/claude-terminal/stop/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 20,
+        "functionCount": 1,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-claude-terminal-transcribe",
+      "type": "file",
+      "label": "claude-terminal/transcribe/route.ts",
+      "path": "mission-control/app/api/claude-terminal/transcribe/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 126,
+        "functionCount": 4,
+        "exportCount": 2,
+        "hasHelpers": true
+      }
+    },
+    {
+      "id": "batch-89-file-claude-terminal-undo",
+      "type": "file",
+      "label": "claude-terminal/undo/route.ts",
+      "path": "mission-control/app/api/claude-terminal/undo/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 59,
+        "functionCount": 2,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-clients-clientId",
+      "type": "file",
+      "label": "clients/[clientId]/route.ts",
+      "path": "mission-control/app/api/clients/[clientId]/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 59,
+        "functionCount": 4,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-clients-route",
+      "type": "file",
+      "label": "clients/route.ts",
+      "path": "mission-control/app/api/clients/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 61,
+        "functionCount": 4,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-utils",
+      "type": "file",
+      "label": "cohorts/_utils.ts",
+      "path": "mission-control/app/api/cohorts/_utils.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 53,
+        "functionCount": 3,
+        "exportCount": 1,
+        "isUtility": true
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-attendance",
+      "type": "file",
+      "label": "cohorts/attendance/route.ts",
+      "path": "mission-control/app/api/cohorts/attendance/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 127,
+        "functionCount": 4,
+        "exportCount": 3
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-blog",
+      "type": "file",
+      "label": "cohorts/blog/route.ts",
+      "path": "mission-control/app/api/cohorts/blog/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 281,
+        "functionCount": 5,
+        "exportCount": 4
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-blog-regenerate",
+      "type": "file",
+      "label": "cohorts/blog/regenerate-image/route.ts",
+      "path": "mission-control/app/api/cohorts/blog/regenerate-image/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 159,
+        "functionCount": 2,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-blog-set-cover",
+      "type": "file",
+      "label": "cohorts/blog/set-cover/route.ts",
+      "path": "mission-control/app/api/cohorts/blog/set-cover/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 84,
+        "functionCount": 2,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-cohorts",
+      "type": "file",
+      "label": "cohorts/cohorts/route.ts",
+      "path": "mission-control/app/api/cohorts/cohorts/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 93,
+        "functionCount": 4,
+        "exportCount": 3
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-connections",
+      "type": "file",
+      "label": "cohorts/connections/route.ts",
+      "path": "mission-control/app/api/cohorts/connections/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 168,
+        "functionCount": 6,
+        "exportCount": 4
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-discover",
+      "type": "file",
+      "label": "cohorts/discover/route.ts",
+      "path": "mission-control/app/api/cohorts/discover/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 23,
+        "functionCount": 1,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-discoveries",
+      "type": "file",
+      "label": "cohorts/discoveries/route.ts",
+      "path": "mission-control/app/api/cohorts/discoveries/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 220,
+        "functionCount": 4,
+        "exportCount": 3
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-discovery-instructions",
+      "type": "file",
+      "label": "cohorts/discovery-instructions/route.ts",
+      "path": "mission-control/app/api/cohorts/discovery-instructions/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 35,
+        "functionCount": 2,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-favor-bank",
+      "type": "file",
+      "label": "cohorts/favor-bank/route.ts",
+      "path": "mission-control/app/api/cohorts/favor-bank/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 162,
+        "functionCount": 5,
+        "exportCount": 2
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-generate",
+      "type": "file",
+      "label": "cohorts/generate/route.ts",
+      "path": "mission-control/app/api/cohorts/generate/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 23,
+        "functionCount": 1,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-intake",
+      "type": "file",
+      "label": "cohorts/intake/route.ts",
+      "path": "mission-control/app/api/cohorts/intake/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 221,
+        "functionCount": 9,
+        "exportCount": 3
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-offers",
+      "type": "file",
+      "label": "cohorts/offers/route.ts",
+      "path": "mission-control/app/api/cohorts/offers/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 94,
+        "functionCount": 4,
+        "exportCount": 3
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-onboarding",
+      "type": "file",
+      "label": "cohorts/onboarding-process/route.ts",
+      "path": "mission-control/app/api/cohorts/onboarding-process/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 270,
+        "functionCount": 3,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-onboarding-templates",
+      "type": "file",
+      "label": "cohorts/onboarding-process/templates/route.ts",
+      "path": "mission-control/app/api/cohorts/onboarding-process/templates/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 52,
+        "functionCount": 1,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-participants",
+      "type": "file",
+      "label": "cohorts/participants/route.ts",
+      "path": "mission-control/app/api/cohorts/participants/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 263,
+        "functionCount": 7,
+        "exportCount": 4
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-publish",
+      "type": "file",
+      "label": "cohorts/publish/route.ts",
+      "path": "mission-control/app/api/cohorts/publish/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 64,
+        "functionCount": 2,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-file-cohorts-questions-answers",
+      "type": "file",
+      "label": "cohorts/questions/generate-answers/route.ts",
+      "path": "mission-control/app/api/cohorts/questions/generate-answers/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 66,
+        "functionCount": 2,
+        "exportCount": 1
+      }
+    },
+    {
+      "id": "batch-89-route-handler-type-get",
+      "type": "pattern",
+      "label": "HTTP GET Handler Pattern",
+      "description": "GET route handler endpoints for fetching data",
+      "properties": {
+        "pattern": "HTTP GET",
+        "frequency": 12,
+        "usage": "data retrieval"
+      }
+    },
+    {
+      "id": "batch-89-route-handler-type-post",
+      "type": "pattern",
+      "label": "HTTP POST Handler Pattern",
+      "description": "POST route handler endpoints for creating data",
+      "properties": {
+        "pattern": "HTTP POST",
+        "frequency": 19,
+        "usage": "data creation"
+      }
+    },
+    {
+      "id": "batch-89-route-handler-type-put",
+      "type": "pattern",
+      "label": "HTTP PUT Handler Pattern",
+      "description": "PUT route handler endpoints for replacing data",
+      "properties": {
+        "pattern": "HTTP PUT",
+        "frequency": 6,
+        "usage": "data replacement"
+      }
+    },
+    {
+      "id": "batch-89-route-handler-type-patch",
+      "type": "pattern",
+      "label": "HTTP PATCH Handler Pattern",
+      "description": "PATCH route handler endpoints for partial updates",
+      "properties": {
+        "pattern": "HTTP PATCH",
+        "frequency": 6,
+        "usage": "data partial update"
+      }
+    },
+    {
+      "id": "batch-89-route-handler-type-delete",
+      "type": "pattern",
+      "label": "HTTP DELETE Handler Pattern",
+      "description": "DELETE route handler endpoints for removing data",
+      "properties": {
+        "pattern": "HTTP DELETE",
+        "frequency": 8,
+        "usage": "data deletion"
+      }
+    },
+    {
+      "id": "batch-89-utility-pattern-getdb",
+      "type": "pattern",
+      "label": "getDb() Utility Pattern",
+      "description": "Database initialization and access pattern used across cohorts and other modules",
+      "properties": {
+        "pattern": "database access",
+        "frequency": 14,
+        "modules": [
+          "cohorts",
+          "clients"
+        ]
+      }
+    },
+    {
+      "id": "batch-89-utility-pattern-table-init",
+      "type": "pattern",
+      "label": "initTables() Database Schema Pattern",
+      "description": "Database table initialization pattern for schema setup",
+      "properties": {
+        "pattern": "schema initialization",
+        "frequency": 5,
+        "modules": [
+          "cohorts"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "batch-89-claude-terminal-module",
+      "target": "batch-89-file-claude-terminal-status",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-claude-terminal-module",
+      "target": "batch-89-file-claude-terminal-stop",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-claude-terminal-module",
+      "target": "batch-89-file-claude-terminal-transcribe",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-claude-terminal-module",
+      "target": "batch-89-file-claude-terminal-undo",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-clients-module",
+      "target": "batch-89-file-clients-route",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-clients-module",
+      "target": "batch-89-file-clients-clientId",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-utils",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-attendance",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-blog",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-blog-regenerate",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-blog-set-cover",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-cohorts",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-connections",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-discover",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-discoveries",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-discovery-instructions",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-favor-bank",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-generate",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-intake",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-offers",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-onboarding",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-onboarding-templates",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-participants",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-publish",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-cohorts-module",
+      "target": "batch-89-file-cohorts-questions-answers",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-attendance",
+      "target": "batch-89-route-handler-type-get",
+      "type": "uses",
+      "label": "implements pattern",
+      "properties": {
+        "relationship": "file-implements-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-attendance",
+      "target": "batch-89-route-handler-type-post",
+      "type": "uses",
+      "label": "implements pattern",
+      "properties": {
+        "relationship": "file-implements-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-attendance",
+      "target": "batch-89-route-handler-type-delete",
+      "type": "uses",
+      "label": "implements pattern",
+      "properties": {
+        "relationship": "file-implements-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-blog",
+      "target": "batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-intake",
+      "target": "batch-89-utility-pattern-table-init",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-favor-bank",
+      "target": "batch-89-utility-pattern-table-init",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-participants",
+      "target": "batch-89-utility-pattern-table-init",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-connections",
+      "target": "batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-discoveries",
+      "target": "batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    },
+    {
+      "source": "batch-89-file-cohorts-publish",
+      "target": "batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      }
+    }
+  ],
+  "metadata": {
+    "filesAnalyzed": 25,
+    "analysisTimestamp": "2026-07-10T00:00:00Z"
+  }
+}

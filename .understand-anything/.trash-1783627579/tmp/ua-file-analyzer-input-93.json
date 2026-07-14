@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "batchFiles": [
+    {
+      "path": "mission-control/app/api/kling/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 31,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/linkedin-images/preview/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 52,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/linkedin-images/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 178,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/linkedin/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 546,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/littlebird/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 130,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 360,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/machine-learning/settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 74,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 91,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 79,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 91,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/push/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 94,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 87,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/data/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/run/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 22,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/manychat-webhook/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/logo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 66,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/memory-cap/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 72,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/meeting-notes/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 89,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/business/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 103,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/payments/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 78,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/photo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/research/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 142,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 188,
+      "fileCategory": "source"
+    }
+  ],
+  "batchImportData": {
+    "mission-control/app/api/kling/route.ts": [],
+    "mission-control/app/api/linkedin-images/preview/route.ts": [],
+    "mission-control/app/api/linkedin-images/route.ts": [],
+    "mission-control/app/api/linkedin/route.ts": [],
+    "mission-control/app/api/littlebird/route.ts": [],
+    "mission-control/app/api/machine-learning/dashboard/route.ts": [],
+    "mission-control/app/api/machine-learning/settings/route.ts": [],
+    "mission-control/app/api/manychat-giveaways/activate/route.ts": [],
+    "mission-control/app/api/manychat-giveaways/clone/route.ts": [],
+    "mission-control/app/api/manychat-giveaways/deactivate/route.ts": [],
+    "mission-control/app/api/manychat-giveaways/push/route.ts": [],
+    "mission-control/app/api/manychat-giveaways/sync/route.ts": [],
+    "mission-control/app/api/manychat-sync/data/route.ts": [],
+    "mission-control/app/api/manychat-sync/run/route.ts": [],
+    "mission-control/app/api/manychat-sync/status/route.ts": [],
+    "mission-control/app/api/manychat-webhook/route.ts": [],
+    "mission-control/app/api/mc-settings/logo/route.ts": [],
+    "mission-control/app/api/mc-settings/memory-cap/route.ts": [],
+    "mission-control/app/api/mc-settings/route.ts": [],
+    "mission-control/app/api/meeting-notes/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/business/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/payments/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/photo/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/research/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/research/send/route.ts": []
+  }
+}

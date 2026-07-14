@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "batchFiles": [
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 71,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 275,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 124,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 101,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 109,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 89,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/mentorships/stripe-sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 139,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/meta-ads/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 58,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/nav-state/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/nightcrawler/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 154,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/office/lollipops/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/_utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/attendance/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 128,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/blog/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 272,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/connections/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 169,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/discover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/discoveries/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 191,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/favor-bank/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/generate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/intake/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 133,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/online-program/offers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 95,
+      "fileCategory": "source"
+    }
+  ],
+  "batchImportData": {
+    "mission-control/app/api/mentorships/[clientId]/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts": [],
+    "mission-control/app/api/mentorships/[clientId]/sessions/route.ts": [],
+    "mission-control/app/api/mentorships/route.ts": [],
+    "mission-control/app/api/mentorships/stripe-sync/route.ts": [],
+    "mission-control/app/api/meta-ads/route.ts": [],
+    "mission-control/app/api/nav-state/route.ts": [],
+    "mission-control/app/api/nightcrawler/route.ts": [],
+    "mission-control/app/api/office/lollipops/route.ts": [],
+    "mission-control/app/api/online-program/_utils.ts": [],
+    "mission-control/app/api/online-program/attendance/route.ts": [],
+    "mission-control/app/api/online-program/blog/regenerate-image/route.ts": [],
+    "mission-control/app/api/online-program/blog/route.ts": [],
+    "mission-control/app/api/online-program/blog/set-cover/route.ts": [],
+    "mission-control/app/api/online-program/connections/route.ts": [],
+    "mission-control/app/api/online-program/discover/route.ts": [],
+    "mission-control/app/api/online-program/discoveries/route.ts": [],
+    "mission-control/app/api/online-program/discovery-instructions/route.ts": [],
+    "mission-control/app/api/online-program/favor-bank/route.ts": [],
+    "mission-control/app/api/online-program/generate/route.ts": [],
+    "mission-control/app/api/online-program/intake/route.ts": [],
+    "mission-control/app/api/online-program/offers/route.ts": []
+  }
+}

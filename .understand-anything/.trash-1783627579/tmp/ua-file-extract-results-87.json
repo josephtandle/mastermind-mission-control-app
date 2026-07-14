@@ -1,0 +1,1220 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "language": "TypeScript JSX",
+      "fileCategory": "component",
+      "totalLines": 57,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "TooltipProvider",
+          "startLine": 8,
+          "endLine": 19,
+          "params": [
+            "{\n  delayDuration = 0,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "Tooltip",
+          "startLine": 21,
+          "endLine": 25,
+          "params": [
+            "{\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "TooltipTrigger",
+          "startLine": 27,
+          "endLine": 31,
+          "params": [
+            "{\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "TooltipContent",
+          "startLine": 33,
+          "endLine": 55,
+          "params": [
+            "{\n  className,\n  sideOffset = 0,\n  children,\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Tooltip",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "TooltipTrigger",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "TooltipContent",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "TooltipProvider",
+          "line": 57,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "CONTEXT.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "totalLines": 17,
+      "nonEmptyLines": 11,
+      "sections": [
+        {
+          "heading": "Mastermind Mission Control",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "What This Is",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Key Files",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Status",
+          "level": 2,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "YAML",
+      "fileCategory": "config",
+      "totalLines": 74,
+      "nonEmptyLines": 69,
+      "sections": [
+        {
+          "heading": "services",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "volumes",
+          "level": 1,
+          "line": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "docker/README.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "totalLines": 68,
+      "nonEmptyLines": 46,
+      "sections": [
+        {
+          "heading": "All Sorted — Docker Quick-Start",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Prerequisites",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Install",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Configure",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "Launch",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Services",
+          "level": 2,
+          "line": 39
+        },
+        {
+          "heading": "Update",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "Stop",
+          "level": 2,
+          "line": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "INDEX.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 18,
+      "sections": [
+        {
+          "heading": "mastermind-mission-control",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Files",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Directories",
+          "level": 2,
+          "line": 11
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "lib/db.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "totalLines": 361,
+      "nonEmptyLines": 361,
+      "sections": [
+        {
+          "heading": "columns",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "cards",
+          "level": 1,
+          "line": 39
+        },
+        {
+          "heading": "projects",
+          "level": 1,
+          "line": 312
+        },
+        {
+          "heading": "projectMeta",
+          "level": 1,
+          "line": 319
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "mission-control/.claude/CLAUDE.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "totalLines": 142,
+      "nonEmptyLines": 99,
+      "sections": [
+        {
+          "heading": "Mission Control — Build Rules",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "New Page / Project Checklist (MANDATORY)",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Color Tokens",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Dark Theme Patterns (Every New Page)",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "Never use on new pages",
+          "level": 3,
+          "line": 47
+        },
+        {
+          "heading": "Icon Rule (Dark Mode)",
+          "level": 2,
+          "line": 52
+        },
+        {
+          "heading": "Icon Source Rule — No CDN Icons",
+          "level": 2,
+          "line": 57
+        },
+        {
+          "heading": "Textarea Rule",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "Scroll Position Rule — NEVER Break Scroll",
+          "level": 2,
+          "line": 74
+        },
+        {
+          "heading": "Build Protocol",
+          "level": 2,
+          "line": 112
+        },
+        {
+          "heading": "Websites Database Rule",
+          "level": 2,
+          "line": 120
+        },
+        {
+          "heading": "Help Content Rule",
+          "level": 2,
+          "line": 136
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "mission-control/.claude/RESKIN-PLAN.md",
+      "language": "Markdown",
+      "fileCategory": "docs",
+      "totalLines": 414,
+      "nonEmptyLines": 358,
+      "sections": [
+        {
+          "heading": "Mission Control Dark Navy Reskin — Execution Plan",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Transformation Cheatsheet",
+          "level": 2,
+          "line": 9
+        },
+        {
+          "heading": "Background colors",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "Text colors",
+          "level": 3,
+          "line": 24
+        },
+        {
+          "heading": "Border colors",
+          "level": 3,
+          "line": 35
+        },
+        {
+          "heading": "Button colors",
+          "level": 3,
+          "line": 43
+        },
+        {
+          "heading": "Focus rings",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "Links",
+          "level": 3,
+          "line": 66
+        },
+        {
+          "heading": "Success/status (green → gold)",
+          "level": 3,
+          "line": 75
+        },
+        {
+          "heading": "Warning/amber",
+          "level": 3,
+          "line": 87
+        },
+        {
+          "heading": "Error/danger",
+          "level": 3,
+          "line": 98
+        },
+        {
+          "heading": "Card info badges (blue tones)",
+          "level": 3,
+          "line": 107
+        },
+        {
+          "heading": "Gradients",
+          "level": 3,
+          "line": 116
+        },
+        {
+          "heading": "Sidebar active states",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Card project palette (TaskCard.tsx)",
+          "level": 3,
+          "line": 135
+        },
+        {
+          "heading": "Inputs & selects",
+          "level": 3,
+          "line": 151
+        },
+        {
+          "heading": "Dropdowns",
+          "level": 3,
+          "line": 159
+        },
+        {
+          "heading": "Shadows",
+          "level": 3,
+          "line": 166
+        },
+        {
+          "heading": "Typography",
+          "level": 3,
+          "line": 173
+        },
+        {
+          "heading": "Phase 0: Foundation (sequential — must complete before any batch)",
+          "level": 2,
+          "line": 180
+        },
+        {
+          "heading": "0.1 `tailwind.config.ts`",
+          "level": 3,
+          "line": 182
+        },
+        {
+          "heading": "0.2 `app/globals.css`",
+          "level": 3,
+          "line": 209
+        },
+        {
+          "heading": "0.3 `app/layout.tsx`",
+          "level": 3,
+          "line": 220
+        },
+        {
+          "heading": "0.4 `app/app/layout.tsx` (~1229 lines — highest priority)",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "0.5 `components/TaskCard.tsx`",
+          "level": 3,
+          "line": 236
+        },
+        {
+          "heading": "0.6 `components/TaskModal.tsx`",
+          "level": 3,
+          "line": 242
+        },
+        {
+          "heading": "0.7 `components/ApiKeyBanner.tsx`",
+          "level": 3,
+          "line": 252
+        },
+        {
+          "heading": "Also Phase 0: UI primitives (`components/ui/*.tsx`)",
+          "level": 3,
+          "line": 259
+        },
+        {
+          "heading": "Also Phase 0: Sub-layouts",
+          "level": 3,
+          "line": 263
+        },
+        {
+          "heading": "Batches 1–14 (parallel after Phase 0)",
+          "level": 2,
+          "line": 271
+        },
+        {
+          "heading": "Batch 1: Tasks + Daily Summary + Office + Calendar + Home",
+          "level": 3,
+          "line": 273
+        },
+        {
+          "heading": "Batch 2: Masterminds HQ (all sub-pages)",
+          "level": 3,
+          "line": 280
+        },
+        {
+          "heading": "Batch 3: Stripe + Zoho + Mandiri + Investments",
+          "level": 3,
+          "line": 291
+        },
+        {
+          "heading": "Batch 4: SEO (all section files)",
+          "level": 3,
+          "line": 297
+        },
+        {
+          "heading": "Batch 5: Guard Dog + Machine Learning",
+          "level": 3,
+          "line": 300
+        },
+        {
+          "heading": "Batch 6: Email Cleanup + Scrooge + Descript + Stock Photo AI",
+          "level": 3,
+          "line": 304
+        },
+        {
+          "heading": "Batch 7: X + LinkedIn + YouTube + Meta Ads",
+          "level": 3,
+          "line": 310
+        },
+        {
+          "heading": "Batch 8: Rio (all sub-pages)",
+          "level": 3,
+          "line": 317
+        },
+        {
+          "heading": "Batch 9: PostPilot + Mentorships + Heliconia + Iron Amethyst",
+          "level": 3,
+          "line": 323
+        },
+        {
+          "heading": "Batch 10: MiroFish + ManyChat + Tokopedia + CashClaw",
+          "level": 3,
+          "line": 329
+        },
+        {
+          "heading": "Batch 11: Personal + Bank + Affiliate + Settings + Memory + WHOOP + System",
+          "level": 3,
+          "line": 336
+        },
+        {
+          "heading": "Batch 12: Skills + WhatsApp + Slack + Zoom + Airtable + TidyCal",
+          "level": 3,
+          "line": 348
+        },
+        {
+          "heading": "Batch 13: Content Tools",
+          "level": 3,
+          "line": 359
+        },
+        {
+          "heading": "Batch 14: Remaining",
+          "level": 3,
+          "line": 370
+        },
+        {
+          "heading": "Verification Checklist (per page)",
+          "level": 2,
+          "line": 382
+        },
+        {
+          "heading": "Grep validation (after all batches)",
+          "level": 2,
+          "line": 395
+        },
+        {
+          "heading": "Execution Notes",
+          "level": 2,
+          "line": 407
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 47
+      }
+    },
+    {
+      "path": "mission-control/.eslintrc.json",
+      "language": "JSON",
+      "fileCategory": "config",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "extends",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "rules",
+          "level": 1,
+          "line": 3
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "mission-control/app/api/_telegram.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 37,
+      "nonEmptyLines": 33,
+      "functions": [
+        {
+          "name": "sendTelegramViaSharedSender",
+          "startLine": 18,
+          "endLine": 37,
+          "params": [
+            "options"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "sendTelegramViaSharedSender",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/affiliate-links/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 104,
+      "nonEmptyLines": 96,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 24,
+          "endLine": 34,
+          "params": [
+            "readonly"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 36,
+          "endLine": 47,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 49,
+          "endLine": 69,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "PUT",
+          "startLine": 71,
+          "endLine": 90,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 92,
+          "endLine": 104,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "PUT",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 92,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/agent-logs/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 131,
+      "nonEmptyLines": 113,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 22,
+          "endLine": 80,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 83,
+          "endLine": 131,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/agent-status/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 24,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 10,
+          "endLine": 24,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/airtable/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 167,
+      "nonEmptyLines": 147,
+      "functions": [
+        {
+          "name": "readJSON",
+          "startLine": 14,
+          "endLine": 20,
+          "params": [
+            "filePath"
+          ]
+        },
+        {
+          "name": "loadEnvVar",
+          "startLine": 22,
+          "endLine": 30,
+          "params": [
+            "name"
+          ]
+        },
+        {
+          "name": "airtableFetch",
+          "startLine": 32,
+          "endLine": 51,
+          "params": [
+            "apiPath",
+            "apiKey",
+            "options"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 53,
+          "endLine": 101,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 103,
+          "endLine": 134,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "PATCH",
+          "startLine": 136,
+          "endLine": 167,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "dynamic",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "GET",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 103,
+          "isDefault": false
+        },
+        {
+          "name": "PATCH",
+          "line": 136,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/apollo/status/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 19,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 8,
+          "endLine": 19,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backlinks/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 76,
+      "nonEmptyLines": 68,
+      "functions": [
+        {
+          "name": "readJson",
+          "startLine": 10,
+          "endLine": 17,
+          "params": [
+            "path"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 19,
+          "endLine": 76,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/create/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 140,
+      "nonEmptyLines": 123,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 20,
+          "endLine": 140,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/delete/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 56,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 14,
+          "endLine": 56,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/download/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 60,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 9,
+          "endLine": 60,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/generate-description/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 37,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 4,
+          "endLine": 37,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/list/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 151,
+      "nonEmptyLines": 136,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 32,
+          "endLine": 151,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "dynamic",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "GET",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/restore/progress/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 53,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 6,
+          "endLine": 53,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/restore/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 225,
+      "nonEmptyLines": 193,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 31,
+          "endLine": 225,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/backups/update-description/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 58,
+      "nonEmptyLines": 49,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 14,
+          "endLine": 58,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/bank-accounts/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 44,
+      "nonEmptyLines": 36,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 11,
+          "endLine": 14,
+          "params": []
+        },
+        {
+          "name": "GET",
+          "startLine": 16,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

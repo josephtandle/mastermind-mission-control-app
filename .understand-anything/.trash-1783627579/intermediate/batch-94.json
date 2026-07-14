@@ -1,0 +1,965 @@
+{
+  "batchIndex": 94,
+  "nodes": [
+    {
+      "id": "mentorships-domain",
+      "type": "domain",
+      "label": "Mentorships",
+      "description": "Mentorship management including client sessions, PDFs, and Stripe integration",
+      "metadata": {
+        "fileCount": 8,
+        "complexity": "high",
+        "criticality": "high"
+      }
+    },
+    {
+      "id": "online-program-domain",
+      "type": "domain",
+      "label": "Online Program",
+      "description": "Online program management including blog, attendance, connections, discoveries, and intake",
+      "metadata": {
+        "fileCount": 13,
+        "complexity": "high",
+        "criticality": "high"
+      }
+    },
+    {
+      "id": "utility-domain",
+      "type": "domain",
+      "label": "Utilities & Support",
+      "description": "Miscellaneous utilities and support APIs",
+      "metadata": {
+        "fileCount": 4,
+        "complexity": "medium",
+        "criticality": "medium"
+      }
+    },
+    {
+      "id": "file-mentorships-clientid-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 70,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true
+      }
+    },
+    {
+      "id": "file-mentorships-session-pdf-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 274,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 3,
+        "complexity": "high",
+        "features": [
+          "PDF generation",
+          "date formatting"
+        ]
+      }
+    },
+    {
+      "id": "file-mentorships-session-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 2,
+        "features": [
+          "session retrieval",
+          "session updates"
+        ]
+      }
+    },
+    {
+      "id": "file-mentorships-session-send-pdf-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 124,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "PDF delivery"
+        ]
+      }
+    },
+    {
+      "id": "file-mentorships-session-summarize-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 101,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "session summarization",
+          "AI-generated summaries"
+        ]
+      }
+    },
+    {
+      "id": "file-mentorships-sessions-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 109,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 3,
+        "hasHelpers": true,
+        "features": [
+          "session creation"
+        ]
+      }
+    },
+    {
+      "id": "file-mentorships-route",
+      "type": "file",
+      "label": "mentorships/route.ts",
+      "path": "mission-control/app/api/mentorships/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 89,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 2,
+        "features": [
+          "mentorship listing",
+          "mentorship creation"
+        ]
+      }
+    },
+    {
+      "id": "file-mentorships-stripe-sync-route",
+      "type": "file",
+      "label": "mentorships/stripe-sync/route.ts",
+      "path": "mission-control/app/api/mentorships/stripe-sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 139,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "Stripe integration",
+          "payment synchronization"
+        ]
+      }
+    },
+    {
+      "id": "file-meta-ads-route",
+      "type": "file",
+      "label": "meta-ads/route.ts",
+      "path": "mission-control/app/api/meta-ads/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 58,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "Meta Ads API",
+          "caching"
+        ]
+      }
+    },
+    {
+      "id": "file-nav-state-route",
+      "type": "file",
+      "label": "nav-state/route.ts",
+      "path": "mission-control/app/api/nav-state/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 2,
+        "features": [
+          "navigation state management"
+        ]
+      }
+    },
+    {
+      "id": "file-nightcrawler-route",
+      "type": "file",
+      "label": "nightcrawler/route.ts",
+      "path": "mission-control/app/api/nightcrawler/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 154,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "data crawling",
+          "file operations",
+          "JSON handling"
+        ]
+      }
+    },
+    {
+      "id": "file-office-lollipops-route",
+      "type": "file",
+      "label": "office/lollipops/route.ts",
+      "path": "mission-control/app/api/office/lollipops/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "office management"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-utils",
+      "type": "file",
+      "label": "online-program/_utils.ts",
+      "path": "mission-control/app/api/online-program/_utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "checkQueueAlert"
+        ],
+        "functionCount": 3,
+        "hasHelpers": true,
+        "features": [
+          "Telegram alerts",
+          "environment configuration",
+          "queue monitoring"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-attendance-route",
+      "type": "file",
+      "label": "online-program/attendance/route.ts",
+      "path": "mission-control/app/api/online-program/attendance/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 128,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "DELETE"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "attendance tracking"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-blog-regen-route",
+      "type": "file",
+      "label": "online-program/blog/regenerate-image/route.ts",
+      "path": "mission-control/app/api/online-program/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "image generation",
+          "agent execution"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-blog-route",
+      "type": "file",
+      "label": "online-program/blog/route.ts",
+      "path": "mission-control/app/api/online-program/blog/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 272,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "functionCount": 5,
+        "hasHelpers": true,
+        "complexity": "high",
+        "features": [
+          "blog CRUD operations"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-blog-set-cover-route",
+      "type": "file",
+      "label": "online-program/blog/set-cover/route.ts",
+      "path": "mission-control/app/api/online-program/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "Unsplash integration",
+          "cover image management"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-connections-route",
+      "type": "file",
+      "label": "online-program/connections/route.ts",
+      "path": "mission-control/app/api/online-program/connections/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 169,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "PATCH",
+          "DELETE"
+        ],
+        "functionCount": 6,
+        "hasHelpers": true,
+        "complexity": "high",
+        "features": [
+          "connection management",
+          "data formatting"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-discover-route",
+      "type": "file",
+      "label": "online-program/discover/route.ts",
+      "path": "mission-control/app/api/online-program/discover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "discovery triggering"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-discoveries-route",
+      "type": "file",
+      "label": "online-program/discoveries/route.ts",
+      "path": "mission-control/app/api/online-program/discoveries/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 191,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "DELETE"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "discoveries CRUD"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-discovery-instructions-route",
+      "type": "file",
+      "label": "online-program/discovery-instructions/route.ts",
+      "path": "mission-control/app/api/online-program/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 2,
+        "features": [
+          "discovery configuration"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-favor-bank-route",
+      "type": "file",
+      "label": "online-program/favor-bank/route.ts",
+      "path": "mission-control/app/api/online-program/favor-bank/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 3,
+        "hasHelpers": true,
+        "features": [
+          "favor bank management"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-generate-route",
+      "type": "file",
+      "label": "online-program/generate/route.ts",
+      "path": "mission-control/app/api/online-program/generate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "content generation"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-intake-route",
+      "type": "file",
+      "label": "online-program/intake/route.ts",
+      "path": "mission-control/app/api/online-program/intake/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 133,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "PATCH"
+        ],
+        "functionCount": 7,
+        "hasHelpers": true,
+        "complexity": "high",
+        "features": [
+          "data intake",
+          "validation",
+          "phone normalization",
+          "participant ID resolution"
+        ]
+      }
+    },
+    {
+      "id": "file-online-program-offers-route",
+      "type": "file",
+      "label": "online-program/offers/route.ts",
+      "path": "mission-control/app/api/online-program/offers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 95,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "DELETE"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "offer management"
+        ]
+      }
+    },
+    {
+      "id": "api-http-methods",
+      "type": "concept",
+      "label": "HTTP Methods",
+      "description": "REST API HTTP methods used across batch 94",
+      "metadata": {
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "PATCH",
+          "DELETE"
+        ],
+        "frequency": "high"
+      }
+    },
+    {
+      "id": "db-access-pattern",
+      "type": "pattern",
+      "label": "Database Access",
+      "description": "Pattern of database read/write operations across API routes",
+      "metadata": {
+        "frequency": "high",
+        "files": 15,
+        "operations": [
+          "getDb",
+          "readDB",
+          "writeDB"
+        ]
+      }
+    },
+    {
+      "id": "helper-function-pattern",
+      "type": "pattern",
+      "label": "Helper Functions",
+      "description": "Utility helper functions for common operations",
+      "metadata": {
+        "frequency": "high",
+        "examples": [
+          "formatDate",
+          "formatConnection",
+          "runAgent",
+          "ensureDir",
+          "readJsonSafe"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-clientid-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-sessions-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-session-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-session-pdf-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-session-send-pdf-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-session-summarize-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "mentorships-domain",
+      "targetId": "file-mentorships-stripe-sync-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-utils",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-attendance-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-blog-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-blog-regen-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-blog-set-cover-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-connections-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-discover-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-discoveries-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-discovery-instructions-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-favor-bank-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-generate-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-intake-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "online-program-domain",
+      "targetId": "file-online-program-offers-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "utility-domain",
+      "targetId": "file-meta-ads-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "utility-domain",
+      "targetId": "file-nav-state-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "utility-domain",
+      "targetId": "file-nightcrawler-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "utility-domain",
+      "targetId": "file-office-lollipops-route",
+      "type": "contains",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "file-mentorships-session-pdf-route",
+      "targetId": "file-mentorships-session-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "PDF operations on sessions"
+      }
+    },
+    {
+      "sourceId": "file-mentorships-session-send-pdf-route",
+      "targetId": "file-mentorships-session-pdf-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "PDF delivery uses generated PDFs"
+      }
+    },
+    {
+      "sourceId": "file-mentorships-session-summarize-route",
+      "targetId": "file-mentorships-session-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Summarization based on session data"
+      }
+    },
+    {
+      "sourceId": "file-mentorships-stripe-sync-route",
+      "targetId": "file-mentorships-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Payment sync for mentorships"
+      }
+    },
+    {
+      "sourceId": "file-online-program-blog-regen-route",
+      "targetId": "file-online-program-blog-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Image regeneration for blog posts"
+      }
+    },
+    {
+      "sourceId": "file-online-program-blog-set-cover-route",
+      "targetId": "file-online-program-blog-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Cover image management for blog"
+      }
+    },
+    {
+      "sourceId": "file-online-program-discover-route",
+      "targetId": "file-online-program-discoveries-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Discovery triggering creates discoveries"
+      }
+    },
+    {
+      "sourceId": "file-online-program-discoveries-route",
+      "targetId": "file-online-program-discovery-instructions-route",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Discoveries follow discovery instructions"
+      }
+    },
+    {
+      "sourceId": "file-online-program-intake-route",
+      "targetId": "file-online-program-utils",
+      "type": "depends_on",
+      "strength": "medium",
+      "metadata": {
+        "reason": "Intake uses utility functions"
+      }
+    },
+    {
+      "sourceId": "file-online-program-connections-route",
+      "targetId": "file-online-program-utils",
+      "type": "depends_on",
+      "strength": "weak",
+      "metadata": {
+        "reason": "Potential utility usage"
+      }
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-mentorships-clientid-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-mentorships-sessions-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-online-program-attendance-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-online-program-blog-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-online-program-connections-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-online-program-discoveries-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-online-program-intake-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "db-access-pattern",
+      "targetId": "file-online-program-offers-route",
+      "type": "used_by",
+      "strength": "strong"
+    },
+    {
+      "sourceId": "helper-function-pattern",
+      "targetId": "file-mentorships-session-pdf-route",
+      "type": "used_by",
+      "strength": "medium",
+      "metadata": {
+        "helper": "formatDate"
+      }
+    },
+    {
+      "sourceId": "helper-function-pattern",
+      "targetId": "file-nightcrawler-route",
+      "type": "used_by",
+      "strength": "medium",
+      "metadata": {
+        "helpers": [
+          "ensureDir",
+          "readJsonSafe"
+        ]
+      }
+    },
+    {
+      "sourceId": "helper-function-pattern",
+      "targetId": "file-online-program-blog-regen-route",
+      "type": "used_by",
+      "strength": "medium",
+      "metadata": {
+        "helper": "runAgent"
+      }
+    },
+    {
+      "sourceId": "helper-function-pattern",
+      "targetId": "file-online-program-connections-route",
+      "type": "used_by",
+      "strength": "medium",
+      "metadata": {
+        "helper": "formatConnection"
+      }
+    },
+    {
+      "sourceId": "api-http-methods",
+      "targetId": "mentorships-domain",
+      "type": "used_by",
+      "strength": "strong",
+      "metadata": {
+        "methods": [
+          "GET",
+          "POST",
+          "PUT"
+        ]
+      }
+    },
+    {
+      "sourceId": "api-http-methods",
+      "targetId": "online-program-domain",
+      "type": "used_by",
+      "strength": "strong",
+      "metadata": {
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "PATCH",
+          "DELETE"
+        ]
+      }
+    },
+    {
+      "sourceId": "api-http-methods",
+      "targetId": "utility-domain",
+      "type": "used_by",
+      "strength": "strong",
+      "metadata": {
+        "methods": [
+          "GET",
+          "POST",
+          "PUT"
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "filesAnalyzed": null,
+    "analysisTimestamp": null
+  }
+}

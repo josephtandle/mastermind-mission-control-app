@@ -1,0 +1,741 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 1000,
+  "totalBatches": 4,
+  "exportsByPath": {},
+  "batches": [
+    {
+      "batchIndex": 87,
+      "files": [
+        {
+          "path": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+          "language": "TypeScript JSX",
+          "sizeLines": 58,
+          "fileCategory": "component"
+        },
+        {
+          "path": "CONTEXT.md",
+          "language": "Markdown",
+          "sizeLines": 18,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docker/docker-compose.yml",
+          "language": "YAML",
+          "sizeLines": 75,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docker/README.md",
+          "language": "Markdown",
+          "sizeLines": 69,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "INDEX.md",
+          "language": "Markdown",
+          "sizeLines": 24,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "lib/db.json",
+          "language": "JSON",
+          "sizeLines": 362,
+          "fileCategory": "config"
+        },
+        {
+          "path": "mission-control/.claude/CLAUDE.md",
+          "language": "Markdown",
+          "sizeLines": 143,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "mission-control/.claude/RESKIN-PLAN.md",
+          "language": "Markdown",
+          "sizeLines": 415,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "mission-control/.eslintrc.json",
+          "language": "JSON",
+          "sizeLines": 8,
+          "fileCategory": "config"
+        },
+        {
+          "path": "mission-control/app/api/_telegram.ts",
+          "language": "TypeScript",
+          "sizeLines": 38,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/affiliate-links/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 105,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/agent-logs/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 132,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/agent-status/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 25,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/airtable/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 168,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/apollo/status/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 20,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backlinks/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 77,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/create/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 141,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/delete/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 57,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/download/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 61,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/generate-description/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 38,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/list/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 152,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/restore/progress/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 54,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/restore/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 226,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/backups/update-description/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 59,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/bank-accounts/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 45,
+          "fileCategory": "source"
+        }
+      ],
+      "batchImportData": {
+        "agents/task-runner/ui/src/components/ui/tooltip.tsx": [],
+        "CONTEXT.md": [],
+        "docker/docker-compose.yml": [],
+        "docker/README.md": [],
+        "INDEX.md": [],
+        "lib/db.json": [],
+        "mission-control/.claude/CLAUDE.md": [],
+        "mission-control/.claude/RESKIN-PLAN.md": [],
+        "mission-control/.eslintrc.json": [],
+        "mission-control/app/api/_telegram.ts": [],
+        "mission-control/app/api/affiliate-links/route.ts": [],
+        "mission-control/app/api/agent-logs/route.ts": [],
+        "mission-control/app/api/agent-status/route.ts": [],
+        "mission-control/app/api/airtable/route.ts": [],
+        "mission-control/app/api/apollo/status/route.ts": [],
+        "mission-control/app/api/backlinks/route.ts": [],
+        "mission-control/app/api/backups/create/route.ts": [],
+        "mission-control/app/api/backups/delete/route.ts": [],
+        "mission-control/app/api/backups/download/route.ts": [],
+        "mission-control/app/api/backups/generate-description/route.ts": [],
+        "mission-control/app/api/backups/list/route.ts": [],
+        "mission-control/app/api/backups/restore/progress/route.ts": [],
+        "mission-control/app/api/backups/restore/route.ts": [],
+        "mission-control/app/api/backups/update-description/route.ts": [],
+        "mission-control/app/api/bank-accounts/route.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 89,
+      "files": [
+        {
+          "path": "mission-control/app/api/claude-terminal/status/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 17,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/claude-terminal/stop/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 21,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/claude-terminal/transcribe/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 127,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/claude-terminal/undo/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 60,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/clients/[clientId]/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 60,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/clients/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 62,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/_utils.ts",
+          "language": "TypeScript",
+          "sizeLines": 54,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/attendance/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 128,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/blog/regenerate-image/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 160,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/blog/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 282,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/blog/set-cover/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 85,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/cohorts/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 94,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/connections/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 169,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/discover/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 24,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/discoveries/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 221,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/discovery-instructions/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 36,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/favor-bank/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 163,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/generate/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 24,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/intake/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 222,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/offers/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 95,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/onboarding-process/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 271,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/onboarding-process/templates/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 53,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/participants/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 264,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/publish/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 65,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/cohorts/questions/generate-answers/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 67,
+          "fileCategory": "source"
+        }
+      ],
+      "batchImportData": {
+        "mission-control/app/api/claude-terminal/status/route.ts": [],
+        "mission-control/app/api/claude-terminal/stop/route.ts": [],
+        "mission-control/app/api/claude-terminal/transcribe/route.ts": [],
+        "mission-control/app/api/claude-terminal/undo/route.ts": [],
+        "mission-control/app/api/clients/[clientId]/route.ts": [],
+        "mission-control/app/api/clients/route.ts": [],
+        "mission-control/app/api/cohorts/_utils.ts": [],
+        "mission-control/app/api/cohorts/attendance/route.ts": [],
+        "mission-control/app/api/cohorts/blog/regenerate-image/route.ts": [],
+        "mission-control/app/api/cohorts/blog/route.ts": [],
+        "mission-control/app/api/cohorts/blog/set-cover/route.ts": [],
+        "mission-control/app/api/cohorts/cohorts/route.ts": [],
+        "mission-control/app/api/cohorts/connections/route.ts": [],
+        "mission-control/app/api/cohorts/discover/route.ts": [],
+        "mission-control/app/api/cohorts/discoveries/route.ts": [],
+        "mission-control/app/api/cohorts/discovery-instructions/route.ts": [],
+        "mission-control/app/api/cohorts/favor-bank/route.ts": [],
+        "mission-control/app/api/cohorts/generate/route.ts": [],
+        "mission-control/app/api/cohorts/intake/route.ts": [],
+        "mission-control/app/api/cohorts/offers/route.ts": [],
+        "mission-control/app/api/cohorts/onboarding-process/route.ts": [],
+        "mission-control/app/api/cohorts/onboarding-process/templates/route.ts": [],
+        "mission-control/app/api/cohorts/participants/route.ts": [],
+        "mission-control/app/api/cohorts/publish/route.ts": [],
+        "mission-control/app/api/cohorts/questions/generate-answers/route.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 93,
+      "files": [
+        {
+          "path": "mission-control/app/api/kling/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 31,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/linkedin-images/preview/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 52,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/linkedin-images/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 178,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/linkedin/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 546,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/littlebird/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 130,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/machine-learning/dashboard/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 360,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/machine-learning/settings/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 74,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 91,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 79,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 91,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-giveaways/push/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 94,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 87,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-sync/data/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 45,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-sync/run/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 24,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-sync/status/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 22,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/manychat-webhook/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 24,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mc-settings/logo/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 66,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mc-settings/memory-cap/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 72,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mc-settings/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 72,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/meeting-notes/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 89,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/business/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 103,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/payments/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 78,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/photo/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 38,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/research/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 142,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 188,
+          "fileCategory": "source"
+        }
+      ],
+      "batchImportData": {
+        "mission-control/app/api/kling/route.ts": [],
+        "mission-control/app/api/linkedin-images/preview/route.ts": [],
+        "mission-control/app/api/linkedin-images/route.ts": [],
+        "mission-control/app/api/linkedin/route.ts": [],
+        "mission-control/app/api/littlebird/route.ts": [],
+        "mission-control/app/api/machine-learning/dashboard/route.ts": [],
+        "mission-control/app/api/machine-learning/settings/route.ts": [],
+        "mission-control/app/api/manychat-giveaways/activate/route.ts": [],
+        "mission-control/app/api/manychat-giveaways/clone/route.ts": [],
+        "mission-control/app/api/manychat-giveaways/deactivate/route.ts": [],
+        "mission-control/app/api/manychat-giveaways/push/route.ts": [],
+        "mission-control/app/api/manychat-giveaways/sync/route.ts": [],
+        "mission-control/app/api/manychat-sync/data/route.ts": [],
+        "mission-control/app/api/manychat-sync/run/route.ts": [],
+        "mission-control/app/api/manychat-sync/status/route.ts": [],
+        "mission-control/app/api/manychat-webhook/route.ts": [],
+        "mission-control/app/api/mc-settings/logo/route.ts": [],
+        "mission-control/app/api/mc-settings/memory-cap/route.ts": [],
+        "mission-control/app/api/mc-settings/route.ts": [],
+        "mission-control/app/api/meeting-notes/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/business/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/payments/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/photo/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/research/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/research/send/route.ts": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 94,
+      "files": [
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 71,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 275,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 123,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 124,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 101,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/[clientId]/sessions/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 109,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 89,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/mentorships/stripe-sync/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 139,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/meta-ads/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 58,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/nav-state/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 35,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/nightcrawler/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 154,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/office/lollipops/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 53,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/_utils.ts",
+          "language": "TypeScript",
+          "sizeLines": 54,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/attendance/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 128,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/blog/regenerate-image/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 132,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/blog/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 272,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/blog/set-cover/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 85,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/connections/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 169,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/discover/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 24,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/discoveries/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 191,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/discovery-instructions/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 36,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/favor-bank/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 92,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/generate/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 24,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/intake/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 133,
+          "fileCategory": "source"
+        },
+        {
+          "path": "mission-control/app/api/online-program/offers/route.ts",
+          "language": "TypeScript",
+          "sizeLines": 95,
+          "fileCategory": "source"
+        }
+      ],
+      "batchImportData": {
+        "mission-control/app/api/mentorships/[clientId]/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts": [],
+        "mission-control/app/api/mentorships/[clientId]/sessions/route.ts": [],
+        "mission-control/app/api/mentorships/route.ts": [],
+        "mission-control/app/api/mentorships/stripe-sync/route.ts": [],
+        "mission-control/app/api/meta-ads/route.ts": [],
+        "mission-control/app/api/nav-state/route.ts": [],
+        "mission-control/app/api/nightcrawler/route.ts": [],
+        "mission-control/app/api/office/lollipops/route.ts": [],
+        "mission-control/app/api/online-program/_utils.ts": [],
+        "mission-control/app/api/online-program/attendance/route.ts": [],
+        "mission-control/app/api/online-program/blog/regenerate-image/route.ts": [],
+        "mission-control/app/api/online-program/blog/route.ts": [],
+        "mission-control/app/api/online-program/blog/set-cover/route.ts": [],
+        "mission-control/app/api/online-program/connections/route.ts": [],
+        "mission-control/app/api/online-program/discover/route.ts": [],
+        "mission-control/app/api/online-program/discoveries/route.ts": [],
+        "mission-control/app/api/online-program/discovery-instructions/route.ts": [],
+        "mission-control/app/api/online-program/favor-bank/route.ts": [],
+        "mission-control/app/api/online-program/generate/route.ts": [],
+        "mission-control/app/api/online-program/intake/route.ts": [],
+        "mission-control/app/api/online-program/offers/route.ts": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

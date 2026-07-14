@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "batchFiles": [
+    {
+      "path": "mission-control/app/api/claude-terminal/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 17,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/stop/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 21,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/transcribe/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 127,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/undo/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/clients/[clientId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 60,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/clients/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 62,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/_utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/attendance/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 128,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 160,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 282,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/cohorts/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 94,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/connections/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 169,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discoveries/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 221,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/favor-bank/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 163,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/generate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/intake/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 222,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/offers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 95,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/onboarding-process/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 271,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/onboarding-process/templates/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/participants/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 264,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/publish/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 65,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/cohorts/questions/generate-answers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 67,
+      "fileCategory": "source"
+    }
+  ],
+  "batchImportData": {
+    "mission-control/app/api/claude-terminal/status/route.ts": [],
+    "mission-control/app/api/claude-terminal/stop/route.ts": [],
+    "mission-control/app/api/claude-terminal/transcribe/route.ts": [],
+    "mission-control/app/api/claude-terminal/undo/route.ts": [],
+    "mission-control/app/api/clients/[clientId]/route.ts": [],
+    "mission-control/app/api/clients/route.ts": [],
+    "mission-control/app/api/cohorts/_utils.ts": [],
+    "mission-control/app/api/cohorts/attendance/route.ts": [],
+    "mission-control/app/api/cohorts/blog/regenerate-image/route.ts": [],
+    "mission-control/app/api/cohorts/blog/route.ts": [],
+    "mission-control/app/api/cohorts/blog/set-cover/route.ts": [],
+    "mission-control/app/api/cohorts/cohorts/route.ts": [],
+    "mission-control/app/api/cohorts/connections/route.ts": [],
+    "mission-control/app/api/cohorts/discover/route.ts": [],
+    "mission-control/app/api/cohorts/discoveries/route.ts": [],
+    "mission-control/app/api/cohorts/discovery-instructions/route.ts": [],
+    "mission-control/app/api/cohorts/favor-bank/route.ts": [],
+    "mission-control/app/api/cohorts/generate/route.ts": [],
+    "mission-control/app/api/cohorts/intake/route.ts": [],
+    "mission-control/app/api/cohorts/offers/route.ts": [],
+    "mission-control/app/api/cohorts/onboarding-process/route.ts": [],
+    "mission-control/app/api/cohorts/onboarding-process/templates/route.ts": [],
+    "mission-control/app/api/cohorts/participants/route.ts": [],
+    "mission-control/app/api/cohorts/publish/route.ts": [],
+    "mission-control/app/api/cohorts/questions/generate-answers/route.ts": []
+  }
+}

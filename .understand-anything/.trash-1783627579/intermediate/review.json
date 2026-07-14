@@ -1,0 +1,30 @@
+{
+  "issues": [],
+  "warnings": [],
+  "stats": {
+    "totalNodes": 129,
+    "totalEdges": 92,
+    "nodeTypes": {
+      "file": 84,
+      "component": 4,
+      "documentation": 1,
+      "api_module": 1,
+      "function": 1,
+      "api_route": 15,
+      "api_domain": 1,
+      "module": 3,
+      "pattern": 9,
+      "domain": 9,
+      "concept": 1
+    },
+    "edgeTypes": {
+      "contains": 38,
+      "semantic": 6,
+      "related": 10,
+      "uses": 10,
+      "belongs_to_domain": 25,
+      "primary_implementation": 1,
+      "key_feature": 2
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "batchFiles": [
+    {
+      "path": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "language": "TypeScript JSX",
+      "sizeLines": 58,
+      "fileCategory": "component"
+    },
+    {
+      "path": "CONTEXT.md",
+      "language": "Markdown",
+      "sizeLines": 18,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docker/docker-compose.yml",
+      "language": "YAML",
+      "sizeLines": 75,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docker/README.md",
+      "language": "Markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "INDEX.md",
+      "language": "Markdown",
+      "sizeLines": 24,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "lib/db.json",
+      "language": "JSON",
+      "sizeLines": 362,
+      "fileCategory": "config"
+    },
+    {
+      "path": "mission-control/.claude/CLAUDE.md",
+      "language": "Markdown",
+      "sizeLines": 143,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/.claude/RESKIN-PLAN.md",
+      "language": "Markdown",
+      "sizeLines": 415,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "mission-control/.eslintrc.json",
+      "language": "JSON",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "mission-control/app/api/_telegram.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/affiliate-links/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 105,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/agent-logs/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/agent-status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 25,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/airtable/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 168,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/apollo/status/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 20,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backlinks/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 77,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/create/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 141,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/delete/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 57,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/download/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 61,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/generate-description/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 38,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/list/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 152,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/restore/progress/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/restore/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 226,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/backups/update-description/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 59,
+      "fileCategory": "source"
+    },
+    {
+      "path": "mission-control/app/api/bank-accounts/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 45,
+      "fileCategory": "source"
+    }
+  ],
+  "batchImportData": {
+    "agents/task-runner/ui/src/components/ui/tooltip.tsx": [],
+    "CONTEXT.md": [],
+    "docker/docker-compose.yml": [],
+    "docker/README.md": [],
+    "INDEX.md": [],
+    "lib/db.json": [],
+    "mission-control/.claude/CLAUDE.md": [],
+    "mission-control/.claude/RESKIN-PLAN.md": [],
+    "mission-control/.eslintrc.json": [],
+    "mission-control/app/api/_telegram.ts": [],
+    "mission-control/app/api/affiliate-links/route.ts": [],
+    "mission-control/app/api/agent-logs/route.ts": [],
+    "mission-control/app/api/agent-status/route.ts": [],
+    "mission-control/app/api/airtable/route.ts": [],
+    "mission-control/app/api/apollo/status/route.ts": [],
+    "mission-control/app/api/backlinks/route.ts": [],
+    "mission-control/app/api/backups/create/route.ts": [],
+    "mission-control/app/api/backups/delete/route.ts": [],
+    "mission-control/app/api/backups/download/route.ts": [],
+    "mission-control/app/api/backups/generate-description/route.ts": [],
+    "mission-control/app/api/backups/list/route.ts": [],
+    "mission-control/app/api/backups/restore/progress/route.ts": [],
+    "mission-control/app/api/backups/restore/route.ts": [],
+    "mission-control/app/api/backups/update-description/route.ts": [],
+    "mission-control/app/api/bank-accounts/route.ts": []
+  }
+}

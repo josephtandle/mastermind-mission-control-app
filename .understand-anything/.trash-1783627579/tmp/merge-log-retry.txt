@@ -1,0 +1,80 @@
+Found 4 batch files (4 logical batches, 0 multi-part):
+  batch-87.json: 32 nodes, 22 edges
+  batch-89.json: 35 nodes, 35 edges
+  batch-93.json: 31 nodes, 35 edges
+  batch-94.json: 31 nodes, 50 edges
+
+Input: 129 nodes, 142 edges
+
+Fixed (142 corrections):
+    81 × bare path → file: (missing prefix)
+     3 × bare path → module: (missing prefix)
+     3 × bare path → domain: (missing prefix)
+     1 × bare path → concept: (missing prefix)
+    54 × edge references rewritten after ID normalization
+
+Could not fix (210 issues — needs agent review):
+    15 × unknown node type "api_route" (not in schema, kept as-is)
+     9 × unknown node type "pattern" (not in schema, kept as-is)
+     4 × unknown node type "component" (not in schema, kept as-is)
+     1 × unknown node type "documentation" (not in schema, kept as-is)
+     1 × unknown node type "api_module" (not in schema, kept as-is)
+     1 × unknown node type "api_domain" (not in schema, kept as-is)
+   129 × complexity None → defaulted to "moderate"
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (contains): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (depends_on): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+  - Edge  →  (used_by): dropped, missing source '', target ''
+
+Output: 129 nodes, 92 edges
+
+Imports edge recovery:
+  importMap recovery skipped — no importMap field in scan-result.json
+
+Written to /Users/myos/.myos/workspace/projects/mastermind-mission-control/.understand-anything/intermediate/assembled-graph.json (80 KB)

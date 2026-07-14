@@ -1,0 +1,1316 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "mission-control/app/api/claude-terminal/status/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 6,
+          "endLine": 16,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "runtime",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "GET",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/stop/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 6,
+          "endLine": 20,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "runtime",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/transcribe/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 126,
+      "nonEmptyLines": 109,
+      "functions": [
+        {
+          "name": "transcribeLocally",
+          "startLine": 25,
+          "endLine": 44,
+          "params": [
+            "buffer",
+            "ext"
+          ]
+        },
+        {
+          "name": "transcribeWithGroq",
+          "startLine": 46,
+          "endLine": 63,
+          "params": [
+            "buffer",
+            "filename"
+          ]
+        },
+        {
+          "name": "transcribeWithOpenAI",
+          "startLine": 65,
+          "endLine": 81,
+          "params": [
+            "buffer",
+            "filename"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 83,
+          "endLine": 126,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "runtime",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 83,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/claude-terminal/undo/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 59,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 12,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 18,
+          "endLine": 59,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "runtime",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 18,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/clients/[clientId]/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 59,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "loadClients",
+          "startLine": 10,
+          "endLine": 17,
+          "params": []
+        },
+        {
+          "name": "saveClients",
+          "startLine": 19,
+          "endLine": 21,
+          "params": [
+            "clients"
+          ]
+        },
+        {
+          "name": "PUT",
+          "startLine": 23,
+          "endLine": 41,
+          "params": [
+            "request",
+            "{ params }"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 43,
+          "endLine": 59,
+          "params": [
+            "_",
+            "{ params }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PUT",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/clients/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 61,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "loadClients",
+          "startLine": 11,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "saveClients",
+          "startLine": 20,
+          "endLine": 22,
+          "params": [
+            "clients"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 24,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 29,
+          "endLine": 61,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 29,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/_utils.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 53,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "getEnvVar",
+          "startLine": 11,
+          "endLine": 23,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "sendTelegram",
+          "startLine": 25,
+          "endLine": 37,
+          "params": [
+            "message"
+          ]
+        },
+        {
+          "name": "checkQueueAlert",
+          "startLine": 43,
+          "endLine": 53,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "checkQueueAlert",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/attendance/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 127,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 10,
+          "endLine": 12,
+          "params": []
+        },
+        {
+          "name": "GET",
+          "startLine": 16,
+          "endLine": 55,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 58,
+          "endLine": 111,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 114,
+          "endLine": 127,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 114,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 159,
+      "nonEmptyLines": 135,
+      "functions": [
+        {
+          "name": "runAgent",
+          "startLine": 28,
+          "endLine": 40,
+          "params": [
+            "cmd"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 42,
+          "endLine": 159,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 42,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 281,
+      "nonEmptyLines": 249,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 53,
+          "endLine": 66,
+          "params": [
+            "readonly"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 68,
+          "endLine": 130,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 132,
+          "endLine": 188,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "PUT",
+          "startLine": 190,
+          "endLine": 267,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 269,
+          "endLine": 281,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 132,
+          "isDefault": false
+        },
+        {
+          "name": "PUT",
+          "line": 190,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 269,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 84,
+      "nonEmptyLines": 72,
+      "functions": [
+        {
+          "name": "triggerUnsplashDownload",
+          "startLine": 26,
+          "endLine": 37,
+          "params": [
+            "downloadLocation"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 39,
+          "endLine": 84,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 39,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/cohorts/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 93,
+      "nonEmptyLines": 81,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 10,
+          "endLine": 12,
+          "params": []
+        },
+        {
+          "name": "GET",
+          "startLine": 15,
+          "endLine": 45,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 48,
+          "endLine": 68,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "PATCH",
+          "startLine": 71,
+          "endLine": 93,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "PATCH",
+          "line": 71,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/connections/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 168,
+      "nonEmptyLines": 144,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 10,
+          "endLine": 12,
+          "params": []
+        },
+        {
+          "name": "formatConnection",
+          "startLine": 29,
+          "endLine": 48,
+          "params": [
+            "row"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 63,
+          "endLine": 84,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 87,
+          "endLine": 116,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "PATCH",
+          "startLine": 119,
+          "endLine": 152,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 155,
+          "endLine": 168,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 87,
+          "isDefault": false
+        },
+        {
+          "name": "PATCH",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 155,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discover/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 8,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discoveries/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 220,
+      "nonEmptyLines": 199,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 41,
+          "endLine": 67,
+          "params": [
+            "readonly"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 69,
+          "endLine": 149,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 151,
+          "endLine": 206,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 208,
+          "endLine": 220,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 69,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 151,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 208,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 35,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 10,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "PUT",
+          "startLine": 23,
+          "endLine": 35,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "PUT",
+          "line": 23,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/favor-bank/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 162,
+      "nonEmptyLines": 145,
+      "functions": [
+        {
+          "name": "ensureDir",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "getDb",
+          "startLine": 16,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "initTables",
+          "startLine": 23,
+          "endLine": 82,
+          "params": [
+            "db"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 85,
+          "endLine": 121,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 124,
+          "endLine": 162,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 85,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 124,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/generate/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 8,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/intake/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 221,
+      "nonEmptyLines": 203,
+      "functions": [
+        {
+          "name": "ensureDir",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "getDb",
+          "startLine": 16,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "clean",
+          "startLine": 23,
+          "endLine": 25,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "normalizePhone",
+          "startLine": 27,
+          "endLine": 29,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "resolveParticipantId",
+          "startLine": 31,
+          "endLine": 54,
+          "params": [
+            "db",
+            "body"
+          ]
+        },
+        {
+          "name": "initTables",
+          "startLine": 56,
+          "endLine": 118,
+          "params": [
+            "db"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 122,
+          "endLine": 157,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 161,
+          "endLine": 190,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "PATCH",
+          "startLine": 194,
+          "endLine": 221,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 122,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 161,
+          "isDefault": false
+        },
+        {
+          "name": "PATCH",
+          "line": 194,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/offers/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 94,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 10,
+          "endLine": 12,
+          "params": []
+        },
+        {
+          "name": "GET",
+          "startLine": 15,
+          "endLine": 44,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 47,
+          "endLine": 78,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 81,
+          "endLine": 94,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 15,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 81,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/onboarding-process/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 270,
+      "nonEmptyLines": 256,
+      "functions": [
+        {
+          "name": "loadCronJob",
+          "startLine": 32,
+          "endLine": 40,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "formatMs",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "ms"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 47,
+          "endLine": 270,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 47,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/onboarding-process/templates/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 52,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "PATCH",
+          "startLine": 12,
+          "endLine": 52,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PATCH",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/participants/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 263,
+      "nonEmptyLines": 226,
+      "functions": [
+        {
+          "name": "ensureDir",
+          "startLine": 11,
+          "endLine": 14,
+          "params": [
+            "p"
+          ]
+        },
+        {
+          "name": "getDb",
+          "startLine": 16,
+          "endLine": 21,
+          "params": []
+        },
+        {
+          "name": "initTables",
+          "startLine": 23,
+          "endLine": 97,
+          "params": [
+            "db"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 101,
+          "endLine": 167,
+          "params": []
+        },
+        {
+          "name": "PATCH",
+          "startLine": 171,
+          "endLine": 206,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "PUT",
+          "startLine": 210,
+          "endLine": 244,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 248,
+          "endLine": 263,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 101,
+          "isDefault": false
+        },
+        {
+          "name": "PATCH",
+          "line": 171,
+          "isDefault": false
+        },
+        {
+          "name": "PUT",
+          "line": 210,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 248,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/publish/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 64,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 13,
+          "endLine": 17,
+          "params": [
+            "readonly"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 19,
+          "endLine": 64,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/cohorts/questions/generate-answers/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 66,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "getDb",
+          "startLine": 11,
+          "endLine": 13,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 21,
+          "endLine": 66,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

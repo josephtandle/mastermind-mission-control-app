@@ -1,0 +1,1117 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 25,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "mission-control/app/api/kling/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 30,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 10,
+          "endLine": 30,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/linkedin-images/preview/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 51,
+      "nonEmptyLines": 43,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 12,
+          "endLine": 51,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/linkedin-images/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 177,
+      "nonEmptyLines": 152,
+      "functions": [
+        {
+          "name": "ensureDirs",
+          "startLine": 15,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "GET",
+          "startLine": 22,
+          "endLine": 73,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 76,
+          "endLine": 177,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 76,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/linkedin/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 545,
+      "nonEmptyLines": 486,
+      "functions": [
+        {
+          "name": "ensureDirs",
+          "startLine": 87,
+          "endLine": 91,
+          "params": []
+        },
+        {
+          "name": "loadStore",
+          "startLine": 93,
+          "endLine": 139,
+          "params": []
+        },
+        {
+          "name": "saveStore",
+          "startLine": 141,
+          "endLine": 144,
+          "params": [
+            "store"
+          ]
+        },
+        {
+          "name": "getAuthStatus",
+          "startLine": 146,
+          "endLine": 158,
+          "params": []
+        },
+        {
+          "name": "getCarousels",
+          "startLine": 160,
+          "endLine": 181,
+          "params": []
+        },
+        {
+          "name": "generateId",
+          "startLine": 183,
+          "endLine": 185,
+          "params": []
+        },
+        {
+          "name": "getWriterFiles",
+          "startLine": 192,
+          "endLine": 204,
+          "params": []
+        },
+        {
+          "name": "GET",
+          "startLine": 208,
+          "endLine": 299,
+          "params": [
+            "_req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 301,
+          "endLine": 545,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 301,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/littlebird/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 129,
+      "nonEmptyLines": 115,
+      "functions": [
+        {
+          "name": "getStoredToken",
+          "startLine": 14,
+          "endLine": 20,
+          "params": []
+        },
+        {
+          "name": "testToken",
+          "startLine": 22,
+          "endLine": 31,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 33,
+          "endLine": 91,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 93,
+          "endLine": 129,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 93,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 359,
+      "nonEmptyLines": 326,
+      "functions": [
+        {
+          "name": "readJson",
+          "startLine": 45,
+          "endLine": 52,
+          "params": [
+            "filePath",
+            "fallback"
+          ]
+        },
+        {
+          "name": "readJsonl",
+          "startLine": 54,
+          "endLine": 69,
+          "params": [
+            "filePath",
+            "typeFilter"
+          ]
+        },
+        {
+          "name": "getEnvValue",
+          "startLine": 71,
+          "endLine": 74,
+          "params": [
+            "envContent",
+            "key",
+            "fallback"
+          ]
+        },
+        {
+          "name": "checkDaemon",
+          "startLine": 76,
+          "endLine": 136,
+          "params": []
+        },
+        {
+          "name": "checkOllamaAvailable",
+          "startLine": 138,
+          "endLine": 148,
+          "params": [
+            "url"
+          ]
+        },
+        {
+          "name": "computeFeedbackStats",
+          "startLine": 150,
+          "endLine": 162,
+          "params": [
+            "entries"
+          ]
+        },
+        {
+          "name": "computeKnowledgeStats",
+          "startLine": 164,
+          "endLine": 203,
+          "params": [
+            "lessons"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 205,
+          "endLine": 359,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 205,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/machine-learning/settings/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 73,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 21,
+          "endLine": 73,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 21,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 90,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "runBrowserScript",
+          "startLine": 11,
+          "endLine": 23,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 27,
+          "endLine": 90,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 78,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 7,
+          "endLine": 78,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 90,
+      "nonEmptyLines": 77,
+      "functions": [
+        {
+          "name": "runBrowserScript",
+          "startLine": 11,
+          "endLine": 23,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 27,
+          "endLine": 90,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/push/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 93,
+      "nonEmptyLines": 80,
+      "functions": [
+        {
+          "name": "runBrowserScript",
+          "startLine": 11,
+          "endLine": 23,
+          "params": [
+            "args"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 27,
+          "endLine": 93,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 86,
+      "nonEmptyLines": 76,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 7,
+          "endLine": 86,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/data/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 44,
+      "nonEmptyLines": 41,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 10,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/run/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 11,
+          "endLine": 23,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-sync/status/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 21,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 10,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/manychat-webhook/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 10,
+          "endLine": 23,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/logo/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 65,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "POST",
+          "startLine": 13,
+          "endLine": 65,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/memory-cap/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 71,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 13,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 28,
+          "endLine": 71,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mc-settings/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 71,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "loadSettings",
+          "startLine": 11,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "saveSettings",
+          "startLine": 21,
+          "endLine": 25,
+          "params": [
+            "settings"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 27,
+          "endLine": 29,
+          "params": []
+        },
+        {
+          "name": "POST",
+          "startLine": 31,
+          "endLine": 71,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/meeting-notes/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 88,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "ensureFile",
+          "startLine": 10,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "readSessions",
+          "startLine": 17,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "writeSessions",
+          "startLine": 26,
+          "endLine": 29,
+          "params": [
+            "sessions"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 31,
+          "endLine": 45,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 47,
+          "endLine": 73,
+          "params": [
+            "req"
+          ]
+        },
+        {
+          "name": "DELETE",
+          "startLine": 75,
+          "endLine": 88,
+          "params": [
+            "req"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "POST",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "DELETE",
+          "line": 75,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 6,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/business/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 102,
+      "nonEmptyLines": 78,
+      "functions": [
+        {
+          "name": "getClientFolder",
+          "startLine": 11,
+          "endLine": 21,
+          "params": [
+            "clientId"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 55,
+          "endLine": 73,
+          "params": [
+            "_request",
+            "{ params }"
+          ]
+        },
+        {
+          "name": "PUT",
+          "startLine": 76,
+          "endLine": 102,
+          "params": [
+            "request",
+            "{ params }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "PUT",
+          "line": 76,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/payments/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 77,
+      "nonEmptyLines": 62,
+      "functions": [
+        {
+          "name": "readDB",
+          "startLine": 10,
+          "endLine": 13,
+          "params": []
+        },
+        {
+          "name": "writeDB",
+          "startLine": 15,
+          "endLine": 17,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 19,
+          "endLine": 77,
+          "params": [
+            "request",
+            "{ params }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/photo/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "GET",
+          "startLine": 10,
+          "endLine": 37,
+          "params": [
+            "_request",
+            "{ params }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/research/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 141,
+      "nonEmptyLines": 120,
+      "functions": [
+        {
+          "name": "getClientFolder",
+          "startLine": 11,
+          "endLine": 21,
+          "params": [
+            "clientId"
+          ]
+        },
+        {
+          "name": "humanizeFilename",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "filename"
+          ]
+        },
+        {
+          "name": "GET",
+          "startLine": 30,
+          "endLine": 99,
+          "params": [
+            "request",
+            "{ params }"
+          ]
+        },
+        {
+          "name": "PUT",
+          "startLine": 101,
+          "endLine": 141,
+          "params": [
+            "request",
+            "{ params }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "GET",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "PUT",
+          "line": 101,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
+      "language": "TypeScript",
+      "fileCategory": "source",
+      "totalLines": 187,
+      "nonEmptyLines": 164,
+      "functions": [
+        {
+          "name": "getClient",
+          "startLine": 13,
+          "endLine": 17,
+          "params": [
+            "clientId"
+          ]
+        },
+        {
+          "name": "getResearchContent",
+          "startLine": 19,
+          "endLine": 28,
+          "params": [
+            "clientId",
+            "filename"
+          ]
+        },
+        {
+          "name": "humanizeFilename",
+          "startLine": 30,
+          "endLine": 35,
+          "params": [
+            "filename"
+          ]
+        },
+        {
+          "name": "generatePdf",
+          "startLine": 37,
+          "endLine": 55,
+          "params": [
+            "content",
+            "clientId"
+          ]
+        },
+        {
+          "name": "POST",
+          "startLine": 58,
+          "endLine": 187,
+          "params": [
+            "request",
+            "{ params }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "POST",
+          "line": 58,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 5,
+        "classCount": 0
+      }
+    }
+  ]
+}

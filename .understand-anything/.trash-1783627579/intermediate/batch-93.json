@@ -1,0 +1,646 @@
+{
+  "batchIndex": 93,
+  "nodes": [
+    {
+      "id": "file:kling",
+      "type": "file",
+      "name": "mission-control/app/api/kling/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 30,
+        "nonEmptyLines": 27,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Kling video generation API endpoint"
+    },
+    {
+      "id": "file:linkedin-images-preview",
+      "type": "file",
+      "name": "mission-control/app/api/linkedin-images/preview/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 51,
+        "nonEmptyLines": 43,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LinkedIn image preview endpoint"
+    },
+    {
+      "id": "file:linkedin-images",
+      "type": "file",
+      "name": "mission-control/app/api/linkedin-images/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 177,
+        "nonEmptyLines": 152,
+        "exports": 2,
+        "functions": 3,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LinkedIn image management and processing API with GET and POST endpoints"
+    },
+    {
+      "id": "file:linkedin",
+      "type": "file",
+      "name": "mission-control/app/api/linkedin/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 545,
+        "nonEmptyLines": 486,
+        "exports": 2,
+        "functions": 9,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LinkedIn content management and carousel generation API with file handling and state persistence"
+    },
+    {
+      "id": "file:littlebird",
+      "type": "file",
+      "name": "mission-control/app/api/littlebird/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 129,
+        "nonEmptyLines": 115,
+        "exports": 2,
+        "functions": 4,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LittleBird news and data API integration with token management and testing"
+    },
+    {
+      "id": "file:ml-dashboard",
+      "type": "file",
+      "name": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 359,
+        "nonEmptyLines": 326,
+        "exports": 1,
+        "functions": 8,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Machine learning dashboard with daemon monitoring, Ollama integration, feedback and knowledge stats"
+    },
+    {
+      "id": "file:ml-settings",
+      "type": "file",
+      "name": "mission-control/app/api/machine-learning/settings/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 73,
+        "nonEmptyLines": 60,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Machine learning settings configuration API"
+    },
+    {
+      "id": "file:manychat-giveaways-activate",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 90,
+        "nonEmptyLines": 77,
+        "exports": 1,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Manychat giveaway activation with browser script execution"
+    },
+    {
+      "id": "file:manychat-giveaways-clone",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 78,
+        "nonEmptyLines": 67,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 2
+      },
+      "description": "Manychat giveaway cloning endpoint"
+    },
+    {
+      "id": "file:manychat-giveaways-deactivate",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 90,
+        "nonEmptyLines": 77,
+        "exports": 1,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Manychat giveaway deactivation with browser script execution"
+    },
+    {
+      "id": "file:manychat-giveaways-push",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/push/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 93,
+        "nonEmptyLines": 80,
+        "exports": 1,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Manychat giveaway push notification endpoint with browser script execution"
+    },
+    {
+      "id": "file:manychat-giveaways-sync",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 86,
+        "nonEmptyLines": 76,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 2
+      },
+      "description": "Manychat giveaway synchronization endpoint"
+    },
+    {
+      "id": "file:manychat-sync-data",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-sync/data/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 44,
+        "nonEmptyLines": 41,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat synchronization data retrieval endpoint"
+    },
+    {
+      "id": "file:manychat-sync-run",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-sync/run/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 23,
+        "nonEmptyLines": 20,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat synchronization execution endpoint"
+    },
+    {
+      "id": "file:manychat-sync-status",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-sync/status/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 21,
+        "nonEmptyLines": 18,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat synchronization status check endpoint"
+    },
+    {
+      "id": "file:manychat-webhook",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-webhook/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 23,
+        "nonEmptyLines": 20,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat webhook receiver endpoint"
+    },
+    {
+      "id": "file:mc-settings-logo",
+      "type": "file",
+      "name": "mission-control/app/api/mc-settings/logo/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 65,
+        "nonEmptyLines": 54,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mission Control logo settings management endpoint"
+    },
+    {
+      "id": "file:mc-settings-memory-cap",
+      "type": "file",
+      "name": "mission-control/app/api/mc-settings/memory-cap/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 71,
+        "nonEmptyLines": 62,
+        "exports": 2,
+        "functions": 2,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mission Control memory capacity settings endpoint with GET and POST"
+    },
+    {
+      "id": "file:mc-settings",
+      "type": "file",
+      "name": "mission-control/app/api/mc-settings/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 71,
+        "nonEmptyLines": 65,
+        "exports": 2,
+        "functions": 4,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mission Control settings core endpoint with load/save persistence"
+    },
+    {
+      "id": "file:meeting-notes",
+      "type": "file",
+      "name": "mission-control/app/api/meeting-notes/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 88,
+        "nonEmptyLines": 78,
+        "exports": 3,
+        "functions": 6,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Meeting notes API with CRUD operations (GET, POST, DELETE)"
+    },
+    {
+      "id": "file:mentorships-business",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/business/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 102,
+        "nonEmptyLines": 78,
+        "exports": 2,
+        "functions": 3,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client business information endpoint"
+    },
+    {
+      "id": "file:mentorships-payments",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/payments/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 77,
+        "nonEmptyLines": 62,
+        "exports": 1,
+        "functions": 3,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client payment tracking endpoint"
+    },
+    {
+      "id": "file:mentorships-photo",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/photo/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 37,
+        "nonEmptyLines": 32,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client photo retrieval endpoint"
+    },
+    {
+      "id": "file:mentorships-research",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/research/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 141,
+        "nonEmptyLines": 120,
+        "exports": 2,
+        "functions": 4,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client research document management endpoint"
+    },
+    {
+      "id": "file:mentorships-research-send",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 187,
+        "nonEmptyLines": 164,
+        "exports": 1,
+        "functions": 5,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Mentorship research document sending endpoint with PDF generation"
+    },
+    {
+      "id": "domain:linkedin",
+      "type": "domain",
+      "name": "LinkedIn Integration",
+      "category": "feature-domain",
+      "description": "LinkedIn content management, image processing, and carousel generation"
+    },
+    {
+      "id": "domain:manychat",
+      "type": "domain",
+      "name": "Manychat Integration",
+      "category": "feature-domain",
+      "description": "Manychat giveaway management and synchronization"
+    },
+    {
+      "id": "domain:machine-learning",
+      "type": "domain",
+      "name": "Machine Learning",
+      "category": "feature-domain",
+      "description": "ML dashboard monitoring, Ollama integration, and feedback tracking"
+    },
+    {
+      "id": "domain:mentorships",
+      "type": "domain",
+      "name": "Mentorship Management",
+      "category": "feature-domain",
+      "description": "Client relationship management including business info, payments, and research"
+    },
+    {
+      "id": "domain:settings",
+      "type": "domain",
+      "name": "Settings Management",
+      "category": "feature-domain",
+      "description": "Mission Control configuration and system settings"
+    },
+    {
+      "id": "domain:productivity",
+      "type": "domain",
+      "name": "Productivity Tools",
+      "category": "feature-domain",
+      "description": "Meeting notes and general productivity features"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:kling",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:linkedin-images-preview",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:linkedin-images",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:linkedin",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-giveaways-activate",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-giveaways-clone",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-giveaways-deactivate",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-giveaways-push",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-giveaways-sync",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-sync-data",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-sync-run",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-sync-status",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:manychat-webhook",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:ml-dashboard",
+      "target": "domain:machine-learning",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:ml-settings",
+      "target": "domain:machine-learning",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mc-settings-logo",
+      "target": "domain:settings",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mc-settings-memory-cap",
+      "target": "domain:settings",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mc-settings",
+      "target": "domain:settings",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mentorships-business",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mentorships-payments",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mentorships-photo",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mentorships-research",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:mentorships-research-send",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:meeting-notes",
+      "target": "domain:productivity",
+      "type": "belongs_to_domain",
+      "weight": 1
+    },
+    {
+      "source": "file:littlebird",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 0.5,
+      "reason": "Data source for LinkedIn content"
+    },
+    {
+      "source": "file:linkedin",
+      "target": "file:linkedin-images",
+      "type": "related",
+      "weight": 0.8,
+      "reason": "Shared LinkedIn domain, image processing dependency"
+    },
+    {
+      "source": "file:manychat-giveaways-activate",
+      "target": "file:manychat-giveaways-clone",
+      "type": "related",
+      "weight": 0.7,
+      "reason": "Both handle giveaway operations"
+    },
+    {
+      "source": "file:manychat-sync-run",
+      "target": "file:manychat-sync-data",
+      "type": "related",
+      "weight": 0.8,
+      "reason": "Sync orchestration and data retrieval"
+    },
+    {
+      "source": "file:mc-settings",
+      "target": "file:mc-settings-logo",
+      "type": "related",
+      "weight": 0.6,
+      "reason": "Settings hierarchy"
+    },
+    {
+      "source": "file:mc-settings",
+      "target": "file:mc-settings-memory-cap",
+      "type": "related",
+      "weight": 0.6,
+      "reason": "Settings hierarchy"
+    },
+    {
+      "source": "file:mentorships-research",
+      "target": "file:mentorships-research-send",
+      "type": "related",
+      "weight": 0.9,
+      "reason": "Research document workflow"
+    },
+    {
+      "source": "file:mentorships-business",
+      "target": "file:mentorships-payments",
+      "type": "related",
+      "weight": 0.7,
+      "reason": "Client relationship management"
+    },
+    {
+      "source": "file:meeting-notes",
+      "target": "domain:productivity",
+      "type": "primary_implementation",
+      "weight": 1
+    },
+    {
+      "source": "domain:mentorships",
+      "target": "file:mentorships-research-send",
+      "type": "key_feature",
+      "weight": 1
+    },
+    {
+      "source": "domain:machine-learning",
+      "target": "file:ml-dashboard",
+      "type": "key_feature",
+      "weight": 1
+    }
+  ],
+  "metadata": {
+    "filesAnalyzed": null,
+    "analysisTimestamp": "2026-07-10T00:00:00Z"
+  }
+}

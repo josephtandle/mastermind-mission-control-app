@@ -1,0 +1,888 @@
+{
+  "batchIndex": 87,
+  "batchName": "Batch 87 - Core Infrastructure and Initial API Routes",
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "totalFiles": 25,
+  "totalNodes": 0,
+  "totalEdges": 0,
+  "extractionStatus": "completed",
+  "extractionTimestamp": "2026-07-10T00:00:00Z",
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "name": "tooltip.tsx",
+      "type": "file",
+      "category": "component",
+      "language": "TypeScript JSX",
+      "path": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "metrics": {
+        "sizeLines": 58,
+        "functionCount": 4,
+        "exportCount": 4,
+        "complexity": "low"
+      },
+      "properties": {
+        "fileType": "React Component Library",
+        "domain": "UI Primitives",
+        "reusability": "high"
+      }
+    },
+    {
+      "id": "component:TooltipProvider",
+      "name": "TooltipProvider",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [8, 19],
+      "properties": {
+        "exported": true,
+        "role": "Context Provider"
+      }
+    },
+    {
+      "id": "component:Tooltip",
+      "name": "Tooltip",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [21, 25],
+      "properties": {
+        "exported": true,
+        "role": "Root Component"
+      }
+    },
+    {
+      "id": "component:TooltipTrigger",
+      "name": "TooltipTrigger",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [27, 31],
+      "properties": {
+        "exported": true,
+        "role": "Trigger Component"
+      }
+    },
+    {
+      "id": "component:TooltipContent",
+      "name": "TooltipContent",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [33, 55],
+      "properties": {
+        "exported": true,
+        "role": "Content Component"
+      }
+    },
+    {
+      "id": "file:CONTEXT.md",
+      "name": "CONTEXT.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "CONTEXT.md",
+      "metrics": {
+        "sizeLines": 18,
+        "sectionCount": 4,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Project context overview"
+      }
+    },
+    {
+      "id": "doc:mission-control-context",
+      "name": "Mastermind Mission Control",
+      "type": "documentation",
+      "category": "Project Overview",
+      "language": "Markdown",
+      "parentFile": "file:CONTEXT.md",
+      "properties": {
+        "section": "Root",
+        "topics": ["What This Is", "Key Files", "Status"]
+      }
+    },
+    {
+      "id": "file:docker/docker-compose.yml",
+      "name": "docker-compose.yml",
+      "type": "file",
+      "category": "config",
+      "language": "YAML",
+      "path": "docker/docker-compose.yml",
+      "metrics": {
+        "sizeLines": 75,
+        "sectionCount": 2,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Infrastructure",
+        "purpose": "Docker container orchestration"
+      }
+    },
+    {
+      "id": "file:docker/README.md",
+      "name": "docker/README.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "docker/README.md",
+      "metrics": {
+        "sizeLines": 69,
+        "sectionCount": 8,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Docker setup and operations guide"
+      }
+    },
+    {
+      "id": "file:INDEX.md",
+      "name": "INDEX.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "INDEX.md",
+      "metrics": {
+        "sizeLines": 24,
+        "sectionCount": 3,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Project file and directory index"
+      }
+    },
+    {
+      "id": "file:lib/db.json",
+      "name": "db.json",
+      "type": "file",
+      "category": "config",
+      "language": "JSON",
+      "path": "lib/db.json",
+      "metrics": {
+        "sizeLines": 362,
+        "sectionCount": 4,
+        "complexity": "high"
+      },
+      "properties": {
+        "domain": "Data Configuration",
+        "purpose": "Database schema and default data"
+      }
+    },
+    {
+      "id": "file:mission-control/.claude/CLAUDE.md",
+      "name": "CLAUDE.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "mission-control/.claude/CLAUDE.md",
+      "metrics": {
+        "sizeLines": 143,
+        "sectionCount": 12,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Mission Control build rules and patterns"
+      }
+    },
+    {
+      "id": "file:mission-control/.claude/RESKIN-PLAN.md",
+      "name": "RESKIN-PLAN.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "mission-control/.claude/RESKIN-PLAN.md",
+      "metrics": {
+        "sizeLines": 415,
+        "sectionCount": 47,
+        "complexity": "high"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Dark navy theme reskinning execution plan"
+      }
+    },
+    {
+      "id": "file:mission-control/.eslintrc.json",
+      "name": ".eslintrc.json",
+      "type": "file",
+      "category": "config",
+      "language": "JSON",
+      "path": "mission-control/.eslintrc.json",
+      "metrics": {
+        "sizeLines": 8,
+        "sectionCount": 2,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Configuration",
+        "purpose": "ESLint rules configuration"
+      }
+    },
+    {
+      "id": "api:_telegram",
+      "name": "_telegram",
+      "type": "api_module",
+      "category": "API Helper",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/_telegram.ts",
+      "metrics": {
+        "sizeLines": 38,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "API Infrastructure",
+        "purpose": "Telegram messaging integration",
+        "isHelper": true
+      }
+    },
+    {
+      "id": "function:sendTelegramViaSharedSender",
+      "name": "sendTelegramViaSharedSender",
+      "type": "function",
+      "category": "API Function",
+      "language": "TypeScript",
+      "parentFile": "api:_telegram",
+      "lineRange": [18, 37],
+      "properties": {
+        "exported": true,
+        "async": true,
+        "integrations": ["Telegram"]
+      }
+    },
+    {
+      "id": "api:affiliate-links",
+      "name": "affiliate-links",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/affiliate-links/route.ts",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "metrics": {
+        "sizeLines": 105,
+        "functionCount": 5,
+        "exportCount": 4,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Content Management",
+        "restful": true
+      }
+    },
+    {
+      "id": "api:agent-logs",
+      "name": "agent-logs",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/agent-logs/route.ts",
+      "methods": ["GET", "POST"],
+      "metrics": {
+        "sizeLines": 132,
+        "functionCount": 2,
+        "exportCount": 2,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Agent Infrastructure",
+        "purpose": "Log retrieval and storage"
+      }
+    },
+    {
+      "id": "api:agent-status",
+      "name": "agent-status",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/agent-status/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 25,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Agent Infrastructure",
+        "purpose": "Agent status monitoring"
+      }
+    },
+    {
+      "id": "api:airtable",
+      "name": "airtable",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/airtable/route.ts",
+      "methods": ["GET", "POST", "PATCH"],
+      "metrics": {
+        "sizeLines": 168,
+        "functionCount": 6,
+        "exportCount": 4,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Integrations",
+        "purpose": "Airtable API integration",
+        "externalService": "Airtable"
+      }
+    },
+    {
+      "id": "api:apollo/status",
+      "name": "apollo/status",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/apollo/status/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 20,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Integrations",
+        "purpose": "Apollo service status"
+      }
+    },
+    {
+      "id": "api:backlinks",
+      "name": "backlinks",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backlinks/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 77,
+        "functionCount": 2,
+        "exportCount": 1,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Content Analysis",
+        "purpose": "Backlink discovery and analysis"
+      }
+    },
+    {
+      "id": "api_domain:backups",
+      "name": "Backups Domain",
+      "type": "api_domain",
+      "category": "API Domain",
+      "properties": {
+        "purpose": "Backup management operations",
+        "operations": ["create", "delete", "download", "restore", "list", "generate-description", "update-description"]
+      }
+    },
+    {
+      "id": "api:backups/create",
+      "name": "backups/create",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/create/route.ts",
+      "methods": ["POST"],
+      "metrics": {
+        "sizeLines": 141,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "create"
+      }
+    },
+    {
+      "id": "api:backups/delete",
+      "name": "backups/delete",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/delete/route.ts",
+      "methods": ["POST"],
+      "metrics": {
+        "sizeLines": 57,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "delete"
+      }
+    },
+    {
+      "id": "api:backups/download",
+      "name": "backups/download",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/download/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 61,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "download"
+      }
+    },
+    {
+      "id": "api:backups/generate-description",
+      "name": "backups/generate-description",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/generate-description/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 38,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "generate-description"
+      }
+    },
+    {
+      "id": "api:backups/list",
+      "name": "backups/list",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/list/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 152,
+        "functionCount": 1,
+        "exportCount": 2,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "list"
+      }
+    },
+    {
+      "id": "api:backups/restore/progress",
+      "name": "backups/restore/progress",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/restore/progress/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 54,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "restore-progress",
+        "monitoring": true
+      }
+    },
+    {
+      "id": "api:backups/restore",
+      "name": "backups/restore",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/restore/route.ts",
+      "methods": ["POST"],
+      "metrics": {
+        "sizeLines": 226,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "high"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "restore",
+        "complexity_note": "Likely complex restoration logic"
+      }
+    },
+    {
+      "id": "api:backups/update-description",
+      "name": "backups/update-description",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/update-description/route.ts",
+      "methods": ["POST"],
+      "metrics": {
+        "sizeLines": 59,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "update-description"
+      }
+    },
+    {
+      "id": "api:bank-accounts",
+      "name": "bank-accounts",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/bank-accounts/route.ts",
+      "methods": ["GET"],
+      "metrics": {
+        "sizeLines": 45,
+        "functionCount": 2,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Financial",
+        "purpose": "Bank account retrieval"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:tooltip-exports",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "component:TooltipProvider",
+      "type": "contains",
+      "label": "exports"
+    },
+    {
+      "id": "edge:tooltip-exports-Tooltip",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "component:Tooltip",
+      "type": "contains",
+      "label": "exports"
+    },
+    {
+      "id": "edge:tooltip-exports-TooltipTrigger",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "component:TooltipTrigger",
+      "type": "contains",
+      "label": "exports"
+    },
+    {
+      "id": "edge:tooltip-exports-TooltipContent",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "component:TooltipContent",
+      "type": "contains",
+      "label": "exports"
+    },
+    {
+      "id": "edge:telegram-contains-function",
+      "source": "api:_telegram",
+      "target": "function:sendTelegramViaSharedSender",
+      "type": "contains",
+      "label": "exports"
+    },
+    {
+      "id": "edge:backups-domain-create",
+      "source": "api_domain:backups",
+      "target": "api:backups/create",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-delete",
+      "source": "api_domain:backups",
+      "target": "api:backups/delete",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-download",
+      "source": "api_domain:backups",
+      "target": "api:backups/download",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-generate",
+      "source": "api_domain:backups",
+      "target": "api:backups/generate-description",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-list",
+      "source": "api_domain:backups",
+      "target": "api:backups/list",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-restore-progress",
+      "source": "api_domain:backups",
+      "target": "api:backups/restore/progress",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-restore",
+      "source": "api_domain:backups",
+      "target": "api:backups/restore",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:backups-domain-update",
+      "source": "api_domain:backups",
+      "target": "api:backups/update-description",
+      "type": "contains",
+      "label": "operation"
+    },
+    {
+      "id": "edge:api-routes-infrastructure",
+      "source": "api:affiliate-links",
+      "target": "api:agent-logs",
+      "type": "semantic",
+      "label": "batch_group"
+    },
+    {
+      "id": "edge:api-routes-monitoring",
+      "source": "api:agent-logs",
+      "target": "api:agent-status",
+      "type": "semantic",
+      "label": "related_domain"
+    },
+    {
+      "id": "edge:api-integrations",
+      "source": "api:airtable",
+      "target": "api:apollo/status",
+      "type": "semantic",
+      "label": "integration_routes"
+    },
+    {
+      "id": "edge:content-management-routes",
+      "source": "api:affiliate-links",
+      "target": "api:backlinks",
+      "type": "semantic",
+      "label": "content_domain"
+    },
+    {
+      "id": "edge:telegram-integration",
+      "source": "function:sendTelegramViaSharedSender",
+      "target": "api:agent-logs",
+      "type": "semantic",
+      "label": "potential_usage",
+      "confidence": 0.3
+    },
+    {
+      "id": "edge:financial-services",
+      "source": "api:bank-accounts",
+      "target": "api_domain:backups",
+      "type": "semantic",
+      "label": "independent_domain"
+    },
+    {
+      "id": "edge:config-relationship",
+      "source": "file:mission-control/.claude/CLAUDE.md",
+      "target": "file:mission-control/.claude/RESKIN-PLAN.md",
+      "type": "related",
+      "label": "build_documentation"
+    },
+    {
+      "id": "edge:infrastructure-docs",
+      "source": "file:docker/docker-compose.yml",
+      "target": "file:docker/README.md",
+      "type": "related",
+      "label": "documentation"
+    },
+    {
+      "id": "edge:project-root-docs",
+      "source": "file:INDEX.md",
+      "target": "file:CONTEXT.md",
+      "type": "related",
+      "label": "project_documentation"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "cluster:api_infrastructure",
+      "name": "API Infrastructure",
+      "type": "functional_cluster",
+      "members": ["api:_telegram", "function:sendTelegramViaSharedSender"],
+      "domain": "API Helpers"
+    },
+    {
+      "id": "cluster:monitoring_apis",
+      "name": "Monitoring & Logging APIs",
+      "type": "functional_cluster",
+      "members": ["api:agent-logs", "api:agent-status"],
+      "domain": "Agent Infrastructure"
+    },
+    {
+      "id": "cluster:backup_operations",
+      "name": "Backup Operations",
+      "type": "functional_cluster",
+      "members": ["api_domain:backups", "api:backups/create", "api:backups/delete", "api:backups/download", "api:backups/generate-description", "api:backups/list", "api:backups/restore/progress", "api:backups/restore", "api:backups/update-description"],
+      "domain": "System Management"
+    },
+    {
+      "id": "cluster:integrations",
+      "name": "External Service Integrations",
+      "type": "functional_cluster",
+      "members": ["api:airtable", "api:apollo/status"],
+      "domain": "Third-party Services"
+    },
+    {
+      "id": "cluster:content_management",
+      "name": "Content Management",
+      "type": "functional_cluster",
+      "members": ["api:affiliate-links", "api:backlinks"],
+      "domain": "Content"
+    },
+    {
+      "id": "cluster:ui_components",
+      "name": "UI Primitives",
+      "type": "component_cluster",
+      "members": ["file:agents/task-runner/ui/src/components/ui/tooltip.tsx", "component:TooltipProvider", "component:Tooltip", "component:TooltipTrigger", "component:TooltipContent"],
+      "domain": "User Interface"
+    },
+    {
+      "id": "cluster:documentation",
+      "name": "Documentation & Configuration",
+      "type": "documentation_cluster",
+      "members": ["file:CONTEXT.md", "file:docker/docker-compose.yml", "file:docker/README.md", "file:INDEX.md", "file:lib/db.json", "file:mission-control/.claude/CLAUDE.md", "file:mission-control/.claude/RESKIN-PLAN.md", "file:mission-control/.eslintrc.json"],
+      "domain": "Project Documentation"
+    },
+    {
+      "id": "cluster:financial_services",
+      "name": "Financial Services",
+      "type": "functional_cluster",
+      "members": ["api:bank-accounts"],
+      "domain": "Financial Management"
+    }
+  ],
+  "domains": [
+    {
+      "id": "domain:api_infrastructure",
+      "name": "API Infrastructure",
+      "fileCount": 1,
+      "nodeCount": 2,
+      "purpose": "Core API helper functions and utilities"
+    },
+    {
+      "id": "domain:monitoring",
+      "name": "Agent Monitoring & Logging",
+      "fileCount": 2,
+      "nodeCount": 2,
+      "purpose": "Agent status tracking and log management"
+    },
+    {
+      "id": "domain:backup_management",
+      "name": "Backup Management",
+      "fileCount": 8,
+      "nodeCount": 9,
+      "purpose": "Complete backup lifecycle management"
+    },
+    {
+      "id": "domain:integrations",
+      "name": "External Integrations",
+      "fileCount": 2,
+      "nodeCount": 2,
+      "purpose": "Third-party service integrations"
+    },
+    {
+      "id": "domain:content_management",
+      "name": "Content Management",
+      "fileCount": 2,
+      "nodeCount": 2,
+      "purpose": "Affiliate links and backlink management"
+    },
+    {
+      "id": "domain:ui_components",
+      "name": "UI Components",
+      "fileCount": 1,
+      "nodeCount": 5,
+      "purpose": "Reusable React component library"
+    },
+    {
+      "id": "domain:project_config",
+      "name": "Project Configuration & Documentation",
+      "fileCount": 8,
+      "nodeCount": 8,
+      "purpose": "Project-level config and documentation"
+    },
+    {
+      "id": "domain:financial_services",
+      "name": "Financial Services",
+      "fileCount": 1,
+      "nodeCount": 1,
+      "purpose": "Bank account and financial data management"
+    }
+  ],
+  "statistics": {
+    "totalFiles": 25,
+    "filesByCategory": {
+      "source": 15,
+      "component": 1,
+      "docs": 7,
+      "config": 2
+    },
+    "filesByLanguage": {
+      "TypeScript": 15,
+      "Markdown": 7,
+      "JSON": 2,
+      "YAML": 1
+    },
+    "apiRouteCount": 14,
+    "componentCount": 5,
+    "totalLinesOfCode": 2562,
+    "averageLinesPerFile": 102.48,
+    "complexityDistribution": {
+      "low": 13,
+      "medium": 11,
+      "high": 2
+    }
+  },
+  "relationships": {
+    "cross_file_dependencies": [
+      {
+        "from": "api:_telegram",
+        "to": "api:agent-logs",
+        "type": "potential_usage",
+        "strength": "weak",
+        "note": "Telegram integration likely used for agent notifications"
+      }
+    ],
+    "domain_groups": [
+      {
+        "domains": ["domain:monitoring", "domain:backup_management"],
+        "relationship": "operational_systems",
+        "description": "Both support system-level operations"
+      },
+      {
+        "domains": ["domain:integrations", "domain:content_management"],
+        "relationship": "external_connections",
+        "description": "Both connect to external systems"
+      }
+    ]
+  },
+  "metadata": {
+    "batchCreatedAt": "2026-07-10T00:00:00Z",
+    "extractionMethod": "Understand Anything File Analyzer",
+    "formatVersion": "1.0",
+    "nextBatches": [89, 93, 94]
+  }
+}

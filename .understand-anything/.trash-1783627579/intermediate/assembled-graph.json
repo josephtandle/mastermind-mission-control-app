@@ -1,0 +1,2978 @@
+{
+  "nodes": [
+    {
+      "id": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "name": "tooltip.tsx",
+      "type": "file",
+      "category": "component",
+      "language": "TypeScript JSX",
+      "path": "agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "metrics": {
+        "sizeLines": 58,
+        "functionCount": 4,
+        "exportCount": 4,
+        "complexity": "low"
+      },
+      "properties": {
+        "fileType": "React Component Library",
+        "domain": "UI Primitives",
+        "reusability": "high"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:component:TooltipProvider",
+      "name": "TooltipProvider",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [
+        8,
+        19
+      ],
+      "properties": {
+        "exported": true,
+        "role": "Context Provider"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:component:Tooltip",
+      "name": "Tooltip",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [
+        21,
+        25
+      ],
+      "properties": {
+        "exported": true,
+        "role": "Root Component"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:component:TooltipTrigger",
+      "name": "TooltipTrigger",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [
+        27,
+        31
+      ],
+      "properties": {
+        "exported": true,
+        "role": "Trigger Component"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:component:TooltipContent",
+      "name": "TooltipContent",
+      "type": "component",
+      "category": "React Component",
+      "language": "TypeScript JSX",
+      "parentFile": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "lineRange": [
+        33,
+        55
+      ],
+      "properties": {
+        "exported": true,
+        "role": "Content Component"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:CONTEXT.md",
+      "name": "CONTEXT.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "CONTEXT.md",
+      "metrics": {
+        "sizeLines": 18,
+        "sectionCount": 4,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Project context overview"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:doc:mission-control-context",
+      "name": "Mastermind Mission Control",
+      "type": "documentation",
+      "category": "Project Overview",
+      "language": "Markdown",
+      "parentFile": "file:CONTEXT.md",
+      "properties": {
+        "section": "Root",
+        "topics": [
+          "What This Is",
+          "Key Files",
+          "Status"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docker/docker-compose.yml",
+      "name": "docker-compose.yml",
+      "type": "file",
+      "category": "config",
+      "language": "YAML",
+      "path": "docker/docker-compose.yml",
+      "metrics": {
+        "sizeLines": 75,
+        "sectionCount": 2,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Infrastructure",
+        "purpose": "Docker container orchestration"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:docker/README.md",
+      "name": "docker/README.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "docker/README.md",
+      "metrics": {
+        "sizeLines": 69,
+        "sectionCount": 8,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Docker setup and operations guide"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:INDEX.md",
+      "name": "INDEX.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "INDEX.md",
+      "metrics": {
+        "sizeLines": 24,
+        "sectionCount": 3,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Project file and directory index"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:lib/db.json",
+      "name": "db.json",
+      "type": "file",
+      "category": "config",
+      "language": "JSON",
+      "path": "lib/db.json",
+      "metrics": {
+        "sizeLines": 362,
+        "sectionCount": 4,
+        "complexity": "high"
+      },
+      "properties": {
+        "domain": "Data Configuration",
+        "purpose": "Database schema and default data"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mission-control/.claude/CLAUDE.md",
+      "name": "CLAUDE.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "mission-control/.claude/CLAUDE.md",
+      "metrics": {
+        "sizeLines": 143,
+        "sectionCount": 12,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Mission Control build rules and patterns"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mission-control/.claude/RESKIN-PLAN.md",
+      "name": "RESKIN-PLAN.md",
+      "type": "file",
+      "category": "docs",
+      "language": "Markdown",
+      "path": "mission-control/.claude/RESKIN-PLAN.md",
+      "metrics": {
+        "sizeLines": 415,
+        "sectionCount": 47,
+        "complexity": "high"
+      },
+      "properties": {
+        "domain": "Documentation",
+        "purpose": "Dark navy theme reskinning execution plan"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mission-control/.eslintrc.json",
+      "name": ".eslintrc.json",
+      "type": "file",
+      "category": "config",
+      "language": "JSON",
+      "path": "mission-control/.eslintrc.json",
+      "metrics": {
+        "sizeLines": 8,
+        "sectionCount": 2,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Configuration",
+        "purpose": "ESLint rules configuration"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:_telegram",
+      "name": "_telegram",
+      "type": "api_module",
+      "category": "API Helper",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/_telegram.ts",
+      "metrics": {
+        "sizeLines": 38,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "API Infrastructure",
+        "purpose": "Telegram messaging integration",
+        "isHelper": true
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:sendTelegramViaSharedSender",
+      "name": "sendTelegramViaSharedSender",
+      "type": "function",
+      "category": "API Function",
+      "language": "TypeScript",
+      "parentFile": "api:_telegram",
+      "lineRange": [
+        18,
+        37
+      ],
+      "properties": {
+        "exported": true,
+        "async": true,
+        "integrations": [
+          "Telegram"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:affiliate-links",
+      "name": "affiliate-links",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/affiliate-links/route.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "metrics": {
+        "sizeLines": 105,
+        "functionCount": 5,
+        "exportCount": 4,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Content Management",
+        "restful": true
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:agent-logs",
+      "name": "agent-logs",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/agent-logs/route.ts",
+      "methods": [
+        "GET",
+        "POST"
+      ],
+      "metrics": {
+        "sizeLines": 132,
+        "functionCount": 2,
+        "exportCount": 2,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Agent Infrastructure",
+        "purpose": "Log retrieval and storage"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:agent-status",
+      "name": "agent-status",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/agent-status/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 25,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Agent Infrastructure",
+        "purpose": "Agent status monitoring"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:airtable",
+      "name": "airtable",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/airtable/route.ts",
+      "methods": [
+        "GET",
+        "POST",
+        "PATCH"
+      ],
+      "metrics": {
+        "sizeLines": 168,
+        "functionCount": 6,
+        "exportCount": 4,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Integrations",
+        "purpose": "Airtable API integration",
+        "externalService": "Airtable"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:apollo/status",
+      "name": "apollo/status",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/apollo/status/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 20,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Integrations",
+        "purpose": "Apollo service status"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backlinks",
+      "name": "backlinks",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backlinks/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 77,
+        "functionCount": 2,
+        "exportCount": 1,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Content Analysis",
+        "purpose": "Backlink discovery and analysis"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api_domain:backups",
+      "name": "Backups Domain",
+      "type": "api_domain",
+      "category": "API Domain",
+      "properties": {
+        "purpose": "Backup management operations",
+        "operations": [
+          "create",
+          "delete",
+          "download",
+          "restore",
+          "list",
+          "generate-description",
+          "update-description"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/create",
+      "name": "backups/create",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/create/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "metrics": {
+        "sizeLines": 141,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "create"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/delete",
+      "name": "backups/delete",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/delete/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "metrics": {
+        "sizeLines": 57,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "delete"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/download",
+      "name": "backups/download",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/download/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 61,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "download"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/generate-description",
+      "name": "backups/generate-description",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/generate-description/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 38,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "generate-description"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/list",
+      "name": "backups/list",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/list/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 152,
+        "functionCount": 1,
+        "exportCount": 2,
+        "complexity": "medium"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "list"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/restore/progress",
+      "name": "backups/restore/progress",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/restore/progress/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 54,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "restore-progress",
+        "monitoring": true
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/restore",
+      "name": "backups/restore",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/restore/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "metrics": {
+        "sizeLines": 226,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "high"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "restore",
+        "complexity_note": "Likely complex restoration logic"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:backups/update-description",
+      "name": "backups/update-description",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/backups/update-description/route.ts",
+      "methods": [
+        "POST"
+      ],
+      "metrics": {
+        "sizeLines": 59,
+        "functionCount": 1,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Backup Management",
+        "operation": "update-description"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:api:bank-accounts",
+      "name": "bank-accounts",
+      "type": "api_route",
+      "category": "Next.js API Route",
+      "language": "TypeScript",
+      "path": "mission-control/app/api/bank-accounts/route.ts",
+      "methods": [
+        "GET"
+      ],
+      "metrics": {
+        "sizeLines": 45,
+        "functionCount": 2,
+        "exportCount": 1,
+        "complexity": "low"
+      },
+      "properties": {
+        "domain": "Financial",
+        "purpose": "Bank account retrieval"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "module:batch-89-claude-terminal-module",
+      "type": "module",
+      "label": "Claude Terminal Module",
+      "path": "mission-control/app/api/claude-terminal",
+      "description": "API endpoints for Claude Terminal functionality including status, stopping, transcription, and undo operations",
+      "properties": {
+        "category": "api-module",
+        "domain": "claude-terminal",
+        "fileCount": 4
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "module:batch-89-clients-module",
+      "type": "module",
+      "label": "Clients Management Module",
+      "path": "mission-control/app/api/clients",
+      "description": "API endpoints for managing client data and individual client records",
+      "properties": {
+        "category": "api-module",
+        "domain": "clients",
+        "fileCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "module:batch-89-cohorts-module",
+      "type": "module",
+      "label": "Cohorts Management Module",
+      "path": "mission-control/app/api/cohorts",
+      "description": "Comprehensive API for cohorts management including attendance, blog, connections, intake, participants, and more",
+      "properties": {
+        "category": "api-module",
+        "domain": "cohorts",
+        "fileCount": 19
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-claude-terminal-status",
+      "type": "file",
+      "label": "claude-terminal/status/route.ts",
+      "path": "mission-control/app/api/claude-terminal/status/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 16,
+        "functionCount": 1,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-claude-terminal-stop",
+      "type": "file",
+      "label": "claude-terminal/stop/route.ts",
+      "path": "mission-control/app/api/claude-terminal/stop/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 20,
+        "functionCount": 1,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-claude-terminal-transcribe",
+      "type": "file",
+      "label": "claude-terminal/transcribe/route.ts",
+      "path": "mission-control/app/api/claude-terminal/transcribe/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 126,
+        "functionCount": 4,
+        "exportCount": 2,
+        "hasHelpers": true
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-claude-terminal-undo",
+      "type": "file",
+      "label": "claude-terminal/undo/route.ts",
+      "path": "mission-control/app/api/claude-terminal/undo/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 59,
+        "functionCount": 2,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-clients-clientId",
+      "type": "file",
+      "label": "clients/[clientId]/route.ts",
+      "path": "mission-control/app/api/clients/[clientId]/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 59,
+        "functionCount": 4,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-clients-route",
+      "type": "file",
+      "label": "clients/route.ts",
+      "path": "mission-control/app/api/clients/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 61,
+        "functionCount": 4,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-utils",
+      "type": "file",
+      "label": "cohorts/_utils.ts",
+      "path": "mission-control/app/api/cohorts/_utils.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 53,
+        "functionCount": 3,
+        "exportCount": 1,
+        "isUtility": true
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-attendance",
+      "type": "file",
+      "label": "cohorts/attendance/route.ts",
+      "path": "mission-control/app/api/cohorts/attendance/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 127,
+        "functionCount": 4,
+        "exportCount": 3
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-blog",
+      "type": "file",
+      "label": "cohorts/blog/route.ts",
+      "path": "mission-control/app/api/cohorts/blog/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 281,
+        "functionCount": 5,
+        "exportCount": 4
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-blog-regenerate",
+      "type": "file",
+      "label": "cohorts/blog/regenerate-image/route.ts",
+      "path": "mission-control/app/api/cohorts/blog/regenerate-image/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 159,
+        "functionCount": 2,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-blog-set-cover",
+      "type": "file",
+      "label": "cohorts/blog/set-cover/route.ts",
+      "path": "mission-control/app/api/cohorts/blog/set-cover/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 84,
+        "functionCount": 2,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-cohorts",
+      "type": "file",
+      "label": "cohorts/cohorts/route.ts",
+      "path": "mission-control/app/api/cohorts/cohorts/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 93,
+        "functionCount": 4,
+        "exportCount": 3
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-connections",
+      "type": "file",
+      "label": "cohorts/connections/route.ts",
+      "path": "mission-control/app/api/cohorts/connections/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 168,
+        "functionCount": 6,
+        "exportCount": 4
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-discover",
+      "type": "file",
+      "label": "cohorts/discover/route.ts",
+      "path": "mission-control/app/api/cohorts/discover/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 23,
+        "functionCount": 1,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-discoveries",
+      "type": "file",
+      "label": "cohorts/discoveries/route.ts",
+      "path": "mission-control/app/api/cohorts/discoveries/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 220,
+        "functionCount": 4,
+        "exportCount": 3
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-discovery-instructions",
+      "type": "file",
+      "label": "cohorts/discovery-instructions/route.ts",
+      "path": "mission-control/app/api/cohorts/discovery-instructions/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 35,
+        "functionCount": 2,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-favor-bank",
+      "type": "file",
+      "label": "cohorts/favor-bank/route.ts",
+      "path": "mission-control/app/api/cohorts/favor-bank/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 162,
+        "functionCount": 5,
+        "exportCount": 2
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-generate",
+      "type": "file",
+      "label": "cohorts/generate/route.ts",
+      "path": "mission-control/app/api/cohorts/generate/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 23,
+        "functionCount": 1,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-intake",
+      "type": "file",
+      "label": "cohorts/intake/route.ts",
+      "path": "mission-control/app/api/cohorts/intake/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 221,
+        "functionCount": 9,
+        "exportCount": 3
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-offers",
+      "type": "file",
+      "label": "cohorts/offers/route.ts",
+      "path": "mission-control/app/api/cohorts/offers/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 94,
+        "functionCount": 4,
+        "exportCount": 3
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-onboarding",
+      "type": "file",
+      "label": "cohorts/onboarding-process/route.ts",
+      "path": "mission-control/app/api/cohorts/onboarding-process/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 270,
+        "functionCount": 3,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-onboarding-templates",
+      "type": "file",
+      "label": "cohorts/onboarding-process/templates/route.ts",
+      "path": "mission-control/app/api/cohorts/onboarding-process/templates/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 52,
+        "functionCount": 1,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-participants",
+      "type": "file",
+      "label": "cohorts/participants/route.ts",
+      "path": "mission-control/app/api/cohorts/participants/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 263,
+        "functionCount": 7,
+        "exportCount": 4
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-publish",
+      "type": "file",
+      "label": "cohorts/publish/route.ts",
+      "path": "mission-control/app/api/cohorts/publish/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 64,
+        "functionCount": 2,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-file-cohorts-questions-answers",
+      "type": "file",
+      "label": "cohorts/questions/generate-answers/route.ts",
+      "path": "mission-control/app/api/cohorts/questions/generate-answers/route.ts",
+      "properties": {
+        "language": "TypeScript",
+        "category": "source",
+        "sizeLines": 66,
+        "functionCount": 2,
+        "exportCount": 1
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-route-handler-type-get",
+      "type": "pattern",
+      "label": "HTTP GET Handler Pattern",
+      "description": "GET route handler endpoints for fetching data",
+      "properties": {
+        "pattern": "HTTP GET",
+        "frequency": 12,
+        "usage": "data retrieval"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-route-handler-type-post",
+      "type": "pattern",
+      "label": "HTTP POST Handler Pattern",
+      "description": "POST route handler endpoints for creating data",
+      "properties": {
+        "pattern": "HTTP POST",
+        "frequency": 19,
+        "usage": "data creation"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-route-handler-type-put",
+      "type": "pattern",
+      "label": "HTTP PUT Handler Pattern",
+      "description": "PUT route handler endpoints for replacing data",
+      "properties": {
+        "pattern": "HTTP PUT",
+        "frequency": 6,
+        "usage": "data replacement"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-route-handler-type-patch",
+      "type": "pattern",
+      "label": "HTTP PATCH Handler Pattern",
+      "description": "PATCH route handler endpoints for partial updates",
+      "properties": {
+        "pattern": "HTTP PATCH",
+        "frequency": 6,
+        "usage": "data partial update"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-route-handler-type-delete",
+      "type": "pattern",
+      "label": "HTTP DELETE Handler Pattern",
+      "description": "DELETE route handler endpoints for removing data",
+      "properties": {
+        "pattern": "HTTP DELETE",
+        "frequency": 8,
+        "usage": "data deletion"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-utility-pattern-getdb",
+      "type": "pattern",
+      "label": "getDb() Utility Pattern",
+      "description": "Database initialization and access pattern used across cohorts and other modules",
+      "properties": {
+        "pattern": "database access",
+        "frequency": 14,
+        "modules": [
+          "cohorts",
+          "clients"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:batch-89-utility-pattern-table-init",
+      "type": "pattern",
+      "label": "initTables() Database Schema Pattern",
+      "description": "Database table initialization pattern for schema setup",
+      "properties": {
+        "pattern": "schema initialization",
+        "frequency": 5,
+        "modules": [
+          "cohorts"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:kling",
+      "type": "file",
+      "name": "mission-control/app/api/kling/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 30,
+        "nonEmptyLines": 27,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Kling video generation API endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:linkedin-images-preview",
+      "type": "file",
+      "name": "mission-control/app/api/linkedin-images/preview/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 51,
+        "nonEmptyLines": 43,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LinkedIn image preview endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:linkedin-images",
+      "type": "file",
+      "name": "mission-control/app/api/linkedin-images/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 177,
+        "nonEmptyLines": 152,
+        "exports": 2,
+        "functions": 3,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LinkedIn image management and processing API with GET and POST endpoints",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:linkedin",
+      "type": "file",
+      "name": "mission-control/app/api/linkedin/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 545,
+        "nonEmptyLines": 486,
+        "exports": 2,
+        "functions": 9,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LinkedIn content management and carousel generation API with file handling and state persistence",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:littlebird",
+      "type": "file",
+      "name": "mission-control/app/api/littlebird/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 129,
+        "nonEmptyLines": 115,
+        "exports": 2,
+        "functions": 4,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "LittleBird news and data API integration with token management and testing",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:ml-dashboard",
+      "type": "file",
+      "name": "mission-control/app/api/machine-learning/dashboard/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 359,
+        "nonEmptyLines": 326,
+        "exports": 1,
+        "functions": 8,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Machine learning dashboard with daemon monitoring, Ollama integration, feedback and knowledge stats",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:ml-settings",
+      "type": "file",
+      "name": "mission-control/app/api/machine-learning/settings/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 73,
+        "nonEmptyLines": 60,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Machine learning settings configuration API",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-giveaways-activate",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/activate/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 90,
+        "nonEmptyLines": 77,
+        "exports": 1,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Manychat giveaway activation with browser script execution",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-giveaways-clone",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/clone/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 78,
+        "nonEmptyLines": 67,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 2
+      },
+      "description": "Manychat giveaway cloning endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-giveaways-deactivate",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/deactivate/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 90,
+        "nonEmptyLines": 77,
+        "exports": 1,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Manychat giveaway deactivation with browser script execution",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-giveaways-push",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/push/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 93,
+        "nonEmptyLines": 80,
+        "exports": 1,
+        "functions": 2,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Manychat giveaway push notification endpoint with browser script execution",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-giveaways-sync",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-giveaways/sync/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 86,
+        "nonEmptyLines": 76,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 2
+      },
+      "description": "Manychat giveaway synchronization endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-sync-data",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-sync/data/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 44,
+        "nonEmptyLines": 41,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat synchronization data retrieval endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-sync-run",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-sync/run/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 23,
+        "nonEmptyLines": 20,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat synchronization execution endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-sync-status",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-sync/status/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 21,
+        "nonEmptyLines": 18,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat synchronization status check endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:manychat-webhook",
+      "type": "file",
+      "name": "mission-control/app/api/manychat-webhook/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 23,
+        "nonEmptyLines": 20,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Manychat webhook receiver endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mc-settings-logo",
+      "type": "file",
+      "name": "mission-control/app/api/mc-settings/logo/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 65,
+        "nonEmptyLines": 54,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mission Control logo settings management endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mc-settings-memory-cap",
+      "type": "file",
+      "name": "mission-control/app/api/mc-settings/memory-cap/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 71,
+        "nonEmptyLines": 62,
+        "exports": 2,
+        "functions": 2,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mission Control memory capacity settings endpoint with GET and POST",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mc-settings",
+      "type": "file",
+      "name": "mission-control/app/api/mc-settings/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 71,
+        "nonEmptyLines": 65,
+        "exports": 2,
+        "functions": 4,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mission Control settings core endpoint with load/save persistence",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:meeting-notes",
+      "type": "file",
+      "name": "mission-control/app/api/meeting-notes/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 88,
+        "nonEmptyLines": 78,
+        "exports": 3,
+        "functions": 6,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Meeting notes API with CRUD operations (GET, POST, DELETE)",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mentorships-business",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/business/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 102,
+        "nonEmptyLines": 78,
+        "exports": 2,
+        "functions": 3,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client business information endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mentorships-payments",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/payments/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 77,
+        "nonEmptyLines": 62,
+        "exports": 1,
+        "functions": 3,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client payment tracking endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mentorships-photo",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/photo/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 37,
+        "nonEmptyLines": 32,
+        "exports": 1,
+        "functions": 1,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client photo retrieval endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mentorships-research",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/research/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 141,
+        "nonEmptyLines": 120,
+        "exports": 2,
+        "functions": 4,
+        "classes": 0,
+        "imports": 0
+      },
+      "description": "Mentorship client research document management endpoint",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:mentorships-research-send",
+      "type": "file",
+      "name": "mission-control/app/api/mentorships/[clientId]/research/send/route.ts",
+      "category": "source",
+      "metadata": {
+        "totalLines": 187,
+        "nonEmptyLines": 164,
+        "exports": 1,
+        "functions": 5,
+        "classes": 0,
+        "imports": 1
+      },
+      "description": "Mentorship research document sending endpoint with PDF generation",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:linkedin",
+      "type": "domain",
+      "name": "LinkedIn Integration",
+      "category": "feature-domain",
+      "description": "LinkedIn content management, image processing, and carousel generation",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:manychat",
+      "type": "domain",
+      "name": "Manychat Integration",
+      "category": "feature-domain",
+      "description": "Manychat giveaway management and synchronization",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:machine-learning",
+      "type": "domain",
+      "name": "Machine Learning",
+      "category": "feature-domain",
+      "description": "ML dashboard monitoring, Ollama integration, and feedback tracking",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:mentorships",
+      "type": "domain",
+      "name": "Mentorship Management",
+      "category": "feature-domain",
+      "description": "Client relationship management including business info, payments, and research",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:settings",
+      "type": "domain",
+      "name": "Settings Management",
+      "category": "feature-domain",
+      "description": "Mission Control configuration and system settings",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:productivity",
+      "type": "domain",
+      "name": "Productivity Tools",
+      "category": "feature-domain",
+      "description": "Meeting notes and general productivity features",
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:mentorships-domain",
+      "type": "domain",
+      "label": "Mentorships",
+      "description": "Mentorship management including client sessions, PDFs, and Stripe integration",
+      "metadata": {
+        "fileCount": 8,
+        "complexity": "high",
+        "criticality": "high"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:online-program-domain",
+      "type": "domain",
+      "label": "Online Program",
+      "description": "Online program management including blog, attendance, connections, discoveries, and intake",
+      "metadata": {
+        "fileCount": 13,
+        "complexity": "high",
+        "criticality": "high"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "domain:utility-domain",
+      "type": "domain",
+      "label": "Utilities & Support",
+      "description": "Miscellaneous utilities and support APIs",
+      "metadata": {
+        "fileCount": 4,
+        "complexity": "medium",
+        "criticality": "medium"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-clientid-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 70,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-session-pdf-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 274,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 3,
+        "complexity": "high",
+        "features": [
+          "PDF generation",
+          "date formatting"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-session-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 123,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 2,
+        "features": [
+          "session retrieval",
+          "session updates"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-session-send-pdf-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/send-pdf/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 124,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "PDF delivery"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-session-summarize-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/[sessionId]/summarize/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 101,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "session summarization",
+          "AI-generated summaries"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-sessions-route",
+      "type": "file",
+      "label": "mentorships/[clientId]/sessions/route.ts",
+      "path": "mission-control/app/api/mentorships/[clientId]/sessions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 109,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 3,
+        "hasHelpers": true,
+        "features": [
+          "session creation"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-route",
+      "type": "file",
+      "label": "mentorships/route.ts",
+      "path": "mission-control/app/api/mentorships/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 89,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 2,
+        "features": [
+          "mentorship listing",
+          "mentorship creation"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-mentorships-stripe-sync-route",
+      "type": "file",
+      "label": "mentorships/stripe-sync/route.ts",
+      "path": "mission-control/app/api/mentorships/stripe-sync/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 139,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "Stripe integration",
+          "payment synchronization"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-meta-ads-route",
+      "type": "file",
+      "label": "meta-ads/route.ts",
+      "path": "mission-control/app/api/meta-ads/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 58,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "Meta Ads API",
+          "caching"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-nav-state-route",
+      "type": "file",
+      "label": "nav-state/route.ts",
+      "path": "mission-control/app/api/nav-state/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 35,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 2,
+        "features": [
+          "navigation state management"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-nightcrawler-route",
+      "type": "file",
+      "label": "nightcrawler/route.ts",
+      "path": "mission-control/app/api/nightcrawler/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 154,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "data crawling",
+          "file operations",
+          "JSON handling"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-office-lollipops-route",
+      "type": "file",
+      "label": "office/lollipops/route.ts",
+      "path": "mission-control/app/api/office/lollipops/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 53,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "office management"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-utils",
+      "type": "file",
+      "label": "online-program/_utils.ts",
+      "path": "mission-control/app/api/online-program/_utils.ts",
+      "language": "TypeScript",
+      "sizeLines": 54,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "checkQueueAlert"
+        ],
+        "functionCount": 3,
+        "hasHelpers": true,
+        "features": [
+          "Telegram alerts",
+          "environment configuration",
+          "queue monitoring"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-attendance-route",
+      "type": "file",
+      "label": "online-program/attendance/route.ts",
+      "path": "mission-control/app/api/online-program/attendance/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 128,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "DELETE"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "attendance tracking"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-blog-regen-route",
+      "type": "file",
+      "label": "online-program/blog/regenerate-image/route.ts",
+      "path": "mission-control/app/api/online-program/blog/regenerate-image/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 132,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "image generation",
+          "agent execution"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-blog-route",
+      "type": "file",
+      "label": "online-program/blog/route.ts",
+      "path": "mission-control/app/api/online-program/blog/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 272,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "functionCount": 5,
+        "hasHelpers": true,
+        "complexity": "high",
+        "features": [
+          "blog CRUD operations"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-blog-set-cover-route",
+      "type": "file",
+      "label": "online-program/blog/set-cover/route.ts",
+      "path": "mission-control/app/api/online-program/blog/set-cover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 85,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 2,
+        "hasHelpers": true,
+        "features": [
+          "Unsplash integration",
+          "cover image management"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-connections-route",
+      "type": "file",
+      "label": "online-program/connections/route.ts",
+      "path": "mission-control/app/api/online-program/connections/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 169,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "PATCH",
+          "DELETE"
+        ],
+        "functionCount": 6,
+        "hasHelpers": true,
+        "complexity": "high",
+        "features": [
+          "connection management",
+          "data formatting"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-discover-route",
+      "type": "file",
+      "label": "online-program/discover/route.ts",
+      "path": "mission-control/app/api/online-program/discover/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "discovery triggering"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-discoveries-route",
+      "type": "file",
+      "label": "online-program/discoveries/route.ts",
+      "path": "mission-control/app/api/online-program/discoveries/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 191,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "DELETE"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "discoveries CRUD"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-discovery-instructions-route",
+      "type": "file",
+      "label": "online-program/discovery-instructions/route.ts",
+      "path": "mission-control/app/api/online-program/discovery-instructions/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 36,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "PUT"
+        ],
+        "functionCount": 2,
+        "features": [
+          "discovery configuration"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-favor-bank-route",
+      "type": "file",
+      "label": "online-program/favor-bank/route.ts",
+      "path": "mission-control/app/api/online-program/favor-bank/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 92,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST"
+        ],
+        "functionCount": 3,
+        "hasHelpers": true,
+        "features": [
+          "favor bank management"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-generate-route",
+      "type": "file",
+      "label": "online-program/generate/route.ts",
+      "path": "mission-control/app/api/online-program/generate/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 24,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "POST"
+        ],
+        "functionCount": 1,
+        "features": [
+          "content generation"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-intake-route",
+      "type": "file",
+      "label": "online-program/intake/route.ts",
+      "path": "mission-control/app/api/online-program/intake/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 133,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "PATCH"
+        ],
+        "functionCount": 7,
+        "hasHelpers": true,
+        "complexity": "high",
+        "features": [
+          "data intake",
+          "validation",
+          "phone normalization",
+          "participant ID resolution"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:file-online-program-offers-route",
+      "type": "file",
+      "label": "online-program/offers/route.ts",
+      "path": "mission-control/app/api/online-program/offers/route.ts",
+      "language": "TypeScript",
+      "sizeLines": 95,
+      "fileCategory": "source",
+      "metadata": {
+        "exports": [
+          "GET",
+          "POST",
+          "DELETE"
+        ],
+        "functionCount": 4,
+        "hasHelpers": true,
+        "features": [
+          "offer management"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "concept:api-http-methods",
+      "type": "concept",
+      "label": "HTTP Methods",
+      "description": "REST API HTTP methods used across batch 94",
+      "metadata": {
+        "methods": [
+          "GET",
+          "POST",
+          "PUT",
+          "PATCH",
+          "DELETE"
+        ],
+        "frequency": "high"
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:db-access-pattern",
+      "type": "pattern",
+      "label": "Database Access",
+      "description": "Pattern of database read/write operations across API routes",
+      "metadata": {
+        "frequency": "high",
+        "files": 15,
+        "operations": [
+          "getDb",
+          "readDB",
+          "writeDB"
+        ]
+      },
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:helper-function-pattern",
+      "type": "pattern",
+      "label": "Helper Functions",
+      "description": "Utility helper functions for common operations",
+      "metadata": {
+        "frequency": "high",
+        "examples": [
+          "formatDate",
+          "formatConnection",
+          "runAgent",
+          "ensureDir",
+          "readJsonSafe"
+        ]
+      },
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:tooltip-exports",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "file:component:TooltipProvider",
+      "type": "contains",
+      "label": "exports",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:tooltip-exports-Tooltip",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "file:component:Tooltip",
+      "type": "contains",
+      "label": "exports",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:tooltip-exports-TooltipTrigger",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "file:component:TooltipTrigger",
+      "type": "contains",
+      "label": "exports",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:tooltip-exports-TooltipContent",
+      "source": "file:agents/task-runner/ui/src/components/ui/tooltip.tsx",
+      "target": "file:component:TooltipContent",
+      "type": "contains",
+      "label": "exports",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:telegram-contains-function",
+      "source": "file:api:_telegram",
+      "target": "function:sendTelegramViaSharedSender",
+      "type": "contains",
+      "label": "exports",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-create",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/create",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-delete",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/delete",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-download",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/download",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-generate",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/generate-description",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-list",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/list",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-restore-progress",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/restore/progress",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-restore",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/restore",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:backups-domain-update",
+      "source": "file:api_domain:backups",
+      "target": "file:api:backups/update-description",
+      "type": "contains",
+      "label": "operation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:api-routes-infrastructure",
+      "source": "file:api:affiliate-links",
+      "target": "file:api:agent-logs",
+      "type": "semantic",
+      "label": "batch_group",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:api-routes-monitoring",
+      "source": "file:api:agent-logs",
+      "target": "file:api:agent-status",
+      "type": "semantic",
+      "label": "related_domain",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:api-integrations",
+      "source": "file:api:airtable",
+      "target": "file:api:apollo/status",
+      "type": "semantic",
+      "label": "integration_routes",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:content-management-routes",
+      "source": "file:api:affiliate-links",
+      "target": "file:api:backlinks",
+      "type": "semantic",
+      "label": "content_domain",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:telegram-integration",
+      "source": "function:sendTelegramViaSharedSender",
+      "target": "file:api:agent-logs",
+      "type": "semantic",
+      "label": "potential_usage",
+      "confidence": 0.3,
+      "direction": "forward"
+    },
+    {
+      "id": "edge:financial-services",
+      "source": "file:api:bank-accounts",
+      "target": "file:api_domain:backups",
+      "type": "semantic",
+      "label": "independent_domain",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:config-relationship",
+      "source": "file:mission-control/.claude/CLAUDE.md",
+      "target": "file:mission-control/.claude/RESKIN-PLAN.md",
+      "type": "related",
+      "label": "build_documentation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:infrastructure-docs",
+      "source": "file:docker/docker-compose.yml",
+      "target": "file:docker/README.md",
+      "type": "related",
+      "label": "documentation",
+      "direction": "forward"
+    },
+    {
+      "id": "edge:project-root-docs",
+      "source": "file:INDEX.md",
+      "target": "file:CONTEXT.md",
+      "type": "related",
+      "label": "project_documentation",
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-claude-terminal-module",
+      "target": "file:batch-89-file-claude-terminal-status",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-claude-terminal-module",
+      "target": "file:batch-89-file-claude-terminal-stop",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-claude-terminal-module",
+      "target": "file:batch-89-file-claude-terminal-transcribe",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-claude-terminal-module",
+      "target": "file:batch-89-file-claude-terminal-undo",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-clients-module",
+      "target": "file:batch-89-file-clients-route",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-clients-module",
+      "target": "file:batch-89-file-clients-clientId",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-utils",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-attendance",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-blog",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-blog-regenerate",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-blog-set-cover",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-cohorts",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-connections",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-discover",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-discoveries",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-discovery-instructions",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-favor-bank",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-generate",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-intake",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-offers",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-onboarding",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-onboarding-templates",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-participants",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-publish",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "module:batch-89-cohorts-module",
+      "target": "file:batch-89-file-cohorts-questions-answers",
+      "type": "contains",
+      "label": "contains file",
+      "properties": {
+        "relationship": "module-contains-file"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-attendance",
+      "target": "file:batch-89-route-handler-type-get",
+      "type": "uses",
+      "label": "implements pattern",
+      "properties": {
+        "relationship": "file-implements-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-attendance",
+      "target": "file:batch-89-route-handler-type-post",
+      "type": "uses",
+      "label": "implements pattern",
+      "properties": {
+        "relationship": "file-implements-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-attendance",
+      "target": "file:batch-89-route-handler-type-delete",
+      "type": "uses",
+      "label": "implements pattern",
+      "properties": {
+        "relationship": "file-implements-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-blog",
+      "target": "file:batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-intake",
+      "target": "file:batch-89-utility-pattern-table-init",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-favor-bank",
+      "target": "file:batch-89-utility-pattern-table-init",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-participants",
+      "target": "file:batch-89-utility-pattern-table-init",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-connections",
+      "target": "file:batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-discoveries",
+      "target": "file:batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:batch-89-file-cohorts-publish",
+      "target": "file:batch-89-utility-pattern-getdb",
+      "type": "uses",
+      "label": "uses pattern",
+      "properties": {
+        "relationship": "file-uses-pattern"
+      },
+      "direction": "forward"
+    },
+    {
+      "source": "file:kling",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:linkedin-images-preview",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:linkedin-images",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:linkedin",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-giveaways-activate",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-giveaways-clone",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-giveaways-deactivate",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-giveaways-push",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-giveaways-sync",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-sync-data",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-sync-run",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-sync-status",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-webhook",
+      "target": "domain:manychat",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:ml-dashboard",
+      "target": "domain:machine-learning",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:ml-settings",
+      "target": "domain:machine-learning",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mc-settings-logo",
+      "target": "domain:settings",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mc-settings-memory-cap",
+      "target": "domain:settings",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mc-settings",
+      "target": "domain:settings",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-business",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-payments",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-photo",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-research",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-research-send",
+      "target": "domain:mentorships",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:meeting-notes",
+      "target": "domain:productivity",
+      "type": "belongs_to_domain",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "file:littlebird",
+      "target": "domain:linkedin",
+      "type": "belongs_to_domain",
+      "weight": 0.5,
+      "reason": "Data source for LinkedIn content",
+      "direction": "forward"
+    },
+    {
+      "source": "file:linkedin",
+      "target": "file:linkedin-images",
+      "type": "related",
+      "weight": 0.8,
+      "reason": "Shared LinkedIn domain, image processing dependency",
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-giveaways-activate",
+      "target": "file:manychat-giveaways-clone",
+      "type": "related",
+      "weight": 0.7,
+      "reason": "Both handle giveaway operations",
+      "direction": "forward"
+    },
+    {
+      "source": "file:manychat-sync-run",
+      "target": "file:manychat-sync-data",
+      "type": "related",
+      "weight": 0.8,
+      "reason": "Sync orchestration and data retrieval",
+      "direction": "forward"
+    },
+    {
+      "source": "file:mc-settings",
+      "target": "file:mc-settings-logo",
+      "type": "related",
+      "weight": 0.6,
+      "reason": "Settings hierarchy",
+      "direction": "forward"
+    },
+    {
+      "source": "file:mc-settings",
+      "target": "file:mc-settings-memory-cap",
+      "type": "related",
+      "weight": 0.6,
+      "reason": "Settings hierarchy",
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-research",
+      "target": "file:mentorships-research-send",
+      "type": "related",
+      "weight": 0.9,
+      "reason": "Research document workflow",
+      "direction": "forward"
+    },
+    {
+      "source": "file:mentorships-business",
+      "target": "file:mentorships-payments",
+      "type": "related",
+      "weight": 0.7,
+      "reason": "Client relationship management",
+      "direction": "forward"
+    },
+    {
+      "source": "file:meeting-notes",
+      "target": "domain:productivity",
+      "type": "primary_implementation",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "domain:mentorships",
+      "target": "file:mentorships-research-send",
+      "type": "key_feature",
+      "weight": 1,
+      "direction": "forward"
+    },
+    {
+      "source": "domain:machine-learning",
+      "target": "file:ml-dashboard",
+      "type": "key_feature",
+      "weight": 1,
+      "direction": "forward"
+    }
+  ]
+}
