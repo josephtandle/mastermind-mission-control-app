@@ -1,0 +1,11 @@
+{
+  "batchIndex": 4,
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "skillDir": "/Users/myos/.understand-anything-plugin/skills/understand",
+  "importData": {
+    "CONTEXT.md": [],
+    "INDEX.md": [],
+    "README.md": []
+  },
+  "neighborMap": {}
+}

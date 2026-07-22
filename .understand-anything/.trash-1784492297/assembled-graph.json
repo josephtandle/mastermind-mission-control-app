@@ -20,7 +20,7 @@
       "Supabase"
     ],
     "description": "Joe's live operational system for MyOS personal AI OS running at port 3000",
-    "analyzedAt": "2026-07-19T20:18:05Z",
+    "analyzedAt": "2026-07-05T20:17:46.625Z",
     "gitCommitHash": "4b2410822b8eb64b3d49e698e0d543bc08ca1f13"
   },
   "nodes": [

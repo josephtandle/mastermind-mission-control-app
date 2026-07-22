@@ -1,0 +1,12 @@
+{
+  "batchIndex": 1,
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "skillDir": "/Users/myos/.understand-anything-plugin/skills/understand",
+  "importData": {
+    "agents/task-runner/.dockerignore": [],
+    "agents/task-runner/docker-compose.quickstart.yml": [],
+    "agents/task-runner/docker-compose.yml": [],
+    "agents/task-runner/Dockerfile": []
+  },
+  "neighborMap": {}
+}

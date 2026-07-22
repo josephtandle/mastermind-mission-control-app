@@ -1,0 +1,13 @@
+{
+  "batchIndex": 5,
+  "projectRoot": "/Users/myos/.myos/workspace/projects/mastermind-mission-control",
+  "skillDir": "/Users/myos/.understand-anything-plugin/skills/understand",
+  "importData": {
+    "agents/task-runner/.github/workflows/e2e.yml": [],
+    "agents/task-runner/.github/workflows/pr-policy.yml": [],
+    "agents/task-runner/.github/workflows/pr-verify.yml": [],
+    "agents/task-runner/.github/workflows/refresh-lockfile.yml": [],
+    "agents/task-runner/.github/workflows/release.yml": []
+  },
+  "neighborMap": {}
+}
