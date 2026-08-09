@@ -22,7 +22,7 @@ fi
 echo "Installing dependencies..."
 npm install --no-audit --no-fund
 
-# Resolve the install directory (used below to wire the Claude path).
+# Resolve the install directory.
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # The hourly task executor (cron) is OFF by default. The board runs on demand from
@@ -31,33 +31,74 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # later by following the "Turn on the hourly executor" step in the session guide
 # (automated runs draw their own metered usage, so that step sets up an API key first).
 
-# Wire up the Claude binary path in executor.py
+# Install and authenticate a standalone Claude Code CLI. The Desktop app's
+# internal binary is not portable and must never be wired into the executor.
 echo ""
-echo "Wiring up Claude Code path..."
+echo "Checking standalone Claude Code CLI..."
 CLAUDE_PATH=$(command -v claude 2>/dev/null || true)
 
+case "$CLAUDE_PATH" in
+  *Claude.app*|*claude-code/*/claude.app*)
+    echo "Ignoring Claude Desktop internal binary: $CLAUDE_PATH"
+    CLAUDE_PATH=""
+    ;;
+esac
+
 if [ -z "$CLAUDE_PATH" ]; then
-  # Common install locations on Mac and Windows Git Bash
-  for CANDIDATE in \
-    "$HOME/.local/bin/claude" \
-    "/usr/local/bin/claude" \
-    "$HOME/AppData/Roaming/npm/claude" \
-    "$HOME/AppData/Local/Programs/claude/claude.exe"; do
-    if [ -x "$CANDIDATE" ]; then
-      CLAUDE_PATH="$CANDIDATE"
-      break
-    fi
-  done
+  echo "Installing standalone Claude Code CLI..."
+  npm install -g @anthropic-ai/claude-code
+  CLAUDE_PATH=$(command -v claude 2>/dev/null || true)
 fi
 
-if [ -n "$CLAUDE_PATH" ]; then
-  # Replace bare "claude" string in the subprocess.run call with the full path
-  sed -i.bak "s|\"claude\", \"--dangerously-skip-permissions\"|\"$CLAUDE_PATH\", \"--dangerously-skip-permissions\"|g" "$SCRIPT_DIR/executor.py"
-  rm -f "$SCRIPT_DIR/executor.py.bak"
-  echo "Claude found at: $CLAUDE_PATH"
-else
-  echo "Warning: claude not found in PATH. Open executor.py and set the path manually after install."
+case "$CLAUDE_PATH" in
+  *Claude.app*|*claude-code/*/claude.app*)
+    echo "Error: PATH still resolves to a Claude Desktop internal binary: $CLAUDE_PATH"
+    echo "Install the standalone CLI in a PATH location that takes precedence, then rerun."
+    exit 1
+    ;;
+esac
+
+if [ -z "$CLAUDE_PATH" ]; then
+  echo "Error: standalone Claude Code CLI was not found on PATH after installation."
+  exit 1
 fi
+
+claude --version
+
+AUTH_STATUS=$(claude auth status 2>/dev/null || true)
+LOGGED_IN=$(printf '%s' "$AUTH_STATUS" | node -e '
+let input = "";
+process.stdin.on("data", chunk => input += chunk);
+process.stdin.on("end", () => {
+  try { process.stdout.write(JSON.parse(input).loggedIn === true ? "true" : "false"); }
+  catch { process.stdout.write("false"); }
+});
+')
+
+if [ "$LOGGED_IN" != "true" ]; then
+  AUTH_LOG="/tmp/claude-auth-login.log"
+  nohup claude auth login --claudeai > "$AUTH_LOG" 2>&1 &
+  disown 2>/dev/null || true
+  sleep 2
+  echo ""
+  echo "A browser tab should have opened asking you to sign in to Claude and authorize this device."
+  AUTHORIZE_URL=$(grep -Eo 'https://claude\.com/[^[:space:]]+' "$AUTH_LOG" | head -1 || true)
+  if [ -n "$AUTHORIZE_URL" ]; then
+    echo "If it did not open, use this link: $AUTHORIZE_URL"
+  else
+    echo "If it did not open, read the authorization link from: $AUTH_LOG"
+  fi
+  echo "Please complete that now, then run this installer again."
+  exit 2
+fi
+
+if ! grep -Fq '["claude", "--dangerously-skip-permissions"' "$SCRIPT_DIR/executor.py"; then
+  echo "Error: executor.py must invoke the bare string \"claude\" through PATH."
+  exit 1
+fi
+
+echo "Standalone Claude Code CLI is installed and authenticated."
+echo "executor.py uses PATH resolution and will survive CLI version updates."
 
 echo ""
 echo "Install complete."

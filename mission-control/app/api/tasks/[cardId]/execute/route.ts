@@ -3,11 +3,12 @@ import { spawn } from "child_process";
 import path from "path";
 import fs from "fs";
 import os from "os";
+import { resolvePythonInvocation } from "@/lib/python-command";
 
 const HOME = os.homedir();
 const EXECUTOR_PATH = path.join(process.cwd(), "executor.py");
 async function updateCard(cardId: string, updates: Record<string, unknown>) {
-  // Write directly to db.json — avoids hardcoding a port
+  // Write directly to db.json. This avoids hardcoding a port.
   const DB_PATH = path.join(process.cwd(), "lib", "db.json");
   try {
     const raw = require("fs").readFileSync(DB_PATH, "utf8");
@@ -36,12 +37,20 @@ export async function POST(
 
   if (!fs.existsSync(EXECUTOR_PATH)) {
     return NextResponse.json(
-      { error: "executor.py not found — make sure you cloned the full repo" },
+      { error: "executor.py not found. Make sure you cloned the full repo." },
       { status: 500 }
     );
   }
 
   try {
+    const python = resolvePythonInvocation();
+    if (!python) {
+      return NextResponse.json(
+        { error: "Python 3 was not found on PATH" },
+        { status: 500 }
+      );
+    }
+
     await updateCard(cardId, { executorStatus: "running" });
 
     const cleanEnv: Record<string, string> = {};
@@ -50,16 +59,18 @@ export async function POST(
         cleanEnv[k] = v;
       }
     }
-    cleanEnv.PATH =
-      `/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${path.join(HOME, "bin")}`;
     cleanEnv.HOME = HOME;
 
-    const child = spawn("python3", [EXECUTOR_PATH, "--card", cardId], {
-      detached: true,
-      stdio: "ignore",
-      env: cleanEnv,
-      cwd: HOME,
-    });
+    const child = spawn(
+      python.command,
+      [...python.prefixArgs, EXECUTOR_PATH, "--card", cardId],
+      {
+        detached: true,
+        stdio: "ignore",
+        env: cleanEnv,
+        cwd: HOME,
+      }
+    );
     child.unref();
 
     return NextResponse.json({ started: true, cardId });

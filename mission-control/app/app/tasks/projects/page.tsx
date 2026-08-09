@@ -928,18 +928,18 @@ export default function ProjectsPage() {
       {/* Table */}
       <div className="bg-dark-panel border border-dark-border rounded-xl overflow-visible">
         <table className="w-full table-fixed">
-          <colgroup>
-            <col className="w-8" />        {/* drag */}
-            <col className="w-[130px]" />  {/* Project */}
-            <col />                         {/* Description — fills remaining */}
-            <col className="w-[110px]" />  {/* Monetization */}
-            <col className="w-[100px]" />  {/* Est. Mo. Income */}
-            <col className="w-[100px]" />  {/* Horizon */}
-            <col className="w-[120px]" />  {/* Due Date */}
-            <col className="w-[90px]" />   {/* Status */}
-            <col className="w-[100px]" />  {/* Time Saved */}
-            <col className="w-[60px]" />   {/* Actions */}
-          </colgroup>
+          <colgroup>{[
+            <col key="drag" className="w-8" />,
+            <col key="project" className="w-[130px]" />,
+            <col key="description" />,
+            <col key="monetization" className="w-[110px]" />,
+            <col key="income" className="w-[100px]" />,
+            <col key="horizon" className="w-[100px]" />,
+            <col key="due-date" className="w-[120px]" />,
+            <col key="status" className="w-[90px]" />,
+            <col key="time-saved" className="w-[100px]" />,
+            <col key="actions" className="w-[60px]" />,
+          ]}</colgroup>
           <thead>
             <tr className="border-b border-dark-border">
               <th className="px-3 py-3" />

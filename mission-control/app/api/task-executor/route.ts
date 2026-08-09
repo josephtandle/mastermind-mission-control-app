@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
-import { exec, execSync } from "child_process";
+import { execSync, spawn } from "child_process";
 import os from "os";
 import path from "path";
+import { resolvePythonInvocation } from "@/lib/python-command";
 
 const HOME = os.homedir();
 const EXECUTOR_PATH = path.join(process.cwd(), "executor.py");
@@ -28,14 +29,24 @@ export async function POST() {
   }
 
   try {
-    exec(`python3 "${EXECUTOR_PATH}"`, {
+    const python = resolvePythonInvocation();
+    if (!python) {
+      return NextResponse.json(
+        { error: "Python 3 was not found on PATH" },
+        { status: 500 }
+      );
+    }
+
+    const child = spawn(python.command, [...python.prefixArgs, EXECUTOR_PATH], {
+      detached: true,
+      stdio: "ignore",
       env: {
         ...process.env,
-        PATH: `/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${path.join(HOME, "bin")}`,
         HOME,
       },
       cwd: HOME,
     });
+    child.unref();
 
     return NextResponse.json({ success: true, message: "Task executor started", running: true });
   } catch (err) {
