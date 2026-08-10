@@ -1,0 +1,12 @@
+{
+  "name": "mission-control",
+  "version": "4.0.1",
+  "sha256": {
+    "install/install.mjs": "ca7de88f9d5b3f8262ef6d2246c5c8094799f91f5f1cc23e568da119672f6f84",
+    "install.sh": "7c0acd9ca9e6781be7b5afbddf663579772f50f24d1b85c40d928ad4fc927406",
+    "install.ps1": "689665bf2fda836e387579443413f758f3dd2754ea6cd6365529700edb86057c",
+    "README.md": "4e8bb7c6e14e3b118a5eca244af1ad140ab94343dc0e2a07dda4b8e21ff2ec11",
+    "package.json": "067784f7e0c15593ac2ede7e22e85e9b4924098505b0f271e6deccc01c9ba5f8",
+    "package-lock.json": "48af7e562a3b21c3df3009fbce30ac43106b4674a8e3edfbed56d4a9be1486a4"
+  }
+}

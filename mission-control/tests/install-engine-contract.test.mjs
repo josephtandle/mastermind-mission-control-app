@@ -9,7 +9,7 @@
  *   4. Resend as a required human setup gate with strict secret hygiene
  *   5. Bounded self-healing (max two repair attempts, terminal outcomes)
  *   6. Completion verification checklist
- *   7. Release manifest at release-manifest.json with version 4.0.0 and SHA256 entries
+ *   7. Release manifest at release-manifest.json with version 4.0.1 and SHA256 entries
  *
  * Uses node:test and node:assert/strict only; no runtime execution of the engine.
  * Run with: node --test tests/install-engine-contract.test.mjs
@@ -478,7 +478,7 @@ test('release-manifest.json exists at appRoot', () => {
   )
 })
 
-test('release-manifest.json declares version 4.0.0', () => {
+test('release-manifest.json declares version 4.0.1', () => {
   const raw = readRequired('release-manifest.json')
   let manifest
   try {
@@ -489,8 +489,8 @@ test('release-manifest.json declares version 4.0.0', () => {
 
   assert.equal(
     manifest.version,
-    '4.0.0',
-    'release-manifest.json must declare version 4.0.0'
+    '4.0.1',
+    'release-manifest.json must declare version 4.0.1'
   )
 })
 

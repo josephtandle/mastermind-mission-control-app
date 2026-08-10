@@ -11,12 +11,12 @@ const appRoot = resolve(__dirname, '..')
 // ---------------------------------------------------------------------------
 // 1. package.json manifest checks
 // ---------------------------------------------------------------------------
-test('package.json version is 4.0.0 and dependencies includes better-sqlite3', () => {
+test('package.json version is 4.0.1 and dependencies includes better-sqlite3', () => {
   const pkgPath = resolve(appRoot, 'package.json')
   assert.ok(existsSync(pkgPath), 'package.json must exist at appRoot')
   const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'))
 
-  assert.equal(pkg.version, '4.0.0', 'package.json version must be 4.0.0')
+  assert.equal(pkg.version, '4.0.1', 'package.json version must be 4.0.1')
   assert.ok(
     pkg.dependencies && 'better-sqlite3' in pkg.dependencies,
     'dependencies must contain better-sqlite3'

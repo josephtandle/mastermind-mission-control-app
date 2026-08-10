@@ -24,7 +24,7 @@ On native Windows PowerShell:
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
 
-The platform installer installs the app dependencies and checks for a real standalone Claude Code CLI. It never wires a binary from inside Claude Desktop. If the CLI is missing, the installer installs it. If Claude needs authorization, a browser tab should open. Complete that human step, then run the same installer again.
+The platform installer is a thin wrapper around `install/install.mjs`. That engine installs the app dependencies, checks for a real standalone Claude Code CLI, and verifies the known projects-table hydration guard before it declares success. It never wires a binary from inside Claude Desktop. If the CLI is missing, the installer installs it. If Claude needs authorization, a browser tab should open. Complete that human step, then run the same installer again. If you ever see the known colgroup hydration warning, the installer will point you back to the safe table fix and rerun path.
 
 After the installer reports success, start the app:
 
