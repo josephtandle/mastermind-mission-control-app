@@ -478,7 +478,7 @@ test('release-manifest.json exists at appRoot', () => {
   )
 })
 
-test('release-manifest.json declares version 4.0.1', () => {
+test('release-manifest.json declares version 4.0.2', () => {
   const raw = readRequired('release-manifest.json')
   let manifest
   try {
@@ -489,8 +489,8 @@ test('release-manifest.json declares version 4.0.1', () => {
 
   assert.equal(
     manifest.version,
-    '4.0.1',
-    'release-manifest.json must declare version 4.0.1'
+    '4.0.2',
+    'release-manifest.json must declare version 4.0.2'
   )
 })
 
