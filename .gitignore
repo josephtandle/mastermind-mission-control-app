@@ -31,3 +31,4 @@ agents/spotify/config/tokens.json
 agents/whoop/data/tokens.json
 agents/zoho-books/data/token-cache.json
 agents/zoho-prep/data/zoho-token-cache.json
+.gitnexus

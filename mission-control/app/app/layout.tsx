@@ -11,6 +11,7 @@ import {
   ChevronRight,
   PanelLeftClose,
   PanelLeftOpen,
+  Users,
 } from "lucide-react";
 
 const APP_NAME = "Mission Control";
@@ -25,11 +26,13 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     pathname === "/app/tasks" || pathname.startsWith("/app/tasks/");
   const isProjectsActive = pathname.startsWith("/app/tasks/projects");
   const isFilesActive = pathname.startsWith("/app/projects");
+  const isCRMActive = pathname === "/app/crm" || pathname.startsWith("/app/crm/");
 
   const pageTitle = useMemo(() => {
     if (pathname.startsWith("/app/tasks/projects")) return "Projects";
     if (pathname.startsWith("/app/tasks")) return "Tasks";
     if (pathname.startsWith("/app/projects")) return "File Browser";
+    if (pathname.startsWith("/app/crm")) return "CRM";
     return APP_NAME;
   }, [pathname]);
 
@@ -132,6 +135,20 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           >
             <FolderOpen size={20} className="flex-shrink-0" />
             {sidebarOpen && <span className="truncate">File Browser</span>}
+          </Link>
+
+          {/* CRM */}
+          <Link
+            href="/app/crm"
+            title={!sidebarOpen ? "CRM" : undefined}
+            className={`flex items-center gap-2 py-2 px-2 rounded-lg transition-colors ${
+              isCRMActive
+                ? "bg-cm-purple/15 text-cm-purple font-medium"
+                : "text-dark-muted hover:bg-cm-purple/10 hover:text-cm-purple"
+            }`}
+          >
+            <Users size={20} className="flex-shrink-0" />
+            {sidebarOpen && <span className="truncate">CRM</span>}
           </Link>
         </nav>
 

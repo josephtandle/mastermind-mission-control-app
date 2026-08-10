@@ -90,12 +90,12 @@ test('lib/crm.js defines crm.automation.email.live_enabled with a false/0 disabl
   const source = readFileSync(crmLibPath, 'utf8')
   assert.match(
     source,
-    /crm\.automation\.email\.live_enabled/,
-    'lib/crm.js must contain the machine key crm.automation.email.live_enabled'
+    /emailLiveEnabled:\s*["']crm\.automation\.email\.live_enabled["']/,
+    'lib/crm.js must map emailLiveEnabled to the machine key crm.automation.email.live_enabled'
   )
   assert.match(
     source,
-    /crm\.automation\.email\.live_enabled[\s\S]{0,120}(?:false|0)/,
-    'lib/crm.js must establish a false/0 disabled default for crm.automation.email.live_enabled'
+    /ensureSetting\(\s*db,\s*AUTOMATION_SETTING_KEYS\.emailLiveEnabled,\s*false\s*\)/,
+    'lib/crm.js must call ensureSetting with emailLiveEnabled defaulting to false'
   )
 })
