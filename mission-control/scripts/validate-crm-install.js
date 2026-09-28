@@ -5,6 +5,7 @@
  * Checks a Mission Control install end to end:
  *   - every app page responds 200 at <base-url> (tasks, projects, CRM tabs)
  *   - data/crm.db exists inside the app folder and holds sample contacts
+ *     (or the owner already cleared them with "Clear sample data")
  *   - the CRM link is present in app/app/_nav/nav-data.ts
  *   - /api/crm/automations/settings reports every channel with live_enabled false
  *
@@ -49,6 +50,23 @@ function countSampleContacts(dbPath, appRoot) {
   }
 }
 
+// "Clear sample data" in the CRM sets this flag. An empty CRM is the expected
+// state after that, not a broken install.
+function sampleDataWasCleared(dbPath, appRoot) {
+  try {
+    const Database = require(path.join(appRoot, "node_modules", "better-sqlite3"));
+    const db = new Database(dbPath, { readonly: true });
+    try {
+      const row = db.prepare("SELECT value FROM crm_settings WHERE key = 'crm.sample_data.cleared'").get();
+      return row?.value === "true" || row?.value === "1";
+    } finally {
+      db.close();
+    }
+  } catch {
+    return false;
+  }
+}
+
 function runStaticChecks(appRoot) {
   const root = path.resolve(appRoot);
   const checks = [];
@@ -82,7 +100,10 @@ function runStaticChecks(appRoot) {
   checks.push(check("data/crm.db exists inside the app folder", dbExists, dbPath));
   if (dbExists) {
     const count = countSampleContacts(dbPath, root);
-    if (typeof count === "number") checks.push(check("data/crm.db holds sample contacts", count > 0, `${count} contacts`));
+    if (typeof count === "number") {
+      const cleared = count === 0 && sampleDataWasCleared(dbPath, root);
+      checks.push(check("data/crm.db holds sample contacts", count > 0 || cleared, cleared ? "0 contacts, sample data cleared by the owner" : `${count} contacts`));
+    }
     else checks.push(check("data/crm.db readable through better-sqlite3", false, count.error));
   }
 

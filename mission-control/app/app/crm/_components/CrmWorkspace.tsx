@@ -2209,6 +2209,9 @@ export function CrmWorkspace({
   const [detailLoading, setDetailLoading] = useState(false);
   const [actionState, setActionState] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Example contacts the installer seeded. The API reports how many are left
+  // so the Clear sample data button can hide itself once they are gone.
+  const [sampleData, setSampleData] = useState<{ count: number; has_sample_data: boolean } | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
@@ -2265,6 +2268,9 @@ export function CrmWorkspace({
       const res = await fetch(`/api/crm?${params.toString()}`);
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to load CRM");
+      if (data.sample_data && typeof data.sample_data.count === "number") {
+        setSampleData(data.sample_data);
+      }
       if (Array.isArray(data.allStatuses) && data.allStatuses.length) {
         setStatusOptions(data.allStatuses);
       }
@@ -2753,6 +2759,42 @@ export function CrmWorkspace({
       await loadContacts();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Check-in failed");
+    } finally {
+      setActionState(null);
+    }
+  }
+
+  async function clearSampleContacts() {
+    const count = sampleData?.count || 0;
+    if (!count) return;
+    const confirmed = window.confirm(
+      `Remove the ${count} example contact${count === 1 ? "" : "s"} the installer added, plus their notes and history? Your own contacts are not touched.`
+    );
+    if (!confirmed) return;
+    setActionState("clear-sample-data");
+    setError(null);
+    try {
+      const res = await fetch("/api/crm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "clear-sample-data" }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to clear sample data");
+      const removed = Number(data.removed || 0);
+      setSampleData(
+        data.sample_data && typeof data.sample_data.count === "number"
+          ? data.sample_data
+          : { count: 0, has_sample_data: false }
+      );
+      if (selectedId && selectedId.startsWith("demo-contact-")) {
+        setSelectedId(null);
+        setDetail(null);
+      }
+      setNotice(`Removed ${removed} example contact${removed === 1 ? "" : "s"}.`);
+      await loadContacts();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to clear sample data");
     } finally {
       setActionState(null);
     }
@@ -3336,10 +3378,30 @@ export function CrmWorkspace({
                   Merge Duplicates
                 </button>
               )}
+              {(mode === "pipeline" || mode === "contacts") && sampleData && sampleData.count > 0 && (
+                <button
+                  type="button"
+                  onClick={() => void clearSampleContacts()}
+                  disabled={actionState === "clear-sample-data"}
+                  className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl border border-dark-danger/40 bg-dark-danger/10 px-4 py-2 text-sm text-dark-danger transition hover:bg-dark-danger/20 disabled:opacity-60"
+                  aria-label={`Clear sample data (${sampleData.count})`}
+                  title="Remove the example contacts the installer added"
+                >
+                  {actionState === "clear-sample-data" ? <Loader2 size={16} className="animate-spin" /> : <Trash2 size={16} />}
+                  <span className="whitespace-nowrap">Clear sample data ({sampleData.count})</span>
+                </button>
+              )}
             </div>
           </section>
         )}
 
+        {(mode === "pipeline" || mode === "contacts") && sampleData && sampleData.count > 0 && (
+          <p className="shrink-0 px-1 text-xs text-dark-muted" data-testid="crm-sample-data-hint">
+            {sampleData.count === 1
+              ? "This example contact was added so you can explore. Clear it when you are ready to add your own."
+              : `These ${sampleData.count} example contacts were added so you can explore. Clear them when you are ready to add your own.`}
+          </p>
+        )}
         {error && (
           <div className="shrink-0 rounded-xl border border-dark-danger/30 bg-dark-danger/10 px-4 py-3 text-sm text-dark-danger">
             {error}

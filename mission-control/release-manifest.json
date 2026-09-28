@@ -1,14 +1,14 @@
 {
   "name": "mission-control",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "sha256": {
     "install/install.mjs": "5678c58182547d03be3a688fa4fb6ab0f83dc4f480d6f1160758c2f60c3d441d",
     "install.sh": "7c0acd9ca9e6781be7b5afbddf663579772f50f24d1b85c40d928ad4fc927406",
     "install.ps1": "689665bf2fda836e387579443413f758f3dd2754ea6cd6365529700edb86057c",
     "README.md": "246a8f553cbca56ccda03ee65597b65df88fb7421c18e59969da549e785e3b7f",
-    "package.json": "63a9c7e0062f9416685c6f2dd173eb4b49283328d1e709b62bf1a6787ba4473a",
-    "package-lock.json": "07dbc4581afe2f906977849e95760e42bcda52eab7b96bd06fbea3930d8f0528",
-    "scripts/validate-crm-install.js": "bf9d29fe628335a19d32b470cdc6e9a027e7c8308491c4321257794e50b40b7b",
+    "package.json": "809dafb319fc847d27e9acb0d8b0377a2987800d7da8f7ae7633b3c616168329",
+    "package-lock.json": "9668968cdf6adab454d2c4232102e5539635da9c7a535295148fc96178dcc2a2",
+    "scripts/validate-crm-install.js": "ea4b20332d0c6005fdbbf1d9ea2c20e21103ca3607973857e2310cb71cf68a62",
     "AGENTS.md": "1fa4603559c4c5edb967d8eaf398ba094046d6ba19c47674fcb97cc83e60b5c0"
   }
 }

@@ -4679,6 +4679,115 @@ function updateContact(contactId, patch = {}) {
   return getContactDetail(contactId);
 }
 
+// Sample data. The installer seeds example contacts whose ids start with
+// "demo-contact-" so a fresh CRM has cards to explore. Clearing them is a
+// one-way switch: crm.sample_data.cleared tells the seed step never to add
+// them back. GLOB keeps the match case-sensitive so real ids are never hit.
+const SAMPLE_CONTACT_ID_GLOB = "demo-contact-*";
+const SAMPLE_DATA_CLEARED_KEY = "crm.sample_data.cleared";
+// Rows that belong to a contact-owned row rather than to the contact itself.
+// Tables that declare a foreign key are found automatically; these do not.
+const SAMPLE_DATA_INDIRECT_CHILDREN = [
+  { table: "crm_automation_delivery_attempts", column: "delivery_id", parent: "crm_automation_delivery_queue" },
+  { table: "crm_contact_message_draft_versions", column: "draft_id", parent: "crm_contact_message_drafts" },
+];
+
+function quoteSqlIdentifier(name) {
+  return `"${String(name).replace(/"/g, '""')}"`;
+}
+
+function getSampleDataStatus() {
+  let db = null;
+  try {
+    db = getDb(true);
+    if (!db) return { count: 0, has_sample_data: false };
+    const row = db.prepare("SELECT COUNT(*) AS count FROM crm_contacts WHERE id GLOB ?").get(SAMPLE_CONTACT_ID_GLOB);
+    const count = Number(row?.count || 0);
+    return { count, has_sample_data: count > 0 };
+  } catch {
+    return { count: 0, has_sample_data: false };
+  } finally {
+    if (db) db.close();
+  }
+}
+
+// Every table and column that stores a contact id, read from the live schema
+// so tables added later are covered without editing this list.
+function listContactLinkedColumns(db) {
+  const tables = db
+    .prepare("SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%' ORDER BY name")
+    .all()
+    .map((row) => row.name);
+  const columnsByTable = new Map();
+  const direct = [];
+  for (const table of tables) {
+    const columns = db.prepare(`PRAGMA table_info(${quoteSqlIdentifier(table)})`).all().map((column) => column.name);
+    columnsByTable.set(table, columns);
+    if (table === "crm_contacts") continue;
+    const foreignKeys = db.prepare(`PRAGMA foreign_key_list(${quoteSqlIdentifier(table)})`).all();
+    const linked = new Set(foreignKeys.filter((fk) => fk.table === "crm_contacts").map((fk) => fk.from));
+    for (const column of columns) {
+      if (column === "contact_id" || column.endsWith("_contact_id") || linked.has(column)) {
+        direct.push({ table, column });
+      }
+    }
+  }
+  const directTables = new Set(direct.map((entry) => entry.table));
+  const indirect = [];
+  for (const table of tables) {
+    for (const fk of db.prepare(`PRAGMA foreign_key_list(${quoteSqlIdentifier(table)})`).all()) {
+      if (directTables.has(fk.table) && fk.table !== table) {
+        indirect.push({ table, column: fk.from, parent: fk.table, parentColumn: fk.to || "id" });
+      }
+    }
+  }
+  for (const entry of SAMPLE_DATA_INDIRECT_CHILDREN) {
+    const childColumns = columnsByTable.get(entry.table) || [];
+    const parentColumns = columnsByTable.get(entry.parent) || [];
+    if (!childColumns.includes(entry.column) || !parentColumns.includes("id") || !directTables.has(entry.parent)) continue;
+    if (indirect.some((known) => known.table === entry.table && known.column === entry.column)) continue;
+    indirect.push({ ...entry, parentColumn: "id" });
+  }
+  return { direct, indirect };
+}
+
+function clearSampleData() {
+  const db = getDb(false);
+  try {
+    bootstrapSettings(db);
+    const { direct, indirect } = listContactLinkedColumns(db);
+    const dependentRows = {};
+    const run = db.transaction(() => {
+      for (const entry of indirect) {
+        const parentLinks = direct.filter((link) => link.table === entry.parent);
+        if (!parentLinks.length) continue;
+        const where = parentLinks.map((link) => `${quoteSqlIdentifier(link.column)} GLOB ?`).join(" OR ");
+        const result = db
+          .prepare(
+            `DELETE FROM ${quoteSqlIdentifier(entry.table)} WHERE ${quoteSqlIdentifier(entry.column)} IN (SELECT ${quoteSqlIdentifier(entry.parentColumn)} FROM ${quoteSqlIdentifier(entry.parent)} WHERE ${where})`
+          )
+          .run(...parentLinks.map(() => SAMPLE_CONTACT_ID_GLOB));
+        if (result.changes) dependentRows[entry.table] = (dependentRows[entry.table] || 0) + result.changes;
+      }
+      for (const entry of direct) {
+        const result = db
+          .prepare(`DELETE FROM ${quoteSqlIdentifier(entry.table)} WHERE ${quoteSqlIdentifier(entry.column)} GLOB ?`)
+          .run(SAMPLE_CONTACT_ID_GLOB);
+        if (result.changes) dependentRows[entry.table] = (dependentRows[entry.table] || 0) + result.changes;
+      }
+      const removed = db.prepare("DELETE FROM crm_contacts WHERE id GLOB ?").run(SAMPLE_CONTACT_ID_GLOB).changes;
+      db.prepare(
+        "INSERT INTO crm_settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value"
+      ).run(SAMPLE_DATA_CLEARED_KEY, JSON.stringify(true));
+      return removed;
+    });
+    const removed = run();
+    return { removed, dependent_rows: dependentRows };
+  } finally {
+    db.close();
+  }
+}
+
 function deleteContact(contactId) {
   const db = getDb(false);
   bootstrapSettings(db);
@@ -5141,6 +5250,9 @@ module.exports = {
   deleteAffiliatePayout,
   deleteCommunication,
   deleteContact,
+  getSampleDataStatus,
+  clearSampleData,
+  SAMPLE_DATA_CLEARED_KEY,
   deleteLegacyCrmJsonIfEmpty,
   logCommunication,
   updateCommunication,

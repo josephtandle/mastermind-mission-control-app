@@ -29,9 +29,12 @@ export async function GET(req: NextRequest) {
     }
 
     if (view === "pipeline") {
-      return NextResponse.json(
-        crm.getPipelineBoard({ project: project || "pipeline", search: url.searchParams.get("search") || "" })
-      );
+      // sample_data lets the board show or hide the Clear sample data button
+      // without a second request.
+      return NextResponse.json({
+        ...crm.getPipelineBoard({ project: project || "pipeline", search: url.searchParams.get("search") || "" }),
+        sample_data: crm.getSampleDataStatus(),
+      });
     }
 
     const result = crm.listContacts({
@@ -44,7 +47,7 @@ export async function GET(req: NextRequest) {
       sort: normalizeSort(url.searchParams.get("sort")),
     });
 
-    return NextResponse.json(result);
+    return NextResponse.json({ ...result, sample_data: crm.getSampleDataStatus() });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown CRM error";
     return NextResponse.json({ error: message }, { status: 500 });
@@ -82,6 +85,11 @@ export async function POST(req: NextRequest) {
         project: body.project || "pipeline",
       });
       return NextResponse.json(result);
+    }
+
+    if (action === "clear-sample-data") {
+      const result = crm.clearSampleData();
+      return NextResponse.json({ ...result, sample_data: crm.getSampleDataStatus() });
     }
 
     if (action === "delete") {
