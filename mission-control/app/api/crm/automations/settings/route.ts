@@ -16,8 +16,11 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}));
   try {
     if (body?.action === "send_test_email") {
-      if (body.email_from_address) {
-        crm.setAutomationSettings({ email_from_address: body.email_from_address });
+      if (body.email_from_address || body.email_provider !== undefined) {
+        crm.setAutomationSettings({
+          ...(body.email_from_address ? { email_from_address: body.email_from_address } : {}),
+          ...(body.email_provider !== undefined ? { email_provider: body.email_provider } : {}),
+        });
       }
       const result = await crm.sendAutomationTestEmail({
         to: body.to,
@@ -26,7 +29,7 @@ export async function POST(req: NextRequest) {
       });
       if (!result?.ok) {
         return NextResponse.json(
-          { error: result?.data?.message || `Resend test failed with status ${result?.status || 500}` },
+          { error: result?.data?.message || `Email test failed with status ${result?.status || 500}` },
           { status: result?.status || 502 }
         );
       }

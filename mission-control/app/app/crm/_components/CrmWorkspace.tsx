@@ -36,7 +36,19 @@ import {
 import AffiliatesPanel, { AffiliateRecord } from "../../_components/AffiliatesPanel";
 
 type ViewMode = "inbox" | "contacts" | "pipeline" | "affiliates" | "labels" | "settings";
-type TableSortKey = "name" | "projects" | "stage" | "signal" | "source" | "last_activity";
+type TableSortKey =
+  | "name"
+  | "projects"
+  | "stage"
+  | "signal"
+  | "next_step"
+  | "source"
+  | "owner"
+  | "priority"
+  | "created"
+  | "updated"
+  | "last_touched"
+  | "last_activity";
 
 const PIPELINE_PROJECT = "pipeline";
 const PIPELINE_PROJECT_DISPLAY_NAME = "Pipelines";
@@ -98,10 +110,12 @@ type ContactRow = {
   biggest_needs_is_manual?: boolean;
   instagram_profile_url?: string | null;
   website_url?: string | null;
+  source_first?: string | null;
   source_latest: string | null;
   status: string;
   priority: number;
   owner: string | null;
+  created_at?: string | null;
   next_step?: string | null;
   communication_channel?: string | null;
   willing_to_pay?: number | null;
@@ -110,6 +124,7 @@ type ContactRow = {
   primary_project?: string | null;
   primary_project_display_name?: string | null;
   pipeline_status?: string | null;
+  hotness_score?: number | null;
   lost_reason?: string | null;
   funnel_label_key: string | null;
   review_needed: boolean;
@@ -1135,6 +1150,7 @@ function ContactModal({
   onCreateAffiliate,
   onUploadPhoto,
   onEnrichLead,
+  onCheckIn,
   onLogCommunication,
   onDeleteCommunication,
   onEditCommunication,
@@ -1151,6 +1167,7 @@ function ContactModal({
   onCreateAffiliate: (name: string) => Promise<AffiliateRecord | null>;
   onUploadPhoto: (contactId: string, file: File) => Promise<void>;
   onEnrichLead?: () => Promise<void>;
+  onCheckIn?: () => Promise<void>;
   onLogCommunication?: (payload: { channel: string; direction: string; note: string; contacted_at: string }) => Promise<void>;
   onDeleteCommunication?: (communicationId: number) => Promise<void>;
   onEditCommunication?: (communicationId: number, payload: { channel: string; direction: string; note: string; contacted_at: string }) => Promise<void>;
@@ -2109,6 +2126,16 @@ function ContactModal({
                       Enrich This Lead
                     </button>
                   )}
+                  {onCheckIn && (
+                    <button
+                      onClick={() => void onCheckIn()}
+                      disabled={actionState === "check-in"}
+                      className="inline-flex items-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm font-medium text-dark-text transition hover:border-cm-purple/30 disabled:opacity-60"
+                    >
+                      {actionState === "check-in" ? <Loader2 size={16} className="animate-spin" /> : <Clock size={16} />}
+                      Check In
+                    </button>
+                  )}
                   <Link
                     href="/app/crm/settings"
                     className="inline-flex items-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm font-medium text-dark-text transition hover:border-cm-purple/30"
@@ -2182,8 +2209,20 @@ export function CrmWorkspace({
   const [detailLoading, setDetailLoading] = useState(false);
   const [actionState, setActionState] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [notice, setNotice] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState("");
+  // Contacts list view filters. Empty string means "all". Project, label,
+  // source and owner are applied server-side by /api/crm listContacts.
+  const [projectFilter, setProjectFilter] = useState("");
+  const [labelFilter, setLabelFilter] = useState("");
+  const [sourceFilter, setSourceFilter] = useState("");
+  const [ownerFilter, setOwnerFilter] = useState("");
+  // Facet values accumulate across loads so a narrowed result set never
+  // shrinks the dropdowns down to the one value currently selected.
+  const [sourceOptions, setSourceOptions] = useState<string[]>([]);
+  const [ownerOptions, setOwnerOptions] = useState<string[]>([]);
+  const [totalContacts, setTotalContacts] = useState<number | null>(null);
   const [sort, setSort] = useState("updated_desc");
   const [tableSort, setTableSort] = useState<{ key: TableSortKey | null; direction: "asc" | "desc" }>({
     key: null,
@@ -2213,7 +2252,14 @@ export function CrmWorkspace({
         status: statusFilter,
         sort,
       });
-      if (selectedProject) {
+      if (mode === "contacts") {
+        // The list view is every contact by default; "all" tells the API to
+        // drop the project scope instead of falling back to the default board.
+        params.set("project", projectFilter || "all");
+        if (labelFilter) params.set("label", labelFilter);
+        if (sourceFilter) params.set("source", sourceFilter);
+        if (ownerFilter) params.set("owner", ownerFilter);
+      } else if (selectedProject) {
         params.set("project", selectedProject);
       }
       const res = await fetch(`/api/crm?${params.toString()}`);
@@ -2246,6 +2292,23 @@ export function CrmWorkspace({
       } else {
         loadedContacts = data.contacts || [];
         setContacts(loadedContacts);
+        if (typeof data.totalContacts === "number") {
+          setTotalContacts(data.totalContacts);
+        }
+        const mergeFacet = (current: string[], next: Iterable<string>) => {
+          const merged = new Set(current);
+          for (const value of next) {
+            if (value && value.trim()) merged.add(value.trim());
+          }
+          return [...merged].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+        };
+        setSourceOptions((current) =>
+          mergeFacet(
+            current,
+            loadedContacts.flatMap((contact) => [contact.source_latest || "", contact.source_first || ""])
+          )
+        );
+        setOwnerOptions((current) => mergeFacet(current, loadedContacts.map((contact) => contact.owner || "")));
       }
       setAffiliates(data.affiliates || []);
       if (Array.isArray(data.projectCatalog)) {
@@ -2263,7 +2326,26 @@ export function CrmWorkspace({
     } finally {
       setLoading(false);
     }
-  }, [mode, search, selectedProject, statusFilter, sort]);
+  }, [labelFilter, mode, ownerFilter, projectFilter, search, selectedProject, sourceFilter, statusFilter, sort]);
+
+  // The label filter needs the approved label catalog, which otherwise only
+  // loads in labels/settings mode. Fetch it once here without touching the
+  // list's loading state.
+  useEffect(() => {
+    if (mode !== "contacts") return;
+    let cancelled = false;
+    fetch("/api/crm/settings")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (!cancelled && data && Array.isArray(data.approvedLabels)) {
+          setSettings((current) => current ?? (data as SettingsData));
+        }
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, [mode]);
 
   const loadSettings = useCallback(async () => {
     setLoading(true);
@@ -2357,6 +2439,7 @@ export function CrmWorkspace({
 
   const sortedTableContacts = useMemo(() => {
     if (mode === "pipeline" || !tableSort.key) return contacts;
+    const direction = tableSort.direction === "asc" ? 1 : -1;
     const getSignalRank = (contact: ContactRow) => {
       const signal = getSignal(contact);
       if (signal.label === "Hot") return 5;
@@ -2370,11 +2453,35 @@ export function CrmWorkspace({
       const idx = statusOptions.indexOf(contact.pipeline_status || contact.project_state || contact.status);
       return idx === -1 ? statusOptions.length : idx;
     };
+    // Empty values always sort last, whichever direction is active, so a
+    // column full of blanks never buries the real data at the top.
+    const isBlank = (value: unknown) =>
+      value === null || value === undefined || (typeof value === "string" && value.trim() === "");
+    const withBlanksLast = (left: unknown, right: unknown, compare: () => number) => {
+      const leftBlank = isBlank(left);
+      const rightBlank = isBlank(right);
+      if (leftBlank && rightBlank) return 0;
+      if (leftBlank) return 1;
+      if (rightBlank) return -1;
+      return direction * compare();
+    };
     const compareText = (left?: string | null, right?: string | null) =>
-      String(left || "").localeCompare(String(right || ""), undefined, { sensitivity: "base" });
-    const compareNumber = (left: number, right: number) => left - right;
-    const compareDate = (left?: string | null, right?: string | null) =>
-      new Date(left || 0).getTime() - new Date(right || 0).getTime();
+      withBlanksLast(left, right, () =>
+        String(left).localeCompare(String(right), undefined, { sensitivity: "base" })
+      );
+    const compareNumber = (left: number, right: number) => direction * (left - right);
+    const toTime = (value?: string | null) => {
+      if (isBlank(value)) return null;
+      const time = new Date(value as string).getTime();
+      return Number.isNaN(time) ? null : time;
+    };
+    const compareDate = (left?: string | null, right?: string | null) => {
+      const leftTime = toTime(left);
+      const rightTime = toTime(right);
+      return withBlanksLast(leftTime, rightTime, () => (leftTime as number) - (rightTime as number));
+    };
+    const getPriorityScore = (contact: ContactRow) =>
+      typeof contact.hotness_score === "number" ? contact.hotness_score : Number(contact.priority) || 0;
 
     const sorted = [...contacts].sort((a, b) => {
       switch (tableSort.key) {
@@ -2389,8 +2496,20 @@ export function CrmWorkspace({
           return compareNumber(getStageRank(a), getStageRank(b));
         case "signal":
           return compareNumber(getSignalRank(a), getSignalRank(b));
+        case "next_step":
+          return compareText(a.next_step, b.next_step);
         case "source":
           return compareText(a.source_latest, b.source_latest);
+        case "owner":
+          return compareText(a.owner, b.owner);
+        case "priority":
+          return compareNumber(getPriorityScore(a), getPriorityScore(b));
+        case "created":
+          return compareDate(a.created_at, b.created_at);
+        case "updated":
+          return compareDate(a.updated_at, b.updated_at);
+        case "last_touched":
+          return compareDate(a.last_contacted_at, b.last_contacted_at);
         case "last_activity":
           return compareDate(a.latest_captured_at || a.updated_at, b.latest_captured_at || b.updated_at);
         default:
@@ -2398,15 +2517,30 @@ export function CrmWorkspace({
       }
     });
 
-    return tableSort.direction === "asc" ? sorted : sorted.reverse();
+    return sorted;
   }, [contacts, mode, statusOptions, tableSort]);
+
+  const contactsFiltersActive =
+    mode === "contacts" &&
+    Boolean(search.trim() || statusFilter || projectFilter || labelFilter || sourceFilter || ownerFilter);
+
+  function clearContactsFilters() {
+    setSearch("");
+    setStatusFilter("");
+    setProjectFilter("");
+    setLabelFilter("");
+    setSourceFilter("");
+    setOwnerFilter("");
+  }
 
   function toggleTableSort(key: TableSortKey) {
     setTableSort((current) => {
       if (current.key === key) {
         return { key, direction: current.direction === "asc" ? "desc" : "asc" };
       }
-      return { key, direction: key === "name" || key === "source" ? "asc" : "desc" };
+      const ascByDefault =
+        key === "name" || key === "source" || key === "owner" || key === "next_step" || key === "projects";
+      return { key, direction: ascByDefault ? "asc" : "desc" };
     });
   }
 
@@ -2596,6 +2730,56 @@ export function CrmWorkspace({
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to enrich leads");
+    } finally {
+      setActionState(null);
+    }
+  }
+
+  async function checkInSelectedLead() {
+    if (!selectedId) return;
+    setActionState("check-in");
+    setError(null);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/crm/check-in", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contactId: selectedId }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Check-in failed");
+      if (data.detail) setDetail(data.detail);
+      setNotice(`Check-in found ${data.report?.recentTotal || 0} recent CRM activity item${data.report?.recentTotal === 1 ? "" : "s"}.`);
+      await loadContacts();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Check-in failed");
+    } finally {
+      setActionState(null);
+    }
+  }
+
+  async function mergeDuplicates() {
+    if (!window.confirm("Merge duplicate contacts that have no pipeline-status conflicts? This cannot be undone from this screen.")) return;
+    setActionState("merge-duplicates");
+    setError(null);
+    setNotice(null);
+    try {
+      const res = await fetch("/api/crm/dedupe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ project: selectedProject, confirm: true }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to merge duplicates");
+      setNotice(
+        data.merged > 0
+          ? `Merged ${data.merged} duplicate group${data.merged === 1 ? "" : "s"}; ${data.skipped} need review.`
+          : `No duplicate groups were merged; ${data.skipped} need review.`
+      );
+      await loadContacts();
+      if (selectedId) await loadDetail(selectedId);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to merge duplicates");
     } finally {
       setActionState(null);
     }
@@ -3021,6 +3205,78 @@ export function CrmWorkspace({
                     ))}
                   </select>
                 )}
+                {mode === "contacts" && (
+                  <>
+                    <select
+                      value={projectFilter}
+                      onChange={(event) => setProjectFilter(event.target.value)}
+                      className="h-11 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm text-dark-text outline-none"
+                      aria-label="Filter by project"
+                      title="Filter by project"
+                    >
+                      <option value="">All projects</option>
+                      {projectCatalog.map((project) => (
+                        <option key={project.name} value={project.name}>
+                          {project.displayName}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      value={labelFilter}
+                      onChange={(event) => setLabelFilter(event.target.value)}
+                      className="h-11 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm text-dark-text outline-none"
+                      aria-label="Filter by label"
+                      title="Filter by label"
+                    >
+                      <option value="">All labels</option>
+                      {(settings?.approvedLabels || []).map((label) => (
+                        <option key={label.key} value={label.key}>
+                          {label.displayName}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      value={sourceFilter}
+                      onChange={(event) => setSourceFilter(event.target.value)}
+                      className="h-11 max-w-[14rem] rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm text-dark-text outline-none"
+                      aria-label="Filter by source"
+                      title="Filter by source"
+                    >
+                      <option value="">All sources</option>
+                      {sourceOptions.map((source) => (
+                        <option key={source} value={source}>
+                          {source}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      value={ownerFilter}
+                      onChange={(event) => setOwnerFilter(event.target.value)}
+                      className="h-11 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm text-dark-text outline-none"
+                      aria-label="Filter by owner"
+                      title="Filter by owner"
+                    >
+                      <option value="">All owners</option>
+                      {ownerOptions.map((owner) => (
+                        <option key={owner} value={owner}>
+                          {owner}
+                        </option>
+                      ))}
+                    </select>
+                    {contactsFiltersActive && (
+                      <button
+                        type="button"
+                        onClick={clearContactsFilters}
+                        className="inline-flex h-11 shrink-0 items-center justify-center gap-1.5 rounded-xl border border-cm-purple/40 bg-cm-purple/15 px-3 text-sm text-dark-text transition hover:bg-cm-purple/25"
+                        aria-label="Clear filters"
+                        title="Clear filters"
+                      >
+                        <X size={14} />
+                        <span className="whitespace-nowrap">Clear filters</span>
+                      </button>
+                    )}
+                  </>
+                )}
                 <select
                   value={sort}
                   onChange={(event) => setSort(event.target.value)}
@@ -3069,6 +3325,17 @@ export function CrmWorkspace({
                   Enrich All
                 </button>
               )}
+              {(mode === "pipeline" || mode === "contacts") && (
+                <button
+                  type="button"
+                  onClick={() => void mergeDuplicates()}
+                  disabled={actionState === "merge-duplicates"}
+                  className="inline-flex h-11 items-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm text-dark-text transition hover:border-cm-purple/30 disabled:opacity-60"
+                >
+                  {actionState === "merge-duplicates" ? <Loader2 size={16} className="animate-spin" /> : <Users size={16} />}
+                  Merge Duplicates
+                </button>
+              )}
             </div>
           </section>
         )}
@@ -3076,6 +3343,11 @@ export function CrmWorkspace({
         {error && (
           <div className="shrink-0 rounded-xl border border-dark-danger/30 bg-dark-danger/10 px-4 py-3 text-sm text-dark-danger">
             {error}
+          </div>
+        )}
+        {notice && (
+          <div className="shrink-0 rounded-xl border border-cm-purple/30 bg-cm-purple/10 px-4 py-3 text-sm text-cm-purple">
+            {notice}
           </div>
         )}
 
@@ -3434,16 +3706,41 @@ export function CrmWorkspace({
               </div>
             ) : (
               <>
+                {mode === "contacts" && (
+                  <div className="flex flex-wrap items-center justify-between gap-2 border-b border-dark-border px-4 py-2 text-xs text-dark-muted">
+                    <span>
+                      <span className="font-semibold text-dark-text">{sortedTableContacts.length}</span>
+                      {" of "}
+                      <span className="font-semibold text-dark-text">{totalContacts ?? sortedTableContacts.length}</span>
+                      {" contacts"}
+                      {contactsFiltersActive ? " (filtered)" : ""}
+                    </span>
+                    {contactsFiltersActive && (
+                      <button
+                        type="button"
+                        onClick={clearContactsFilters}
+                        className="text-cm-purple transition hover:underline"
+                      >
+                        Clear filters
+                      </button>
+                    )}
+                  </div>
+                )}
                 <div className="overflow-x-auto">
-                  <table className="w-full min-w-[980px] text-sm">
+                  <table className="w-full min-w-[1280px] text-sm">
                     <thead>
                       <tr className="border-b border-dark-border bg-dark-bg">
                         <SortableHeader label="Name" sortKey="name" activeSort={tableSort} onSort={toggleTableSort} />
                         <SortableHeader label="Product Lead" sortKey="projects" activeSort={tableSort} onSort={toggleTableSort} />
                         <SortableHeader label="Pipeline Status" sortKey="stage" activeSort={tableSort} onSort={toggleTableSort} />
                         <SortableHeader label="Fit / Signal" sortKey="signal" activeSort={tableSort} onSort={toggleTableSort} />
-                        <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-dark-muted">Next Step</th>
+                        <SortableHeader label="Next Step" sortKey="next_step" activeSort={tableSort} onSort={toggleTableSort} />
                         <SortableHeader label="Source" sortKey="source" activeSort={tableSort} onSort={toggleTableSort} />
+                        <SortableHeader label="Owner" sortKey="owner" activeSort={tableSort} onSort={toggleTableSort} />
+                        <SortableHeader label="Priority" sortKey="priority" activeSort={tableSort} onSort={toggleTableSort} />
+                        <SortableHeader label="Created" sortKey="created" activeSort={tableSort} onSort={toggleTableSort} />
+                        <SortableHeader label="Updated" sortKey="updated" activeSort={tableSort} onSort={toggleTableSort} />
+                        <SortableHeader label="Last Touched" sortKey="last_touched" activeSort={tableSort} onSort={toggleTableSort} />
                         <SortableHeader label="Last Activity" sortKey="last_activity" activeSort={tableSort} onSort={toggleTableSort} />
                         <th className="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-dark-muted">
                           Actions
@@ -3502,6 +3799,23 @@ export function CrmWorkspace({
                               {contact.source_latest || "manual"}
                             </td>
                             <td className="px-4 py-3 text-sm text-dark-muted">
+                              {contact.owner || "Unassigned"}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-dark-muted">
+                              {typeof contact.hotness_score === "number"
+                                ? contact.hotness_score
+                                : Number(contact.priority) || 0}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-dark-muted">
+                              {contact.created_at ? formatDate(contact.created_at) : "Unknown"}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-dark-muted">
+                              {formatDate(contact.updated_at)}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-dark-muted">
+                              {contact.last_contacted_at ? formatDate(contact.last_contacted_at) : "Never"}
+                            </td>
+                            <td className="px-4 py-3 text-sm text-dark-muted">
                               {formatDate(contact.latest_captured_at || contact.updated_at)}
                             </td>
                             <td className="px-4 py-3 text-right">
@@ -3524,7 +3838,7 @@ export function CrmWorkspace({
                       })}
                       {contacts.length === 0 && (
                         <tr>
-                          <td colSpan={8} className="px-4 py-12 text-center text-dark-muted">
+                          <td colSpan={13} className="px-4 py-12 text-center text-dark-muted">
                             No leads match the current filters.
                           </td>
                         </tr>
@@ -3533,7 +3847,9 @@ export function CrmWorkspace({
                   </table>
                 </div>
                 <div className="border-t border-dark-border px-4 py-2 text-xs text-dark-muted">
-                  {sortedTableContacts.length} lead{sortedTableContacts.length === 1 ? "" : "s"}
+                  {mode === "contacts"
+                    ? `${sortedTableContacts.length} of ${totalContacts ?? sortedTableContacts.length} contacts`
+                    : `${sortedTableContacts.length} lead${sortedTableContacts.length === 1 ? "" : "s"}`}
                 </div>
               </>
             )}
@@ -3566,6 +3882,7 @@ export function CrmWorkspace({
             onCreateAffiliate={createAffiliateFromModal}
             onUploadPhoto={uploadContactPhoto}
             onEnrichLead={enrichSelectedLead}
+            onCheckIn={checkInSelectedLead}
             onLogCommunication={logCommunication}
             onDeleteCommunication={deleteCommunication}
             onEditCommunication={editCommunication}

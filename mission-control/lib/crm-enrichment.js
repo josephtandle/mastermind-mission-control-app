@@ -1,10 +1,11 @@
 "use strict";
 
 const fs = require("node:fs");
-const os = require("node:os");
 const path = require("node:path");
 
-const crm = require("./crm");
+function getCrm() {
+  return require("./crm");
+}
 
 function nowIso() {
   return new Date().toISOString();
@@ -89,12 +90,12 @@ function toAbsoluteUrl(baseUrl, maybeRelative) {
   }
 }
 
-function resolveWebfetchApiPath() {
-  const home = os.homedir();
+function resolveWebfetchRecipePath() {
+  const workspaceRoot = path.resolve(__dirname, "..");
   const candidates = [
-    process.env.WEBFETCH_API_PATH,
-    path.join(home, ".config", "allsorted", "configured_fetch", "api.js"),
-    path.join(home, ".local", "share", "allsorted", "configured_fetch", "api.js"),
+    process.env.WEBFETCH_FETCH_PAGE_RECIPE,
+    path.join(workspaceRoot, "webfetch", "recipes", "fetch-page.js"),
+    path.join(process.cwd(), "webfetch", "recipes", "fetch-page.js"),
   ].filter(Boolean);
 
   for (const candidate of candidates) {
@@ -103,29 +104,31 @@ function resolveWebfetchApiPath() {
   return null;
 }
 
-function loadWebfetchApi() {
-  const resolved = resolveWebfetchApiPath();
+function loadWebfetchRecipe() {
+  const resolved = resolveWebfetchRecipePath();
   if (!resolved) return null;
   try {
-    return require(resolved);
+    const recipe = require(resolved);
+    return typeof recipe?.runRecipe === "function" ? recipe.runRecipe : null;
   } catch {
     return null;
   }
 }
 
 async function fetchHtml(url) {
-  const webfetch = loadWebfetchApi();
-  if (webfetch?.fetchUrl) {
-    const result = await webfetch.fetchUrl(url, {
+  const runFetchPage = loadWebfetchRecipe();
+  if (runFetchPage) {
+    const result = await Promise.resolve(runFetchPage({
+      url,
       format: "html",
       noCache: true,
       browser: "headless",
-    });
-    if (result?.success && typeof result.data === "string" && result.data.trim()) {
+    }));
+    if (result?.status === "ok" && typeof result.reply === "string" && result.reply.trim()) {
       return {
-        html: result.data,
-        engine: "configured_fetch",
-        tool: result.tool || "configured_fetch",
+        html: result.reply,
+        engine: "webfetch_recipe",
+        tool: "fetch-page",
       };
     }
   }
@@ -247,6 +250,7 @@ function buildFieldPatch(contact, websiteProfile, instagramProfile) {
 }
 
 async function enrichContact(contactId) {
+  const crm = getCrm();
   const detail = crm.getContactDetail(contactId);
   if (!detail?.contact) {
     throw new Error(`CRM contact not found: ${contactId}`);
@@ -332,6 +336,7 @@ async function enrichContact(contactId) {
 }
 
 async function enrichAllContacts(options = {}) {
+  const crm = getCrm();
   const project = String(options.project || "pipeline");
   const contacts = crm.listContacts({ project, sort: "updated_desc" }).contacts || [];
   const candidates = contacts.filter((contact) => {
@@ -366,4 +371,6 @@ async function enrichAllContacts(options = {}) {
 module.exports = {
   enrichAllContacts,
   enrichContact,
+  loadWebfetchRecipe,
+  resolveWebfetchRecipePath,
 };

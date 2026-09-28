@@ -3,6 +3,8 @@ const fs = require("fs");
 const os = require("os");
 const crypto = require("crypto");
 const https = require("https");
+const net = require("net");
+const tls = require("tls");
 const { execFileSync } = require("child_process");
 const Database = require("better-sqlite3");
 
@@ -87,6 +89,8 @@ const AUTOMATION_SETTING_KEYS = {
   defaultDelayMinutes: "crm.automation.default_delay_minutes",
   emailLiveEnabled: "crm.automation.email.live_enabled",
   emailFromAddress: "crm.automation.email.from_address",
+  emailProvider: "crm.automation.email.provider",
+  emailMarketingProvider: "crm.email.marketing_provider",
   instagramLiveEnabled: "crm.automation.instagram.live_enabled",
   whatsappLiveEnabled: "crm.automation.whatsapp.live_enabled",
 };
@@ -1259,27 +1263,82 @@ function getPipelineConfig(db, projectName = PIPELINE_PROJECT) {
   };
 }
 
-function commandExists(name) {
-  try {
-    execFileSync("sh", ["-lc", `command -v ${name}`], { stdio: ["ignore", "ignore", "ignore"] });
-    return true;
-  } catch {
-    return false;
+// Live project + stage catalog for the automation UI. Reads active crm_products
+// (display_name from the table) and each project's live pipeline config, so the
+// automation dropdowns always match the pipeline columns instead of a hardcoded list.
+function listAutomationProjects(db) {
+  const database = db || getDb(false);
+  if (!database) {
+    return DEFAULT_CRM_PRODUCTS.filter((product) => product.active).map((product) => ({
+      name: product.key,
+      display_name: product.display_name,
+      stages: [],
+    }));
   }
+  bootstrapSettings(database);
+  seedDefaultCrmProducts(database);
+  const rows = database
+    .prepare(
+      `
+      SELECT key, display_name
+      FROM crm_products
+      WHERE active != 0
+      ORDER BY COALESCE(sort_order, 999999), display_name COLLATE NOCASE, key
+    `
+    )
+    .all();
+  const seen = new Set();
+  const projects = [];
+  for (const row of rows) {
+    const name = normalizeProjectName(row.key);
+    if (!name || seen.has(name)) continue;
+    seen.add(name);
+    const config = getPipelineConfig(database, name);
+    projects.push({
+      name,
+      display_name: normalizeMachineText(row.display_name) || formatProjectDisplayName(name),
+      stages: config.statuses.map((value) => ({ value, label: formatPipelineStatusLabel(value) })),
+    });
+  }
+  return projects;
+}
+
+function commandExists(name) {
+  // Resolve against the current process PATH only (no login shell), so tests
+  // and hardened environments see exactly what this process can execute.
+  if (!name || /[\/\0]/.test(name)) return false;
+  for (const dir of String(process.env.PATH || "").split(path.delimiter)) {
+    if (!dir) continue;
+    const candidate = path.join(dir, name);
+    try {
+      fs.accessSync(candidate, fs.constants.X_OK);
+      if (fs.statSync(candidate).isFile()) return true;
+    } catch {}
+  }
+  return false;
 }
 
 
 function loadWorkspaceEnvVar(name) {
   if (process.env[name]) return process.env[name];
-  try {
-    const content = fs.readFileSync(WORKSPACE_ENV_PATH, "utf8");
-    const match = content.match(new RegExp(`^${name}=(.+)$`, "m"));
-    if (match) {
-      const value = match[1].trim();
+  // Fallback chain: workspace .env, then the Mission Control target's own
+  // .env.local and .env. Next loads .env.local into process.env for the dev
+  // server, but standalone scripts and cron ticks do not, so read it here.
+  const candidates = [WORKSPACE_ENV_PATH, path.join(process.cwd(), ".env.local"), path.join(process.cwd(), ".env")];
+  for (const envPath of candidates) {
+    try {
+      const content = fs.readFileSync(envPath, "utf8");
+      const match = content.match(new RegExp(`^${name}=(.+)$`, "m"));
+      if (!match) continue;
+      let value = match[1].trim();
+      if (value.length >= 2 && ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'")) || (value.startsWith("`") && value.endsWith("`")))) value = value.slice(1, -1);
+      // Agree with Next's env loader: \$ is the escape for a literal dollar sign.
+      value = value.replace(/\\\$/g, "$");
+      if (!value) continue;
       process.env[name] = value;
       return value;
-    }
-  } catch {}
+    } catch {}
+  }
   return "";
 }
 
@@ -1301,6 +1360,543 @@ function getDefaultAutomationEmailFrom() {
     loadWorkspaceEnvVar("RESEND_FROM_EMAIL") ||
     AUTOMATION_EMAIL_FROM
   );
+}
+
+// ---------------------------------------------------------------------------
+// Email provider abstraction for automation sending.
+//
+// The CRM discovers which transactional email service the customer already has
+// (Resend, SendGrid, Mailgun, Postmark, a Gmail app password, a generic SMTP
+// relay, or the gog Gmail CLI) and sends through the selected one. Kit
+// (ConvertKit) is a list/broadcast tool, so it is detected and recorded but
+// never used for transactional sends. Selection lives in crm_settings under
+// crm.automation.email.provider; the from-address setting is unchanged.
+// ---------------------------------------------------------------------------
+
+const EMAIL_PROVIDER_LABELS = {
+  resend: "Resend",
+  sendgrid: "SendGrid",
+  mailgun: "Mailgun",
+  postmark: "Postmark",
+  smtp: "SMTP",
+  gmail: "Gmail",
+  convertkit: "Kit (ConvertKit)",
+};
+
+function readEmailEnv(name) {
+  return String(loadWorkspaceEnvVar(name) || "").trim();
+}
+
+function maskEmailSecret(value) {
+  const text = String(value || "");
+  return text ? `...${text.slice(-4)}` : "";
+}
+
+function extractEmailAddress(value) {
+  const raw = String(value || "");
+  // Reject anything that could smuggle a header or a second recipient: CR/LF
+  // anywhere in the raw value, more than one angle-bracket group, or an
+  // extracted address containing whitespace or brackets.
+  if (/[\r\n]/.test(raw) || (raw.match(/</g) || []).length > 1) return "";
+  const match = raw.match(/<([^>]+)>/);
+  const address = (match ? match[1] : raw).trim();
+  if (!address || /[\r\n<>\s]/.test(address) || !address.includes("@")) return "";
+  return address;
+}
+
+function emailCliEnv() {
+  return typeof getGogEnv === "function" ? getGogEnv() : { ...process.env };
+}
+
+let gmailCliCache = { at: 0, present: false, account: "" };
+function detectGmailCli() {
+  if (Date.now() - gmailCliCache.at < 30000) return gmailCliCache;
+  const next = { at: Date.now(), present: false, account: "" };
+  try {
+    next.present = commandExists("gog");
+    if (next.present) {
+      const configured = readEmailEnv("GMAIL_CLI_ACCOUNT") || readEmailEnv("GOG_ACCOUNT");
+      if (configured) next.account = configured;
+      else {
+        const output = execFileSync("gog", ["auth", "list", "--json"], {
+          encoding: "utf8",
+          timeout: 5000,
+          stdio: ["ignore", "pipe", "ignore"],
+          env: emailCliEnv(),
+        });
+        const parsed = parseJsonSafely(output, {});
+        const accounts = Array.isArray(parsed?.accounts) ? parsed.accounts : Array.isArray(parsed) ? parsed : [];
+        const first = accounts.find((entry) => entry && typeof entry.email === "string" && entry.email);
+        next.account = first ? String(first.email).trim() : "";
+      }
+    }
+  } catch {
+    next.account = "";
+  }
+  gmailCliCache = next;
+  return next;
+}
+
+function resolveEmailProviders() {
+  const providers = [];
+  const resendKey = getResendApiKey();
+  providers.push({
+    id: "resend",
+    label: EMAIL_PROVIDER_LABELS.resend,
+    transactional: true,
+    configured: Boolean(resendKey),
+    transport: "resend",
+    detail: resendKey ? `API key ${maskEmailSecret(resendKey)}` : "RESEND_API_KEY not set",
+    apiKey: resendKey,
+  });
+
+  const sendgridKey = readEmailEnv("SENDGRID_API_KEY");
+  providers.push({
+    id: "sendgrid",
+    label: EMAIL_PROVIDER_LABELS.sendgrid,
+    transactional: true,
+    configured: Boolean(sendgridKey),
+    transport: "smtp",
+    detail: sendgridKey ? `API key ${maskEmailSecret(sendgridKey)} via smtp.sendgrid.net` : "SENDGRID_API_KEY not set",
+    smtp: { host: "smtp.sendgrid.net", port: 587, user: "apikey", pass: sendgridKey, requireTls: true },
+  });
+
+  const mailgunKey = readEmailEnv("MAILGUN_API_KEY");
+  const mailgunDomain = readEmailEnv("MAILGUN_DOMAIN");
+  const mailgunSmtpLogin = readEmailEnv("MAILGUN_SMTP_LOGIN");
+  const mailgunSmtpPassword = readEmailEnv("MAILGUN_SMTP_PASSWORD");
+  if (mailgunSmtpLogin && mailgunSmtpPassword) {
+    const host = readEmailEnv("MAILGUN_SMTP_HOST") || "smtp.mailgun.org";
+    providers.push({
+      id: "mailgun",
+      label: EMAIL_PROVIDER_LABELS.mailgun,
+      transactional: true,
+      configured: true,
+      transport: "smtp",
+      detail: `SMTP login ${mailgunSmtpLogin} via ${host}`,
+      smtp: { host, port: 587, user: mailgunSmtpLogin, pass: mailgunSmtpPassword, requireTls: true },
+    });
+  } else {
+    providers.push({
+      id: "mailgun",
+      label: EMAIL_PROVIDER_LABELS.mailgun,
+      transactional: true,
+      configured: Boolean(mailgunKey && mailgunDomain),
+      transport: "mailgun_api",
+      detail:
+        mailgunKey && mailgunDomain
+          ? `API key ${maskEmailSecret(mailgunKey)} for ${mailgunDomain}`
+          : "MAILGUN_API_KEY and MAILGUN_DOMAIN not both set",
+      apiKey: mailgunKey,
+      domain: mailgunDomain,
+      apiBase: readEmailEnv("MAILGUN_API_BASE") || "https://api.mailgun.net",
+    });
+  }
+
+  const postmarkToken = readEmailEnv("POSTMARK_SERVER_TOKEN");
+  providers.push({
+    id: "postmark",
+    label: EMAIL_PROVIDER_LABELS.postmark,
+    transactional: true,
+    configured: Boolean(postmarkToken),
+    transport: "smtp",
+    detail: postmarkToken ? `server token ${maskEmailSecret(postmarkToken)} via smtp.postmarkapp.com` : "POSTMARK_SERVER_TOKEN not set",
+    smtp: { host: "smtp.postmarkapp.com", port: 587, user: postmarkToken, pass: postmarkToken, requireTls: true },
+  });
+
+  const smtpHost = readEmailEnv("SMTP_HOST");
+  const smtpPort = Number(readEmailEnv("SMTP_PORT")) || 587;
+  const smtpUser = readEmailEnv("SMTP_USER");
+  const smtpPass = readEmailEnv("SMTP_PASS") || readEmailEnv("SMTP_PASSWORD");
+  const smtpSecure = /^(1|true|yes)$/i.test(readEmailEnv("SMTP_SECURE")) || smtpPort === 465;
+  const smtpRejectUnauthorized = !/^(0|false|no)$/i.test(readEmailEnv("SMTP_TLS_REJECT_UNAUTHORIZED") || "1");
+  providers.push({
+    id: "smtp",
+    label: EMAIL_PROVIDER_LABELS.smtp,
+    transactional: true,
+    configured: Boolean(smtpHost),
+    transport: "smtp",
+    detail: smtpHost ? `${smtpHost}:${smtpPort}${smtpUser ? ` as ${smtpUser}` : ""}` : "SMTP_HOST not set",
+    smtp: { host: smtpHost, port: smtpPort, user: smtpUser, pass: smtpPass, secure: smtpSecure, rejectUnauthorized: smtpRejectUnauthorized },
+  });
+
+  const gmailUser = readEmailEnv("GMAIL_USER");
+  const gmailAppPassword = readEmailEnv("GMAIL_APP_PASSWORD");
+  if (gmailUser && gmailAppPassword) {
+    providers.push({
+      id: "gmail",
+      label: EMAIL_PROVIDER_LABELS.gmail,
+      transactional: true,
+      configured: true,
+      transport: "smtp",
+      detail: `app password for ${gmailUser} via smtp.gmail.com`,
+      smtp: { host: "smtp.gmail.com", port: 587, user: gmailUser, pass: gmailAppPassword, requireTls: true },
+    });
+  } else {
+    const cli = detectGmailCli();
+    providers.push({
+      id: "gmail",
+      label: EMAIL_PROVIDER_LABELS.gmail,
+      transactional: true,
+      configured: Boolean(cli.present && cli.account),
+      transport: "gmail_cli",
+      detail: cli.present
+        ? cli.account
+          ? `gog CLI account ${cli.account}`
+          : "gog CLI found but no authenticated account"
+        : "GMAIL_USER + GMAIL_APP_PASSWORD not set and gog CLI not found",
+      account: cli.account,
+    });
+  }
+
+  const kitKey = readEmailEnv("CONVERTKIT_API_KEY") || readEmailEnv("KIT_API_KEY") || readEmailEnv("CONVERTKIT_API_SECRET");
+  providers.push({
+    id: "convertkit",
+    label: EMAIL_PROVIDER_LABELS.convertkit,
+    transactional: false,
+    configured: Boolean(kitKey),
+    transport: "none",
+    detail: kitKey ? `API key ${maskEmailSecret(kitKey)} (broadcast tool, not used for automation sends)` : "not set",
+  });
+
+  return providers;
+}
+
+function listEmailProviders() {
+  return resolveEmailProviders().map((provider) => ({
+    id: provider.id,
+    label: provider.label,
+    transactional: provider.transactional,
+    configured: provider.configured,
+    transport: provider.transport,
+    detail: provider.detail,
+  }));
+}
+
+function getConfiguredEmailProviders() {
+  return resolveEmailProviders().filter((provider) => provider.configured && provider.transactional);
+}
+
+function getMarketingEmailProvider() {
+  return resolveEmailProviders().find((provider) => provider.configured && !provider.transactional) || null;
+}
+
+function getSelectedEmailProvider(db) {
+  const configured = getConfiguredEmailProviders();
+  if (!configured.length) return null;
+  let selectedId = "";
+  if (db) {
+    try {
+      selectedId = normalizeMachineText(getSetting(db, AUTOMATION_SETTING_KEYS.emailProvider, "")) || "";
+    } catch {
+      selectedId = "";
+    }
+  }
+  return configured.find((provider) => provider.id === selectedId) || configured[0];
+}
+
+function encodeMailHeader(value) {
+  const text = String(value || "").replace(/[\r\n]+/g, " ").trim();
+  if (/^[\x20-\x7e]*$/.test(text)) return text;
+  return `=?UTF-8?B?${Buffer.from(text, "utf8").toString("base64")}?=`;
+}
+
+function base64Lines(text) {
+  return Buffer.from(String(text || ""), "utf8").toString("base64").replace(/(.{76})/g, "$1\r\n");
+}
+
+function buildMimeMessage(message) {
+  const fromAddress = extractEmailAddress(message.from);
+  const domain = fromAddress.includes("@") ? fromAddress.split("@").pop() : "localhost";
+  const boundary = `----=_crm_${crypto.randomUUID()}`;
+  const headers = [
+    `From: ${String(message.from || "").replace(/[\r\n]+/g, " ")}`,
+    `To: ${String(message.to || "").replace(/[\r\n]+/g, " ")}`,
+    `Subject: ${encodeMailHeader(message.subject)}`,
+    `Date: ${new Date().toUTCString()}`,
+    `Message-ID: <${crypto.randomUUID()}@${domain}>`,
+    "MIME-Version: 1.0",
+  ];
+  const text = String(message.text || "");
+  const html = String(message.html || "");
+  let body;
+  if (html) {
+    headers.push(`Content-Type: multipart/alternative; boundary="${boundary}"`);
+    body = [
+      `--${boundary}`,
+      "Content-Type: text/plain; charset=utf-8",
+      "Content-Transfer-Encoding: base64",
+      "",
+      base64Lines(text),
+      `--${boundary}`,
+      "Content-Type: text/html; charset=utf-8",
+      "Content-Transfer-Encoding: base64",
+      "",
+      base64Lines(html),
+      `--${boundary}--`,
+      "",
+    ].join("\r\n");
+  } else {
+    headers.push("Content-Type: text/plain; charset=utf-8", "Content-Transfer-Encoding: base64");
+    body = base64Lines(text);
+  }
+  return `${headers.join("\r\n")}\r\n\r\n${body}`;
+}
+
+// Minimal SMTP client: EHLO, STARTTLS when offered, AUTH PLAIN or LOGIN, one
+// recipient. Enough for transactional relays without adding a dependency.
+function createSmtpClient(initialSocket) {
+  let socket = initialSocket;
+  let buffer = "";
+  let pending = null;
+  let failure = null;
+  let handlers = null;
+  function deliver() {
+    if (!pending) return;
+    const lines = buffer.split("\r\n");
+    for (let index = 0; index < lines.length - 1; index += 1) {
+      if (/^\d{3}( |$)/.test(lines[index])) {
+        const reply = lines.slice(0, index + 1);
+        buffer = lines.slice(index + 1).join("\r\n");
+        const current = pending;
+        pending = null;
+        current.resolve({ code: Number(reply[index].slice(0, 3)), text: reply.join("\n") });
+        return;
+      }
+    }
+  }
+  function fail(error) {
+    failure = error;
+    if (pending) {
+      const current = pending;
+      pending = null;
+      current.reject(error);
+    }
+  }
+  function attach(target) {
+    handlers = {
+      data: (chunk) => {
+        buffer += chunk.toString("utf8");
+        deliver();
+      },
+      error: (error) => fail(error),
+      close: () => fail(failure || new Error("SMTP connection closed")),
+      timeout: () => target.destroy(new Error("SMTP connection timed out")),
+    };
+    for (const [event, handler] of Object.entries(handlers)) target.on(event, handler);
+  }
+  function detach() {
+    if (handlers) for (const [event, handler] of Object.entries(handlers)) socket.removeListener(event, handler);
+    handlers = null;
+    return socket;
+  }
+  attach(socket);
+  return {
+    read() {
+      return new Promise((resolve, reject) => {
+        if (failure) return reject(failure);
+        pending = { resolve, reject };
+        deliver();
+      });
+    },
+    send(command) {
+      socket.write(`${command}\r\n`);
+      return this.read();
+    },
+    detach,
+    upgrade(nextSocket) {
+      socket = nextSocket;
+      buffer = "";
+      failure = null;
+      attach(nextSocket);
+    },
+    destroy() {
+      try {
+        socket.destroy();
+      } catch {}
+    },
+  };
+}
+
+const SMTP_CONNECT_TIMEOUT_MS = 10000;
+const SMTP_SESSION_DEADLINE_MS = 20000;
+
+async function sendSmtpMail(smtp, message) {
+  const port = Number(smtp.port) || 587;
+  const secure = Boolean(smtp.secure) || port === 465;
+  // Credentials never travel in clear: any authenticated relay, and every
+  // hosted provider relay, must end up on TLS (implicit on 465 or STARTTLS).
+  const requireTls = Boolean(smtp.requireTls) || Boolean(smtp.user);
+  const rejectUnauthorized = smtp.rejectUnauthorized !== false;
+  const fromAddress = extractEmailAddress(message.from);
+  const toAddress = extractEmailAddress(message.to);
+  if (!smtp.host) throw new Error("SMTP host is not configured");
+  if (!fromAddress || !toAddress) throw new Error("SMTP send needs both a valid from address and a valid recipient");
+  let client = null;
+  let deadlineTimer = null;
+  const deadline = new Promise((_, reject) => {
+    deadlineTimer = setTimeout(() => {
+      if (client) client.destroy();
+      reject(new Error(`SMTP session exceeded ${SMTP_SESSION_DEADLINE_MS / 1000}s deadline`));
+    }, SMTP_SESSION_DEADLINE_MS);
+  });
+  const session = (async () => {
+  const rawSocket = await new Promise((resolve, reject) => {
+    const candidate = secure
+      ? tls.connect({ host: smtp.host, port, servername: smtp.host, rejectUnauthorized })
+      : net.connect({ host: smtp.host, port });
+    candidate.setTimeout(SMTP_CONNECT_TIMEOUT_MS, () => candidate.destroy(new Error(`SMTP connect to ${smtp.host}:${port} timed out`)));
+    candidate.once("error", reject);
+    candidate.once(secure ? "secureConnect" : "connect", () => {
+      candidate.removeListener("error", reject);
+      candidate.setTimeout(SMTP_SESSION_DEADLINE_MS);
+      resolve(candidate);
+    });
+  });
+  client = createSmtpClient(rawSocket);
+  const expect = (reply, codes, step) => {
+    if (!codes.includes(reply.code)) throw new Error(`SMTP ${step} failed: ${reply.text.split("\n").pop()}`);
+    return reply;
+  };
+  const hostname = (os.hostname && os.hostname()) || "localhost";
+  try {
+    expect(await client.read(), [220], "greeting");
+    let ehlo = expect(await client.send(`EHLO ${hostname}`), [250], "EHLO");
+    const offersStartTls = /^250[- ]STARTTLS/im.test(ehlo.text);
+    if (!secure && !offersStartTls && requireTls) {
+      throw new Error(`SMTP server ${smtp.host}:${port} did not offer STARTTLS; refusing to send credentials in clear. Use port 465 (SMTP_SECURE=1) or a relay that supports STARTTLS.`);
+    }
+    if (!secure && offersStartTls) {
+      expect(await client.send("STARTTLS"), [220], "STARTTLS");
+      const plain = client.detach();
+      const upgraded = await new Promise((resolve, reject) => {
+        const candidate = tls.connect({ socket: plain, servername: smtp.host, rejectUnauthorized }, () => resolve(candidate));
+        candidate.once("error", reject);
+      });
+      upgraded.setTimeout(SMTP_SESSION_DEADLINE_MS);
+      client.upgrade(upgraded);
+      ehlo = expect(await client.send(`EHLO ${hostname}`), [250], "EHLO after STARTTLS");
+    }
+    if (smtp.user) {
+      const authLine = ehlo.text.split("\n").find((line) => /^250[- ]AUTH/i.test(line)) || "";
+      if (/LOGIN/i.test(authLine) && !/PLAIN/i.test(authLine)) {
+        expect(await client.send("AUTH LOGIN"), [334], "AUTH LOGIN");
+        expect(await client.send(Buffer.from(smtp.user, "utf8").toString("base64")), [334], "AUTH LOGIN username");
+        expect(await client.send(Buffer.from(smtp.pass || "", "utf8").toString("base64")), [235], "AUTH LOGIN password");
+      } else {
+        const token = Buffer.from(`\u0000${smtp.user}\u0000${smtp.pass || ""}`, "utf8").toString("base64");
+        expect(await client.send(`AUTH PLAIN ${token}`), [235], "AUTH PLAIN");
+      }
+    }
+    expect(await client.send(`MAIL FROM:<${fromAddress}>`), [250], "MAIL FROM");
+    expect(await client.send(`RCPT TO:<${toAddress}>`), [250, 251], "RCPT TO");
+    expect(await client.send("DATA"), [354], "DATA");
+    const data = buildMimeMessage(message).replace(/^\./gm, "..");
+    const accepted = expect(await client.send(`${data}\r\n.`), [250], "message body");
+    try {
+      await client.send("QUIT");
+    } catch {}
+    const responseLine = accepted.text.split("\n").pop();
+    const queued = responseLine.match(/queued as ([^\s]+)/i);
+    return {
+      ok: true,
+      status: 200,
+      data: { transport: "smtp", host: smtp.host, tls: secure || offersStartTls, response: responseLine, id: queued ? queued[1] : undefined },
+    };
+  } finally {
+    client.destroy();
+  }
+  })();
+  try {
+    return await Promise.race([session, deadline]);
+  } finally {
+    clearTimeout(deadlineTimer);
+    if (client) client.destroy();
+  }
+}
+
+function postFormWithHttps(urlString, headers, fields, timeoutMs = 15000) {
+  const url = new URL(urlString);
+  const body = new URLSearchParams();
+  for (const [key, value] of Object.entries(fields)) {
+    if (value === undefined || value === null || value === "") continue;
+    body.append(key, String(value));
+  }
+  const encoded = body.toString();
+  return new Promise((resolve, reject) => {
+    const req = https.request(
+      {
+        protocol: url.protocol,
+        hostname: url.hostname,
+        port: url.port || undefined,
+        path: `${url.pathname}${url.search}`,
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Length": Buffer.byteLength(encoded),
+          ...headers,
+        },
+      },
+      (res) => {
+        let raw = "";
+        res.on("data", (chunk) => {
+          raw += chunk;
+        });
+        res.on("end", () => {
+          resolve({
+            ok: Boolean(res.statusCode && res.statusCode >= 200 && res.statusCode < 300),
+            status: res.statusCode || 500,
+            data: parseJsonSafely(raw, { raw }),
+          });
+        });
+      }
+    );
+    req.setTimeout(timeoutMs, () => req.destroy(new Error("request timed out")));
+    req.on("error", reject);
+    req.write(encoded);
+    req.end();
+  });
+}
+
+function sendViaGmailCli(provider, message) {
+  if (!provider.account) throw new Error("Gmail CLI has no authenticated account");
+  const toAddress = extractEmailAddress(message.to);
+  const args = ["gmail", "send", "-a", provider.account, "--to", toAddress, "--subject", String(message.subject || ""), "--body", String(message.text || "")];
+  if (message.html) args.push("--body-html", String(message.html));
+  const fromAddress = extractEmailAddress(message.from);
+  if (fromAddress && fromAddress.toLowerCase() !== provider.account.toLowerCase()) args.push("--from", fromAddress);
+  args.push("--no-input", "--force");
+  const output = execFileSync("gog", args, { timeout: 30000, encoding: "utf8", env: emailCliEnv() });
+  return { ok: true, status: 200, data: { transport: "gmail_cli", account: provider.account, output: String(output || "").trim() || "sent" } };
+}
+
+async function sendEmailViaProvider(provider, message) {
+  if (!provider || !provider.configured) throw new Error("No configured email provider");
+  let result;
+  if (provider.transport === "resend") {
+    result = await postJsonWithHttps(
+      RESEND_API_URL,
+      { Authorization: `Bearer ${provider.apiKey}` },
+      { from: message.from, to: [message.to], subject: message.subject, text: message.text, html: message.html || undefined },
+      15000
+    );
+  } else if (provider.transport === "smtp") {
+    result = await sendSmtpMail(provider.smtp, message);
+  } else if (provider.transport === "mailgun_api") {
+    const auth = Buffer.from(`api:${provider.apiKey}`, "utf8").toString("base64");
+    result = await postFormWithHttps(
+      `${provider.apiBase.replace(/\/$/, "")}/v3/${provider.domain}/messages`,
+      { Authorization: `Basic ${auth}` },
+      { from: message.from, to: message.to, subject: message.subject, text: message.text, html: message.html || "" },
+      15000
+    );
+  } else if (provider.transport === "gmail_cli") {
+    result = sendViaGmailCli(provider, message);
+  } else {
+    throw new Error(`Email provider ${provider.id} cannot send transactional email`);
+  }
+  const data = result && typeof result.data === "object" && result.data && !Array.isArray(result.data) ? result.data : { raw: result?.data };
+  return { ok: Boolean(result?.ok), status: result?.status || 500, data: { provider: provider.id, ...data } };
 }
 
 function normalizeAutomationEmailFrom(value, fallback = null) {
@@ -1353,11 +1949,19 @@ function getAutomationChannelCapabilities() {
     whatsapp: { wired: false, verified: false, reason: "whatsapp_agent_missing" },
   };
 
-  if (getResendApiKey()) {
+  const emailProvider = getSelectedEmailProvider(null);
+  if (emailProvider) {
     capabilities.email = {
       wired: true,
       verified: true,
-      reason: "resend_configured",
+      reason: `${emailProvider.id}_configured`,
+      provider: emailProvider.id,
+    };
+  } else {
+    capabilities.email = {
+      wired: false,
+      verified: false,
+      reason: getMarketingEmailProvider() ? "marketing_provider_only" : "email_provider_missing",
     };
   }
 
@@ -1383,7 +1987,9 @@ function getAutomationChannelCapabilities() {
   }
 
   const whatsappAgentPath = process.env.CRM_WHATSAPP_SENDER_COMMAND || "";
-  if (!whatsappAgentPath) return { configured: false, reason: "Set CRM_WHATSAPP_SENDER_COMMAND to enable delivery." };
+  if (!whatsappAgentPath) {
+    capabilities.whatsapp = { wired: false, verified: false, reason: "Set CRM_WHATSAPP_SENDER_COMMAND to enable delivery." };
+  }
 
   return capabilities;
 }
@@ -1400,6 +2006,12 @@ function getAutomationSettings(db) {
           getSetting(db, AUTOMATION_SETTING_KEYS.emailFromAddress, getDefaultAutomationEmailFrom()),
           getDefaultAutomationEmailFrom()
         ),
+        provider: getSelectedEmailProvider(db)?.id || "",
+        providers: listEmailProviders(),
+        marketing_provider:
+          normalizeMachineText(getSetting(db, AUTOMATION_SETTING_KEYS.emailMarketingProvider, "")) ||
+          getMarketingEmailProvider()?.id ||
+          "",
       },
       instagram: {
         live_enabled: Boolean(getSetting(db, AUTOMATION_SETTING_KEYS.instagramLiveEnabled, false)),
@@ -1409,6 +2021,17 @@ function getAutomationSettings(db) {
       },
     },
   };
+}
+
+function resolveEmailProviderSelection(requested, currentId) {
+  if (requested === undefined) return currentId || "";
+  const wanted = normalizeMachineText(requested) || "";
+  if (!wanted) return "";
+  const configured = getConfiguredEmailProviders();
+  if (!configured.some((provider) => provider.id === wanted)) {
+    throw new Error(`Email provider "${wanted}" is not configured. Available: ${configured.map((provider) => provider.id).join(", ") || "none"}`);
+  }
+  return wanted;
 }
 
 function setAutomationSettings(input = {}) {
@@ -1429,6 +2052,7 @@ function setAutomationSettings(input = {}) {
         input.email_from_address,
         current.channels.email.from_address || getDefaultAutomationEmailFrom()
       ),
+      provider: resolveEmailProviderSelection(input.email_provider, current.channels.email.provider),
     },
     instagram: {
       live_enabled:
@@ -1452,6 +2076,9 @@ function setAutomationSettings(input = {}) {
   db.prepare(
     "INSERT INTO crm_settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value"
   ).run(AUTOMATION_SETTING_KEYS.emailFromAddress, JSON.stringify(nextChannels.email.from_address));
+  db.prepare(
+    "INSERT INTO crm_settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value"
+  ).run(AUTOMATION_SETTING_KEYS.emailProvider, JSON.stringify(nextChannels.email.provider || ""));
   db.prepare(
     "INSERT INTO crm_settings (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value"
   ).run(AUTOMATION_SETTING_KEYS.instagramLiveEnabled, JSON.stringify(nextChannels.instagram.live_enabled));
@@ -1712,6 +2339,18 @@ function saveAutomationRule(input = {}) {
   if (!projectName) throw new Error("Automation rule project_name required");
   const toStage = normalizeMachineText(input.to_stage || existing?.to_stage);
   if (!toStage) throw new Error("Automation rule to_stage required");
+  // Only validate the destination stage when the caller is changing it (or the
+  // project). A plain enable/disable toggle on a rule whose stage was deleted
+  // must still succeed so the customer can switch it off.
+  const stageSupplied = input.to_stage !== undefined || input.project_name !== undefined;
+  const liveStatuses = stageSupplied ? getPipelineConfig(db, projectName).statuses : null;
+  if (liveStatuses && !liveStatuses.includes(toStage)) {
+    throw new Error(
+      `Destination stage "${formatPipelineStatusLabel(toStage)}" is not a pipeline column in ${projectName}. Pick one of: ${liveStatuses
+        .map(formatPipelineStatusLabel)
+        .join(", ")}`
+    );
+  }
   const fromStage = null;
   const channel = normalizeAutomationChannel(input.channel || existing?.channel);
   if (!channel) throw new Error("Valid automation rule channel required");
@@ -2220,7 +2859,7 @@ async function sendWhatsappAutomationDelivery(db, delivery) {
 }
 
 async function sendEmailAutomationDelivery(db, delivery) {
-  const resendApiKey = getResendApiKey();
+  const provider = getSelectedEmailProvider(db);
   const settings = getAutomationSettings(db);
   const fromAddress = normalizeAutomationEmailFrom(
     settings.channels?.email?.from_address,
@@ -2234,21 +2873,14 @@ async function sendEmailAutomationDelivery(db, delivery) {
     .map((paragraph) => `<p>${paragraph.replace(/\n/g, "<br />")}</p>`)
     .join("");
 
-  if (resendApiKey) {
-    return postJsonWithHttps(
-      RESEND_API_URL,
-      {
-        Authorization: `Bearer ${resendApiKey}`,
-      },
-      {
-        from: fromAddress,
-        to: [delivery.recipient_identity],
-        subject,
-        text: body,
-        html: html || undefined,
-      },
-      15000
-    );
+  if (provider) {
+    return sendEmailViaProvider(provider, {
+      from: fromAddress,
+      to: delivery.recipient_identity,
+      subject,
+      text: body,
+      html: html || undefined,
+    });
   }
 
   try {
@@ -2288,10 +2920,10 @@ async function sendAutomationTestEmail(options = {}) {
   const delivery = {
     recipient_identity: recipientIdentity,
     payload_json: JSON.stringify({
-      subject: options.subject || "Mission Control Resend Test",
+      subject: options.subject || "Mission Control Email Test",
       body:
         options.body ||
-        "This is a live Resend canary from Mission Control automation settings.",
+        "This is a live email canary from Mission Control automation settings.",
     }),
   };
 
@@ -2343,7 +2975,7 @@ async function processAutomationDelivery(db, delivery) {
     ).run("missing_recipient_identity", nowIso(), delivery.id);
     return { id: delivery.id, status: "blocked", reason: "missing_recipient_identity" };
   }
-  if (delivery.channel === "email" && !getResendApiKey()) {
+  if (delivery.channel === "email" && !hasLiveAutomationAdapter("email")) {
     db.prepare(
       "UPDATE crm_automation_delivery_queue SET status = 'blocked', blocked_reason = ?, updated_at = ? WHERE id = ?"
     ).run("adapter_not_wired", nowIso(), delivery.id);
@@ -2438,7 +3070,7 @@ function hasLiveAutomationAdapter(channel) {
     return Boolean(getEvolutionApiUrl() && getEvolutionApiKey());
   }
   if (channel === "email") {
-    return Boolean(getResendApiKey());
+    return getConfiguredEmailProviders().length > 0;
   }
   return false;
 }
@@ -2495,6 +3127,7 @@ function getAutomationSettingsSnapshot() {
     templates: listAutomationTemplates(),
     approval: listAutomationApprovalItems({}),
     delivery: listAutomationDeliveries({}),
+    projects: listAutomationProjects(db),
   };
 }
 
@@ -3114,6 +3747,7 @@ function listContacts(options = {}) {
   if (!db) {
     return {
       contacts: [],
+      totalContacts: 0,
       summary: getEmptySummary(),
       projectCatalog: getProjectCatalog(),
       affiliates: [],
@@ -3144,18 +3778,32 @@ function listContacts(options = {}) {
         "EXISTS (SELECT 1 FROM crm_contact_projects cp2 WHERE cp2.contact_id = c.id AND cp2.project_name = ? AND cp2.pipeline_status = ?)"
       );
       params.push(PIPELINE_PROJECT, normalizePipelineStatus(options.status));
+    } else if (!project) {
+      // All-projects list view: a stage can live on the contact row or on any
+      // project membership row, so match either.
+      where.push(
+        "(c.status = ? OR EXISTS (SELECT 1 FROM crm_contact_projects cp2 WHERE cp2.contact_id = c.id AND cp2.pipeline_status = ?))"
+      );
+      params.push(options.status, normalizePipelineStatus(options.status));
     } else {
       where.push("c.status = ?");
       params.push(options.status);
     }
   }
   if (options.source) {
-    where.push("c.source_latest = ?");
-    params.push(options.source);
+    // The list view offers both first and latest sources as filter values.
+    where.push("(c.source_latest = ? OR c.source_first = ?)");
+    params.push(options.source, options.source);
   }
   if (options.owner) {
     where.push("c.owner = ?");
     params.push(options.owner);
+  }
+  if (options.label) {
+    where.push(
+      "(c.funnel_label_key = ? OR EXISTS (SELECT 1 FROM crm_contact_funnel_labels fl2 WHERE fl2.contact_id = c.id AND fl2.label_key = ?))"
+    );
+    params.push(options.label, options.label);
   }
   if (project) {
     where.push(
@@ -3242,6 +3890,7 @@ function listContacts(options = {}) {
         ON mp.contact_id = c.id AND mp.project_name = '${PIPELINE_PROJECT}'
       WHERE c.id IS NOT NULL
         AND trim(c.id) != ''
+        AND (c.status IS NULL OR c.status != 'merged')
         ${where.length ? `AND ${where.join(" AND ")}` : ""}
       ORDER BY ${orderBy}
     `
@@ -3284,8 +3933,16 @@ function listContacts(options = {}) {
   const allStatuses = getProjectPipelineStatuses(db, activeProject);
   const stageAutomationMap = getStageAutomationMap(db, activeProject, allStatuses);
 
+  // Unfiltered, non-merged total so the list view can show "N of M contacts".
+  const totalContacts = db
+    .prepare(
+      "SELECT COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != '' AND COALESCE(status, '') != 'merged'"
+    )
+    .get().count;
+
   return {
     contacts,
+    totalContacts,
     summary: getSummary(db),
     projectCatalog: getProjectCatalog(),
     affiliates: listPipelineAffiliates(db),
@@ -3298,16 +3955,16 @@ function listContacts(options = {}) {
 
 function getSummary(db) {
   const total = db
-    .prepare("SELECT COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != ''")
+    .prepare("SELECT COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != '' AND (status IS NULL OR status != 'merged')")
     .get().count;
   const pendingReview = db
     .prepare(
-      "SELECT COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != '' AND review_needed = 1"
+      "SELECT COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != '' AND (status IS NULL OR status != 'merged') AND review_needed = 1"
     )
     .get().count;
   const byStatus = db
     .prepare(
-      "SELECT status, COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != '' GROUP BY status ORDER BY status ASC"
+      "SELECT status, COUNT(*) AS count FROM crm_contacts WHERE id IS NOT NULL AND trim(id) != '' AND (status IS NULL OR status != 'merged') GROUP BY status ORDER BY status ASC"
     )
     .all();
   const pipelineByStatus = db
@@ -4413,6 +5070,7 @@ module.exports = {
   getDb,
   getAutomationSettingsSnapshot,
   getProjectCatalog,
+  listAutomationProjects,
   listInstagramEnrichmentCandidates,
   listAutomationApprovalItems,
   listAutomationDeliveries,
@@ -4434,6 +5092,14 @@ module.exports = {
   saveAutomationRule,
   saveAutomationTemplate,
   sendAutomationTestEmail,
+  getConfiguredEmailProviders,
+  getMarketingEmailProvider,
+  getSelectedEmailProvider,
+  listEmailProviders,
+  resolveEmailProviders,
+  sendEmailViaProvider,
+  sendSmtpMail,
+  buildMimeMessage,
   setApprovedLabelKeys,
   setAutomationSettings,
   tickAutomationQueues,

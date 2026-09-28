@@ -62,11 +62,26 @@ type DeliveryItem = {
   };
 };
 
+type EmailProviderOption = {
+  id: string;
+  label: string;
+  transactional: boolean;
+  configured: boolean;
+  transport: string;
+  detail?: string | null;
+};
+
 type AutomationSnapshot = {
   settings: {
     default_delay_minutes: number;
     channels: {
-      email: { live_enabled: boolean; from_address?: string | null };
+      email: {
+        live_enabled: boolean;
+        from_address?: string | null;
+        provider?: string | null;
+        providers?: EmailProviderOption[];
+        marketing_provider?: string | null;
+      };
       instagram: { live_enabled: boolean };
       whatsapp: { live_enabled: boolean };
     };
@@ -80,7 +95,11 @@ type AutomationSnapshot = {
   templates: AutomationTemplate[];
   approval: ApprovalItem[];
   delivery: DeliveryItem[];
+  projects?: AutomationProject[];
 };
+
+type AutomationStage = { value: string; label: string };
+type AutomationProject = { name: string; display_name: string; stages: AutomationStage[] };
 
 type DraftAssistantResult = {
   opener: string;
@@ -95,29 +114,7 @@ const CHANNEL_OPTIONS = [
   { value: "instagram", label: "Instagram" },
 ] as const;
 
-const PROJECT_OPTIONS = [{ value: "default", label: "Default Project" }];
-
-const STAGE_LABELS: Record<string, string> = {
-  new: "New",
-  contacted: "Contacted",
-  qualified: "Qualified",
-  negotiating: "Negotiating",
-  won: "Won",
-  stale: "Stale",
-  lost: "Lost",
-};
-
-const STAGE_OPTIONS = [
-  "new",
-  "contacted",
-  "qualified",
-  "qualified",
-  "negotiating",
-  "won",
-  "qualified",
-  "stale",
-  "lost",
-];
+const DEFAULT_PROJECT_NAME = "pipeline";
 
 const TEMPLATE_VARIABLES = [
   { token: "{{first_name}}", label: "First Name", description: "Lead first name" },
@@ -139,9 +136,45 @@ function fromLocalInput(value: string) {
   return value ? new Date(value).toISOString() : null;
 }
 
-function formatStage(value?: string | null) {
+function titleCaseStage(value: string) {
+  return value
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}
+
+function findProject(projects: AutomationProject[] | undefined, projectName?: string | null) {
+  if (!projects?.length) return null;
+  return projects.find((project) => project.name === projectName) || null;
+}
+
+function findStage(projects: AutomationProject[] | undefined, projectName: string | null | undefined, value: string) {
+  const project = findProject(projects, projectName);
+  const scoped = project?.stages.find((stage) => stage.value === value);
+  if (scoped) return scoped;
+  for (const candidate of projects || []) {
+    const match = candidate.stages.find((stage) => stage.value === value);
+    if (match) return match;
+  }
+  return null;
+}
+
+function formatStage(value?: string | null, projectName?: string | null, projects?: AutomationProject[]) {
   if (!value) return "Any";
-  return STAGE_LABELS[value] || value.replace(/_/g, " ");
+  return findStage(projects, projectName, value)?.label || titleCaseStage(value);
+}
+
+function isStageMissing(projects: AutomationProject[] | undefined, projectName: string, value?: string | null) {
+  if (!value) return false;
+  const project = findProject(projects, projectName);
+  if (!project) return false;
+  return !project.stages.some((stage) => stage.value === value);
+}
+
+function defaultToStage(project: AutomationProject | null) {
+  if (!project || !project.stages.length) return "";
+  return (project.stages[1] || project.stages[0]).value;
 }
 
 function formatChannel(value: string) {
@@ -206,9 +239,9 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
     name: "",
     enabled: true,
     trigger_type: "stage_changed",
-    project_name: "pipeline",
+    project_name: DEFAULT_PROJECT_NAME,
     from_stage: "",
-    to_stage: "contacted",
+    to_stage: "",
     delay_minutes: "3",
     channel: "whatsapp",
     template_id: "",
@@ -217,6 +250,7 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
     default_delay_minutes: "3",
     email_live_enabled: false,
     email_from_address: "",
+    email_provider: "",
     email_test_recipient: "",
     instagram_live_enabled: false,
     whatsapp_live_enabled: false,
@@ -245,10 +279,27 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to load automation snapshot");
       setSnapshot(data);
+      const liveProjects: AutomationProject[] = Array.isArray(data.projects) ? data.projects : [];
+      setRuleForm((current) => {
+        if (current.id) return current;
+        const project =
+          findProject(liveProjects, current.project_name) ||
+          findProject(liveProjects, DEFAULT_PROJECT_NAME) ||
+          liveProjects[0] ||
+          null;
+        if (!project) return current;
+        const toStageValid = project.stages.some((stage) => stage.value === current.to_stage);
+        return {
+          ...current,
+          project_name: project.name,
+          to_stage: toStageValid ? current.to_stage : defaultToStage(project),
+        };
+      });
       setSettingsForm((current) => ({
         default_delay_minutes: String(data.settings.default_delay_minutes || 3),
         email_live_enabled: Boolean(data.settings.channels.email.live_enabled),
         email_from_address: String(data.settings.channels.email.from_address || ""),
+        email_provider: String(data.settings.channels.email.provider || ""),
         email_test_recipient: current.email_test_recipient || "",
         instagram_live_enabled: Boolean(data.settings.channels.instagram.live_enabled),
         whatsapp_live_enabled: Boolean(data.settings.channels.whatsapp.live_enabled),
@@ -268,6 +319,26 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
     () => (snapshot?.approval || []).filter((item) => item.review_status === "pending_review"),
     [snapshot]
   );
+  const projectOptions = useMemo(() => snapshot?.projects || [], [snapshot]);
+  const selectedProject = useMemo(
+    () => findProject(projectOptions, ruleForm.project_name),
+    [projectOptions, ruleForm.project_name]
+  );
+  const stageOptions = useMemo(() => selectedProject?.stages || [], [selectedProject]);
+  // Keep a stale value (renamed outside the rename path, or deleted) selectable so
+  // editing an old rule does not silently switch its stage.
+  const fromStageOptions = useMemo(() => {
+    if (!ruleForm.from_stage || stageOptions.some((stage) => stage.value === ruleForm.from_stage)) {
+      return stageOptions;
+    }
+    return [...stageOptions, { value: ruleForm.from_stage, label: `${titleCaseStage(ruleForm.from_stage)} (stage missing)` }];
+  }, [stageOptions, ruleForm.from_stage]);
+  const toStageOptions = useMemo(() => {
+    if (!ruleForm.to_stage || stageOptions.some((stage) => stage.value === ruleForm.to_stage)) {
+      return stageOptions;
+    }
+    return [...stageOptions, { value: ruleForm.to_stage, label: `${titleCaseStage(ruleForm.to_stage)} (stage missing)` }];
+  }, [stageOptions, ruleForm.to_stage]);
   const isTemplatesMode = mode === "templates";
   const isAutomationsMode = mode === "automations";
 
@@ -337,9 +408,9 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
         name: "",
         enabled: true,
         trigger_type: "stage_changed",
-        project_name: "pipeline",
+        project_name: ruleForm.project_name,
         from_stage: "",
-        to_stage: "contacted",
+        to_stage: defaultToStage(findProject(snapshot?.projects, ruleForm.project_name)),
         delay_minutes: settingsForm.default_delay_minutes,
         channel: "whatsapp",
         template_id: "",
@@ -379,7 +450,7 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
       const res = await fetch("/api/crm/automations/rules", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "save", ...rule, enabled: !rule.enabled }),
+        body: JSON.stringify({ action: "save", id: rule.id, enabled: !rule.enabled }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to toggle rule");
@@ -422,6 +493,7 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
           default_delay_minutes: Number(settingsForm.default_delay_minutes) || 3,
           email_live_enabled: settingsForm.email_live_enabled,
           email_from_address: settingsForm.email_from_address,
+          email_provider: settingsForm.email_provider,
           instagram_live_enabled: settingsForm.instagram_live_enabled,
           whatsapp_live_enabled: settingsForm.whatsapp_live_enabled,
         }),
@@ -437,6 +509,12 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
     }
   }
 
+  const emailProviders: EmailProviderOption[] = snapshot?.settings.channels.email.providers || [];
+  const configuredEmailProviders = emailProviders.filter((provider) => provider.configured && provider.transactional);
+  const marketingEmailProvider = emailProviders.find((provider) => provider.configured && !provider.transactional) || null;
+  const selectedEmailProviderId = settingsForm.email_provider || configuredEmailProviders[0]?.id || "";
+  const selectedEmailProvider = configuredEmailProviders.find((provider) => provider.id === selectedEmailProviderId) || null;
+
   async function handleSendTestEmail() {
     setSaving("test-email");
     setError(null);
@@ -449,8 +527,9 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
           action: "send_test_email",
           to: settingsForm.email_test_recipient,
           email_from_address: settingsForm.email_from_address,
-          subject: "Mission Control Resend Test",
-          body: `Live Resend canary from Mission Control using sender ${settingsForm.email_from_address || "default sender"}.`,
+          email_provider: selectedEmailProviderId,
+          subject: "Mission Control Email Test",
+          body: `Live email canary from Mission Control via ${selectedEmailProvider?.label || "the selected provider"} using sender ${settingsForm.email_from_address || "default sender"}.`,
         }),
       });
       const data = await res.json();
@@ -851,12 +930,24 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                   <span className="block text-xs font-medium uppercase tracking-[0.18em] text-dark-muted">Project</span>
                   <select
                     value={ruleForm.project_name}
-                    onChange={(event) => setRuleForm((current) => ({ ...current, project_name: event.target.value }))}
+                    onChange={(event) => {
+                      const nextProject = event.target.value;
+                      const nextConfig = findProject(projectOptions, nextProject);
+                      setRuleForm((current) => ({
+                        ...current,
+                        project_name: nextProject,
+                        from_stage: "",
+                        to_stage: defaultToStage(nextConfig),
+                      }));
+                    }}
                     className="h-11 w-full rounded-xl border border-dark-border bg-dark-panel2 px-4 text-sm text-dark-text outline-none"
                   >
-                    {PROJECT_OPTIONS.map((option) => (
-                      <option key={option.value} value={option.value}>
-                        {option.label}
+                    {projectOptions.length === 0 ? (
+                      <option value={ruleForm.project_name}>{ruleForm.project_name}</option>
+                    ) : null}
+                    {projectOptions.map((option) => (
+                      <option key={option.name} value={option.name}>
+                        {option.display_name}
                       </option>
                     ))}
                   </select>
@@ -869,9 +960,9 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                     className="h-11 w-full rounded-xl border border-dark-border bg-dark-panel2 px-4 text-sm text-dark-text outline-none"
                   >
                     <option value="">Any source stage</option>
-                    {STAGE_OPTIONS.map((status) => (
-                      <option key={status} value={status}>
-                        {formatStage(status)}
+                    {fromStageOptions.map((stage) => (
+                      <option key={stage.value} value={stage.value}>
+                        {stage.label}
                       </option>
                     ))}
                   </select>
@@ -883,9 +974,9 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                     onChange={(event) => setRuleForm((current) => ({ ...current, to_stage: event.target.value }))}
                     className="h-11 w-full rounded-xl border border-dark-border bg-dark-panel2 px-4 text-sm text-dark-text outline-none"
                   >
-                    {STAGE_OPTIONS.map((status) => (
-                      <option key={status} value={status}>
-                        {formatStage(status)}
+                    {toStageOptions.map((stage) => (
+                      <option key={stage.value} value={stage.value}>
+                        {stage.label}
                       </option>
                     ))}
                   </select>
@@ -1024,7 +1115,15 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                       <div>
                         <p className="font-medium text-dark-text">{rule.name}</p>
                         <p className="mt-1 text-xs text-dark-muted">
-                          {formatChannel(rule.channel)} · {rule.project_name} · {formatStage(rule.from_stage)} → {formatStage(rule.to_stage)}
+                          {formatChannel(rule.channel)} · {findProject(projectOptions, rule.project_name)?.display_name || rule.project_name} ·{" "}
+                          {formatStage(rule.from_stage, rule.project_name, projectOptions)}
+                          {isStageMissing(projectOptions, rule.project_name, rule.from_stage) ? (
+                            <span className="ml-1 text-amber-400">(stage missing)</span>
+                          ) : null}{" "}
+                          → {formatStage(rule.to_stage, rule.project_name, projectOptions)}
+                          {isStageMissing(projectOptions, rule.project_name, rule.to_stage) ? (
+                            <span className="ml-1 text-amber-400">(stage missing)</span>
+                          ) : null}
                         </p>
                         <p className="mt-1 text-xs text-dark-muted">
                           Delay {rule.delay_minutes ?? snapshot?.settings.default_delay_minutes ?? 3} min
@@ -1144,7 +1243,8 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                             {item.project_name} · {item.rule_name} · {formatChannel(item.channel)}
                           </p>
                           <p className="mt-1 text-xs text-dark-muted">
-                            {formatStage(item.triggered_from_stage)} → {formatStage(item.triggered_to_stage)}
+                            {formatStage(item.triggered_from_stage, item.project_name, projectOptions)} →{" "}
+                            {formatStage(item.triggered_to_stage, item.project_name, projectOptions)}
                           </p>
                         </div>
                         <QueueBadge status={item.review_status} />
@@ -1274,7 +1374,38 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                   className="h-11 w-full rounded-xl border border-dark-border bg-dark-panel2 px-4 text-sm text-dark-text outline-none"
                 />
                 <p className="mt-2 text-xs text-dark-muted">
-                  Use the exact verified Resend domain or subdomain configured for your account.
+                  Use a sender address your selected email provider has verified configured for your account.
+                </p>
+              </label>
+              <label className="block">
+                <span className="mb-2 block text-sm text-dark-muted">Email provider</span>
+                {configuredEmailProviders.length ? (
+                  <select
+                    value={selectedEmailProviderId}
+                    onChange={(event) =>
+                      setSettingsForm((current) => ({ ...current, email_provider: event.target.value }))
+                    }
+                    className="h-11 w-full rounded-xl border border-dark-border bg-dark-panel2 px-4 text-sm text-dark-text outline-none"
+                  >
+                    {configuredEmailProviders.map((provider) => (
+                      <option key={provider.id} value={provider.id}>
+                        {provider.label}
+                        {provider.detail ? `: ${provider.detail}` : ""}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <p className="rounded-xl border border-dark-border bg-dark-panel2 px-4 py-3 text-xs text-dark-muted">
+                    No email provider found. Add RESEND_API_KEY, SENDGRID_API_KEY, MAILGUN_API_KEY + MAILGUN_DOMAIN,
+                    POSTMARK_SERVER_TOKEN, SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS, or GMAIL_USER + GMAIL_APP_PASSWORD to
+                    .env.local and restart Mission Control. Automations draft but do not send until then.
+                  </p>
+                )}
+                <p className="mt-2 text-xs text-dark-muted">
+                  {selectedEmailProvider
+                    ? `Sending through ${selectedEmailProvider.label}. Test emails and automations use this provider.`
+                    : "Detected providers appear here once their variables resolve."}
+                  {marketingEmailProvider ? ` ${marketingEmailProvider.label} detected for broadcasts; it is not used for automation sends.` : ""}
                 </p>
               </label>
               <label className="block">

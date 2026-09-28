@@ -11,7 +11,10 @@ export async function GET(req: NextRequest) {
   try {
     const url = req.nextUrl;
     const view = url.searchParams.get("view") || "contacts";
-    const project = url.searchParams.get("project") || "pipeline";
+    const projectParam = url.searchParams.get("project") || "";
+    // The contacts list view sends project=all to mean "every project"; the
+    // pipeline board always needs a concrete project.
+    const project = projectParam === "all" ? "" : projectParam || "pipeline";
 
     if (view === "detail") {
       const contactId = url.searchParams.get("id") || "";
@@ -27,7 +30,7 @@ export async function GET(req: NextRequest) {
 
     if (view === "pipeline") {
       return NextResponse.json(
-        crm.getPipelineBoard({ project, search: url.searchParams.get("search") || "" })
+        crm.getPipelineBoard({ project: project || "pipeline", search: url.searchParams.get("search") || "" })
       );
     }
 
@@ -36,6 +39,7 @@ export async function GET(req: NextRequest) {
       status: url.searchParams.get("status") || "",
       source: url.searchParams.get("source") || "",
       owner: url.searchParams.get("owner") || "",
+      label: url.searchParams.get("label") || "",
       project,
       sort: normalizeSort(url.searchParams.get("sort")),
     });
