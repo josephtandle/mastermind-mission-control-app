@@ -83,7 +83,7 @@ test('clear sample data removes demo contacts and dependents, keeps real contact
     const database = join(workspace, 'data', 'crm.db')
     mkdirSync(dirname(database), { recursive: true })
     copyFileSync(SAMPLE_DB, database)
-    assert.deepEqual(crm.getSampleDataStatus(), { count: 5, has_sample_data: true })
+    assert.deepEqual(crm.getSampleDataStatus(), { count: 8, has_sample_data: true })
 
     crm.ingestLead({ full_name: 'Real Person', primary_email: 'real.person@example.invalid', source: 'manual' })
     const db = new Database(database)
@@ -101,7 +101,7 @@ test('clear sample data removes demo contacts and dependents, keeps real contact
     const realBefore = Object.fromEntries(links.map(({ table, column }) => [`${table}.${column}`, countWhere(db, table, column, '=', realId)]))
 
     const result = crm.clearSampleData()
-    assert.equal(result.removed, 5)
+    assert.equal(result.removed, 8)
     assert.deepEqual(crm.getSampleDataStatus(), { count: 0, has_sample_data: false })
     for (const { table, column } of links) {
       assert.equal(countWhere(db, table, column, 'GLOB', 'demo-contact-*'), 0, `${table}.${column} still holds demo rows`)
@@ -121,13 +121,13 @@ test('clear sample data removes demo contacts and dependents, keeps real contact
 test('the seed still merges on a database that was never cleared', () => {
   withWorkspace((workspace, crm) => {
     runSeed(workspace)
-    assert.equal(crm.getSampleDataStatus().count, 5)
+    assert.equal(crm.getSampleDataStatus().count, 8)
     crm.ingestLead({ full_name: 'Real Person', primary_email: 'real.person@example.invalid', source: 'manual' })
     const db = new Database(join(workspace, 'data', 'crm.db'))
     db.prepare("DELETE FROM crm_contacts WHERE id GLOB 'demo-contact-*'").run()
     db.close()
     assert.match(runSeed(workspace), /seed merge complete/)
-    assert.equal(crm.getSampleDataStatus().count, 5)
+    assert.equal(crm.getSampleDataStatus().count, 8)
   })
 })
 

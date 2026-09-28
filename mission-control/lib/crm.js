@@ -4714,6 +4714,138 @@ function clearSampleData() {
   }
 }
 
+// Sample cards spread across the default pipeline columns. Ids stay under
+// demo-contact-* so clearSampleData() removes exactly these rows.
+const SAMPLE_CONTACTS = [
+  { id: "demo-contact-1", first: "Maya", last: "Chen", email: "maya.chen@example.invalid", source: "website", status: "new", industry: "Bakery", location: "Portland, OR", notes: "Asked about catering for a 40 person office lunch.", next_step: "Send the catering menu and two date options." },
+  { id: "demo-contact-2", first: "Leo", last: "Martins", email: "leo.martins@example.invalid", source: "instagram", status: "new", industry: "Fitness studio", location: "Austin, TX", instagram: "leomartinsfit", notes: "Commented on the spring promo post and wants pricing.", next_step: "Reply with the class pack pricing." },
+  { id: "demo-contact-3", first: "Priya", last: "Nair", email: "priya.nair@example.invalid", source: "referral", status: "contacted", industry: "Accounting", location: "Denver, CO", notes: "Referred by a past client. Needs help with monthly bookkeeping.", next_step: "Book a 20 minute intro call." },
+  { id: "demo-contact-4", first: "Sam", last: "Okafor", email: "sam.okafor@example.invalid", source: "event", status: "contacted", industry: "Landscaping", location: "Raleigh, NC", notes: "Met at the local business expo. Interested in a seasonal plan.", next_step: "Follow up with the seasonal plan brochure." },
+  { id: "demo-contact-5", first: "Elena", last: "Rossi", email: "elena.rossi@example.invalid", source: "website", status: "qualified", industry: "Interior design", location: "Chicago, IL", notes: "Budget confirmed, wants to start next month.", next_step: "Draft the proposal with two package options." },
+  { id: "demo-contact-6", first: "Jordan", last: "Blake", email: "jordan.blake@example.invalid", source: "referral", status: "negotiating", industry: "Coffee shop", location: "Seattle, WA", notes: "Reviewing the proposal, asked for a smaller starter package.", next_step: "Send the revised quote by Friday." },
+  { id: "demo-contact-7", first: "Aisha", last: "Rahman", email: "aisha.rahman@example.invalid", source: "event", status: "won", industry: "Photography", location: "Phoenix, AZ", notes: "Signed the 3 month package after the workshop.", next_step: "Schedule the kickoff session." },
+  { id: "demo-contact-8", first: "Tom", last: "Becker", email: "tom.becker@example.invalid", source: "instagram", status: "stale", industry: "Pet grooming", location: "Tampa, FL", notes: "Was keen in the spring, no reply to the last two messages.", next_step: "Try one friendly check-in next month." },
+];
+const SAMPLE_COMMUNICATIONS = [
+  { contact_id: "demo-contact-3", channel: "email", direction: "outbound", note: "Sample: intro email with a link to book a call.", days_ago: 3 },
+  { contact_id: "demo-contact-6", channel: "whatsapp", direction: "inbound", note: "Sample: asked if a smaller starter package is possible.", days_ago: 1 },
+  { contact_id: "demo-contact-7", channel: "email", direction: "outbound", note: "Sample: sent the welcome pack and kickoff times.", days_ago: 2 },
+];
+const SAMPLE_CONTACT_COUNT = SAMPLE_CONTACTS.length;
+
+// Adds the sample contacts, their pipeline cards and a few timeline entries.
+// Safe to run again: existing sample rows are left as they are, missing ones
+// are filled in. Loading clears the "sample data cleared" switch.
+function loadSampleDataInto(db) {
+  bootstrapSettings(db);
+  const boardStatuses = getProjectBoardStatuses(db, PIPELINE_PROJECT);
+  const pipelineStatuses = getProjectPipelineStatuses(db, PIPELINE_PROJECT);
+  const pickStatus = (preferred, index) => {
+    if (boardStatuses.includes(preferred)) return preferred;
+    if (pipelineStatuses.includes(preferred) && !boardStatuses.length) return preferred;
+    return boardStatuses[index % Math.max(1, boardStatuses.length)] || "new";
+  };
+  let inserted = 0;
+  let communications = 0;
+  const run = db.transaction(() => {
+    SAMPLE_CONTACTS.forEach((sample, index) => {
+      const status = pickStatus(sample.status, index);
+      const stamp = new Date(Date.now() - (SAMPLE_CONTACT_COUNT - index) * 86400000).toISOString();
+      const instagram = sample.instagram ? normalizeInstagramFields(sample.instagram, null) : null;
+      const result = db
+        .prepare(
+          `INSERT INTO crm_contacts (
+            id, first_name, last_name, full_name, primary_project, primary_email, primary_phone,
+            location, location_source, industry, industry_source, instagram_handle, instagram_profile_url,
+            source_first, source_latest, status, notes, next_step, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'sample', ?, 'sample', ?, ?, ?, ?, ?, ?, ?, ?, ?)
+          ON CONFLICT(id) DO NOTHING`
+        )
+        .run(
+          sample.id, sample.first, sample.last, `${sample.first} ${sample.last}`, PIPELINE_PROJECT,
+          sample.email, null, sample.location, sample.industry,
+          instagram?.instagram_handle || null, instagram?.instagram_profile_url || null,
+          sample.source, sample.source, status, sample.notes, sample.next_step, stamp, stamp
+        );
+      inserted += result.changes;
+      insertAlias(db, sample.id, "email", sample.email);
+      const membership = db
+        .prepare("SELECT 1 FROM crm_contact_projects WHERE contact_id = ? AND project_name = ?")
+        .get(sample.id, PIPELINE_PROJECT);
+      if (!membership) {
+        upsertProjectState(db, sample.id, PIPELINE_PROJECT, status, { touchedAt: stamp });
+      }
+    });
+    for (const entry of SAMPLE_COMMUNICATIONS) {
+      const exists = db
+        .prepare("SELECT 1 FROM crm_contact_communications WHERE contact_id = ? AND note = ?")
+        .get(entry.contact_id, entry.note);
+      if (exists) continue;
+      const ts = new Date(Date.now() - entry.days_ago * 86400000).toISOString();
+      db.prepare(
+        `INSERT INTO crm_contact_communications (contact_id, channel, direction, note, contacted_at, created_at)
+         VALUES (?, ?, ?, ?, ?, ?)`
+      ).run(entry.contact_id, entry.channel, entry.direction, entry.note, ts, ts);
+      db.prepare(
+        "UPDATE crm_contacts SET last_contacted_at = (SELECT MAX(contacted_at) FROM crm_contact_communications WHERE contact_id = ?) WHERE id = ?"
+      ).run(entry.contact_id, entry.contact_id);
+      communications += 1;
+    }
+    db.prepare("DELETE FROM crm_settings WHERE key = ?").run(SAMPLE_DATA_CLEARED_KEY);
+  });
+  run();
+  return { inserted, communications, count: SAMPLE_CONTACT_COUNT };
+}
+
+function loadSampleData() {
+  const db = getDb(false);
+  try {
+    return loadSampleDataInto(db);
+  } finally {
+    db.close();
+  }
+}
+
+function sampleDataClearedIn(db) {
+  const row = db.prepare("SELECT value FROM crm_settings WHERE key = ?").get(SAMPLE_DATA_CLEARED_KEY);
+  return row ? row.value === "true" || row.value === "1" : false;
+}
+
+// First load of a fresh install: when the CRM holds nothing but the seeded
+// sample rows and the owner never cleared them, make sure every sample
+// card exists and sits in its pipeline column. Never touches a CRM that has
+// real contacts or whose sample data was cleared.
+function ensureInitialSampleData() {
+  let db = null;
+  try {
+    db = getDb(false);
+    bootstrapSettings(db);
+    if (sampleDataClearedIn(db)) return { loaded: false, reason: "cleared" };
+    const real = db.prepare("SELECT COUNT(*) AS count FROM crm_contacts WHERE id NOT GLOB ?").get(SAMPLE_CONTACT_ID_GLOB);
+    if (Number(real?.count || 0) > 0) return { loaded: false, reason: "has_contacts" };
+    // An empty CRM stays empty (for example an install run with --no-seed);
+    // the owner can press "Load sample data" instead.
+    const seeded = db.prepare("SELECT COUNT(*) AS count FROM crm_contacts WHERE id GLOB ?").get(SAMPLE_CONTACT_ID_GLOB);
+    if (Number(seeded?.count || 0) === 0) return { loaded: false, reason: "empty" };
+    const placed = db
+      .prepare(
+        "SELECT pipeline_status FROM crm_contact_projects WHERE contact_id GLOB ? AND project_name = ?"
+      )
+      .all(SAMPLE_CONTACT_ID_GLOB, PIPELINE_PROJECT);
+    // Only an untouched sample set is (re)placed: never placed yet, or every
+    // card still stuck in the first column (the old seed placed them there).
+    const untouched = placed.length === 0 || placed.every((row) => row.pipeline_status === "new");
+    if (!untouched) return { loaded: false, reason: "present" };
+    db.prepare("DELETE FROM crm_contact_projects WHERE contact_id GLOB ? AND project_name = ?").run(SAMPLE_CONTACT_ID_GLOB, PIPELINE_PROJECT);
+    db.prepare("DELETE FROM crm_contacts WHERE id GLOB ?").run(SAMPLE_CONTACT_ID_GLOB);
+    return { loaded: true, ...loadSampleDataInto(db) };
+  } catch (error) {
+    return { loaded: false, reason: "error", error: String(error?.message || error) };
+  } finally {
+    if (db) db.close();
+  }
+}
+
 function deleteContact(contactId) {
   const db = getDb(false);
   bootstrapSettings(db);
@@ -4828,6 +4960,7 @@ function getSettingsSnapshot() {
     pipeline: getPipelineConfig(db, PIPELINE_PROJECT),
     automation: getAutomationSettings(db),
     legacy: auditLegacyStores(),
+    sample_data: getSampleDataStatus(),
   };
 }
 
@@ -5180,6 +5313,9 @@ module.exports = {
   deleteContact,
   getSampleDataStatus,
   clearSampleData,
+  loadSampleData,
+  ensureInitialSampleData,
+  SAMPLE_CONTACT_COUNT,
   SAMPLE_DATA_CLEARED_KEY,
   deleteLegacyCrmJsonIfEmpty,
   logCommunication,

@@ -2379,6 +2379,9 @@ export function CrmWorkspace({
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to load CRM settings");
       setSettings(data);
+      if (data.sample_data && typeof data.sample_data.count === "number") {
+        setSampleData(data.sample_data);
+      }
       if (Array.isArray(data.projectCatalog)) {
         setProjectCatalog(
           mergeProjectCatalog(
@@ -2841,6 +2844,34 @@ export function CrmWorkspace({
       await loadContacts();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to clear sample data");
+    } finally {
+      setActionState(null);
+    }
+  }
+
+  async function loadSampleContacts() {
+    const confirmed = window.confirm(
+      "Add 8 example contacts to the pipeline so you can explore the CRM? Your own contacts are not touched, and you can clear the examples again at any time."
+    );
+    if (!confirmed) return;
+    setActionState("load-sample-data");
+    setError(null);
+    try {
+      const res = await fetch("/api/crm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "load-sample-data" }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to load sample data");
+      if (data.sample_data && typeof data.sample_data.count === "number") {
+        setSampleData(data.sample_data);
+      }
+      setNotice("Loaded the example contacts.");
+      if (mode === "settings" || mode === "labels") await loadSettings();
+      else await loadContacts();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load sample data");
     } finally {
       setActionState(null);
     }
@@ -3452,6 +3483,20 @@ export function CrmWorkspace({
                   <span className="whitespace-nowrap">Clear sample data ({sampleData.count})</span>
                 </button>
               )}
+              {(mode === "pipeline" || mode === "contacts") && sampleData && sampleData.count === 0 && (
+                <button
+                  type="button"
+                  onClick={() => void loadSampleContacts()}
+                  disabled={actionState === "load-sample-data"}
+                  className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm text-dark-muted transition hover:border-cm-purple/30 hover:text-dark-text disabled:opacity-60"
+                  aria-label="Load sample data"
+                  title="Add example contacts to explore the CRM"
+                  data-testid="crm-load-sample-data"
+                >
+                  {actionState === "load-sample-data" ? <Loader2 size={16} className="animate-spin" /> : <Users size={16} />}
+                  <span className="whitespace-nowrap">Load sample data</span>
+                </button>
+              )}
             </div>
           </section>
         )}
@@ -3789,6 +3834,13 @@ export function CrmWorkspace({
                 label="Cleanup Empty Legacy CRM"
                 onClick={() => void runSettingsAction("cleanup-legacy")}
               />
+              {sampleData && sampleData.count === 0 && (
+                <SettingsActionButton
+                  busy={actionState === "load-sample-data"}
+                  label="Load sample data"
+                  onClick={() => void loadSampleContacts()}
+                />
+              )}
             </div>
 
             <div className="grid gap-4 xl:grid-cols-2">

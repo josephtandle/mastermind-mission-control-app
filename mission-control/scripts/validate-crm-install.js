@@ -67,6 +67,25 @@ function sampleDataWasCleared(dbPath, appRoot) {
   }
 }
 
+// Sample cards placed in the pipeline (crm_contact_projects) must not all sit
+// in one column. Cards not yet placed are placed on the first CRM load.
+function sampleCardColumns(dbPath, appRoot) {
+  try {
+    const Database = require(path.join(appRoot, "node_modules", "better-sqlite3"));
+    const db = new Database(dbPath, { readonly: true });
+    try {
+      const rows = db
+        .prepare("SELECT DISTINCT pipeline_status FROM crm_contact_projects WHERE contact_id GLOB 'demo-contact-*' AND project_name = 'pipeline'")
+        .all();
+      return rows.map((row) => row.pipeline_status);
+    } finally {
+      db.close();
+    }
+  } catch {
+    return null;
+  }
+}
+
 function runStaticChecks(appRoot) {
   const root = path.resolve(appRoot);
   const checks = [];
@@ -103,6 +122,10 @@ function runStaticChecks(appRoot) {
     if (typeof count === "number") {
       const cleared = count === 0 && sampleDataWasCleared(dbPath, root);
       checks.push(check("data/crm.db holds sample contacts", count > 0 || cleared, cleared ? "0 contacts, sample data cleared by the owner" : `${count} contacts`));
+      const columns = count > 0 ? sampleCardColumns(dbPath, root) : null;
+      if (columns && columns.length) {
+        checks.push(check("sample cards spread across pipeline columns", columns.length >= 2, columns.join(", ")));
+      }
     }
     else checks.push(check("data/crm.db readable through better-sqlite3", false, count.error));
   }

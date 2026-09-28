@@ -16,6 +16,9 @@ export async function GET(req: NextRequest) {
     // pipeline board always needs a concrete project.
     const project = projectParam === "all" ? "" : projectParam || "pipeline";
 
+    // Fresh install: place the sample cards in their pipeline columns once.
+    crm.ensureInitialSampleData();
+
     if (view === "detail") {
       const contactId = url.searchParams.get("id") || "";
       if (!contactId) {
@@ -89,6 +92,11 @@ export async function POST(req: NextRequest) {
 
     if (action === "clear-sample-data") {
       const result = crm.clearSampleData();
+      return NextResponse.json({ ...result, sample_data: crm.getSampleDataStatus() });
+    }
+
+    if (action === "load-sample-data") {
+      const result = crm.loadSampleData();
       return NextResponse.json({ ...result, sample_data: crm.getSampleDataStatus() });
     }
 
