@@ -51,11 +51,11 @@ const DEFAULT_COLUMNS: Column[] = [
 ];
 
 const DEFAULT_PROJECTS: string[] = [
-  'Masterminds',
-  'HQ',
-  'Rio',
-  'Passive Income',
-  'AI Operating System',
+  'Email Automation System',
+  'Client Onboarding Portal',
+  'Content Strategy Hub',
+  'Revenue Growth Tracker',
+  'Infrastructure Setup',
 ];
 
 const PRIORITY_NORMALIZE: Record<string, Card['priority']> = {

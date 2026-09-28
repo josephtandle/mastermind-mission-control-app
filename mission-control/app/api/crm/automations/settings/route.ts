@@ -15,6 +15,12 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}));
   try {
+    if (body?.action === "verify_sender") {
+      // Non-sending check: lists the Resend domains and reports whether the
+      // sender's domain is verified. No email leaves the machine.
+      const result = await crm.verifyResendSender({ from: body.email_from_address });
+      return NextResponse.json(result, { status: result?.ok ? 200 : result?.status || 502 });
+    }
     if (body?.action === "send_test_email") {
       if (body.email_from_address || body.email_provider !== undefined) {
         crm.setAutomationSettings({
@@ -42,6 +48,8 @@ export async function POST(req: NextRequest) {
         ? error.message
         : body?.action === "send_test_email"
           ? "Failed to send test email"
+          : body?.action === "verify_sender"
+            ? "Failed to verify sender"
           : "Failed to update automation settings";
     return NextResponse.json({ error: message }, { status: 500 });
   }

@@ -316,14 +316,14 @@ test('[contract] install.mjs is authored as ESM (contains import or export decla
 })
 
 // ---------------------------------------------------------------------------
-// CONTRACT L — install.mjs does not read MyOS workspace or Gemini config paths
+// CONTRACT L — install.mjs does not read a private workspace or Gemini config paths
 // ---------------------------------------------------------------------------
-test('[contract] install.mjs does not reference MyOS workspace or sibling project env paths', () => {
+test('[contract] install.mjs does not reference a private workspace or sibling project env paths', () => {
   const installer = read('install/install.mjs')
 
   assert.doesNotMatch(
     installer,
     /\.myos|MYOS_|myos-sidecar|\/Users\/[^/]+\/\.gemini/i,
-    'install.mjs must not read or reference MyOS workspace or Gemini config paths'
+    'install.mjs must not read or reference a private workspace or Gemini config paths'
   )
 })

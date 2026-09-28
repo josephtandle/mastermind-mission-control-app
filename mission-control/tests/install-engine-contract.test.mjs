@@ -9,7 +9,7 @@
  *   4. Resend as a required human setup gate with strict secret hygiene
  *   5. Bounded self-healing (max two repair attempts, terminal outcomes)
  *   6. Completion verification checklist
- *   7. Release manifest at release-manifest.json with version 4.0.1 and SHA256 entries
+ *   7. Release manifest at release-manifest.json with version 4.0.2 and SHA256 entries
  *
  * Uses node:test and node:assert/strict only; no runtime execution of the engine.
  * Run with: node --test tests/install-engine-contract.test.mjs
@@ -524,4 +524,100 @@ test('release-manifest.json contains SHA256 entries for tracked artifacts', () =
       `release-manifest.json sha256 entry must be a 64-character hex string, got: ${v}`
     )
   }
+})
+
+// ---------------------------------------------------------------------------
+// Contract 8 - 4.0.2 fresh-install fixes
+// ---------------------------------------------------------------------------
+
+test('engine runs the Claude login in the foreground, never in the background', () => {
+  const engine = readRequired('install/install.mjs')
+
+  assert.doesNotMatch(engine, /nohup|start \/b/, 'engine must not background claude auth login')
+  assert.match(
+    engine,
+    /\['auth',\s*'login',\s*'--claudeai'\][\s\S]{0,80}stdio:\s*'inherit'/,
+    'engine must run claude auth login --claudeai with inherited stdio so the pasted code reaches it'
+  )
+  assert.match(engine, /paste/i, 'engine must tell the user to paste the code the browser shows')
+  assert.match(engine, /--skip-claude-login/, 'engine must offer --skip-claude-login')
+})
+
+test('engine checks better-sqlite3 after npm install and repairs with npm rebuild', () => {
+  const engine = readRequired('install/install.mjs')
+
+  assert.match(engine, /require\("better-sqlite3"\)\)\(":memory:"\)/, 'engine must probe better-sqlite3 with an in-memory database')
+  assert.match(engine, /\['rebuild',\s*'better-sqlite3'\]/, 'engine must repair with npm rebuild better-sqlite3')
+})
+
+test('package.json allows install scripts for better-sqlite3 and sharp (npm 11)', () => {
+  const pkg = JSON.parse(readRequired('package.json'))
+  assert.equal(pkg.allowScripts?.['better-sqlite3'], true)
+  assert.equal(pkg.allowScripts?.sharp, true)
+})
+
+test('engine seeds the demo CRM and loads scripts/validate-crm-install.js for verification', () => {
+  const engine = readRequired('install/install.mjs')
+
+  assert.match(engine, /seed-crm-demo-data\.js/, 'engine must run the demo CRM seed')
+  assert.match(engine, /validate-crm-install\.js/, 'engine must reuse the validate script checks')
+  assert.ok(existsSync(resolve(appRoot, 'scripts/validate-crm-install.js')), 'scripts/validate-crm-install.js must exist')
+})
+
+test('engine discovers email providers from local env only and prints the none-found hint', () => {
+  const engine = readRequired('install/install.mjs')
+
+  assert.match(engine, /function detectEmailProviders/, 'engine must port detectEmailProviders')
+  assert.match(engine, /Email sending: none found/, 'engine must print the none-found line')
+  assert.match(engine, /SENDGRID_API_KEY|POSTMARK_SERVER_TOKEN|SMTP_HOST/, 'engine must know the other providers')
+  assert.match(engine, /maskSecretTail/, 'engine must mask secrets before printing')
+})
+
+test('lib/crm.js creates the data directory before opening the database in write mode', () => {
+  const crm = readRequired('lib/crm.js')
+  assert.match(
+    crm,
+    /mkdirSync\(path\.dirname\(DB_PATH\),\s*\{\s*recursive:\s*true\s*\}\)[\s\S]{0,200}new Database\(DB_PATH/,
+    'getDb must mkdir the data folder before new Database(DB_PATH)'
+  )
+})
+
+test('demo seed falls back to the app folder, the same workspace as lib/crm.js', () => {
+  const seed = readRequired('.allsorted-crm-package/seed-crm-demo-data.js')
+  assert.match(seed, /path\.resolve\(__dirname,\s*"\.\."\)/, 'seed fallback must be the app folder')
+  assert.doesNotMatch(seed, /path\.resolve\(__dirname,\s*"\.\.",\s*"\.\."\)/, 'seed must not fall back to the repo root')
+})
+
+test('.gitignore excludes the CRM database and installer state', () => {
+  const ignore = readRequired('.gitignore')
+  assert.match(ignore, /^data\/$/m)
+  assert.match(ignore, /^\.allsorted-crm-install\.json$/m)
+})
+
+test('README documents the executor permissions flag, the timestamped idle line and the validate script', () => {
+  const readme = readRequired('README.md')
+  assert.match(readme, /--dangerously-skip-permissions/)
+  assert.match(readme, /ends with `No pending cards in AI column`/)
+  assert.match(readme, /validate-crm-install\.js/)
+  assert.match(readme, /\.env\.local/)
+  assert.match(readme, /verified domain|domain you have verified/i)
+})
+
+test('AGENTS.md and CLAUDE.md carry the local-app and approval rules', () => {
+  const agents = readRequired('AGENTS.md')
+  const claude = readRequired('CLAUDE.md')
+  assert.match(claude, /^@AGENTS\.md$/m)
+  assert.match(agents, /local app/i)
+  assert.match(agents, /not (as )?a skill/i)
+  assert.match(agents, /before any write/i)
+  assert.match(agents, /human approval for any outbound message/i)
+  assert.match(agents, /automations, cron and live sending disabled/i)
+})
+
+test('executor idle line is checked by suffix because every log line carries a timestamp', () => {
+  const executor = readRequired('executor.py')
+  assert.match(executor, /line = f"\[\{ts\}\] \{msg\}"/, 'executor log lines are prefixed with a timestamp')
+  const idle = '[2026-01-01 00:00:00] No pending cards in AI column'
+  assert.ok(idle.endsWith('No pending cards in AI column'))
+  assert.notEqual(idle, 'No pending cards in AI column', 'an exact match on the idle line would fail')
 })
