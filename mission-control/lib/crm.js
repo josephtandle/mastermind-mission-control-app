@@ -421,6 +421,10 @@ function getDb(readonly = false) {
   if (readonly && !exists) {
     return null;
   }
+  if (!readonly) {
+    // A fresh install has no data/ folder yet; SQLite cannot create parent directories.
+    fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
+  }
   const db = new Database(DB_PATH, readonly ? { readonly: true } : { timeout: 5000 });
   if (!readonly) {
     db.pragma("journal_mode = WAL");

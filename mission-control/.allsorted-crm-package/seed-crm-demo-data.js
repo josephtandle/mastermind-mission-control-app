@@ -9,7 +9,8 @@ function workspaceRoot() {
   const configured = process.env.CRM_WORKSPACE_PATH || process.env.ALLSORTED_WORKSPACE;
   if (configured) return path.resolve(configured);
   try { const state = JSON.parse(fs.readFileSync(statePath, "utf8")); if (typeof state.workspaceRoot === "string" && state.workspaceRoot) return path.resolve(state.workspaceRoot); } catch {}
-  return path.resolve(__dirname, "..", "..");
+  // Same fallback as lib/crm.js: the app folder (mission-control/) is the workspace.
+  return path.resolve(__dirname, "..");
 }
 const target = path.join(workspaceRoot(), "data", "crm.db");
 fs.mkdirSync(path.dirname(target), { recursive: true });
