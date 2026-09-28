@@ -399,7 +399,7 @@ export default function TasksPage() {
       setNewListTitle("");
       setIsAddingList(false);
     } catch (err) {
-      setLocalError("Failed to create list");
+      setLocalError(err instanceof Error && err.message ? `Failed to create list: ${err.message}` : "Failed to create list");
     }
   };
 

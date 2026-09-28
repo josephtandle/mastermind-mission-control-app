@@ -137,15 +137,23 @@ export async function POST(request: NextRequest) {
 
     if (action === 'create-column' && body.column) {
       const col = body.column;
-      const id = col.id || col.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-
-      if (db.columns.some((c) => c.id === id)) {
-        return NextResponse.json({ error: 'Column already exists' }, { status: 400 });
+      const title = String(col.title || '').trim();
+      if (!title) {
+        return NextResponse.json({ error: 'List name is required' }, { status: 400 });
       }
+      if (!Array.isArray(db.columns)) db.columns = [];
+      if (db.columns.some((c) => String(c.title || '').trim().toLowerCase() === title.toLowerCase())) {
+        return NextResponse.json({ error: `A list called "${title}" already exists` }, { status: 400 });
+      }
+      // Titles with only symbols or non-Latin letters used to produce an empty or
+      // colliding id, which made "Failed to create list". Always produce a unique id.
+      const base = String(col.id || title).toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'list';
+      let id = base;
+      for (let n = 2; db.columns.some((c) => c.id === id); n += 1) id = `${base}-${n}`;
 
       const newColumn: Column = {
         id,
-        title: col.title,
+        title,
         color: col.color || 'slate',
       };
 
