@@ -83,7 +83,6 @@ const AUTOMATION_APPROVAL_STATUSES = ["pending_review", "approved", "cancelled"]
 const AUTOMATION_DELIVERY_STATUSES = ["queued", "blocked", "sending", "sent", "failed"];
 const AUTOMATION_DEFAULT_DELAY_MINUTES = 3;
 const RESEND_API_URL = "https://api.resend.com/emails";
-const RESEND_DOMAINS_URL = "https://api.resend.com/domains";
 const AUTOMATION_EMAIL_FROM = process.env.RESEND_FROM_EMAIL || "";
 
 const AUTOMATION_SETTING_KEYS = {
@@ -422,10 +421,10 @@ function getDb(readonly = false) {
   if (readonly && !exists) {
     return null;
   }
-  if (!readonly) {
-    // A fresh install has no data/ folder yet; SQLite cannot create parent directories.
-    fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
-  }
+  // A fresh install has no data/ folder yet. better-sqlite3 refuses to create
+  // the database when its directory is missing, which surfaced as a 500 on
+  // /app/crm/pipeline the first time a customer opened it.
+  if (!readonly) fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
   const db = new Database(DB_PATH, readonly ? { readonly: true } : { timeout: 5000 });
   if (!readonly) {
     db.pragma("journal_mode = WAL");
@@ -2935,79 +2934,6 @@ async function sendAutomationTestEmail(options = {}) {
   return sendEmailAutomationDelivery(db, delivery);
 }
 
-// Non-sending Resend check: GET https://api.resend.com/domains with the
-// configured key, then report whether the sender's domain is verified there.
-// Nothing is sent and nothing is written.
-function getJsonWithHttps(urlString, headers, timeoutMs = 15000) {
-  const url = new URL(urlString);
-  return new Promise((resolve, reject) => {
-    const req = https.request(
-      {
-        protocol: url.protocol,
-        hostname: url.hostname,
-        port: url.port || undefined,
-        path: `${url.pathname}${url.search}`,
-        method: "GET",
-        headers: { Accept: "application/json", ...headers },
-      },
-      (res) => {
-        let raw = "";
-        res.on("data", (chunk) => {
-          raw += chunk;
-        });
-        res.on("end", () => {
-          resolve({
-            ok: Boolean(res.statusCode && res.statusCode >= 200 && res.statusCode < 300),
-            status: res.statusCode || 500,
-            data: parseJsonSafely(raw, { raw }),
-          });
-        });
-      }
-    );
-    req.setTimeout(timeoutMs, () => req.destroy(new Error("request timed out")));
-    req.on("error", reject);
-    req.end();
-  });
-}
-
-async function verifyResendSender(options = {}) {
-  const db = getDb(false);
-  bootstrapSettings(db);
-  const resendKey = getResendApiKey();
-  if (!resendKey) {
-    return { ok: false, status: 400, provider: "resend", message: "RESEND_API_KEY is not set", domains: [] };
-  }
-  const settings = getAutomationSettings(db);
-  const fromAddress = normalizeAutomationEmailFrom(
-    options.from || settings.channels?.email?.from_address,
-    getDefaultAutomationEmailFrom()
-  );
-  const senderAddress = extractEmailAddress(fromAddress);
-  const senderDomain = senderAddress.includes("@") ? senderAddress.split("@").pop().toLowerCase() : "";
-  const result = await getJsonWithHttps(RESEND_DOMAINS_URL, { Authorization: `Bearer ${resendKey}` });
-  const list = Array.isArray(result.data?.data) ? result.data.data : [];
-  const domains = list.map((entry) => ({ name: String(entry?.name || ""), status: String(entry?.status || "") }));
-  const match = domains.find((entry) => entry.name.toLowerCase() === senderDomain);
-  const senderVerified = Boolean(match && /^verified$/i.test(match.status));
-  let message;
-  if (!result.ok) message = result.data?.message || `Resend rejected the API key (HTTP ${result.status})`;
-  else if (!senderDomain) message = "Set a sender address first";
-  else if (!match) message = `${senderDomain} is not in this Resend account. Add and verify it in the Resend dashboard.`;
-  else if (!senderVerified) message = `${senderDomain} is in Resend but its status is "${match.status}", not verified.`;
-  else message = `${senderDomain} is verified in Resend. No email was sent.`;
-  return {
-    ok: result.ok,
-    status: result.status,
-    provider: "resend",
-    key_masked: maskEmailSecret(resendKey),
-    sender: fromAddress,
-    sender_domain: senderDomain,
-    sender_verified: senderVerified,
-    domains,
-    message,
-  };
-}
-
 function logAutomationDeliveryAttempt(db, deliveryId, status, responseJson = null, errorMessage = null) {
   db.prepare(
     `
@@ -5237,6 +5163,8 @@ function deleteLegacyCrmJsonIfEmpty() {
 
 module.exports = {
   APPROVED_LABELS,
+  DB_PATH,
+  WORKSPACE_PATH,
   STATUSES,
   SORT_OPTIONS,
   applyInstagramEnrichment,
@@ -5282,7 +5210,6 @@ module.exports = {
   saveAutomationRule,
   saveAutomationTemplate,
   sendAutomationTestEmail,
-  verifyResendSender,
   getConfiguredEmailProviders,
   getMarketingEmailProvider,
   getSelectedEmailProvider,

@@ -225,7 +225,6 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
   const [templateError, setTemplateError] = useState<string | null>(null);
   const [ruleError, setRuleError] = useState<string | null>(null);
   const [settingsError, setSettingsError] = useState<string | null>(null);
-  const [verifySenderResult, setVerifySenderResult] = useState<string | null>(null);
   const [approvalErrors, setApprovalErrors] = useState<Record<string, string>>({});
 
   const [templateForm, setTemplateForm] = useState({
@@ -539,30 +538,6 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
       await loadSnapshot();
     } catch (err) {
       setSettingsError(err instanceof Error ? err.message : "Failed to send test email");
-    } finally {
-      setSaving(null);
-    }
-  }
-
-  async function handleVerifySender() {
-    setSaving("verify-sender");
-    setError(null);
-    setSettingsError(null);
-    setVerifySenderResult(null);
-    try {
-      const res = await fetch("/api/crm/automations/settings", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          action: "verify_sender",
-          email_from_address: settingsForm.email_from_address,
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.message || data.error || "Failed to verify sender");
-      setVerifySenderResult(data.message || (data.sender_verified ? "Sender domain verified." : "Sender domain not verified."));
-    } catch (err) {
-      setSettingsError(err instanceof Error ? err.message : "Failed to verify sender");
     } finally {
       setSaving(null);
     }
@@ -1480,26 +1455,13 @@ export function CrmAutomationWorkspace({ mode }: { mode: AutomationMode }) {
                   {saving === "settings" ? <Loader2 size={16} className="animate-spin" /> : <Save size={16} />}
                   Save Settings
                 </button>
-                {selectedEmailProvider?.id === "resend" ? (
-                  <button
-                    onClick={() => void handleVerifySender()}
-                    title="Lists your Resend domains and checks the sender domain. Sends nothing."
-                    className="inline-flex items-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm font-medium text-dark-text"
-                  >
-                    {saving === "verify-sender" ? <Loader2 size={16} className="animate-spin" /> : <ShieldCheck size={16} />}
-                    Verify sender (no email sent)
-                  </button>
-                ) : null}
                 <button
                   onClick={() => void handleSendTestEmail()}
-                  disabled={!selectedEmailProvider}
-                  title="This sends a real email to the test recipient through the selected provider."
-                  className="inline-flex items-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm font-medium text-dark-text disabled:opacity-50"
+                  className="inline-flex items-center gap-2 rounded-xl border border-dark-border bg-dark-panel2 px-4 py-2 text-sm font-medium text-dark-text"
                 >
                   {saving === "test-email" ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
-                  {selectedEmailProvider ? `Send live test email via ${selectedEmailProvider.label}` : "Send live test email (no provider configured)"}
+                  Send Resend Test
                 </button>
-                {verifySenderResult ? <p className="text-sm text-dark-muted">{verifySenderResult}</p> : null}
                 {settingsError ? <p className="text-sm text-dark-danger">{settingsError}</p> : null}
               </div>
             </div>

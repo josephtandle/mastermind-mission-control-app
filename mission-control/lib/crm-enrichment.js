@@ -139,6 +139,7 @@ async function fetchHtml(url) {
       accept: "text/html,application/xhtml+xml",
     },
     redirect: "follow",
+    signal: AbortSignal.timeout(15000),
   });
   if (!response.ok) {
     throw new Error(`Fetch failed for ${url}: ${response.status} ${response.statusText}`);
@@ -249,7 +250,7 @@ function buildFieldPatch(contact, websiteProfile, instagramProfile) {
   };
 }
 
-async function enrichContact(contactId) {
+async function enrichContact(contactId, options = {}) {
   const crm = getCrm();
   const detail = crm.getContactDetail(contactId);
   if (!detail?.contact) {
@@ -259,6 +260,8 @@ async function enrichContact(contactId) {
   const websiteUrl =
     detail.contact.website_url ||
     detail.enrichment?.find((entry) => entry.external_url)?.external_url ||
+    websiteFromEmail(detail.contact.primary_email) ||
+    normalizeWebsiteUrl(options.websiteUrl) ||
     null;
   const instagramHandle =
     detail.contact.instagram_handle ||
@@ -335,40 +338,153 @@ async function enrichContact(contactId) {
   };
 }
 
+// Free and consumer mailbox domains: an address here says nothing about the
+// person's business, so it is never turned into a website.
+const FREE_EMAIL_DOMAINS = new Set([
+  "gmail.com", "googlemail.com", "outlook.com", "hotmail.com", "hotmail.co.uk", "live.com", "msn.com",
+  "yahoo.com", "yahoo.co.uk", "ymail.com", "rocketmail.com", "icloud.com", "me.com", "mac.com",
+  "aol.com", "proton.me", "protonmail.com", "pm.me", "gmx.com", "gmx.de", "gmx.net", "mail.com",
+  "zoho.com", "yandex.com", "yandex.ru", "qq.com", "163.com", "126.com", "web.de", "hey.com",
+  "fastmail.com", "tutanota.com", "comcast.net", "att.net", "verizon.net", "sbcglobal.net",
+]);
+
+function emailDomain(email) {
+  const text = String(email || "").trim().toLowerCase();
+  const at = text.lastIndexOf("@");
+  if (at < 1) return null;
+  const domain = text.slice(at + 1).replace(/\.+$/, "");
+  return /^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(domain) ? domain : null;
+}
+
+function isFreeEmailDomain(domain) {
+  if (!domain) return true;
+  if (FREE_EMAIL_DOMAINS.has(domain)) return true;
+  return /^(yahoo|hotmail|outlook|live|icloud)\./.test(domain);
+}
+
+function websiteFromEmail(email) {
+  const domain = emailDomain(email);
+  if (!domain || isFreeEmailDomain(domain)) return null;
+  return `https://${domain}`;
+}
+
+// Decide who Enrich All should research and what it can research them from.
+function selectEnrichmentCandidates(contacts = []) {
+  const candidates = [];
+  const skipped = [];
+  for (const contact of contacts) {
+    const needsEnrichment = !contact.business_description || !contact.photo_url;
+    if (!needsEnrichment) {
+      skipped.push({ contact_id: contact.id, reason: "already_enriched" });
+      continue;
+    }
+    const website = normalizeWebsiteUrl(contact.website_url) || websiteFromEmail(contact.primary_email);
+    const instagram = contact.instagram_handle || contact.instagram_profile_url || null;
+    if (!website && !instagram) {
+      skipped.push({
+        contact_id: contact.id,
+        reason: contact.primary_email ? "personal_email_only" : "no_website_instagram_or_business_email",
+      });
+      continue;
+    }
+    candidates.push({
+      contact,
+      website,
+      website_source: contact.website_url ? "website" : website ? "email_domain" : null,
+      instagram,
+    });
+  }
+  return { candidates, skipped };
+}
+
+const SKIP_REASON_TEXT = {
+  already_enriched: "already enriched",
+  personal_email_only: "only a personal email (gmail, outlook and similar)",
+  no_website_instagram_or_business_email: "no website, Instagram or business email",
+  time_limit: "not reached before the time limit",
+};
+
+function withTimeout(promise, ms, label) {
+  let timer;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => { timer = setTimeout(() => reject(new Error(label)), Math.max(1, ms)); }),
+  ]).finally(() => clearTimeout(timer));
+}
+
 async function enrichAllContacts(options = {}) {
   const crm = getCrm();
   const project = String(options.project || "pipeline");
-  const contacts = crm.listContacts({ project, sort: "updated_desc" }).contacts || [];
-  const candidates = contacts.filter((contact) => {
-    const hasSource = Boolean(contact.website_url || contact.instagram_handle || contact.instagram_profile_url);
-    const needsEnrichment = !contact.business_description || !contact.photo_url;
-    return hasSource && needsEnrichment;
-  });
+  const concurrency = Math.max(1, Math.min(3, Number(options.concurrency) || 3));
+  const deadlineMs = Number(options.deadlineMs) || 90000;
+  const perContactMs = Number(options.perContactMs) || 30000;
+  const enrichOne = options.enrichFn || enrichContact;
+  const contacts = options.contacts || crm.listContacts({ project, sort: "updated_desc" }).contacts || [];
+  const { candidates, skipped: selectionSkipped } = selectEnrichmentCandidates(contacts);
 
+  const startedAt = Date.now();
   const results = [];
-  for (const contact of candidates) {
-    try {
-      results.push(await enrichContact(contact.id));
-    } catch (error) {
-      results.push({
-        ok: false,
-        contact_id: contact.id,
-        error: error instanceof Error ? error.message : String(error),
-      });
+  const notReached = [];
+  let cursor = 0;
+  async function worker() {
+    while (cursor < candidates.length) {
+      const candidate = candidates[cursor++];
+      const remaining = deadlineMs - (Date.now() - startedAt);
+      if (remaining <= 0) {
+        notReached.push({ contact_id: candidate.contact.id, reason: "time_limit" });
+        continue;
+      }
+      try {
+        const result = await withTimeout(
+          Promise.resolve(enrichOne(candidate.contact.id, { websiteUrl: candidate.website })),
+          Math.min(perContactMs, remaining),
+          "Timed out while researching this contact"
+        );
+        results.push({ ...(result || {}), contact_id: candidate.contact.id, detail: undefined });
+      } catch (error) {
+        results.push({ ok: false, contact_id: candidate.contact.id, error: error instanceof Error ? error.message : String(error) });
+      }
     }
   }
+  await Promise.all(Array.from({ length: Math.min(concurrency, candidates.length) }, () => worker()));
+
+  const completed = results.filter((r) => r.ok).length;
+  const failed = results.filter((r) => !r.ok && !r.skipped).length;
+  const skippedList = [
+    ...selectionSkipped,
+    ...results.filter((r) => r.skipped).map((r) => ({ contact_id: r.contact_id, reason: "no_website_instagram_or_business_email" })),
+    ...notReached,
+  ];
+  const reasons = {};
+  for (const entry of skippedList) reasons[entry.reason] = (reasons[entry.reason] || 0) + 1;
+  const partial = notReached.length > 0;
+  const nothingToResearch = skippedList.filter((e) => e.reason !== "already_enriched" && e.reason !== "time_limit").length;
+  const reasonText = Object.entries(reasons)
+    .map(([reason, count]) => `${count} ${SKIP_REASON_TEXT[reason] || reason}`)
+    .join(", ");
 
   return {
     ok: true,
+    total_contacts: contacts.length,
     total_candidates: candidates.length,
-    completed: results.filter((result) => result.ok).length,
-    failed: results.filter((result) => !result.ok && !result.skipped).length,
-    skipped: results.filter((result) => result.skipped).length,
-    results,
+    completed,
+    failed,
+    skipped: skippedList.length,
+    nothing_to_research: nothingToResearch,
+    reasons,
+    reason_text: reasonText,
+    partial,
+    note: partial ? `Stopped after ${Math.round(deadlineMs / 1000)}s; ${notReached.length} contact(s) were not reached. Run Enrich All again to continue.` : null,
+    results: results.map(({ detail, website_profile, instagram_profile, ...rest }) => rest),
   };
 }
 
 module.exports = {
+  FREE_EMAIL_DOMAINS,
+  emailDomain,
+  isFreeEmailDomain,
+  websiteFromEmail,
+  selectEnrichmentCandidates,
   enrichAllContacts,
   enrichContact,
   loadWebfetchRecipe,

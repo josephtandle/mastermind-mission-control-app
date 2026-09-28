@@ -913,13 +913,15 @@ function ActivityTimeline({
   onLog,
   onDeleteComm,
   onEditComm,
+  autoOpenForm = false,
 }: {
   detail: ContactDetail;
+  autoOpenForm?: boolean;
   onLog?: (payload: { channel: string; direction: string; note: string; contacted_at: string }) => Promise<void>;
   onDeleteComm?: (communicationId: number) => Promise<void>;
   onEditComm?: (communicationId: number, payload: { channel: string; direction: string; note: string; contacted_at: string }) => Promise<void>;
 }) {
-  const [showForm, setShowForm] = useState(detail.contact.id === "__new__");
+  const [showForm, setShowForm] = useState(detail.contact.id === "__new__" || autoOpenForm);
   const [editingId, setEditingId] = useState<number | null>(null);
   const [logChannel, setLogChannel] = useState("whatsapp");
   const [logDirection, setLogDirection] = useState("outbound");
@@ -1154,8 +1156,10 @@ function ContactModal({
   onLogCommunication,
   onDeleteCommunication,
   onEditCommunication,
+  autoOpenLog = false,
 }: {
   detail: ContactDetail;
+  autoOpenLog?: boolean;
   statusOptions: string[];
   projectCatalog: ProjectCatalogEntry[];
   selectedProject: string;
@@ -1326,7 +1330,7 @@ function ContactModal({
           ? { label: "Save failed", tone: "danger" as const }
           : { label: "Autosave", tone: "muted" as const };
 
-  async function handleCreateLead() {
+  async function handleCreateLead(logAfter = false) {
     setSaveState("saving");
     setSaveError(null);
     try {
@@ -1353,8 +1357,9 @@ function ContactModal({
         projects: fields.product_leads.length ? fields.product_leads : [fields.primary_project],
         project_membership_status: "new",
         project_state: { project: fields.primary_project, status: fields.status },
+        __log_after: logAfter,
       });
-      onClose();
+      if (!logAfter) onClose();
     } catch (error) {
       setSaveState("error");
       setSaveError(error instanceof Error ? error.message : "Create failed");
@@ -1528,6 +1533,17 @@ function ContactModal({
             >
               {actionState === "create" ? <Loader2 size={16} className="animate-spin" /> : <Plus size={16} />}
               Save
+            </button>
+          )}
+          {isDraft && (
+            <button
+              onClick={() => void handleCreateLead(true)}
+              disabled={actionState === "create"}
+              className="inline-flex items-center gap-2 rounded-xl border border-cm-purple/40 bg-cm-purple/10 px-4 py-2 text-sm font-medium text-cm-purple transition hover:bg-cm-purple/20 disabled:opacity-60"
+              title="Create the contact, then log a communication for it"
+            >
+              {actionState === "create" ? <Loader2 size={16} className="animate-spin" /> : <MessageCircle size={16} />}
+              Save and log communication
             </button>
           )}
           {!isDraft && (
@@ -1955,6 +1971,7 @@ function ContactModal({
                     onLog={onLogCommunication}
                     onDeleteComm={onDeleteCommunication}
                     onEditComm={onEditCommunication}
+                    autoOpenForm={autoOpenLog}
                   />
                 )}
               </div>
@@ -2203,6 +2220,7 @@ export function CrmWorkspace({
     mode === "pipeline" ? extractColumnAutomationMap(initialPipelineData) : {}
   );
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [autoOpenLogFor, setAutoOpenLogFor] = useState<string | null>(null);
   const [detail, setDetail] = useState<ContactDetail | null>(null);
   const [settings, setSettings] = useState<SettingsData | null>(null);
   const [loading, setLoading] = useState(mode === "pipeline" ? initialContacts.length === 0 : true);
@@ -2550,6 +2568,20 @@ export function CrmWorkspace({
     });
   }
 
+  useEffect(() => {
+    const handler = (event: KeyboardEvent) => {
+      if (event.key !== "n" && event.key !== "N") return;
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      const target = event.target as HTMLElement | null;
+      if (target && (target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName))) return;
+      if (selectedId || showCreateStatus) return;
+      event.preventDefault();
+      setShowCreateStatus("new");
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [selectedId, showCreateStatus]);
+
   async function createLeadFromModal(patch: Record<string, unknown>) {
     const payload = {
       first_name: typeof patch.first_name === "string" ? patch.first_name : "",
@@ -2664,6 +2696,10 @@ export function CrmWorkspace({
       }
       setShowCreateStatus(null);
       await loadContacts();
+      if (patch.__log_after && typeof data.contact_id === "string") {
+        setAutoOpenLogFor(data.contact_id);
+        setSelectedId(data.contact_id);
+      }
       return data as ContactDetail;
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to create lead");
@@ -2722,6 +2758,7 @@ export function CrmWorkspace({
   async function enrichAllLeads() {
     setActionState("enrich-all");
     setError(null);
+    setNotice(null);
     try {
       const res = await fetch("/api/crm", {
         method: "POST",
@@ -2730,6 +2767,15 @@ export function CrmWorkspace({
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to enrich leads");
+      const enriched = Number(data.completed || 0);
+      const failedCount = Number(data.failed || 0);
+      const nothing = Number(data.nothing_to_research || 0);
+      const parts = [`Enriched ${enriched} contact${enriched === 1 ? "" : "s"}.`];
+      if (failedCount) parts.push(`${failedCount} could not be researched.`);
+      if (nothing) parts.push(`${nothing} had nothing to research${data.reason_text ? ` (${data.reason_text})` : ""}.`);
+      else if (data.reason_text) parts.push(`Skipped: ${data.reason_text}.`);
+      if (data.note) parts.push(data.note);
+      setNotice(parts.join(" "));
       await loadContacts();
       if (selectedId) {
         await loadDetail(selectedId);
@@ -2813,13 +2859,27 @@ export function CrmWorkspace({
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to merge duplicates");
+      const review = (Array.isArray(data.groups) ? data.groups : []).filter((g: { status?: string }) => g.status !== "merged");
+      const reviewNames = review
+        .slice(0, 3)
+        .map((g: { survivor_name?: string | null; reason?: string | null }) => `${g.survivor_name || "Unnamed"}${g.reason ? ` (${g.reason})` : ""}`)
+        .join("; ");
       setNotice(
-        data.merged > 0
+        (data.merged > 0
           ? `Merged ${data.merged} duplicate group${data.merged === 1 ? "" : "s"}; ${data.skipped} need review.`
-          : `No duplicate groups were merged; ${data.skipped} need review.`
+          : `No duplicate groups were merged; ${data.skipped} need review.`) +
+          (reviewNames ? ` Needs review: ${reviewNames}${review.length > 3 ? ` and ${review.length - 3} more` : ""}.` : "")
+      );
+      const mergedAway = new Set<string>(
+        (Array.isArray(data.groups) ? data.groups : [])
+          .filter((g: { status?: string }) => g.status === "merged")
+          .flatMap((g: { merged_ids?: string[] }) => g.merged_ids || [])
       );
       await loadContacts();
-      if (selectedId) await loadDetail(selectedId);
+      if (selectedId && mergedAway.has(selectedId)) {
+        setSelectedId(null);
+        setDetail(null);
+      } else if (selectedId) await loadDetail(selectedId);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to merge duplicates");
     } finally {
@@ -3351,6 +3411,7 @@ export function CrmWorkspace({
               <button
                 type="button"
                 onClick={() => setShowCreateStatus("new")}
+                title="New contact (N)"
                 className="inline-flex h-11 items-center gap-2 rounded-xl bg-cm-purple px-4 py-2 text-sm font-medium text-white transition hover:bg-cm-purple/80"
               >
                 <UserPlus size={16} />
@@ -3937,7 +3998,9 @@ export function CrmWorkspace({
             onClose={() => {
               setSelectedId(null);
               setDetail(null);
+              setAutoOpenLogFor(null);
             }}
+            autoOpenLog={Boolean(selectedId) && autoOpenLogFor === selectedId}
             onSaveDetail={saveDetail}
             onDelete={() => void deleteSelectedContact(selectedId)}
             affiliates={affiliates}
