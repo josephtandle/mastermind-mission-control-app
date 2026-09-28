@@ -8,15 +8,16 @@
     "build": "NODE_OPTIONS='--max-old-space-size=3072' next build",
     "start": "next start -p 3001",
     "lint": "next lint",
-    "seed:crm-demo": "node .allsorted-crm-package/seed-crm-demo-data.js"
+    "seed:crm-demo": "node .allsorted-crm-package/seed-crm-demo-data.js",
+    "validate:crm": "node scripts/validate-crm-install.js . http://localhost:3001"
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "better-sqlite3": "12.6.2",
     "lucide-react": "^0.408.0",
-    "next": "^15.1.0",
+    "next": "^15.5.26",
     "next-themes": "^0.4.6",
-    "postcss": "^8.4.0",
+    "postcss": "^8.5.28",
     "react": "^19.0.0-rc.1",
     "react-dom": "^19.0.0-rc.1",
     "react-markdown": "^9.0.1",
@@ -28,7 +29,14 @@
     "@types/react": "^19.0.0-rc.1",
     "@types/react-dom": "^19.0.0-rc.1",
     "eslint": "^8.55.0",
-    "eslint-config-next": "^15.1.0",
+    "eslint-config-next": "^15.5.26",
     "typescript": "^5.3.0"
+  },
+  "allowScripts": {
+    "better-sqlite3": true,
+    "sharp": true
+  },
+  "overrides": {
+    "postcss": "^8.5.28"
   }
 }
