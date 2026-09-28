@@ -9,7 +9,7 @@
  *   4. Resend as a required human setup gate with strict secret hygiene
  *   5. Bounded self-healing (max two repair attempts, terminal outcomes)
  *   6. Completion verification checklist
- *   7. Release manifest at release-manifest.json with version 4.0.2 and SHA256 entries
+ *   7. Release manifest at release-manifest.json with version 4.1.0 and SHA256 entries
  *
  * Uses node:test and node:assert/strict only; no runtime execution of the engine.
  * Run with: node --test tests/install-engine-contract.test.mjs
@@ -478,7 +478,7 @@ test('release-manifest.json exists at appRoot', () => {
   )
 })
 
-test('release-manifest.json declares version 4.0.2', () => {
+test('release-manifest.json declares version 4.1.0', () => {
   const raw = readRequired('release-manifest.json')
   let manifest
   try {
@@ -489,8 +489,8 @@ test('release-manifest.json declares version 4.0.2', () => {
 
   assert.equal(
     manifest.version,
-    '4.0.2',
-    'release-manifest.json must declare version 4.0.2'
+    '4.1.0',
+    'release-manifest.json must declare version 4.1.0'
   )
 })
 
@@ -527,7 +527,7 @@ test('release-manifest.json contains SHA256 entries for tracked artifacts', () =
 })
 
 // ---------------------------------------------------------------------------
-// Contract 8 - 4.0.2 fresh-install fixes
+// Contract 8 - 4.1.0 fresh-install fixes
 // ---------------------------------------------------------------------------
 
 test('engine runs the Claude login in the foreground, never in the background', () => {
